@@ -1,0 +1,428 @@
+﻿@font-face {
+	font-family: "quicksand";
+	src:
+		url("Fonts/quicksand-regular-webfont.woff2") format("woff2"),
+		url("Fonts/quicksand-regular-webfont.woff" ) format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "quicksand";
+	src:
+		url("Fonts/quicksand-bold-webfont.woff2") format("woff2"),
+		url("Fonts/quicksand-bold-webfont.woff" ) format("woff");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "quicksand";
+	src:
+		url("Fonts/quicksand-light-webfont.woff2") format("woff2"),
+		url("Fonts/quicksand-light-webfont.woff" ) format("woff");
+	font-weight: lighter;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "gotham";
+	src:
+		url("Fonts/gotham-bold-webfont.woff2") format("woff2"),
+		url("Fonts/gotham-bold-webfont.woff" ) format("woff");
+	font-weight: bold;
+	font-style: normal;
+}
+
+body {
+	margin: 0;
+
+	font-family: "quicksand";
+}
+
+a img { border: none; }
+
+body > header {
+		
+	background-image: url("Hero-B-2757x1515.jpg");
+	background-size: cover;
+}
+	nav {
+		font-weight: bold;
+		position: relative;
+		text-transform: uppercase;
+	}
+		nav::after {
+			content: ' ';
+			display: block;
+			clear: both;
+		}
+		
+		nav > h1 {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 5;
+
+			margin-left: auto;
+			margin-right: auto;
+
+			width: 130px;
+
+			font-size: 0;
+			background-image: url("LuDela-White.svg");
+			background-size: 66% 66%;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+			nav > h1 > a {
+				display: block;
+				margin: 0;
+				padding: 0;
+				height: 100%;
+
+				text-decoration: none;
+
+				transition: background-color 100ms ease-in;
+				background-color: rgba( 255, 255, 255, 0.0 );
+			}
+				nav > h1 > a:hover {
+					background-color: rgba( 255, 255, 255, 0.3 );
+					transition: background-color 100ms ease-in;
+				}
+
+			@media (max-width: 1023px) { /* Move the <h1> to a block above navigation, to avoid overlapping elements. */
+				
+				nav > h1 {
+					position: static;
+					width: auto;
+					height: 50px;
+					background-size: 50% 50%;
+					padding: 0.1em;
+					margin: 0;
+
+					font-size: 0;
+					text-align: center;
+				}
+
+				body > header nav a {
+					text-shadow: 0 0 10px black;
+				}
+				body > header nav .cta a { text-shadow: none !important; }
+			}
+			@media (max-width: 767px) { /* Hide the cta in the navigation area */
+				
+				nav .cta {
+					display: none;
+				}
+			}
+			
+		nav > ul {
+			padding: 0;
+			margin: 0;
+
+			position: relative;
+			z-index: 10;
+		}
+
+			nav > ul > li {
+				display: block;
+				margin: 0;
+				padding: 0;
+
+				float: left;
+			}
+				
+			nav > ul > li > a {
+				display: block;
+				margin: 0;
+				padding: 0 2em;
+				line-height: 100px;
+
+				text-decoration: none;
+				transition: background-color 100ms ease-in;
+				background-color: rgba( 255, 255, 255, 0.0 );
+			}
+			@media (max-width: 500px) { /* Make nav links smaller */
+
+				nav > ul > li > a {
+					padding: 0.5em;
+					line-height: 50px;
+				}
+			}
+
+				nav > ul > li > a:hover {
+					background-color: rgba( 255, 255, 255, 0.3 );
+					transition: background-color 100ms ease-in;
+				}
+
+				nav > ul > li.cta {
+					float: right;
+
+					box-sizing: border-box;
+					height: 100px;
+				}
+				.cta > a {
+					line-height: normal;
+					padding: 1em;
+					margin: 1.5em;
+					color: black;
+					text-decoration: none;
+					font-weight: bold;
+					background-color: #e0bc4b;
+					transition: background-color 100ms ease-in;
+				}
+					.cta > a:hover {
+						background-color: #ffd655;
+						transition: background-color 100ms ease-in;
+					}
+	
+	body > header > nav {
+		background-color: rgba( 255, 255, 255, 0.1 );
+		
+	}
+		body > header > nav > ul > li > a {
+			color: white;
+		}
+
+body > footer {
+	
+}
+	body > footer > nav {
+		background-color: #f1ecdc;
+	}
+		body > footer > nav > h1 {
+			background-image: url("LuDela-Black.svg");
+		}
+		body > footer > nav > ul > li > a {
+			color: black;
+		}
+
+/**********************/
+/* General styles */
+
+h2 {
+	font-family: "gotham";
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+fieldset {
+	padding: 2em;
+	background: #e0bc4b;
+	border: none;
+}
+	fieldset label {
+		display: block;
+		margin-bottom: 2em;
+	}
+	fieldset label span {
+		font-weight: bold;
+	}
+
+	fieldset input[type=text] {
+		border: none;
+		padding: 1em;
+		box-sizing: border-box;
+		width: 75%;
+	}
+	fieldset button {
+		border: none;
+		padding: 1em;
+		background: black;
+		color: white;
+		transition: background-color 100ms ease-in;
+	}
+		fieldset button:hover {
+			border: none;
+			padding: 1em;
+			background: #ccc;
+			color: white;
+			transition: background-color 100ms ease-in;
+		}
+		fieldset button:active {
+			color: black;
+		}
+
+section {
+	padding: 4em;
+
+	position: relative;
+}
+	section:nth-child(2n+1) {
+		background-color: #f1ecdc;
+	}
+
+	section.hasImgWrap:nth-child(1) {
+		
+	}
+	section.hasImgWrap:nth-child(3) {
+		padding-left: calc( 50% + 4em );
+	}
+	
+	section > .imgWrap {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 50%;
+		
+		overflow: hidden;
+
+		background: black;
+	}
+		section > .imgWrap > img {
+			
+		}
+
+/**********************/
+/* Specific content */
+
+/* Home: */
+
+/* Hero: */
+body > header > section {
+	/* Trick to keep height as a percentage of width, the catch being that all content must be abs positioned. */
+	padding: 25% 0;
+	box-sizing: border-box;
+	position: relative;
+
+	color: white;
+}
+	body > header > section > p {
+		position: absolute;
+		left: 0;
+		right: 0;
+		text-align: center;
+
+		text-transform: uppercase;
+	}
+		body > header > section > p:nth-child(1) {
+			top: 10%;
+			text-shadow: 0 0 10px black;
+			font-family: "gotham";
+			font-weight: bold;
+			font-size: 54pt; /* Fallback for non-vw browsers */
+			font-size: 6vw;
+		}
+		body > header > section > p:nth-child(2) {
+			top: 40%;
+			text-shadow: 0 0 10px black;
+			font-size: 36pt; /* Fallback for non-vw browsers */
+			font-size: 4vw;
+		}
+		body > header > section > p:nth-child(3) {
+			bottom: 10%;
+		}
+		@media (max-width: 390px) {
+			body > header > section > p:nth-child(1) {
+				top: 0%;
+			}
+			body > header > section > p:nth-child(2) {
+				top: 30%;
+			}
+		}
+
+section.home-email {
+	
+	margin: 0 auto;
+	max-width: 35em;
+	text-align: center;
+}
+
+section.home-phoneApp {
+	padding-right: calc( 50% + 4em );
+}
+	section.home-phoneApp .imgWrap {
+		right: 0;
+
+		background-image: url("../Content/Home-PhoneApp-1267x846.jpg");
+		background-size: cover;
+		background-position: right bottom;
+	}
+		@media (max-width: 900px) {
+			section.home-phoneApp .imgWrap {
+				background-position: 60% bottom;
+			}
+		}
+
+		section.home-phoneApp .imgWrap img {
+			display: none;
+		}
+
+/* Getting this image to look good in all widths is hard, so revert to CSS backgrounds. */
+section.home-betterLives {
+	padding-left: calc( 50% + 4em );
+}
+	section.home-betterLives .imgWrap {
+		left: 0;
+
+		background-image: url("../Content/Home-BetterLives-541x797.jpg");
+		background-size: cover;
+		background-position: left bottom;
+	}
+		section.home-betterLives .imgWrap img {
+			display: none;
+		}
+
+section.bullets {
+	
+	margin: 0 auto;
+	max-width: 35em;
+}
+	section.bullets::after {
+		content: ' ';
+		display: block;
+		clear: both;
+	}
+
+	section.bullets > div {
+		width: 15em;
+		float: left;
+	}
+		section.bullets > div:nth-child(2n+1) {
+			width: 15em;
+			float: right;
+		}
+
+@media (max-width: 680px) { /* 680px is the point where it stops being readable */
+	
+	section {
+		padding: 2em;
+	}
+
+	article section {
+		padding: 2em !important;
+	}
+
+	section.home-phoneApp {
+		padding-right: 2em !important;
+	}
+
+	section > .imgWrap {
+		position: static;
+		width: auto;
+		height: 200px;
+		margin: -2em -2em 2em -2em;
+	}
+		section > .imgWrap > img {
+			height: auto !important;
+			float: none !important;
+		}
+
+	section.bullets > div {
+		float: none !important;
+		width: auto !important;
+	}
+
+	fieldset {
+		width: 100%;
+		box-sizing: border-box;
+	}
+		fieldset input[type=text] {
+			box-sizing: border-box;
+			width: 100%;
+			display: block;
+		}
+}

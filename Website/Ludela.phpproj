@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>Ludela</Name>
+    <ProjectGuid>254a949b-24df-405a-8ac1-951b92b723cb</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <AssemblyName>Ludela</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="common\" />
+    <Folder Include="Content\" />
+    <Folder Include="Style\" />
+    <Folder Include="Style\Fonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Home-BetterLives-541x797.jpg" />
+    <Content Include="Content\Home-PhoneApp-1267x846.jpg" />
+    <Content Include="Default.html" />
+    <Content Include="Style\Fonts\gotham-bold-webfont.woff" />
+    <Content Include="Style\Fonts\gotham-bold-webfont.woff2" />
+    <Content Include="Style\Fonts\quicksand-bold-webfont.woff" />
+    <Content Include="Style\Fonts\quicksand-bold-webfont.woff" />
+    <Content Include="Style\Fonts\quicksand-bold-webfont.woff2" />
+    <Content Include="Style\Fonts\quicksand-bold-webfont.woff2" />
+    <Content Include="Style\Fonts\quicksand-light-webfont.woff" />
+    <Content Include="Style\Fonts\quicksand-light-webfont.woff2" />
+    <Content Include="Style\Fonts\quicksand-regular-webfont.woff" />
+    <Content Include="Style\Fonts\quicksand-regular-webfont.woff2" />
+    <Content Include="Style\Hero-A-2757x1515.jpg" />
+    <Content Include="Style\Hero-B-2757x1515.jpg" />
+    <Content Include="Style\Logo-130x97.png" />
+    <Content Include="Style\LuDela-Black.svg" />
+    <Content Include="Style\LuDela-White.svg" />
+    <Content Include="Style\Style.css" />
+  </ItemGroup>
+</Project>
