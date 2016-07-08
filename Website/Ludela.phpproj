@@ -17,14 +17,25 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="common\" />
     <Folder Include="Content\" />
+    <Folder Include="Code\" />
+    <Folder Include="Views\" />
     <Folder Include="Style\" />
     <Folder Include="Style\Fonts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Home-BetterLives-541x797.jpg" />
     <Content Include="Content\Home-PhoneApp-1267x846.jpg" />
+    <Content Include="Content\Story-Africa.svg" />
+    <Content Include="Content\Story-BetterLight.jpg" />
+    <Content Include="Content\Story-Story1.jpg" />
+    <Content Include="Content\Story-Story2.jpg" />
+    <Content Include="Content\Story-Story3.jpg" />
+    <Content Include="Content\Story-Story4.jpg" />
+    <Content Include="Content\Story-Story5.jpg" />
+    <Content Include="Content\Story-Story6.jpg" />
+    <Content Include="Content\Story-Story7.jpg" />
+    <Content Include="Content\Story-Story8.jpg" />
     <Content Include="Default.html" />
     <Content Include="Style\Fonts\gotham-bold-webfont.woff" />
     <Content Include="Style\Fonts\gotham-bold-webfont.woff2" />
@@ -36,11 +47,18 @@
     <Content Include="Style\Fonts\quicksand-light-webfont.woff2" />
     <Content Include="Style\Fonts\quicksand-regular-webfont.woff" />
     <Content Include="Style\Fonts\quicksand-regular-webfont.woff2" />
-    <Content Include="Style\Hero-A-2757x1515.jpg" />
-    <Content Include="Style\Hero-B-2757x1515.jpg" />
+    <Content Include="Style\Hero-Home-A-2757x1515.jpg" />
+    <Content Include="Style\Hero-Home-B-2757x1515.jpg" />
+    <Content Include="Style\Hero-Story-2592x1728.jpg" />
     <Content Include="Style\Logo-130x97.png" />
     <Content Include="Style\LuDela-Black.svg" />
     <Content Include="Style\LuDela-White.svg" />
     <Content Include="Style\Style.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\Common.php" />
+    <Compile Include="Home.php" />
+    <Compile Include="LudelaLayoutView.php" />
+    <Compile Include="Story.php" />
   </ItemGroup>
 </Project>

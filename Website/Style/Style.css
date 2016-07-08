@@ -43,8 +43,7 @@ body {
 a img { border: none; }
 
 body > header {
-		
-	background-image: url("Hero-B-2757x1515.jpg");
+	
 	background-size: cover;
 }
 	nav {
@@ -207,6 +206,8 @@ h2 {
 	font-family: "gotham";
 	font-weight: bold;
 	text-transform: uppercase;
+
+	text-align: center;
 }
 
 fieldset {
@@ -251,15 +252,8 @@ section {
 
 	position: relative;
 }
-	section:nth-child(2n+1) {
+	article section:nth-child(2n+1) {
 		background-color: #f1ecdc;
-	}
-
-	section.hasImgWrap:nth-child(1) {
-		
-	}
-	section.hasImgWrap:nth-child(3) {
-		padding-left: calc( 50% + 4em );
 	}
 	
 	section > .imgWrap {
@@ -276,10 +270,21 @@ section {
 			
 		}
 
-/**********************/
-/* Specific content */
-
-/* Home: */
+.twoColumnContainer {
+	max-width: 50em;
+	margin: 0 auto;
+}
+	.twoColumnContainer::after {
+		content: ' ';
+		display: block;
+		clear: both;
+	}
+	.twoColumnContainer > *:nth-child(1) {
+		float: left;
+	}
+	.twoColumnContainer > *:nth-child(2) {
+		float: right;
+	}
 
 /* Hero: */
 body > header > section {
@@ -324,68 +329,6 @@ body > header > section {
 			}
 		}
 
-section.home-email {
-	
-	margin: 0 auto;
-	max-width: 35em;
-	text-align: center;
-}
-
-section.home-phoneApp {
-	padding-right: calc( 50% + 4em );
-}
-	section.home-phoneApp .imgWrap {
-		right: 0;
-
-		background-image: url("../Content/Home-PhoneApp-1267x846.jpg");
-		background-size: cover;
-		background-position: right bottom;
-	}
-		@media (max-width: 900px) {
-			section.home-phoneApp .imgWrap {
-				background-position: 60% bottom;
-			}
-		}
-
-		section.home-phoneApp .imgWrap img {
-			display: none;
-		}
-
-/* Getting this image to look good in all widths is hard, so revert to CSS backgrounds. */
-section.home-betterLives {
-	padding-left: calc( 50% + 4em );
-}
-	section.home-betterLives .imgWrap {
-		left: 0;
-
-		background-image: url("../Content/Home-BetterLives-541x797.jpg");
-		background-size: cover;
-		background-position: left bottom;
-	}
-		section.home-betterLives .imgWrap img {
-			display: none;
-		}
-
-section.bullets {
-	
-	margin: 0 auto;
-	max-width: 35em;
-}
-	section.bullets::after {
-		content: ' ';
-		display: block;
-		clear: both;
-	}
-
-	section.bullets > div {
-		width: 15em;
-		float: left;
-	}
-		section.bullets > div:nth-child(2n+1) {
-			width: 15em;
-			float: right;
-		}
-
 @media (max-width: 680px) { /* 680px is the point where it stops being readable */
 	
 	section {
@@ -426,3 +369,189 @@ section.bullets {
 			display: block;
 		}
 }
+
+/**********************/
+/* Specific content */
+
+/* Home: */
+
+body.home.testA > header {
+	background-image: url("Hero-Home-A-2757x1515.jpg");
+}
+body.home.testB > header {
+	background-image: url("Hero-Home-B-2757x1515.jpg");
+}
+
+body.home section.home-email {
+	
+	margin: 0 auto;
+	max-width: 35em;
+	text-align: center;
+}
+
+body.home section.home-phoneApp {
+	padding-right: calc( 50% + 4em );
+}
+	body.home section.home-phoneApp .imgWrap {
+		right: 0;
+
+		background-image: url("../Content/Home-PhoneApp-1267x846.jpg");
+		background-size: cover;
+		background-position: right bottom;
+	}
+		@media (max-width: 900px) {
+			body.home section.home-phoneApp .imgWrap {
+				background-position: 60% bottom;
+			}
+		}
+
+		body.home section.home-phoneApp .imgWrap img {
+			display: none;
+		}
+
+/* Getting the images to look good in all widths is hard, so revert to CSS backgrounds. */
+body.home section.home-betterLives {
+	padding-left: calc( 50% + 4em );
+}
+	body.home section.home-betterLives .imgWrap {
+		left: 0;
+
+		background-image: url("../Content/Home-BetterLives-541x797.jpg");
+		background-size: cover;
+		background-position: left bottom;
+	}
+		body.home section.home-betterLives .imgWrap img {
+			display: none;
+		}
+
+section.home-bullets {
+	
+	margin: 0 auto;
+	max-width: 35em;
+}
+	section.home-bullets::after {
+		content: ' ';
+		display: block;
+		clear: both;
+	}
+
+	section.home-bullets > div {
+		width: 15em;
+		float: left;
+	}
+		section.home-bullets > div:nth-child(2n+1) {
+			width: 15em;
+			float: right;
+		}
+
+/* Story: */
+
+body.story > header {
+	background-image: url("Hero-Story-2592x1728.jpg");
+}
+
+div.tabsLinks {
+	background-color: #e0bc4b;
+	font-weight: bold;
+}
+	div.tabsLinks::after {
+		content: ' ';
+		display: block;
+		clear: both;
+	}
+	div.tabsLinks > ul {
+		margin: 0;
+		padding: 0;
+	}
+		div.tabsLinks > ul > li {
+			display: block;
+			float: left;
+			margin: 0;
+			padding: 0;
+		}
+			div.tabsLinks > ul > li > a {
+				display: block;
+				line-height: 50px;
+				padding: 0 2em;
+
+				text-decoration: none;
+				color: black;
+			}
+				div.tabsLinks > ul > li > a:hover {
+					background: white;
+				}
+				div.tabsLinks > ul > li > a.active {
+					background: black;
+					color: white;
+				}
+
+#storyAbout section.story-about {
+	background: white;
+	margin-top: 4em;
+	padding-left: calc( 50% + 4em );
+	margin-bottom: 2em;
+}
+	#storyAbout section.story-about .imgWrap {
+		background: white;
+		left: 0;
+	}
+
+#storyAbout section.story-betterLight {
+	background-image:
+		linear-gradient( to right, rgba( 0, 0, 0, 0.7) 0%, rgba( 0, 0, 0, 0.7 ) 100% ),
+		url("../Content/Story-BetterLight.jpg");
+	background-size: cover;
+	color: white;
+	text-shadow: 0 0 10px black;
+}
+
+	#storyAbout section.story-betterLight .imgWrap {
+		display: none;
+	}
+
+	#storyAbout section.story-betterLight p {
+		max-width: 20em;
+	}
+
+#storyTeam {
+}
+	#storyTeam dt {
+		font-weight: bold;
+	}
+	#storyTeam dd {
+		margin-bottom: 1em;
+	}
+
+	#storyTeam section .twoColumnContainer > dl {
+		max-width: 20em;
+	}
+
+#storyStory section:nth-of-type(1n) { background: white; }
+#storyStory section:nth-of-type(2n) { background: #f1ecdc;}
+#storyStory section:nth-of-type(3n) { background: #fbf6e5; }
+
+#storyStory section:nth-of-type(1n) { padding-left: calc(33% + 2em); padding-right: 2em;             }
+#storyStory section:nth-of-type(2n) { padding-left:2em;              padding-right: calc(33% + 2em); }
+
+#storyStory section:nth-of-type(1n) .imgWrap { left: 0;    right:auto; max-width: 33%; }
+#storyStory section:nth-of-type(2n) .imgWrap { left: auto; right: 0;   max-width: 33%; }
+
+#storyStory section {
+	overflow: hidden;
+}
+
+#storyStory .imgWrap img {
+	width: 100%;
+}
+
+#storyStory .imgWrap {
+	transition: transform 0.25s ease-out;
+	box-shadow: 10px 10px 20px rgba( 0, 0, 0, 0.5 );
+}
+
+#storyStory .imgWrap:hover {
+	transition: transform 0.25s ease-in;
+	transform: rotate(0) scale(1.5) !important;
+}
+
+/*****/
