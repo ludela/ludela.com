@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code\Common.php" />
+    <Compile Include="FAQ.php" />
     <Compile Include="Home.php" />
     <Compile Include="LudelaLayoutView.php" />
     <Compile Include="Story.php" />

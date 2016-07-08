@@ -13,6 +13,29 @@ class HomeView extends LudelaView {
 		$this->viewData["pageClass"] = "home " . ( rand(1, 2) == 1 ? "testA" : "testB" );
 	}
 
+	protected function renderHead($viewModel) {
+?>
+		<script type="text/javascript">
+
+window.addEventListener('DOMContentLoaded', ready );
+
+function ready(event) {
+	
+	// Add the A/B test indicator to the <form> elements.
+	var cls = document.getElementsByTagName('body')[0].attributes['class'].value;
+	var fs = document.getElementsByTagName("fieldset");
+	for(var i = 0; i < fs.length; fs++) {
+		var hidden = document.createElement('input');
+		hidden.type = 'hidden';
+		hidden.value = cls;
+		fs[i].appendChild( hidden );
+	}
+}
+
+		</script>
+<?php
+	}
+
 	protected function renderHero($viewModel) {
 ?>
 	<section>

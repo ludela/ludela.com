@@ -554,4 +554,13 @@ div.tabsLinks {
 	transform: rotate(0) scale(1.5) !important;
 }
 
-/*****/
+/* FAQ: */
+
+body.faq > header {
+	background-color: #362113;
+}
+
+body.faq article {
+	max-width: 50em;
+	margin: 0 auto;
+}
