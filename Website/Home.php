@@ -75,12 +75,16 @@ function ready(event) {
 			<img src="Content/Home-PhoneApp-1267x846.jpg" alt="Photo of smartphone app in action." />
 		</div>
 
-		<h2>Smart is Smarter</h2>
+		<div class="content">
 
-		<p>Pair real flame candles with your smart phone in seconds and control every aspect of them from there on.</p>
-		<p>Turn any simple room into one filled with ambiance with just one tap.</p>
-		<p>Add safety features to keep your home and loved ones safer.</p>
-		<p>Have us ship your candle refills automatically so you’ll never need to worry about running out of warm candle light ever again.</p>
+			<h2>Smart is Smarter</h2>
+
+			<p>Pair real flame candles with your smart phone in seconds and control every aspect of them from there on.</p>
+			<p>Turn any simple room into one filled with ambiance with just one tap.</p>
+			<p>Add safety features to keep your home and loved ones safer.</p>
+			<p>Have us ship your candle refills automatically so you’ll never need to worry about running out of warm candle light ever again.</p>
+
+		</div>
 
 	</section>
 
@@ -118,12 +122,16 @@ function ready(event) {
 			<img src="Content/Home-BetterLives-541x797.jpg" alt="Photo of woman holding lightbulb." />
 		</div>
 
-		<h2>1,300,000,000 people without lights</h2>
-		<p>Better light, better lives</p>
+		<div class="content">
 
-		<p>Over 1.3 Billion people globally still live without electricity, cutting their days in half, stopping children and adults alike from reading, learning, working and progressing. For others, their form of light is a toxic kerosene lamp costing them small fortunes per day.</p>
+			<h2>1,300,000,000 people without lights</h2>
+			<p>Better light, better lives</p>
 
-		<p><strong>To replace any dark study corner or a dining room filled with kerosene, LuDela will donate a safe, solar-rechargeable light for every smart candle sold.</strong></p>
+			<p>Over 1.3 Billion people globally still live without electricity, cutting their days in half, stopping children and adults alike from reading, learning, working and progressing. For others, their form of light is a toxic kerosene lamp costing them small fortunes per day.</p>
+
+			<p><strong>To replace any dark study corner or a dining room filled with kerosene, LuDela will donate a safe, solar-rechargeable light for every smart candle sold.</strong></p>
+
+		</div>
 
 	</section>
 

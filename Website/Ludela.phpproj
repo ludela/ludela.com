@@ -19,6 +19,8 @@
   <ItemGroup>
     <Folder Include="Content\" />
     <Folder Include="Code\" />
+    <Folder Include="Properties\" />
+    <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="Views\" />
     <Folder Include="Style\" />
     <Folder Include="Style\Fonts\" />
@@ -37,6 +39,7 @@
     <Content Include="Content\Story-Story7.jpg" />
     <Content Include="Content\Story-Story8.jpg" />
     <Content Include="Default.html" />
+    <Content Include="Properties\PublishProfiles\ToAzureFTP.phppub" />
     <Content Include="Style\Fonts\gotham-bold-webfont.woff" />
     <Content Include="Style\Fonts\gotham-bold-webfont.woff2" />
     <Content Include="Style\Fonts\quicksand-bold-webfont.woff" />

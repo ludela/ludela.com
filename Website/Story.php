@@ -104,9 +104,9 @@ function adjustStoryImages() {
 		
 		<div class="tabsLinks">
 			<ul>
-				<li><a id="storyAboutLink" href="#storyAbout">About</a></li>
-				<li><a id="storyTeamLink"  href="#storyTeam" >Team</a></li>
-				<li><a id="storyStoryLink" href="#storyStory">Story</a></li>
+				<li><a id="storyAboutLink" href="#storyAbout">About</a>
+				</li><li><a id="storyTeamLink"  href="#storyTeam" >Team</a>
+				</li><li><a id="storyStoryLink" href="#storyStory">Story</a></li>
 			</ul>
 		</div>
 		
@@ -115,7 +115,7 @@ function adjustStoryImages() {
 			<section class="story-about">
 
 				<div class="imgWrap">
-					<img src="Content/Story-Africa.svg" alt="Stylized map of Africa" />
+					<img src="Content/Story-Africa.svg" alt="Stylized map of Africa" height="500" />
 				</div>
 
 				<h2>2014</h2>
@@ -152,21 +152,21 @@ function adjustStoryImages() {
 
 				<div class="twoColumnContainer">
 					<dl>
-						<dt>JAMIE BIANCHINI, CO-FOUNDER & CEO</dt>
+						<dt>Jamie Bianchini, Co-Founder &amp; CEO</dt>
 						<dd>A proven social entrepreneur with a passion for nature, health and humanity.</dd>
 
-						<dt>ERIC BAUSWELL, CO-FOUNDER AND VP OF ENGINEERING</dt>
+						<dt>Eric Bauswell, Co-Founder &amp; VP of Engineering</dt>
 						<dd>25-year veteran who has led over 400 products from concept to production.</dd>
 
-						<dt>Surface Ink, Engineering & Product Development Partner</dt>
+						<dt>Surface Ink, Engineering  &amp; Product Development Partner</dt>
 						<dd>Product design, electrical/mechanical/industrial engineering, firmware/software.</dd>
 
 						<dt>Rachel Brady, Books for Africa Program Coordinator</dt>
-						<dd>Book & Light Drop Coordinator for Africa.</dd>
+						<dd>Book &amp; Light Drop Coordinator for Africa.</dd>
 					</dl>
 
 					<dl>
-						<dt>Bill O’Donnell, Lead Investor & Advisor</dt>
+						<dt>Bill O’Donnell, Lead Investor  &amp; Advisor</dt>
 						<dd>Bill and the Mendota Team have over 100 years of experience in flame ambiance.</dd>
 
 						<dt>Zach Kelling, IT Lead</dt>
@@ -202,11 +202,15 @@ function adjustStoryImages() {
 					<img src="Content/Story-Story1.jpg" alt="" />
 				</div>
 
-				<h3>2007, Sub Sahara Africa</h3>
+				<div class="content">
 
-				<p><em>Our story begins in 2007 with a 81-country global expedition called Peace Pedalers.</em></p>
+					<h3>2007, Sub Sahara Africa</h3>
 
-				<p>Our story begins way back in 2007 when LuDela co-founder Jamie Bianchini was riding a tandem bicycle through the African continent as part of an 81-country global expedition for peace called Peace Pedalers.  Jamie piloted the tandem bike’s front seat while leaving the rear seat open to invite total strangers to join the journey as “guest riders.”.</p>
+					<p><em>Our story begins in 2007 with a 81-country global expedition called Peace Pedalers.</em></p>
+
+					<p>Our story begins way back in 2007 when LuDela co-founder Jamie Bianchini was riding a tandem bicycle through the African continent as part of an 81-country global expedition for peace called Peace Pedalers.  Jamie piloted the tandem bike’s front seat while leaving the rear seat open to invite total strangers to join the journey as “guest riders.”.</p>
+
+				</div>
 
 			</section>
 
@@ -216,11 +220,15 @@ function adjustStoryImages() {
 					<img src="Content/Story-Story2.jpg" alt="" />
 				</div>
 
-				<h3>May 12, 2007</h3>
+				<div class="content">
 
-				<p><em>He could not afford school fees.  He had big dreams and ambitions, but no means to attain them without education.</em></p>
+					<h3>May 12, 2007</h3>
 
-				<p>On May 12, 2007 a 17-year old Kenyan man named Joseph approached Jamie at his lunch stop outside of Njoro, Kenya.  Joseph asked if he could accompany Jamie to his final destination of the day of Elburgon.  While tackling the steep hills to Elburgon, Joseph shared a common story of many African youth—he was forced to drop out of high school to help support his family.  He could not afford school fees.  He had big dreams and ambitions, but no means to attain them without education.</p>
+					<p><em>He could not afford school fees.  He had big dreams and ambitions, but no means to attain them without education.</em></p>
+
+					<p>On May 12, 2007 a 17-year old Kenyan man named Joseph approached Jamie at his lunch stop outside of Njoro, Kenya.  Joseph asked if he could accompany Jamie to his final destination of the day of Elburgon.  While tackling the steep hills to Elburgon, Joseph shared a common story of many African youth—he was forced to drop out of high school to help support his family.  He could not afford school fees.  He had big dreams and ambitions, but no means to attain them without education.</p>
+
+				</div>
 
 			</section>
 
@@ -230,11 +238,15 @@ function adjustStoryImages() {
 					<img src="Content/Story-Story3.jpg" alt="" />
 				</div>
 
-				<h3>May 12, 2007</h3>
+				<div class="content">
 
-				<p><em>Jospeh was nearly in tears, shaking with joy as he shared the news with his family.</em></p>
+					<h3>May 12, 2007</h3>
 
-				<p>Later that day, Jamie and his mother Carol offered to sponsor Joseph’s education to enable him to finish high school.  Joseph was nearly in tears, shaking with joy as he shared the news with his family.  It was that day that Jamie realized his calling: to help educate those who really wanted to learn, grow, and contribute in the world.  He didn’t know exactly how he would realize it, but on May 12th, 2007 a seed was planted to do something great in education one day.</p>
+					<p><em>Jospeh was nearly in tears, shaking with joy as he shared the news with his family.</em></p>
+
+					<p>Later that day, Jamie and his mother Carol offered to sponsor Joseph’s education to enable him to finish high school.  Joseph was nearly in tears, shaking with joy as he shared the news with his family.  It was that day that Jamie realized his calling: to help educate those who really wanted to learn, grow, and contribute in the world.  He didn’t know exactly how he would realize it, but on May 12th, 2007 a seed was planted to do something great in education one day.</p>
+
+				</div>
 
 			</section>
 
@@ -244,11 +256,15 @@ function adjustStoryImages() {
 					<img src="Content/Story-Story4.jpg" alt="" />
 				</div>
 
-				<h3>September 2007</h3>
+				<div class="content">
+	
+					<h3>September 2007</h3>
 
-				<p><em>In the middle of the night Jamie woke up to find his room filled with smoke and a candle fire burning next to his bed. </em></p>
+					<p><em>In the middle of the night Jamie woke up to find his room filled with smoke and a candle fire burning next to his bed. </em></p>
 
-				<p>Later that year in September 2007 Jamie was riding in Western Africa in the country of Burkina Faso.  At the end of a long day he checked into a rustic guesthouse that did not have electricity.  The guesthouse owner gave Jamie a candle to light his room.  In the middle of the night, Jamie woke up to find his room filled with smoke and a candle fire burning next to his bed.  Thankfully, he was able to put the fire out with only minor damage to a table and some holes in his boxer shorts.  But the frightening candle experience that night led to the invention of the LuDela smart candle design the next day while out pedaling through the African countryside.  He didn’t know exactly how or when he would bring the innovation to the world, but a seed was planted to use the idea to one day change the world.</p>
+					<p>Later that year in September 2007 Jamie was riding in Western Africa in the country of Burkina Faso.  At the end of a long day he checked into a rustic guesthouse that did not have electricity.  The guesthouse owner gave Jamie a candle to light his room.  In the middle of the night, Jamie woke up to find his room filled with smoke and a candle fire burning next to his bed.  Thankfully, he was able to put the fire out with only minor damage to a table and some holes in his boxer shorts.  But the frightening candle experience that night led to the invention of the LuDela smart candle design the next day while out pedaling through the African countryside.  He didn’t know exactly how or when he would bring the innovation to the world, but a seed was planted to use the idea to one day change the world.</p>
+
+				</div>
 
 			</section>
 
@@ -258,11 +274,14 @@ function adjustStoryImages() {
 					<img src="Content/Story-Story5.jpg" alt="" />
 				</div>
 
-				<h3>March 2011</h3>
+				<div class="content">
 
-				<p><em>All evening long kids and parents coughed through the night.</em></p>
+					<h3>March 2011</h3>
 
-				<p>Fast forward four years and 57 countries of Peace Pedaling. Jamie finished the world tour in November 2010 and he and his mother Carol were soon invited back to Kenya in 2011 to celebrate Joseph becoming the first in his family of 11 to graduate high school.  Carol and Jamie were invited to stay the night with Joseph and his family.  In the evening, they burned a massive Kerosene light, filling the small house with toxic fumes.  All evening long, kids and parents coughed through the night.</p>
+					<p><em>All evening long kids and parents coughed through the night.</em></p>
+
+					<p>Fast forward four years and 57 countries of Peace Pedaling. Jamie finished the world tour in November 2010 and he and his mother Carol were soon invited back to Kenya in 2011 to celebrate Joseph becoming the first in his family of 11 to graduate high school.  Carol and Jamie were invited to stay the night with Joseph and his family.  In the evening, they burned a massive Kerosene light, filling the small house with toxic fumes.  All evening long, kids and parents coughed through the night.</p>
+				</div>
 
 			</section>
 
@@ -272,11 +291,15 @@ function adjustStoryImages() {
 					<img src="Content/Story-Story6.jpg" alt="" />
 				</div>
 
-				<h3>2011</h3>
+				<div class="content">
 
-				<p><em>The first-hand experience of the negative health and economical effects of kerosene planted another seed.</em></p>
+					<h3>2011</h3>
 
-				<p>The next day, Jamie noticed the thick layers of dark black soot built up on the walls of the house and even spewing out of the front door. The first-hand experience of the negative health and economical effects of kerosene planted another seed in Jamie to find a way to make a difference in the lives of the millions of people who are forced to use this destructive light source. </p>
+					<p><em>The first-hand experience of the negative health and economical effects of kerosene planted another seed.</em></p>
+
+					<p>The next day, Jamie noticed the thick layers of dark black soot built up on the walls of the house and even spewing out of the front door. The first-hand experience of the negative health and economical effects of kerosene planted another seed in Jamie to find a way to make a difference in the lives of the millions of people who are forced to use this destructive light source. </p>
+
+				</div>
 
 			</section>
 
@@ -286,9 +309,13 @@ function adjustStoryImages() {
 					<img src="Content/Story-Story7.jpg" alt="" />
 				</div>
 
-				<h3>Spring 2014</h3>
+				<div class="content">
 
-				<p>Three years later, after getting married to a former Peace Pedalers guest rider Cristina and having two beautiful children, Luca and Candela, those seeds of inspiration from years prior finally began to blossom.  Jamie made his first prototype of the LuDela smart candle design in spring of 2014 and began searching for the ideal technical co-founder partner to bring LuDela to the world.</p>
+					<h3>Spring 2014</h3>
+
+					<p>Three years later, after getting married to a former Peace Pedalers guest rider Cristina and having two beautiful children, Luca and Candela, those seeds of inspiration from years prior finally began to blossom.  Jamie made his first prototype of the LuDela smart candle design in spring of 2014 and began searching for the ideal technical co-founder partner to bring LuDela to the world.</p>
+
+				</div>
 
 			</section>
 
@@ -298,9 +325,13 @@ function adjustStoryImages() {
 					<img src="Content/Story-Story8.jpg" alt="" />
 				</div>
 
-				<h3>Summer 2014</h3>
+				<div class="content">
 
-				<p>This led him to Eric Bauswell, CEO of Surface Ink in San Jose, California.  Jamie shared his vision to use the smart candle innovation, inspired in Africa, as a vehicle to illuminate impoverished communities around the world.  Eric fell in love with both the product and the social vision immediately.   They began iterating prototypes with the Surface Ink team in 2015 and the rest is history. </p>
+					<h3>Summer 2014</h3>
+
+					<p>This led him to Eric Bauswell, CEO of Surface Ink in San Jose, California.  Jamie shared his vision to use the smart candle innovation, inspired in Africa, as a vehicle to illuminate impoverished communities around the world.  Eric fell in love with both the product and the social vision immediately.   They began iterating prototypes with the Surface Ink team in 2015 and the rest is history. </p>
+
+				</div>
 
 			</section>
 
@@ -310,7 +341,7 @@ function adjustStoryImages() {
 
 				<p>We hope you enjoyed our story!  We’re just getting started!</p>
 
-				<p>Jamie, Cristina, Luca & Candela</p>
+				<p>Jamie, Cristina, Luca &amp; Candela</p>
 
 				<p>(By the way, Luca = “Bringer of Light” and Candela = “Measurement of Flame of Candle.”  This is the vision of LuDela—bringing light to those in need from candlelight enjoyed by LuDela customers.)</p>
 
