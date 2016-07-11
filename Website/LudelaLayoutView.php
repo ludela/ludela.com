@@ -24,7 +24,7 @@ class LudelaView extends View {
 			<ul>
 				<li><a href="Home.php">Home</a></li>
 				<li><a href="Story.php">Our Story</a></li>
-				<li><a href="About.php">About</a></li>
+				<?php /*<li><a href="About.php">About</a></li>*/ ?>
 				<li><a href="Faq.php">FAQ</a></li>
 				<li class="cta"><a href="#">Get One First!</a></li>
 			</ul>
@@ -38,6 +38,8 @@ class LudelaView extends View {
 <head>
 	<title><?= e( $this->viewData["pageTitle"] ) ?>LuDela</title>
 
+	<meta charset="utf-8" /> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="Style/Style.css" type="text/css" />
 
 <?php $this->renderHead($viewModel) ?>
@@ -47,10 +49,11 @@ class LudelaView extends View {
 	<header>
 
 <?php $this->renderNavigation() ?>
-
-<?php $this->renderHero($viewModel) ?>
+		<div class="navBack"></div>
 
 	</header>
+
+<?php $this->renderHero($viewModel) ?>
 
 <!-- inner -->
 <?php $this->renderMain($viewModel) ?>

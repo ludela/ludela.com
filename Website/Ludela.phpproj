@@ -56,7 +56,9 @@
     <Content Include="Style\Logo-130x97.png" />
     <Content Include="Style\LuDela-Black.svg" />
     <Content Include="Style\LuDela-White.svg" />
+    <Content Include="Style\Style-Story.css" />
     <Content Include="Style\Style.css" />
+    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code\Common.php" />

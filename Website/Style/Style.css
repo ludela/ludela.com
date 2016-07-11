@@ -1,4 +1,6 @@
-﻿@font-face {
+﻿@import url("Style-Story.css");
+
+@font-face {
 	font-family: "quicksand";
 	src:
 		url("Fonts/quicksand-regular-webfont.woff2") format("woff2"),
@@ -46,167 +48,179 @@ a:hover { color: #ffd655; }
 
 a img { border: none; }
 
-body > header {
-	
-	background-size: cover;
+nav {
+	font-weight: bold;
+	text-transform: uppercase;
+	position: relative;
 }
-	nav {
-		font-weight: bold;
-		position: relative;
-		text-transform: uppercase;
+	nav::after {
+		content: ' ';
+		display: block;
+		clear: both;
 	}
-		nav::after {
-			content: ' ';
+		
+	nav > h1 {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		margin-left: auto;
+		margin-right: auto;
+
+		width: 130px;
+
+		font-size: 0;
+		background-image: url("LuDela-White.svg");
+		background-size: 66% 66%;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+		nav > h1 > a {
 			display: block;
-			clear: both;
-		}
-		
-		nav > h1 {
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			z-index: 5;
-
-			margin-left: auto;
-			margin-right: auto;
-
-			width: 130px;
-
-			font-size: 0;
-			background-image: url("LuDela-White.svg");
-			background-size: 66% 66%;
-			background-repeat: no-repeat;
-			background-position: center center;
-		}
-			nav > h1 > a {
-				display: block;
-				margin: 0;
-				padding: 0;
-				height: 100%;
-
-				text-decoration: none;
-
-				transition: background-color 100ms ease-in;
-				background-color: rgba( 255, 255, 255, 0.0 );
-			}
-				nav > h1 > a:hover {
-					background-color: rgba( 255, 255, 255, 0.3 );
-					transition: background-color 100ms ease-in;
-				}
-
-			@media (max-width: 1023px) { /* Move the <h1> to a block above navigation, to avoid overlapping elements. */
-				
-				nav > h1 {
-					position: static;
-					width: auto;
-					height: 50px;
-					background-size: 50% 50%;
-					padding: 0.1em;
-					margin: 0;
-
-					font-size: 0;
-					text-align: center;
-				}
-
-				body > header nav a {
-					text-shadow: 0 0 10px black;
-				}
-				body > header nav .cta a { text-shadow: none !important; }
-			}
-			@media (max-width: 767px) { /* Hide the cta in the navigation area */
-				
-				nav .cta {
-					display: none;
-				}
-			}
-			
-		nav > ul {
-			padding: 0;
 			margin: 0;
+			padding: 0;
+			height: 100%;
 
-			position: relative;
-			z-index: 10;
+			text-decoration: none;
+
+			transition: background-color 100ms ease-in;
+			background-color: rgba( 255, 255, 255, 0.0 );
 		}
-
-			nav > ul > li {
-				display: block;
-				margin: 0;
-				padding: 0;
-
-				float: left;
-			}
-				
-			nav > ul > li > a {
-				display: block;
-				margin: 0;
-				padding: 0 2em;
-				line-height: 100px;
-
-				text-decoration: none;
-				transition: background-color 100ms ease-in;
-				background-color: rgba( 255, 255, 255, 0.0 );
-
+			nav > h1 > a:hover {
 				color: white;
-			}
-				nav > ul > li > a:visited {
-					color: white;
-				}
-			@media (max-width: 500px) { /* Make nav links smaller */
-
-				nav > ul > li > a {
-					padding: 0.5em;
-					line-height: 50px;
-				}
+				background-color: rgba( 255, 255, 255, 0.3 );
+				transition: background-color 100ms ease-in;
 			}
 
-				nav > ul > li > a:hover {
-					background-color: rgba( 255, 255, 255, 0.3 );
-					transition: background-color 100ms ease-in;
-				}
+		@media (max-width: 1023px) { /* Move the <h1> to a block above navigation, to avoid overlapping elements. */
+				
+			nav > h1 {
+				position: static;
+				width: auto;
+				height: 50px;
+				background-size: 50% 50%;
+				padding: 0.1em;
+				margin: 0;
 
-				nav > ul > li.cta {
-					float: right;
+				font-size: 0;
+				text-align: center;
+			}
 
-					box-sizing: border-box;
-					height: 100px;
-				}
-				.cta > a {
-					line-height: normal;
-					padding: 1em;
-					margin: 1.5em;
-					color: black;
-					text-decoration: none;
-					font-weight: bold;
-					background-color: #e0bc4b;
-					transition: background-color 100ms ease-in;
-				}
-					.cta > a:hover {
-						background-color: #ffd655;
-						transition: background-color 100ms ease-in;
-					}
-	
-	body > header > nav {
-		background-color: rgba( 255, 255, 255, 0.1 );
-		
-	}
-		body > header > nav > ul > li > a {
-			color: white;
+			body > header nav a {
+				text-shadow: 0 0 10px black;
+			}
+			body > header nav .cta a { text-shadow: none !important; }
+			}
+		@media (max-width: 767px) { /* Hide the cta in the navigation area */
+				
+			nav .cta {
+				display: none;
+			}
 		}
+			
+	nav > ul {
+		padding: 0;
+		margin: 0;
+	}
+		nav > ul > li {
+			display: block;
+			margin: 0;
+			padding: 0;
 
-body > footer {
+			float: left;
+		}
+				
+		nav > ul > li > a {
+			display: block;
+			margin: 0;
+			padding: 0 2em;
+			line-height: 100px;
+			text-decoration: none;
+			transition: background-color 100ms ease-in;
+		}
+		@media (max-width: 500px) { /* Make nav links smaller */
+
+			nav > ul > li > a {
+				padding: 0.5em;
+				line-height: 50px;
+			}
+		}
+			nav > ul > li.cta {
+				float: right;
+
+				box-sizing: border-box;
+				height: 100px;
+			}
+			.cta > a {
+				line-height: normal;
+				padding: 1em;
+				margin: 1.5em;
+				color: black;
+				text-decoration: none;
+				text-shadow: none;
+				font-weight: bold;
+				background-color: #e0bc4b;
+				transition: background-color 100ms ease-in;
+			}
+				.cta > a:hover {
+					background-color: #ffd655;
+					transition: background-color 100ms ease-in;
+				}
 	
+header > nav {
+	background-color: rgba( 255, 255, 255, 0.1 );
+	color: white;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 110;
 }
-	body > footer > nav {
-		background-color: #f1ecdc;
+	.navBack {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 90;
+		background-color: rgba( 0, 0, 0, 0.5 );
+		height: 100px;
 	}
-		body > footer > nav > h1 {
-			background-image: url("LuDela-Black.svg");
-		}
-		body > footer > nav > ul > li > a {
+
+	header > nav > ul > li > a {
+		color: white;
+		text-shadow: 0 0 10px black;
+		background-color: rgba( 255, 255, 255, 0.0 );
+	}
+	header > nav > ul > li > a:hover {
+		background-color: rgba( 255, 255, 255, 0.3 );
+		transition: background-color 100ms ease-in;
+	}
+
+	header > nav > ul > li > a:link,
+	header > nav > ul > li > a:visited,
+	header > nav > ul > li > a:hover {
+		color: white;
+	}
+		header > nav > ul > li.cta > a:link,
+		header > nav > ul > li.cta > a:visited,
+		header > nav > ul > li.cta > a:hover {
 			color: black;
 		}
+
+footer > nav {
+	background-color: #f1ecdc;
+	color: black;
+}
+	footer > nav > ul > li > a {
+		background-color: rgba( 255, 255, 255, 0.0 );
+	}
+	footer > nav > ul > li > a:hover {
+		background-color: rgba( 255, 255, 255, 0.3 );
+		transition: background-color 100ms ease-in;
+	}
 
 /**********************/
 /* General styles */
@@ -306,52 +320,54 @@ section {
 	}
 
 /* Hero: */
-body > header > section {
+.hero {
 	/* Trick to keep height as a percentage of width, the catch being that all content must be abs positioned. */
-	padding: 25% 0;
+	padding-top: calc( 50px + 15% );
+	padding-right: 0;
+	padding-bottom: 10%;
+	padding-left: 0;
+
 	box-sizing: border-box;
+	background-size: cover;
 	position: relative;
+
+	/* Note the z-indexing with .navBack */
+	z-index: 100;
 
 	color: white;
 }
-@media (min-width: 1280px) {
-	body > header > section {
-		padding: 315px 0; /* Prevent the hero from getting too big. */
+@media (min-width: 1366px) {
+	.hero {
+		padding-top: 320px;
+		padding-bottom: 135px;
 	}
 }
 
-	body > header > section > p {
-		position: absolute;
+	.hero .cta a {
+		box-shadow: 0 0 10px black;
+	}
+		.hero .cta a:hover { box-shadow: 0 0 10px black; }
+		.hero .cta a:active { box-shadow: 0 0 20px black; }
+
+	.hero > p {
+		/*position: absolute;*/
 		left: 0;
 		right: 0;
 		text-align: center;
 
 		text-transform: uppercase;
 	}
-		body > header > section > p:nth-child(1) {
-			top: 10%;
+		.hero > p:nth-child(1) {
 			text-shadow: 0 0 10px black;
 			font-family: "gotham";
 			font-weight: bold;
 			font-size: 54pt; /* Fallback for non-vw browsers */
 			font-size: 6vw;
 		}
-		body > header > section > p:nth-child(2) {
-			top: 40%;
+		.hero > p:nth-child(2) {
 			text-shadow: 0 0 10px black;
 			font-size: 36pt; /* Fallback for non-vw browsers */
 			font-size: 4vw;
-		}
-		body > header > section > p:nth-child(3) {
-			bottom: 10%;
-		}
-		@media (max-width: 390px) {
-			body > header > section > p:nth-child(1) {
-				top: 0%;
-			}
-			body > header > section > p:nth-child(2) {
-				top: 30%;
-			}
 		}
 
 @media (max-width: 680px) { /* 680px is the point where it stops being readable */
@@ -404,10 +420,10 @@ body > header > section {
 
 /* Home: */
 
-body.home.testA > header {
+body.home.testA > .hero {
 	background-image: url("Hero-Home-A-2757x1515.jpg");
 }
-body.home.testB > header {
+body.home.testB > .hero {
 	background-image: url("Hero-Home-B-2757x1515.jpg");
 }
 
@@ -466,123 +482,6 @@ section.home-bullets {
 		width: 15em;
 	}
 
-/* Story: */
-
-body.story > header {
-	background-image: url("Hero-Story-2592x1728.jpg");
-}
-
-div.tabsLinks {
-	background-color: #e0bc4b;
-	font-weight: bold;
-}
-	div.tabsLinks::after {
-		content: ' ';
-		display: block;
-		clear: both;
-	}
-	div.tabsLinks > ul {
-		margin: 0;
-		padding: 0;
-		text-align: center;
-	}
-		div.tabsLinks > ul > li {
-			display: inline-block;
-			margin: 0;
-			padding: 0;
-		}
-			div.tabsLinks > ul > li > a {
-				display: block;
-				line-height: 50px;
-				padding: 0 2em;
-
-				text-decoration: none;
-				color: black;
-			}
-				div.tabsLinks > ul > li > a:hover {
-					background: white;
-				}
-				div.tabsLinks > ul > li > a.active {
-					background: black;
-					color: white;
-				}
-
-#storyAbout section.story-about {
-	background: white;
-	margin-top: 4em;
-	padding-left: calc( 50% + 4em );
-	margin-bottom: 2em;
-}
-	#storyAbout section.story-about .imgWrap {
-		background: white;
-		left: 0;
-	}
-		#storyAbout section.story-about .imgWrap > img {
-			float: right;
-		}
-
-#storyAbout section.story-betterLight {
-	background-image:
-		linear-gradient( to right, rgba( 0, 0, 0, 0.7) 0%, rgba( 0, 0, 0, 0.7 ) 100% ),
-		url("../Content/Story-BetterLight.jpg");
-	background-size: cover;
-	color: white;
-	text-shadow: 0 0 10px black;
-}
-
-	#storyAbout section.story-betterLight .imgWrap {
-		display: none;
-	}
-
-	#storyAbout section.story-betterLight p {
-		max-width: 20em;
-	}
-
-#storyTeam {
-}
-	#storyTeam dt {
-		font-weight: bold;
-		text-transform: uppercase;
-	}
-	#storyTeam dd {
-		margin-bottom: 1em;
-	}
-
-	#storyTeam section .twoColumnContainer > dl {
-		max-width: 20em;
-	}
-
-#storyStory section:nth-of-type(1n) { background: white; }
-#storyStory section:nth-of-type(2n) { background: #f1ecdc;}
-#storyStory section:nth-of-type(3n) { background: #fbf6e5; }
-
-#storyStory section:nth-of-type(1n) { padding-left: calc(33% + 2em); padding-right: 2em;             }
-#storyStory section:nth-of-type(2n) { padding-left:2em;              padding-right: calc(33% + 2em); }
-
-#storyStory section:nth-of-type(1n) .content { float: left; }
-#storyStory section:nth-of-type(2n) .content { float: right; }
-
-#storyStory section:nth-of-type(1n) .imgWrap { left: 0;    right:auto; max-width: 25%; }
-#storyStory section:nth-of-type(2n) .imgWrap { left: auto; right: 0;   max-width: 25%; }
-
-#storyStory {
-	overflow: hidden;
-}
-
-#storyStory .imgWrap img {
-	width: 100%;
-}
-
-#storyStory .imgWrap {
-	transition: transform 0.25s ease-out;
-	box-shadow: 10px 10px 20px rgba( 0, 0, 0, 0.5 );
-}
-
-#storyStory .imgWrap:active,
-#storyStory .imgWrap:hover {
-	transition: transform 0.25s ease-in;
-	transform: rotate(0) scale(1.5) !important;
-}
 
 /* FAQ: */
 

@@ -91,7 +91,7 @@ function adjustStoryImages() {
 
 	protected function renderHero($viewModel) {
 ?>
-	<section>
+	<section class="hero">
 		<p>A seed Was planted.</p>
 		<p>Through the history of Ludela</p>
 

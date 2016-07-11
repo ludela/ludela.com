@@ -38,7 +38,7 @@ function ready(event) {
 
 	protected function renderHero($viewModel) {
 ?>
-	<section>
+	<section class="hero">
 		<p>LuDela Smart Flame</p>
 		<p>Better Light. Better Lives.</p>
 
