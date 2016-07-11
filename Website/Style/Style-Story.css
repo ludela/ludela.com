@@ -202,14 +202,14 @@ div.tabsLinks {
 		transition: transform 0.25s, box-shadow 0.25s;
 		transform: rotate(0) scale(1) !important;
 	}
-	#storyStory section:nth-of-type(odd) img:hover {
+	#storyStory img:hover {
 		transition: transform 0.25s, box-shadow 0.25s;
 		box-shadow: 10px 10px 10px rgba( 0, 0, 0, 0.25 );
+	}
+	#storyStory section:nth-of-type(odd) img:hover {
 		transform: rotate(10deg) scale(1.25) !important;
 	}
 	#storyStory section:nth-of-type(even) img:hover {
-		transition: transform 0.25s, box-shadow 0.25s;
-		box-shadow: 10px 10px 10px rgba( 0, 0, 0, 0.25 );
 		transform: rotate(-10deg) scale(1.25) !important;
 	}
 }

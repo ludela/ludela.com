@@ -272,7 +272,14 @@ class StoryView extends LudelaView {
 			</section>
 
 		</article>
-
+		
+		<div class="tabsLinks">
+			<ul>
+				<li><a id="storyAboutLink" href="#storyAbout">About</a>
+				</li><li><a id="storyTeamLink"  href="#storyTeam" >Team</a>
+				</li><li><a class="active" id="storyStoryLink" href="#storyStory">Story</a></li>
+			</ul>
+		</div>
 <?php
 	}
 }
