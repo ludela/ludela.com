@@ -13,82 +13,6 @@ class StoryView extends LudelaView {
 		$this->viewData["pageClass"] = "story " . ( rand(1, 2) == 1 ? "testA" : "testB" );
 	}
 
-	protected function renderHead($viewModel) {
-?>
-		<script type="text/javascript">
-
-window.addEventListener('hashchange', updateTabs );
-
-window.addEventListener('DOMContentLoaded', ready );
-
-function ready(event) {
-	
-	// Show only 'storyAbout' initially...
-	document.getElementById('storyAboutLink').classList.add('active');
-	document.getElementById('storyTeam').style.display = 'none';
-	document.getElementById('storyStory').style.display = 'none';
-
-	updateTabs(null);
-
-	adjustStoryImages();
-}
-
-function updateTabs(event) {
-	
-	var fragment = window.location.hash;
-	switch(fragment) {
-		case '#storyAbout':
-		case '#storyTeam':
-		case '#storyStory':
-			break;
-		default:
-			return;
-	}
-
-	var id = fragment.substring(1);
-
-	var articles = document.querySelectorAll('article');
-	for(var i = 0; i < articles.length; i++) {
-		
-		articles[i].style.display = ( articles[i].id == id ) ? 'block' : 'none';
-	}
-
-	var links = document.querySelectorAll('.tabsLinks a');
-	for(var i = 0; i < links.length; i++) {
-		
-		if( id + "Link" == links[i].id ) {
-			links[i].classList.add('active');
-		}
-		else {
-			links[i].classList.remove('active');
-		}
-	}
-}
-
-function adjustStoryImages() {
-	
-	// Convert all of the images to `.imgWrap`'s background image, so we can use cover.
-
-	var imgs = document.querySelectorAll('#storyStory .imgWrap img');
-	for(var i = 0; i < imgs.length; i++) {
-		var img     = imgs[i];
-		var imgWrap = img.parentElement;
-
-		img.style.display = 'none';
-		imgWrap.style.backgroundImage = 'url("' + img.src + '")';
-		imgWrap.style.backgroundSize = 'cover';
-
-		var rot   = -10 + ( Math.random() * 20 ); // -10 to +10 deg
-		var scale = 0.75 + ( Math.random() * 0.5 ); // 0.75 - 1.25
-
-		imgWrap.style.transform = 'rotate( ' + rot + 'deg ) scale( ' + scale + ' )';
-	}
-}
-
-		</script>
-<?php
-	}
-
 	protected function renderHero($viewModel) {
 ?>
 	<section class="hero">
@@ -104,7 +28,7 @@ function adjustStoryImages() {
 		
 		<div class="tabsLinks">
 			<ul>
-				<li><a id="storyAboutLink" href="#storyAbout">About</a>
+				<li><a class="active" id="storyAboutLink" href="#storyAbout">About</a>
 				</li><li><a id="storyTeamLink"  href="#storyTeam" >Team</a>
 				</li><li><a id="storyStoryLink" href="#storyStory">Story</a></li>
 			</ul>
@@ -143,7 +67,15 @@ function adjustStoryImages() {
 			</section>
 
 		</article>
-
+		
+		<div class="tabsLinks">
+			<ul>
+				<li><a id="storyAboutLink" href="#storyAbout">About</a>
+				</li><li><a class="active" id="storyTeamLink"  href="#storyTeam" >Team</a>
+				</li><li><a id="storyStoryLink" href="#storyStory">Story</a></li>
+			</ul>
+		</div>
+		
 		<article id="storyTeam">
 
 			<section class="story-team">
@@ -159,7 +91,7 @@ function adjustStoryImages() {
 						<dd>25-year veteran who has led over 400 products from concept to production.</dd>
 
 						<dt>Surface Ink, Engineering  &amp; Product Development Partner</dt>
-						<dd>Product design, electrical/mechanical/industrial engineering, firmware/software.</dd>
+						<dd>Product design; electrical, mechanical and industrial engineering, firmware and software.</dd>
 
 						<dt>Rachel Brady, Books for Africa Program Coordinator</dt>
 						<dd>Book &amp; Light Drop Coordinator for Africa.</dd>
@@ -191,16 +123,22 @@ function adjustStoryImages() {
 			
 
 		</article>
-
+		
+		<div class="tabsLinks">
+			<ul>
+				<li><a id="storyAboutLink" href="#storyAbout">About</a>
+				</li><li><a id="storyTeamLink"  href="#storyTeam" >Team</a>
+				</li><li><a class="active" id="storyStoryLink" href="#storyStory">Story</a></li>
+			</ul>
+		</div>
+		
 		<article id="storyStory">
 
 			<h2>Our Story</h2>
 
 			<section>
 
-				<div class="imgWrap">
-					<img src="Content/Story-Story1.jpg" alt="" />
-				</div>
+				<img src="Content/Story-Story1.jpg" alt="" />
 
 				<div class="content">
 
@@ -216,9 +154,7 @@ function adjustStoryImages() {
 
 			<section>
 
-				<div class="imgWrap">
-					<img src="Content/Story-Story2.jpg" alt="" />
-				</div>
+				<img src="Content/Story-Story2.jpg" alt="" />
 
 				<div class="content">
 
@@ -234,9 +170,7 @@ function adjustStoryImages() {
 
 			<section>
 
-				<div class="imgWrap">
-					<img src="Content/Story-Story3.jpg" alt="" />
-				</div>
+				<img src="Content/Story-Story3.jpg" alt="" />
 
 				<div class="content">
 
@@ -252,9 +186,7 @@ function adjustStoryImages() {
 
 			<section>
 
-				<div class="imgWrap">
-					<img src="Content/Story-Story4.jpg" alt="" />
-				</div>
+				<img src="Content/Story-Story4.jpg" alt="" />
 
 				<div class="content">
 	
@@ -270,9 +202,7 @@ function adjustStoryImages() {
 
 			<section>
 
-				<div class="imgWrap">
-					<img src="Content/Story-Story5.jpg" alt="" />
-				</div>
+				<img src="Content/Story-Story5.jpg" alt="" />
 
 				<div class="content">
 
@@ -287,9 +217,7 @@ function adjustStoryImages() {
 
 			<section>
 
-				<div class="imgWrap">
-					<img src="Content/Story-Story6.jpg" alt="" />
-				</div>
+				<img src="Content/Story-Story6.jpg" alt="" />
 
 				<div class="content">
 
@@ -305,9 +233,7 @@ function adjustStoryImages() {
 
 			<section>
 
-				<div class="imgWrap">
-					<img src="Content/Story-Story7.jpg" alt="" />
-				</div>
+				<img src="Content/Story-Story7.jpg" alt="" />
 
 				<div class="content">
 
@@ -321,9 +247,7 @@ function adjustStoryImages() {
 
 			<section>
 
-				<div class="imgWrap">
-					<img src="Content/Story-Story8.jpg" alt="" />
-				</div>
+				<img src="Content/Story-Story8.jpg" alt="" />
 
 				<div class="content">
 

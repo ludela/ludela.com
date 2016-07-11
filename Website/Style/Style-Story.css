@@ -39,6 +39,8 @@ div.tabsLinks {
 					color: white;
 				}
 
+
+
 #storyAbout section.story-about {
 	background: white;
 	margin-top: 4em;
@@ -51,6 +53,7 @@ div.tabsLinks {
 	}
 		#storyAbout section.story-about .imgWrap > img {
 			float: right;
+			height: 100%;
 		}
 
 #storyAbout section.story-betterLight {
@@ -84,34 +87,138 @@ div.tabsLinks {
 		max-width: 20em;
 	}
 
-#storyStory section:nth-of-type(1n) { background: white; }
-#storyStory section:nth-of-type(2n) { background: #f1ecdc;}
-#storyStory section:nth-of-type(3n) { background: #fbf6e5; }
 
-#storyStory section:nth-of-type(1n) { padding-left: calc(33% + 2em); padding-right: 2em;             }
-#storyStory section:nth-of-type(2n) { padding-left:2em;              padding-right: calc(33% + 2em); }
-
-#storyStory section:nth-of-type(1n) .content { float: left; }
-#storyStory section:nth-of-type(2n) .content { float: right; }
-
-#storyStory section:nth-of-type(1n) .imgWrap { left: 0;    right:auto; max-width: 25%; }
-#storyStory section:nth-of-type(2n) .imgWrap { left: auto; right: 0;   max-width: 25%; }
+/********************************/
+/* Our Story */
 
 #storyStory {
-	overflow: hidden;
+	max-width: 1020px;
+	margin: 0 auto;
 }
 
-#storyStory .imgWrap img {
-	width: 100%;
+#storyStory section {
+	position: relative;
+	padding: 0;
+	margin-bottom: 2em;
 }
+	#storyStory section img {
+		position: absolute;
+		background: none !important;
+	}
+	#storyStory > section > div.content {
+		position: absolute;
+		border: 5px solid #e0bc4b;
+		padding: 2em;
 
-#storyStory .imgWrap {
-	transition: transform 0.25s ease-out;
-	box-shadow: 10px 10px 20px rgba( 0, 0, 0, 0.5 );
+		background: rgba( 255, 255, 255, 0.5 );
+		text-shadow: 1px 1px 1px white;
+
+		float: none !important;
+		width: 525px;
+	}
+
+#storyStory section:nth-of-type(odd) img       { right: 0; }
+#storyStory section:nth-of-type(odd) .content  { left: 0; }
+
+#storyStory section:nth-of-type(even) img      { left: 0; }
+#storyStory section:nth-of-type(even) .content { right: 0; }
+
+/* 2007, Sub Sahara Africa */
+#storyStory section:nth-of-type(1)          { height: 580px; }
+#storyStory section:nth-of-type(1) img      { bottom: 0; }
+#storyStory section:nth-of-type(1) .content { top: 0; }
+
+/* May 12, 2007 */
+#storyStory section:nth-of-type(2)          { height: 400px; }
+#storyStory section:nth-of-type(2) img      { bottom: 10px; }
+#storyStory section:nth-of-type(2) .content { bottom: 0; }
+
+/* May 12, 2007 */
+#storyStory section:nth-of-type(3)          { height: 400px; }
+#storyStory section:nth-of-type(3) img      { top: 10px; }
+#storyStory section:nth-of-type(3) .content { top: 0; }
+
+/* September 2007 */
+#storyStory section:nth-of-type(4)          { height: 422px; }
+#storyStory section:nth-of-type(4) img      { top: 0; max-height: 500px; }
+#storyStory section:nth-of-type(4) .content { width: 350px; top: -60px; }
+
+/* March 2011 */
+#storyStory section:nth-of-type(5)          { height: 500px; }
+#storyStory section:nth-of-type(5) img      { top: 90px; }
+#storyStory section:nth-of-type(5) .content { top: 0; width: 400px; }
+
+/* 2011 */
+#storyStory section:nth-of-type(6)          { height: 500px; }
+#storyStory section:nth-of-type(6) img      { bottom: 0; }
+#storyStory section:nth-of-type(6) .content { top: 10px; }
+
+/* Spring 2014 */
+#storyStory section:nth-of-type(7)          { height: 500px; }
+#storyStory section:nth-of-type(7) img      { bottom: 0; }
+#storyStory section:nth-of-type(7) .content { top: 0; width: 350px; }
+
+/* Summer 2014 */
+#storyStory section:nth-of-type(8)          { height: 400px; }
+#storyStory section:nth-of-type(8) img      { bottom: 0; }
+#storyStory section:nth-of-type(8) .content { top: 0; }
+
+/* Revert to a stacked presentation to avoid the text overlapping the photos. */
+@media (max-width: 1023px) {
+	
+	#storyStory { text-align: center; }
+	
+	#storyStory section {
+		height: auto !important;
+		margin: 0;
+		padding: 2em  0 0 0 !important;
+	}
+	
+	#storyStory section img {
+		position: static;
+	}
+	
+	#storyStory section .content {
+		position: static !important;
+		border: none !important;
+		width: auto !important;
+		text-shadow: none !important;
+		max-width: 30em;
+		margin: 0 auto;
+		background: none !important;
+		text-align: left;
+		padding: 0;
+	}
 }
+@media (min-width: 1024px) {
+	body {
+		overflow-x: hidden;
+	}
+	#storyStory section {
+		background: none !important;
+	}
 
-#storyStory .imgWrap:active,
-#storyStory .imgWrap:hover {
-	transition: transform 0.25s ease-in;
-	transform: rotate(0) scale(1.5) !important;
+	#storyStory img {
+		transition: transform 0.25s, box-shadow 0.25s;
+		transform: rotate(0) scale(1) !important;
+	}
+	#storyStory section:nth-of-type(odd) img:hover {
+		transition: transform 0.25s, box-shadow 0.25s;
+		box-shadow: 10px 10px 10px rgba( 0, 0, 0, 0.25 );
+		transform: rotate(10deg) scale(1.25) !important;
+	}
+	#storyStory section:nth-of-type(even) img:hover {
+		transition: transform 0.25s, box-shadow 0.25s;
+		box-shadow: 10px 10px 10px rgba( 0, 0, 0, 0.25 );
+		transform: rotate(-10deg) scale(1.25) !important;
+	}
+}
+@media (max-width: 550px) {
+	#storyStory section img {
+		width: 100%;
+	}
+
+	div.tabsLinks > ul > li > a {
+		padding: 0 1em;
+	}
 }
