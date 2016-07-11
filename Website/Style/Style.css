@@ -502,6 +502,11 @@ section.home-bullets {
 
 /* FAQ: */
 
+body.faq > .hero {
+	height: 100px;
+	padding: 0;
+}
+
 body.faq > header {
 	background-color: #362113;
 }

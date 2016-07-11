@@ -15,7 +15,7 @@ class HomeView extends LudelaView {
 
 	protected function renderHero($viewModel) {
 ?>
-	
+	<section class="hero"></section>
 <?php
 	}
 	
