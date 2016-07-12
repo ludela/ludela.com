@@ -1,7 +1,5 @@
 <?php
 
-require_once('Code/Common.php');
-
 require_once('LudelaLayoutView.php');
 
 class HomeView extends LudelaView {
@@ -61,6 +59,20 @@ class HomeView extends LudelaView {
 	</section>
 
 </article>
+
+<section class="emailForm">
+
+	<form action="#" method="post">
+		<fieldset>
+
+			<label>Stay informed on the LuDela movement <span>&amp; get 50% off too!</span></label>
+
+			<input type="text" name="email" placeholder="Enter your email address..." /><button type="submit">Sign Up</button>
+
+		</fieldset>
+	</form>
+
+</section>
 
 <?php
 	}

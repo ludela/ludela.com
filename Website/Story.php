@@ -1,7 +1,5 @@
 <?php
 
-require_once('Code/Common.php');
-
 require_once('LudelaLayoutView.php');
 
 class StoryView extends LudelaView {
@@ -16,9 +14,11 @@ class StoryView extends LudelaView {
 	protected function renderHero($viewModel) {
 ?>
 	<section class="hero">
-		<p>A seed Was planted.</p>
-		<p>Through the history of Ludela</p>
-
+		<div>
+			<p>A seed Was planted.</p>
+			<p>Through the history of Ludela</p>
+		</div>
+		<a href="#storyAbout"><span>Jump to content</span></a>
 	</section>
 <?php
 	}
@@ -28,7 +28,7 @@ class StoryView extends LudelaView {
 		
 		<div class="tabsLinks">
 			<ul>
-				<li><a class="active" id="storyAboutLink" href="#storyAbout">About</a>
+				<li><a id="storyAboutLink" href="#storyAbout">About</a>
 				</li><li><a id="storyTeamLink"  href="#storyTeam" >Team</a>
 				</li><li><a id="storyStoryLink" href="#storyStory">Story</a></li>
 			</ul>
@@ -42,11 +42,13 @@ class StoryView extends LudelaView {
 					<img src="Content/Story-Africa.svg" alt="Stylized map of Africa" height="500" />
 				</div>
 
-				<h2>2014</h2>
+				<div class="content">
+					<h2>2014</h2>
 
-				<p><em>It started with a trip and ended with a journey.</em></p>
+					<p class="emote">It started with a trip and ended with a journey.</p>
 
-				<p>Founded in 2014, LuDela is the world’s first smart candle company with a warm mission to bring better light and better lives around the world.  LuDela is committed to delivering the safest, most convenient, feature-rich candlelight offerings in the world to enable our customers to reconnect with nature and celebrate the most adored ambient light source on the planet—fire.</p>
+					<p>Founded in 2014, LuDela is the world’s first smart candle company with a warm mission to bring better light and better lives around the world.  LuDela is committed to delivering the safest, most convenient, feature-rich candlelight offerings in the world to enable our customers to reconnect with nature and celebrate the most adored ambient light source on the planet—fire.</p>
+				</div>
 
 			</section>
 
@@ -67,14 +69,6 @@ class StoryView extends LudelaView {
 			</section>
 
 		</article>
-		
-		<div class="tabsLinks">
-			<ul>
-				<li><a id="storyAboutLink" href="#storyAbout">About</a>
-				</li><li><a class="active" id="storyTeamLink"  href="#storyTeam" >Team</a>
-				</li><li><a id="storyStoryLink" href="#storyStory">Story</a></li>
-			</ul>
-		</div>
 		
 		<article id="storyTeam">
 
@@ -124,27 +118,19 @@ class StoryView extends LudelaView {
 
 		</article>
 		
-		<div class="tabsLinks">
-			<ul>
-				<li><a id="storyAboutLink" href="#storyAbout">About</a>
-				</li><li><a id="storyTeamLink"  href="#storyTeam" >Team</a>
-				</li><li><a class="active" id="storyStoryLink" href="#storyStory">Story</a></li>
-			</ul>
-		</div>
-		
 		<article id="storyStory">
 
 			<h2>Our Story</h2>
 
 			<section>
 
-				<img src="Content/Story-Story1.jpg" alt="" />
+				<img src="Content/Story-Story1.jpg" width="561" alt="" />
 
 				<div class="content">
 
 					<h3>2007, Sub Sahara Africa</h3>
 
-					<p><em>Our story begins in 2007 with a 81-country global expedition called Peace Pedalers.</em></p>
+					<p class="emote">Our story begins in 2007 with a 81-country global expedition called Peace Pedalers.</p>
 
 					<p>Our story begins way back in 2007 when LuDela co-founder Jamie Bianchini was riding a tandem bicycle through the African continent as part of an 81-country global expedition for peace called Peace Pedalers.  Jamie piloted the tandem bike’s front seat while leaving the rear seat open to invite total strangers to join the journey as “guest riders.”.</p>
 
@@ -154,13 +140,13 @@ class StoryView extends LudelaView {
 
 			<section>
 
-				<img src="Content/Story-Story2.jpg" alt="" />
+				<img src="Content/Story-Story2.jpg"  width="555" alt="" />
 
 				<div class="content">
 
 					<h3>May 12, 2007</h3>
 
-					<p><em>He could not afford school fees.  He had big dreams and ambitions, but no means to attain them without education.</em></p>
+					<p class="emote">He could not afford school fees.  He had big dreams and ambitions, but no means to attain them without education.</p>
 
 					<p>On May 12, 2007 a 17-year old Kenyan man named Joseph approached Jamie at his lunch stop outside of Njoro, Kenya.  Joseph asked if he could accompany Jamie to his final destination of the day of Elburgon.  While tackling the steep hills to Elburgon, Joseph shared a common story of many African youth—he was forced to drop out of high school to help support his family.  He could not afford school fees.  He had big dreams and ambitions, but no means to attain them without education.</p>
 
@@ -170,13 +156,13 @@ class StoryView extends LudelaView {
 
 			<section>
 
-				<img src="Content/Story-Story3.jpg" alt="" />
+				<img src="Content/Story-Story3.jpg" width="556"  alt="" />
 
 				<div class="content">
 
 					<h3>May 12, 2007</h3>
 
-					<p><em>Jospeh was nearly in tears, shaking with joy as he shared the news with his family.</em></p>
+					<p class="emote">Jospeh was nearly in tears, shaking with joy as he shared the news with his family.</p>
 
 					<p>Later that day, Jamie and his mother Carol offered to sponsor Joseph’s education to enable him to finish high school.  Joseph was nearly in tears, shaking with joy as he shared the news with his family.  It was that day that Jamie realized his calling: to help educate those who really wanted to learn, grow, and contribute in the world.  He didn’t know exactly how he would realize it, but on May 12th, 2007 a seed was planted to do something great in education one day.</p>
 
@@ -186,13 +172,13 @@ class StoryView extends LudelaView {
 
 			<section>
 
-				<img src="Content/Story-Story4.jpg" alt="" />
+				<img src="Content/Story-Story4.jpg"  width="555" alt="" />
 
 				<div class="content">
 	
 					<h3>September 2007</h3>
 
-					<p><em>In the middle of the night Jamie woke up to find his room filled with smoke and a candle fire burning next to his bed. </em></p>
+					<p class="emote">In the middle of the night Jamie woke up to find his room filled with smoke and a candle fire burning next to his bed. </p>
 
 					<p>Later that year in September 2007 Jamie was riding in Western Africa in the country of Burkina Faso.  At the end of a long day he checked into a rustic guesthouse that did not have electricity.  The guesthouse owner gave Jamie a candle to light his room.  In the middle of the night, Jamie woke up to find his room filled with smoke and a candle fire burning next to his bed.  Thankfully, he was able to put the fire out with only minor damage to a table and some holes in his boxer shorts.  But the frightening candle experience that night led to the invention of the LuDela smart candle design the next day while out pedaling through the African countryside.  He didn’t know exactly how or when he would bring the innovation to the world, but a seed was planted to use the idea to one day change the world.</p>
 
@@ -202,13 +188,13 @@ class StoryView extends LudelaView {
 
 			<section>
 
-				<img src="Content/Story-Story5.jpg" alt="" />
+				<img src="Content/Story-Story5.jpg"  width="555" alt="" />
 
 				<div class="content">
 
 					<h3>March 2011</h3>
 
-					<p><em>All evening long kids and parents coughed through the night.</em></p>
+					<p class="emote">All evening long kids and parents coughed through the night.</p>
 
 					<p>Fast forward four years and 57 countries of Peace Pedaling. Jamie finished the world tour in November 2010 and he and his mother Carol were soon invited back to Kenya in 2011 to celebrate Joseph becoming the first in his family of 11 to graduate high school.  Carol and Jamie were invited to stay the night with Joseph and his family.  In the evening, they burned a massive Kerosene light, filling the small house with toxic fumes.  All evening long, kids and parents coughed through the night.</p>
 				</div>
@@ -217,13 +203,13 @@ class StoryView extends LudelaView {
 
 			<section>
 
-				<img src="Content/Story-Story6.jpg" alt="" />
+				<img src="Content/Story-Story6.jpg"  width="558" alt="" />
 
 				<div class="content">
 
 					<h3>2011</h3>
 
-					<p><em>The first-hand experience of the negative health and economical effects of kerosene planted another seed.</em></p>
+					<p class="emote">The first-hand experience of the negative health and economical effects of kerosene planted another seed.</p>
 
 					<p>The next day, Jamie noticed the thick layers of dark black soot built up on the walls of the house and even spewing out of the front door. The first-hand experience of the negative health and economical effects of kerosene planted another seed in Jamie to find a way to make a difference in the lives of the millions of people who are forced to use this destructive light source. </p>
 
@@ -233,7 +219,7 @@ class StoryView extends LudelaView {
 
 			<section>
 
-				<img src="Content/Story-Story7.jpg" alt="" />
+				<img src="Content/Story-Story7.jpg"  width="558" alt="" />
 
 				<div class="content">
 
@@ -247,7 +233,7 @@ class StoryView extends LudelaView {
 
 			<section>
 
-				<img src="Content/Story-Story8.jpg" alt="" />
+				<img src="Content/Story-Story8.jpg"  width="559" alt="" />
 
 				<div class="content">
 
@@ -273,13 +259,20 @@ class StoryView extends LudelaView {
 
 		</article>
 		
-		<div class="tabsLinks">
-			<ul>
-				<li><a id="storyAboutLink" href="#storyAbout">About</a>
-				</li><li><a id="storyTeamLink"  href="#storyTeam" >Team</a>
-				</li><li><a class="active" id="storyStoryLink" href="#storyStory">Story</a></li>
-			</ul>
-		</div>
+		<section class="emailForm">
+
+			<form action="#" method="post">
+				<fieldset>
+
+					<label>Stay informed on the LuDela movement <span>&amp; get 50% off too!</span></label>
+
+					<input type="text" name="email" placeholder="Enter your email address..." /><button type="submit">Sign Up</button>
+
+				</fieldset>
+			</form>
+
+		</section>
+		
 <?php
 	}
 }

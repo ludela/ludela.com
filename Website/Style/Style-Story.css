@@ -6,6 +6,9 @@ body.story > .hero {
 
 div.tabsLinks {
 	background-color: #e0bc4b;
+	font-family: "quicksand-bold";
+	text-transform: uppercase;
+	font-size: 12pt;
 	font-weight: bold;
 }
 	div.tabsLinks::after {
@@ -39,21 +42,33 @@ div.tabsLinks {
 					color: white;
 				}
 
-
+.emote {
+	font-family: "ACaslonPro";
+	font-style: italic;
+	font-size: 18pt;
+	color: #858585;
+}
 
 #storyAbout section.story-about {
 	background: white;
-	margin-top: 4em;
+	margin-top: 1em;
 	padding-left: calc( 50% + 4em );
 	margin-bottom: 2em;
 }
+	#storyAbout section.story-about .content {
+		float: left;
+	}
+		#storyAbout section.story-about h2 {
+			text-align: left;
+		}
 	#storyAbout section.story-about .imgWrap {
 		background: white;
 		left: 0;
 	}
 		#storyAbout section.story-about .imgWrap > img {
 			float: right;
-			height: 100%;
+			margin-top: 2em;
+			height: 80%;
 		}
 
 #storyAbout section.story-betterLight {
@@ -63,6 +78,7 @@ div.tabsLinks {
 	background-size: cover;
 	color: white;
 	text-shadow: 0 0 10px black;
+	padding: 6em;
 }
 
 	#storyAbout section.story-betterLight .imgWrap {
@@ -75,16 +91,24 @@ div.tabsLinks {
 
 #storyTeam {
 }
+	#storyTeam h2 {
+		margin-bottom: 2em;
+	}
 	#storyTeam dt {
 		font-weight: bold;
 		text-transform: uppercase;
 	}
 	#storyTeam dd {
-		margin-bottom: 1em;
+		margin: 0.5em 0 1em 0;
+		padding: 0;
+	}
+
+	#storyTeam section {
+		background: white;
 	}
 
 	#storyTeam section .twoColumnContainer > dl {
-		max-width: 20em;
+		max-width: 23em;
 	}
 
 
@@ -92,30 +116,50 @@ div.tabsLinks {
 /* Our Story */
 
 #storyStory {
-	max-width: 1020px;
+	max-width: 1060px;
 	margin: 0 auto;
 }
+	#storyStory h2 {
+		margin-bottom: 3em;
+	}
 
 #storyStory section {
 	position: relative;
 	padding: 0;
 	margin-bottom: 2em;
+	clear: both;
+	width: 100%;
 }
+	#storyStory::after {
+		content: ' ';
+		clear: both;
+		display: block;
+	}
+
 	#storyStory section img {
 		position: absolute;
 		background: none !important;
 	}
 	#storyStory > section > div.content {
-		position: absolute;
+		position: relative;
+		z-index: 100;
 		border: 5px solid #e0bc4b;
 		padding: 2em;
 
 		background: rgba( 255, 255, 255, 0.5 );
 		text-shadow: 1px 1px 1px white;
 
-		float: none !important;
+		float: left !important;
+		box-sizing: border-box;
 		width: 525px;
+		max-width: none !important;
+		font-size: 14pt;
 	}
+
+#storyStory .emote {
+	line-height: 130%;
+	margin-bottom: 0.5em;
+}
 
 #storyStory section:nth-of-type(odd) img       { right: 0; }
 #storyStory section:nth-of-type(odd) .content  { left: 0; }
@@ -124,44 +168,46 @@ div.tabsLinks {
 #storyStory section:nth-of-type(even) .content { right: 0; }
 
 /* 2007, Sub Sahara Africa */
-#storyStory section:nth-of-type(1)          { height: 580px; }
+#storyStory section:nth-of-type(1)          { padding-bottom: 270px; }
 #storyStory section:nth-of-type(1) img      { bottom: 0; }
-#storyStory section:nth-of-type(1) .content { top: 0; }
+#storyStory section:nth-of-type(1) .content { }
 
 /* May 12, 2007 */
-#storyStory section:nth-of-type(2)          { height: 400px; }
+#storyStory section:nth-of-type(2)          {  }
 #storyStory section:nth-of-type(2) img      { bottom: 10px; }
-#storyStory section:nth-of-type(2) .content { bottom: 0; }
+#storyStory section:nth-of-type(2) .content { float: right !important; }
 
 /* May 12, 2007 */
-#storyStory section:nth-of-type(3)          { height: 400px; }
 #storyStory section:nth-of-type(3) img      { top: 10px; }
-#storyStory section:nth-of-type(3) .content { top: 0; }
+#storyStory section:nth-of-type(3) .content { }
 
 /* September 2007 */
-#storyStory section:nth-of-type(4)          { height: 422px; }
-#storyStory section:nth-of-type(4) img      { top: 0; max-height: 500px; }
-#storyStory section:nth-of-type(4) .content { width: 350px; top: -60px; }
+#storyStory section:nth-of-type(4)          { top: -75px; margin-bottom: -75px; }
+#storyStory section:nth-of-type(4) img      { margin-top: 75px; }
+#storyStory section:nth-of-type(4) .content { float: right !important; }
 
 /* March 2011 */
-#storyStory section:nth-of-type(5)          { height: 500px; }
+#storyStory section:nth-of-type(5)          { top: -140px; margin-bottom: -75px; }
 #storyStory section:nth-of-type(5) img      { top: 90px; }
-#storyStory section:nth-of-type(5) .content { top: 0; width: 400px; }
+#storyStory section:nth-of-type(5) .content { }
 
 /* 2011 */
-#storyStory section:nth-of-type(6)          { height: 500px; }
+#storyStory section:nth-of-type(6)          { padding-bottom: 142px; }
 #storyStory section:nth-of-type(6) img      { bottom: 0; }
-#storyStory section:nth-of-type(6) .content { top: 10px; }
+#storyStory section:nth-of-type(6) .content { float: right !important; }
 
 /* Spring 2014 */
-#storyStory section:nth-of-type(7)          { height: 500px; }
+#storyStory section:nth-of-type(7)          { margin-top: 70px; padding-bottom: 180px; }
 #storyStory section:nth-of-type(7) img      { bottom: 0; }
-#storyStory section:nth-of-type(7) .content { top: 0; width: 350px; }
+#storyStory section:nth-of-type(7) .content { top: 0; }
 
 /* Summer 2014 */
-#storyStory section:nth-of-type(8)          { height: 400px; }
+#storyStory section:nth-of-type(8)          { padding-bottom: 84px; }
 #storyStory section:nth-of-type(8) img      { bottom: 0; }
-#storyStory section:nth-of-type(8) .content { top: 0; }
+#storyStory section:nth-of-type(8) .content { float: right !important; }
+
+/* "By winter 2017..." */
+#storyStory section:nth-of-type(9)          { max-width: 40em; margin: 6em auto 0 auto; }
 
 /* Revert to a stacked presentation to avoid the text overlapping the photos. */
 @media (max-width: 1023px) {
@@ -169,13 +215,16 @@ div.tabsLinks {
 	#storyStory { text-align: center; }
 	
 	#storyStory section {
+		position: static !important;
 		height: auto !important;
-		margin: 0;
-		padding: 2em  0 0 0 !important;
+		margin: 0 !important;
+		padding: 0 !important;
 	}
 	
 	#storyStory section img {
 		position: static;
+		max-width: 100%;
+		margin-top: 0 !important;
 	}
 	
 	#storyStory section .content {

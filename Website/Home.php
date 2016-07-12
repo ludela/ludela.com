@@ -1,7 +1,5 @@
 <?php
 
-require_once('Code/Common.php');
-
 require_once('LudelaLayoutView.php');
 
 class HomeView extends LudelaView {
@@ -46,6 +44,8 @@ function ready(event) {
 
 			<p class="cta"><a href="#">Get One First!</a></p>
 		</div>
+
+		<a href="#content"><span>Jump to content</span></a>
 		
 	</section>
 <?php
@@ -54,10 +54,10 @@ function ready(event) {
 	protected function renderMain($viewModel) {
 ?>
 
-<section class="home-email">
+<section class="emailForm">
 
 	<h2>We're the first, will you join us?</h2>
-	<p>LuDela is the world’s first real-flame smart candle, with a warm mission to deliver better light and better lives to people around the world. Our smartphone controlled candle is the most convenient, safest and truly hassle-free candle, making it the smartest flame ever.</p>
+	<p>LuDela is the world’s first <em>real-flame</em> smart candle, with a warm mission to deliver better light and better lives to people around the world. Our smartphone controlled candle is the most convenient, safest and truly hassle-free candle, making it the smartest flame ever.</p>
 
 	<form action="#" method="post">
 		<fieldset>
@@ -71,7 +71,7 @@ function ready(event) {
 
 </section>
 
-<article>
+<article id="content">
 
 	<section class="home-phoneApp">
 
@@ -140,7 +140,7 @@ function ready(event) {
 
 	</section>
 
-	<section class="home-email">
+	<section class="emailForm">
 
 		<form action="#" method="post">
 			<fieldset>

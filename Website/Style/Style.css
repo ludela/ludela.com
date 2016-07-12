@@ -28,6 +28,15 @@
 }
 
 @font-face {
+	font-family: "ACaslonPro";
+	src:
+		url("Fonts/ACaslonPro-Italic.woff2") format("woff2"),
+		url("Fonts/ACaslonPro-Italic.woff" ) format("woff");
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
 	font-family: "gotham-bold";
 	src:
 		url("Fonts/gotham-bold-webfont.woff2") format("woff2"),
@@ -35,6 +44,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
 
 body {
 	margin: 0;
@@ -348,6 +358,13 @@ section {
 		float: right;
 	}
 
+section.emailForm {
+	
+	margin: 0 auto;
+	max-width: 35em;
+	text-align: center;
+}
+
 /* Hero: */
 .hero {
 	/* Trick to keep height as a percentage of width, the catch being that all content must be abs positioned. */
@@ -368,6 +385,8 @@ section {
 	text-align: center;
 
 	font-family: "quicksand";
+
+	position: relative;
 }
 	.hero > div {
 		margin-top: 18%;
@@ -397,6 +416,41 @@ section {
 		}
 			.hero .cta a:hover  { box-shadow: 0 0 10px black; }
 			.hero .cta a:active { box-shadow: 0 0 20px black; }
+
+	.hero > a { /* Jump-to-content link */
+		
+		display: block;
+		margin: 0 auto;
+		position: absolute;
+		bottom: 15px;
+		left: 0;
+		right: 0;
+
+		width: 50px;
+		height: 50px;
+		border-radius: 25px;
+		background: rgba( 255, 255, 255, 0.3 );
+		transition: background-color 100ms;
+
+		color: white;
+		text-decoration: none;
+	}
+		.hero > a::after {
+			content: '>';
+			transform: rotate(90deg);
+			display: block;
+			font-size: xx-large;
+			position: relative;
+			top: -8px;
+		}
+		.hero > a:hover {
+			background-color: rgba( 255, 255, 255, 0.6 );
+			transition: background-color 100ms;
+		}
+
+		.hero > a > span {
+			font-size: 0;
+		}
 
 @media (max-width: 680px) { /* 680px is the point where it stops being readable */
 	
@@ -459,13 +513,6 @@ body.home.testB > .hero {
 
 body.home h2 {
 	text-align: left;
-}
-
-body.home section.home-email {
-	
-	margin: 0 auto;
-	max-width: 35em;
-	text-align: center;
 }
 
 body.home section.home-phoneApp {

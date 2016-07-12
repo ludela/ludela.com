@@ -18,15 +18,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Content\" />
-    <Folder Include="Code\" />
     <Folder Include="Properties\" />
     <Folder Include="Properties\PublishProfiles\" />
-    <Folder Include="Views\" />
     <Folder Include="Style\" />
     <Folder Include="Style\Fonts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Home-BetterLives-541x797.jpg" />
+    <Content Include="Content\Home-BetterLives-748x600.jpg" />
     <Content Include="Content\Home-PhoneApp-1267x846.jpg" />
     <Content Include="Content\Story-Africa.svg" />
     <Content Include="Content\Story-BetterLight.jpg" />
@@ -38,8 +37,9 @@
     <Content Include="Content\Story-Story6.jpg" />
     <Content Include="Content\Story-Story7.jpg" />
     <Content Include="Content\Story-Story8.jpg" />
-    <Content Include="Default.html" />
     <Content Include="Properties\PublishProfiles\ToAzureFTP.phppub" />
+    <Content Include="Style\Fonts\ACaslonPro-Italic.woff" />
+    <Content Include="Style\Fonts\ACaslonPro-Italic.woff2" />
     <Content Include="Style\Fonts\gotham-bold-webfont.woff" />
     <Content Include="Style\Fonts\gotham-bold-webfont.woff2" />
     <Content Include="Style\Fonts\quicksand-bold-webfont.woff" />
@@ -61,7 +61,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Code\Common.php" />
     <Compile Include="FAQ.php" />
     <Compile Include="Home.php" />
     <Compile Include="LudelaLayoutView.php" />
