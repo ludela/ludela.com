@@ -39,10 +39,14 @@ function ready(event) {
 	protected function renderHero($viewModel) {
 ?>
 	<section class="hero">
-		<p>LuDela Smart Flame</p>
-		<p>Better Light. Better Lives.</p>
+		
+		<div>
+			<p>LuDela Smart Flame</p>
+			<p>Better Light. Better Lives.</p>
 
-		<p class="cta"><a href="#">Get One First!</a></p>
+			<p class="cta"><a href="#">Get One First!</a></p>
+		</div>
+		
 	</section>
 <?php
 	}
@@ -124,8 +128,9 @@ function ready(event) {
 
 		<div class="content">
 
-			<h2>1,300,000,000 people without lights</h2>
-			<p>Better light, better lives</p>
+			<em class="almostHeading">1,300,000,000 people without lights.</em>
+
+			<h2>Better light, better lives</h2>
 
 			<p>Over 1.3 Billion people globally still live without electricity, cutting their days in half, stopping children and adults alike from reading, learning, working and progressing. For others, their form of light is a toxic kerosene lamp costing them small fortunes per day.</p>
 
