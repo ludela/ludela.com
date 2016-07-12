@@ -142,7 +142,7 @@ div.tabsLinks {
 	}
 	#storyStory > section > div.content {
 		position: relative;
-		z-index: 100;
+		z-index: 50;
 		border: 5px solid #e0bc4b;
 		padding: 2em;
 
@@ -237,6 +237,12 @@ div.tabsLinks {
 		background: none !important;
 		text-align: left;
 		padding: 0;
+	}
+
+	#storyStory section:nth-of-type(9) {
+		margin: 6em auto 0 auto !important;
+		max-width: 35em;
+		text-align: left;
 	}
 }
 @media (min-width: 1024px) {

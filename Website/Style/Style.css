@@ -202,7 +202,7 @@ header > nav {
 		left: 0;
 		right: 0;
 		z-index: 90;
-		background-color: rgba( 0, 0, 0, 0.5 );
+		background-color: rgba( 0, 0, 0, 0.75 );
 		height: 86px;
 	}
 
@@ -255,7 +255,7 @@ footer > nav {
 /* General styles */
 
 h2 {
-	font-family: "gotham";
+	font-family: "gotham-bold";
 	font-weight: bold;
 	text-transform: uppercase;
 
@@ -384,7 +384,7 @@ section.emailForm {
 
 	text-align: center;
 
-	font-family: "quicksand";
+	font-family: "quicksand-regular";
 
 	position: relative;
 }
@@ -397,8 +397,7 @@ section.emailForm {
 	}
 		.hero p:nth-child(1) {
 			text-shadow: 0 0 10px black;
-			font-family: "gotham";
-			font-weight: bold;
+			font-family: "gotham-bold";
 			font-size: 54pt; /* Fallback for non-vw browsers */
 			font-size: 5.7vw;
 		}
@@ -406,10 +405,11 @@ section.emailForm {
 			text-shadow: 0 0 10px black;
 			font-size: 36pt; /* Fallback for non-vw browsers */
 			font-size: 3.5vw;
-			font-weight: lighter;
+			font-family: "quicksand-light";
 		}
 		.hero .cta {
-			margin-top: 6em;
+			margin-top: 3em;
+			margin-bottom: 3em;
 		}
 		.hero .cta a {
 			box-shadow: 0 0 10px black;
@@ -439,6 +439,7 @@ section.emailForm {
 			content: '>';
 			transform: rotate(90deg);
 			display: block;
+
 			font-size: xx-large;
 			position: relative;
 			top: -8px;
@@ -451,6 +452,17 @@ section.emailForm {
 		.hero > a > span {
 			font-size: 0;
 		}
+		@media (max-width: 680px) {
+			.hero > a {
+				bottom: 2%;
+				width: 100px;
+				height: 33px;
+			}
+			.hero > a::after {
+				top: calc( -10% + -17px );
+			}
+		}
+
 
 @media (max-width: 680px) { /* 680px is the point where it stops being readable */
 	
@@ -469,7 +481,7 @@ section.emailForm {
 	section > .imgWrap {
 		position: static;
 		width: auto;
-		height: 200px;
+		height: 350px;
 		margin: -2em -2em 2em -2em;
 		text-align: center;
 	}
@@ -546,9 +558,21 @@ body.home section.home-betterLives {
 		background-image: url("../Content/Home-BetterLives-748x600.jpg");
 		background-position: right center;
 		background-repeat: no-repeat;
+		background-size: auto 100%;
 	}
 		body.home section.home-betterLives .imgWrap img {
 			display: none;
+		}
+		@media (max-width: 680px) {
+			body.home section.home-betterLives .imgWrap {
+				background-position: right center;
+				background-size: cover;
+			}
+		}
+		@media (max-width: 900px) {
+			body.home section.home-betterLives .imgWrap {
+				background-position: 60% center;
+			}
 		}
 
 	body.home section.home-betterLives div.content {
