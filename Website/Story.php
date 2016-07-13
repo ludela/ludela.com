@@ -87,7 +87,7 @@ class StoryView extends LudelaView {
 						<dt><a href="http://www.surfaceink.com" target="_blank">Surface Ink</a>, Engineering  &amp; Product Development Partner</dt>
 						<dd>Product design; electrical, mechanical and industrial engineering, firmware and software.</dd>
 
-						<dt>Rachel Brady, Books for Africa Program Coordinator</dt>
+						<dt>Rachel Brady, <a href="http://www.booksforafrica.org" target="_blank">Books for Africa</a> Program Coordinator</dt>
 						<dd>Book &amp; Light Drop Coordinator for Africa.</dd>
 					</dl>
 
