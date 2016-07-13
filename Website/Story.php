@@ -247,13 +247,17 @@ class StoryView extends LudelaView {
 
 			<section>
 
-				<p>By winter 2017, LuDela will begin shipping its first units.  We hope you’ll join us in bringing better light to your life and to lives around the world.</p>
+				<div class="content">
 
-				<p>We hope you enjoyed our story!  We’re just getting started!</p>
+					<p>By winter 2017, LuDela will begin shipping its first units.  We hope you’ll join us in bringing better light to your life and to lives around the world.</p>
 
-				<p>Jamie, Cristina, Luca &amp; Candela</p>
+					<p>We hope you enjoyed our story!  We’re just getting started!</p>
 
-				<p>(By the way, Luca = “Bringer of Light” and Candela = “Measurement of Flame of Candle.”  This is the vision of LuDela—bringing light to those in need from candlelight enjoyed by LuDela customers.)</p>
+					<p>Jamie, Cristina, Luca &amp; Candela</p>
+
+					<p>(By the way, Luca = “Bringer of Light” and Candela = “Measurement of Flame of Candle.”  This is the vision of LuDela—bringing light to those in need from candlelight enjoyed by LuDela customers.)</p>
+
+				</div>
 
 			</section>
 

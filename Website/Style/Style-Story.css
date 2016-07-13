@@ -70,6 +70,11 @@ div.tabsLinks {
 			margin-top: 2em;
 			height: 80%;
 		}
+		@media (max-width: 680px) {
+			section > .imgWrap {
+				height: auto !important;
+			}
+		}
 
 #storyAbout section.story-betterLight {
 	background-image:
@@ -208,6 +213,7 @@ div.tabsLinks {
 
 /* "By winter 2017..." */
 #storyStory section:nth-of-type(9)          { max-width: 40em; margin: 6em auto 0 auto; }
+#storyStory section:nth-of-type(9) .content { border: none; padding: 0; width: auto; }
 
 /* Revert to a stacked presentation to avoid the text overlapping the photos. */
 @media (max-width: 1023px) {
@@ -240,7 +246,6 @@ div.tabsLinks {
 	}
 
 	#storyStory section:nth-of-type(9) {
-		margin: 6em auto 0 auto !important;
 		max-width: 35em;
 		text-align: left;
 	}

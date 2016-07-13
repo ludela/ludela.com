@@ -390,6 +390,7 @@ section.emailForm {
 }
 	.hero > div {
 		margin-top: 18%;
+		margin-bottom: 10%;
 	}
 	
 	.hero p {
@@ -486,7 +487,6 @@ section.emailForm {
 		text-align: center;
 	}
 		section > .imgWrap > img {
-			/*height: auto !important;*/
 			height: 100% !important;
 			float: none !important;
 		}
