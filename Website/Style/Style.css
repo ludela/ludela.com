@@ -519,10 +519,22 @@ section.emailForm {
 body.home.testA > .hero {
 	background-image: url("Hero-Home-A-2757x1515.jpg");
 }
-body.home.testB > .hero {
+body.home.testB > .hero { /* TestB has the iPhone in the photo */
 	background-image: url("Hero-Home-B-2757x1515.jpg");
 }
-
+	@media (min-width: 768px) {
+		body.home.testB .hero > div > p:nth-of-type(2) {
+			margin-bottom: 3em;
+		}
+		/* Move the .cta for TestB so it doesn't obscure the iPhone */
+		body.home.testB .hero .cta {
+			position: absolute;
+			right: 25%;
+			top: 85%;
+			margin-top: -3em;
+		}
+	}
+	
 body.home h2 {
 	text-align: left;
 }
