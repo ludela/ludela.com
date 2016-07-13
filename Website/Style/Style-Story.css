@@ -71,8 +71,11 @@ div.tabsLinks {
 			height: 80%;
 		}
 		@media (max-width: 680px) {
-			section > .imgWrap {
-				height: auto !important;
+			#storyAbout section.story-about > .imgWrap {
+				height: 300px !important;
+			}
+			#storyAbout section.story-about .imgWrap > img {
+				margin-top: 0;
 			}
 		}
 
@@ -213,9 +216,9 @@ div.tabsLinks {
 
 /* "By winter 2017..." */
 #storyStory section:nth-of-type(9)          { max-width: 40em; margin: 6em auto 0 auto; }
-#storyStory section:nth-of-type(9) .content { border: none; padding: 0; width: auto; }
+#storyStory section:nth-of-type(9) .content { border: none; width: auto; }
 
-/* Revert to a stacked presentation to avoid the text overlapping the photos. */
+
 @media (max-width: 1023px) {
 	
 	#storyStory { text-align: center; }
@@ -224,7 +227,7 @@ div.tabsLinks {
 		position: static !important;
 		height: auto !important;
 		margin: 0 !important;
-		padding: 0 !important;
+		padding: 2em 0 0 0 !important;
 	}
 	
 	#storyStory section img {
@@ -242,16 +245,28 @@ div.tabsLinks {
 		margin: 0 auto;
 		background: none !important;
 		text-align: left;
-		padding: 0;
 	}
 
 	#storyStory section:nth-of-type(9) {
 		max-width: 35em;
 		text-align: left;
+		margin: 0 auto !important;
+	}
+}
+@media (max-width: 550px) {
+	#storyStory section {
+		padding-top: 0 !important;
+	}
+	#storyStory section img {
+		width: 100%;
+	}
+
+	div.tabsLinks > ul > li > a {
+		padding: 0 1em;
 	}
 }
 @media (min-width: 1024px) {
-	body {
+	body.story {
 		overflow-x: hidden;
 	}
 	#storyStory section {
@@ -271,14 +286,5 @@ div.tabsLinks {
 	}
 	#storyStory section:nth-of-type(even) img:hover {
 		transform: rotate(-10deg) scale(1.25) !important;
-	}
-}
-@media (max-width: 550px) {
-	#storyStory section img {
-		width: 100%;
-	}
-
-	div.tabsLinks > ul > li > a {
-		padding: 0 1em;
 	}
 }
