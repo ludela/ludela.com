@@ -101,7 +101,7 @@ function ready(event) {
 				<li>Mess-free wax</li>
 				<li>Tunnel-free bright flame</li>
 				<li>Customizable outer shells</li>
-				<li>Affordable refill subscriptions</li>
+				<li>Affordable refills</li>
 				<li>Seasonal scented subscriptions</li>
 			</ul>
 		</div>
