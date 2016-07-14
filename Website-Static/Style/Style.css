@@ -1,0 +1,636 @@
+/*  */
+
+@import url("Style-Story.css");
+
+@font-face {
+	font-family: "quicksand-regular"; /* For some reason, if I name this to just "quicksand" then Chrome renders the body in the quicksand-light version, even though I specify `font-weight: normal`. */
+	src:
+		url("Fonts/quicksand-regular-webfont.woff2") format("woff2"),
+		url("Fonts/quicksand-regular-webfont.woff" ) format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "quicksand-light";
+	src:
+		url("Fonts/quicksand-light-webfont.woff2") format("woff2"),
+		url("Fonts/quicksand-light-webfont.woff" ) format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "quicksand-bold";
+	src:
+		url("Fonts/quicksand-bold-webfont.woff2") format("woff2"),
+		url("Fonts/quicksand-bold-webfont.woff" ) format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "ACaslonPro";
+	src:
+		url("Fonts/ACaslonPro-Italic.woff2") format("woff2"),
+		url("Fonts/ACaslonPro-Italic.woff" ) format("woff");
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "gotham-bold";
+	src:
+		url("Fonts/gotham-bold-webfont.woff2") format("woff2"),
+		url("Fonts/gotham-bold-webfont.woff" ) format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+body {
+	margin: 0;
+
+	font-family: "quicksand-regular";
+	font-weight: normal;
+}
+
+a { color: #e0bc4b; }
+a:visited { color: #362113; }
+a:hover { color: #ffd655; }
+
+a img { border: none; }
+
+nav {
+	font-weight: bold;
+	text-transform: uppercase;
+	position: relative;
+
+	font-size: 9pt;
+	letter-spacing: 0.1em;
+}
+	nav::after {
+		content: ' ';
+		display: block;
+		clear: both;
+	}
+		
+	nav > h1 {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		margin-left: auto;
+		margin-right: auto;
+
+		width: 130px;
+
+		font-size: 0;
+	}
+		nav > h1 > a {
+			display: block;
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			background-image: url("LuDela-White.svg");
+			background-size: 50% 50%;
+			background-repeat: no-repeat;
+			background-position: center center;
+
+			text-decoration: none;
+
+			transition: background-color 100ms;
+			background-color: rgba( 255, 255, 255, 0.0 );
+		}
+			nav > h1 > a:hover {
+				color: white;
+				background-color: rgba( 255, 255, 255, 0.3 );
+				transition: background-color 100ms;
+			}
+			body > header nav a {
+				text-shadow: 0 0 10px black;
+			}
+			body > header nav .cta a {
+				font-family: "quicksand-bold"; /* Weird, without this rule, it uses quicksand fond and it claims to be bold... but it isn't. */
+				font-weight: bold;
+				text-shadow: none !important;
+				font-size: 11pt;
+				letter-spacing: normal;
+			}
+
+		@media (max-width: 767px) { /* Hide the <h1> */
+			
+			nav .cta {
+				display: none;
+			}
+			nav > h1 {
+				margin-right: 0;
+			}
+		}
+		@media (max-width: 472px) {
+			nav > h1 {
+				display: none;
+			}
+		}
+			
+	nav > ul {
+		padding: 0;
+		margin: 0;
+	}
+		nav > ul > li {
+			display: block;
+			margin: 0;
+			padding: 0;
+
+			float: left;
+		}
+				
+		nav > ul > li > a {
+			display: block;
+			margin: 0;
+			padding: 0 2em;
+			line-height: 86px;
+			text-decoration: none;
+			transition: background-color 100ms;
+		}
+		nav > ul > li > a:hover {
+			transition: background-color 100ms;
+		}
+		@media (max-width: 350px) { /* Make nav links smaller */
+
+			nav > ul > li > a {
+				padding: 0.5em;
+				line-height: 50px;
+			}
+		}
+			nav > ul > li.cta {
+				float: right;
+
+				box-sizing: border-box;
+				height: 86px;
+			}
+			.cta > a {
+				font-weight: bold;
+
+				line-height: normal;
+				padding: 1em 2em;
+				margin: 18px 18px 0 0;
+				color: black;
+				text-decoration: none;
+				text-shadow: none;
+				background-color: #e0bc4b;
+				transition: background-color 100ms;
+			}
+				.cta > a:hover {
+					background-color: #ffd655;
+					transition: background-color 100ms;
+				}
+	
+header > nav {
+	background-color: rgba( 255, 255, 255, 0.1 );
+	color: white;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 110;
+}
+	.navBack {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 90;
+		background-color: rgba( 0, 0, 0, 0.75 );
+		height: 86px;
+	}
+
+	header > nav > ul > li > a {
+		color: white;
+		text-shadow: 0 0 10px black;
+		background-color: rgba( 255, 255, 255, 0.0 );
+	}
+	header > nav > ul > li > a:hover {
+		background-color: rgba( 255, 255, 255, 0.3 );
+	}
+
+	header > nav > ul > li > a:link,
+	header > nav > ul > li > a:visited,
+	header > nav > ul > li > a:hover {
+		color: white;
+	}
+		header > nav > ul > li.cta > a:link,
+		header > nav > ul > li.cta > a:visited,
+		header > nav > ul > li.cta > a:hover {
+			color: black;
+		}
+
+footer > nav {
+	background-color: #f1ecdc;
+	color: black;
+}
+	footer > nav > ul > li > a {
+		background-color: rgba( 255, 255, 255, 0.0 );
+	}
+	footer > nav > ul > li > a:hover {
+		background-color: rgba( 255, 255, 255, 0.3 );
+	}
+	footer > nav > h1 > a {
+		background-image: url("LuDela-Black.svg");
+	}
+
+	footer > nav > ul > li > a:link,
+	footer > nav > ul > li > a:visited,
+	footer > nav > ul > li > a:hover {
+		color: black;
+	}
+		footer > nav > ul > li.cta > a:link,
+		footer > nav > ul > li.cta > a:visited,
+		footer > nav > ul > li.cta > a:hover {
+			color: black;
+		}
+
+/**********************/
+/* General styles */
+
+h2 {
+	font-family: "gotham-bold";
+	font-weight: bold;
+	text-transform: uppercase;
+
+	text-align: center;
+}
+h3 {
+	text-transform: uppercase;
+	font-size: 16pt;
+	font-family: "quicksand-bold";
+}
+
+fieldset {
+	padding: 2em;
+	background: #e0bc4b;
+	border: none;
+}
+	fieldset label {
+		display: block;
+		margin-bottom: 2em;
+	}
+	fieldset label span {
+		font-weight: bold;
+	}
+
+	fieldset input,
+	fieldset button {
+		font-family: "quicksand-bold";
+	}
+
+	fieldset input[type=text] {
+		border: none;
+		padding: 1em;
+		box-sizing: border-box;
+		width: 75%;
+	}
+	fieldset button {
+		text-transform: uppercase;
+		border: none;
+		padding: 1em 2em;
+		background: black;
+		color: white;
+		transition: background-color 100ms;
+	}
+		fieldset button:hover {
+			border: none;
+			background: #ccc;
+			color: white;
+			transition: background-color 100ms;
+		}
+		fieldset button:active {
+			color: black;
+		}
+
+section {
+	padding: 4em;
+
+	position: relative;
+}
+	article section:nth-child(2n+1) {
+		background-color: #f1ecdc;
+	}
+	
+	article section > div.content {
+		float: right;
+		max-width: 30em;
+	}
+	article section::after {
+		content: ' ';
+		display: block;
+		clear: both;
+	}
+
+	section > .imgWrap {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 50%;
+		
+		overflow: hidden;
+
+		background: black;
+	}
+		section > .imgWrap > img {
+			
+		}
+
+.twoColumnContainer {
+	max-width: 50em;
+	margin: 0 auto;
+}
+	.twoColumnContainer::after {
+		content: ' ';
+		display: block;
+		clear: both;
+	}
+	.twoColumnContainer > *:nth-child(1) {
+		float: left;
+	}
+	.twoColumnContainer > *:nth-child(2) {
+		float: right;
+	}
+
+section.emailForm {
+	
+	margin: 0 auto;
+	max-width: 35em;
+	text-align: center;
+}
+
+/* Hero: */
+.hero {
+	/* Trick to keep height as a percentage of width, the catch being that all content must be abs positioned. */
+	padding-top: 86px;
+	padding-right: 0;
+	padding-bottom: 10%;
+	padding-left: 0;
+
+	box-sizing: border-box;
+	background-size: cover;
+
+	/* Note the z-indexing with .navBack */
+	z-index: 100;
+
+	color: white;
+	text-transform: uppercase;
+
+	text-align: center;
+
+	font-family: "quicksand-regular";
+
+	position: relative;
+}
+	.hero > div {
+		margin-top: 18%;
+		margin-bottom: 10%;
+	}
+	
+	.hero p {
+		margin: 0;
+	}
+		.hero p:nth-child(1) {
+			text-shadow: 0 0 10px black;
+			font-family: "gotham-bold";
+			font-size: 54pt; /* Fallback for non-vw browsers */
+			font-size: 5.7vw;
+		}
+		.hero p:nth-child(2) {
+			text-shadow: 0 0 10px black;
+			font-size: 36pt; /* Fallback for non-vw browsers */
+			font-size: 3.5vw;
+			font-family: "quicksand-light";
+		}
+		.hero .cta {
+			margin-top: 3em;
+			margin-bottom: 3em;
+		}
+		.hero .cta a {
+			box-shadow: 0 0 10px black;
+		}
+			.hero .cta a:hover  { box-shadow: 0 0 10px black; }
+			.hero .cta a:active { box-shadow: 0 0 20px black; }
+
+	.hero > a { /* Jump-to-content link */
+		
+		display: block;
+		margin: 0 auto;
+		position: absolute;
+		bottom: 15px;
+		left: 0;
+		right: 0;
+
+		width: 50px;
+		height: 50px;
+		border-radius: 25px;
+		background: rgba( 255, 255, 255, 0.3 );
+		transition: background-color 100ms;
+
+		color: white;
+		text-decoration: none;
+	}
+		.hero > a::after {
+			content: '>';
+			transform: rotate(90deg);
+			display: block;
+
+			font-size: xx-large;
+			position: relative;
+			top: -8px;
+		}
+		.hero > a:hover {
+			background-color: rgba( 255, 255, 255, 0.6 );
+			transition: background-color 100ms;
+		}
+
+		.hero > a > span {
+			font-size: 0;
+		}
+		@media (max-width: 680px) {
+			.hero > a {
+				bottom: 2%;
+				width: 100px;
+				height: 33px;
+			}
+			.hero > a::after {
+				top: calc( -10% + -17px );
+			}
+		}
+
+
+@media (max-width: 680px) { /* 680px is the point where it stops being readable */
+	
+	section {
+		padding: 2em;
+	}
+
+	article section {
+		padding: 2em !important;
+	}
+
+	section.home-phoneApp {
+		padding-right: 2em !important;
+	}
+
+	section > .imgWrap {
+		position: static;
+		width: auto;
+		height: 350px;
+		margin: -2em -2em 2em -2em;
+		text-align: center;
+	}
+		section > .imgWrap > img {
+			height: 100% !important;
+			float: none !important;
+		}
+
+	.twoColumnContainer > * {
+		float: none !important;
+		width: auto !important;
+	}
+
+	fieldset {
+		width: 100%;
+		box-sizing: border-box;
+	}
+		fieldset input[type=text] {
+			box-sizing: border-box;
+			width: 100%;
+			display: block;
+		}
+
+	div.content {
+		float: none !important;
+	}
+}
+
+/**********************/
+/* Specific content */
+
+/* Home: */
+
+body.home.testA > .hero {
+	background-image: url("Hero-Home-A-2757x1515.jpg");
+}
+body.home.testB > .hero { /* TestB has the iPhone in the photo */
+	background-image: url("Hero-Home-B-2757x1515.jpg");
+}
+	@media (min-width: 768px) {
+		body.home.testB .hero > div > p:nth-of-type(2) {
+			margin-bottom: 3em;
+		}
+		/* Move the .cta for TestB so it doesn't obscure the iPhone */
+		body.home.testB .hero .cta {
+			position: absolute;
+			right: 25%;
+			top: 85%;
+			margin-top: -3em;
+		}
+	}
+	
+body.home h2 {
+	text-align: left;
+}
+
+body.home section.home-phoneApp {
+	padding-right: calc( 50% + 4em );
+}
+	body.home section.home-phoneApp .imgWrap {
+		right: 0;
+
+		background-image: url("../Content/Home-PhoneApp-1267x846.jpg");
+		background-size: cover;
+		background-position: right bottom;
+	}
+		@media (max-width: 900px) {
+			body.home section.home-phoneApp .imgWrap {
+				background-position: 60% bottom;
+			}
+		}
+
+		body.home section.home-phoneApp .imgWrap img {
+			display: none;
+		}
+
+body.home section.home-betterLives {
+	padding-left: calc( 50% + 4em );
+	min-height: 550px;
+	box-sizing: border-box;
+}
+	body.home section.home-betterLives .imgWrap {
+		left: 0;
+
+		background-image: url("../Content/Home-BetterLives-748x600.jpg");
+		background-position: right center;
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+	}
+		body.home section.home-betterLives .imgWrap img {
+			display: none;
+		}
+		@media (max-width: 680px) {
+			body.home section.home-betterLives .imgWrap {
+				background-position: right center;
+				background-size: cover;
+			}
+		}
+		@media (max-width: 900px) {
+			body.home section.home-betterLives .imgWrap {
+				background-position: 60% center;
+			}
+		}
+
+	body.home section.home-betterLives div.content {
+		float: left;
+	}
+
+	body.home section.home-betterLives em {
+		font-size: 28pt;
+		font-style: normal;
+		font-family: "quicksand-light";
+	}
+
+section.home-bullets {
+	
+	margin: 0 auto;
+	max-width: 40em;
+}
+	section.home-bullets > div {
+		width: 17em;
+	}
+	section.home-bullets ul {
+		line-height: 150%;
+		list-style: none;
+		padding: 0;
+		margin: 1em 0;
+	}
+	section.home-bullets ul > li {
+		padding: 0;
+		margin: 1em 0;
+	}
+
+
+/* FAQ: */
+
+body.faq > .hero {
+	height: 100px;
+	padding: 0;
+}
+
+body.faq > header {
+	background-color: #362113;
+}
+
+body.faq article {
+	max-width: 50em;
+	margin: 0 auto;
+}
