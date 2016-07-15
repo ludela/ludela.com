@@ -1,7 +1,7 @@
-﻿/* Story: */
+/* Story: */
 
 body.story > .hero {
-	background-image: url("Hero-Story-2592x1728.jpg");
+	background-image: url("/img/Hero-Story-2592x1728.jpg");
 }
 
 div.tabsLinks {
@@ -82,7 +82,7 @@ div.tabsLinks {
 #storyAbout section.story-betterLight {
 	background-image:
 		linear-gradient( to right, rgba( 0, 0, 0, 0.7) 0%, rgba( 0, 0, 0, 0.7 ) 100% ),
-		url("../Content/Story-BetterLight.jpg");
+		url("/img/Story-BetterLight.jpg");
 	background-size: cover;
 	color: white;
 	text-shadow: 0 0 10px black;
@@ -220,22 +220,22 @@ div.tabsLinks {
 
 
 @media (max-width: 1023px) {
-	
+
 	#storyStory { text-align: center; }
-	
+
 	#storyStory section {
 		position: static !important;
 		height: auto !important;
 		margin: 0 !important;
 		padding: 2em 0 0 0 !important;
 	}
-	
+
 	#storyStory section img {
 		position: static;
 		max-width: 100%;
 		margin-top: 0 !important;
 	}
-	
+
 	#storyStory section .content {
 		position: static !important;
 		border: none !important;

@@ -47,7 +47,7 @@ class StoryView extends LudelaView {
 
 					<p class="emote">It started with a trip and ended with a journey.</p>
 
-					<p>Founded in 2014, LuDela is the world’s first smart candle company with a warm mission to bring better light and better lives around the world.  LuDela is committed to delivering the safest, most convenient, feature-rich candlelight offerings in the world to enable our customers to reconnect with nature and celebrate the most adored ambient light source on the planet—fire.</p>
+					<p>Founded in 2014, LuDela is the world’s first smart candle company with a warm mission to bring better light and better lives around the world.  LuDela is committed to delivering the safest, most convenient, feature-rich candlelight offerings in the world to enable our customers to reconnect with nature and celebrate the most adored ambient light source on the planet—<em>fire</em>.</p>
 				</div>
 
 			</section>
@@ -84,10 +84,10 @@ class StoryView extends LudelaView {
 						<dt>Eric Bauswell, Co-Founder &amp; VP of Engineering</dt>
 						<dd>25-year veteran who has led over 400 products from concept to production.</dd>
 
-						<dt>Surface Ink, Engineering  &amp; Product Development Partner</dt>
+						<dt><a href="http://www.surfaceink.com" target="_blank">Surface Ink</a>, Engineering  &amp; Product Development Partner</dt>
 						<dd>Product design; electrical, mechanical and industrial engineering, firmware and software.</dd>
 
-						<dt>Rachel Brady, Books for Africa Program Coordinator</dt>
+						<dt>Rachel Brady, <a href="http://www.booksforafrica.org" target="_blank">Books for Africa</a> Program Coordinator</dt>
 						<dd>Book &amp; Light Drop Coordinator for Africa.</dd>
 					</dl>
 
