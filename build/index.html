@@ -8,25 +8,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="css/style.css" type="text/css" />
 
-	<script type="text/javascript">
+    <!-- Optimizely -->
+    <script src="https://cdn.optimizely.com/js/6533670069.js"></script>
 
-window.addEventListener('DOMContentLoaded', ready );
-
-function ready(event) {
-
-	// Add the A/B test indicator to the <form> elements.
-	var cls = document.getElementsByTagName('body')[0].attributes['class'].value;
-	var fs = document.getElementsByTagName("fieldset");
-	for(var i = 0; i < fs.length; fs++) {
-		var hidden = document.createElement('input');
-		hidden.type = 'hidden';
-		hidden.value = cls;
-		fs[i].appendChild( hidden );
-	}
-}
-
-	</script>
-	
 	<!-- Crowdstart analytics tag -->
 	<script>
 	  !function(t,e,a){var r,n,c,i,o,s,l,u;if(null==t.analytics){for(r=[],r.methods=["ab","alias","group","identify","off","on","once","page","pageview","ready","track","trackClick","trackForm","trackLink","trackSubmit"],l=r.methods,c=function(t){r[t]=function(){var e;return e=Array.prototype.slice.call(arguments),e.unshift(t),r.push(e),r}},i=0,o=l.length;o>i;i++)s=l[i],c(s);return u=e.createElement("script"),u.async=!0,u.type="text/javascript",u.src=a,n=e.getElementsByTagName("script")[0],n.parentNode.insertBefore(u,n),t.analytics=r}}(window,document,"//cdn.crowdstart.com/a/ludela.js");
