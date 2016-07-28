@@ -120,7 +120,7 @@ nav {
 				letter-spacing: normal;
 			}
 
-		@media (max-width: 767px) { /* Hide the <h1> */
+		@media (max-width: 840px) { /* Hide the <h1> */
 
 			nav .cta {
 				display: none;
