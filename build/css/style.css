@@ -648,7 +648,7 @@ footer .social a {
 }
 
 @media (max-width: 840px) {
-  footer .social a {
+  footer .social {
     margin-right: 100px;
   }
 }
