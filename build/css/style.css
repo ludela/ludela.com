@@ -638,6 +638,7 @@ body.faq article {
 
 footer .social {
   float: right;
+  margin-right: 10px;
 }
 
 footer .social a {
@@ -647,11 +648,13 @@ footer .social a {
 }
 
 @media (max-width: 840px) {
-  margin-right: 100px;
+  footer .social a {
+    margin-right: 100px;
+  }
 }
 
 footer .cta {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 
