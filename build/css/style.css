@@ -636,15 +636,26 @@ body.faq article {
 
 /* Social Thingis */
 
+.social {
+  margin-top: 10px;
+}
+
+.social a {
+  font-size: 30px;
+  margin: 10px;
+}
+
 footer .social {
   float: right;
   margin-right: 10px;
+  margin-top: 0px;
 }
 
 footer .social a {
   display: inline-block;
   font-size: 25px;
   padding: 0 10px;
+  margin: 0;
 }
 
 @media (max-width: 840px) {
