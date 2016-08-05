@@ -644,7 +644,7 @@ footer .social {
 footer .social a {
   display: inline-block;
   font-size: 25px;
-  margin: 0 10px;
+  padding: 0 10px;
 }
 
 @media (max-width: 840px) {
