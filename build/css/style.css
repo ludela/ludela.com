@@ -47,15 +47,6 @@
 	font-style: normal;
 }
 
-footer .social {
-  float: right;
-}
-
-footer .social a {
-  display: inline-block;
-}
-
-
 body {
 	margin: 0;
 
@@ -642,3 +633,26 @@ body.faq article {
 	max-width: 50em;
 	margin: 0 auto;
 }
+
+/* Social Thingis */
+
+footer .social {
+  float: right;
+}
+
+footer .social a {
+  display: inline-block;
+  font-size: 25px;
+  margin: 0 10px;
+}
+
+@media (max-width: 840px) {
+  margin-right: 100px;
+}
+
+footer .cta {
+  margin-top: 10px;
+}
+
+
+
