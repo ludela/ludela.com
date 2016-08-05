@@ -653,6 +653,17 @@ footer .social a {
   }
 }
 
+@media(max-width: 630px) {
+  footer .social {
+    margin-top: 84px;
+    margin-right: 0px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    background-color: #f1ecdc;
+  }
+}
+
 footer .cta {
   margin-top: 5px;
 }
