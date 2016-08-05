@@ -47,6 +47,14 @@
 	font-style: normal;
 }
 
+footer .social {
+  float: right;
+}
+
+footer .social a {
+  display: inline-block;
+}
+
 
 body {
 	margin: 0;
