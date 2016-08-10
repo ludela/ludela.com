@@ -364,6 +364,10 @@ section.emailForm {
 }
 
 /* Hero: */
+.hero {
+  min-height: 700px !important;
+}
+
 .hero .play.button {
   display: none;
 }
@@ -373,12 +377,26 @@ section.emailForm {
 }
 
 .hero.video .messaging {
-  margin-top: 50vh !important;
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 60px;
 }
 
-@media (max-width: 413px) {
+@media (max-width: 800px) {
+  .hero.video {
+    background-size: auto 110%;
+    background-position: 25% 60%;
+  }
+}
+
+@media (max-width: 600px) {
   .hero.video .messaging {
-    margin-top: 60vh !important;
+    font-weight: 600;
+  }
+
+  nav > ul > li > a {
+    padding: 0 1em;
   }
 }
 
