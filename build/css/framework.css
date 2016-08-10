@@ -4,7 +4,8 @@ body {
 }
 
 /* A block is the basic unit of a webpage. Sections, headers, and footers are also blocks */
-.block, section, header, footer{
+/* .block, section, header, footer{ */
+.hero {
   position: relative;
   width: 100%;
   text-align: center;

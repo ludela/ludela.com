@@ -5,8 +5,8 @@
 @font-face {
 	font-family: "quicksand-regular"; /* For some reason, if I name this to just "quicksand" then Chrome renders the body in the quicksand-light version, even though I specify `font-weight: normal`. */
 	src:
-		url("/fonts/quicksand-regular-webfont.woff2") format("woff2"),
-		url("/fonts/quicksand-regular-webfont.woff" ) format("woff");
+		url("../fonts/quicksand-regular-webfont.woff2") format("woff2"),
+		url("../fonts/quicksand-regular-webfont.woff" ) format("woff");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -14,8 +14,8 @@
 @font-face {
 	font-family: "quicksand-light";
 	src:
-		url("/fonts/quicksand-light-webfont.woff2") format("woff2"),
-		url("/fonts/quicksand-light-webfont.woff" ) format("woff");
+		url("../fonts/quicksand-light-webfont.woff2") format("woff2"),
+		url("../fonts/quicksand-light-webfont.woff" ) format("woff");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,8 +23,8 @@
 @font-face {
 	font-family: "quicksand-bold";
 	src:
-		url("/fonts/quicksand-bold-webfont.woff2") format("woff2"),
-		url("/fonts/quicksand-bold-webfont.woff" ) format("woff");
+		url("../fonts/quicksand-bold-webfont.woff2") format("woff2"),
+		url("../fonts/quicksand-bold-webfont.woff" ) format("woff");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -32,8 +32,8 @@
 @font-face {
 	font-family: "ACaslonPro";
 	src:
-		url("/fonts/ACaslonPro-Italic.woff2") format("woff2"),
-		url("/fonts/ACaslonPro-Italic.woff" ) format("woff");
+		url("../fonts/ACaslonPro-Italic.woff2") format("woff2"),
+		url("../fonts/ACaslonPro-Italic.woff" ) format("woff");
 	font-weight: normal;
 	font-style: italic;
 }
@@ -41,8 +41,8 @@
 @font-face {
 	font-family: "gotham-bold";
 	src:
-		url("/fonts/gotham-bold-webfont.woff2") format("woff2"),
-		url("/fonts/gotham-bold-webfont.woff" ) format("woff");
+		url("../fonts/gotham-bold-webfont.woff2") format("woff2"),
+		url("../fonts/gotham-bold-webfont.woff" ) format("woff");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -93,7 +93,7 @@ nav {
 			margin: 0;
 			padding: 0;
 			height: 100%;
-			background-image: url("/img/LuDela-White.svg");
+			background-image: url("../img/LuDela-White.svg");
 			background-size: 50% 50%;
 			background-repeat: no-repeat;
 			background-position: center center;
@@ -186,26 +186,23 @@ nav {
 					background-color: #ffd655;
 					transition: background-color 100ms;
 				}
+header {
+	position: fixed !important;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	transition: all .3s ease-out;
+}
+
+header.dark {
+	background-color: rgba( 0, 0, 0, 0.75 );
+}
 
 header > nav {
 	background-color: rgba( 255, 255, 255, 0.1 );
 	color: white;
-
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 110;
 }
-	.navBack {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: 90;
-		background-color: rgba( 0, 0, 0, 0.75 );
-		height: 86px;
-	}
 
 	header > nav > ul > li > a {
 		color: white;
@@ -238,7 +235,7 @@ footer > nav {
 		background-color: rgba( 255, 255, 255, 0.3 );
 	}
 	footer > nav > h1 > a {
-		background-image: url("/img/LuDela-Black.svg");
+		background-image: url("../img/LuDela-Black.svg");
 	}
 
 	footer > nav > ul > li > a:link,
@@ -367,6 +364,18 @@ section.emailForm {
 }
 
 /* Hero: */
+.hero .play.button {
+  display: none;
+}
+
+.hero.video .play.button {
+  display: inherit;
+}
+
+.hero.video .messaging {
+  margin-top: 50vh !important;
+}
+
 .hero {
 	/* Trick to keep height as a percentage of width, the catch being that all content must be abs positioned. */
 	padding-top: 86px;
@@ -377,9 +386,6 @@ section.emailForm {
 	box-sizing: border-box;
 	background-size: cover;
 
-	/* Note the z-indexing with .navBack */
-	z-index: 100;
-
 	color: white;
 	text-transform: uppercase;
 
@@ -389,9 +395,8 @@ section.emailForm {
 
 	position: relative;
 }
-	.hero > div {
+	.hero > .messaging {
 		margin-top: 18%;
-		margin-bottom: 10%;
 	}
 
 	.hero p {
@@ -518,13 +523,13 @@ section.emailForm {
 /* Home: */
 
 body.home.testA > .hero {
-	background-image: url("/img/Hero-Home-A-2757x1515.jpg");
+	background-image: url("../img/Hero-Home-A-2757x1515.jpg");
 }
 body.home.testB > .hero { /* TestB has the iPhone in the photo */
-	background-image: url("/img/Hero-Home-B-2757x1515.jpg");
+	background-image: url("../img/Hero-Home-B-2757x1515.jpg");
 }
 	@media (min-width: 768px) {
-		body.home.testB .hero > div > p:nth-of-type(2) {
+		body.home.testB .hero > .messaging > p:nth-of-type(2) {
 			margin-bottom: 3em;
 		}
 		/* Move the .cta for TestB so it doesn't obscure the iPhone */
@@ -546,7 +551,7 @@ body.home section.home-phoneApp {
 	body.home section.home-phoneApp .imgWrap {
 		right: 0;
 
-		background-image: url("/img/Home-PhoneApp-1267x846.jpg");
+		background-image: url("../img/Home-PhoneApp-1267x846.jpg");
 		background-size: cover;
 		background-position: right bottom;
 	}
@@ -568,7 +573,7 @@ body.home section.home-betterLives {
 	body.home section.home-betterLives .imgWrap {
 		left: 0;
 
-		background-image: url("/img/Home-BetterLives-748x600.jpg");
+		background-image: url("../img/Home-BetterLives-748x600.jpg");
 		background-position: right center;
 		background-repeat: no-repeat;
 		background-size: auto 100%;
