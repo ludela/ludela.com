@@ -129,7 +129,7 @@ nav {
 			}
 		}
 		@media (max-width: 472px) {
-			nav > h1 {
+			footer nav > h1 {
 				display: none;
 			}
 		}
@@ -303,7 +303,7 @@ fieldset {
 			color: white;
 			transition: background-color 100ms;
 		}
-		fieldset button:active {
+		fieldset button:actie {
 			color: black;
 		}
 
@@ -374,6 +374,12 @@ section.emailForm {
 
 .hero.video .messaging {
   margin-top: 50vh !important;
+}
+
+@media (max-width: 413px) {
+  .hero.video .messaging {
+    margin-top: 60vh !important;
+  }
 }
 
 .hero {
