@@ -385,13 +385,18 @@ section.emailForm {
 
 @media (max-width: 800px) {
   .hero.video {
-    background-position: 32% 50%;
+    background-size: auto 110%;
+    background-position: 25% 60%;
   }
 }
 
 @media (max-width: 600px) {
-  .hero.video {
-    background-attachment: fixed;
+  .hero.video .messaging {
+    font-weight: 600;
+  }
+
+  nav > ul > li > a {
+    padding: 0 1em;
   }
 }
 
