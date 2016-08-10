@@ -679,5 +679,6 @@ footer .cta {
   margin-top: 5px;
 }
 
-
-
+.modal {
+  margin: 0 !important;
+}
