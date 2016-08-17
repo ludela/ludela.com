@@ -711,3 +711,8 @@ footer .cta {
 .modal {
   margin: 0 !important;
 }
+
+.careers, .contact {
+  padding: 6em 4em 0 4em;
+  min-height: 300px;
+}
