@@ -5,7 +5,13 @@
 
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="stylesheet" href="/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+    <!-- Contentful -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.1/es6-shim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://npmcdn.com/contentful@3.3.5/browser-dist/contentful.js"></script>
+    <script src="js/faq.js"></script>
 
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
@@ -13,7 +19,7 @@
 	<!-- Crowdstart analytics tag -->
 	<script>
 	  !function(t,e,a){var r,n,c,i,o,s,l,u;if(null==t.analytics){for(r=[],r.methods=["ab","alias","group","identify","off","on","once","page","pageview","ready","track","trackClick","trackForm","trackLink","trackSubmit"],l=r.methods,c=function(t){r[t]=function(){var e;return e=Array.prototype.slice.call(arguments),e.unshift(t),r.push(e),r}},i=0,o=l.length;o>i;i++)s=l[i],c(s);return u=e.createElement("script"),u.async=!0,u.type="text/javascript",u.src=a,n=e.getElementsByTagName("script")[0],n.parentNode.insertBefore(u,n),t.analytics=r}}(window,document,"//cdn.crowdstart.com/a/ludela.js");
-	</script>
+    </script>
 </head>
 <body class="faq testA">
 
@@ -38,57 +44,12 @@
 	<article>
 
 		<h2>Frequently Asked Questions</h2>
-
-		<section class="faq-questions">
-
-			<h3>What is a LuDela Candle?</h3>
-			<p>LuDela Candles are safer, smarter, technology-enabled candlelight fixtures that allow users to instantly ignite, extinguish and control multiple real-flame candles with the touch of a button on our free smartphone app.</p>
-			
-			<h3>Safer? How are they safer than regular candles?</h3>
-			<p>Candles are the #1 cause of house fires in America.  In fact, there are about 26 house fires per day caused by candles.  We’re on a mission is to change that!  That’s why we’ve spent years developing our Wi-Fire Smart Module using the very latest in sensor technologies.  The safety module was developed and rigorously tested by some of the world's finest engineers of <a href="http://www.surfaceink.com/">Surface Ink</a> in San Jose, California.</p>
-			
-			<p>Under the hood of our beautiful LuDela candle shells is a 7-point safety feature set that automatically extinguishes the flame in the most common fire-causing conditions (tipping over, falling, objects moving over the flame, etc.).  This safety module also prevents LuDela from igniting the flame when it's not safe to light using our <i>Smart Scan</i> technology. </p>
-			
-			<p>Our mission is to significantly reduce house fires and increase your levels of relaxation, peace of mind and enjoyment while using this cherished, 5,000-year-old source of light and scents.</p>
-			
-			<h3>How does LuDela work? I mean, what is creating this "Smart Flame"? </h3>
-			<p>Our patent pending <i>Wi-Fire Smart Module</i> communicates via Bluetooth to our free app.  The app has numerous features allowing you to ignite and extinguish our proprietary, specially formulated 100% natural wax cartridge with natural, lead-free wicks.  There is no dangerous, flammable gas either—it’s just a real candle! </p>
-
-			<h3>Tell me more about the candle refill cartridges - how long does each refill cartridge burn for?</h3>
-			<p>LuDela burns a specially formulated 100% natural candle.  We never put toxic ingredients like paraffin in any of our candle refills.  We use only ingredients like soy, beeswax, palm or coconut in our candles and only with natural, lead-free wicks.  Our current prototypes refills are delivering 30 hours of clean-burning, real-flame ambiance. Changing out cartridges only takes a few seconds </p>
-
-			<h3>How much is a LuDela smart candle fixture going to cost me?</h3>
-			<p>Each LuDela smart candle fixture will be offered at just $99 each for a limited time during our upcoming pre-order campaign.  Even deeper discounts are available if you buy more than one.  This represents a savings of nearly 50% off the suggested MSRP.  So make sure to <a href="#getone">sign up on our newsletter list</a> to stay informed!</p>
-
-			<h3>That sounds fair, but how much are the refill candles?</h3>
-			<p>Our 100% natural, paraffin-free refill cartridges are only $9.99 for a 30-hour cartridge!  Compare that other natural candles!  The savings will allow most LuDela customers to pay back their initial LuDela fixture investment in the first year or so.   We’ll also be offering various subscription plans to allow you to save even more! </p>
-
-			<h3>Will the subscription plans be available during pre-order? </h3>
-			<p>All pre-orders include a free one-month trial subscription per LuDela, a value of $14.99.  This includes two candle refills giving you a total 60 hours of beautiful, clean burning candlelight.   After your first month you can cancel, change frequency, add the curated scented option and more.</p>
-			
-			<h3>Did you say scented candles?  What’s the scented option all about?</h3>
-			<p>We are developing an exciting line of scented refills using fair trade, organic ingredients whenever possible.  We’re also working hard on a pure essential oil line of refills as well.  We are candle lovers like you, so rest assured we want amazing smelling scented candles that are healthy for you, your family, our planet and it’s people.  By becoming an early adopter of LuDela you’ll be able to give valuable input on scents so don’t forget to sign up on the <a href="#getone">newsletter list</a>.</p>
-			
-			<h3>Does it need to be plugged in or is it battery powered?</h3>
-			<p>Put your LuDela anywhere just like you would a regular candle.  Your LuDela comes with long lasting rechargeable batteries that last about 6 months before needing an overnight charge.</p>
-			
-			<h3>When will I be able to pre-order my LuDela Candles? </h3>
-			<p>We will be starting our pre-order campaign late September 2016.  The best way to find out news and updates is to sign up on our <a href="#getone">newsletter list</a>. </p>
-			
-			<h3>Are there other colors and sizes available?</h3>
-			<p>One of the best features of LuDela candles is the ability to change out the outer shell with different colors, textures and styles. So when Christmas comes there’s no need to buy red candles—just "skin" your LuDela with red shells year after year. We’ll be adding new wax textures, colors and materials like metallic, wood, glass and other shells on a regular basis. And you can help shape our future designs by joining the LuDela community.</p>
-
-			<h3>What is your plan to deliver the lights and books to Africa?</h3>
-			<p>We have a charity partner, Books for Africa, who has sent over 35 million books to Africa over the years. Their ocean containers have extra space so we avoid shipping fees. They also have NGO partners on the ground at each drop location to assist us in our “Operation Illumination” light and book drops to communities in Africa. We plan to serve communities in Asia, the Americas and other regions in the upcoming years.</p>
-			
-			<h3>I don’t use a smartphone but really want to use LuDela Candles to support the mission to bring solar lights to Africa. How else can I use them?</h3>
-			<p>You can light your LuDela Candles with a lighter or matches and extinguish the old fashioned way of just blowing it out. We are also planning to launch a remote control in 2017 for those without smartphones.</p>
-
-			<h3>How long do the solar lights last for these families? What is your maintenance plan?</h3>
-			<p>The solar light batteries will last 1.5 to 2 years, depending on use. In addition to the solar light drops, we’ll also be leaving spare batteries, parts, and additional units with new local dealers. Part of the light delivery is educating the recipients to save up for their planned new battery expense using the reduced expenditures on fuel, batteries, and charging fees. We’ll empower those willing to take their lighting seriously and accept there will be some who don’t follow the steps to become long-term solar light households. We will always be open to suggestions, guidance, and improvements. <a href="#getone">Join the LuDela movement to help us illuminate the world</a>.</p>
-
-		</section>
-
+        <section class="contentful faq-questions" data-contentful-models="faq" data-contentful-space="ydq4h2d910ei" data-contentful-token="c1aca1528246ada6b2fcc2ddad87a59a1caa2d21b1ea3ea9122f8ff55fca6046" data-contentful-order="rank">
+          <div>
+            <h3 data-contentful-field="question"></h3>
+            <p data-contentful-field="answer"></p>
+          </div>
+        </section>
 	</article>
 
 	<section class="emailForm">
