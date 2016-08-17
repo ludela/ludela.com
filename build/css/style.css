@@ -119,7 +119,7 @@ nav {
 				letter-spacing: normal;
 			}
 
-		@media (max-width: 840px) { /* Hide the <h1> */
+		@media (max-width: 1000px) { /* Hide the <h1> */
 
 			nav .cta {
 				display: none;
@@ -687,7 +687,7 @@ footer .social a {
   margin: 0;
 }
 
-@media (max-width: 840px) {
+@media (max-width: 1000px) {
   footer .social {
     margin-right: 100px;
   }
