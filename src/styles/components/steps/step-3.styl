@@ -1,0 +1,43 @@
+#step-3
+  .small-text
+    position: absolute
+    background #000
+    left: 50%
+    top: @left
+    width: 10em
+    height: (55/16em)
+    transition: all 250ms ease
+    opacity: 0
+    transform: translate3d(0, 80%, 0)
+
+    &.\\+left
+      margin-left: ((160 + 155)/1000) * -100%
+
+    &.\\+right
+      margin-left: (155/1000) * 100%
+
+&.is-step-3 #step-3
+
+  .small-text
+    opacity: 1
+
+    &.\\+one
+      margin-top: -18%
+      transition-delay: 100ms
+    
+    &.\\+two
+      margin-top: -2%
+      transition-delay: 300ms
+    
+    &.\\+three
+      margin-top: 4%
+      transition-delay: 400ms
+
+    &.\\+four
+      margin-top: 11%
+      transition-delay: 400ms
+
+&.is-step-3 #step-3,
+&.is-step-4 #step-3
+  .small-text
+    transform: translate3d(0,0,0)

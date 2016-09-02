@@ -1,0 +1,19 @@
+$width = 240
+$height = 490
+
+&__intro
+  position: absolute
+  bottom: 0
+  left: (((1000 - $width) / 2) / 1000) * 100%
+  background: gray
+  width: ($width / 1000) * 100%
+  height: ($height / 720) * 100%
+  transition: all 500ms ease
+  opacity: 0
+  transform: translate3d(0, -100vh, 0)
+
+  / .splash.is-step-1 &,
+  / .splash.is-step-2 &,
+  / .splash.is-step-3 &
+    opacity: 1
+    transform: translate3d(0,0,0)
