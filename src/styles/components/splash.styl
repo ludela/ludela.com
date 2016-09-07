@@ -1,11 +1,17 @@
 .splash
-  position: fixed
+  position fixed
+  z-index 100
+
+  &__content
+    max-width 1200px
+    margin 0 auto
 
   &,
   &__content
     pos-fill()
 
   &__content
-    position: absolute
-  
+    position absolute
+
+
   @require 'steps/**'
