@@ -11,8 +11,8 @@ $height = 400
   width ($width / 1000) * 100%
   height ($height / 720) * 100%
   transition all 1900ms ease
-  opacity 0
-  transform translate3d(0, -100vh, 0)
+  opacity 1
+  transform translate3d(0, 0, 0)
   z-index 100
 
   / .splash.is-step-1 &,
@@ -20,6 +20,12 @@ $height = 400
   / .splash.is-step-3 &
     opacity 1
     transform translate3d(0,0,0)
+
+  / .splash.is-step-4 &,
+  / .splash.is-step-5 &
+    transform translate3d(0, -100vh, 0)
+
+
 
 &__flame
   position absolute
@@ -33,7 +39,7 @@ $height = 400
   right 0
   transform translate3d(0, 0, 0)
   z-index 90
-  transition transform 450ms ease
+  transition transform 1950ms ease
 
   / .splash.is-step-2 &
     transform translate3d(0, 320%, 0)
@@ -72,8 +78,8 @@ $height = 400
   width (($width / 2) / 1000) * 100%
   height ($height / 720) * 100%
   transition all 1200ms ease
-  opacity 0
-  transform translate3d(0, 100vh, 0)
+  opacity 1
+  transform translate3d(0, 0, 0)
   z-index 80
 
   / .splash.is-step-1 &,
