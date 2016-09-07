@@ -15,24 +15,28 @@ header
 
 
 nav
-  width 0
+  width 300px
   overflow hidden
   position fixed
   top 0
-  left 0
+  left -300px
   height 100%
   z-index 1100
+  background gray
+  transition all 350ms ease
 
-  &:target
-    width 20%
+  &.is-open
+    left 0
+
 
 
 .wrapper
+  position relative
   width 100%
-  float right
+  overflow hidden
+  left 0
+  transition all 350ms ease
 
+  &.nav-open
+    left 300px
 
-#main-navigation:target + .wrapper,
-nav:target + .wrapper
-  width 80%
-  right 0
