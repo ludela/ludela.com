@@ -1,0 +1,38 @@
+header
+  position fixed
+  width 100%
+  color #000
+  background #fff
+  z-index 1000
+
+  ul
+    display flex
+    justify-content space-between
+
+  li
+    display inline-block
+    margin 0 2em
+
+
+nav
+  width 0
+  overflow hidden
+  position fixed
+  top 0
+  left 0
+  height 100%
+  z-index 1100
+
+  &:target
+    width 20%
+
+
+.wrapper
+  width 100%
+  float right
+
+
+#main-navigation:target + .wrapper,
+nav:target + .wrapper
+  width 80%
+  right 0
