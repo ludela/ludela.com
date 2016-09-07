@@ -12,6 +12,7 @@ export default function ($) {
     $splash
       .removeClass('is-step-' + currentStep)
       .addClass('is-step-' + (currentStep = index));
+      console.log(ev, index);
   });
 
 }
