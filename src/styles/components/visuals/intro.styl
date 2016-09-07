@@ -1,19 +1,176 @@
 $width = 240
-$height = 490
+$height = 400
 
-&__intro
-  position: absolute
-  bottom: 0
-  left: (((1000 - $width) / 2) / 1000) * 100%
-  background: gray
-  width: ($width / 1000) * 100%
-  height: ($height / 720) * 100%
-  transition: all 500ms ease
-  opacity: 0
-  transform: translate3d(0, -100vh, 0)
+
+
+&__candle
+  position absolute
+  bottom 0
+  left (((1000 - $width) / 2) / 1000) * 100%
+  background gray
+  width ($width / 1000) * 100%
+  height ($height / 720) * 100%
+  transition all 1900ms ease
+  opacity 1
+  transform translate3d(0, 0, 0)
+  z-index 100
 
   / .splash.is-step-1 &,
   / .splash.is-step-2 &,
   / .splash.is-step-3 &
-    opacity: 1
-    transform: translate3d(0,0,0)
+    opacity 1
+    transform translate3d(0,0,0)
+
+  / .splash.is-step-4 &,
+  / .splash.is-step-5 &
+    transform translate3d(0, -100vh, 0)
+
+
+
+&__flame
+  position absolute
+  bottom 10%
+  width 30px
+  height ($height / 720) * 100%
+  background yellow
+  margin-left auto
+  margin-right auto
+  left 0
+  right 0
+  transform translate3d(0, 0, 0)
+  z-index 90
+  transition transform 1950ms ease
+
+  / .splash.is-step-2 &
+    transform translate3d(0, 320%, 0)
+
+  / .splash.is-step-4 &
+    transform translate3d(0, -100vh, 0)
+
+&__phone
+  position absolute
+  bottom 10%
+  width 150px
+  height 200px
+  background #000
+  margin-left auto
+  margin-right auto
+  left 25%
+  right 0
+  z-index 110
+  transition transform 330ms ease
+
+  / .splash.is-step-1 &
+    transform translate3d(0, 100vh, 0)
+
+  / .splash.is-step-2 &
+    transform translate3d(0, 0, 0)
+
+  / .splash.is-step-4 &,
+  / .splash.is-step-5 &
+    transform translate3d(0, -100vh, 0)
+
+&__core
+  position absolute
+  bottom 0
+  left (((1000 - ($width/2)) / 2) / 1000) * 100%
+  background black
+  width (($width / 2) / 1000) * 100%
+  height ($height / 720) * 100%
+  transition all 1200ms ease
+  opacity 1
+  transform translate3d(0, 0, 0)
+  z-index 80
+
+  / .splash.is-step-1 &,
+  / .splash.is-step-2 &,
+  / .splash.is-step-3 &,
+  / .splash.is-step-4 &
+    opacity 1
+    transform translate3d(0,0,0)
+    transition-delay 200ms
+
+  / .splash.is-step-5 &
+    transform translate3d(0, -100vh, 0)
+
+&__board
+  position absolute
+  bottom 0
+  left (((1000 - ($width*2)) / 2) / 1000) * 100%
+  background green
+  width (($width / 2) / 1000) * 100%
+  height ($height / 1440) * 100%
+  transition all 1000ms ease
+  opacity 0
+  transform translate3d(0, 100vh, 0)
+  z-index 80
+
+  / .splash.is-step-1 &
+  / .splash.is-step-2 &
+  / .splash.is-step-3 &
+    opacity 1
+    left (((1000 - ($width)) / 2) / 1000) * 100%
+    transform translate3d(0, -80%, 0)
+
+  / .splash.is-step-4 &
+    opacity 1
+    transform translate3d(0, -80%, 0)
+    transition-delay 300ms
+
+  / .splash.is-step-5 &
+    left (((1000 - ($width)) / 2) / 1000) * 100%
+    transform translate3d(0, -100vh, 0)
+
+&__battery
+  position absolute
+  bottom 0
+  left ((1000 - ($width / .6)) / 1000) * 100%
+  background black
+  width (($width / 2) / 1000) * 100%
+  height ($height / 2160) * 100%
+  transition all 800ms ease
+  opacity 0
+  transform translate3d(0, 100vh, 0)
+  z-index 80
+
+  / .splash.is-step-1 &
+  / .splash.is-step-2 &
+  / .splash.is-step-3 &
+    opacity 1
+    left ((1000 - ($width * 2.2)) / 1000) * 100%
+    transform translate3d(0, -80%, 0)
+
+  / .splash.is-step-4 &
+    opacity 1
+    transform translate3d(0, -80%, 0)
+    transition-delay 300ms
+
+  / .splash.is-step-5 &
+    left ((1000 - ($width * 2.2)) / 1000) * 100%
+    transform translate3d(0, -100vh, 0)
+
+
+&__wick
+  position absolute
+  bottom 0
+  left (((1000 - ($width/3)) / 2) / 1000) * 100%
+  background white
+  width (($width / 3) / 1000) * 100%
+  height ($height / 720) * 100%
+  transition all 500ms ease
+  opacity 0
+  transform translate3d(0, 100vh, 0)
+  z-index 70
+
+  / .splash.is-step-1 &,
+  / .splash.is-step-2 &,
+  / .splash.is-step-3 &,
+  / .splash.is-step-4 &,
+  / .splash.is-step-5 &
+    opacity 1
+    transform translate3d(0,0,0)
+
+
+
+
+
