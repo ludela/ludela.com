@@ -4,8 +4,7 @@
 
   .splash__headline
     position absolute
-    background green
-    color red
+    color #fff
     text-align center
     left (((1000 - $width) / 2) / 1000) * 100%
     width ($width / 1000) * 100%
@@ -13,7 +12,13 @@
     transform translate3d(0, 500%, 0)
 
 &.is-step-2
-  background blue
+  background #221010
+
+  &:before
+    content ''
+    position fixed
+    pos-fill()
+    background linear-gradient(0deg, rgba(255,255,255,0) 40%, rgba(255,255,255,0.3))
 
 &.is-step-2 #step-2
   opacity 1

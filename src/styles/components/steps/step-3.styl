@@ -4,8 +4,7 @@
 
   .splash__headline
     position absolute
-    background green
-    color red
+    color #fff
     text-align center
     left (((1000 - $width) / 2) / 1000) * 100%
     width ($width / 1000) * 100%
@@ -14,9 +13,8 @@
 
   .small-text
     position absolute
-    background #000
     left 50%
-    top @left
+    top 32%
     width 10em
     height (55/16em)
     transition opacity 1s ease, transform 350ms ease
@@ -30,7 +28,13 @@
       margin-left (255/1000) * 100%
 
 &.is-step-3
-  background pink
+  background #221010
+
+  &:before
+    content ''
+    position fixed
+    pos-fill()
+    background linear-gradient(0deg, rgba(34,16,16,0) 40%, rgba(240,189,60,1))
 
 &.is-step-3 #step-3
   opacity 1
@@ -69,6 +73,10 @@
     &.\\+seven
       margin-top: 36%
       transition-delay: 600ms
+
+    &.\\+eight
+      margin-top: 38%
+      transition-delay: 700ms
 
 &.is-step-3 #step-3
   .small-text
