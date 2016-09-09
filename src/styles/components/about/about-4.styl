@@ -1,4 +1,5 @@
 $height = 860px;
+$width = 1200px;
 
 &#about
   #step-4
@@ -9,10 +10,12 @@ $height = 860px;
     height: $height
 
     .our-story
-      width: 1200px
-      margin 0 auto
-      position: relative;
-      top: -200px
+      width: 1200px;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      margin-left: ($width * -0.5);
 
       h1
         width 100%
