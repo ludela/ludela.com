@@ -10,6 +10,8 @@ export default function ($) {
   var currentStep = 1,
       totalSteps = $('.splash__content').length;
 
+  var currentStory = 1;
+
   $splash.addClass('is-step-' + currentStep);
 
   $document.on('setpanel', function (ev, index) {
@@ -25,6 +27,17 @@ export default function ($) {
 
   $document.on('nextpanel', function (ev, dir) {
     $document.trigger('setpanel', currentStep + dir);
+  });
+
+  $(document).on('setstory', function (ev, index) {
+    var story = 9;
+    if (index <=9) {
+      story = index
+    }
+    $splash
+      .removeClass('is-story-' + currentStory)
+      .addClass('is-story-' + (currentStory = story));
+      console.log(ev, index);
   });
 
 }
