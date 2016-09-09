@@ -31,6 +31,8 @@ export default function ($)  {
       if (prevStep !== step) {
         $(document).trigger('setabout', step);
         prevStep = step;
+        $('.active-dot').removeClass('active-dot')
+        $('.dot-'+step).addClass('active-dot');
       }
 
       if (step == 4) {
