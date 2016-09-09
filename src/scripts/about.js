@@ -9,7 +9,7 @@ export default function ($)  {
 
 
 
-  if ($container) {
+  if ($container.length) {
     window.onscroll = debounce(setStep, 1);
   }
 
@@ -20,9 +20,10 @@ export default function ($)  {
       if (step >= 14) {
         story = 9;
         step = 5;
-      } else if (step > 4) {
-        story = step - 4;
+      } else if (step >= 4) {
+        story = step - 3;
         step = 4;
+        console.log('yes step:', step, ' story:', story);
       }
       console.log(step);
       console.log($(window).scrollTop());

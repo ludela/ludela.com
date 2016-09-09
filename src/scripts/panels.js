@@ -8,12 +8,15 @@ export default function ($) {
   const $splash = $('.splash');
   const $about = $('#about');
 
-  var currentStep = 1,
-      totalSteps = $('.splash__content').length;
+  var currentStep = 1;
+  var totalSteps;
 
   var currentStory = 1;
 
-  $splash.addClass('is-step-' + currentStep);
+  if ($splash.length) {
+    totalSteps = $('.splash__content').length;
+    $splash.addClass('is-step-' + currentStep);
+  }
 
   $document.on('setpanel', function (ev, index) {
     index = Math.max(1, Math.min(totalSteps, index));
@@ -36,7 +39,7 @@ export default function ($) {
     $document.trigger('setpanel', currentStep + dir);
   });
 
-  $(document).on('setstory', function (ev, index) {
+  $document.on('setstory', function (ev, index) {
     var story = 9;
     if (index <=9) {
       story = index
