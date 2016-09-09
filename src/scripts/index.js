@@ -19,6 +19,7 @@ jQuery(function ($) {
   });
   $('#hamburger').on('click', function() {
     $('#menu').toggleClass('is-open');
+    $('#hamburger').toggleClass('is-open');
     $about.toggleClass('nav-open');
   });;
 });
