@@ -33,6 +33,8 @@ export default function ($) {
     $about
       .removeClass('is-step-' + currentStep)
       .addClass('is-step-' + (currentStep = index));
+      $('.active-dot').removeClass('active-dot')
+      $('.dot-'+currentStep).addClass('active-dot');
   });
 
   $document.on('nextpanel', function (ev, dir) {
