@@ -1,17 +1,34 @@
 .splash
-  position fixed
+  position relative
+  pos-fill()
   z-index 100
+  background #221010
+  transition background 2s ease
+
+  &:before
+    content ''
+    position fixed
+    pos-fill()
+    background linear-gradient(0deg, rgba(255,255,255,0) 40%, rgba(255,255,255,0.3))
+    transition opacity 2s ease
+
+  &:after
+    content ''
+    position fixed
+    pos-fill()
+    background url('/images/BG_1.jpg') no-repeat
+    background-size cover
+    z-index -100
+    opacity 0
+    transition opacity 1s ease
 
   &__content
     max-width 1200px
     margin 0 auto
 
-  &,
   &__content
-    pos-fill()
-
-  &__content
-    position: absolute
-    padding: 120px
+    position relative
+    width 100%
+    height 100vh
 
   @require 'steps/**'
