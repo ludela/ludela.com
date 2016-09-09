@@ -4,8 +4,7 @@ $width = 240
   transition transform 500ms ease
 
 #step-1
-  opacity 0
-  transition opacity 100ms ease
+
 
   .splash__headline
     position absolute
@@ -22,12 +21,16 @@ $width = 240
       text-transform uppercase
 
 &.is-step-1
-  background-image url('/images/BG_1.jpg')
-  background-repeat no-repeat
-  background-size contain
+  &:before
+    opacity 0
+
+
+  &:after
+    opacity 1
+
 
 &.is-step-1 #step-1
-  opacity 1
+  // opacity 1
 
   .splash__headline
     opacity 1

@@ -12,29 +12,26 @@
     transform translate3d(0, 80%, 0)
 
   .small-text
-    position absolute
-    left 50%
     top 32%
-    width 10em
-    height (55/16em)
-    transition opacity 1s ease, transform 350ms ease
-    opacity 0
-    transform translate3d(0, 500%, 0)
 
     &.\\+left
-      margin-left ((200 + 155) / 1000) * -100%
+      text-align right
+      margin-left ((330 + 125) / 1200) * -100%
 
     &.\\+right
-      margin-left (255/1000) * 100%
+      margin-left (390 / 1200) * 100%
 
 &.is-step-3
-  background #221010
+  background rgba(240,189,60,1)
+  // transition background 50ms ease
 
   &:before
-    content ''
-    position fixed
-    pos-fill()
-    background linear-gradient(0deg, rgba(34,16,16,0) 40%, rgba(240,189,60,1))
+    opacity 0
+
+  &:after
+    opacity 1
+    background linear-gradient(0deg, rgba(34,16,16,1) 40%, rgba(240,189,60,0))
+    transition opacity 0ms ease
 
 &.is-step-3 #step-3
   opacity 1
@@ -48,39 +45,32 @@
 
     &.\\+one
       margin-top 0
-      transition-delay 0ms
 
     &.\\+two
-      margin-top 2%
-      transition-delay 100ms
+      margin-top 65px
 
     &.\\+three
-      margin-top 12%
-      transition-delay 200ms
+      margin-top 85px
 
     &.\\+four
-      margin-top 14%
-      transition-delay 300ms
+      margin-top 145px
 
     &.\\+five
-      margin-top 24%
-      transition-delay 400ms
+      margin-top 175px
 
     &.\\+six
-      margin-top 26%
-      transition-delay 500ms
+      margin-top 265px
 
     &.\\+seven
-      margin-top: 36%
-      transition-delay: 600ms
+      margin-top 265px
 
     &.\\+eight
-      margin-top: 38%
-      transition-delay: 700ms
+      margin-top 315px
+
 
 &.is-step-3 #step-3
   .small-text
-    transform: translate3d(0,0,0)
+    transform translate3d(0,150%,0)
 
 &.is-step-4 #step-3
   opacity 0
