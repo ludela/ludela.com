@@ -4,7 +4,7 @@ export default function ($) {
 
   var lastScrollPos,
       allowScroll = true,
-      scrollerDelay = 1500;
+      scrollerDelay = 2500;
 
   const $document = $(document);
   const $window = $(window);
