@@ -6,6 +6,7 @@ export default function ($) {
   const $window = $(window);
   const $body = $('html, body');
   const $splash = $('.splash');
+  const $about = $('#about');
 
   var currentStep = 1,
       totalSteps = $('.splash__content').length;
@@ -25,6 +26,12 @@ export default function ($) {
       .addClass('is-step-' + (currentStep = index));
   });
 
+  $document.on('setabout', function (ev, index) {
+    $about
+      .removeClass('is-step-' + currentStep)
+      .addClass('is-step-' + (currentStep = index));
+  });
+
   $document.on('nextpanel', function (ev, dir) {
     $document.trigger('setpanel', currentStep + dir);
   });
@@ -34,7 +41,7 @@ export default function ($) {
     if (index <=9) {
       story = index
     }
-    $splash
+    $about
       .removeClass('is-story-' + currentStory)
       .addClass('is-story-' + (currentStory = story));
       console.log(ev, index);

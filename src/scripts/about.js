@@ -28,7 +28,7 @@ export default function ($)  {
       console.log($(window).scrollTop());
 
       if (prevStep !== step) {
-        $(document).trigger('setpanel', step);
+        $(document).trigger('setabout', step);
         prevStep = step;
       }
 
