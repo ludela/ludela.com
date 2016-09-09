@@ -4,8 +4,6 @@
 
   .splash__headline
     position absolute
-    background green
-    color red
     text-align center
     left (((1000 - $width) / 2) / 1000) * 100%
     width ($width / 1000) * 100%
@@ -13,24 +11,27 @@
     transform translate3d(0, 80%, 0)
 
   .small-text
-    position absolute
-    background #000
     left 50%
     top @left
-    width 10em
-    height (55/16em)
-    transition opacity 1s ease, transform 350ms ease
-    opacity 0
-    transform translate3d(0, 500%, 0)
 
-    &.\\+left
-      margin-left ((200 + 155) / 1000) * -100%
+    // &.\\+left
+    //   margin-left ((200 + 155) / 1000) * -100%
 
-    &.\\+right
-      margin-left (255/1000) * 100%
+    // &.\\+right
+    //   margin-left (175/1000) * 100%
 
 &.is-step-4
-  background yellow
+  background #221010
+
+  &:before
+    background linear-gradient(0deg, rgba(255,255,255,0) 40%, rgba(255,255,255,0.3))
+    opacity 1
+
+  &:after
+    opacity 0
+    background linear-gradient(0deg, rgba(34,16,16,1) 40%, rgba(240,189,60,0))
+    transition opacity 10s ease
+
 
 &.is-step-4 #step-4
   opacity 1
@@ -42,33 +43,29 @@
   .small-text
     opacity 1
 
-    &.\\+one
-      margin-top 0
-      transition-delay 0ms
+    // &.\\+one
+    //   transition-delay 800ms
 
-    &.\\+two
-      margin-top 2%
-      transition-delay 100ms
+    // &.\\+two
+    //   transition-delay 900ms
 
-    &.\\+three
-      margin-top 12%
-      transition-delay 200ms
+    // &.\\+three
+    //   transition-delay 1000ms
 
-    &.\\+four
-      margin-top 14%
-      transition-delay 300ms
+    // &.\\+four
+    //   transition-delay 1100ms
 
-    &.\\+five
-      margin-top 24%
-      transition-delay 400ms
+    // &.\\+five
+    //   transition-delay 1200ms
 
-    &.\\+six
-      margin-top 26%
-      transition-delay 500ms
+    // &.\\+six
+    //   transition-delay 1300ms
 
-    &.\\+seven
-      margin-top 36%
-      transition-delay 600ms
+    // &.\\+seven
+    //   transition-delay 1400ms
+
+    // &.\\+eight
+    //   transition-delay 1500ms
 
 &.is-step-4 #step-4
   .small-text

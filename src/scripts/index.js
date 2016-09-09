@@ -1,11 +1,14 @@
 import jQuery from 'jquery';
 import panels from './panels';
 import _debugger from './debugger';
+import scroller from './scroller';
 import about from './about';
+
 
 jQuery(function ($) {
   _debugger($);
   panels($);
+  scroller($);
   about($);
 
   const $toggle = $('#toggle'),

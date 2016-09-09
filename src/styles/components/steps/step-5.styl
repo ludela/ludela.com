@@ -4,8 +4,6 @@
 
   .splash__headline
     position absolute
-    background green
-    color red
     text-align center
     left (((1000 - $width) / 2) / 1000) * 100%
     width ($width / 1000) * 100%
@@ -13,24 +11,21 @@
     transform translate3d(0, 80%, 0)
 
   .small-text
-    position absolute
-    background #000
-    left 50%
-    top @left
-    width 10em
-    height (55/16em)
-    transition opacity 1s ease, transform 350ms ease
-    opacity 0
-    transform translate3d(0, 500%, 0)
 
     &.\\+left
-      margin-left ((200 + 155) / 1000) * -100%
+      margin-left ((200 + 155) / 1200) * -100%
 
     &.\\+right
-      margin-left (170/1000) * 100%
+      margin-left (120/1200) * 100%
 
 &.is-step-5
-  background orange
+  background rgba(237,140,71,1)
+
+  &:before
+    background linear-gradient(0deg, rgba(237,140,71,0) 40%, rgba(220,79,21,0.3))
+
+  &:after
+    transition background 0s
 
 &.is-step-5 #step-5
   opacity 1
@@ -41,34 +36,6 @@
 
   .small-text
     opacity 1
-
-    &.\\+one
-      margin-top 0
-      transition-delay 0ms
-
-    &.\\+two
-      margin-top 2%
-      transition-delay 100ms
-
-    &.\\+three
-      margin-top 12%
-      transition-delay 200ms
-
-    &.\\+four
-      margin-top 14%
-      transition-delay 300ms
-
-    &.\\+five
-      margin-top 24%
-      transition-delay 400ms
-
-    &.\\+six
-      margin-top 26%
-      transition-delay 500ms
-
-    &.\\+seven
-      margin-top 36%
-      transition-delay 600ms
 
 &.is-step-5 #step-5
   .small-text
