@@ -13,7 +13,7 @@ $phone_height = 390
   background-repeat no-repeat
   background-position 50% 50%
   width ($candle_width / 1200) * 100%
-  height ($candle_height / 850) * 100%
+  height ($candle_height / 700) * 100%
   transition transform 1900ms ease, background-image 100ms ease
   opacity 1
   transform translate3d(0, 0, 0)
@@ -27,36 +27,42 @@ $phone_height = 390
 
   / .splash.is-step-4 &,
   / .splash.is-step-5 &
-    // background-image url('/images/Candle.png')
     transform translate3d(0, -100vh, 0)
 
 
 
 &__flame
   position absolute
-  bottom 10%
-  width 30px
-  height ($candle_height / 850) * 100%
-  background yellow
-  margin-left auto
-  margin-right auto
-  left 0
-  right 0
+  bottom 60%
+  width (205 / 1200) * 100%
+  height 148px
+  // height ($candle_height / 850) * 100%
+  left (((1200 - 205) / 2) / 1200) * 100%
+  background-image url('/images/Candle_Loop.gif')
+  background-repeat no-repeat
+  background-position 170%
   transform translate3d(0, 0, 0)
   z-index 90
-  transition transform 1950ms ease
+  transition opacity 2000ms ease
 
   / .splash.is-step-2 &
-    transform translate3d(0, 320%, 0)
+    opacity 0
+    transition-delay 1s
+    // background-image url('/images/Candle_Outro.gif')
 
-  / .splash.is-step-4 &
-    transform translate3d(0, -100vh, 0)
+  / .splash.is-step-3 &,
+  / .splash.is-step-4 &,
+  / .splash.is-step-5 &,
+  / .splash.is-step-6 &
+    opacity 0
+
+  //   transform translate3d(0, -100vh, 0)
 
 &__phone
   position absolute
   bottom 0
   width ($phone_width / 1200) * 100%
-  height ($phone_height / 850) * 100%
+  height ($phone_height / 700) * 100%
   background-image url('/images/Iphone_Screen_1.png')
   background-repeat no-repeat
   background-size contain
@@ -65,12 +71,12 @@ $phone_height = 390
   left 25%
   right 0
   z-index 110
+  transform translate3d(0, 100vh, 0)
   transition transform 330ms ease
 
-  / .splash.is-step-1 &
-    transform translate3d(0, 100vh, 0)
 
-  / .splash.is-step-2 &
+  / .splash.is-step-2 &,
+  / .splash.is-step-3 &
     transform translate3d(0, 0, 0)
 
   / .splash.is-step-4 &,
@@ -79,13 +85,15 @@ $phone_height = 390
 
 &__core
   position absolute
-  bottom 0
+  bottom 10%
   left (((1000 - ($candle_width/2)) / 2) / 1000) * 100%
-  background black
+  background-image url('/images/Core.png')
+  background-size contain
+  background-repeat no-repeat
   width (($candle_width / 2) / 1000) * 100%
   height ($candle_height / 720) * 100%
-  transition all 1200ms ease
-  opacity 1
+  transition transform 1200ms ease, opacity 100ms ease
+  opacity 0
   transform translate3d(0, 0, 0)
   z-index 80
 
@@ -93,9 +101,12 @@ $phone_height = 390
   / .splash.is-step-2 &,
   / .splash.is-step-3 &,
   / .splash.is-step-4 &
-    opacity 1
     transform translate3d(0,0,0)
     transition-delay 200ms
+
+  / .splash.is-step-4 &,
+  / .splash.is-step-5 &
+    opacity 1
 
   / .splash.is-step-5 &
     transform translate3d(0, -100vh, 0)
@@ -159,23 +170,25 @@ $phone_height = 390
 
 &__wick
   position absolute
-  bottom 0
-  left (((1000 - ($candle_width/3)) / 2) / 1000) * 100%
-  background white
-  width (($candle_width / 3) / 1000) * 100%
+  bottom 10%
+  left (((1200 - ($candle_width)) / 2) / 1200) * 100%
+  background-image url('/images/WaxInsert.png')
+  background-size contain
+  background-repeat no-repeat
+  background-position 50%
+  width (($candle_width) / 1200) * 100%
   height ($candle_height / 720) * 100%
   transition all 500ms ease
   opacity 0
-  transform translate3d(0, 100vh, 0)
+  transform translate3d(0, 0, 0)
   z-index 70
 
-  / .splash.is-step-1 &,
-  / .splash.is-step-2 &,
-  / .splash.is-step-3 &,
+  // / .splash.is-step-1 &,
+  // / .splash.is-step-2 &,
+  // / .splash.is-step-3 &,
   / .splash.is-step-4 &,
   / .splash.is-step-5 &
     opacity 1
-    transform translate3d(0,0,0)
 
 
 
