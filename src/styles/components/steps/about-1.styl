@@ -1,27 +1,37 @@
+&.nav-open
+  left: 32vw
+  transition: left 500ms ease;
+
 &#about
   color: rgb(241, 234, 208);
+  width: 100vw;
+  position: fixed;
+  transition: left 500ms ease-in;
+  overflow-y: hidden;
+  text-align: center;
+  top: 0
+  background: -webkit-linear-gradient(#ee9347, #f2bc3d);
+  background: -o-linear-gradient(#ee9347, #f2bc3d);
+  background: -moz-linear-gradient(#ee9347, #f2bc3d);
+  background: linear-gradient(#ee9347, #f2bc3d);
 
-
+  .splash__content
+    max-width: none;
 
   h1
-    font-size: 21.799px;
+    font-size: 90px;
     font-family: "Freeland";
+    font-weight: normal;
     color: rgb(241, 234, 208);
     line-height: 0.677;
     text-align: center;
+    margin-top: 45px;
+    margin-bottom: 10px
     text-shadow: 0px 2px 13px rgba(0, 0, 0, 0.3);
-    -moz-transform: matrix( 3.93941757019425,0,0,3.93286193539246,0,0);
-    -webkit-transform: matrix( 3.93941757019425,0,0,3.93286193539246,0,0);
-    -ms-transform: matrix( 3.93941757019425,0,0,3.93286193539246,0,0);
-    position: absolute;
-    left: 506.516px;
-    top: 142.52px;
-    width: 187.053px;
-    height: 15.875px;
     z-index: 302;
 
   h2
-    font-size: 6.716px;
+    font-size: 20px;
     font-family: "Proxima Nova";
     color: rgb(241, 234, 208);
     font-weight: bold;
@@ -29,45 +39,39 @@
     line-height: 2.199;
     text-align: center;
     text-shadow: 0px 2px 13px rgba(0, 0, 0, 0.3);
-    -moz-transform: matrix( 2.95380588020396,0,0,2.94889041433089,0,0);
-    -webkit-transform: matrix( 2.95380588020396,0,0,2.94889041433089,0,0);
-    -ms-transform: matrix( 2.95380588020396,0,0,2.94889041433089,0,0);
-    position: absolute;
-    left: 522.26px;
-    top: 200.671px;
-    width: 124.229px;
-    height: 5.125px;
     z-index: 301;
 
   #step-1
-    display: none
-    background: -webkit-linear-gradient(#ee9347, #f2bc3d);
-    background: -o-linear-gradient(#ee9347, #f2bc3d);
-    background: -moz-linear-gradient(#ee9347, #f2bc3d);
-    background: linear-gradient(#ee9347, #f2bc3d);
     opacity: 1
+    background: none
+    transform translate3d(0, -100vh, 0)
+    transition: all 1s ease-in;
+    transition-delay: 350ms;
+
+    .header, .sub-header
+      transform translate3d(0, -40px, 0)
+      transition: all 700ms ease-in;
 
     .date
       display: inline-block;
-      width: 43%
-      padding: 10%
+      width: 33%
+      position: relative;
+      transform translate3d(0, 50vh, 0)
+      transition: all 1s ease-in;
+      transition-delay: 350ms;
 
       h2
-        font-size: 5.324px;
-        font-family: "ProximaNova";
-        color: rgba(241, 234, 208, 0.5);
+        font-size: 130px;
+        font-family: "Proxima Nova";
+        color: rgba(255,255,255, 0.25);
+        text-shadow: none;
         text-transform: uppercase;
         line-height: 1.271;
         text-align: right;
         font-weight: 100;
-        -moz-transform: matrix( 27.5834137483006,0,0,27.5375118392242,0,0);
-        -webkit-transform: matrix( 27.5834137483006,0,0,27.5375118392242,0,0);
-        -ms-transform: matrix( 27.5834137483006,0,0,27.5375118392242,0,0);
+        left: -70px
+        top: -182px
         position: absolute;
-        left: 260.343px;
-        top: 526.904px;
-        width: 12.315px;
-        height: 3.724px;
         z-index: 298;
 
 
@@ -78,42 +82,28 @@
       padding: 60px 10px;
 
       h2
-        font-size: 5.324px;
         font-family: "Proxima Nova";
         color: rgb(241, 234, 208);
         font-weight: bold;
         text-transform: uppercase;
         line-height: 1.271;
         text-align: left;
+        width: 350px
         text-shadow: 0px 2px 13px rgba(0, 0, 0, 0.3);
-        -moz-transform: matrix( 3.72489772958122,0,0,3.71869907997018,0,0);
-        -webkit-transform: matrix( 3.72489772958122,0,0,3.71869907997018,0,0);
-        -ms-transform: matrix( 3.72489772958122,0,0,3.71869907997018,0,0);
-        position: absolute;
-        left: 677.799px;
-        top: 367.448px;
-        width: 100.276px;
-        height: 10.89px;
         z-index: 296;
 
 
 
       p
-        font-size: 6.716px;
+        font-size: 20px;
         font-family: "Proxima Nova";
-        color: rgb(255, 255, 255);
+        color: #f1ead0;
         line-height: 1.454;
+        font-weight: bold;
         text-align: justify;
-        -moz-transform: matrix( 2.95380588020396,0,0,2.94889041433089,0,0);
-        -webkit-transform: matrix( 2.95380588020396,0,0,2.94889041433089,0,0);
-        -ms-transform: matrix( 2.95380588020396,0,0,2.94889041433089,0,0);
-        position: absolute;
-        left: 713.611px;
-        top: 519.554px;
-        width: 178.729px;
-        height: 75.359px;
+        width: 497px;
         z-index: 295;
-        margin: 0
+        margin: 0;
 
       .line
         background: -webkit-linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0));
@@ -121,25 +111,41 @@
         background: -moz-linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0));
         background: linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0));
         display: block
-        width: 2.72px;
+        width: 8px;
+        position: absolute;
         margin-top: 10px;
         height: 100%;
 
 
     .africa
       position absolute
-      top: 33%;
-      left: -2%;
-      width: 58%;
+      top: 28%;
+      left: -4%;
+      width: 65%;
       opacity: 0.75
+      z-index: -1;
+      transform translate3d(0, 20vh, 0)
+      transition: all 1s ease-in;
+      transition-delay: 350ms;
 
+  &.is-step-1
+    #step-1
+      transform translate3d(0, 0, 0)
+      transition: all 1s ease;
 
+      .header, .sub-header
+        transform translate3d(0, 0, 0)
+        transition: all 700ms ease;
+        transition-delay: 350ms;
 
+      .africa
+        transform translate3d(0, 0, 0)
+        transition: all 1s ease;
 
+      .date
+        transform translate3d(0, 0, 0)
+        transition: all 1s ease;
 
-
-
-
-
-  &.is-step-1 #step-1
-    display: block
+  &.is-step-3, &.is-step-4, &.is-step-5
+    #step-1
+      transform translate3d(0, -200vh, 0)
