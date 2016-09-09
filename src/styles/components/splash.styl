@@ -22,6 +22,32 @@
     opacity 0
     transition opacity 1s ease
 
+  &__headline
+    position absolute
+    opacity 0
+    text-align center
+    right 0
+    left 0
+    margin-left auto
+    margin-right auto
+    // left (((1200 - 640) / 2) / 1200) * 100%
+    // width ($width / 1200) * 100%
+    // height 150px
+    transform translate3d(0, 80%, 0)
+    // transition all 3500ms ease
+    color #f1ead0
+    z-index 100
+
+    h1, .h1
+      font-family 'Freeland'
+      font-size 85px
+
+    .subhead
+      display block
+      font-family 'Proxima Nova'
+      font-size 20px
+      text-transform uppercase
+
   &__content
     max-width 1200px
     margin 0 auto
