@@ -15,8 +15,7 @@ jQuery(function ($) {
         $nav = $('nav'),
         $page = $('.wrapper'),
         $about = $('#about'),
-        $contact = $('#contact'),
-        $faq = $('#faq');
+        $general = $('#general');
 
   $toggle.on('click', function() {
     $nav.toggleClass('is-open');
@@ -26,7 +25,6 @@ jQuery(function ($) {
     $('#menu').toggleClass('is-open');
     $('#hamburger').toggleClass('is-open');
     $about.toggleClass('nav-open');
-    $faq.toggleClass('nav-open');
-    $contact.toggleClass('nav-open');
+    $general.toggleClass('nav-open');
   });;
 });
