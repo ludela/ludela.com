@@ -9,7 +9,7 @@
     "build:scripts": "rollup -c",
     "watch:scripts": "npm run build:scripts -- --watch",
     "dev:start": "npm run watch:styles & npm run watch:scripts & browser-sync start --config bs.config.js",
-    "start": "npm run build:styles & npm run build:scripts --config bs.config.js",
+    "start": "npm run build:styles & npm run build:scripts & node server.js",
     "test": "mocha"
   },
   "author": "",
