@@ -7,15 +7,15 @@
     opacity 0
     transform translate3d(0, 100vh, 0)
 
-
-&.is-step-2 #step-2
+&.is-step-2 #step-2,
+&.is-step-3 #step-2
   opacity 1
 
   .splash__headline
+    // position fixed
     opacity 1
-    transform translate3d(0, 80%, 0)
+    transform translate3d(0, 20vh, 0)
 
-&.is-step-3 #step-2,
 &.is-step-4 #step-2
   opacity 0
   transition-delay 300ms

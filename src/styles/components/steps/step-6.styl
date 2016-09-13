@@ -1,0 +1,17 @@
+#step-6
+  opacity 0
+  transition opacity 100ms ease
+
+&.is-step-6 #step-6
+  opacity 1
+
+  .splash__headline
+    opacity 1
+    transform translate3d(0, 20vh, 0)
+
+&.is-step-6
+  background rgba(240,189,60,1)
+
+  &:before
+    background linear-gradient(0deg, rgba(240,189,60,0) 40%, rgba(237,147,71,1))
+

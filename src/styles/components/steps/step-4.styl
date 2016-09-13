@@ -2,9 +2,9 @@
   opacity 0
   transition opacity 100ms ease
 
-  .small-text
-    left 50%
-    top @left
+  // .small-text
+    // left 50%
+    // top @left
 
     // &.\\+left
     //   margin-left ((200 + 155) / 1000) * -100%
@@ -30,19 +30,29 @@
 
   .splash__headline
     opacity 1
-    transform translate3d(0, 80%, 0)
+    transform translate3d(0, 20vh, 0)
 
   .small-text
+    // transform translate3d(0,450%,0)
     opacity 1
 
 
-&.is-step-4 #step-4
+&.is-step-1 #step-4,
+&.is-step-2 #step-4,
+&.is-step-3 #step-4
+  .splash__headline
+    transform translate3d(0, 100vh, 0)
+
+// &.is-step-4 #step-4
+//   .small-text
+//     transform translate3d(0,0,0)
+
+&.is-step-3 #step-4
   .small-text
-    transform translate3d(0,0,0)
+    opacity 0
 
 &.is-step-5 #step-4
-  opacity 0
-  transition-delay 300ms
+  transition opacity 750ms ease
 
   .small-text
     transform translate3d(0, 0, 0)
