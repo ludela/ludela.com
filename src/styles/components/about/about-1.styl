@@ -1,12 +1,16 @@
 &.nav-open
   left: 32vw
-  transition: left 500ms ease-in;
+  transition: left 350ms ease-out;
+
+  {component(header-bar)}
+    left: 32vw
+    transition: left 350ms ease-out;
 
 &#about
   color: rgb(241, 234, 208);
   width: 100vw;
   position: fixed;
-  transition: left 500ms ease-out;
+  transition: left 350ms ease-out;
   overflow-y: hidden;
   text-align: center;
   top: 0
@@ -23,7 +27,7 @@
     font-family: "Freeland";
     font-weight: normal;
     color: rgb(241, 234, 208);
-    line-height: 0.677;
+    line-height: 1;
     text-align: center;
     margin-top: 45px;
     margin-bottom: 10px
@@ -149,3 +153,44 @@
   &.is-step-3, &.is-step-4, &.is-step-5
     #step-1
       transform translate3d(0, -200vh, 0)
+
+
+@media screen and (max-width: 980px)
+  &#about
+    h2
+      font-size 30px
+
+    #step-1
+      .date
+        position absolute
+        left 60px
+        top 665px
+        width 100%
+        text-align center
+
+        h2
+          width 100vw
+          color: #f1ead0
+          text-align center
+
+      .africa
+        width 100%
+        left -5%
+        img
+          width 100%
+          height auto
+
+      .copy
+        margin-top 150px
+        width: 100%;
+
+        .line
+          display block
+          margin 20px 35vw
+
+        h2
+          width auto
+
+        p
+          width: 100%;
+          font-size 30px
