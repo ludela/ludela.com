@@ -4,7 +4,7 @@ export default function ($) {
 
   var lastScrollPos,
       allowScroll = true,
-      scrollerDelay = 2500;
+      scrollerDelay = 500;
 
   const $document = $(document);
   const $window = $(window);
@@ -14,13 +14,13 @@ export default function ($) {
   $window.on('scroll', function (ev) {
     const currentPos = $window.scrollTop();
     const scrollDiff = currentPos - lastScrollPos;
-    // console.log('[scroll] diff:' + scrollDiff);
+    lastScrollPos = currentPos;
+    console.log('[scroll] diff:' + scrollDiff);
     if ( ! allowScroll || Math.abs(scrollDiff) <  scrollThreshold) return;
     disableScrollFor(ev, scrollerDelay);
     const dir = Math.min(1, Math.max(-1, scrollDiff));
     console.log(dir);
     $document.trigger('nextpanel', dir);
-    lastScrollPos = currentPos;
   });
 
   $window.on('load resize', debounce(function () {
