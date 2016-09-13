@@ -1,0 +1,29 @@
+#dots
+  position fixed
+  right 0
+  top 40%
+  transform translate(-50%, 0)
+  margin auto
+  z-index 9999
+
+  div
+    display block
+    border-radius 50%
+    opacity 0.5
+    background-color rgb(240, 236, 227)
+    width 6px
+    height 7px
+    margin 20px
+    transition opacity 500ms ease
+    cursor: pointer;
+
+    &.active-dot
+      opacity 1
+      transition opacity 500ms ease;
+
+@media screen and (max-width: 980px)
+  #dots
+    div
+      width 12px
+      height 14px
+      margin 40px 20px
