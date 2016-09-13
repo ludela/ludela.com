@@ -8,7 +8,7 @@ export default function ($) {
 
   const $document = $(document);
   const $window = $(window);
-  // const $panels = $('.splash__content');
+  const $panels = $('.splash__content');
   const scrollThreshold = 20;
 
   $window.on('scroll', function (ev) {

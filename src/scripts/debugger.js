@@ -8,4 +8,11 @@ export default function ($) {
     $(document).trigger('setpanel', panelIndex);
   });
 
+  const $dots = $('#dots div');
+
+  $dots.on('click', function () {
+    const panelIndex = $(this).data('goto');
+    $(document).trigger('setabout', panelIndex);
+  });
+
 }
