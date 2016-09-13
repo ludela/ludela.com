@@ -2,17 +2,9 @@
   opacity 0
   transition opacity 100ms ease
 
-  .splash__headline
-    position absolute
-    text-align center
-    left (((1000 - $width) / 2) / 1000) * 100%
-    width ($width / 1000) * 100%
-    height 150px
-    transform translate3d(0, 80%, 0)
-
-  .small-text
-    left 50%
-    top @left
+  // .small-text
+    // left 50%
+    // top @left
 
     // &.\\+left
     //   margin-left ((200 + 155) / 1000) * -100%
@@ -38,42 +30,29 @@
 
   .splash__headline
     opacity 1
-    transform translate3d(0, 80%, 0)
+    transform translate3d(0, 20vh, 0)
 
   .small-text
+    // transform translate3d(0,450%,0)
     opacity 1
 
-    // &.\\+one
-    //   transition-delay 800ms
 
-    // &.\\+two
-    //   transition-delay 900ms
+&.is-step-1 #step-4,
+&.is-step-2 #step-4,
+&.is-step-3 #step-4
+  .splash__headline
+    transform translate3d(0, 100vh, 0)
 
-    // &.\\+three
-    //   transition-delay 1000ms
+// &.is-step-4 #step-4
+//   .small-text
+//     transform translate3d(0,0,0)
 
-    // &.\\+four
-    //   transition-delay 1100ms
-
-    // &.\\+five
-    //   transition-delay 1200ms
-
-    // &.\\+six
-    //   transition-delay 1300ms
-
-    // &.\\+seven
-    //   transition-delay 1400ms
-
-    // &.\\+eight
-    //   transition-delay 1500ms
-
-&.is-step-4 #step-4
+&.is-step-3 #step-4
   .small-text
-    transform translate3d(0,0,0)
+    opacity 0
 
 &.is-step-5 #step-4
-  opacity 0
-  transition-delay 300ms
+  transition opacity 750ms ease
 
   .small-text
     transform translate3d(0, 0, 0)
