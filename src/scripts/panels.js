@@ -23,6 +23,7 @@ export default function ($) {
     console.log('[setpanel] setting step to ', index);
     const $panel = $(`.splash__content:eq(${index - 1})`);
     // if ( ! $panel || $panel.length !> 0) return;
+    // console.log($panel.offset().top);
     $body.animate({ scrollTop: $panel.offset().top }, 500);
     $splash
       .removeClass('is-step-' + currentStep)
@@ -49,7 +50,7 @@ export default function ($) {
     $about
       .removeClass('is-story-' + currentStory)
       .addClass('is-story-' + (currentStory = story));
-      console.log(ev, index);
+      // console.log(ev, index);
   });
 
 }

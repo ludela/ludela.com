@@ -1,5 +1,6 @@
 @require 'helpful-ui/zero'
 @require 'mixins'
+@require 'typography'
 @require 'components/**/*'
 
 ////////////////////////////////
@@ -34,87 +35,12 @@ $ease-in-out-expo= cubic-bezier(1, .000, .000, 1)
 $ease-in-out-circ= cubic-bezier(.785, .135, .150, .860)
 $ease-in-out-back= cubic-bezier(.680, -.550, .265, 1.550)
 
+
+
 body
   color #fff
-  font-family sans-serif
+  font-family 'Proxima nova', 'Helvetica', sans-serif
 
-
-.small-text
-  position absolute
-  left 50%
-  top 50%
-  width 15em
-  transition opacity 1s ease, transform 900ms ease
-  opacity 0
-  transform translate3d(0, 500%, 0)
-
-  &__title
-    font-size 12px
-    font-weight 600
-    text-transform uppercase
-    color #f2ebd2
-
-  &__desc
-    color #f2be3d
-    font-size 12px
-    margin-top 5px
-
-    &.\\+dark
-      color #3d2716
-
-  &__icon
-    position absolute
-    top -12px
-    right -40px
-    font-size 30px
-
-  &.\\+left
-    text-align right
-    margin-left ((250 + 155) / 1200) * -100%
-
-  &.\\+right
-    margin-left (170 / 1200) * 100%
-
-    .small-text__icon
-      left -40px
-
-  &.\\+one
-    margin-top 0
-    transition-delay 800ms
-
-  &.\\+two
-    margin-top 0
-    transition-delay 900ms
-
-  &.\\+three
-    margin-top 90px
-    transition-delay 1000ms
-
-  &.\\+four
-    margin-top 90px
-    transition-delay 1100ms
-
-  &.\\+five
-    margin-top 180px
-    transition-delay 1200ms
-
-  &.\\+six
-    margin-top 180px
-    transition-delay 1300ms
-
-  &.\\+seven
-    margin-top 260px
-    transition-delay 1400ms
-
-  &.\\+eight
-    margin-top 260px
-    transition-delay 1500ms
-
-
-@font-face {
-  font-family: 'Freeland';
-  src: url("fonts/Freeland.otf") format("opentype");
-}
 
 .scroll-container
   height 1500vh
