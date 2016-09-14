@@ -9,9 +9,19 @@ export default function ($) {
   const $document = $(document);
   const $window = $(window);
   const $panels = $('.splash__content');
+  const $general = $('#general');
+  const $about = $('#about');
   const scrollThreshold = 20;
 
   $window.on('scroll', function (ev) {
+    console.log('here ', $document.width());
+    if ($window.scrollTop() + $window.height() > $document.height() - 2) {
+      console.log('called');
+      $general.addClass('is-footer');
+      $about.addClass('is-footer');
+    } else {
+      $('.is-footer').removeClass('is-footer');
+    }
     const currentPos = $window.scrollTop();
     const scrollDiff = currentPos - lastScrollPos;
     lastScrollPos = currentPos;

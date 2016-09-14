@@ -6,7 +6,12 @@
   margin auto
   z-index 9999
 
+  .tooltiptext
+    display none
+    position absolute
+
   div
+    position relative
     display block
     border-radius 50%
     opacity 0.5
@@ -17,12 +22,30 @@
     transition opacity 500ms ease
     cursor: pointer;
 
+    &:hover
+      .tooltiptext
+        display block
+        text-align: right;
+        background none
+        width 300px
+        left -330px
+        top -30px
+
+        span
+          background-color: rgb(240, 236, 227)
+          padding 5px
+          color #000
+          font-size 18px
+
     &.active-dot
       opacity 1
       transition opacity 500ms ease;
 
 @media screen and (max-width: 980px)
   #dots
+    .tooltiptext
+      display none
+      position absolute
     div
       width 12px
       height 14px

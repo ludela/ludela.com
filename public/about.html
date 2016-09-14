@@ -5,14 +5,35 @@
   </head>
   <body>
     <div id='dots'>
-      <div class='dot-1 active-dot' data-goto="1"></div>
-      <div class='dot-2' data-goto="2"></div>
-      <div class='dot-3' data-goto="3"></div>
-      <div class='dot-4' data-goto="4"></div>
-      <div class='dot-5' data-goto="5"></div>
+      <div class='dot dot-1 active-dot' data-goto="1">
+        <div class="tooltiptext">
+          <span>A Seed Was Planted</span>
+        </div>
+      </div>
+      <div class='dot dot-2' data-goto="2">
+        <div class="tooltiptext">
+          <span>Better Light</span>
+        </div>
+      </div>
+      <div class='dot dot-3' data-goto="3">
+        <div class="tooltiptext">
+          <span>The Team</span>
+        </div>
+      </div>
+      <div class='dot dot-4' data-goto="4">
+        <div class="tooltiptext">
+          <span>Our Story</span>
+        </div>
+      </div>
     </div>
     <div class='scroll-container'>
       <div id='menu' class='menu'>
+        <div class="menu__close">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
         <div class="menu__logo">
           <img src='/images/logo.png'/>
@@ -52,7 +73,7 @@
             <span></span>
           </div>
           <div class="video">
-            see the ludela
+            <span>see the ludela</span>
               <img src='/images/video.png'/>
             <div class='video'> </div>
           </div>
@@ -422,23 +443,69 @@
             </div>
           </div>
         </div>
-        <div class='about__content' id="step-5">
-          <div class='content'>
-            <h1 class='header'>
-              Join Us
-            </h1>
-            <h2 class='sub-header'>
-              Early birds recieve 20% off
-            </br>
-              + Free Candle refills
-            </h2>
-            <form>
-              <input type='text' placeholder='EMAIL'/>
-              <input type='submit'/>
-            </form>
+        <div class='about__content footer' id="footer">
+          <div class="header-bar">
+            <div id="hamburgfoot">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="video">
+              <span>see the ludela</span>
+                <img src='/images/video.png'/>
+              <div class='video'> </div>
+            </div>
+            <div class="logo">
+              <img src='/images/logo.png'/>
+            </div>
           </div>
-          <div class='img'>
-            <img src='/images/join-candle.png'/>
+          <div class='footer__wrap'>
+            <div class='footer__content'>
+              <h1 class='header'>
+                Join Us
+              </h1>
+              <h2 class='sub-header'>
+                Early birds recieve 20% off
+              </br>
+                + Free Candle refills
+              </h2>
+              <form>
+                <input type='text' placeholder='EMAIL'/>
+                <input type='submit'/>
+              </form>
+            </div>
+            <div class='footer__candle'>
+              <img src='/images/Candle-Reflection-Flame.png'/>
+            </div>
+          </div>
+          <div class='footer__links'>
+            <div class='footer__link-wrap'>
+
+              <a class='footer__link' href='/about.html'>
+                about us
+              </a>
+              <span>|</span>
+              <a class='footer__link' href='/faq.html'>
+                faq
+              </a>
+              <span>|</span>
+              <a class='footer__link' href='/legal.html'>
+                legal
+              </a>
+              <span>|</span>
+              <a class='footer__link' href='/careers.html'>
+                careers
+              </a>
+              <span>|</span>
+              <a class='footer__link' href='/contact.html'>
+                contact
+              </a>
+              </br>
+              <span class='copyright'>
+                © 2016 LuDela LLC
+              </span>
+            </div>
           </div>
         </div>
       </div>

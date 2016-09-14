@@ -19,23 +19,34 @@ export default function ($) {
   }
 
   $document.on('setpanel', function (ev, index) {
-    index = Math.max(1, Math.min(totalSteps, index));
-    console.log('[setpanel] setting step to ', index);
-    const $panel = $(`.splash__content:eq(${index - 1})`);
-    // if ( ! $panel || $panel.length !> 0) return;
-    // console.log($panel.offset().top);
-    $body.animate({ scrollTop: $panel.offset().top }, 500);
-    $splash
-      .removeClass('is-step-' + currentStep)
-      .addClass('is-step-' + (currentStep = index));
+    if($splash.length) {
+      index = Math.max(1, Math.min(totalSteps, index));
+      console.log('[setpanel] setting step to ', index);
+      const $panel = $(`.splash__content:eq(${index - 1})`);
+      // if ( ! $panel || $panel.length !> 0) return;
+      // console.log($panel.offset().top);
+      $body.animate({ scrollTop: $panel.offset().top }, 500);
+      $splash
+        .removeClass('is-step-' + currentStep)
+        .addClass('is-step-' + (currentStep = index));
+    }
   });
 
   $document.on('setabout', function (ev, index) {
+    console.log('called');
     $about
       .removeClass('is-step-' + currentStep)
       .addClass('is-step-' + (currentStep = index));
-      $('.active-dot').removeClass('active-dot')
-      $('.dot-'+currentStep).addClass('active-dot');
+    console.log('stepp isss'+ index);
+    if (index == 5) {
+      console.log('stepper isss'+ index);
+      $about.addClass('is-footer');
+    } else {
+      $about.removeClass('is-footer');
+    }
+
+    $('.active-dot').removeClass('active-dot')
+    $('.dot-'+currentStep).addClass('active-dot');
   });
 
   $document.on('nextpanel', function (ev, dir) {
@@ -50,7 +61,6 @@ export default function ($) {
     $about
       .removeClass('is-story-' + currentStory)
       .addClass('is-story-' + (currentStory = story));
-      // console.log(ev, index);
   });
 
 }
