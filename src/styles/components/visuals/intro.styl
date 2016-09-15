@@ -70,24 +70,31 @@ $phone_height = 390
 
 &__flame
   position absolute
-  bottom 60%
+  bottom 35.7%
   width (205 / 1200) * 100%
   height 148px
   // height ($candle_height / 850) * 100%
   left (((1200 - 205) / 2) / 1200) * 100%
-  background-image url('/images/Candle_Loop.gif')
+  background-image url('/images/CandleFlame.png')
   background-repeat no-repeat
-  background-position 170%
-  transform translate3d(0, 0, 0)
+  background-position 50%
+  transform translate3d(0, 25%, 0)
   z-index 90
-  transition opacity 2000ms ease
+  transition opacity 1000ms ease, transform 1000ms ease
+
+  / .splash.is-step-1 &
+    transform translate3d(0, 0, 0)
 
   / .splash.is-step-2 &
     opacity 0
-    transition-delay 1s
+    transition-delay 500ms
+    transform translate3d(0, 25%, 0)
     // background-image url('/images/Candle_Outro.gif')
 
-  / .splash.is-step-3 &,
+  / .splash.is-step-3 &
+    opacity 1
+    transform translate3d(0, 0, 0)
+
   / .splash.is-step-4 &,
   / .splash.is-step-5 &,
   / .splash.is-step-6 &
@@ -127,20 +134,14 @@ $phone_height = 390
 &__core
   position absolute
   bottom 10.2%
-  // left (((1200 - ($candle_width/2)) / 2) / 1200) * 100%
-  left 37.5%
-  // right 0
-  // margin-left auto
-  // margin-right auto
+  left 22%
   background-image url('/images/Core.png')
   background-size contain
   background-repeat no-repeat
   background-position 50%
-  width 25%
-  // width (($candle_width / 2) / 1200) * 100%
-  // height ($candle_height / 720) * 100%
+  width 55%
   height 44%
-  transition transform 1500ms ease, opacity 100ms ease, left 550ms ease
+  transition transform 1500ms ease, opacity 1500ms ease, left 550ms ease
   opacity 0
   transform translate3d(0, 0, 0)
   z-index 80
@@ -161,7 +162,47 @@ $phone_height = 390
     transform translate3d(0, -100vh, 0)
     transition transform 1500ms ease, left 550ms ease
     transition-property transform, left
-    transition-delay 700ms, 0ms
+    transition-delay 400ms, 0ms
+
+  / .splash.is-step-6 &
+    left -3%
+    opacity 1
+    transition-property transform, opacity, left
+    transition-delay 300ms, 0ms, 3500ms
+
+&__board
+  position absolute
+  bottom 10.2%
+  background url("/images/Board.png")
+  left 22%
+  background-size contain
+  background-repeat no-repeat
+  background-position 50%
+  width 55%
+  height 44%
+  transition transform 1500ms ease, opacity 1500ms ease, left 550ms ease
+  opacity 0
+  transform translate3d(0, 0, 0)
+  z-index 50
+
+  / .splash.is-step-1 &
+  / .splash.is-step-2 &
+  / .splash.is-step-3 &
+    opacity 1
+    left 36%
+    transform translate3d(0, 0, 0)
+
+  / .splash.is-step-4 &
+    opacity 1
+    transform translate3d(0, 0, 0)
+    transition-delay 300ms
+
+  / .splash.is-step-5 &
+    left 36%
+    transform translate3d(0, -100vh, 0)
+    transition transform 1500ms ease, left 550ms ease, opacity 1500ms ease
+    transition-property transform, left, opacity
+    transition-delay 400ms, 0ms, 0ms
 
   / .splash.is-step-6 &
     left 12.5%
@@ -169,61 +210,46 @@ $phone_height = 390
     transition-property transform, opacity, left
     transition-delay 300ms, 0ms, 3500ms
 
-&__board
-  position absolute
-  bottom 0
-  left (((1000 - ($candle_width*2)) / 2) / 1000) * 100%
-  background green
-  width (($candle_width / 2) / 1000) * 100%
-  height ($candle_height / 1440) * 100%
-  transition all 1000ms ease
-  opacity 0
-  transform translate3d(0, 100vh, 0)
-  z-index 80
-
-  / .splash.is-step-1 &
-  / .splash.is-step-2 &
-  / .splash.is-step-3 &
-    opacity 1
-    left (((1000 - ($candle_width)) / 2) / 1000) * 100%
-    transform translate3d(0, -80%, 0)
-
-  / .splash.is-step-4 &
-    opacity 1
-    transform translate3d(0, -80%, 0)
-    transition-delay 300ms
-
-  / .splash.is-step-5 &
-    left (((1000 - ($candle_width)) / 2) / 1000) * 100%
-    transform translate3d(0, -100vh, 0)
-
 &__battery
   position absolute
-  bottom 0
-  left ((1000 - ($candle_width / .6)) / 1000) * 100%
-  background black
-  width (($candle_width / 2) / 1000) * 100%
-  height ($candle_height / 2160) * 100%
-  transition all 800ms ease
+  bottom 10.2%
+  background url("/images/Battery.png")
+  left 22%
+  background-size contain
+  background-repeat no-repeat
+  background-position 50%
+  width 55%
+  height 44%
+  transition transform 1500ms ease, opacity 1500ms ease, left 1700ms ease
   opacity 0
-  transform translate3d(0, 100vh, 0)
-  z-index 80
+  transform translate3d(0, 0, 0)
+  z-index 100
 
   / .splash.is-step-1 &
   / .splash.is-step-2 &
   / .splash.is-step-3 &
     opacity 1
-    left ((1000 - ($candle_width * 2.2)) / 1000) * 100%
-    transform translate3d(0, -80%, 0)
+    left 10%
+    // left ((1000 - ($candle_width * 2.2)) / 1000) * 100%
+    transform translate3d(0, 0, 0)
 
   / .splash.is-step-4 &
     opacity 1
-    transform translate3d(0, -80%, 0)
+    transform translate3d(0, 0, 0)
     transition-delay 300ms
 
   / .splash.is-step-5 &
-    left ((1000 - ($candle_width * 2.2)) / 1000) * 100%
+    left 10%
     transform translate3d(0, -100vh, 0)
+    transition transform 1500ms ease, left 550ms ease, opacity 1500ms ease
+    transition-property transform, left, opacity
+    transition-delay 400ms, 0ms, 0ms
+
+  / .splash.is-step-6 &
+    left -15%
+    opacity 1
+    transition-property transform, opacity, left
+    transition-delay 300ms, 0ms, 3000ms
 
 
 &__wax
@@ -240,7 +266,7 @@ $phone_height = 390
   width 25%
   // height ($candle_height / 720) * 100%
   height 44%
-  transition transform 500ms ease, left 550ms ease
+  transition transform 500ms ease, left 550ms ease, opacity 1500ms ease
   opacity 0
   transform translate3d(0, 0, 0)
   z-index 70
@@ -266,7 +292,7 @@ $phone_height = 390
 
 &__wick
   position absolute
-  bottom 47%
+  bottom 50%
   left (((1200 - $candle_width) / 2) / 1200) * 100%
   background-image url('/images/Wick.png')
   background-size contain
@@ -296,11 +322,43 @@ $phone_height = 390
 
 
   / .splash.is-step-6 &
-    left 15%
-    z-index 150
-    opacity 1
+    opacity 0
     transition-property transform, left
     transition-delay 500ms, 3500ms
+  //   left 15%
+  //   z-index 150
+
+&__wax-flame
+  position absolute
+  bottom 52%
+  left (((1200 - $candle_width) / 2) / 1200) * 100%
+  background-image url('/images/flame.png')
+  background-size contain
+  background-repeat no-repeat
+  background-position 50%
+  width (($candle_width) / 1200) * 100%
+  height 10%
+  transition opacity 500ms ease, left 550ms ease
+  opacity 0
+  transform translate3d(0, 0, 0)
+  z-index 110
+
+  / .splash.is-step-5 &,
+  / .splash.is-step-6 &
+    opacity 1
+
+  / .splash.is-step-5 &
+    transition transform 1500ms ease, left 550ms ease, opacity 1000ms ease
+    transition-property transform, left, opacity
+    transition-delay 700ms, 0ms, 1500ms
+
+
+  / .splash.is-step-6 &
+    opacity 0
+  //   left 15%
+  //   z-index 150
+  //   transition-property transform, left
+  //   transition-delay 500ms, 3500ms
 
 
 &__shell
@@ -317,14 +375,14 @@ $phone_height = 390
   transition transform 1500ms ease, left 550ms ease
   opacity 0
   transform translate3d(0, -100vh, 0)
-  z-index 80
+  z-index 110
 
   / .splash.is-step-5 &
     opacity 1
     transform translate3d(0, -100vh, 0)
-    transition transform 1500ms ease, left 550ms ease
+    transition transform 1200ms ease, left 550ms ease
     transition-property transform, left
-    transition-delay 200ms, 0ms
+    transition-delay 100ms, 0ms
 
   / .splash.is-step-6 &
     left (((1200 - ($candle_width)) / 16) / 1200) * 100%
@@ -417,6 +475,11 @@ $phone_height = 390
   &__candle
     width ($candle_width / 1200) * 100%
 
+  &__flame
+    bottom 42.7%
+    width (205 / 1200) * 100%
+    height 148px
+
   &__phone
     left 15%
     width ($phone_width / 1200) * 100%
@@ -432,19 +495,61 @@ $phone_height = 390
     / .splash.is-step-6 &
       left 26.6%
 
+  &__board
+    left 40%
+    width 20%
+
+    / .splash.is-step-1 &,
+    / .splash.is-step-2 &,
+    / .splash.is-step-3 &
+      opacity 0
+      // transition-delay 500ms
+
+    / .splash.is-step-5 &,
+    / .splash.is-step-7 &
+      left 45%
+
+    / .splash.is-step-6 &
+      left 31%
+
+  &__battery
+    left 40%
+    width 20%
+
+    / .splash.is-step-1 &,
+    / .splash.is-step-2 &,
+    / .splash.is-step-3 &
+      opacity 0
+      // transition-property opacity
+      // transition-delay 500ms
+      left 36%
+
+    / .splash.is-step-5 &,
+    / .splash.is-step-7 &
+      left 36%
+
+    / .splash.is-step-6 &
+      left 22.5%
+
   &__wax
-    left (((1200 - ($candle_width)) / 2) / 1200) * 100%
+    left 0
     width (($candle_width) / 1200) * 100%
 
     / .splash.is-step-6 &
-      left (((1200 - $candle_width) / 5) / 1200) * 100%
+      left -26.5%
 
   &__wick
     left (((1200 - ($candle_width)) / 2) / 1200) * 100%
     width (($candle_width) / 1200) * 100%
+    bottom 50%
 
     / .splash.is-step-6 &
       left (((1200 - ($candle_width)) / 3) / 1200) * 100%
+
+  &__wax-flame
+    bottom 52%
+    width (($candle_width) / 1200) * 100%
+    height 10%
 
   &__shell
     left (((1200 - ($candle_width)) / 2) / 1200) * 100%
