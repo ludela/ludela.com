@@ -10,7 +10,7 @@ export default function ($) {
   const $window = $(window);
   const $panels = $('.splash__content');
   const $dot = $('.dot');
-  const scrollThreshold = 10;
+  const scrollThreshold = 30;
 
   $window.on('scroll', function (ev) {
     const currentPos = $window.scrollTop();
