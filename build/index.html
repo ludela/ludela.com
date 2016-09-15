@@ -43,7 +43,7 @@
       <register class="subscribe-form password-form collapsed">
         <user-name placeholder="Enter Your Name"></user-name>
       </register>
-      <register class="subscribe-form password-form collapsed">
+      <register class="subscribe-form password-form collapsed" immediate-login="true">
         <user-password placeholder="Enter a Password (min 6 chars)"></user-password>
         <input type="submit" value="Finish" class="register-submit form-submit">
         <div class="error" if="{ errorMessage }">
@@ -51,7 +51,7 @@
         </div>
       </register>
     </div>
-    <div class="landing-footer">
+    <div class="footer">
       <a href="login.html" class="login-link">Login</a>
       <p>© 2016 LuDela, INC</p>
     </div>
@@ -66,6 +66,7 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <script src="js/shop.js"></script>
 <script src="js/framework.js"></script>
 <script src="js/hero-video.js"></script>

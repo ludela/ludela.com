@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "Ruslan Yurchenko",
   "dependencies": {
-    "shop.js": "1.0.54"
+    "shop.js": "1.0.56"
   },
   "devDependencies": {
     "browser-sync": "*",

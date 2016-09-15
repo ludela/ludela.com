@@ -12,7 +12,6 @@
 <!--[if lte IE 9]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
-
 <div class="page-header">
     <header class="header container">
         <h1 class="logo">
@@ -32,10 +31,10 @@
                 <div class="hero-content">
                     <div class="referal-code-wrap">
                         <div class="share-field">
-                            <a href="#" class="hidden-desktop">Copy referral code</a>
-                            <a href="#" class="ref-link hidden-mobile">http://www.prelaunch.ludela.com/?ref=1d825664d1</a>
+                            <p class="hidden-desktop">Copy referral code</a>
+                            <p class="ref-text ref-link hidden-mobile">...</a>
                         </div>
-                        <p class="referal-code-mobile">http://www.prelaunch.ludela.com/?ref=1d825664d1</p>
+                        <p class="ref-text referal-code-mobile">...</p>
                     </div>
 
                     <div class="hero-image candle hidden-desktop">
@@ -48,12 +47,12 @@
                     </p>
                     <ul class="hero-social">
                         <li>
-                            <a href="#">
+                            <a id="fbLink" href="#" target="_blank">
                                 <img src="images/fb.png">
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a id="twLink" href="#" target="_blank">
                                 <img src="images/tw.png">
                             </a>
                         </li>
@@ -107,10 +106,28 @@
             <p>Keep checking!</p>
         </div>
     </div>
+  <div class="footer">
+    <p>© 2016 LuDela, INC</p>
+  </div>
 </div>
+
+<!-- Loader -->
+<div class="loader">
+  <div class="spinner">
+  </div>
+</div>
+
+<profile>
+</profile>
+
 
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/shop.js"></script>
+<script src="js/framework.js"></script>
+
 <script src="js/main.js"></script>
+<script src="js/account.js"></script>
 </body>
 </html>
