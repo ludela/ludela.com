@@ -33,17 +33,10 @@ export default function ($) {
   });
 
   $document.on('setabout', function (ev, index) {
-    console.log('called');
     $about
       .removeClass('is-step-' + currentStep)
       .addClass('is-step-' + (currentStep = index));
-    console.log('stepp isss'+ index);
-    if (index == 5) {
-      console.log('stepper isss'+ index);
-      $about.addClass('is-footer');
-    } else {
-      $about.removeClass('is-footer');
-    }
+    console.log('stepp is'+ index);
 
     $('.active-dot').removeClass('active-dot')
     $('.dot-'+currentStep).addClass('active-dot');
@@ -56,8 +49,12 @@ export default function ($) {
   $document.on('setstory', function (ev, index) {
     var story = 9;
     if (index <=9) {
-      story = index
+      story = index;
+      $about.removeClass('is-footer');
+    } else {
+      $about.addClass('is-footer');
     }
+
     $about
       .removeClass('is-story-' + currentStory)
       .addClass('is-story-' + (currentStory = story));

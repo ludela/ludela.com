@@ -13,29 +13,35 @@ export default function ($) {
   const $about = $('#about');
   const scrollThreshold = 20;
 
-  $window.on('scroll', function (ev) {
-    console.log('here ', $document.width());
+  if ($general.length) {
+    $window.on('scroll', setFooter);
+  }
+
+  function setFooter() {
     if ($window.scrollTop() + $window.height() > $document.height() - 2) {
-      console.log('called');
       $general.addClass('is-footer');
-      $about.addClass('is-footer');
     } else {
       $('.is-footer').removeClass('is-footer');
     }
-    const currentPos = $window.scrollTop();
-    const scrollDiff = currentPos - lastScrollPos;
-    lastScrollPos = currentPos;
-    console.log('[scroll] diff:' + scrollDiff);
-    if ( ! allowScroll || Math.abs(scrollDiff) <  scrollThreshold) return;
-    disableScrollFor(ev, scrollerDelay);
-    const dir = Math.min(1, Math.max(-1, scrollDiff));
-    console.log(dir);
-    $document.trigger('nextpanel', dir);
-  });
+  }
 
-  $window.on('load resize', debounce(function () {
-    lastScrollPos = $window.scrollTop();
-  }, 150));
+  if ($panels.length) {
+    $window.on('scroll', function (ev) {
+      const currentPos = $window.scrollTop();
+      const scrollDiff = currentPos - lastScrollPos;
+      lastScrollPos = currentPos;
+      console.log('[scroll] diff:' + scrollDiff);
+      if ( ! allowScroll || Math.abs(scrollDiff) <  scrollThreshold) return;
+      disableScrollFor(ev, scrollerDelay);
+      const dir = Math.min(1, Math.max(-1, scrollDiff));
+      console.log(dir);
+      $document.trigger('nextpanel', dir);
+    });
+
+    $window.on('load resize', debounce(function () {
+      lastScrollPos = $window.scrollTop();
+    }, 150));
+  }
 
 
   function disableScrollFor(ev, time) {
