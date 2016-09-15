@@ -5,13 +5,7 @@
   // .splash__headline
   //   transform translate3d(0, 10vh, 0)
 
-  .small-text
 
-    &.\\+left
-      margin-left ((200 + 155) / 1200) * -100%
-
-    &.\\+right
-      margin-left (120/1200) * 100%
 
 &.is-step-5
   background rgba(237,140,71,1)
@@ -26,12 +20,12 @@
   opacity 1
 
   .splash__headline
+    position fixed
     opacity 1
     transform translate3d(0, 20vh, 0)
 
   .small-text
     opacity 1
-    transform translate3d(0,450%,0)
 
 
 &.is-step-1 #step-5,
@@ -41,8 +35,10 @@
   .splash__headline
     transform translate3d(0, 100vh, 0)
 
-&.is-step-6 #step-4
+&.is-step-6 #step-4,
+&.is-step-7 #step-4
   .splash__headline
+    position absolute
     transform translate3d(0, -100vh, 0)
 
 &.is-step-6 #step-5
@@ -51,13 +47,24 @@
 
   .small-text
     transform translate3d(0, 0, 0)
+    bottom 40%
 
 
 
+@media all and (min-width 800px)
+  #step-5
+    .small-text
 
+      &.\\+left
+        margin-left ((200 + 155) / 1200) * -100%
 
+      &.\\+right
+        margin-left (120/1200) * 100%
 
-
+  &.is-step-5 #step-5
+    .small-text
+      transform translate3d(0,450%,0)
+      bottom 40%
 
 
 
