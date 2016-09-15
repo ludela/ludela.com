@@ -1,0 +1,67 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Ludela Landing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<div class="intro-landing full-height">
+  <div class="intro-landing-inner container">
+    <section class="hero video" data-src="https://www.youtube.com/embed/qHXh_U1gVRE">
+      <h1 class="page-title">The World’s First</h1>
+      <h3 class="title">Real flame smart candle</h3>
+      <div class="landing-image">
+        <img src="images/candle-phone.png">
+        </img>
+        <a class="play button" href="#"></a>
+      </div>
+      <div class="modal hidden">
+        <iframe width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+        <div class="modal-close modal-close-position">
+          &#10005;
+        </div>
+      </div>
+    </section>
+    <div class="subscribe-form-wrap">
+      <h3 class="title">Ludela is coming</h3>
+      <div class="secure-icon">
+        <img src="images/secure-flame-icon.png">
+      </div>
+
+      <register class="subscribe-form email-form">
+        <user-email placeholder="Enter Your Email"></user-email>
+        <input type="button" value="Step Inside" class="user-submit form-submit disabled">
+      </register>
+      <register class="subscribe-form password-form collapsed">
+        <user-name placeholder="Enter Your Name"></user-name>
+      </register>
+      <register class="subscribe-form password-form collapsed">
+        <user-password placeholder="Enter a Password (min 6 chars)"></user-password>
+        <input type="submit" value="Finish" class="register-submit form-submit">
+        <div class="error" if="{ errorMessage }">
+          { errorMessage }
+        </div>
+      </register>
+    </div>
+    <div class="landing-footer">
+      <a href="login.html" class="login-link">Login</a>
+      <p>© 2016 LuDela, INC</p>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="js/shop.js"></script>
+<script src="js/hero-video.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

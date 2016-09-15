@@ -1,0 +1,238 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Proxima Nova", sans-serif;
+}
+
+p {
+  letter-spacing: 1px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 1.5px;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.page-title {
+  margin: 0 0 24px;
+  color: #f1ead0;
+  text-align: center;
+  font: 400 65px / 1 Freeland, sans-serif;
+  text-shadow: 1.2px 1.6px 13px rgba(0, 0, 0, 0.3);
+
+  sup {
+    font-size: 20px;
+    font-family: "Proxima Nova", sans-serif;
+  }
+}
+
+.title {
+  margin: 0;
+  font: 700 20px / 1 "Proxima Nova", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 1.2px 1.6px 13px rgba(0, 0, 0, 0.3);
+}
+
+.share-field {
+  text-align: center;
+  height: 38px;
+  background-color: #fff;
+  border: 2px solid #ea6900;
+  box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.5);
+
+  a {
+    display: block;
+    color: #2c66a6;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.56px;
+    line-height: 38px;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+
+  .ref-link {
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 0.44px;
+    line-height: 38px;
+    font-weight: 400;
+    text-decoration: underline;
+    text-transform: none;
+  }
+}
+
+.referal-code-mobile {
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 0.31px;
+  line-height: 12px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.page-header {
+  background: url("../images/landing-bg.jpg") center / cover no-repeat;
+}
+
+.progress-meter {
+  margin-bottom: 46px;
+  padding: 0;
+  list-style: none;
+  .static {
+    display: none;
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    align-items: center;
+    border-bottom: 2px solid #f1efec;
+    &.done {
+      color: #dc9920;
+    }
+  }
+
+  .ludela-product {
+    text-align: right;
+    span {
+      display: block;
+    }
+  }
+}
+
+.page-content {
+  padding: 40px 33px;
+  .title {
+    margin-bottom: 30px;
+    color: #361f00;
+    text-shadow: none;
+  }
+}
+
+.joined-friends {
+  .title {
+    margin-bottom: 10px;
+  }
+
+  .friends-count {
+    color: #dc9920;
+    margin-right: 10px;
+  }
+
+  p {
+    margin: 0;
+    color: #361f00;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.56px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .hidden-desktop {
+    display: none !important;
+  }
+
+  .page-title {
+    font-size: 75px;
+    line-height: 1.5;
+  }
+
+  .full-height {
+    min-height: 100%;
+  }
+
+  .referal-code-mobile {
+    display: none;
+  }
+
+  .page-content {
+    padding-top: 48px;
+  }
+
+  .progress-meter {
+    display: flex;
+    margin-bottom: 120px;
+    list-style-type: none;
+
+    .static {
+      display: inline-block;
+      text-align: left;
+
+      span {
+        font-size: 14px;
+        font-weight: 600;
+        text-align: left;
+      }
+    }
+
+    li {
+      display: inline-block;
+      text-align: center;
+      height: 50px;
+      width: 20%;
+      font-size: 12px;
+      border-bottom-width: 4px;
+      border-bottom-style: solid;
+      border-bottom-right-radius: 1px;
+      &.done {
+        color: #dc9920;
+        font-size: 12px;
+        border-bottom-color: #dc9920;
+      }
+      &.todo {
+        color: #361f00;
+        font-size: 12px;
+        border-bottom-color: #d8d8d8;
+      }
+    }
+
+    .ludela-product {
+      padding-top: 33px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.56px;
+      line-height: 17px;
+    }
+
+    .progress-number {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      line-height: 24px;
+    }
+  }
+
+}
