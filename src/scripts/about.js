@@ -41,7 +41,7 @@ export default function ($)  {
 
       console.log('top + height: ', $(window).scrollTop() + $(window).height() +' doc height: '+ $(document).height());
 
-      if ( $(window).scrollTop() + $(window).height() + 1 == $(document).height() && step <= 13) {
+      if ( $(window).scrollTop() + $(window).height() + 2 > $(document).height() && step <= 13) {
         step++;
         console.log('going up '+step);
         console.log('new scroll: ', $(window).scrollTop());
