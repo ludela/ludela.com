@@ -1,0 +1,72 @@
+#step-7
+  opacity 0
+  transition opacity 100ms ease, transform 1500ms ease
+  transform translate3d(0, 100vh, 0)
+
+  .img, .splash__component-left
+    display inline-block
+
+  .splash__component-left
+    width 55%
+    vertical-align middle
+
+    input[type="text"]
+      background-color rgb(241, 234, 208)
+      color #000
+      font-size: 12px
+      font-weight bold
+      border none
+      width 352px
+      height 38px
+
+    input[type="submit"]
+      background-color rgb(237, 141, 72)
+      color rgb(241, 234, 208)
+      text-transform uppercase
+      font-size: 12px
+      font-weight bold
+      border none
+      margin-left -4px
+      width 159px
+      height 38px
+
+  .img
+    width 33%
+    text-align left
+
+  .splash__headline
+    transform translate3d(0, 0, 0)
+    position relative
+
+  .signup-form
+    text-align center
+
+&.is-step-7 #step-7
+  opacity 1
+  transform translate3d(0, 0, 0)
+
+
+  .splash__headline
+    opacity 1
+
+&.is-step-7
+  background rgba(240,189,60,1)
+
+  &:after
+    opacity 1
+  // &:before
+  //   background linear-gradient(0deg, rgba(240,189,60,0) 40%, rgba(237,147,71,1))
+
+  .visuals
+    display none
+
+
+
+
+
+
+
+
+
+
+
