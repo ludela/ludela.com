@@ -33,6 +33,22 @@ export default function ($) {
   });
 
   $document.on('setabout', function (ev, index) {
+    var steps = [
+      'A-Seed-Was-Planted',
+      'Better-Light',
+      'The-Team',
+      'Our-Story-1',
+      'Our-Story-2',
+      'Our-Story-3',
+      'Our-Story-4',
+      'Our-Story-5',
+      'Our-Story-6',
+      'Our-Story-7',
+      'Our-Story-8',
+      'Our-Story-9',
+      'Join-Us'
+    ]
+    window.location.hash = '#'+steps[index - 1];
     $about
       .removeClass('is-step-' + currentStep)
       .addClass('is-step-' + (currentStep = index));
