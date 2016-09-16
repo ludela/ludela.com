@@ -1,9 +1,10 @@
 $(function () {
   var settings = {
-    // key:      'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJiaXQiOjQ1MDM2MTcwNzU2NzUxNzIsImp0aSI6Ii1BNGY1QTByLXhNIiwic3ViIjoiOU9UME95YkRDMCJ9.zVuDVbhI3eHgf7ERybUB2Wx5w8NHjbqjQIBomV3SefrFt69QldTduSRxRSaDc4oSHILEJhI-mO-V71sz33tFzQ',
-    // endpoint: 'https://api.crowdstart.com',
     key: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJiaXQiOjQ1MDM2MTcwNzU2NzUxNzYsImp0aSI6IkdqcEJEblR1RFVrIiwic3ViIjoiVjlPVDIybUkwYSJ9.RwJ5EfCPSKXqj80erk9vX4OHjmDcZQOQZKxdwg5ujSYhPp60L3-RCFNMJ38pKv8wQKR8cy8HquQ9rO6jRez6qA',
-    endpoint: 'http://localhost:8080/api',
+    // endpoint: 'https://api.crowdstart.com',
+    endpoint: 'https://api.staging.crowdstart.com',
+    // endpoint: 'http://localhost:8080/api',
+
     config: {
       hashReferrer: true
     },
