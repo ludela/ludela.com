@@ -11,7 +11,7 @@ option '-v', '--verbose',           'enable verbose test logging'
 
 task 'build', 'build project', ->
   exec '''
-    bebop -c
+    bebop compile
     cp node_modules/shop.js/shop.min.js js/shop.js
     '''
 
