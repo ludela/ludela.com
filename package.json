@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "author": "LuDela, Inc",
   "dependencies": {
-    "bebop": "1.8.12",
+    "bebop": "1.9.0",
     "cake-publish": "0.1.4",
     "cake-test": "0.1.0",
     "cake-version": "0.1.9",
