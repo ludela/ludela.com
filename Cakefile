@@ -1,8 +1,8 @@
 require 'shortcake'
 
 use 'cake-test'
-use 'cake-publish'
 use 'cake-version'
+use 'cake-publish', npm: false
 
 option '-b', '--browser [browser]', 'browser to use for tests'
 option '-g', '--grep [filter]',     'test filter'
