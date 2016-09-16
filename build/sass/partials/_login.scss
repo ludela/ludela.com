@@ -1,0 +1,78 @@
+.login {
+  background: url("../images/landing-bg.jpg") center / cover no-repeat;
+
+  .page-header {
+    background: none;
+  }
+
+  .page-title {
+    font-size: 45px;
+    margin: 30px 0 40px;
+  }
+
+  .login-form {
+
+    .title {
+      margin-bottom: 22px;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0 0 20px;
+      list-style: none;
+      li {
+        margin-bottom: 15px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      input {
+        width: 100%;
+      }
+    }
+
+    .login-submit {
+      text-align: center;
+      input {
+        cursor: pointer;
+        width: 120px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+
+  .login {
+
+    .page-header {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .page-title {
+      font-size: 86px;
+      margin: 30px 0 60px;
+    }
+
+    .header {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+
+    .hero-image.candle {
+      margin-top: -150px;
+      text-indent: -192px;
+      margin-right: -65px;
+    }
+
+    .login-form {
+      width: 100%;
+      max-width: 350px;
+    }
+  }
+}

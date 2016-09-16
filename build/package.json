@@ -1,0 +1,21 @@
+{
+  "name": "LuDela",
+  "version": "1.0.0",
+  "author": "Ruslan Yurchenko",
+  "dependencies": {
+    "shop.js": "1.0.56"
+  },
+  "devDependencies": {
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-livereload": "*",
+    "gulp-load-plugins": "*",
+    "gulp-notify": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "*"
+  }
+}
