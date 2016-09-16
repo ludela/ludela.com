@@ -72,7 +72,7 @@ $(function () {
     });
   })
 
-  m.on('register-success login-success', function() {
+  m.on('login-success', function() {
     $('.loader').fadeTo(500, 1, function() {
       window.location.href = 'account';
     });
