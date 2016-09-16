@@ -5,12 +5,17 @@ $(function () {
     $('.ref-text').html(url)
     uri = encodeURIComponent(url)
     $('#fbLink').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + uri)
-    $('#twLink').attr('href', 'https://twitter.com/intent/tweet?url=' + uri + '&amp;text=Check+out+the+world%27s+first+real+flame+smart+candle!&amp;via=ludela')
+    $('#twLink').attr('href', 'https://twitter.com/intent/tweet?url=' + uri + '&amp;via=ludela')
   }
 
   if (!window.client.client.customerToken) {
     window.location.href = 'login'
   }
+
+  m.on('profile-load-failed', function() {
+    window.client.account.logout();
+    window.history.back();
+  });
 
   // m.on('profile-load', function(){
   // });
