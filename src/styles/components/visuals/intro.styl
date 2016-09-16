@@ -37,68 +37,72 @@ $phone_height = 390
   / .splash.is-step-7 &
     transform translate3d(0, -100vh, 0)
 
-&__candle-reflection
-  position absolute
-  // left (((1200 - 300) / 2) / 1200) * 100%
-  left 0
-  right 0
-  margin-left auto
-  margin-right auto
-  bottom 0
-  background-image url('/images/Shadow_Reflection.png')
-  background-size contain
-  background-repeat no-repeat
-  background-position 50% 50%
-  width (300 / 1200) * 100%
-  max-width 320px
-  height (($candle_height / 700) / 3) * 100%
-  max-height 118px
-  transition opacity 350ms ease
-  opacity 1
-  transform translate3d(0, 0, 0)
-  z-index 400
+// &__candle-reflection
+//   position absolute
+//   // left (((1200 - 300) / 2) / 1200) * 100%
+//   left 0
+//   right 0
+//   margin-left auto
+//   margin-right auto
+//   bottom 0
+//   background-image url('/images/Shadow_Reflection.png')
+//   background-size contain
+//   background-repeat no-repeat
+//   background-position 50% 50%
+//   width (300 / 1200) * 100%
+//   max-width 320px
+//   height (($candle_height / 700) / 3) * 100%
+//   max-height 118px
+//   transition opacity 350ms ease
+//   opacity 1
+//   transform translate3d(0, 0, 0)
+//   z-index 400
 
-  / .splash.is-step-1 &,
-  / .splash.is-step-2 &,
-  / .splash.is-step-3 &
-    opacity 1
+//   / .splash.is-step-1 &,
+//   / .splash.is-step-2 &,
+//   / .splash.is-step-3 &
+//     opacity 1
 
-  / .splash.is-step-4 &
-  / .splash.is-step-5 &
-  / .splash.is-step-6 &
-    opacity 0
+//   / .splash.is-step-4 &
+//   / .splash.is-step-5 &
+//   / .splash.is-step-6 &
+//     opacity 0
 
 &__flame
   position absolute
   bottom 35.7%
   width (205 / 1200) * 100%
   height 148px
-  // height ($candle_height / 850) * 100%
   left (((1200 - 205) / 2) / 1200) * 100%
   background-image url('/images/CandleFlame.png')
   background-repeat no-repeat
   background-position 50%
   transform translate3d(0, 25%, 0)
+  opacity 0
+  transition opacity 500ms ease, transform 1000ms ease
   z-index 90
-  transition opacity 1000ms ease, transform 1000ms ease
 
-  / .splash.is-step-1 &
-    transform translate3d(0, 0, 0)
+  // / .splash.is-step-1 &
+    // transform translate3d(0, 0, 0)
 
   / .splash.is-step-2 &
     opacity 0
     transition-delay 500ms
-    transform translate3d(0, 25%, 0)
+    // transform translate3d(0, 25%, 0)
     // background-image url('/images/Candle_Outro.gif')
 
   / .splash.is-step-3 &
     opacity 1
+    // transition opacity 500ms ease
+    transition-property opacity, transform
+    transition-delay 500ms, 500ms
     transform translate3d(0, 0, 0)
 
   / .splash.is-step-4 &,
   / .splash.is-step-5 &,
   / .splash.is-step-6 &
     opacity 0
+    // transition-delay 500ms
 
   //   transform translate3d(0, -100vh, 0)
 

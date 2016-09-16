@@ -12,7 +12,11 @@
   &:after
     opacity 1
     background linear-gradient(0deg, rgba(34,16,16,1) 40%, rgba(240,189,60,0))
-    transition opacity 0ms ease
+    transition opacity 0s ease
+
+&.is-step-2 #step-3
+  opacity 0
+  transition opacity 1s ease
 
 &.is-step-3 #step-3
   opacity 1
@@ -60,13 +64,11 @@
     .small-text
       transform translate3d(0,450%,0)
 
+  &.is-step-2 #step-3,
   &.is-step-3 #step-3,
   &.is-step-4 #step-3
-    // opacity 1
 
     .small-text
-      // opacity 1
-      // transform translate3d(0,450%,0)
 
       &.\\+one
         margin-bottom 24%
