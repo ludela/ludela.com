@@ -16,7 +16,7 @@ $(function () {
   // });
 
   m.on('profile-load-success', function(data){
-    setupReferral('http://www.ludela.com/#' +data.referrers[0].id);
+    setupReferral('https://ludela.com/#' +data.referrers[0].id);
 
     var referrals = 0;
     if (data.referrals) {
