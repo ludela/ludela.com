@@ -30,13 +30,11 @@
             <img src="images/candle.png">
           </div>
           <div class="register-form">
-            <h3 class="title">Complete Your Registration</h3>
-            <p class="subtitle">
-              Enter your Name and Password so we can send you your rewards!
-            </p>
-            <register-complete two-stage-sign-up="true">
+            <h3 class="title">Enter a New Password</h3>
+            <div class="subtitle">
+            <div>
+            <reset-password-complete>
               <ul>
-                <li><user-name placeholder="Full Name"></user-name></li>
                 <li>
                   <user-password placeholder="Password"></user-password>
                   <div class="error" if="{ errorMessage }">
@@ -47,7 +45,7 @@
               <div class="login-submit">
                 <input type="submit" value="Submit">
               </div>
-            </register-complete>
+            </reset-password-complete>
           </div>
         </div>
       </div>

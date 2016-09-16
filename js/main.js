@@ -79,7 +79,13 @@ $(function () {
     });
   })
 
-  m.on('login-success register-complete-success', function() {
+  m.on('reset-password-success', function() {
+    $('.loader').fadeTo(500, 1, function() {
+      window.location.href = 'resetpending';
+    });
+  })
+
+  m.on('login-success register-complete-success reset-password-complete-success', function() {
     $('.loader').fadeTo(500, 1, function() {
       window.location.href = 'account';
     });
