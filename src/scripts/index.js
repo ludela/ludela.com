@@ -11,22 +11,22 @@ jQuery(function ($) {
   scroller($);
   about($);
 
-  const $toggle = $('#toggle'),
-        $nav = $('nav'),
+  const $nav = $('#menu'),
         $page = $('.wrapper'),
         $about = $('#about'),
         $contact = $('#contact'),
+        $hamburger = $('#hamburger'),
+        $fixed = $('.fixed'),
         $faq = $('#faq');
 
-  $toggle.on('click', function() {
+  $hamburger.on('click', function() {
     $nav.toggleClass('is-open');
-    $page.toggleClass('nav-open');
-  });
-  $('#hamburger').on('click', function() {
-    $('#menu').toggleClass('is-open');
     $('#hamburger').toggleClass('is-open');
     $about.toggleClass('nav-open');
     $faq.toggleClass('nav-open');
     $contact.toggleClass('nav-open');
+    $page.toggleClass('nav-open');
+    $nav.toggleClass('nav-open');
+    $fixed.toggleClass('nav-open');
   });;
 });
