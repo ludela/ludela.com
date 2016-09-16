@@ -1,21 +1,10 @@
 {
   "name": "LuDela",
   "version": "1.0.0",
-  "author": "Ruslan Yurchenko",
+  "author": "Helpful Human / Verus",
   "dependencies": {
+    "bebop": "1.8.12",
+    "node-sass": "3.10.0",
     "shop.js": "1.0.56"
-  },
-  "devDependencies": {
-    "browser-sync": "*",
-    "gulp": "*",
-    "gulp-autoprefixer": "*",
-    "gulp-livereload": "*",
-    "gulp-load-plugins": "*",
-    "gulp-notify": "*",
-    "gulp-plumber": "*",
-    "gulp-rename": "*",
-    "gulp-sass": "*",
-    "gulp-sourcemaps": "*",
-    "gulp-uglify": "*"
   }
 }
