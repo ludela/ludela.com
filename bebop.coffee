@@ -4,4 +4,4 @@ module.exports =
   compilers:
     scss: ->
       sass 'sass/style.scss', 'css/style.css', (err) ->
-        console.log err if err?
+        throw err if err?
