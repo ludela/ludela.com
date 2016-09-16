@@ -1,6 +1,6 @@
 {
   "name": "LuDela",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "LuDela, Inc",
   "dependencies": {
     "bebop": "1.8.12",
