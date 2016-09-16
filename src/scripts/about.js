@@ -26,7 +26,8 @@ export default function ($)  {
 
 
   if ($container.length && scroll == true) {
-    window.onscroll = debounce(setStep, 500);
+    window.onscroll = debounce(setStep, 250);
+    window.onload = reload();
   }
 
     function setStep(){
@@ -41,9 +42,9 @@ export default function ($)  {
 
       console.log('top + height: ', $(window).scrollTop() + $(window).height() +' doc height: '+ $(document).height());
 
-      if ( $(window).scrollTop() + $(window).height() + 2 > $(document).height() && step <= 13) {
+      if ( $(window).scrollTop() + $(window).height() + 2 > $(document).height() && step <= 14) {
         step++;
-        console.log('going up '+step);
+        console.log('going up '+ step);
         console.log('new scroll: ', $(window).scrollTop());
       } else if ( $(window).scrollTop() == 0 && step > 1) {
         step--;
@@ -52,16 +53,15 @@ export default function ($)  {
       }
 
       if (prevStep !== step) {
-        window.location.hash = steps[step-1];
         scroll = false;
-        setTimeout(setScroll, 1500);
+        setTimeout(setScroll, 1000);
       }
 
       console.log(window.location.hash, steps[step-1]);
 
-      if (step >= 14) {
-        story = 9;
-        step = 5;
+      if (step == 13) {
+        console.log('setting footer');
+        $(document).trigger('setfooter');
       } else if (step >= 4) {
         story = step - 3;
         step = 4;
@@ -70,7 +70,7 @@ export default function ($)  {
       console.log(step);
       console.log($(window).scrollTop());
 
-      if (prevStep !== step) {
+      if (prevStep !== step && story < 2) {
         $(document).trigger('setabout', step);
         prevStep = step;
       }
@@ -78,6 +78,39 @@ export default function ($)  {
       if (step == 4) {
         $(document).trigger('setstory', story);
       }
+    }
+
+    function reload() {
+
+      console.log('reloading');
+
+      if (window.location.hash == '') {
+        window.location.hash = steps[0]
+      }
+
+      var hash = window.location.hash;
+      step = steps.indexOf(hash.substring(1, hash.length))+1;
+      var prevStep = step;
+
+      if (step == 13) {
+        console.log('setting footer');
+        $(document).trigger('setfooter');
+      } else if (step >= 4) {
+        story = step - 3;
+        step = 4;
+        console.log('yes step:', step, ' story:', story);
+      }
+
+      if ( story < 2) {
+        $(document).trigger('setabout', step);
+        prevStep = step;
+      }
+
+      if (step == 4) {
+        $(document).trigger('setabout', 4);
+        $(document).trigger('setstory', story);
+      }
+
     }
 
     function setScroll() {

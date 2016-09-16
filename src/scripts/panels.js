@@ -7,6 +7,21 @@ export default function ($) {
   const $body = $('html, body');
   const $splash = $('.splash');
   const $about = $('#about');
+  const steps = [
+    'A-Seed-Was-Planted',
+    'Better-Light',
+    'The-Team',
+    'Our-Story-1',
+    'Our-Story-2',
+    'Our-Story-3',
+    'Our-Story-4',
+    'Our-Story-5',
+    'Our-Story-6',
+    'Our-Story-7',
+    'Our-Story-8',
+    'Our-Story-9',
+    'Join-Us'
+  ];
 
   var currentStep = 1;
   var totalSteps;
@@ -32,23 +47,14 @@ export default function ($) {
     }
   });
 
+  $document.on('setfooter', function () {
+    console.log('called');
+    $about.addClass('is-footer');
+    window.location.hash = 'Join-Us'
+  });
+
   $document.on('setabout', function (ev, index) {
-    var steps = [
-      'A-Seed-Was-Planted',
-      'Better-Light',
-      'The-Team',
-      'Our-Story-1',
-      'Our-Story-2',
-      'Our-Story-3',
-      'Our-Story-4',
-      'Our-Story-5',
-      'Our-Story-6',
-      'Our-Story-7',
-      'Our-Story-8',
-      'Our-Story-9',
-      'Join-Us'
-    ]
-    window.location.hash = '#'+steps[index - 1];
+
     $about
       .removeClass('is-step-' + currentStep)
       .addClass('is-step-' + (currentStep = index));
@@ -56,6 +62,12 @@ export default function ($) {
 
     $('.active-dot').removeClass('active-dot')
     $('.dot-'+currentStep).addClass('active-dot');
+
+    var Hash = '#'+steps[index -1];
+    if (window.location.hash !== Hash) {
+      console.log('nope ', window.location.hash);
+      window.location.hash = Hash;
+    }
   });
 
   $document.on('nextpanel', function (ev, dir) {
@@ -63,6 +75,7 @@ export default function ($) {
   });
 
   $document.on('setstory', function (ev, index) {
+
     var story = 9;
     if (index <=9) {
       story = index;
@@ -74,6 +87,14 @@ export default function ($) {
     $about
       .removeClass('is-story-' + currentStory)
       .addClass('is-story-' + (currentStory = story));
+
+    var Hash = '#'+steps[story + 2];
+    if (window.location.hash !== Hash) {
+      console.log('nope ', window.location.hash);
+      window.location.hash = Hash;
+    }
+
+
   });
 
 }

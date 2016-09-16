@@ -27,9 +27,10 @@ $tabheight = 100vh
 
       h1
         width 100%
+        max-width: 1200px;
         text-align: center;
         position: absolute
-        top: 100px
+        top: 75px
 
     .story-1, .story-2, .story-3, .story-4, .story-5, .story-6, .story-7, .story-8, .story-9
       position absolute
@@ -48,7 +49,7 @@ $tabheight = 100vh
         position absolute
         top 0
         left: 0
-        height: $height
+        height: $height * 0.8
         width: $width * 0.4
 
         h3
@@ -62,14 +63,14 @@ $tabheight = 100vh
           text-align: center;
           position: absolute;
           left: 0
-          top: ($height / 3.35)
+          top: 30%
           transform translate3d(0, (0.2 * $height), 0)
           transition: all 1500ms ease-in;
           transition-delay: 1s
 
         img
           position absolute
-          top: ($height / 2)
+          top: 50%
           left: 0
           width 100%
           height: auto
@@ -80,8 +81,8 @@ $tabheight = 100vh
 
       .story-text
         position: absolute;
-        right: 100px;
-        top: 40%;
+        left: $width * 0.5;
+        top: 0;
         width: 530px;
         z-index: 99
 
@@ -107,17 +108,30 @@ $tabheight = 100vh
           text-align: justify;
           z-index: 295;
           margin: 0;
-          margin-top 40px
+          margin-top 0
           position relative
           width 100%
           top 0
           left 0
 
+      .line-top
+        position relative
+        top -5vh
+        background: -webkit-linear-gradient(rgba(241, 234, 208, 0.5), rgba(241, 234, 208, 0.1));
+        background: -o-linear-gradient(rgba(241, 234, 208, 0.5), rgba(241, 234, 208, 0.1));
+        background: -moz-linear-gradient(rgba(241, 234, 208, 0.5), rgba(241, 234, 208, 0.1));
+        background: linear-gradient(rgba(241, 234, 208, 0.5), rgba(241, 234, 208, 0.1));
+        display: block
+        width: 8px;
+        height: 200px
+        margin-top: 24px;
+        z-index 999
+
       .line
-        background: -webkit-linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0.1));
-        background: -o-linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0.1));
-        background: -moz-linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0.1));
-        background: linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0.1));
+        background: -webkit-linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0.4));
+        background: -o-linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0.4));
+        background: -moz-linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0.4));
+        background: linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0.4));
         display: block
         width: 8px;
         margin-top: 24px;
@@ -127,72 +141,143 @@ $tabheight = 100vh
     .story-1
       top 0
 
+      .story-img
+        img
+          top 56%
+      .story-text
+        .line-top
+          background none
+          height 31vh
+
       .line
-        height: $height * 0.4
+        height: $height * 0.6
 
     .story-2
       top $height
 
+      .story-img
+        h3
+          top 23%
+
       .story-text
-        top 37%
+        top 0
+
+        .line-top
+          height 14vh
 
       .line
-        height: $height * 0.48
+        height: $height * 0.68
 
     .story-3
       top $height * 2
 
+      .story-img
+        h3
+          top 24%
+
+      .story-text
+        .line-top
+          height 16.3vh
+
       .line
-        height: $height * 0.3
+        height: $height * 0.6
 
     .story-4
       top $height * 3
 
+      .story-img
+        h3
+          top 22%
+
       .story-text
-        top 37%
+        top 0
+
+        .line-top
+          height 18vh
 
       .line
-        height:  $height * 0.2
+        height:  $height * 0.4
 
     .story-5
       top $height * 4
 
+      .story-img
+        h3
+          top 24%
+
       .story-text
-        top 37%
+        .line-top
+          height 16.3vh
 
       .line
-        height: $height * 0.35
+        height: $height * 0.65
 
     .story-6
       top $height * 5
 
+      .story-img
+        h3
+          top 22%
+
+      .story-text
+        top 0
+
+        .line-top
+          height 14vh
+
       .line
-        height: $height * 0.48
+        height: $height * 0.68
 
     .story-7
       top $height * 6
 
+      .story-img
+        h3
+          top 15%
+
       .story-text
-        top 48%
+        top 0
+
+        .line-top
+          height 27vh
 
       .line
-        height:  $height * 0.46
+        height:  $height * 0.66
 
     .story-8
       top $height * 7
 
+      .story-img
+        h3
+          top 18%
+        img
+          top 45%
+
       .story-text
-        top 48%
+        top 0
+
+        .line-top
+          height 220px
 
       .line
-        height:  $height * 0.46
+        height:  $height * 0.66
 
     .story-9
       top $height * 8
       margin-bottom: 200px;
 
+      .story-img
+        h3
+          top 15%
+        img
+          top 12%
+
       .story-text
-        top 48%
+        top 0
+
+        .line-top
+          height 250px
+
   &.is-step-4
 
     &.is-story-1 #step-4
@@ -292,12 +377,12 @@ $tabheight = 100vh
 
       .story-7
         h3
-          transform translate3d(0, (0.05 * $height), 0)
+          transform translate3d(0, (0.02 * $height), 0)
           transition: all 1s ease;
           transition-delay: 500ms
 
         img
-          transform translate3d(0, 0, 0)
+          transform translate3d(0, (-0.1 * $height), 0)
           transition: all 1s ease;
           transition-delay: 500ms
 
@@ -371,7 +456,7 @@ $tabheight = 100vh
           width 100%
           text-align: center;
           position: absolute
-          top: 100px
+          top: 75px
 
       .story-1, .story-2, .story-3, .story-4, .story-5, .story-6, .story-7, .story-8, .story-9
         position absolute
@@ -417,7 +502,7 @@ $tabheight = 100vh
         .story-text
           position: absolute;
           left: 47vw;
-          top: 40%;
+          top: 0
           width: 44%;
           z-index: 99
 
@@ -470,7 +555,7 @@ $tabheight = 100vh
         top $tabheight
 
         .story-text
-          top 37%
+          top 0
 
         .line
           height: $tabheight * 0.48
@@ -485,7 +570,7 @@ $tabheight = 100vh
         top $tabheight * 3
 
         .story-text
-          top 37%
+          top 0
 
         .line
           height:  $tabheight * 0.3
@@ -494,7 +579,7 @@ $tabheight = 100vh
         top $tabheight * 4
 
         .story-text
-          top 37%
+          top 0
 
         .line
           height: $tabheight * 0.55
@@ -509,7 +594,7 @@ $tabheight = 100vh
         top $tabheight * 6
 
         .story-text
-          top 48%
+          top 0
 
         .line
           height:  $tabheight * 0.66
@@ -518,7 +603,7 @@ $tabheight = 100vh
         top $tabheight * 7
 
         .story-text
-          top 48%
+          top 0
 
         .line
           height:  $tabheight * 0.66
@@ -528,7 +613,7 @@ $tabheight = 100vh
         margin-bottom: 200px;
 
         .story-text
-          top 48%
+          top 0
     &.is-step-4
 
       &.is-story-1 #step-4
@@ -694,20 +779,26 @@ $tabheight = 100vh
         overflow-x: scroll;
         .line
           margin 20px auto
-        .story-img, .story-text
+
+        .line-top
+          display none
+
+        .story-text
           position relative
           display block
           width 80vw
           margin 5vw 10vw
           left 0
-          top 5vh
-
+          top 0
         .story-img
+          position relative
           height: 500px
           display inline-block
           width 100vw
           margin 5vw 0
           overflow hidden
+          left 0
+          top 5vh
 
           img
             top 0
@@ -731,7 +822,11 @@ $tabheight = 100vh
       .story-1
         top 2vh
 
-        .story-img, .story-text
+        .story-text
+          h2, p
+            top 10vh
+
+        .story-img
           top 15vh
 
       .story-2
@@ -753,8 +848,27 @@ $tabheight = 100vh
 
       .story-8
         top $tabheight * 7.2
+
+
+        .story-img
+          height 300px
+
+          h3
+            top 30%
+
+        // .story-img
+        //   img
+        //     left: 50vw;
+        //     margin-left: -25vw;
+        //     width: 50vw;
+
       .story-9
-        top $tabheight * 8.2
+        top $tabheight * 8
+        .story-img
+          img
+            left: 50vw;
+            margin-left: -25vw;
+            width: 50vw;
 
       .story-7, .story-8, .story-9
         .story-img
