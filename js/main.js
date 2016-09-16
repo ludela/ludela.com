@@ -1,9 +1,9 @@
 $(function () {
   var settings = {
-    key: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJiaXQiOjQ1MDM2MTcwNzU2NzUxNzYsImp0aSI6IkdqcEJEblR1RFVrIiwic3ViIjoiVjlPVDIybUkwYSJ9.RwJ5EfCPSKXqj80erk9vX4OHjmDcZQOQZKxdwg5ujSYhPp60L3-RCFNMJ38pKv8wQKR8cy8HquQ9rO6jRez6qA',
+    key: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJiaXQiOjQ1MDM2MTcwNzU2NzUxNzIsImp0aSI6InoyWkNVQ3hrZmhFIiwic3ViIjoiVjlPVDIybUkwYSJ9.QajT3dH6kT4DiqCuUD8MhDEgUdYvQ5ZYSH5kwf0a36-ruKlD1f_SkVVE7uymuSCIcscwNXYMMP5H29EL0RQ7Zw',
     // endpoint: 'https://api.crowdstart.com',
-    endpoint: 'https://api.staging.crowdstart.com',
-    // endpoint: 'http://localhost:8080/api',
+    // endpoint: 'https://api.staging.crowdstart.com',
+    endpoint: 'http://localhost:8080/api',
 
     config: {
       hashReferrer: true
@@ -33,6 +33,12 @@ $(function () {
 
   var m = window.m = Shop.start(settings);
   window.client = Shop.client
+
+  if (window.client.client.customerToken) {
+    $('.login-link').hide()
+  } else {
+    $('.progress-link').hide()
+  }
 
   m.on('change', function(){
     this.data.set('user.passwordConfirm', this.data.get('user.password'));
@@ -73,34 +79,11 @@ $(function () {
     });
   })
 
-  m.on('login-success', function() {
+  m.on('login-success register-complete-success', function() {
     $('.loader').fadeTo(500, 1, function() {
       window.location.href = 'account';
     });
   })
-
-  var $emailSubmit = $('.email-form .form-submit')
-  if ($emailSubmit.length > 0) {
-    var blockEnter = true;
-    $(window).keydown(function(event){
-      if(event.keyCode == 13 && blockEnter) {
-        event.preventDefault();
-        return false;
-      }
-    });
-
-
-    $emailSubmit.on('click touchstart', function() {
-      if (enable) {
-        blockEnter = false;
-        $(this).hide();
-        $('.email-form user-email').css({
-          'max-width': 'initial'
-        })
-        $('.password-form').removeClass('collapsed');
-      }
-    })
-  }
 
   /**
    * Toggle hamburger

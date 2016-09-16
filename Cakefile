@@ -16,4 +16,7 @@ task 'build', 'build project', ->
     '''
 
 task 'watch', 'watch for changes and recompile project', ->
+  exec '''
+    cp node_modules/shop.js/shop.js js/shop.js
+    '''
   exec 'bebop'

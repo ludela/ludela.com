@@ -1,0 +1,74 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Complete Your Ludela Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<div class="login full-height">
+  <div class="page-header">
+    <header class="header container">
+      <h1 class="logo">
+        <a href="/">
+          <img src="images/logo.png">
+        </a>
+      </h1>
+    </header>
+    <div class="container">
+      <div class="hero">
+        <h1 class="page-title">Light the path<sup>TM</sup></h1>
+        <div class="hero-inner">
+          <div class="hero-image candle">
+            <img src="images/candle.png">
+          </div>
+          <div class="register-form">
+            <h3 class="title">Complete Your Registration</h3>
+            <p class="subtitle">
+              Enter your Name and Password so we can send you your rewards!
+            </p>
+            <register-complete two-stage-sign-up="true">
+              <ul>
+                <li><user-name placeholder="Full Name"></user-name></li>
+                <li>
+                  <user-password placeholder="Password"></user-password>
+                  <div class="error" if="{ errorMessage }">
+                    { errorMessage }
+                  </div>
+                </li>
+              </ul>
+              <div class="login-submit">
+                <input type="submit" value="Submit">
+              </div>
+            </register-complete>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <p>© 2016 LuDela, INC</p>
+  </div>
+</div>
+
+<!-- Loader -->
+<div class="loader">
+  <div class="spinner">
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/shop.js"></script>
+<script src="js/framework.js"></script>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -38,16 +38,9 @@
         <img src="images/secure-flame-icon.png">
       </div>
 
-      <register class="subscribe-form email-form">
+      <register class="subscribe-form email-form" immediate-login="true">
         <user-email placeholder="Enter Your Email"></user-email>
-        <input type="button" value="Step Inside" class="user-submit form-submit disabled">
-      </register>
-      <register class="subscribe-form password-form collapsed">
-        <user-name placeholder="Enter Your Name"></user-name>
-      </register>
-      <register class="subscribe-form password-form collapsed" immediate-login="true">
-        <user-password placeholder="Enter a Password (min 6 chars)"></user-password>
-        <input type="submit" value="Finish" class="register-submit form-submit">
+        <input type="submit" value="Step Inside" class="register-submit form-submit">
         <div class="error" if="{ errorMessage }">
           { errorMessage }
         </div>
@@ -55,6 +48,8 @@
     </div>
     <div class="footer">
       <a href="/login" class="login-link">Login</a>
+      <a href="/reset" class="login-link">Reset Your Password</a>
+      <a href="/account" class="progress-link">Check Your Progress</a>
       <p>© 2016 LuDela, INC</p>
     </div>
   </div>

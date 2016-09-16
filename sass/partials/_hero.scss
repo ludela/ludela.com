@@ -56,14 +56,11 @@ Hero
     }
   }
 
-  .referal-code-wrap {
-    margin-bottom: -80px;
-  }
-
   .hero-image.candle {
     text-indent: 20px;
     text-align: center;
     pointer-events: none;
+    margin-top: -80px;
   }
 
   .hero-inner {
@@ -92,7 +89,7 @@ Hero
   .hero {
 
     .referal-code-wrap {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
 
     .title {
@@ -123,7 +120,7 @@ Hero
 
     .hero-social {
       max-width: 240px;
-      margin: 60px auto 0;
+      margin: 30px auto;
     }
   }
 }

@@ -20,7 +20,7 @@
       position: relative;
     }
 
-    input, user-email, user-name, user-password {
+    input, user-email {
       height: 48px;
       border-radius: 0;
       border: none;
@@ -100,16 +100,7 @@
 }
 
 register {
-  transition: all .5s ease-in-out;
   display: block;
-}
-
-.collapsed, .collapsed * {
-  opacity: 0;
-  height: 0;
-  margin-bottom: 0;
-  display: block;
-  overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -140,14 +131,10 @@ register {
       form {
         flex-flow: row nowrap;
 
-        user-email, user-name, user-password {
+        user-email {
           width: 100%;
           max-width: 350px;
         }
-      }
-
-      user-name {
-        max-width: initial !important;
       }
 
       .form-submit {
