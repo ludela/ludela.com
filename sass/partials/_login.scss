@@ -39,9 +39,37 @@
       }
     }
 
+    .login-options {
+      width: 100%;
+      display: block;
+      margin-top: -8px;
+      font-size: .8em;
+
+      .remember-me {
+        display: block;
+        color: #f2ebd3;
+        float: left;
+
+        input {
+          width: 13px;
+          height: 13px;
+          padding: 0;
+          margin-right: 5px;
+          top: -3px;
+          vertical-align: bottom;
+          position: relative;
+        }
+      }
+
+      .reset-link {
+        float: right;
+      }
+    }
+
     .login-submit {
       text-align: center;
       input {
+        margin-top: 30px;
         cursor: pointer;
         width: 120px;
       }
