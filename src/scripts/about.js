@@ -40,16 +40,10 @@ export default function ($)  {
       step = steps.indexOf(hash.substring(1, hash.length))+1;
       var prevStep = step;
 
-      console.log('top + height: ', $(window).scrollTop() + $(window).height() +' doc height: '+ $(document).height());
-
       if ( $(window).scrollTop() + $(window).height() + 2 > $(document).height() && step <= 14) {
         step++;
-        console.log('going up '+ step);
-        console.log('new scroll: ', $(window).scrollTop());
       } else if ( $(window).scrollTop() == 0 && step > 1) {
         step--;
-        console.log('going down '+step);
-        console.log('new scroll: ', $(window).scrollTop());
       }
 
       if (prevStep !== step) {
@@ -57,18 +51,12 @@ export default function ($)  {
         setTimeout(setScroll, 1000);
       }
 
-      console.log(window.location.hash, steps[step-1]);
-
       if (step == 13) {
-        console.log('setting footer');
         $(document).trigger('setfooter');
       } else if (step >= 4) {
         story = step - 3;
         step = 4;
-        console.log('yes step:', step, ' story:', story);
       }
-      console.log(step);
-      console.log($(window).scrollTop());
 
       if (prevStep !== step && story < 2) {
         $(document).trigger('setabout', step);
@@ -82,8 +70,6 @@ export default function ($)  {
 
     function reload() {
 
-      console.log('reloading');
-
       if (window.location.hash == '') {
         window.location.hash = steps[0]
       }
@@ -93,12 +79,10 @@ export default function ($)  {
       var prevStep = step;
 
       if (step == 13) {
-        console.log('setting footer');
         $(document).trigger('setfooter');
       } else if (step >= 4) {
         story = step - 3;
         step = 4;
-        console.log('yes step:', step, ' story:', story);
       }
 
       if ( story < 2) {
