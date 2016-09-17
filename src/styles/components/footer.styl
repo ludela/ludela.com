@@ -12,14 +12,15 @@
   top 0
   left 0
   transform translate3d(0, 100vh, 0)
-  transition all 1s ease
+  transition top 1s ease
   text-align left
   z-index 102
 
   .header-bar
     padding-top 40px
     opacity 0
-    transition all 350ms ease
+    transition opacity 350ms ease
+    transition left 350ms ease-out
 
   .footer__wrap
     position absolute
@@ -129,12 +130,13 @@
 
 .is-footer #footer
   transform translate3d(0, 0, 0)
-  transition all 1s ease
+  transition top 1s ease
+  transition left 350ms ease-out
 
   .header-bar
     opacity 1
-    transition all 500ms ease
-    transition-delay 1s
+    transition opacity 500ms ease
+    transition left 350ms ease-out
 
   .footer__candle
     transform translate3d(0, 0, 0)
@@ -162,12 +164,22 @@
     transform translate3d(0, 0, 0)
     transition all 1s ease
 
+&.nav-open
+  #footer
+    left 410px
+    transition left 350ms ease-out
+
+    .header-bar
+      left 0
+
 #general #footer .header-bar
   background none
 
 @media screen and (max-width 980px)
+
   #footer
     text-align center
+    left 0
 
     br
       display none
