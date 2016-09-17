@@ -66,7 +66,7 @@ img {
   text-align: center;
   height: 38px;
   background-color: #fff;
-  border: 2px solid #ea6900;
+  border: 2px solid #f2ebd3;
   box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.5);
 
   a {
@@ -81,13 +81,18 @@ img {
   }
 
   .ref-link {
+    color: #444;
     margin: 0;
     font-size: 14px;
     letter-spacing: 0.44px;
     line-height: 38px;
     font-weight: 400;
-    text-decoration: underline;
     text-transform: none;
+  }
+
+  span {
+      font-size: 12px;
+      color: white;
   }
 }
 
@@ -191,6 +196,7 @@ img {
 
   .full-height {
     min-height: 100%;
+    padding: 77px 0 50px;
   }
 
   .referal-code-mobile {
