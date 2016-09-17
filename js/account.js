@@ -6,6 +6,19 @@ $(function () {
     uri = encodeURIComponent(url)
     $('#fbLink').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + uri)
     $('#twLink').attr('href', 'https://twitter.com/intent/tweet?url=' + uri + '&amp;via=ludela')
+
+    // Copy link to clipboard and fade in message on click
+    new Clipboard('.ref-link', {
+        target: function(trigger) {
+          setTimeout(function() {
+            $('.copied').fadeIn()
+            setTimeout(function() {
+              $('.copied').fadeOut()
+            }, 1000)
+          }, 250)
+          return $('.ref-link')[0]
+        }
+    });
   }
 
   if (!window.client.client.customerToken) {
