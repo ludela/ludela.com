@@ -23,6 +23,10 @@ $(function () {
   m.on('profile-load-success', function(data){
     setupReferral('https://ludela.com/#' +data.referrers[0].id);
 
+    if (data.firstName != '') {
+      $('.important').hide();
+    }
+
     var referrals = 0;
     if (data.referrals) {
       referrals = data.referrals.length;

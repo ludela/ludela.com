@@ -252,6 +252,50 @@ img {
       font-weight: 700;
       letter-spacing: 0.8px;
       line-height: 24px;
+      position: relative;
+
+      &:hover {
+        color: #dc9920;
+        cursor: default;
+
+        &:before {
+            content: '';
+            width: 200px;
+            height: 300px;
+            display: block;
+            position: absolute;
+            background-color: white;
+            border-radius: 10px;
+            top:-310px;
+            transform: translateX(-50%);
+            left: 50%;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+        }
+      }
+    }
+    .point5 .progress-number:before {
+        background-image: url(/images/5points.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .point10 .progress-number:before {
+        background-image: url(/images/10points.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .point25 .progress-number:before {
+        background-image: url(/images/25points.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .point50 .progress-number:before {
+        background-image: url(/images/50points.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
     }
   }
 
