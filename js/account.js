@@ -26,9 +26,10 @@ $(function() {
 
   var setupReferral = function(url) {
     $('.ref-text').html(url)
-    var uri = encodeURIComponent(url)
+    url = encodeURIComponent(url)
     $('#fbLink').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + uri)
-    $('#twLink').attr('href', 'https://twitter.com/intent/tweet?url=' + uri + '&amp;via=ludela')
+    var message = encodeURIComponent("Excited for the @JoinLudela launch! The world's first smartphone-controlled, real-flame candle is coming!");
+    $('#twLink').attr('href', 'https://twitter.com/intent/tweet?text=' + message + '&amp;url=' + url)
     setupClipboard()
   }
 
