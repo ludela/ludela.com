@@ -1,6 +1,8 @@
 $(function () {
   var m = window.m;
 
+  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
   setupReferral = function(url) {
     $('.ref-text').html(url)
     uri = encodeURIComponent(url)
@@ -8,17 +10,19 @@ $(function () {
     $('#twLink').attr('href', 'https://twitter.com/intent/tweet?url=' + uri + '&amp;via=ludela')
 
     // Copy link to clipboard and fade in message on click
-    new Clipboard('.ref-link', {
-        target: function(trigger) {
-          setTimeout(function() {
-            $('.copied').fadeIn()
+    if (!isSafari) {
+      new Clipboard('.ref-link', {
+          target: function(trigger) {
             setTimeout(function() {
-              $('.copied').fadeOut()
-            }, 1000)
-          }, 250)
-          return $('.ref-link')[0]
-        }
-    });
+              $('.copied').fadeIn()
+              setTimeout(function() {
+                $('.copied').fadeOut()
+              }, 1000)
+            }, 250)
+            return $('.ref-link')[0]
+          }
+      });
+    }
   }
 
   if (!window.client.client.customerToken) {
