@@ -26,7 +26,7 @@ export default function ($)  {
 
 
   if ($container.length && scroll == true) {
-    window.onscroll = debounce(setStep, 250);
+    window.onscroll = debounce(setStep, 25);
     window.onload = reload();
   }
 
