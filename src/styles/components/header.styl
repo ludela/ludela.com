@@ -56,36 +56,36 @@
       transform rotate(0deg)
       transition 150ms ease-in-out
 
-      &nth-child(1)
+      &:nth-child(1)
         top 0px
 
 
-      &nth-child(2), &nth-child(3)
+      &:nth-child(2), &:nth-child(3)
         top 12px
 
 
-      &nth-child(4)
+      &:nth-child(4)
         top 24px
 
     &.is-open span
-      &nth-child(1)
+      &:nth-child(1)
         top 18px
         width 0%
         left 50%
 
 
-      &nth-child(2)
+      &:nth-child(2)
         transform rotate(45deg)
 
-      &nth-child(3)
+      &:nth-child(3)
         transform rotate(-45deg)
 
-      &nth-child(4)
+      &:nth-child(4)
         top 18px
         width 0%
         left 50%
 
-@media screen and (max-width 980px)
+@media screen and (max-width: 980px)
   {component(header-bar)}
     #hamburger, #hamburgfoot
       width 70px
@@ -112,37 +112,37 @@
 
 
 
-        &nth-child(1)
+        &:nth-child(1)
           top 0px
 
 
-        &nth-child(2), &nth-child(3)
+        &:nth-child(2), &:nth-child(3)
           top 24px
 
 
-        &nth-child(4)
+        &:nth-child(4)
           top 48px
 
       &.is-open span
-        &nth-child(1)
+        &:nth-child(1)
           top 36px
           width 0%
           left 50%
 
 
-        &nth-child(2)
+        &:nth-child(2)
           -webkit-transform rotate(45deg)
           -moz-transform rotate(45deg)
           -o-transform rotate(45deg)
           transform rotate(45deg)
 
-        &nth-child(3)
+        &:nth-child(3)
           -webkit-transform rotate(-45deg)
           -moz-transform rotate(-45deg)
           -o-transform rotate(-45deg)
           transform rotate(-45deg)
 
-        &nth-child(4)
+        &:nth-child(4)
           top 36px
           width 0%
           left 50%
