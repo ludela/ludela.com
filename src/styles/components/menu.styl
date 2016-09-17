@@ -1,40 +1,126 @@
 {component(menu)}
-  width: 410px
-  height: 100vh
-  position: fixed;
-  top: 0
-  left: -410px
-  background: #f2be3d
-  z-index: 999;
-  text-align: center;
-  transition: left 350ms ease-out
+  width 410px
+  height 100vh
+  position fixed
+  top 0
+  left -410px
+  background #f2be3d
+  z-index 999
+  text-align center
+  transition all 350ms ease-out
 
   &.is-open
-    left: 0vw
-    transition: left 350ms ease-out
+    left 0vw
+    transition all 350ms ease-out
 
   {part(logo)}
     display inline-block
-    margin: 20px 0 75px
+    margin 20px 0 75px
 
   {part(link)}
-    display: block
-    font-size: 36px
-    font-family: "Proxima Nova"
-    color: rgb(241, 234, 208)
-    text-transform: uppercase
-    font-weight: bold
-    line-height: 1.438
-    width: 100%
-    text-align: center
-    cursor: pointer
+    display block
+    font-size 36px
+    font-family "Proxima Nova"
+    color rgb(241, 234, 208)
+    text-transform uppercase
+    font-weight bold
+    line-height 1.438
+    width 100%
+    text-align center
+    cursor pointer
+    text-decoration none
 
 
   {part(social)}
-    display: inline-block
-    background: #EE9347
-    padding: 8px
-    width: 40px
-    height: 40px
-    margin: 80px 10px
-    cursor: pointer
+    display inline-block
+    background #EE9347
+    padding 8px
+    width 40px
+    height 40px
+    margin 80px 10px
+    cursor pointer
+
+  {part(close)}
+    display none
+    width 70px
+    height 60px
+    positionabsolute
+    left 40px
+    top 60px
+
+    span
+      display block
+      position absolute
+      height 8px
+      width 100%
+      background rgb(241, 234, 208)
+      opacity 1
+      left 0
+
+      &nth-child(1)
+        top 36px
+        width 0%
+        left 50%
+
+
+      &nth-child(2)
+        -webkit-transform rotate(45deg)
+        -moz-transform rotate(45deg)
+        -o-transform rotate(45deg)
+        transform rotate(45deg)
+
+      &nth-child(3)
+        -webkit-transform rotate(-45deg)
+        -moz-transform rotate(-45deg)
+        -o-transform rotate(-45deg)
+        transform rotate(-45deg)
+
+      &nth-child(4)
+        top 36px
+        width 0%
+        left 50%
+
+
+@media screen and (max-width 980px)
+
+  {component(menu)}
+    width 100vw
+    height auto
+    position fixed
+    top -100vh
+    left 0
+    background #f2be3d
+    z-index 999
+    text-align center
+    transition all 1s ease-out
+
+    &.is-open
+      top 0
+      left 0
+      transition all 1s ease-out
+
+    {part(logo)}
+
+      img
+        height 100px
+        width auto
+        max-width none
+
+    {part(link)}
+      display block
+      font-size 60px
+
+    {part(close)}
+      display block
+
+    {part(social)}
+      display inline-block
+      background #EE9347
+      padding 25px
+      width 80px
+      height 80px
+      margin 160px 20px
+      cursor pointer
+
+      img
+        height 30px

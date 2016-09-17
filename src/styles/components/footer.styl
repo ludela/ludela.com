@@ -1,71 +1,247 @@
-&#about
 
-  #step-5
-    display block
-    background-image url(/images/join-us.png)
-    background-size 100% auto
-    background-repeat no-repeat
-    background-position center
-    opacity 1
-    position absolute
-    height 100vh
-    width 100vw
+#footer
+  display block
+  background-image url(/images/join-us.png)
+  background-size 100% auto
+  background-repeat no-repeat
+  background-position center
+  opacity 1
+  position fixed
+  height 100vh
+  width 100vw
+  top 0
+  left 0
+  transform translate3d(0, 100vh, 0)
+  transition all 1s ease
+  text-align left
+  z-index 102
+
+  .header-bar
+    padding-top: 40px
+    opacity 0
+    transition all 350ms ease
+
+  .footer__wrap
+    position: absolute;
     top 0
-    transform translate3d(0, 100vh, 0)
+    left 50%
+    margin-left -600px
+    width 100vw
+    max-width: 1200px
+
+  .footer__content
+    display inline-block
+    padding 160px 0 0 100px
+
+    .header
+      font-size: 90px;
+      font-family: "Freeland";
+      font-weight: normal;
+      color: #f1ead0;
+      line-height: 1;
+      text-align: center;
+      margin-top: 45px;
+      margin-bottom: 10px;
+      text-shadow: 0px 2px 13px rgba(0,0,0,0.3);
+      z-index: 302;
+
+    .sub-header
+      font-size: 20px;
+      font-family: "Proxima Nova";
+      color: #f1ead0;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 2.199;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      text-shadow: 0px 2px 13px rgba(0,0,0,0.3);
+      z-index: 301;
+
+    input[type="text"]
+      background-color rgb(241, 234, 208)
+      color #000
+      font-size: 12px
+      font-weight bold
+      border none
+      width 352px
+      height 38px
+
+    input[type="submit"]
+      background-color rgb(237, 141, 72)
+      color rgb(241, 234, 208)
+      text-transform uppercase
+      font-size: 12px
+      font-weight bold
+      border none
+      margin-left -4px
+      width 159px
+      height 38px
+
+  .footer__candle
+    display inline-block
+    top -5vh
+    position absolute
+    transform translate3d(0, -10vh, 0)
+    transition all 350ms ease
+    transition-delay 1s
+
+  .footer__link-wrap
+    display inline-block
+    position relative
+    top 0
+    transform translate3d(0, -2vh, 0)
+    transition all 350ms ease
+    transition-delay 500ms
+
+  .footer__links
+    position absolute
+    bottom 0
+    left 0
+    width 100vw
+    transform translate3d(0, 30vh, 0)
+    transition all 350ms ease
+    transition-delay 500ms
+    padding 50px
+    text-align: center;
+
+    .footer__link, span
+      padding 5px
+      font-size 18px
+      line-height: 1.5
+      opacity 0
+      transform translate3d(0, 0, 0)
+      transition all 750ms ease-out
+      transition-delay 1s
+      color #ed8d48
+      text-transform: uppercase;
+      text-decoration: none
+
+    .copyright
+      text-transform: none
+      font-size 16px
+
+  .header, .sub-header
+    transform translate3d(0, 20vh, 0)
+    transition all 700ms ease
+    transition-delay 150ms
+
+.is-footer #footer
+  transform translate3d(0, 0, 0)
+  transition all 1s ease
+
+  .header-bar
+    opacity 1
+    transition all 500ms ease
+    transition-delay 1s
+
+  .footer__candle
+    transform translate3d(0, 0, 0)
+    transition all 1s ease
+    transition-delay 250ms
+
+  .footer__links
+    padding 20px
+    transform translate3d(0, 0, 0)
+    transition all 750ms ease
+    transition-delay 500ms
+
+  .footer__link-wrap
+    transform translate3d(0, 0, 0)
+    transition all 500ms ease-out
+    transition-delay 1.25s
+
+  .footer__link, span
+    opacity 1
+    transform translate3d(0, 0, 0)
+    transition all 750ms ease-out
+    transition-delay 500ms
+
+  .header, .sub-header
+    transform translate3d(0, 0, 0)
     transition all 1s ease
 
-    .content
+#general #footer .header-bar
+  background none
+
+@media screen and (max-width: 980px)
+  #footer
+    text-align: center;
+
+    .footer__wrap
+      position: absolute;
+      top 0
+      left 0
+      margin-left 0
+      width 100vw
+
+    .footer__content
       display inline-block
-      margin-top 100px
+      padding 0
+      margin 50vh auto
+
+      .header
+        font-size: 120px;
+        font-family: "Freeland";
+        font-weight: normal;
+        color: #f1ead0;
+        line-height: 1;
+        text-align: center;
+        margin-top: 45px;
+        margin-bottom: 10px;
+        text-shadow: 0px 2px 13px rgba(0,0,0,0.3);
+        z-index: 302;
+
+      .sub-header
+        font-size: 35px;
+        font-family: "Proxima Nova";
+        color: #f1ead0;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 2.199;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        text-shadow: 0px 2px 13px rgba(0,0,0,0.3);
+        z-index: 301;
 
       input[type="text"]
         background-color rgb(241, 234, 208)
         color #000
-        font-size: 12px
+        font-size: 22px
         font-weight bold
         border none
         width 352px
-        height 38px
+        height 60px
 
       input[type="submit"]
         background-color rgb(237, 141, 72)
         color rgb(241, 234, 208)
         text-transform uppercase
-        font-size: 12px
+        font-size: 22px
         font-weight bold
         border none
         // margin-left -4px
         width 159px
-        height 38px
+        height 60px
 
-    .img
+
+    .footer__candle
       display inline-block
-      margin 100px 0 0 200px
-
-
-
-    .header, .sub-header
+      top 0
+      left: 50vw
+      width: 50vw
+      margin-left: -25vw
+      position absolute
       transform translate3d(0, 20vh, 0)
-      transition all 700ms ease
-      transition-delay 150ms
+      transition all 350ms ease
+      transition-delay 1s
 
-  &.is-step-5 #step-5
-    transform translate3d(0, 0, 0)
-    transition all 1s ease
-    transition-delay 500ms
+    .footer__links
+      padding 100px
 
-    .header, .sub-header
-      transform translate3d(0, 0, 0)
-      transition all 1s ease
-      transition-delay 500ms
+      .footer__link, span
+        font-size 35px
 
-@media screen and (max-width: 1200px)
-
-  &#about
-
-    #step-5
-      background-size auto 100%
-
-      .img
-        display inline-block
-        margin 100px
+      .copyright
+        font-size 30px

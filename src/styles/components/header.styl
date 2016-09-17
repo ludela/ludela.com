@@ -1,89 +1,166 @@
 {component(header-bar)}
   position fixed
-  text-align: center
-  z-index: 500
-  width: 100%
+  text-align center
+  z-index 102
+  width 100%
   top 0
   left 0
-  padding: 24px 40px
-  transition: left 350ms ease-out
-
-  // &.nav-open
-  //   left 410px
+  padding 24px 40px
+  transition left 350ms ease-out
 
   .logo
-    display: inline-block
+    display inline-block
 
   .video
     position absolute
-    right: 40px
+    right 40px
     top 50%
     height 30px
     margin-top -15px
-    font-family: "Proxima Nova"
-    font-weight: 900
-    text-transform: uppercase
-    font-size: 14px
-    color: rgb(241, 234, 208)
+    font-family "Proxima Nova"
+    font-weight 900
+    text-transform uppercase
+    font-size 14px
+    color rgb(241, 234, 208)
 
     img
       margin-left 15px
 
-  #hamburger
-    width: 35px
-    height: 30px
+  #hamburger, #hamburgfoot
+    width 35px
+    height 30px
     position absolute
-    left: 40px
+    left 40px
     top 50%
-    margin: 0 auto
+    margin 0 auto
     margin-top -15px
-    transform: rotate(0deg)
-    transition: 350ms ease-in-out
-    cursor: pointer
+    -webkit-transform rotate(0deg)
+    -moz-transform rotate(0deg)
+    -o-transform rotate(0deg)
+    transform rotate(0deg)
+    transition 350ms ease-in-out
+    cursor pointer
 
 
     span
-      display: block
-      position: absolute
-      height: 4px
-      width: 100%
-      background: rgb(241, 234, 208)
-      opacity: 1
-      left: 0
-      -webkit-transform: rotate(0deg)
-      -moz-transform: rotate(0deg)
-      -o-transform: rotate(0deg)
-      transform: rotate(0deg)
-      transition: 150ms ease-in-out
+      display block
+      position absolute
+      height 4px
+      width 100%
+      background rgb(241, 234, 208)
+      opacity 1
+      left 0
+      -webkit-transform rotate(0deg)
+      -moz-transform rotate(0deg)
+      -o-transform rotate(0deg)
+      transform rotate(0deg)
+      transition 150ms ease-in-out
 
-      &:nth-child(1)
-        top: 0px
-
-
-      &:nth-child(2), &:nth-child(3)
-        top: 12px
+      &nth-child(1)
+        top 0px
 
 
-      &:nth-child(4)
-        top: 24px
+      &nth-child(2), &nth-child(3)
+        top 12px
+
+
+      &nth-child(4)
+        top 24px
 
     &.is-open span
-      &:nth-child(1)
-        top: 18px
-        width: 0%
-        left: 50%
+      &nth-child(1)
+        top 18px
+        width 0%
+        left 50%
 
 
-      &:nth-child(2)
-        transform: rotate(45deg)
+      &nth-child(2)
+        transform rotate(45deg)
 
-      &:nth-child(3)
-        transform: rotate(-45deg)
+      &nth-child(3)
+        transform rotate(-45deg)
 
-      &:nth-child(4)
-        top: 18px
-        width: 0%
-        left: 50%
+      &nth-child(4)
+        top 18px
+        width 0%
+        left 50%
+
+@media screen and (max-width 980px)
+  {component(header-bar)}
+    #hamburger, #hamburgfoot
+      width 70px
+      height 60px
+      margin-top -30px
+
+      span
+        display block
+        position absolute
+        height 8px
+        width 100%
+        background rgb(241, 234, 208)
+        opacity 1
+        left 0
+        -webkit-transform rotate(0deg)
+        -moz-transform rotate(0deg)
+        -o-transform rotate(0deg)
+        transform rotate(0deg)
+        -webkit-transition 150ms ease-in-out
+        -moz-transition 150ms ease-in-out
+        -o-transition 150ms ease-in-out
+        transition 150ms ease-in-out
+
+
+
+
+        &nth-child(1)
+          top 0px
+
+
+        &nth-child(2), &nth-child(3)
+          top 24px
+
+
+        &nth-child(4)
+          top 48px
+
+      &.is-open span
+        &nth-child(1)
+          top 36px
+          width 0%
+          left 50%
+
+
+        &nth-child(2)
+          -webkit-transform rotate(45deg)
+          -moz-transform rotate(45deg)
+          -o-transform rotate(45deg)
+          transform rotate(45deg)
+
+        &nth-child(3)
+          -webkit-transform rotate(-45deg)
+          -moz-transform rotate(-45deg)
+          -o-transform rotate(-45deg)
+          transform rotate(-45deg)
+
+        &nth-child(4)
+          top 36px
+          width 0%
+          left 50%
+
+    .logo
+      img
+        height 100px
+        width auto
+        max-width none
+
+    .video
+      span
+        display none
+      img
+        height 60px
+        margin-top -20px
+        width auto
+        max-width none
 
 
 .fixed
