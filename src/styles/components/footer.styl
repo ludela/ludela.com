@@ -108,6 +108,7 @@
     .footer__link, span
       padding 5px
       font-size 18px
+      font-weight bold
       line-height 1.5
       opacity 0
       transform translate3d(0, 0, 0)
@@ -168,6 +169,12 @@
   #footer
     text-align center
 
+    br
+      display none
+
+    .header-bar
+      padding-top 10px
+
     .footer__wrap
       position absolute
       top 0
@@ -178,72 +185,90 @@
     .footer__content
       display inline-block
       padding 0
-      margin 50vh auto
+      padding-top 120px
+      height 100vh
+      width 100vw
 
       .header
-        font-size 120px
+        font-size 60px
         font-family "Freeland"
         font-weight normal
         color #f1ead0
         line-height 1
         text-align center
-        margin-top 45px
-        margin-bottom 10px
+        margin-top 0
+        margin-bottom 50vh
         text-shadow 0px 2px 13px rgba(0,0,0,0.3)
         z-index 302
 
       .sub-header
-        font-size 35px
+        font-size 12px
         font-family "Proxima Nova"
-        color #f1ead0
+        color #f2be3d
+        position absolute
+        width 100vw
+        bottom 0
+        left 0
         font-weight bold
         text-transform uppercase
-        line-height 2.199
-        margin-top 0
-        margin-bottom 1.5rem
+        line-height 1
+        margin 8px 0
         text-align center
         text-shadow 0px 2px 13px rgba(0,0,0,0.3)
         z-index 301
 
-      input[type="text"]
-        background-color rgb(241, 234, 208)
-        color #000
-        font-size 22px
-        font-weight bold
-        border none
-        width 352px
-        height 60px
+      form
+        width 100vw
+        position absolute
+        left 0
+        padding 0 5vw
+        bottom 30px
 
-      input[type="submit"]
-        background-color rgb(237, 141, 72)
-        color rgb(241, 234, 208)
-        text-transform uppercase
-        font-size 22px
-        font-weight bold
-        border none
-        width 159px
-        height 60px
+        input[type="text"]
+          background-color rgb(241, 234, 208)
+          color #000
+          font-size 12px
+          font-weight bold
+          border none
+          width 66%
+          max-width 334px
+          height 30px
+
+        input[type="submit"]
+          background-color rgb(237, 141, 72)
+          color rgb(241, 234, 208)
+          text-transform uppercase
+          font-size 12px
+          font-weight bold
+          border none
+          width 33%
+          max-width 167px
+          height 30px
 
 
     .footer__candle
       display inline-block
-      top 0
-      left 50vw
-      width 60vw
-      margin-left -30vw
+      top 60px
+      left 0
+      width 100vw
+      height 80vh
       position absolute
       transform translate3d(0, 20vh, 0)
       transition all 350ms ease
       transition-delay 1s
 
       img
-        width 100%
+        height 100%
+        width auto
 
     .footer__links
-      padding 100px
+      position relative
+      top 80vh
 
       .footer__link, span
-        font-size 35px
+        font-size 12px
+        padding 2px
 
       .copyright
-        font-size 30px
+        font-size 10px
+        display block

@@ -42,44 +42,6 @@
 
   {part(close)}
     display none
-    width 70px
-    height 60px
-    position absolute
-    left 40px
-    top 60px
-
-    span
-      display block
-      position absolute
-      height 8px
-      width 100%
-      background rgb(241, 234, 208)
-      opacity 1
-      left 0
-
-      &:nth-child(1)
-        top 36px
-        width 0%
-        left 50%
-
-
-      &:nth-child(2)
-        -webkit-transform rotate(45deg)
-        -moz-transform rotate(45deg)
-        -o-transform rotate(45deg)
-        transform rotate(45deg)
-
-      &:nth-child(3)
-        -webkit-transform rotate(-45deg)
-        -moz-transform rotate(-45deg)
-        -o-transform rotate(-45deg)
-        transform rotate(-45deg)
-
-      &:nth-child(4)
-        top 36px
-        width 0%
-        left 50%
-
 
 @media screen and (max-width 980px)
 
@@ -87,7 +49,7 @@
     width 100vw
     height auto
     position fixed
-    top -100vh
+    top -120vh
     left 0
     background #f2be3d
     z-index 999
@@ -102,25 +64,64 @@
     {part(logo)}
 
       img
-        height 100px
+        height 50px
         width auto
         max-width none
 
     {part(link)}
       display block
-      font-size 60px
+      font-size 30px
 
     {part(close)}
       display block
+      width 35px
+      height 30px
+      position absolute
+      left 20px
+      top 35px
+
+      span
+        display block
+        position absolute
+        height 4px
+        width 100%
+        background rgb(241, 234, 208)
+        opacity 1
+        left 0
+
+        &:nth-child(1)
+          top 18px
+          width 0%
+          left 50%
+
+
+        &:nth-child(2)
+          -webkit-transform rotate(45deg)
+          -moz-transform rotate(45deg)
+          -o-transform rotate(45deg)
+          transform rotate(45deg)
+
+        &:nth-child(3)
+          -webkit-transform rotate(-45deg)
+          -moz-transform rotate(-45deg)
+          -o-transform rotate(-45deg)
+          transform rotate(-45deg)
+
+        &:nth-child(4)
+          top 18px
+          width 0%
+          left 50%
+
 
     {part(social)}
       display inline-block
-      background #EE9347
-      padding 25px
-      width 80px
-      height 80px
-      margin 160px 20px
+      background #ee9347
+      padding 12px
+      padding-top 6px
+      width 40px
+      height 40px
+      margin 80px 10px
       cursor pointer
 
       img
-        height 30px
+        height 15px
