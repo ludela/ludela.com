@@ -39,8 +39,10 @@
       </div>
 
       <register class="subscribe-form email-form" immediate-login="true">
-        <user-email placeholder="Enter Your Email"></user-email>
-        <input type="submit" value="Step Inside" class="register-submit form-submit">
+        <div class="subscribe-row">
+          <user-email placeholder="Enter Your Email"></user-email>
+          <input type="submit" value="Step Inside" class="register-submit form-submit">
+        </div>
         <div class="error" if="{ errorMessage }">
           { errorMessage }
         </div>
