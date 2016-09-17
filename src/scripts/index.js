@@ -3,6 +3,7 @@ import panels from './panels';
 import _debugger from './debugger';
 import scroller from './scroller';
 import about from './about';
+import shell from './shell';
 
 
 jQuery(function ($) {
@@ -10,6 +11,7 @@ jQuery(function ($) {
   panels($);
   scroller($);
   about($);
+  shell($);
 
   const $nav = $('#menu'),
         $page = $('.wrapper'),
