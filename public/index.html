@@ -288,13 +288,14 @@
             <div class="visuals__candle"></div>
             <!-- <div class="visuals__candle-reflection"></div> -->
             <div class="visuals__flame"></div>
-            <div class="visuals__wax-flame"></div>
+            <!-- <div class="visuals__wax-flame"></div> -->
             <div class="visuals__phone"></div>
             <div class="visuals__core"></div>
             <div class="visuals__board"></div>
             <div class="visuals__battery"></div>
             <div class="visuals__wax"></div>
-            <div class="visuals__wick"></div>
+            <div class="visuals__wax-with-flame"></div>
+            <!-- <div class="visuals__wick"></div> -->
             <div class="visuals__shell"></div>
             <div class="visuals__variants">
               <div class="arrow-left"></div>
@@ -303,38 +304,36 @@
                 <p>Quickly and affordably change the outer shell of your LuDela to suit the season or decore.</p>
               </div>
               <div class="visuals__colors">
+                <!-- loading alternate shell colors so they are cached and switch without flicker -->
+                <img src="/images/candle_colors/green-shell-full.png" alt="" style="display:none;">
+                <img src="/images/candle_colors/blue-shell-full.png" alt="" style="display:none;">
+                <img src="/images/candle_colors/red-shell-full.png" alt="" style="display:none;">
+                <img src="/images/candle_colors/purple-shell-full.png" alt="" style="display:none;">
+                <img src="/images/candle_colors/orange-shell-full.png" alt="" style="display:none;">
                 <div class="swatches">
-                  <div class="swatch">
+                  <div class="swatch" data-id="ivory">
                     <img src="/images/candle_colors/LuDela_Ivory.png" alt="" class="swatch__img">
                     <div class="swatch__name">LuDela<br> Ivory*</div>
                   </div>
-                  <div class="swatch">
+                  <div class="swatch" data-id="blue">
                     <img src="/images/candle_colors/LuDela_Blue.png" alt="" class="swatch__img">
                     <div class="swatch__name">LuDela<br> Blue</div>
                   </div>
-                  <div class="swatch">
+                  <div class="swatch" data-id="red">
                     <img src="/images/candle_colors/LuDela_Red.png" alt="" class="swatch__img">
                     <div class="swatch__name">LuDela<br> Red</div>
                   </div>
-                  <div class="swatch">
-                    <img src="/images/candle_colors/LuDela_Sea-Shells.png" alt="" class="swatch__img">
-                    <div class="swatch__name">Sea<br> Shells</div>
-                  </div>
-                  <div class="swatch">
+                  <div class="swatch" data-id="green">
                     <img src="/images/candle_colors/LuDela_Green.png" alt="" class="swatch__img">
                     <div class="swatch__name">LuDela<br> Green</div>
                   </div>
-                  <div class="swatch">
+                  <div class="swatch" data-id="orange">
                     <img src="/images/candle_colors/LuDela_Orange.png" alt="" class="swatch__img">
                     <div class="swatch__name">LuDela<br> Orange</div>
                   </div>
-                  <div class="swatch">
+                  <div class="swatch" data-id="purple">
                     <img src="/images/candle_colors/LuDela_Purple.png" alt="" class="swatch__img">
                     <div class="swatch__name">LuDela<br> Purple</div>
-                  </div>
-                  <div class="swatch">
-                    <img src="/images/candle_colors/LuDela_Wood-Bark.png" alt="" class="swatch__img">
-                    <div class="swatch__name">Wood<br> Bark</div>
                   </div>
                 </div>
               </div>
@@ -348,14 +347,6 @@
         </div>
       </div>
     </div>
-    <!-- <div id='debugger'>
-      <button data-goto="1">Anim 1</button>
-      <button data-goto="2">Anim 2</button>
-      <button data-goto="3">Anim 3</button>
-      <button data-goto="4">Anim 4</button>
-      <button data-goto="5">Anim 5</button>
-      <button data-goto="6">Anim 6</button>
-    </div> -->
     <script src="/site.js"></script>
   </body>
 </html>
