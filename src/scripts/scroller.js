@@ -27,7 +27,7 @@ export default function ($) {
   }
 
   if ($panels.length) {
-    
+
     $window.on('scroll', function (ev) {
       const currentPos = $window.scrollTop();
       const scrollDiff = currentPos - lastScrollPos;
@@ -51,17 +51,17 @@ export default function ($) {
       disableScrollFor(ev, scrollerDelay);
       $document.trigger('setpanel', goTo);
     });
+  }
 
-    function disableScrollFor(ev, time) {
-      console.log('disabling scroll');
-      allowScroll = false;
-      ev.preventDefault();
-      ev.stopPropagation();
-      const t = setTimeout(function () {
-        allowScroll = true;
-        clearTimeout(t);
-        console.log('enabling scroll');
-      }, time);
-    }
+  function disableScrollFor(ev, time) {
+    console.log('disabling scroll');
+    allowScroll = false;
+    ev.preventDefault();
+    ev.stopPropagation();
+    const t = setTimeout(function () {
+      allowScroll = true;
+      clearTimeout(t);
+      console.log('enabling scroll');
+    }, time);
   }
 }
