@@ -2,10 +2,22 @@
   opacity 0
   transition opacity 100ms ease
 
+&.is-step-2
+  transition background 0s ease
+
+  &:after
+    transition opacity 0s ease
+
 &.is-step-1 #step-2
   .splash__headline
     opacity 0
     transform translate3d(0, 100vh, 0)
+
+// &.is-step-2 #step-3
+//   .small-text
+//     opacity 0
+//     transition 500ms ease
+
 
 &.is-step-2 #step-2,
 &.is-step-3 #step-2
@@ -16,10 +28,12 @@
     opacity 1
     transform translate3d(0, 20vh, 0)
 
-&.is-step-4 #step-2
+&.is-step-4 #step-2,
+&.is-step-5 #step-2,
+&.is-step-6 #step-2,
+&.is-step-7 #step-2
   opacity 0
   transition-delay 300ms
 
-&.is-step-4 #step-2
   .splash__headline
     transform translate3d(0, -100vh, 0)

@@ -11,18 +11,15 @@ jQuery(function ($) {
   scroller($);
   about($);
 
-  const $toggle = $('#toggle'),
-        $nav = $('nav'),
+  const $nav = $('#menu'),
         $page = $('.wrapper'),
         $about = $('#about'),
-        $general = $('#general');
+        $general = $('#general'),
+        $hamburger = $('#hamburger'),
+        $fixed = $('.fixed');
 
-  $toggle.on('click', function() {
+  $hamburger.on('click', function() {
     $nav.toggleClass('is-open');
-    $page.toggleClass('nav-open');
-  });
-  $('#hamburger').on('click', function() {
-    $('#menu').toggleClass('is-open');
     $('#hamburger').toggleClass('is-open');
     $('#hamburgfoot').toggleClass('is-open');
     $about.toggleClass('nav-open');

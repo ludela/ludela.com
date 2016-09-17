@@ -25,8 +25,8 @@ export default function ($) {
 
   var currentStep = 1;
   var totalSteps;
-
   var currentStory = 1;
+
 
   if ($splash.length) {
     totalSteps = $('.splash__content').length;
@@ -38,17 +38,16 @@ export default function ($) {
       index = Math.max(1, Math.min(totalSteps, index));
       console.log('[setpanel] setting step to ', index);
       const $panel = $(`.splash__content:eq(${index - 1})`);
-      // if ( ! $panel || $panel.length !> 0) return;
-      // console.log($panel.offset().top);
       $body.animate({ scrollTop: $panel.offset().top }, 500);
       $splash
         .removeClass('is-step-' + currentStep)
         .addClass('is-step-' + (currentStep = index));
+      $('.active-dot').removeClass('active-dot');
+      $('.dot-' + currentStep).addClass('active-dot');
     }
   });
 
   $document.on('setfooter', function () {
-    console.log('called');
     $about.addClass('is-footer');
     window.location.hash = 'Join-Us'
   });
@@ -58,14 +57,12 @@ export default function ($) {
     $about
       .removeClass('is-step-' + currentStep)
       .addClass('is-step-' + (currentStep = index));
-    console.log('stepp is'+ index);
 
     $('.active-dot').removeClass('active-dot')
     $('.dot-'+currentStep).addClass('active-dot');
 
     var Hash = '#'+steps[index -1];
     if (window.location.hash !== Hash) {
-      console.log('nope ', window.location.hash);
       window.location.hash = Hash;
     }
   });
@@ -90,11 +87,7 @@ export default function ($) {
 
     var Hash = '#'+steps[story + 2];
     if (window.location.hash !== Hash) {
-      console.log('nope ', window.location.hash);
       window.location.hash = Hash;
     }
-
-
   });
-
 }
