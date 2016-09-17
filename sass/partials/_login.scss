@@ -1,0 +1,118 @@
+.login {
+  background: url("../images/landing-bg.jpg") center / cover no-repeat;
+
+  .page-header {
+    background: none;
+  }
+
+  .page-title {
+    font-size: 45px;
+    margin: 30px 0 40px;
+  }
+
+  .login-form {
+    .title {
+      margin-bottom: 22px;
+    }
+  }
+
+  .register-form {
+      .subtitle {
+          margin-bottom: 22px;
+      }
+  }
+
+  .login-form, .register-form {
+    ul {
+      padding: 0;
+      margin: 0 0 20px;
+      list-style: none;
+      li {
+        margin-bottom: 15px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      input {
+        width: 100%;
+      }
+    }
+
+    .login-options {
+      width: 100%;
+      display: block;
+      margin-top: -8px;
+      font-size: .8em;
+
+      .remember-me {
+        display: block;
+        color: #f2ebd3;
+        float: left;
+
+        input {
+          width: 13px;
+          height: 13px;
+          padding: 0;
+          margin-right: 5px;
+          top: -3px;
+          vertical-align: bottom;
+          position: relative;
+        }
+      }
+
+      .reset-link {
+        float: right;
+      }
+    }
+
+    .login-submit {
+      text-align: center;
+      input {
+        margin-top: 30px;
+        cursor: pointer;
+        width: 120px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+
+  .login {
+
+    .page-header {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .page-title {
+      font-size: 86px;
+      margin: 30px 0 60px;
+    }
+
+    .header {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+
+    .hero-image.candle {
+      margin-top: -150px;
+      text-indent: -192px;
+      margin-right: -65px;
+    }
+
+    .login-form {
+      width: 100%;
+      max-width: 350px;
+    }
+
+    .register-form {
+      width: 100%;
+      max-width: 350px;
+    }
+  }
+}
