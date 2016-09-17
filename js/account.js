@@ -25,12 +25,12 @@ $(function() {
   }
 
   var setupReferral = function(url) {
-    $('.ref-text').html(url)
-    url = encodeURIComponent(url)
-    $('#fbLink').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + uri)
+    $('.ref-text').html(url);
+    url = encodeURIComponent(url);
+    $('#fbLink').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + url);
     var message = encodeURIComponent("Excited for the @JoinLudela launch! The world's first smartphone-controlled, real-flame candle is coming!");
-    $('#twLink').attr('href', 'https://twitter.com/intent/tweet?text=' + message + '&amp;url=' + url)
-    setupClipboard()
+    $('#twLink').attr('href', 'https://twitter.com/intent/tweet?text=' + message + '&amp;url=' + url);
+    setupClipboard();
   }
 
   if (!window.client.client.customerToken) {
