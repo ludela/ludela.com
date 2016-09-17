@@ -259,7 +259,9 @@ img {
       letter-spacing: 0.8px;
       line-height: 24px;
       position: relative;
+    }
 
+    .progress-hover {
       &:hover {
         color: #dc9920;
         cursor: default;
