@@ -13,11 +13,24 @@
 
   .subscribe-form {
 
-    form {
+    .subscribe-row {
       display: flex;
       flex-direction: column;
-      margin-bottom: 36px;
+      margin-bottom: 0px;
       position: relative;
+    }
+
+    .error {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        float: right;
+    }
+
+    user-email {
+        .error {
+            float: left;
+        }
     }
 
     input, user-email {
@@ -74,7 +87,6 @@
     }
 
     .error {
-      position: absolute;
       color: white;
       top: 96px;
     }
@@ -115,9 +127,6 @@ register {
       width: 65%;
     }
   }
-}
-
-@media (min-width: 992px) {
 
   .intro-landing {
 
@@ -128,17 +137,16 @@ register {
 
     .subscribe-form {
 
-      form {
+      .subscribe-row {
         flex-flow: row nowrap;
 
         user-email {
           width: 100%;
           max-width: 350px;
         }
-      }
-
-      .form-submit {
-        flex-grow: 1;
+        .form-submit {
+          flex-grow: 1;
+        }
       }
 
       .error {
