@@ -22,7 +22,7 @@
   .splash__headline
     position fixed
     opacity 1
-    transform translate3d(0, 20vh, 0)
+    transform translate3d(0, -380vh, 0)
 
   .small-text
     opacity 1
@@ -62,6 +62,8 @@
         margin-left (120/1200) * 100%
 
   &.is-step-5 #step-5
+    .splash__headline
+      transform translate3d(0, 20vh, 0)
     .small-text
       transform translate3d(0,450%,0)
       bottom 40%

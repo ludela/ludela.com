@@ -24,7 +24,7 @@
   .splash__headline
     position fixed
     opacity 1
-    transform translate3d(0, 20vh, 0)
+    transform translate3d(0, -280vh, 0)
 
   .small-text
     opacity 1
@@ -52,7 +52,11 @@
     transform translate3d(0, 100vh, 0)
 
 
+@media all and (min-width 800px)
 
+  &.is-step-4 #step-4
+    .splash__headline
+      transform translate3d(0, 20vh, 0)
 
 
 
