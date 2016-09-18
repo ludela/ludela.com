@@ -1,5 +1,5 @@
 .container
-  width 94%
+  width 100%
   max-width 1200px
   margin 0 auto
 
@@ -8,6 +8,16 @@
   position fixed
   pos-fill()
   margin-bottom 3%
-  z-index -10
+  z-index 500
+
+  &__variants
+    .swatch
+      z-index 1000
 
   @require '*'
+
+@media all and (min-width 800px)
+
+  .container
+    width 94%
+

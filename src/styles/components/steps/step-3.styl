@@ -4,7 +4,6 @@
 
 &.is-step-3
   background rgba(240,189,60,1)
-  // transition background 50ms ease
 
   &:before
     opacity 0
@@ -36,7 +35,7 @@
     transform translate3d(0, -100vh, 0)
 
 
-@media all and (min-height 650px)
+@media all and (min-height 650px and min-width 800px)
 
   #step-3
 
@@ -62,7 +61,7 @@
   &.is-step-3 #step-3
 
     .small-text
-      transform translate3d(0,450%,0)
+      transform translate3d(0,400%,0)
 
   &.is-step-2 #step-3,
   &.is-step-3 #step-3,

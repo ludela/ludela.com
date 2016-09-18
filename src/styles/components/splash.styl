@@ -23,7 +23,7 @@
     transition opacity 1s ease
 
   &__headline
-    position absolute
+    position fixed
     opacity 0
     text-align center
     right 0
@@ -102,6 +102,7 @@
   &__icon
     font-size 30px
     position absolute
+    top 0
     // float left
     // top -12px
     // right -40px
@@ -152,9 +153,13 @@ form
 
 
 @media all and (min-width 800px)
+  .mobile-padding
+    display none
+
   .splash
 
     &__headline
+      position absolute
       h1, .h1
         font-size 85px
 
@@ -180,7 +185,7 @@ form
       left 50%
       bottom 45%
       width 15em
-      transform translate3d(0, 500%, 0)
+      transform translate3d(0, 450%, 0)
 
       &__title
         padding-left 0
