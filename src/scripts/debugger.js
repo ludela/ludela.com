@@ -12,7 +12,9 @@ export default function ($) {
 
   $dots.on('click', function () {
     const panelIndex = $(this).data('goto');
-    $(document).trigger('setabout', panelIndex);
+    if($('#about').length){
+      $(document).trigger('setabout', panelIndex);
+    }
   });
 
 }
