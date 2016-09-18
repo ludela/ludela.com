@@ -35,12 +35,14 @@
 
     .link-list, .copyright
       position absolute
-      bottom 7%
+      width 100%
+      bottom 12%
+      font-size 8px
 
     .copyright
       left 0
       right 0
-      bottom 5%
+      bottom 9%
 
   .img
     position absolute
@@ -66,6 +68,8 @@
 
   .splash__headline
     opacity 1
+    .subhead
+      opacity 0
 
 &.is-step-7
   background rgba(240,189,60,1)
@@ -80,7 +84,7 @@
 
 
 @media all and (min-width 800px)
-  #step-7
+  &.is-step-7 #step-7
     .splash__component-container
       transform translate(0, 10%)
 
@@ -88,6 +92,7 @@
       width 55%
 
       .link-list, .copyright
+        font-size 12px
         position relative
 
     .signup-form
@@ -101,5 +106,8 @@
     .splash__headline
       position relative
       top 0
+
+      .subhead
+        opacity 1
 
 
