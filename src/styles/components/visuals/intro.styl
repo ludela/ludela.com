@@ -103,6 +103,7 @@ $phone_height = 390
   / .splash.is-step-5 &,
   / .splash.is-step-6 &
     opacity 0
+    z-index 0
     // transition-delay 500ms
 
   //   transform translate3d(0, -100vh, 0)
@@ -605,6 +606,10 @@ $phone_height = 390
   &__wax-with-flame
     left 0
     width (($candle_width) / 1200) * 100%
+
+    / .splash.is-step-6 &
+      z-index 0
+
 
   &__wick
     width 2%
