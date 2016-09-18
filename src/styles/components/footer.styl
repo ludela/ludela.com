@@ -1,17 +1,18 @@
+&.nav-open.is-footer #footer .footer__hold
+  transform translate3d(410px, 0, 0)
+  transition all 350ms ease-out
+
+  .header-bar
+    left 0
 
 #footer
   display block
-  background-image url(/images/join-us.png)
-  background-size 100% auto
-  background-repeat no-repeat
-  background-position center
   opacity 1
   position fixed
   height 100vh
   width 100vw
-  top 0
+  top 100vh
   left 0
-  transform translate3d(0, 100vh, 0)
   transition top 1s ease
   text-align left
   z-index 102
@@ -19,7 +20,21 @@
   .header-bar
     padding-top 40px
     opacity 0
-    transition opacity 350ms ease
+    transition all 350ms ease
+
+  .footer__hold
+    display block
+    background-image url(/images/join-us.png)
+    background-size 100% auto
+    background-repeat no-repeat
+    background-position center
+    transform translate3d(0, 0, 0)
+    transition all 350ms ease-out
+    position absolute
+    top 0
+    left 0
+    width 100vw
+    height 100vh
 
   .footer__wrap
     position absolute
@@ -128,14 +143,13 @@
     transition-delay 150ms
 
 .is-footer #footer
-  transform translate3d(0, 0, 0)
+  top 0
   transition top 1s ease
-  transition left 350ms ease-out
 
   .header-bar
     opacity 1
     transition opacity 500ms ease
-    left 0
+    transition-delay 1s
 
   .footer__candle
     transform translate3d(0, 0, 0)
@@ -163,22 +177,19 @@
     transform translate3d(0, 0, 0)
     transition all 1s ease
 
-&.nav-open
-  #footer
-    left 410px
-    transition left 350ms ease-out
-
-    .header-bar
-      left 0
-
 #general #footer .header-bar
   background none
 
+// &.is-footer #footer
+//   left 0
+//   transition: left 350ms ease-out;
+
 @media screen and (max-width 980px)
+  &.nav-open.is-footer #footer .footer__hold
+    transform translate3d(0, 0, 0)
 
   #footer
     text-align center
-    left 0
 
     br
       display none
