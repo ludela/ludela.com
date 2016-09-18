@@ -6,8 +6,7 @@ export default function ($) {
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
   $('.video').on('click', function () {
-    $('#video-modal').addClass('is-open');
-    $('#hamburger').addClass('is-open');
+    $('#video-modal, #hamburger, #hamburger-foot').addClass('is-open');
 
     var player;
     function onYouTubeIframeAPIReady() {
@@ -38,8 +37,7 @@ export default function ($) {
 
     $('#video-modal').on('click', function (e) {
       player.stopVideo();
-      $('#video-modal').removeClass('is-open');
-      $('#hamburger').removeClass('is-open');
+      $('#video-modal, #hamburger, #hamburger-foot').removeClass('is-open');
     })
   });
 }
