@@ -28,6 +28,7 @@ jQuery(function ($) {
     $('#hamburgfoot').toggleClass('is-open');
     $about.toggleClass('nav-open');
     $general.toggleClass('nav-open');
+    $fixed.toggleClass('nav-open');
   });
   $('#hamburgfoot').on('click', function() {
     $('#menu').toggleClass('is-open');
