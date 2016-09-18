@@ -146,7 +146,7 @@ $phone_height = 390
   background-repeat no-repeat
   background-position 50%
   width 55%
-  height 44%
+  height 47%
   transition transform 1500ms ease, opacity 1500ms ease, left 550ms ease
   opacity 0
   transform translate3d(0, -15%, 0)
@@ -214,6 +214,7 @@ $phone_height = 390
   / .splash.is-step-6 &
     left 12.5%
     opacity 0
+    z-index 0
     transition-property transform, opacity, left
     transition-delay 300ms, 3s, 3500ms
 
@@ -270,7 +271,7 @@ $phone_height = 390
   background-repeat no-repeat
   background-position 50%
   width 55%
-  height 44%
+  height 47%
   opacity 0
   transform translate3d(0, -15%, 0)
   transition transform 500ms ease, left 550ms ease, opacity 1500ms ease
@@ -287,6 +288,7 @@ $phone_height = 390
     transition-delay 700ms, 0ms
 
   / .splash.is-step-6 &
+    z-index -50
     left -50%
     opacity 1
     transition-property transform, left
@@ -320,17 +322,10 @@ $phone_height = 390
 
   / .splash.is-step-5 &
     opacity 1
-    // width 25%
-    // transition transform 1500ms ease, left 550ms ease
-    // transition-property transform, left
-    // transition-delay 700ms, 0ms
 
   / .splash.is-step-6 &
+    z-index 0
     opacity 0
-    // left -50%
-    // opacity 1
-    // transition-property transform, left
-    // transition-delay 500ms, 3500ms
 
 &__wick
   position absolute
@@ -367,8 +362,6 @@ $phone_height = 390
     opacity 0
     transition-property transform, left
     transition-delay 500ms, 3500ms
-  //   left 15%
-  //   z-index 150
 
 &__wax-flame
   position absolute
@@ -397,10 +390,6 @@ $phone_height = 390
 
   / .splash.is-step-6 &
     opacity 0
-  //   left 15%
-  //   z-index 150
-  //   transition-property transform, left
-  //   transition-delay 500ms, 3500ms
 
 
 &__shell
@@ -607,8 +596,7 @@ $phone_height = 390
     left 0
     width (($candle_width) / 1200) * 100%
 
-    / .splash.is-step-6 &
-      z-index 0
+
 
 
   &__wick
