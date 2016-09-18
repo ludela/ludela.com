@@ -1,431 +1,543 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>LuDela</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" href="/site.css">
+    <script src="https://use.typekit.net/scc3jrx.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
   <body>
     <div id='dots'>
-      <div class='dot-1 active-dot' data-goto="1"></div>
-      <div class='dot-2' data-goto="2"></div>
-      <div class='dot-3' data-goto="3"></div>
-      <div class='dot-4' data-goto="4"></div>
-      <div class='dot-5' data-goto="5"></div>
+      <div class='dot dot-1 active-dot' data-goto="1">
+        <div class="tooltiptext">
+          <span>A Seed Was Planted</span>
+        </div>
+      </div>
+      <div class='dot dot-2' data-goto="2">
+        <div class="tooltiptext">
+          <span>Better Light</span>
+        </div>
+      </div>
+      <div class='dot dot-3' data-goto="3">
+        <div class="tooltiptext">
+          <span>The Team</span>
+        </div>
+      </div>
+      <div class='dot dot-4' data-goto="4">
+        <div class="tooltiptext">
+          <span>Our Story</span>
+        </div>
+      </div>
     </div>
     <div class='scroll-container'>
       <div id='menu' class='menu'>
-
+        <div class="menu__close">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <div class="menu__logo">
-          <img src='/images/logo.png'/>
-        </div>
-        <a class='menu__link'>
-          about us
-        </a>
-        <a class='menu__link'>
-          faq
-        </a>
-        <a class='menu__link'>
-          contact
-        </a>
-        <a class="menu__social">
-          <img src='/images/Facebook.png'/>
-        </a>
-        <a class="menu__social">
-          <img src='/images/Twitter.png'/>
-        </a>
-        <a class="menu__social">
-          <img src='/images/Pinterest.png'/>
-        </a>
-
-      </div>
-      <div class="header-bar fixed">
-        <div id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="video">
-          see the ludela
-            <img src='/images/video.png'/>
-          <div class='video'> </div>
-        </div>
-        <div class="logo">
-          <a href="/">
+          <a href='/'>
             <img src='/images/logo.png'/>
           </a>
         </div>
+        <a class='menu__link' href='/about'>
+          about us
+        </a>
+        <a class='menu__link' href='/faq'>
+          faq
+        </a>
+        <a class='menu__link' href='/legal'>
+          legal
+        </a>
+        <a class='menu__link' href='/careers'>
+          careers
+        </a>
+        <a class='menu__link' href='/contact'>
+          contact
+        </a>
+        <a class='menu__social'>
+          <img src='/images/Facebook.png'/>
+        </a>
+        <a class='menu__social'>
+          <img src='/images/Twitter.png'/>
+        </a>
+        <a class='menu__social'>
+          <img src='/images/Pinterest.png'/>
+        </a>
       </div>
       <div id='about' class='about is-step-1'>
-        <div class='about__content' id="step-1">
-          <div class='africa'>
-            <img src='/images/africa.png'/>
+        <div class="header-bar">
+          <div id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-          <h1 class='header'>
-            A Seed Was Planted
-          </h1>
-          <h2 class='sub-header'>
-            through the history of ludela
-          </h2>
-          <div class='date'>
-            <h2>
-              2014
+          <div class="video">
+            <span>see the ludela</span>
+              <img src='/images/video.png'/>
+            <div class='video'> </div>
+          </div>
+          <div class="logo">
+            <a href='/'>
+              <img src='/images/logo.png'/>
+            </a>
+          </div>
+        </div>
+        <div class='footer-bar'>
+          <span class='footer-text'>
+            Early birds recieve 20% off + Free Candle refills
+          </span>
+          <form>
+            <input type='text' placeholder=' ENTER YOUR EMAIL'/>
+            <input type='submit'/>
+          </form>
+        </div>
+        <div id='video-modal'>
+          <div class='modal-close'>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div id="player"></div>
+        </div>
+        <div id="step-1">
+          <div  class='about__content'>
+            <div class='africa'>
+              <img src='/images/africa.png'/>
+            </div>
+            <h1 class='header'>
+              A Seed Was Planted
+            </h1>
+            <h2 class='sub-header'>
+              through the history of ludela
             </h2>
+            <div class='date'>
+              <h2>
+                2014
+              </h2>
+            </div>
+            <div class='copy'>
+              <h2 class='copy-header'>
+                It started with a trip and ended
+                </br>
+                with a journey.
+              </h2>
+              <p>
+                Founded in 2014, LuDela is the world's first smart candle company
+                with a warm mission to bring better light and better lives around
+                the world. LuDela is committed to delivering the safest, most
+                convenient, feature-rich candlelight offerings in the world to
+                enable our customers to reconnect with nature and celebrate the most
+                adored ambient light source on the planet - fire.
+                <span class='line'></span>
+              </p>
+            </div>
           </div>
-          <div class='copy'>
-            <h2 class='copy-header'>
-              It started with a trip and ended
-              </br>
-              with a journey.
+        </div>
+        <div id="step-2">
+          <div  class='about__content'>
+            <h1 class='header'>
+              Better Light
+            </h1>
+            <h2 class='sub-header'>
+              better lives
             </h2>
-            <p>
-              Founded in 2014, LuDela is the world's first smart candle company
-              with a warm mission to bring better light and better lives around
-              the world. LuDela is committed to delivering the safest, most
-              convenient, feature-rich candlelight offerings in the world to
-              enable our customers to reconnect with nature and celebrate the most
-              adored ambient light source on the planet - fire.
-              <span class='line'></span>
-            </p>
-          </div>
-
-        </div>
-        <div class='about__content' id="step-2">
-          <h1 class='header'>
-            Better Light
-          </h1>
-          <h2 class='sub-header'>
-            better lives
-          </h2>
-          <div class='copy'>
-            <p>
-              We are equally committed to doing our part in helping families
-              living in extreme poverty by helping build core health and
-              educational foundations. With our charity partner Books for Africa,
-              LuDela delivers rechargeable solar lights and books to communities
-              in need for every LuDela smart candle and refill candle package sold.
-            <span class='break'> </span>
-              Our NoKero solar lights are twice as bright as toxic kerosene lamps
-              and stop the poverty cycle of buying expensive kerosene fuel. Books
-              are the foundation of education in any community and a proven vehicle
-              to inspire and educate future leaders to help bring communities out of
-              extreme poverty.
-            </p>
+            <div class='copy'>
+              <p>
+                We are equally committed to doing our part in helping families
+                living in extreme poverty by helping build core health and
+                educational foundations. With our charity partner Books for Africa,
+                LuDela delivers rechargeable solar lights and books to communities
+                in need for every LuDela smart candle and refill candle package sold.
+              <span class='break'> </span>
+                Our NoKero solar lights are twice as bright as toxic kerosene lamps
+                and stop the poverty cycle of buying expensive kerosene fuel. Books
+                are the foundation of education in any community and a proven vehicle
+                to inspire and educate future leaders to help bring communities out of
+                extreme poverty.
+              </p>
+            </div>
           </div>
         </div>
-        <div class='about__content' id="step-3">
-          <h1 class='header'>
-            The Team
-          </h1>
-          <div class='team-member team-1'>
-            <span class='name'>JAMIE BIANCHINI</span>
-            <span class='title'>CO-FOUNDER & CEO</span>
-            <p class='description'>
-              A proven social entrepreneur with a passion for nature,
-              health and humanity.
-            </p>
+        <div id="step-3">
+          <div class='about__content'>
+            <h1 class='header'>
+              The Team
+            </h1>
+            <div class='team-member team-1'>
+              <span class='name'>JAMIE BIANCHINI</span>
+              <span class='title'>CO-FOUNDER & CEO</span>
+              <p class='description'>
+                A proven social entrepreneur with a passion for nature,
+                health and humanity.
+              </p>
+            </div>
+            <div class='team-member team-2'>
+              <span class='name'>ERIC BAUSWELL</span>
+              <span class='title'>CO-FOUNDER & VP OF</span>
+              <span class='title'>ENGINEERING</span>
+              <p class='description'>
+                25-year veteran who has led over 400 products from concept to
+                production.
+              </p>
+            </div>
+            <div class='team-member team-3'>
+              <span class='name'>surface ink</span>
+              <span class='title'>ENGINEERING & PRODUCT</span>
+              <span class='title'>DEVELOPMENT PARTNER</span>
+              <p class='description'>
+                Product design; electrical, mechanical and industrial engineering,
+                firmware and software.
+              </p>
+            </div>
+            <div class='team-member team-4'>
+              <span class='name'>RACHEL BRADY</span>
+              <span class='title'>BOOKS FOR AFRICA</span>
+              <span class='title'>PROGRAM COORDINATOR</span>
+              <p class='description'>
+                Book & Light Drop Coordinator for Africa.
+              </p>
+            </div>
+            <div class='team-member team-5'>
+              <span class='name'>BILL O’DONNELL</span>
+              <span class='title'>LEAD INVESTOR & ADVISOR</span>
+              <p class='description'>
+                Bill and the Mendota Team have over 100 years of experience in
+                flame ambiance.
+              </p>
+            </div>
+            <div class='team-member team-6'>
+              <span class='name'>ZACH KELLING</span>
+              <span class='title'>IT LEAD</span>
+              <p class='description'>
+                A proven social entrepreneur with a passion for nature,
+                health and humanity.
+              </p>
+            </div>
           </div>
-          <div class='team-member team-2'>
-            <span class='name'>ERIC BAUSWELL</span>
-            <span class='title'>CO-FOUNDER & VP OF</span>
-            <span class='title'>ENGINEERING</span>
-            <p class='description'>
-              25-year veteran who has led over 400 products from concept to
-              production.
-            </p>
-          </div>
-          <div class='team-member team-3'>
-            <span class='name'>surface ink</span>
-            <span class='title'>ENGINEERING & PRODUCT</span>
-            <span class='title'>DEVELOPMENT PARTNER</span>
-            <p class='description'>
-              Product design; electrical, mechanical and industrial engineering,
-              firmware and software.
-            </p>
-          </div>
-          <div class='team-member team-4'>
-            <span class='name'>RACHEL BRADY</span>
-            <span class='title'>BOOKS FOR AFRICA</span>
-            <span class='title'>PROGRAM COORDINATOR</span>
-            <p class='description'>
-              Book & Light Drop Coordinator for Africa.
-            </p>
-          </div>
-          <div class='team-member team-5'>
-            <span class='name'>BILL O’DONNELL</span>
-            <span class='title'>LEAD INVESTOR & ADVISOR</span>
-            <p class='description'>
-              Bill and the Mendota Team have over 100 years of experience in
-              flame ambiance.
-            </p>
-          </div>
-          <div class='team-member team-6'>
-            <span class='name'>ZACH KELLING</span>
-            <span class='title'>IT LEAD</span>
-            <p class='description'>
-              A proven social entrepreneur with a passion for nature,
-              health and humanity.
-            </p>
-          </div>
-
         </div>
-        <div class='about__content' id="step-4">
+        <div id="step-4">
           <div class='our-story'>
-            <div class='copy-right'>
-              <div class=story-1>
-                <h1 class='header'>
-                  Our Story
-                </h1>
-                <div class='story-img'>
-                <img src='/images/story-1.png'/>
-                  <h3>
-                    2007
-                  </br>
-                    sub sahara africa
-                  </h3>
-                </div>
-                <div class='story-text'>
-                  <h2 class='sub-header'>
-                    Our story begins in 2007 with a 81-country
-                  <br/>
-                    global expedition called peace pedalers.
-                  </h2>
-                  <p>
-                    LuDela co-founder Jamie Bianchini was riding a tandem bicycle
-                    through the African continent as part of an 81-country global
-                    expedition for peace called Peace Pedalers. Jamie piloted the
-                    tandem bike’s front seat while leaving the rear seat open to
-                    invite total strangers to join the journey as “guest riders.”
-                    <span class='line'></span>
-                  </p>
-                </div>
+            <div class=story-1>
+              <h1 class='header'>
+                Our Story
+              </h1>
+              <div class='story-img'>
+              <img src='/images/story-1.png'/>
+                <h3>
+                  2007
+                </br>
+                  sub sahara africa
+                </h3>
               </div>
-              <div class=story-2>
-                <div class='story-img'>
-                  <h3>may 12, 2007</h3>
-                  <img src='/images/story-2.png'>
-                </div>
-                <div class='story-text'>
-                  <h2 class='sub-header'>
-                    He could not afford school fees. He had
-                  <br/>
-                    big dreams and ambitions, but no means to
-                  <br/>
-                    attain them without education.
-                  </h2>
-                  <p>
-                    On May 12, 2007 a 17-year old Kenyan man named Joseph approached
-                    Jamie at his lunch stop outside of Njoro, Kenya. Joseph asked if
-                    he could accompany Jamie to his final destination of the day of
-                    Elburgon. While tackling the steep hills to Elburgon, Joseph
-                    shared a common story of many African youth—he was forced to
-                    drop out of high school to help support his family. He could not
-                    afford school fees. He had big dreams and ambitions, but no
-                    means to attain them without education.
-                    <span class='line'></span>
-                  </p>
-                </div>
+              <div class='story-text'>
+                <span class='line-top'></span>
+                <h2 class='sub-header'>
+                  Our story begins in 2007 with a 81-country
+                <br/>
+                  global expedition called peace pedalers.
+                </h2>
+                <p>
+                  LuDela co-founder Jamie Bianchini was riding a tandem bicycle
+                  through the African continent as part of an 81-country global
+                  expedition for peace called Peace Pedalers. Jamie piloted the
+                  tandem bike’s front seat while leaving the rear seat open to
+                  invite total strangers to join the journey as “guest riders.”
+                  <span class='line'></span>
+                </p>
               </div>
-              <div class=story-3>
-                <div class='story-img'>
-                  <h3>may 12, 2007</h3>
-                  <img src='/images/story-3.png'>
-                </div>
-                <div class='story-text'>
-                  <h2 class='sub-header'>
-                    Jospeh was nearly in tears, shaking with
-                  <br/>
-                    joy as he shared the news with his family.
-                  </h2>
-                  <p>
-                    Later that day, Jamie and his mother Carol offered to sponsor
-                    Joseph’s education to enable him to finish high school. Joseph
-                    was nearly in tears, shaking with joy as he shared the news
-                    with his family. It was that day that Jamie realized his
-                    calling: to help educate those who really wanted to learn,
-                    grow, and contribute in the world. He didn’t know exactly how
-                    he would realize it, but on May 12th, 2007 a seed was planted
-                    to do something great in education one day.
-                    <span class='line'></span>
-                  </p>
-                </div>
+            </div>
+            <div class=story-2>
+              <div class='story-img'>
+                <h3>may 12, 2007</h3>
+                <img src='/images/story-2.png'>
               </div>
-              <div class=story-4>
-                <div class='story-img'>
-                  <h3>
-                    september
-                  </br>
-                    2007
-                  </h3>
-                  <img src='/images/story-4.png'>
-                </div>
-                <div class='story-text'>
-                  <h2 class='sub-header'>
-                    In the middle of the night Jamie woke up to
-                  <br/>
-                    find his room filled with smoke and a
-                  <br/>
-                    candle fire burning next to his bed.
-                  </h2>
-                  <p>
-                    Later that year in September 2007 Jamie was riding in Western
-                    Africa in the country of Burkina Faso. At the end of a long day
-                    he checked into a rustic guesthouse that did not have electricity.
-                    The guesthouse owner gave Jamie a candle to light his room. In
-                    the middle of the night, Jamie woke up to find his room filled
-                    with smoke and a candle fire burning next to his bed. Thankfully,
-                    he was able to put the fire out with only minor damage to a
-                    table and some holes in his boxer shorts. But the frightening
-                    candle experience that night led to the invention of the LuDela
-                    smart candle design the next day while out pedaling through the
-                    African countryside. He didn’t know exactly how or when he would
-                    bring the innovation to the world, but a seed was planted to use
-                    the idea to one day change the world.
-                    <span class='line'></span>
-                  </p>
-                </div>
+              <div class='story-text'>
+                <span class='line-top'></span>
+                <h2 class='sub-header'>
+                  He could not afford school fees. He had
+                <br/>
+                  big dreams and ambitions, but no means to
+                <br/>
+                  attain them without education.
+                </h2>
+                <p>
+                  On May 12, 2007 a 17-year old Kenyan man named Joseph approached
+                  Jamie at his lunch stop outside of Njoro, Kenya. Joseph asked if
+                  he could accompany Jamie to his final destination of the day of
+                  Elburgon. While tackling the steep hills to Elburgon, Joseph
+                  shared a common story of many African youth—he was forced to
+                  drop out of high school to help support his family. He could not
+                  afford school fees. He had big dreams and ambitions, but no
+                  means to attain them without education.
+                  <span class='line'></span>
+                </p>
               </div>
-              <div class=story-5>
-                <div class='story-img'>
-                  <h3>
-                    march, 2011
-                  </h3>
-                  <img src='/images/story-5.png'>
-                </div>
-                <div class='story-text'>
-                  <h2 class='sub-header'>
-                    All evening long kids and parents coughed
-                  <br/>
-                    through the night.
-                  </h2>
-                  <p>
-                    Fast forward four years and 57 countries of Peace Pedaling.
-                    Jamie finished the world tour in November 2010 and he and his
-                    mother Carol were soon invited back to Kenya in 2011 to celebrate
-                    Joseph becoming the first in his family of 11 to graduate high
-                    school. Carol and Jamie were invited to stay the night with
-                    Joseph and his family. In the evening, they burned a massive
-                    Kerosene light, filling the small house with toxic fumes. All
-                    evening long, kids and parents coughed through the night.
-                    <span class='line'></span>
-                  </p>
-                </div>
+            </div>
+            <div class=story-3>
+              <div class='story-img'>
+                <h3>may 12, 2007</h3>
+                <img src='/images/story-3.png'>
               </div>
-              <div class=story-6>
-                <div class='story-img'>
-                  <h3>2011</h3>
-                  <img src='/images/story-6.png'>
-                </div>
-                <div class='story-text'>
-                  <h2 class='sub-header'>
-                    The first-hand experience of the negative
-                  <br/>
-                    health and economical effects of
-                  <br/>
-                    kerosene planted another seed.
-                  </h2>
-                  <p>
-                    The next day, Jamie noticed the thick layers of dark black soot
-                    built up on the walls of the house and even spewing out of the
-                    front door. The first-hand experience of the negative health and
-                    economical effects of kerosene planted another seed in Jamie to
-                    find a way to make a difference in the lives of the millions of
-                    people who are forced to use this destructive light source.
-                    <span class='line'></span>
-                  </p>
-                </div>
+              <div class='story-text'>
+                <span class='line-top'></span>
+                <h2 class='sub-header'>
+                  Jospeh was nearly in tears, shaking with
+                <br/>
+                  joy as he shared the news with his family.
+                </h2>
+                <p>
+                  Later that day, Jamie and his mother Carol offered to sponsor
+                  Joseph’s education to enable him to finish high school. Joseph
+                  was nearly in tears, shaking with joy as he shared the news
+                  with his family. It was that day that Jamie realized his
+                  calling: to help educate those who really wanted to learn,
+                  grow, and contribute in the world. He didn’t know exactly how
+                  he would realize it, but on May 12th, 2007 a seed was planted
+                  to do something great in education one day.
+                  <span class='line'></span>
+                </p>
               </div>
-              <div class=story-7>
+            </div>
+            <div class=story-4>
+              <div class='story-img'>
+                <h3>
+                  september
+                </br>
+                  2007
+                </h3>
+                <img src='/images/story-4.png'>
+              </div>
+              <div class='story-text'>
+                <span class='line-top'></span>
+                <h2 class='sub-header'>
+                  In the middle of the night Jamie woke up to
+                <br/>
+                  find his room filled with smoke and a
+                <br/>
+                  candle fire burning next to his bed.
+                </h2>
+                <p>
+                  Later that year in September 2007 Jamie was riding in Western
+                  Africa in the country of Burkina Faso. At the end of a long day
+                  he checked into a rustic guesthouse that did not have electricity.
+                  The guesthouse owner gave Jamie a candle to light his room. In
+                  the middle of the night, Jamie woke up to find his room filled
+                  with smoke and a candle fire burning next to his bed. Thankfully,
+                  he was able to put the fire out with only minor damage to a
+                  table and some holes in his boxer shorts. But the frightening
+                  candle experience that night led to the invention of the LuDela
+                  smart candle design the next day while out pedaling through the
+                  African countryside. He didn’t know exactly how or when he would
+                  bring the innovation to the world, but a seed was planted to use
+                  the idea to one day change the world.
+                  <span class='line'></span>
+                </p>
+              </div>
+            </div>
+            <div class=story-5>
+              <div class='story-img'>
+                <h3>
+                  march, 2011
+                </h3>
+                <img src='/images/story-5.png'>
+              </div>
+              <div class='story-text'>
+                <span class='line-top'></span>
+                <h2 class='sub-header'>
+                  All evening long kids and parents coughed
+                <br/>
+                  through the night.
+                </h2>
+                <p>
+                  Fast forward four years and 57 countries of Peace Pedaling.
+                  Jamie finished the world tour in November 2010 and he and his
+                  mother Carol were soon invited back to Kenya in 2011 to celebrate
+                  Joseph becoming the first in his family of 11 to graduate high
+                  school. Carol and Jamie were invited to stay the night with
+                  Joseph and his family. In the evening, they burned a massive
+                  Kerosene light, filling the small house with toxic fumes. All
+                  evening long, kids and parents coughed through the night.
+                  <span class='line'></span>
+                </p>
+              </div>
+            </div>
+            <div class=story-6>
+              <div class='story-img'>
+                <h3>2011</h3>
+                <img src='/images/story-6.png'>
+              </div>
+              <div class='story-text'>
+                <span class='line-top'></span>
+                <h2 class='sub-header'>
+                  The first-hand experience of the negative
+                <br/>
+                  health and economical effects of
+                <br/>
+                  kerosene planted another seed.
+                </h2>
+                <p>
+                  The next day, Jamie noticed the thick layers of dark black soot
+                  built up on the walls of the house and even spewing out of the
+                  front door. The first-hand experience of the negative health and
+                  economical effects of kerosene planted another seed in Jamie to
+                  find a way to make a difference in the lives of the millions of
+                  people who are forced to use this destructive light source.
+                  <span class='line'></span>
+                </p>
+              </div>
+            </div>
+            <div class=story-7>
 
-                <div class='story-img'>
-                  <h3>
-                    spring
-                  </br>
-                    2014
-                  </h3>
-                  <img src='/images/story-7.png'>
-                </div>
-                <div class='story-text'>
-                  <p>
-                    Three years later, after getting married to a former Peace
-                    Pedalers guest rider Cristina and having two beautiful children,
-                    Luca and Candela, those seeds of inspiration from years prior
-                    finally began to blossom. Jamie made his first prototype of the
-                    LuDela smart candle design in spring of 2014 and began searching
-                    for the ideal technical co-founder partner to bring LuDela to
-                    the world.
-                    <span class='line'></span>
-                  </p>
-                </div>
+              <div class='story-img'>
+                <h3>
+                  spring
+                </br>
+                  2014
+                </h3>
+                <img src='/images/story-7.png'>
               </div>
-              <div class=story-8>
-                <div class='story-img'>
-                  <h3>
-                    summer
-                  </br>
-                    2014
-                  </h3>
-                  <img src='/images/story-8.png'>
-                </div>
-                <div class='story-text'>
-                  <p>
-                    This led him to Eric Bauswell, CEO of Surface Ink in San Jose,
-                    California. Jamie shared his vision to use the smart candle
-                    innovation, inspired in Africa, as a vehicle to illuminate
-                    impoverished communities around the world. Eric fell in love
-                    with both the product and the social vision immediately. They
-                    began iterating prototypes with the Surface Ink team in 2015
-                    and the rest is history.
-                    <span class='line'></span>
-                  </p>
-                </div>
+              <div class='story-text'>
+                <span class='line-top'></span>
+                <p>
+                  Three years later, after getting married to a former Peace
+                  Pedalers guest rider Cristina and having two beautiful children,
+                  Luca and Candela, those seeds of inspiration from years prior
+                  finally began to blossom. Jamie made his first prototype of the
+                  LuDela smart candle design in spring of 2014 and began searching
+                  for the ideal technical co-founder partner to bring LuDela to
+                  the world.
+                  <span class='line'></span>
+                </p>
               </div>
-              <div class=story-9>
-                <div class='story-img'>
-                  <h3>
-                    winter
-                  </br>
-                    2017
-                  </h3>
-                  <img src='/images/story-8.png'>
-                </div>
-                <div class='story-text'>
-                  <p>
-                    By winter 2017, LuDela will begin shipping its first units. We
-                    hope you’ll join us in bringing better light to your life and
-                    to lives around the world.
-                  <br/>
-                    We hope you enjoyed our story! We’re just getting started!
-                  <br/>
-                    - Jamie, Cristina, Luca & Candela
-                  <br/>
-                  <br/>
-                    (By the way, Luca = “Bringer of Light” and Candela =
-                    “Measurement of Flame of Candle.” This is the vision of
-                    LuDela—bringing light to those in need from candlelight
-                    enjoyed by LuDela customers.)
-                  </p>
-                </div>
+            </div>
+            <div class=story-8>
+              <div class='story-img'>
+                <h3>
+                  summer
+                </br>
+                  2014
+                </h3>
+                <img src='/images/story-9.jpg'>
+              </div>
+              <div class='story-text'>
+                <span class='line-top'></span>
+                <p>
+                  This led him to Eric Bauswell, CEO of Surface Ink in San Jose,
+                  California. Jamie shared his vision to use the smart candle
+                  innovation, inspired in Africa, as a vehicle to illuminate
+                  impoverished communities around the world. Eric fell in love
+                  with both the product and the social vision immediately. They
+                  began iterating prototypes with the Surface Ink team in 2015
+                  and the rest is history.
+                  <span class='line'></span>
+                </p>
+              </div>
+            </div>
+            <div class=story-9>
+              <div class='story-img'>
+                <h3>
+                  winter
+                </br>
+                  2017
+                </h3>
+                <img src='/images/story-8.png'>
+              </div>
+              <div class='story-text'>
+                <span class='line-top'></span>
+                <p>
+                  By winter 2017, LuDela will begin shipping its first units. We
+                  hope you’ll join us in bringing better light to your life and
+                  to lives around the world.
+                <br/>
+                  We hope you enjoyed our story! We’re just getting started!
+                <br/>
+                  - Jamie, Cristina, Luca & Candela
+                <br/>
+                <br/>
+                  (By the way, Luca = “Bringer of Light” and Candela =
+                  “Measurement of Flame of Candle.” This is the vision of
+                  LuDela—bringing light to those in need from candlelight
+                  enjoyed by LuDela customers.)
+                </p>
               </div>
             </div>
           </div>
         </div>
-        <div class='about__content' id="step-5">
-          <div class='content'>
-            <h1 class='header'>
-              Join Us
-            </h1>
-            <h2 class='sub-header'>
-              Early birds recieve 20% off
-            </br>
-              + Free Candle refills
-            </h2>
-            <form>
-              <input type='text' placeholder='EMAIL'/>
-              <input type='submit'/>
-            </form>
+        <div class= 'footer' id="footer">
+          <div class="header-bar">
+            <div id="hamburgfoot">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="video">
+              <span>see the ludela</span>
+                <img src='/images/video.png'/>
+              <div class='video'> </div>
+            </div>
+            <div class="logo">
+              <a href='/'>
+              <img src='/images/logo.png'/>
+            </a>
+            </div>
           </div>
-          <div class='img'>
-            <img src='/images/join-candle.png'/>
+          <div class='about__content'>
+          <div class='footer__wrap'>
+            <div class='footer__content'>
+              <h1 class='header'>
+                Join Us
+              </h1>
+              <h2 class='sub-header'>
+                Early birds recieve 20% off
+              </br>
+                + Free Candle refills
+              </h2>
+              <form>
+                <input type='text' placeholder='EMAIL'/>
+                <input type='submit'/>
+              </form>
+            </div>
+            <div class='footer__candle'>
+              <img src='/images/Candle-Reflection-Flame.png'/>
+            </div>
+          </div>
+        </div>
+          <div class='footer__links'>
+            <div class='footer__link-wrap'>
+
+              <a class='footer__link' href='/about'>
+                about us
+              </a>
+              <span>|</span>
+              <a class='footer__link' href='/faq'>
+                faq
+              </a>
+              <span>|</span>
+              <a class='footer__link' href='/legal'>
+                legal
+              </a>
+              <span>|</span>
+              <a class='footer__link' href='/careers'>
+                careers
+              </a>
+              <span>|</span>
+              <a class='footer__link' href='/contact'>
+                contact
+              </a>
+              </br>
+              <span class='copyright'>
+                © 2016 LuDela LLC
+              </span>
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,86 @@
+.footer-bar
+  width 100vw
+  position fixed
+  background-color #361f00
+  color #f2be3d
+  left 0
+  bottom 0
+  transition left 350ms ease-out
+  vertical-align middle
+  z-index 5
+
+  .footer-text
+    color #f2be3d
+    text-transform uppercase
+    font-weight bolder
+    font-size 12px
+    vertical-align middle
+    margin 20px
+
+  form
+    display inline-block
+    vertical-align middle
+    margin 20px
+
+
+
+
+  input[type="text"]
+    background-color rgb(241, 234, 208)
+    color #000
+    font-size 8px
+    font-weight bold
+    border none
+    width 190px
+    height 25px
+
+  input[type="submit"]
+    background-color rgb(237, 141, 72)
+    color rgb(241, 234, 208)
+    text-transform uppercase
+    font-size 8px
+    font-weight bold
+    border none
+    margin-left -4px
+    width 100px
+    height 25px
+
+@media screen and (max-width 980px)
+
+  .footer-bar
+    padding 20px 30px 40px
+
+    .footer-text
+      font-size 12px
+      margin 0
+      position absolute
+      left 0
+      bottom 10px
+      text-align center
+      width 100vw
+
+    form
+      margin 0
+      width 100%
+
+    input[type="text"]
+      background-color rgb(241, 234, 208)
+      color #000
+      font-size 10px
+      font-weight bold
+      border none
+      width 66%
+      max-width 334px
+      height 25px
+
+    input[type="submit"]
+      background-color rgb(237, 141, 72)
+      color rgb(241, 234, 208)
+      text-transform uppercase
+      font-size 10px
+      font-weight bold
+      border none
+      margin-left -4px
+      width 33%
+      max-width 167px
+      height 25px

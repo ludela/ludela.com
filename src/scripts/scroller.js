@@ -9,32 +9,49 @@ export default function ($) {
   const $document = $(document);
   const $window = $(window);
   const $panels = $('.splash__content');
+  const $general = $('#general');
+  const $about = $('#about');
   const $dot = $('.dot');
   const scrollThreshold = 30;
 
-  $window.on('scroll', function (ev) {
-    const currentPos = $window.scrollTop();
-    const scrollDiff = currentPos - lastScrollPos;
-    lastScrollPos = currentPos;
-    // console.log('[scroll] diff:' + scrollDiff);
-    if ( ! allowScroll || Math.abs(scrollDiff) <  scrollThreshold) return;
-    disableScrollFor(ev, scrollerDelay);
-    const dir = Math.min(1, Math.max(-1, scrollDiff));
-    console.log(dir);
-    $document.trigger('nextpanel', dir);
-  });
+  if ($general.length) {
+    $window.on('scroll', setFooter);
+  }
 
-  $window.on('load resize', debounce(function () {
-    lastScrollPos = $window.scrollTop();
-  }, 150));
+  function setFooter() {
+    if ($window.scrollTop() + $window.height() > $document.height() - 2) {
+      $general.addClass('is-footer');
+    } else {
+      $('.is-footer').removeClass('is-footer');
+    }
+  }
 
-  $dot.on('click', function (ev, goTo) {
-    goTo = $(this).data('goto');
-    console.log('going to panel: ', goTo);
-    disableScrollFor(ev, scrollerDelay);
-    $document.trigger('setpanel', goTo);
-  });
+  if ($panels.length) {
 
+    $window.on('scroll', function (ev) {
+      const currentPos = $window.scrollTop();
+      const scrollDiff = currentPos - lastScrollPos;
+      lastScrollPos = currentPos;
+      // console.log('[scroll] diff:' + scrollDiff);
+      if ( ! allowScroll || Math.abs(scrollDiff) <  scrollThreshold) return;
+      disableScrollFor(ev, scrollerDelay);
+      const dir = Math.min(1, Math.max(-1, scrollDiff));
+      console.log(dir);
+      $document.trigger('nextpanel', dir);
+    });
+
+    $window.on('load resize', debounce(function () {
+      lastScrollPos = $window.scrollTop();
+    }, 150));
+
+
+    $dot.on('click', function (ev, goTo) {
+      goTo = $(this).data('goto');
+      console.log('going to panel: ', goTo);
+      disableScrollFor(ev, scrollerDelay);
+      $document.trigger('setpanel', goTo);
+    });
+  }
 
   function disableScrollFor(ev, time) {
     console.log('disabling scroll');
@@ -47,5 +64,4 @@ export default function ($) {
       console.log('enabling scroll');
     }, time);
   }
-
 }

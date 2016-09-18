@@ -1,190 +1,235 @@
 &.nav-open
-  left: 410px
-  transition: left 350ms ease-out
+  left 410px
+  transition left 350ms ease-out
 
   {component(header-bar)}
+    left 410px
+    transition left 350ms ease-out
+
+  {component(footer-bar)}
     left: 410px
-    transition: left 350ms ease-out
+    transition left 350ms ease-out
 
 &#about
-  color: rgb(241, 234, 208)
-  width: 100vw
-  position: fixed
-  transition: left 350ms ease-out
-  overflow-y: hidden
-  text-align: center
-  top: 0
-  background: linear-gradient(#ee9347, #f2bc3d)
+  color rgb(241, 234, 208)
+  width 100vw
+  position fixed
+  transition left 350ms ease-out
+  overflow-y hidden
+  text-align center
+  top 0
+  background -webkit-linear-gradient(#ee9347, #f2bc3d)
+  background -o-linear-gradient(#ee9347, #f2bc3d)
+  background -moz-linear-gradient(#ee9347, #f2bc3d)
+  background linear-gradient(#ee9347, #f2bc3d)
 
   .about__content
-    max-width: none
+    max-width 1200px
+    position relative
+    margin 0 auto
 
   h1
-    font-size: 90px
-    font-family: "Freeland"
-    font-weight: normal
-    color: rgb(241, 234, 208)
-    line-height: 1
-    text-align: center
-    margin-top: 45px
-    margin-bottom: 10px
-    text-shadow: 0px 2px 13px rgba(0, 0, 0, 0.3)
-    z-index: 302
+    font-size 90px
+    font-family "Freeland"
+    font-weight normal
+    color rgb(241, 234, 208)
+    line-height 1
+    text-align center
+    margin-top 45px
+    margin-bottom 10px
+    text-shadow 0px 2px 13px rgba(0, 0, 0, 0.3)
+    z-index 302
 
   h2
-    font-size: 20px
-    font-family: "Proxima Nova"
-    color: rgb(241, 234, 208)
-    font-weight: bold
-    text-transform: uppercase
-    line-height: 2.199
-    text-align: center
-    text-shadow: 0px 2px 13px rgba(0, 0, 0, 0.3)
-    z-index: 301
+    font-size 20px
+    font-family "Proxima Nova"
+    color rgb(241, 234, 208)
+    font-weight bold
+    text-transform uppercase
+    line-height 2.199
+    text-align center
+    text-shadow 0px 2px 13px rgba(0, 0, 0, 0.3)
+    z-index 301
 
   #step-1
-    opacity: 1
-    background: none
+    opacity 1
+    background none
+    height 100vh
+    overflow-x scroll
     transform translate3d(0, -100vh, 0)
-    transition: all 1s ease-in
-    transition-delay: 350ms
+    transition all 1s ease-in
 
     .header, .sub-header
       transform translate3d(0, -40px, 0)
-      transition: all 700ms ease-in
+      transition all 700ms ease-in
 
     .date
-      display: inline-block
-      width: 33%
-      position: relative
+      display inline-block
+      width 33%
+      position relative
       transform translate3d(0, 50vh, 0)
-      transition: all 1s ease-in
-      transition-delay: 350ms
+      transition all 1s ease-in
+      transition-delay 350ms
 
       h2
-        font-size: 130px
-        font-family: "Proxima Nova"
-        color: rgba(255,255,255, 0.25)
-        text-shadow: none
-        text-transform: uppercase
-        line-height: 1.271
-        text-align: right
-        font-weight: 100
-        left: -70px
-        top: -182px
-        position: absolute
-        z-index: 298
+        font-size 130px
+        font-family "Proxima Nova"
+        color rgba(255,255,255, 0.25)
+        text-shadow none
+        text-transform uppercase
+        line-height 1.271
+        text-align right
+        font-weight 100
+        left -70px
+        top -182px
+        position absolute
+        z-index 298
 
 
 
     .copy
-      display: inline-block
-      width: 45.83%
-      padding: 60px 10px
+      display inline-block
+      width 45.83%
+      padding 60px 10px
 
       h2
-        font-family: "Proxima Nova"
-        color: rgb(241, 234, 208)
-        font-weight: bold
-        text-transform: uppercase
-        line-height: 1.271
-        text-align: left
-        width: 350px
-        text-shadow: 0px 2px 13px rgba(0, 0, 0, 0.3)
-        z-index: 296
+        font-family "Proxima Nova"
+        color rgb(241, 234, 208)
+        font-weight bold
+        text-transform uppercase
+        line-height 1.271
+        text-align left
+        width 350px
+        text-shadow 0px 2px 13px rgba(0, 0, 0, 0.3)
+        z-index 296
 
 
 
       p
-        font-size: 20px
-        font-family: "Proxima Nova"
-        color: #f1ead0
-        line-height: 1.454
-        font-weight: bold
-        text-align: justify
-        width: 497px
-        z-index: 295
-        margin: 0
+        font-size 20px
+        font-family "Proxima Nova"
+        color #f1ead0
+        line-height 1.454
+        font-weight bold
+        text-align justify
+        width 497px
+        z-index 295
+        margin 0
 
       .line
-        background: linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0))
-        display: block
-        width: 8px
-        position: absolute
-        margin-top: 10px
-        height: 100%
+        background -webkit-linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0))
+        background -o-linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0))
+        background -moz-linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0))
+        background linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0))
+        display block
+        width 8px
+        position absolute
+        margin-top 10px
+        height 300px
 
 
     .africa
       position absolute
-      top: 28%
-      left: -4%
-      width: 65%
-      opacity: 0.75
-      z-index: -1
+      top 28%
+      left -4%
+      width 65%
+      opacity 0.75
+      z-index -1
       transform translate3d(0, 20vh, 0)
-      transition: all 1s ease-in
-      transition-delay: 350ms
+      transition all 1s ease-in
+      transition-delay 350ms
 
   &.is-step-1
     #step-1
       transform translate3d(0, 0, 0)
-      transition: all 1s ease
+      transition all 1s ease
 
       .header, .sub-header
         transform translate3d(0, 0, 0)
-        transition: all 700ms ease
-        transition-delay: 350ms
+        transition all 700ms ease
+        transition-delay 350ms
 
       .africa
         transform translate3d(0, 0, 0)
-        transition: all 1s ease
+        transition all 1s ease
 
       .date
         transform translate3d(0, 0, 0)
-        transition: all 1s ease
+        transition all 1s ease
 
   &.is-step-3, &.is-step-4, &.is-step-5
     #step-1
       transform translate3d(0, -200vh, 0)
 
 
-@media screen and (max-width: 980px)
+@media screen and (max-width 980px)
+  &.nav-open
+    left 0
+
+    {component(header-bar)}
+      left 0
+      z-index 999
+
+    {component(footer-bar)}
+      left: 0
+
+    #footer
+      left: 0
+
   &#about
+
+    .about__content
+      padding 0
+
+    #footer
+      background-size auto 100%
+
+    h1
+      font-size 48px
+      margin-top 85px
+
     h2
-      font-size 30px
+      font-size 15px
+      line-height 1
 
     #step-1
       .date
-        position absolute
-        left 60px
-        top 665px
+        position relative
+        left 0
+        top -30px
         width 100%
         text-align center
 
         h2
           width 100vw
-          color: #f1ead0
+          left 0
+          top 0
+          color #f1ead0
           text-align center
+          font-size 46px
+          margin 0
 
       .africa
         width 100%
         left -5%
+        top 15%
+
         img
           width 100%
           height auto
 
       .copy
-        margin-top 150px
-        width: 100%
+        padding 30px 20px
+        width 100%
 
         .line
-          display block
-          margin 20px 35vw
+          display: block;
+          margin: 10px 44vw;
+          width: 4px;
 
         h2
           width auto
 
         p
-          width: 100%
-          font-size 30px
+          width 100%
+          font-size 15px

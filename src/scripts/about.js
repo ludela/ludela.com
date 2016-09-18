@@ -6,29 +6,59 @@ export default function ($)  {
     var step = 1;
     var prevStep = 1;
     var story = 1;
+    var scroll = true;
+    var steps = [
+      'A-Seed-Was-Planted',
+      'Better-Light',
+      'The-Team',
+      'Our-Story-1',
+      'Our-Story-2',
+      'Our-Story-3',
+      'Our-Story-4',
+      'Our-Story-5',
+      'Our-Story-6',
+      'Our-Story-7',
+      'Our-Story-8',
+      'Our-Story-9',
+      'Join-Us'
+    ]
 
 
 
-  if ($container.length) {
-    window.onscroll = debounce(setStep, 1);
+  if ($container.length && scroll == true) {
+    window.onscroll = debounce(setStep, 25);
+    window.onload = reload();
   }
 
     function setStep(){
-      story = 1;
-      step = Math.floor(($(window).scrollTop()/$(window).height())+1);
 
-      if (step >= 14) {
-        story = 9;
-        step = 5;
+      if (window.location.hash == '') {
+        window.location.hash = steps[0]
+      }
+
+      var hash = window.location.hash;
+      step = steps.indexOf(hash.substring(1, hash.length))+1;
+      var prevStep = step;
+
+      if ( $(window).scrollTop() + $(window).height() + 2 > $(document).height() && step <= 14) {
+        step++;
+      } else if ( $(window).scrollTop() == 0 && step > 1) {
+        step--;
+      }
+
+      if (prevStep !== step) {
+        scroll = false;
+        setTimeout(setScroll, 1000);
+      }
+
+      if (step == 13) {
+        $(document).trigger('setfooter');
       } else if (step >= 4) {
         story = step - 3;
         step = 4;
-        console.log('yes step:', step, ' story:', story);
       }
-      console.log(step);
-      console.log($(window).scrollTop());
 
-      if (prevStep !== step) {
+      if (prevStep !== step && story < 2) {
         $(document).trigger('setabout', step);
         prevStep = step;
       }
@@ -36,5 +66,39 @@ export default function ($)  {
       if (step == 4) {
         $(document).trigger('setstory', story);
       }
+    }
+
+    function reload() {
+
+      if (window.location.hash == '') {
+        window.location.hash = steps[0]
+      }
+
+      var hash = window.location.hash;
+      step = steps.indexOf(hash.substring(1, hash.length))+1;
+      var prevStep = step;
+
+      if (step == 13) {
+        $(document).trigger('setfooter');
+      } else if (step >= 4) {
+        story = step - 3;
+        step = 4;
+      }
+
+      if ( story < 2) {
+        $(document).trigger('setabout', step);
+        prevStep = step;
+      }
+
+      if (step == 4) {
+        $(document).trigger('setabout', 4);
+        $(document).trigger('setstory', story);
+      }
+
+    }
+
+    function setScroll() {
+      $(window).scrollTop(100);
+      scroll = true;
     }
   }
