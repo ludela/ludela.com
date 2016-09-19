@@ -17,7 +17,12 @@
   "license": "ISC",
   "dependencies": {
     "autoprefixer-stylus": "^0.10.0",
+    "bebop": "1.9.2",
     "browser-sync": "^2.14.3",
+    "cake-publish": "0.1.4",
+    "cake-test": "0.1.0",
+    "cake-version": "0.1.9",
+    "coffee-script": "1.10.0",
     "debounce": "^1.0.0",
     "dotenv": "^2.0.0",
     "express": "^4.14.0",
@@ -28,6 +33,7 @@
     "rollup-plugin-commonjs": "^4.1.0",
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-watch": "^2.5.0",
+    "shortcake": "1.1.18",
     "stylus": "^0.54.5"
   }
 }
