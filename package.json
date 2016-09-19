@@ -2,9 +2,7 @@
   "name": "ludela",
   "version": "1.0.0",
   "description": "Custom landing page for ludela.",
-  "main": "index.js",
   "scripts": {
-    "postinstall": "npm run build:scripts && npm run build:styles",
     "build:styles": "stylus src/styles/index.styl --use ./node_modules/helpful-ui --use ./node_modules/autoprefixer-stylus --out public/site.css",
     "watch:styles": "npm run build:styles -- --watch --sourcemap",
     "build:scripts": "rollup -c",
@@ -13,8 +11,6 @@
     "start": "npm run build:styles & npm run build:scripts & node server.js",
     "test": "mocha"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "autoprefixer-stylus": "^0.10.0",
     "bebop": "1.9.2",
