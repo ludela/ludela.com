@@ -82,13 +82,11 @@ export default function ($) {
 
   $document.on('setstory', function (ev, index, prev) {
     $('.scroll-container').addClass('scroll-stop');
-    $('.story-'+index+', #step-'+index).animate({scrollTop: 0}, 750);
 
     var story = 9;
     if (index <=9) {
       story = index;
       $('.story-'+index+1+', .story-'+index+', .story-'+index-1).animate({scrollTop: 0}, 750);
-      $('.story-'+story).scrollTop(0)
       $about.removeClass('is-footer');
     } else {
       $about.addClass('is-footer');
