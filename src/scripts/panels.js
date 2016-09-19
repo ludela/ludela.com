@@ -73,20 +73,22 @@ export default function ($) {
     setTimeout( function(){
       $('.scroll').removeClass('scroll');
       $('#step-'+currentStep).addClass('scroll');
-      $('.scroll-container').removeClass('scroll-stop');}, 750)
+      $('.scroll-container').removeClass('scroll-stop');}, 1000)
   });
 
   $document.on('nextpanel', function (ev, dir) {
     $document.trigger('setpanel', currentStep + dir);
   });
 
-  $document.on('setstory', function (ev, index) {
+  $document.on('setstory', function (ev, index, prev) {
     $('.scroll-container').addClass('scroll-stop');
+    $('.story-'+index+', #step-'+index).animate({scrollTop: 0}, 750);
 
     var story = 9;
     if (index <=9) {
       story = index;
-      $('.story-'+story).animate({ scrollTop: 0 }, 500);
+      $('.story-'+index+1+', .story-'+index+', .story-'+index-1).animate({scrollTop: 0}, 750);
+      $('.story-'+story).scrollTop(0)
       $about.removeClass('is-footer');
     } else {
       $about.addClass('is-footer');
@@ -99,7 +101,7 @@ export default function ($) {
     setTimeout( function(){
       $('.scroll').removeClass('scroll');
       $('.story-'+story).addClass('scroll');
-      $('.scroll-container').removeClass('scroll-stop');}, 750)
+      $('.scroll-container').removeClass('scroll-stop');}, 1000)
 
     var Hash = '#'+steps[story + 2];
     if (window.location.hash !== Hash) {
