@@ -53,6 +53,10 @@ export default function ($) {
   });
 
   $document.on('setabout', function (ev, index) {
+    $('.scroll-container').addClass('scroll-stop');
+    $('#step-'+currentStep+', #step-'+index).animate({scrollTop: 0}, 750);
+
+    console.log($('#step-'+index).scrollTop());
 
     $about
       .removeClass('is-step-' + currentStep)
@@ -65,6 +69,11 @@ export default function ($) {
     if (window.location.hash !== Hash) {
       window.location.hash = Hash;
     }
+
+    setTimeout( function(){
+      $('.scroll').removeClass('scroll');
+      $('#step-'+currentStep).addClass('scroll');
+      $('.scroll-container').removeClass('scroll-stop');}, 750)
   });
 
   $document.on('nextpanel', function (ev, dir) {
@@ -72,10 +81,12 @@ export default function ($) {
   });
 
   $document.on('setstory', function (ev, index) {
+    $('.scroll-container').addClass('scroll-stop');
 
     var story = 9;
     if (index <=9) {
       story = index;
+      $('.story-'+story).animate({ scrollTop: 0 }, 500);
       $about.removeClass('is-footer');
     } else {
       $about.addClass('is-footer');
@@ -84,6 +95,11 @@ export default function ($) {
     $about
       .removeClass('is-story-' + currentStory)
       .addClass('is-story-' + (currentStory = story));
+
+    setTimeout( function(){
+      $('.scroll').removeClass('scroll');
+      $('.story-'+story).addClass('scroll');
+      $('.scroll-container').removeClass('scroll-stop');}, 750)
 
     var Hash = '#'+steps[story + 2];
     if (window.location.hash !== Hash) {

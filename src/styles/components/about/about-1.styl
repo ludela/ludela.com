@@ -15,7 +15,6 @@
   width 100vw
   position fixed
   transition left 350ms ease-out
-  overflow-y hidden
   text-align center
   top 0
   background -webkit-linear-gradient(#ee9347, #f2bc3d)
@@ -55,9 +54,11 @@
     opacity 1
     background none
     height 100vh
-    overflow-x scroll
+    overflow-y hidden
     transform translate3d(0, -100vh, 0)
     transition all 750ms ease
+    &.scroll
+      overflow-y scroll
 
     .header, .sub-header
       transform translate3d(0, -40px, 0)
@@ -162,7 +163,7 @@
       transform translate3d(0, -200vh, 0)
 
 
-@media screen and (max-width 980px)
+@media screen and (max-width 680px)
   &.nav-open
     left 0
 

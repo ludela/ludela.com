@@ -36,8 +36,11 @@ $tabheight = 100vh
       position absolute
       width 100vw
       height $height
-      overflow-y scroll
+      overflow-y hidden
       left 0
+
+      &.scroll
+        overflow-y scroll
 
       .story__content
         width 1200px
@@ -709,14 +712,13 @@ $tabheight = 100vh
           img
             transform translate3d(0, 0, 0)
 
-@media screen and (max-width 980px)
+@media screen and (max-width 680px)
   &#about
     #step-4
       h1
         margin-top 65px
       .story-1, .story-2, .story-3, .story-4, .story-5, .story-6, .story-7, .story-8, .story-9
         height $tabheight
-        overflow-x scroll
 
         br
           display none

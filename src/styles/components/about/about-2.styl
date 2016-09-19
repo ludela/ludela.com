@@ -10,10 +10,12 @@
     position absolute
     height 100vh
     width 100vw
-    overflow-x scroll
+    overflow-y hidden
     top 100vh
     transform translate3d(0, 0, 0)
     transition all 750ms ease
+    &.scroll
+      overflow-y scroll
 
     .header, .sub-header
       transform translate3d(0, 20vh, 0)
@@ -72,7 +74,7 @@
         transition all 500ms ease
         transition-delay 350ms
 
-@media screen and (max-width 980px)
+@media screen and (max-width 680px)
   &#about
 
     #step-2

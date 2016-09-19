@@ -3,12 +3,14 @@
     display block
     background #221010
     text-align center
-    overflow-y scroll
     opacity 1
     top 100vh
     height 100vh
+    overflow-y hidden
     transform translate3d(0, 0, 0)
     transition all 750ms ease
+    &.scroll
+      overflow-y scroll
 
     .header
       transform translate3d(0, -35vh, 0)
@@ -95,7 +97,7 @@
       transform translate3d(0, -200vh, 0)
       transition all 750ms ease
 
-@media screen and (max-width 980px)
+@media screen and (max-width 680px)
   &#about
     #step-3
       padding-bottom 160px
