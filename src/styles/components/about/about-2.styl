@@ -4,20 +4,22 @@
     display block
     background-image url(/images/better-lives.png)
     background-position-x center
-    background-size 100% auto
+    background-size cover
     background-repeat no-repeat
     opacity 1
     position absolute
     height 100vh
     width 100vw
-    overflow-x scroll
+    overflow-y hidden
     top 100vh
     transform translate3d(0, 0, 0)
-    transition all 1s ease
+    transition all 750ms ease
+    &.scroll
+      overflow-y scroll
 
     .header, .sub-header
       transform translate3d(0, 20vh, 0)
-      transition all 700ms ease
+      transition all 500ms ease
       transition-delay 150ms
 
     .copy
@@ -46,24 +48,22 @@
 
   &.is-step-2 #step-2
     transform translate3d(0, -100vh, 0)
-    transition all 1s ease
-    transition-delay 500ms
+    transition all 750ms ease
 
     .header, .sub-header
       transform translate3d(0, 0, 0)
-      transition all 1s ease
-      transition-delay 500ms
+      transition all 750ms ease
+      transition-delay 350ms
 
     .copy
       transform translate3d(0, 0, 0)
-      transition all 750ms ease
-      transition-delay 700ms
+      transition all 1s ease
+      transition-delay 350ms
 
   &.is-step-3, &.is-step-4, &.is-step-5
     #step-2
       transform translate3d(0, -200vh, 0)
-      transition all 1350ms ease
-      transition-delay 500ms
+      transition all 750ms ease
 
       .header, .sub-header
         transform translate3d(0, -30vh, 0)
@@ -74,11 +74,11 @@
         transition all 500ms ease
         transition-delay 350ms
 
-@media screen and (max-width 980px)
+@media screen and (max-width 680px)
   &#about
 
     #step-2
-      background-size auto 100%
+      background-size cover
 
       .copy
         width 336px
