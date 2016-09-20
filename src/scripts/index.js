@@ -5,7 +5,9 @@ import scroller from './scroller';
 import about from './about';
 import shell from './shell';
 import video from './video';
+import framework from './framework';
 
+window.$ = window.jQuery = jQuery;
 
 jQuery(function ($) {
   _debugger($);
@@ -14,6 +16,7 @@ jQuery(function ($) {
   about($);
   shell($);
   video($);
+  framework($);
 
   var resizeTimer;
 
@@ -24,14 +27,14 @@ jQuery(function ($) {
         $hamburger = $('#hamburger'),
         $fixed = $('.fixed');
 
-$(window).on('resize', function(e) {
-  $($nav).hide();
+  $(window).on('resize', function(e) {
+    $($nav).hide();
 
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(function() {
-    $($nav).show();
-  }, 250);
-});
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      $($nav).show();
+    }, 250);
+  });
 
   $('body').on('click tap', '#hamburger, #hamburger-foot', function () {
     $('#menu, #hamburger-foot, #hamburger, .wrapper').toggleClass('is-open');
