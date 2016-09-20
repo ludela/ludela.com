@@ -454,23 +454,21 @@
         <div class="checkout">
           <cart>
             <h1>
-              Your Cart
+              Order Summary
             </h1>
 
             <lineitems if="{ !isEmpty() }"></lineitems>
 
             <div class="promo">
-              <div>
+              <div class="promo-row">
                 <promocode class="input" placeholder="Promo/Coupon Code"></promocode>
-              </div>
-              <div>
-              <button class="{ ui: true, button: true, fluid: true, loading: applying }" onclick="{ applyPromoCode }">Apply</button>
-              </div>
-              <div class="promo-message" if="{ data.get('order.promoCode') && !promoMessage && !applying }">
-                Don't forget to apply your code!
-              </div>
-              <div class="promo-message" if="{ promoMessage }">
-                { promoMessage }
+                <button class="{ loading: applying }" onclick="{ applyPromoCode }">Apply</button>
+                <div class="promo-message" if="{ data.get('order.promoCode') && !promoMessage && !applying }">
+                  Don't forget to apply your code!
+                </div>
+                <div class="promo-message" if="{ promoMessage }">
+                  { promoMessage }
+                </div>
               </div>
             </div>
             <div class="invoice-line animated fadeInUp" if="{ data.get('order.discount') > 0 }">
@@ -481,7 +479,6 @@
                 { renderCurrency(data.get('order.currency'), data.get('order.discount'))}&nbsp;{ data.get('order.currency').toUpperCase() }
               </div>
             </div>
-            <div class="ui section divider"></div>
             <div class="invoice-line">
               <div>
                 Subtotal:
@@ -506,7 +503,6 @@
                 { renderCurrency(data.get('order.currency'), data.get('order.tax'))}&nbsp;{ data.get('order.currency').toUpperCase() }
               </div>
             </div>
-            <div class="ui section divider"></div>
             <div class="invoice-line">
               <div>
                 Total:
@@ -558,30 +554,27 @@
               <div class="card-information">
                 <div class="fields">
                   <card-number class="input" name="number" placeholder="●●●● ●●●● ●●●● ●●●●"></card-number>
-                </div>
-
-                <div class="fields">
                   <card-expiry class="input" name="expiry" placeholder="MM / YY"></card-expiry>
                   <card-cvc class="input" name="cvc" placeholder="CVC"></card-cvc>
                 </div>
 
-                <div class="card-types">
-                  <div>
-                    <img src="/img/card-icons/visa.png">
-                  </div>
-                  <div>
-                    <img src="/img/card-icons/mastercard.png">
-                  </div>
-                  <div>
-                    <img src="/img/card-icons/discover.png">
-                  </div>
-                  <div>
-                    <img src="/img/card-icons/amex.png">
-                  </div>
-                </div>
+                <!-- <div class="card-types"> -->
+                <!--   <div> -->
+                <!--     <img src="/img/card-icons/visa.png"> -->
+                <!--   </div> -->
+                <!--   <div> -->
+                <!--     <img src="/img/card-icons/mastercard.png"> -->
+                <!--   </div> -->
+                <!--   <div> -->
+                <!--     <img src="/img/card-icons/discover.png"> -->
+                <!--   </div> -->
+                <!--   <div> -->
+                <!--     <img src="/img/card-icons/amex.png"> -->
+                <!--   </div> -->
+                <!-- </div> -->
 
+                <img class="stripe-logo" src="/images/stripelogo.png">
               </div>
-              <img class="stripe-logo" src="/img/stripelogo.png">
             </div>
 
             <div class="confirmation">
@@ -590,13 +583,10 @@
               </h1>
 
               <terms>
-                <label>I agree to KANOA's <a href="/terms">terms and conditions</a>.</label>
+                <label for="terms">I agree to LuDela's <a href="/legal" target="_blank">terms and conditions</a>.</label>
               </terms>
-              <div class="terms">
-                You are joining Final Batch which ships Spring 2017.
-              </div>
-              <button class="{ ui: true, button: true, fluid: true, loading: loading || checkedOut }" type="submit">Confirm Preorder</button>
-              <div class="ui negative message" if="{ errorMessage }">
+              <button class="{ loading: loading || checkedOut }" type="submit">Confirm Preorder</button>
+              <div class="error" if="{ errorMessage }">
                 { errorMessage }
               </div>
             </div>
@@ -611,6 +601,7 @@
       </div>
     </div>
     <script src="/site.js"></script>
+    <script src="https://cdn.rawgit.com/crowdstart/checkout.js/v2.1.21/checkout.js"></script>
     <script src="/shop.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.min.js"></script>
     <script type="text/javascript" src="/cookies.min.js"></script>
