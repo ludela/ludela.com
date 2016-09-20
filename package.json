@@ -29,6 +29,7 @@
     "rollup-plugin-commonjs": "5.0.4",
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-watch": "^2.5.0",
+    "shop.js": "1.0.57",
     "shortcake": "1.1.18",
     "stylus": "^0.54.5"
   }
