@@ -11,11 +11,12 @@ export default function ($) {
     var player;
     function onYouTubeIframeAPIReady() {
       player = new YT.Player('player', {
-        videoId: 'ITDbQSVmQ8k',
+        videoId: '1ayoxYoCUSo',
         events: {
           'onReady': onPlayerReady,
           'onStateChange': onPlayerStateChange
-        }
+        },
+        playerVars: {rel: 0, showinfo: 0, modestbranding: 1, autoplay: 1},
       });
     }
 
