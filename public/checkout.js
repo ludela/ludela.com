@@ -8,6 +8,9 @@ $(function() {
     Shop.analytics.track('Viewed Checkout Step', {step: 1})
     Shop.initCart()
 
+    $('.thankyou').hide()
+    $('.checkout-container').css('opacity', 1)
+
     e.stopPropagation();
     e.preventDefault();
     return false;
@@ -22,7 +25,8 @@ $(function() {
   })
 
   var settings = {
-    key: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJiaXQiOjQ1MDM2MTcwNzU2NzUxNzIsImp0aSI6InoyWkNVQ3hrZmhFIiwic3ViIjoiVjlPVDIybUkwYSJ9.QajT3dH6kT4DiqCuUD8MhDEgUdYvQ5ZYSH5kwf0a36-ruKlD1f_SkVVE7uymuSCIcscwNXYMMP5H29EL0RQ7Zw',
+    // key: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJiaXQiOjQ1MDM2MTcwNzU2NzUxNzIsImp0aSI6InoyWkNVQ3hrZmhFIiwic3ViIjoiVjlPVDIybUkwYSJ9.QajT3dH6kT4DiqCuUD8MhDEgUdYvQ5ZYSH5kwf0a36-ruKlD1f_SkVVE7uymuSCIcscwNXYMMP5H29EL0RQ7Zw',
+    key: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJiaXQiOjQ1MDM2MTcwNzU2NzUxNzYsImp0aSI6IkdqcEJEblR1RFVrIiwic3ViIjoiVjlPVDIybUkwYSJ9.RwJ5EfCPSKXqj80erk9vX4OHjmDcZQOQZKxdwg5ujSYhPp60L3-RCFNMJ38pKv8wQKR8cy8HquQ9rO6jRez6qA',
     endpoint: 'https://api.crowdstart.com',
     // endpoint: 'https://api.staging.crowdstart.com',
     // endpoint: 'http://localhost:8080/api',
@@ -120,6 +124,46 @@ $(function() {
   if (Shop.isEmpty()) {
     Shop.setItem('ludela', 1);
   }
+
+  m.on('submit', function(){
+    $('.loader').show();
+    setTimeout(function(){
+      $('.loader').fadeTo(500, 0.8);
+    }, 1)
+  })
+
+  m.on('submit-failed', function(){
+    $('.loader').fadeTo(500, 0, function() {
+      $(this).hide();
+    });
+  })
+
+  m.on('submit-success', function(){
+    Shop.analytics.track('Completed Checkout Step', {step: 2})
+    Shop.analytics.track('Viewed Checkout Step',    {step: 3})
+
+    $('.loader').fadeTo(500, 0, function() {
+      $(this).hide();
+    })
+
+    $('.thankyou strong').text(this.data.get('order.number'))
+    $('.checkout-container').fadeTo(500, 0)
+
+    $('.thankyou').show();
+    setTimeout(function(){
+      $('.thankyou').fadeTo(500, 1, function() {
+      })
+      $('.loader').fadeTo(500, 0, function() {
+        $(this).hide();
+      })
+    }, 100)
+
+    $('.modal-close').on('click', function(e){
+      window.location.reload();
+    })
+
+  });
+
 
   /**
    * Toggle hamburger

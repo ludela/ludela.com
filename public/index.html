@@ -38,13 +38,13 @@
       <a class='menu__link' href='/contact'>
         contact
       </a>
-      <a class="menu__social  href='http://facebook.com/JoinLudela'">
+      <a class="menu__social"  href='http://facebook.com/JoinLudela' target="_blank">
         <span class="icon icon-facebook"> </span>
       </a>
-      <a class="menu__social  href='http://twitter.com/JoinLudela'">
+      <a class="menu__social"  href='http://twitter.com/JoinLudela' target="_blank">
         <span class="icon icon-twitter"> </span>
       </a>
-      <a class="menu__social  href='https://www.pinterest.com/joinludela'">
+      <a class="menu__social"  href='https://www.pinterest.com/joinludela' target="_blank">
         <span class="icon icon-pinterest"> </span>
       </a>
     </nav>
@@ -593,6 +593,25 @@
           </checkout>
         </div>
       </div>
+      <div class="thankyou">
+        <p>Thank you for making the world a little brighter! You will receive a confirmation email soon.</p>
+
+        <p>Your order number is <strong></strong>.</p>
+
+        <p style="text-align:center">Tell your friends about LuDela!</p>
+        <div class="social">
+          <a class="menu__social"  href="http://facebook.com/JoinLudela" target="_blank">
+            <span class="icon icon-facebook"> </span>
+          </a>
+          <a class="menu__social"  href="http://twitter.com/JoinLudela" target="_blank">
+            <span class="icon icon-twitter"> </span>
+          </a>
+          <a class="menu__social"  href="https://www.pinterest.com/joinludela" target="_blank">
+            <span class="icon icon-pinterest"> </span>
+          </a>
+        </div>
+
+      </div>
       <div class="modal-close">
         <span></span>
         <span></span>
@@ -600,8 +619,14 @@
         <span></span>
       </div>
     </div>
+
+    <!-- Loader -->
+    <div class="loader hidden">
+      <div class="spinner">
+      </div>
+    </div>
+
     <script src="/site.js"></script>
-    <script src="https://cdn.rawgit.com/crowdstart/checkout.js/v2.1.21/checkout.js"></script>
     <script src="/shop.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.min.js"></script>
     <script type="text/javascript" src="/cookies.min.js"></script>

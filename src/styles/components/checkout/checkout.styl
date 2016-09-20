@@ -28,8 +28,8 @@
     margin: 10vh 0
     width: 90%
     display: table
-    left: 50%
     max-width: 1000px
+    left: 50%
     transform: translateX(-50%)
     background-color: rgba(255,255,255,.9)
     color: #414141
@@ -69,6 +69,7 @@ quantity-select-control
 .input
   width: 100%
   display: table
+  position: relative
 
 .selectize-input
   border-radius: 0 !important
@@ -98,7 +99,7 @@ quantity-select-control
   display: none
 
 .product-currency
-  display: inline-block
+  display: inline
 
 .product-list-price
   text-decoration: line-through;
@@ -166,6 +167,7 @@ checkout
 .shipping-information
 .payment-information
   margin-bottom: 30px
+  position: relative
 
 shippingaddress-line1
   width: 55% !important
@@ -209,6 +211,69 @@ checkout
 
 .stripe-logo
   width: 100px
+
+.icon-lock
+  position: absolute;
+  top: -8px;
+  left:100%
+  margin-left: -40px;
+
+  width:2em;
+  height:2em;
+  overflow:hidden;
+  margin-bottom:25px;
+  clear:left;
+  float:left;
+  -webkit-transform:scale(0.4);
+  transform:scale(0.4);
+  -webkit-transform-origin:0 0;
+  transform-origin:0 0;
+
+  .lock-top-1
+    width:40%;
+    height:40%;
+    position:absolute;
+    left:50%;
+    margin-left:-20%;
+    top:14%;
+    background-color:black;
+    border-radius:40%;
+  .lock-top-2
+    width:24%;
+    height:40%;
+    position:absolute;
+    left:50%;
+    margin-left:-12%;
+    top:22%;
+    background-color:white;
+    border-radius:25%;
+  .lock-body
+    width:60%;
+    height:48%;
+    position:absolute;
+    left:50%;
+    margin-left:-30%;
+    bottom:11%;
+    background-color:black;
+    border-radius:15%;
+  .lock-hole
+    width:16%;
+    height:13%;
+    position:absolute;
+    left:50%;
+    margin-left:-8%;
+    top:51%;
+    border-radius:100%;
+    background-color:white;
+  .lock-hole:after
+    content:"";
+    width:43%;
+    height:78%;
+    position:absolute;
+    left:50%;
+    margin-left:-20%;
+    top:100%;
+    background-color:white;
 
 terms
   font-size: 16px
@@ -292,6 +357,25 @@ button[type=submit]
   padding: 20px;
   line-height: 2px !important;
 
+.thankyou
+  position: absolute
+  top: 35vh
+  max-width: 600px
+  width: 80vw
+  padding: 40px
+  opacity: 0
+  transition: opacity 500ms ease
+  left: 50%
+  transform: translateX(-50%)
+  display:none
+  text-align: center
+
+  .social
+    text-align: center
+
+    > *
+      margin-top: 0
+
 @media screen and (max-width: 500px)
   .input
     width: 100% !important
@@ -351,3 +435,82 @@ button[type=submit]
   .checkout-button
     right: 20px
     top: 60px
+
+// Loader Stuff
+.loader
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  top: 0;
+  left: 0;
+
+  &.hidden
+    display: none
+    opacity: 0
+
+.loader .spinner {
+  font-size: 10px;
+  top: 50%;
+  margin: -50px auto;
+  text-indent: -9999em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  background: #f1ead0;
+  background: -moz-linear-gradient(left, #ffffff 10%, rgba(95, 92, 82, 0) 42%);
+  background: -webkit-linear-gradient(left, #ffffff 10%, rgba(95, 92, 82, 0) 42%);
+  background: -o-linear-gradient(left, #ffffff 10%, rgba(95, 92, 82, 0) 42%);
+  background: -ms-linear-gradient(left, #ffffff 10%, rgba(95, 92, 82, 0) 42%);
+  background: linear-gradient(to right, #ffffff 10%, rgba(95, 92, 82, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader .spinner:before {
+  width: 50%;
+  height: 50%;
+  background: #f1ead0;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+.loader .spinner:after {
+  background: #000;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
