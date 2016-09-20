@@ -40,8 +40,8 @@ jQuery(function ($) {
     $('#menu, #hamburger-foot, #hamburger, .wrapper').toggleClass('is-open');
     $('#about, #general, .fixed').toggleClass('nav-open');
   });
-  $('body').on('click tap', '.nav-open, #menu', function () {
-    $('#menu, #hamburger-foot, #hamburger, .wrapper').removeClass('is-open');
-    $('#about, #general, .fixed').removeClass('nav-open');
+  $('body').on('click tap touchend', '.nav-open, #menu, .menu__close', function () {
+    $('.is-open').removeClass('is-open');
+    $('.nav-open').removeClass('nav-open');
   });
 });
