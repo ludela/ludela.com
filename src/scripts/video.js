@@ -11,7 +11,7 @@ export default function ($) {
     var player;
     function onYouTubeIframeAPIReady() {
       player = new YT.Player('player', {
-        videoId: 'qHXh_U1gVRE',
+        videoId: 'ITDbQSVmQ8k',
         events: {
           'onReady': onPlayerReady,
           'onStateChange': onPlayerStateChange
@@ -20,7 +20,12 @@ export default function ($) {
     }
 
     function onPlayerReady(event) {
+      var iframe = $('#player');
       event.target.playVideo();
+      var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
+      if (requestFullScreen) {
+        requestFullScreen.bind(iframe)();
+      }
     }
 
     var done = false;

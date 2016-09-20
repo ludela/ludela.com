@@ -11,6 +11,15 @@
   .logo
     display inline-block
 
+    a
+      text-decoration none
+
+    .icon
+      font-size 60px
+      color rgb(241, 234, 208)
+      max-width none
+
+
   .video
     position absolute
     right 40px
@@ -24,8 +33,15 @@
     color rgb(241, 234, 208)
     cursor pointer
 
-    img
-      margin-left 15px
+    span
+      display inline-block
+      vertical-align middle
+
+    .icon
+      display inline-block
+      vertical-align middle
+      font-size 25px
+      color rgb(241, 234, 208)
 
   #hamburger, #hamburger-foot
     width 35px
@@ -152,9 +168,11 @@
           left 50%
 
     .logo
-      img
+      .icon
         height 50px
         width auto
+        font-size 50px
+        color rgb(241, 234, 208)
         max-width none
 
     .video
@@ -163,10 +181,8 @@
       right 20px
       span
         display none
-      img
-        height 35px
-        width auto
-        max-width none
+      .icon
+        font-size 35px
 
 @media screen and (min-width: 980px)
 
