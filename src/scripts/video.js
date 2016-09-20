@@ -11,7 +11,7 @@ export default function ($) {
     var player;
     function onYouTubeIframeAPIReady() {
       player = new YT.Player('player', {
-        videoId: 'ITDbQSVmQ8k',
+        videoId: '1ayoxYoCUSo',
         events: {
           'onReady': onPlayerReady,
           'onStateChange': onPlayerStateChange
