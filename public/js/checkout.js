@@ -16,7 +16,7 @@ $(function() {
     return false;
   });
 
-  $('.modal-close').on('click', function(e){
+  $('.modal-close, .continue-shopping').on('click', function(e){
     var $modal = $(this).closest('.modal');
     $modal.addClass('hidden');
     $modal.removeClass('is-open');
