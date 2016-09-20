@@ -126,6 +126,9 @@ $(function() {
   }
 
   m.on('submit', function(){
+    Shop.analytics.track('Completed Checkout Step', {step: 1})
+    Shop.analytics.track('Viewed Checkout Step',    {step: 2})
+
     $('.loader').show();
     setTimeout(function(){
       $('.loader').fadeTo(500, 0.8);
@@ -161,9 +164,7 @@ $(function() {
     $('.modal-close').on('click', function(e){
       window.location.reload();
     })
-
   });
-
 
   /**
    * Toggle hamburger
@@ -174,4 +175,8 @@ $(function() {
 
   $('.email-form').on('submit', function() {
   });
+
+  setTimeout(function(){
+    $('.footer-bar').css('bottom', 0)
+  }, 100)
 })

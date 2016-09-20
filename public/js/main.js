@@ -56,6 +56,9 @@ $(function () {
     if (window.localStorage) {
       window.localStorage.setItem('registered','true');
     }
+    setTimeout(function(){
+      window.location.href = 'account';
+    }, 100)
   });
 
   if ($.cookie('registered') == 'true') {
