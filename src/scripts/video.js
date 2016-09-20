@@ -15,7 +15,8 @@ export default function ($) {
         events: {
           'onReady': onPlayerReady,
           'onStateChange': onPlayerStateChange
-        }
+        },
+        playerVars: {rel: 0, showinfo: 0, modestbranding: 1, autoplay: 1},
       });
     }
 
