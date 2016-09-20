@@ -70,13 +70,13 @@
   position relative
   background rgba(0,0,0, 0.6)
   height auto
-  padding 48px
+  padding 48px 15%
   // margin-top 110vh
   // margin-bottom 90vh
   z-index 5000
 
 .small-text
-  display block
+  display inline-block
   position relative
   width 14em
   height 4em
@@ -152,6 +152,11 @@ form
     bottom 40%
 
 
+@media all and (min-width 667px) and (max-width 800px)
+  .small-text
+    &.\\+right
+      float right
+
 @media all and (min-width 800px)
   .mobile-padding
     display none
@@ -198,7 +203,7 @@ form
 
       &.\\+left
         text-align right
-        margin-left ((300 + 155) / 1200) * -100%
+        margin-left (540 / 1200) * -100%
 
       &.\\+right
         margin-left (220 / 1200) * 100%
@@ -252,3 +257,13 @@ form
         position absolute
         top -12px
         right -40px
+
+
+
+@media all and (min-width 1000px)
+  .splash
+    .small-text
+      &.\\+left
+        margin-left ((300 + 155) / 1200) * -100%
+
+

@@ -262,7 +262,7 @@ $phone_height = 390
 
 &__wax
   position absolute
-  bottom 10.2%
+  bottom 12.2%
   right 0
   left 0
   margin auto
@@ -274,8 +274,8 @@ $phone_height = 390
   height 47%
   opacity 0
   transform translate3d(0, -15%, 0)
-  transition transform 500ms ease, left 550ms ease, opacity 1500ms ease
-  transition-property transform, left, opacity
+  transition transform 500ms ease, left 550ms ease
+  transition-property transform, left
   z-index 70
 
   / .splash.is-step-4 &,
@@ -471,10 +471,11 @@ $phone_height = 390
     transition-property opacity, left
     transition-delay 3600ms, 3500ms
 
-  .footnote p
-    color #211d1c
-    font-size 6px
-    padding-left 16px
+  .footnote
+    p
+      color #211d1c
+      font-size 6px
+      padding-left 16px
 
 &__info
   position relative
@@ -602,8 +603,6 @@ $phone_height = 390
     / .splash.is-step-2 &,
     / .splash.is-step-3 &
       opacity 0
-      // transition-property opacity
-      // transition-delay 500ms
       left 36.6%
 
     / .splash.is-step-5 &,
@@ -617,8 +616,8 @@ $phone_height = 390
       left 22.5%
 
   &__wax
-    height 45%
-    left 0
+    height 48%
+    left -0.2%
     width (($candle_width) / 1200) * 100%
 
     / .splash.is-step-6 &
@@ -627,8 +626,6 @@ $phone_height = 390
   &__wax-with-flame
     left 0
     width (($candle_width) / 1200) * 100%
-
-
 
 
   &__wick
@@ -681,6 +678,8 @@ $phone_height = 390
 
 @media all and (min-width 1000px)
   .visuals
+    &__wax
+      height 43.5%
     &__flame
 
       / .splash.is-step-1 &
@@ -716,8 +715,14 @@ $phone_height = 390
         height 100%
 
 
-@media all and (max-height 700px)
+@media all and (max-height 698px)
   .visuals
+    &__variants
+      .footnote
+        position absolute
+        top 0
+        left 100%
+
     &__flame
 
       / .splash.is-step-1 &

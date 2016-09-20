@@ -18,6 +18,8 @@ jQuery(function ($) {
   video($);
   framework($);
 
+  var resizeTimer;
+
   const $nav = $('#menu'),
         $page = $('.wrapper'),
         $about = $('#about'),
@@ -25,11 +27,20 @@ jQuery(function ($) {
         $hamburger = $('#hamburger'),
         $fixed = $('.fixed');
 
-  $('body').on('click touchstart', '#hamburger, #hamburger-foot', function () {
+$(window).on('resize', function(e) {
+  $($nav).hide();
+
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(function() {
+    $($nav).show();
+  }, 250);
+});
+
+  $('body').on('click tap', '#hamburger, #hamburger-foot', function () {
     $('#menu, #hamburger-foot, #hamburger, .wrapper').toggleClass('is-open');
     $('#about, #general, .fixed').toggleClass('nav-open');
   });
-  $('body').on('click touchstart', '.nav-open, #menu', function () {
+  $('body').on('click tap', '.nav-open, #menu', function () {
     $('#menu, #hamburger-foot, #hamburger, .wrapper').removeClass('is-open');
     $('#about, #general, .fixed').removeClass('nav-open');
   });

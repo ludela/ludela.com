@@ -5,7 +5,7 @@ use 'cake-version'
 use 'cake-publish', npm: false
 
 task 'build', 'build project', ->
-  exec '''
+  exec.parallel '''
     rollup -c
     stylus src/styles/index.styl --use ./node_modules/helpful-ui --use ./node_modules/autoprefixer-stylus --out public/site.css
     '''
