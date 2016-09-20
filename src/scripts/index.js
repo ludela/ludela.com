@@ -27,14 +27,14 @@ jQuery(function ($) {
         $hamburger = $('#hamburger'),
         $fixed = $('.fixed');
 
-$(window).on('resize', function(e) {
-  $($nav).hide();
+  $(window).on('resize', function(e) {
+    $($nav).hide();
 
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(function() {
-    $($nav).show();
-  }, 250);
-});
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      $($nav).show();
+    }, 250);
+  });
 
   $('body').on('click tap', '#hamburger, #hamburger-foot', function () {
     $('#menu, #hamburger-foot, #hamburger, .wrapper').toggleClass('is-open');
