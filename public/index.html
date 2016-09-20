@@ -74,7 +74,7 @@
     </header>
     <div class='footer-bar fixed'>
       <span class='footer-text'>
-        Earn a free LuDela candle + free refills
+        Earn a LuDela candle with refills by referring friends
       </span>
       <register immediate-login="true">
         <user-email type='text' placeholder=' ENTER YOUR EMAIL'></user-email>
@@ -301,12 +301,16 @@
               <div class="splash__component-container">
                 <div class="splash__component-left">
                   <div class="splash__headline">
-                    <h2 class="h1">Join us <span class="subhead">Early birds recieve 20% off<br> + Free Candle refills</span></h2>
+                    <h2 class="h1">Join us <span class="subhead">Earn a LuDela candle, refills, coupons<br>and other rewards by referring your friends.</span></h2>
                   </div>
-                  <form class="signup-form">
-                    <input type='text' placeholder='EMAIL'/>
-                    <input type='submit'/>
-                  </form>
+                  <register immediate-login="true">
+                    <user-email type='text' placeholder=' ENTER YOUR EMAIL'></user-email>
+                    <input type='submit' value="Step Inside"/>
+                    <div class="error" if="{ errorMessage }">
+                      { errorMessage }
+                    </div>
+                  </register>
+                  <a class="login-button" href="/login">Login</a>
                   <ul class="link-list">
                     <li><a href='/about'>About us</a></li>
                     <li><a href='/faq'>FAQ</a></li>
