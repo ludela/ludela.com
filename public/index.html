@@ -69,7 +69,7 @@
             <span class="icon icon-LuDela-logo"> </span>
           </a>
         </div>
-        <a href="#" class="checkout-button">Pre-order Now</a>
+        <a href="#" class="checkout-button">Pre-order</a>
       </div>
     </header>
     <div class='footer-bar fixed'>
@@ -464,7 +464,7 @@
 
             <div class="promo">
               <div class="promo-row">
-                <promocode class="input" placeholder="Promo/Coupon Code"></promocode>
+                <promocode class="input" placeholder="Coupon Code"></promocode>
                 <button class="{ loading: applying }" onclick="{ applyPromoCode }">Apply</button>
                 <div class="promo-message" if="{ data.get('order.promoCode') && !promoMessage && !applying }">
                   Don't forget to apply your code!
@@ -556,7 +556,7 @@
 
               <div class="card-information">
                 <div class="fields">
-                  <card-number class="input" name="number" placeholder="●●●● ●●●● ●●●● ●●●●"></card-number>
+                  <card-number class="input" name="number" placeholder="Card Number"></card-number>
                   <card-expiry class="input" name="expiry" placeholder="MM / YY"></card-expiry>
                   <card-cvc class="input" name="cvc" placeholder="CVC"></card-cvc>
                 </div>
@@ -588,7 +588,7 @@
               <terms>
                 <label for="terms">I agree to LuDela's <a href="/legal" target="_blank">terms and conditions</a>.</label>
               </terms>
-              <button class="{ loading: loading || checkedOut }" type="submit">Confirm Preorder</button>
+              <button class="{ loading: loading || checkedOut }" type="submit">Confirm Pre-order</button>
               <div class="error" if="{ errorMessage }">
                 { errorMessage }
               </div>
