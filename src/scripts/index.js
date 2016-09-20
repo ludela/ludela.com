@@ -5,6 +5,8 @@ import scroller from './scroller';
 import about from './about';
 import shell from './shell';
 import video from './video';
+import framework from './framework';
+import checkout from './checkout';
 
 
 jQuery(function ($) {
@@ -14,6 +16,8 @@ jQuery(function ($) {
   about($);
   shell($);
   video($);
+  framework($);
+  checkout($);
 
   const $nav = $('#menu'),
         $page = $('.wrapper'),
