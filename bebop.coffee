@@ -4,6 +4,6 @@ module.exports =
   workDir: 'public/'
   compilers:
     scss: ->
-      sass 'prelaunch/sass/prelaunch.scss', 'public/css/prelaunch.css', (err) ->
+      sass 'src/prelaunch/prelaunch.scss', 'public/css/prelaunch.css', (err) ->
         throw err if err?
     styl: ->

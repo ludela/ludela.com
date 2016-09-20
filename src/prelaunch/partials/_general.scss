@@ -106,7 +106,7 @@ img {
 }
 
 .page-header {
-  background: url("../images/landing-bg.jpg") center / cover no-repeat;
+  background: url("/images/prelaunch/landing-bg.jpg") center / cover no-repeat;
 }
 
 .progress-meter {
@@ -282,25 +282,25 @@ img {
       }
     }
     .point5 .progress-number:before {
-        background-image: url(/images/5points.png);
+        background-image: url(/images/prelaunch/5points.png);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
     }
     .point10 .progress-number:before {
-        background-image: url(/images/10points.png);
+        background-image: url(/images/prelaunch/10points.png);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
     }
     .point25 .progress-number:before {
-        background-image: url(/images/25points.png);
+        background-image: url(/images/prelaunch/25points.png);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
     }
     .point50 .progress-number:before {
-        background-image: url(/images/50points.png);
+        background-image: url(/images/prelaunch/50points.png);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
