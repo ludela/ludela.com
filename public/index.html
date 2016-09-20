@@ -467,7 +467,28 @@
               Order Summary
             </h1>
 
-            <lineitems if="{ !isEmpty() }"></lineitems>
+            <lineitems if="{ !isEmpty() }">
+              <div class="product-text-container">
+                <span if="{ !data.get('locked') }" class="product-quantity-container">
+                  <quantity-select-control></quantity-select-control>
+                </span>
+                <span if="{ data.get('locked') }" class="product-quantity-container locked">
+                  { data.get('quantity') }
+                </span>
+                <span class="product-description" if="{ data.get('description') }">{ data.get('description') }</span>
+              </div>
+              <!-- <div onclick="{ delete }" class="product-delete"></div> -->
+              <div class="product-price-container invoice-amount">
+                <div class="product-price">
+                  { renderCurrency(parentData.get('currency'), data.get().price * data.get().quantity) }
+                  { parentData.get('currency').toUpperCase() }
+                </div>
+                <div if="{ data.get().listPrice > data.get().price }" class="product-list-price invoice-amount">
+                  { renderCurrency(parentData.get('currency'), data.get().listPrice * data.get().quantity) }
+                  { parentData.get('currency').toUpperCase() }
+                </div>
+              </div>
+            </lineitems>
 
             <div class="promo">
               <div class="promo-row">
@@ -482,42 +503,42 @@
               </div>
             </div>
             <div class="invoice-line animated fadeInUp" if="{ data.get('order.discount') > 0 }">
-              <div>
+              <div class="invoice-label">
                 Discount:
               </div>
-              <div>
+              <div class="invoice-amount">
                 { renderCurrency(data.get('order.currency'), data.get('order.discount'))}&nbsp;{ data.get('order.currency').toUpperCase() }
               </div>
             </div>
             <div class="invoice-line">
-              <div>
-                Subtotal:
+              <div class="invoice-label">
+                Subtotal
               </div>
-              <div>
+              <div class="invoice-amount">
                 { renderCurrency(data.get('order.currency'), data.get('order.subtotal'))}&nbsp;{ data.get('order.currency').toUpperCase() }
               </div>
             </div>
             <div class="invoice-line">
-              <div>
-                Shipping (billed later):
+              <div class="invoice-label">
+                Shipping (billed later)
               </div>
-              <div class="not-bold">
+              <div class="invoice-amount not-bold">
                 - -
               </div>
             </div>
             <div class="invoice-line">
-              <div>
-                Tax ({ data.get('order.taxRate') * 100 }%):
+              <div class="invoice-label">
+                Tax ({ data.get('order.taxRate') * 100 }%)
               </div>
-              <div>
+              <div class="invoice-amount">
                 { renderCurrency(data.get('order.currency'), data.get('order.tax'))}&nbsp;{ data.get('order.currency').toUpperCase() }
               </div>
             </div>
-            <div class="invoice-line">
-              <div>
-                Total:
+            <div class="invoice-line invoice-total">
+              <div class="invoice-label">
+                Total
               </div>
-              <div>
+              <div class="invoice-amount">
                 { renderCurrency(data.get('order.currency'), data.get('order.total'))}&nbsp;{ data.get('order.currency').toUpperCase() }
               </div>
             </div>
