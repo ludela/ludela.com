@@ -33,11 +33,11 @@ $(window).on('resize', function(e) {
   }, 250);
 });
 
-  $('body').on('click touchstart', '#hamburger, #hamburger-foot', function () {
+  $('body').on('click tap', '#hamburger, #hamburger-foot', function () {
     $('#menu, #hamburger-foot, #hamburger, .wrapper').toggleClass('is-open');
     $('#about, #general, .fixed').toggleClass('nav-open');
   });
-  $('body').on('click touchstart', '.nav-open, #menu', function () {
+  $('body').on('click tap', '.nav-open, #menu', function () {
     $('#menu, #hamburger-foot, #hamburger, .wrapper').removeClass('is-open');
     $('#about, #general, .fixed').removeClass('nav-open');
   });
