@@ -20,7 +20,12 @@ export default function ($) {
     }
 
     function onPlayerReady(event) {
+      var iframe = $('#player');
       event.target.playVideo();
+      var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
+      if (requestFullScreen) {
+        requestFullScreen.bind(iframe)();
+      }
     }
 
     var done = false;
