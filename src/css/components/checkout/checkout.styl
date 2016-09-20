@@ -19,6 +19,18 @@
   transition: top 500ms ease
   overflow-y: scroll
 
+  input,
+  select,
+  button
+    padding: 16px
+    height: 1em !important
+    vertical-align: middle
+    line-height: 2px !important;
+
+  input, input::placeholder
+    color: #ccc !important
+    height: 16px !important
+
   h1
     font-size: 20px
 
@@ -31,7 +43,7 @@
     max-width: 1000px
     left: 50%
     transform: translateX(-50%)
-    background-color: rgba(255,255,255,.9)
+    background-color: white
     color: #414141
 
     input[type=text]
@@ -45,10 +57,15 @@
       font-size: 16px
 
     button
-      border: 1px solid black
+      background-color: #ed8d48
+      border: 1px solid #ed8d48
+      padding: 16px
+      font-size: 1em
+      color: white !important
 
     .error
-      font-size: 16px
+      color: #ed8d48
+      font-size: 14px
       padding: 8px 0
 
 .is-open
@@ -166,8 +183,11 @@ checkout
 .contact-information
 .shipping-information
 .payment-information
+cart
   margin-bottom: 30px
   position: relative
+  padding: 16px
+  border: 2px solid #C9C9C9
 
 shippingaddress-line1
   width: 55% !important
