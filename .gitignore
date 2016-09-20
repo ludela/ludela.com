@@ -1,4 +1,8 @@
 node_modules/
 npm-debug.log
 .env
-.map
+*.map
+
+public/css/prelaunch.css
+public/css/site.css
+public/js/site.js
