@@ -15,12 +15,23 @@ jQuery(function ($) {
   shell($);
   video($);
 
+  var resizeTimer;
+
   const $nav = $('#menu'),
         $page = $('.wrapper'),
         $about = $('#about'),
         $general = $('#general'),
         $hamburger = $('#hamburger'),
         $fixed = $('.fixed');
+
+$(window).on('resize', function(e) {
+  $($nav).hide();
+
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(function() {
+    $($nav).show();
+  }, 250);
+});
 
   $('body').on('click touchstart', '#hamburger, #hamburger-foot', function () {
     $('#menu, #hamburger-foot, #hamburger, .wrapper').toggleClass('is-open');
