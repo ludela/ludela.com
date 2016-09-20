@@ -8,6 +8,7 @@ task 'build', 'build project', ->
   exec.parallel '''
     rollup -c
     stylus src/styles/index.styl --use ./node_modules/helpful-ui --use ./node_modules/autoprefixer-stylus --out public/site.css
+    cp ./node_modules/shop.js/shop.js ./public/shop.js
     '''
 
 task 'watch', 'watch for changes and recompile project', ->
