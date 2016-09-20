@@ -32,7 +32,6 @@ export default function ($) {
       const currentPos = $window.scrollTop();
       const scrollDiff = currentPos - lastScrollPos;
       lastScrollPos = currentPos;
-      // console.log('[scroll] diff:' + scrollDiff);
       if ( ! allowScroll || Math.abs(scrollDiff) <  scrollThreshold) return;
       disableScrollFor(ev, scrollerDelay);
       const dir = Math.min(1, Math.max(-1, scrollDiff));
