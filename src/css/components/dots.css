@@ -1,0 +1,41 @@
+#dots {
+  position: fixed;
+  right: 2%;
+  top: 40%;
+  margin: auto;
+  z-index: 700;
+}
+#dots .tooltiptext {
+  display: none;
+  position: absolute;
+}
+#dots div {
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  opacity: 0.5;
+  background-color: #f0ece3;
+  width: 7px;
+  height: 7px;
+  margin: 20px;
+  transition: opacity 500ms ease;
+  cursor: pointer;
+}
+#dots div:hover .tooltiptext {
+  display: block;
+  text-align: right;
+  background: none;
+  width: 300px;
+  left: -330px;
+  top: -30px;
+}
+#dots div:hover .tooltiptext span {
+  background-color: #f0ece3;
+  padding: 5px;
+  color: #000;
+  font-size: 18px;
+}
+#dots div.active-dot {
+  opacity: 1;
+  transition: opacity 500ms ease;
+}

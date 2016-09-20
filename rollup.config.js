@@ -3,8 +3,8 @@ import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
 
 export default {
-  entry: './src/scripts/index.js',
-  dest: './public/site.js',
+  entry: './src/js/index.js',
+  dest: './public/js/site.js',
   format: 'iife',
   moduleName: 'Ludela',
   sourceMap: true,

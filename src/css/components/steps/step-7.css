@@ -1,0 +1,110 @@
+#step-7 {
+  opacity: 0;
+  transition: opacity 100ms ease, transform 1500ms ease;
+  transform: translate3d(0, 100vh, 0);
+}
+#step-7 .splash__container {
+  height: 100%;
+}
+#step-7 .img,
+#step-7 .splash__component-left {
+  display: inline-block;
+}
+#step-7 .splash__component-left {
+  width: 100%;
+  vertical-align: middle;
+}
+#step-7 .splash__component-left input[type="text"] {
+  background-color: #f1ead0;
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  width: 352px;
+  height: 38px;
+}
+#step-7 .splash__component-left input[type="submit"] {
+  background-color: #ed8d48;
+  color: #f1ead0;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  margin-left: -4px;
+  width: 159px;
+  height: 38px;
+}
+#step-7 .splash__component-left .link-list,
+#step-7 .splash__component-left .copyright {
+  position: absolute;
+  width: 100%;
+  bottom: 12%;
+  font-size: 8px;
+}
+#step-7 .splash__component-left .copyright {
+  left: 0;
+  right: 0;
+  bottom: 9%;
+}
+#step-7 .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+#step-7 .splash__headline {
+  transform: translate3d(0, 0, 0);
+  position: absolute;
+  top: 15%;
+}
+#step-7 .signup-form {
+  display: none;
+  text-align: center;
+}
+.is-step-7 #step-7 {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.is-step-7 #step-7 .splash__headline {
+  opacity: 1;
+}
+.is-step-7 #step-7 .splash__headline .subhead {
+  opacity: 0;
+}
+.is-step-7 {
+  background: #f0bd3c;
+}
+.is-step-7:after {
+  opacity: 1;
+}
+.is-step-7 .visuals {
+  display: none;
+}
+@media all and (min-width: 800px) {
+  .is-step-7 #step-7 .splash__component-container {
+    transform: translate(0, 10%);
+  }
+  .is-step-7 #step-7 .splash__component-left {
+    width: 55%;
+  }
+  .is-step-7 #step-7 .splash__component-left .link-list,
+  .is-step-7 #step-7 .splash__component-left .copyright {
+    font-size: 12px;
+    position: relative;
+  }
+  .is-step-7 #step-7 .signup-form {
+    display: block;
+  }
+  .is-step-7 #step-7 .img {
+    position: relative;
+    width: 33%;
+    text-align: left;
+  }
+  .is-step-7 #step-7 .splash__headline {
+    position: relative;
+    top: 0;
+  }
+  .is-step-7 #step-7 .splash__headline .subhead {
+    opacity: 1;
+  }
+}

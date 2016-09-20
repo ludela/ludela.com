@@ -1,0 +1,104 @@
+#step-3 {
+  opacity: 0;
+  transition: opacity 100ms ease;
+}
+.is-step-3 {
+  background: #f0bd3c;
+}
+.is-step-3:before {
+  opacity: 0;
+}
+.is-step-3:after {
+  opacity: 1;
+  background: linear-gradient(0deg, #221010 40%, rgba(240,189,60,0));
+  transition: opacity 0s ease;
+}
+.is-step-2 #step-3 {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.is-step-3 #step-3 {
+  opacity: 1;
+}
+.is-step-3 #step-3 .small-text {
+  opacity: 1;
+}
+.is-step-4 #step-3,
+.is-step-5 #step-3,
+.is-step-6 #step-3,
+.is-step-7 #step-3 {
+  transition: opacity 750ms ease;
+}
+.is-step-4 #step-3 .splash__headline,
+.is-step-5 #step-3 .splash__headline,
+.is-step-6 #step-3 .splash__headline,
+.is-step-7 #step-3 .splash__headline {
+  position: absolute;
+  transform: translate3d(0, -100vh, 0);
+}
+@media all and (min-height: min-width 800px) {
+  #step-3 .small-text.\+right {
+    margin-left: 25%;
+  }
+}
+@media all and (min-width: 800px) {
+  #step-3 {
+    opacity: 0;
+    transition: opacity 100ms ease;
+  }
+  #step-3 .small-text.\+left {
+    text-align: right;
+    margin-left: -45%;
+  }
+  #step-3 .small-text.\+right {
+    margin-left: 25%;
+  }
+  .is-step-3 #step-3 .small-text {
+    transform: translate3d(0, 400%, 0);
+  }
+  .is-step-2 #step-3 .small-text.\+one,
+  .is-step-3 #step-3 .small-text.\+one,
+  .is-step-4 #step-3 .small-text.\+one {
+    margin-bottom: 24%;
+  }
+  .is-step-2 #step-3 .small-text.\+two,
+  .is-step-3 #step-3 .small-text.\+two,
+  .is-step-4 #step-3 .small-text.\+two {
+    margin-bottom: 20%;
+  }
+  .is-step-2 #step-3 .small-text.\+three,
+  .is-step-3 #step-3 .small-text.\+three,
+  .is-step-4 #step-3 .small-text.\+three {
+    margin-bottom: 17%;
+  }
+  .is-step-2 #step-3 .small-text.\+four,
+  .is-step-3 #step-3 .small-text.\+four,
+  .is-step-4 #step-3 .small-text.\+four {
+    margin-bottom: 13%;
+  }
+  .is-step-2 #step-3 .small-text.\+five,
+  .is-step-3 #step-3 .small-text.\+five,
+  .is-step-4 #step-3 .small-text.\+five {
+    margin-bottom: 10%;
+  }
+  .is-step-2 #step-3 .small-text.\+six,
+  .is-step-3 #step-3 .small-text.\+six,
+  .is-step-4 #step-3 .small-text.\+six {
+    margin-bottom: 6%;
+  }
+  .is-step-2 #step-3 .small-text.\+seven,
+  .is-step-3 #step-3 .small-text.\+seven,
+  .is-step-4 #step-3 .small-text.\+seven {
+    margin-bottom: 3%;
+  }
+  .is-step-2 #step-3 .small-text.\+eight,
+  .is-step-3 #step-3 .small-text.\+eight,
+  .is-step-4 #step-3 .small-text.\+eight {
+    margin-bottom: 0;
+  }
+}
+@media all and (min-width: 1000px) {
+  #step-3 .small-text.\+left {
+    margin-left: -35%;
+  }
+}

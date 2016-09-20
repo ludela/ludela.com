@@ -1,0 +1,834 @@
+#about #step-4 {
+  opacity: 1;
+  background: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  position: absolute;
+  transform: translate3d(0, 100vh, 0);
+  transition: all 750ms ease;
+  height: 100vh;
+}
+#about #step-4 .our-story {
+  width: 1200px;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -600px;
+}
+#about #step-4 .our-story h1 {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  position: absolute;
+  top: 75px;
+}
+#about #step-4 .story-1,
+#about #step-4 .story-2,
+#about #step-4 .story-3,
+#about #step-4 .story-4,
+#about #step-4 .story-5,
+#about #step-4 .story-6,
+#about #step-4 .story-7,
+#about #step-4 .story-8,
+#about #step-4 .story-9 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+  left: 0;
+}
+#about #step-4 .story-1.scroll,
+#about #step-4 .story-2.scroll,
+#about #step-4 .story-3.scroll,
+#about #step-4 .story-4.scroll,
+#about #step-4 .story-5.scroll,
+#about #step-4 .story-6.scroll,
+#about #step-4 .story-7.scroll,
+#about #step-4 .story-8.scroll,
+#about #step-4 .story-9.scroll {
+  overflow-y: scroll;
+}
+#about #step-4 .story-1 .story__content,
+#about #step-4 .story-2 .story__content,
+#about #step-4 .story-3 .story__content,
+#about #step-4 .story-4 .story__content,
+#about #step-4 .story-5 .story__content,
+#about #step-4 .story-6 .story__content,
+#about #step-4 .story-7 .story__content,
+#about #step-4 .story-8 .story__content,
+#about #step-4 .story-9 .story__content {
+  width: 1200px;
+  position: absolute;
+  left: 50vw;
+  margin-left: -600px;
+}
+#about #step-4 .story-1 .story-img,
+#about #step-4 .story-2 .story-img,
+#about #step-4 .story-3 .story-img,
+#about #step-4 .story-4 .story-img,
+#about #step-4 .story-5 .story-img,
+#about #step-4 .story-6 .story-img,
+#about #step-4 .story-7 .story-img,
+#about #step-4 .story-8 .story-img,
+#about #step-4 .story-9 .story-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80vh;
+  width: 480px;
+}
+#about #step-4 .story-1 .story-img h3,
+#about #step-4 .story-2 .story-img h3,
+#about #step-4 .story-3 .story-img h3,
+#about #step-4 .story-4 .story-img h3,
+#about #step-4 .story-5 .story-img h3,
+#about #step-4 .story-6 .story-img h3,
+#about #step-4 .story-7 .story-img h3,
+#about #step-4 .story-8 .story-img h3,
+#about #step-4 .story-9 .story-img h3 {
+  font-size: 60px;
+  font-family: "Proxima Nova";
+  color: #f1ead0;
+  text-transform: uppercase;
+  font-weight: 100;
+  line-height: 1;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 30%;
+  transform: translate3d(0, 20vh, 0);
+  transition: all 1s ease-in;
+}
+#about #step-4 .story-1 .story-img img,
+#about #step-4 .story-2 .story-img img,
+#about #step-4 .story-3 .story-img img,
+#about #step-4 .story-4 .story-img img,
+#about #step-4 .story-5 .story-img img,
+#about #step-4 .story-6 .story-img img,
+#about #step-4 .story-7 .story-img img,
+#about #step-4 .story-8 .story-img img,
+#about #step-4 .story-9 .story-img img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transform: translate3d(0, -30vh, 0);
+  transition: all 750ms ease-in;
+}
+#about #step-4 .story-1 .story-text,
+#about #step-4 .story-2 .story-text,
+#about #step-4 .story-3 .story-text,
+#about #step-4 .story-4 .story-text,
+#about #step-4 .story-5 .story-text,
+#about #step-4 .story-6 .story-text,
+#about #step-4 .story-7 .story-text,
+#about #step-4 .story-8 .story-text,
+#about #step-4 .story-9 .story-text {
+  position: absolute;
+  left: 600px;
+  top: 0;
+  width: 530px;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+#about #step-4 .story-1 .story-text h2,
+#about #step-4 .story-2 .story-text h2,
+#about #step-4 .story-3 .story-text h2,
+#about #step-4 .story-4 .story-text h2,
+#about #step-4 .story-5 .story-text h2,
+#about #step-4 .story-6 .story-text h2,
+#about #step-4 .story-7 .story-text h2,
+#about #step-4 .story-8 .story-text h2,
+#about #step-4 .story-9 .story-text h2 {
+  font-size: 20px;
+  font-family: "Proxima Nova";
+  color: #f1ead0;
+  text-transform: uppercase;
+  line-height: 1.271;
+  text-align: left;
+  text-shadow: 0px 2px 13px rgba(0,0,0,0.3);
+  z-index: 296;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+#about #step-4 .story-1 .story-text p,
+#about #step-4 .story-2 .story-text p,
+#about #step-4 .story-3 .story-text p,
+#about #step-4 .story-4 .story-text p,
+#about #step-4 .story-5 .story-text p,
+#about #step-4 .story-6 .story-text p,
+#about #step-4 .story-7 .story-text p,
+#about #step-4 .story-8 .story-text p,
+#about #step-4 .story-9 .story-text p {
+  font-size: 20px;
+  font-family: "Proxima Nova";
+  color: #fff;
+  font-weight: bold;
+  line-height: 1.454;
+  text-align: justify;
+  z-index: 295;
+  margin: 0;
+  margin-top: 0;
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+#about #step-4 .story-1 .line-top,
+#about #step-4 .story-2 .line-top,
+#about #step-4 .story-3 .line-top,
+#about #step-4 .story-4 .line-top,
+#about #step-4 .story-5 .line-top,
+#about #step-4 .story-6 .line-top,
+#about #step-4 .story-7 .line-top,
+#about #step-4 .story-8 .line-top,
+#about #step-4 .story-9 .line-top {
+  position: relative;
+  top: -5vh;
+  background: -webkit-linear-gradient(rgba(241,234,208,0.5), rgba(241,234,208,0.1));
+  background: -o-linear-gradient(rgba(241,234,208,0.5), rgba(241,234,208,0.1));
+  background: -moz-linear-gradient(rgba(241,234,208,0.5), rgba(241,234,208,0.1));
+  background: linear-gradient(rgba(241,234,208,0.5), rgba(241,234,208,0.1));
+  display: block;
+  width: 8px;
+  height: 420vh;
+  margin-top: 24px;
+  z-index: 999;
+}
+#about #step-4 .story-1 .line,
+#about #step-4 .story-2 .line,
+#about #step-4 .story-3 .line,
+#about #step-4 .story-4 .line,
+#about #step-4 .story-5 .line,
+#about #step-4 .story-6 .line,
+#about #step-4 .story-7 .line,
+#about #step-4 .story-8 .line,
+#about #step-4 .story-9 .line {
+  background: -webkit-linear-gradient(#f1ead0, rgba(241,234,208,0.5));
+  background: -o-linear-gradient(#f1ead0, rgba(241,234,208,0.5));
+  background: -moz-linear-gradient(#f1ead0, rgba(241,234,208,0.5));
+  background: linear-gradient(#f1ead0, rgba(241,234,208,0.5));
+  display: block;
+  width: 8px;
+  margin-top: 24px;
+  flex-grow: 1;
+}
+#about #step-4 .story-1 {
+  top: 0;
+}
+#about #step-4 .story-1 .story-img img {
+  top: 56%;
+}
+#about #step-4 .story-1 .story-text .line-top {
+  background: none;
+  height: 31vh;
+}
+#about #step-4 .story-1 .story-2 {
+  top: 100vh;
+}
+#about #step-4 .story-1 .story-2 .story-img h3 {
+  top: 23%;
+}
+#about #step-4 .story-1 .story-2 .story-text {
+  top: 0;
+}
+#about #step-4 .story-1 .story-2 .story-text .line-top {
+  height: 14vh;
+}
+#about #step-4 .story-1 .story-2 .line {
+  height: 68vh;
+}
+#about #step-4 .story-1 .story-3 {
+  top: 200vh;
+}
+#about #step-4 .story-1 .story-3 .story-img h3 {
+  top: 24%;
+}
+#about #step-4 .story-1 .line {
+  height: 60vh;
+}
+#about #step-4 .story-4 {
+  top: 300vh;
+}
+#about #step-4 .story-4 .story-img h3 {
+  top: 22%;
+}
+#about #step-4 .story-4 .story-text {
+  top: 0;
+}
+#about #step-4 .story-4 .story-text .line-top {
+  height: 18vh;
+}
+#about #step-4 .story-4 .line {
+  height: 40vh;
+}
+#about #step-4 .story-5 {
+  top: 400vh;
+}
+#about #step-4 .story-5 .story-img h3 {
+  top: 24%;
+}
+#about #step-4 .line {
+  height: 65vh;
+}
+#about .story-6 {
+  top: 500vh;
+}
+#about .story-6 .story-img h3 {
+  top: 22%;
+}
+#about .story-6 .story-text {
+  top: 0;
+}
+#about .story-6 .story-text .line-top {
+  height: 14vh;
+}
+#about .story-6 .line {
+  height: 68vh;
+}
+#about .story-7 {
+  top: 600vh;
+}
+#about .story-7 .story-img h3 {
+  top: 15%;
+}
+#about .story-7 .story-text {
+  top: 0;
+}
+#about .story-7 .story-text .line-top {
+  height: 27vh;
+}
+#about .story-7 .line {
+  height: 66vh;
+}
+#about .story-8 {
+  top: 700vh;
+}
+#about .story-8 .story-img h3 {
+  top: 18%;
+}
+#about .story-8 .story-img img {
+  top: 45%;
+}
+#about .story-8 .story-text {
+  top: 0;
+}
+#about .story-8 .story-text .line-top {
+  height: 220px;
+}
+#about .story-8 .line {
+  height: 66vh;
+}
+#about .story-9 {
+  top: 800vh;
+  margin-bottom: 200px;
+}
+#about .story-9 .story-img h3 {
+  top: 15%;
+}
+#about .story-9 .story-img img {
+  top: 12%;
+}
+#about .story-9 .story-text {
+  top: 0;
+}
+#about .story-9 .story-text .line-top {
+  height: 250px;
+}
+.is-step-4.is-story-1 #step-4 {
+  transform: translate3d(0, 0, 0);
+  transition: all 750ms ease;
+}
+.is-step-4.is-story-1 #step-4 .story-1 h3 {
+  transform: translate3d(0, 0, 0);
+  transition: all 750ms ease;
+}
+.is-step-4.is-story-1 #step-4 .story-1 img {
+  transform: translate3d(0, 0, 0);
+  transition: all 1s ease;
+}
+.is-step-4.is-story-2 #step-4 {
+  transform: translate3d(0, -100vh, 0);
+  transition: all 750ms ease;
+}
+.is-step-4.is-story-2 #step-4 .story-2 h3 {
+  transform: translate3d(0, 0, 0);
+  transition: all 1s ease;
+  transition-delay: 500ms;
+}
+.is-step-4.is-story-2 #step-4 .story-2 img {
+  transform: translate3d(0, -10vh, 0);
+  transition: all 1s ease;
+  transition-delay: 500ms;
+}
+.is-step-4.is-story-3 #step-4 {
+  transform: translate3d(0, -200vh, 0);
+  transition: all 750ms ease;
+}
+.is-step-4.is-story-3 #step-4 .story-3 h3 {
+  transform: translate3d(0, 0, 0);
+  transition: all 1s ease;
+  transition-delay: 500ms;
+}
+.is-step-4.is-story-3 #step-4 .story-3 img {
+  transform: translate3d(0, -10vh, 0);
+  transition: all 1s ease;
+  transition-delay: 500ms;
+}
+.is-step-4.is-story-4 #step-4 {
+  transform: translate3d(0, -300vh, 0);
+  transition: all 750ms ease;
+}
+.is-step-4.is-story-4 #step-4 .story-4 h3 {
+  transform: translate3d(0, 0, 0);
+  transition: all 1s ease;
+  transition-delay: 500ms;
+}
+.is-step-4.is-story-4 #step-4 .story-4 img {
+  transform: translate3d(0, -5vh, 0);
+  transition: all 1s ease;
+  transition-delay: 500ms;
+}
+.is-step-4.is-story-5 #step-4 {
+  transform: translate3d(0, -400vh, 0);
+  transition: all 750ms ease;
+}
+.is-step-4.is-story-5 #step-4 .story-5 h3 {
+  transform: translate3d(0, 0, 0);
+  transition: all 1s ease;
+  transition-delay: 500ms;
+}
+.is-step-4.is-story-5 #step-4 .story-5 img {
+  transform: translate3d(0, -10vh, 0);
+  transition: all 1s ease;
+  transition-delay: 500ms;
+}
+.is-step-4.is-story-6 #step-4 {
+  transform: translate3d(0, -500vh, 0);
+  transition: all 750ms ease;
+}
+.is-step-4.is-story-6 #step-4 .story-6 h3 {
+  transform: translate3d(0, 2vh, 0);
+  transition: all 1s ease;
+  transition-delay: 500ms;
+}
+.is-step-4.is-story-6 #step-4 .story-6 img {
+  transform: translate3d(0, -10vh, 0);
+  transition: all 1s ease;
+  transition-delay: 500ms;
+}
+.is-step-4.is-story-7 #step-4 {
+  transform: translate3d(0, -600vh, 0);
+  transition: all 750ms ease;
+}
+.is-step-4.is-story-7 #step-4 .story-7 h3 {
+  transform: translate3d(0, 2vh, 0);
+  transition: all 1s ease;
+  transition-delay: 500ms;
+}
+.is-step-4.is-story-7 #step-4 .story-7 img {
+  transform: translate3d(0, -10vh, 0);
+  transition: all 1s ease;
+  transition-delay: 500ms;
+}
+.is-step-4.is-story-8 #step-4 {
+  transform: translate3d(0, -700vh, 0);
+  transition: all 750ms ease;
+}
+.is-step-4.is-story-8 #step-4 .story-8 h3 {
+  transform: translate3d(0, 5vh, 0);
+  transition: all 1s ease;
+  transition-delay: 500ms;
+}
+.is-step-4.is-story-8 #step-4 .story-8 img {
+  transform: translate3d(0, 0, 0);
+  transition: all 1s ease;
+  transition-delay: 500ms;
+}
+.is-step-4.is-story-9 #step-4 {
+  transform: translate3d(0, -800vh, 0);
+  transition: all 750ms ease;
+}
+.is-step-4.is-story-9 #step-4 .story-9 h3 {
+  transform: translate3d(0, 5vh, 0);
+  transition: all 1s ease;
+  transition-delay: 500ms;
+}
+.is-step-4.is-story-9 #step-4 .story-9 img {
+  transform: translate3d(0, 0, 0);
+  transition: all 1s ease;
+  transition-delay: 500ms;
+}
+.is-step-5 #step-4 {
+  transform: translate3d(0, -900vh, 0);
+  transition: all 750ms ease;
+}
+.is-step-5 #step-4 .story-9 h3 {
+  transform: translate3d(0, 5vh, 0);
+  transition: all 1s ease;
+  transition-delay: 500ms;
+}
+.is-step-5 #step-4 .story-9 img {
+  transform: translate3d(0, 0, 0);
+  transition: all 1s ease;
+  transition-delay: 500ms;
+}
+@media screen and (max-width: 1200px) {
+  #about #step-4 .our-story {
+    width: 100vw;
+    margin-left: -50vw;
+  }
+  #about #step-4 .story-1,
+  #about #step-4 .story-2,
+  #about #step-4 .story-3,
+  #about #step-4 .story-4,
+  #about #step-4 .story-5,
+  #about #step-4 .story-6,
+  #about #step-4 .story-7,
+  #about #step-4 .story-8,
+  #about #step-4 .story-9 {
+    width: 100vw;
+  }
+  #about #step-4 .story-1 .story-img,
+  #about #step-4 .story-2 .story-img,
+  #about #step-4 .story-3 .story-img,
+  #about #step-4 .story-4 .story-img,
+  #about #step-4 .story-5 .story-img,
+  #about #step-4 .story-6 .story-img,
+  #about #step-4 .story-7 .story-img,
+  #about #step-4 .story-8 .story-img,
+  #about #step-4 .story-9 .story-img {
+    width: 40vw;
+  }
+  #about #step-4 .story-1 .story-img h3,
+  #about #step-4 .story-2 .story-img h3,
+  #about #step-4 .story-3 .story-img h3,
+  #about #step-4 .story-4 .story-img h3,
+  #about #step-4 .story-5 .story-img h3,
+  #about #step-4 .story-6 .story-img h3,
+  #about #step-4 .story-7 .story-img h3,
+  #about #step-4 .story-8 .story-img h3,
+  #about #step-4 .story-9 .story-img h3 {
+    font-size: 6vw;
+  }
+  #about #step-4 .story-1 .story-text,
+  #about #step-4 .story-2 .story-text,
+  #about #step-4 .story-3 .story-text,
+  #about #step-4 .story-4 .story-text,
+  #about #step-4 .story-5 .story-text,
+  #about #step-4 .story-6 .story-text,
+  #about #step-4 .story-7 .story-text,
+  #about #step-4 .story-8 .story-text,
+  #about #step-4 .story-9 .story-text {
+    left: 47vw;
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  #about #step-4 .story-1 .story-text h2,
+  #about #step-4 .story-2 .story-text h2,
+  #about #step-4 .story-3 .story-text h2,
+  #about #step-4 .story-4 .story-text h2,
+  #about #step-4 .story-5 .story-text h2,
+  #about #step-4 .story-6 .story-text h2,
+  #about #step-4 .story-7 .story-text h2,
+  #about #step-4 .story-8 .story-text h2,
+  #about #step-4 .story-9 .story-text h2,
+  #about #step-4 .story-1 .story-text p,
+  #about #step-4 .story-2 .story-text p,
+  #about #step-4 .story-3 .story-text p,
+  #about #step-4 .story-4 .story-text p,
+  #about #step-4 .story-5 .story-text p,
+  #about #step-4 .story-6 .story-text p,
+  #about #step-4 .story-7 .story-text p,
+  #about #step-4 .story-8 .story-text p,
+  #about #step-4 .story-9 .story-text p {
+    font-size: 1.92vw;
+  }
+  #about #step-4 .story-1 .story-text p,
+  #about #step-4 .story-2 .story-text p,
+  #about #step-4 .story-3 .story-text p,
+  #about #step-4 .story-4 .story-text p,
+  #about #step-4 .story-5 .story-text p,
+  #about #step-4 .story-6 .story-text p,
+  #about #step-4 .story-7 .story-text p,
+  #about #step-4 .story-8 .story-text p,
+  #about #step-4 .story-9 .story-text p {
+    display: flex;
+    flex-direction: column;
+  }
+  #about #step-4 .story-1 .story-text .line,
+  #about #step-4 .story-2 .story-text .line,
+  #about #step-4 .story-3 .story-text .line,
+  #about #step-4 .story-4 .story-text .line,
+  #about #step-4 .story-5 .story-text .line,
+  #about #step-4 .story-6 .story-text .line,
+  #about #step-4 .story-7 .story-text .line,
+  #about #step-4 .story-8 .story-text .line,
+  #about #step-4 .story-9 .story-text .line {
+    width: 4px;
+    flex-grow: 1;
+  }
+  #about #step-4 .story-1 .story-text .line-top,
+  #about #step-4 .story-2 .story-text .line-top,
+  #about #step-4 .story-3 .story-text .line-top,
+  #about #step-4 .story-4 .story-text .line-top,
+  #about #step-4 .story-5 .story-text .line-top,
+  #about #step-4 .story-6 .story-text .line-top,
+  #about #step-4 .story-7 .story-text .line-top,
+  #about #step-4 .story-8 .story-text .line-top,
+  #about #step-4 .story-9 .story-text .line-top {
+    width: 4px;
+    height: 20vh;
+  }
+  #about #step-4 .story-1 .story-text .line-top {
+    height: 44vh;
+  }
+  #about #step-4 .story-7 .story-text .line-top {
+    height: 33vh;
+  }
+  #about #step-4 .story-8 .story-text .line-top {
+    height: 33vh;
+  }
+  #about #step-4 .story-9 .story-text .line-top {
+    height: 33vh;
+  }
+  #about #step-4 .story-9 .story-img img {
+    top: 20vh;
+  }
+}
+@media screen and (max-width: 680px) {
+  #about #step-4 h1 {
+    margin-top: 0;
+  }
+  #about #step-4 .story-1,
+  #about #step-4 .story-2,
+  #about #step-4 .story-3,
+  #about #step-4 .story-4,
+  #about #step-4 .story-5,
+  #about #step-4 .story-6,
+  #about #step-4 .story-7,
+  #about #step-4 .story-8,
+  #about #step-4 .story-9 {
+    height: 100vh;
+  }
+  #about #step-4 .story-1 br,
+  #about #step-4 .story-2 br,
+  #about #step-4 .story-3 br,
+  #about #step-4 .story-4 br,
+  #about #step-4 .story-5 br,
+  #about #step-4 .story-6 br,
+  #about #step-4 .story-7 br,
+  #about #step-4 .story-8 br,
+  #about #step-4 .story-9 br {
+    display: none;
+  }
+  #about #step-4 .story-1 .line,
+  #about #step-4 .story-2 .line,
+  #about #step-4 .story-3 .line,
+  #about #step-4 .story-4 .line,
+  #about #step-4 .story-5 .line,
+  #about #step-4 .story-6 .line,
+  #about #step-4 .story-7 .line,
+  #about #step-4 .story-8 .line,
+  #about #step-4 .story-9 .line {
+    margin: 10px auto;
+    width: 4px;
+    height: 30vh;
+    background: -webkit-linear-gradient(#f1ead0, rgba(241,234,208,0.1));
+    background: -o-linear-gradient(#f1ead0, rgba(241,234,208,0.1));
+    background: -moz-linear-gradient(#f1ead0, rgba(241,234,208,0.1));
+    background: linear-gradient(#f1ead0, rgba(241,234,208,0.1));
+  }
+  #about #step-4 .story-1 .line-top,
+  #about #step-4 .story-2 .line-top,
+  #about #step-4 .story-3 .line-top,
+  #about #step-4 .story-4 .line-top,
+  #about #step-4 .story-5 .line-top,
+  #about #step-4 .story-6 .line-top,
+  #about #step-4 .story-7 .line-top,
+  #about #step-4 .story-8 .line-top,
+  #about #step-4 .story-9 .line-top {
+    display: none;
+  }
+  #about #step-4 .story-1 .story-text,
+  #about #step-4 .story-2 .story-text,
+  #about #step-4 .story-3 .story-text,
+  #about #step-4 .story-4 .story-text,
+  #about #step-4 .story-5 .story-text,
+  #about #step-4 .story-6 .story-text,
+  #about #step-4 .story-7 .story-text,
+  #about #step-4 .story-8 .story-text,
+  #about #step-4 .story-9 .story-text {
+    position: relative;
+    display: block;
+    width: 80vw;
+    margin: 5vw 10vw;
+    left: 0;
+    top: 0;
+  }
+  #about #step-4 .story-1 .story-img,
+  #about #step-4 .story-2 .story-img,
+  #about #step-4 .story-3 .story-img,
+  #about #step-4 .story-4 .story-img,
+  #about #step-4 .story-5 .story-img,
+  #about #step-4 .story-6 .story-img,
+  #about #step-4 .story-7 .story-img,
+  #about #step-4 .story-8 .story-img,
+  #about #step-4 .story-9 .story-img {
+    position: relative;
+    height: 20vh;
+    display: inline-block;
+    width: 100vw;
+    margin: 10vw 0;
+    overflow: hidden;
+    left: 0;
+    top: 5vh;
+  }
+  #about #step-4 .story-1 .story-img img,
+  #about #step-4 .story-2 .story-img img,
+  #about #step-4 .story-3 .story-img img,
+  #about #step-4 .story-4 .story-img img,
+  #about #step-4 .story-5 .story-img img,
+  #about #step-4 .story-6 .story-img img,
+  #about #step-4 .story-7 .story-img img,
+  #about #step-4 .story-8 .story-img img,
+  #about #step-4 .story-9 .story-img img {
+    top: 0;
+    width: 100%;
+  }
+  #about #step-4 .story-1 .story-img h3,
+  #about #step-4 .story-2 .story-img h3,
+  #about #step-4 .story-3 .story-img h3,
+  #about #step-4 .story-4 .story-img h3,
+  #about #step-4 .story-5 .story-img h3,
+  #about #step-4 .story-6 .story-img h3,
+  #about #step-4 .story-7 .story-img h3,
+  #about #step-4 .story-8 .story-img h3,
+  #about #step-4 .story-9 .story-img h3 {
+    top: 7vh;
+    font-size: 35px;
+    z-index: 999;
+    opacity: 0.75;
+    padding: 40px 0 0 0;
+    bottom: 0;
+    margin-bottom: 0;
+    background: linear-gradient(rgba(44,21,0,0), #2c1500);
+  }
+  #about #step-4 .story-1 .story-text,
+  #about #step-4 .story-2 .story-text,
+  #about #step-4 .story-3 .story-text,
+  #about #step-4 .story-4 .story-text,
+  #about #step-4 .story-5 .story-text,
+  #about #step-4 .story-6 .story-text,
+  #about #step-4 .story-7 .story-text,
+  #about #step-4 .story-8 .story-text,
+  #about #step-4 .story-9 .story-text {
+    height: auto;
+  }
+  #about #step-4 .story-1 .story-text h2,
+  #about #step-4 .story-2 .story-text h2,
+  #about #step-4 .story-3 .story-text h2,
+  #about #step-4 .story-4 .story-text h2,
+  #about #step-4 .story-5 .story-text h2,
+  #about #step-4 .story-6 .story-text h2,
+  #about #step-4 .story-7 .story-text h2,
+  #about #step-4 .story-8 .story-text h2,
+  #about #step-4 .story-9 .story-text h2,
+  #about #step-4 .story-1 .story-text p,
+  #about #step-4 .story-2 .story-text p,
+  #about #step-4 .story-3 .story-text p,
+  #about #step-4 .story-4 .story-text p,
+  #about #step-4 .story-5 .story-text p,
+  #about #step-4 .story-6 .story-text p,
+  #about #step-4 .story-7 .story-text p,
+  #about #step-4 .story-8 .story-text p,
+  #about #step-4 .story-9 .story-text p {
+    font-size: 15px;
+  }
+  #about #step-4 .story-1 {
+    top: 2vh;
+  }
+  #about #step-4 .story-1 .story-text h2,
+  #about #step-4 .story-1 .story-text p {
+    top: 10vh;
+  }
+  #about #step-4 .story-1 .story-img {
+    top: 15vh;
+  }
+  #about #step-4 .story-1 .story-img img {
+    top: -5vh;
+  }
+  #about #step-4 .story-1 .story-img h3 {
+    top: 4vh;
+  }
+  #about #step-4 .story-2 {
+    top: 100vh;
+  }
+  #about #step-4 .story-2 .story-img img {
+    top: 5vh;
+  }
+  #about #step-4 .story-3 {
+    top: 200vh;
+  }
+  #about #step-4 .story-3 .story-img img {
+    top: -10vh;
+  }
+  #about #step-4 .story-4 {
+    top: 300vh;
+  }
+  #about #step-4 .story-4 .story-img img {
+    top: 3vh;
+  }
+  #about #step-4 .story-5 {
+    top: 400vh;
+  }
+  #about #step-4 .story-5 .story-img img {
+    top: 10vh;
+  }
+  #about #step-4 .story-6 {
+    top: 500vh;
+  }
+  #about #step-4 .story-6 .story-img img {
+    top: 10vh;
+  }
+  #about #step-4 .story-7 {
+    top: 600vh;
+  }
+  #about #step-4 .story-7 .story-img img {
+    top: 10vh;
+  }
+  #about #step-4 .story-7 .story-img h3 {
+    top: 12vh;
+  }
+  #about #step-4 .story-8 {
+    top: 700vh;
+  }
+  #about #step-4 .story-8 .story-img img {
+    top: 2vh;
+  }
+  #about #step-4 .story-9 {
+    top: 800vh;
+  }
+  #about #step-4 .story-9 .story-img img {
+    left: 50vw;
+    top: -7vh;
+    width: 44vw;
+    margin-left: -22vw;
+  }
+  #about #step-4 .story-7 .story-img h3,
+  #about #step-4 .story-8 .story-img h3,
+  #about #step-4 .story-9 .story-img h3 {
+    padding: 0;
+  }
+}

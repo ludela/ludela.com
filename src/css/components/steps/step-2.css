@@ -1,0 +1,47 @@
+#step-2 {
+  opacity: 0;
+  transition: opacity 100ms ease;
+}
+.is-step-2 {
+  transition: background 0s ease;
+}
+.is-step-2:after {
+  transition: opacity 0s ease;
+}
+.is-step-1 #step-2 .splash__headline {
+  opacity: 0;
+  transform: translate3d(0, 100vh, 0);
+}
+.is-step-2 #step-2,
+.is-step-3 #step-2 {
+  opacity: 1;
+}
+.is-step-2 #step-2 .splash__headline,
+.is-step-3 #step-2 .splash__headline {
+  opacity: 1;
+  transform: translate3d(0, -80vh, 0);
+}
+.is-step-4 #step-2,
+.is-step-5 #step-2,
+.is-step-6 #step-2,
+.is-step-7 #step-2 {
+  opacity: 0;
+  transition-delay: 300ms;
+}
+.is-step-4 #step-2 .splash__headline,
+.is-step-5 #step-2 .splash__headline,
+.is-step-6 #step-2 .splash__headline,
+.is-step-7 #step-2 .splash__headline {
+  transform: translate3d(0, -100vh, 0);
+}
+@media all and (min-width: 800px) {
+  .is-step-2 #step-2,
+  .is-step-3 #step-2 {
+    opacity: 1;
+  }
+  .is-step-2 #step-2 .splash__headline,
+  .is-step-3 #step-2 .splash__headline {
+    opacity: 1;
+    transform: translate3d(0, 15vh, 0);
+  }
+}

@@ -24,6 +24,7 @@
     "express": "^4.14.0",
     "helpful-ui": "^1.1.0",
     "jquery": "^3.1.0",
+    "node-sass": "3.10.0",
     "rollup": "0.36.0",
     "rollup-plugin-buble": "0.14.0",
     "rollup-plugin-commonjs": "5.0.4",

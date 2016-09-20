@@ -1,0 +1,68 @@
+.modal {
+  position: fixed;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  top: -500vh;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0,0,0,0.75);
+  transition: opacity 500ms ease;
+}
+.modal.is-open {
+  top: 0;
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
+.modal .modal-close {
+  width: 35px;
+  height: 30px;
+  position: absolute;
+  left: 40px;
+  top: 60px;
+  margin: 0 auto;
+  margin-top: -8px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition: 350ms ease-in-out;
+  cursor: pointer;
+}
+.modal .modal-close span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #f1ead0;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition: 150ms ease-in-out;
+}
+.modal .modal-close span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+.modal .modal-close span:nth-child(2) {
+  transform: rotate(45deg);
+}
+.modal .modal-close span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+.modal .modal-close span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+@media screen and (max-width: 980px) {
+  .modal .modal-close {
+    left: 20px;
+    top: 50px;
+    margin-top: -15px;
+  }
+}

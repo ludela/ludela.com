@@ -1,9 +1,10 @@
 sass = require 'bebop/lib/compilers/sass'
 
 module.exports =
-  workDir: 'public/'
+  workDir: 'src/'
+  staticDir: 'public/'
   compilers:
     scss: ->
-      sass 'prelaunch/sass/style.scss', 'public/prelaunch.css', (err) ->
+      sass 'prelaunch/sass/prelaunch.scss', 'public/css/prelaunch.css', (err) ->
         throw err if err?
-
+    styl: ->

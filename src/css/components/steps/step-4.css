@@ -1,0 +1,59 @@
+#step-4 {
+  opacity: 0;
+  transition: opacity 100ms ease;
+}
+.is-step-4 {
+  background: #221010;
+}
+.is-step-4:before {
+  background: linear-gradient(0deg, rgba(255,255,255,0) 40%, rgba(255,255,255,0.3));
+  opacity: 1;
+}
+.is-step-4:after {
+  opacity: 0;
+  background: linear-gradient(0deg, #221010 40%, rgba(240,189,60,0));
+  transition: opacity 10s ease;
+}
+.is-step-3 #step-4 {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.is-step-4 #step-4 {
+  opacity: 1;
+}
+.is-step-4 #step-4 .splash__headline {
+  position: fixed;
+  opacity: 1;
+  transform: translate3d(0, -280vh, 0);
+}
+.is-step-4 #step-4 .small-text {
+  opacity: 1;
+}
+.is-step-1 #step-4 .splash__headline,
+.is-step-2 #step-4 .splash__headline,
+.is-step-3 #step-4 .splash__headline {
+  transform: translate3d(0, 100vh, 0);
+}
+.is-step-3 #step-4 .small-text {
+  opacity: 0;
+}
+.is-step-5 #step-4,
+.is-step-6 #step-4,
+.is-step-7 #step-4 {
+  transition: opacity 750ms ease;
+}
+.is-step-5 #step-4 .splash__headline,
+.is-step-6 #step-4 .splash__headline,
+.is-step-7 #step-4 .splash__headline {
+  position: absolute;
+}
+.is-step-5 #step-4 .small-text,
+.is-step-6 #step-4 .small-text,
+.is-step-7 #step-4 .small-text {
+  transform: translate3d(0, 100vh, 0);
+}
+@media all and (min-width: 800px) {
+  .is-step-4 #step-4 .splash__headline {
+    transform: translate3d(0, 15vh, 0);
+  }
+}
