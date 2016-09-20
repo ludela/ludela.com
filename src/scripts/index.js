@@ -6,8 +6,8 @@ import about from './about';
 import shell from './shell';
 import video from './video';
 import framework from './framework';
-import checkout from './checkout';
 
+window.$ = window.jQuery = jQuery;
 
 jQuery(function ($) {
   _debugger($);
@@ -17,7 +17,6 @@ jQuery(function ($) {
   shell($);
   video($);
   framework($);
-  checkout($);
 
   const $nav = $('#menu'),
         $page = $('.wrapper'),
