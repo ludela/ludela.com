@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/css/selectize.bootstrap3.min.css">
     <link rel="stylesheet" href="/site.css">
+    <script>
+      !function(t,e,a){var r,n,c,i,o,s,l,u;if(null==t.analytics){for(r=[],r.methods=["ab","alias","group","identify","off","on","once","page","pageview","ready","track","trackClick","trackForm","trackLink","trackSubmit"],l=r.methods,c=function(t){r[t]=function(){var e;return e=Array.prototype.slice.call(arguments),e.unshift(t),r.push(e),r}},i=0,o=l.length;o>i;i++)s=l[i],c(s);return u=e.createElement("script"),u.async=!0,u.type="text/javascript",u.src=a,n=e.getElementsByTagName("script")[0],n.parentNode.insertBefore(u,n),t.analytics=r}}(window,document,"//cdn.crowdstart.com/a/ludela.js");
+    </script>
     <script src="https://use.typekit.net/scc3jrx.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
@@ -37,14 +41,14 @@
       <a class='menu__link' href='/contact'>
         contact
       </a>
-      <a class="menu__social" href='http://facebook.com/JoinLudela'>
-        <span class="icomoon icomoon-facebook"> </span>
+      <a class="menu__social"  href='http://facebook.com/JoinLudela' target="_blank">
+        <span class="icon icon-facebook"> </span>
       </a>
-      <a class="menu__social" href='http://twitter.com/JoinLudela'>
-        <span class="icomoon icomoon-twitter"> </span>
+      <a class="menu__social"  href='http://twitter.com/JoinLudela' target="_blank">
+        <span class="icon icon-twitter"> </span>
       </a>
-      <a class="menu__social" href='https://www.pinterest.com/joinludela'>
-        <span class="icomoon icomoon-pinterest"> </span>
+      <a class="menu__social"  href='https://www.pinterest.com/joinludela' target="_blank">
+        <span class="icon icon-pinterest"> </span>
       </a>
     </nav>
     <header class="header-bar fixed" id="header">
@@ -65,6 +69,7 @@
             <span class="icomoon icomoon-LuDela-logo"> </span>
           </a>
         </div>
+        <a href="#" class="checkout-button">Pre-order</a>
       </div>
     </header>
     <div class='footer-bar fixed'>
@@ -447,6 +452,187 @@
         </div>
       </div>
     </div>
+    <div class="modal">
+      <div class="checkout-container">
+        <div class="checkout">
+          <cart>
+            <h1>
+              Order Summary
+            </h1>
+
+            <lineitems if="{ !isEmpty() }"></lineitems>
+
+            <div class="promo">
+              <div class="promo-row">
+                <promocode class="input" placeholder="Coupon Code"></promocode>
+                <button class="{ loading: applying }" onclick="{ applyPromoCode }">Apply</button>
+                <div class="promo-message" if="{ data.get('order.promoCode') && !promoMessage && !applying }">
+                  Don't forget to apply your code!
+                </div>
+                <div class="promo-message" if="{ promoMessage }">
+                  { promoMessage }
+                </div>
+              </div>
+            </div>
+            <div class="invoice-line animated fadeInUp" if="{ data.get('order.discount') > 0 }">
+              <div>
+                Discount:
+              </div>
+              <div>
+                { renderCurrency(data.get('order.currency'), data.get('order.discount'))}&nbsp;{ data.get('order.currency').toUpperCase() }
+              </div>
+            </div>
+            <div class="invoice-line">
+              <div>
+                Subtotal:
+              </div>
+              <div>
+                { renderCurrency(data.get('order.currency'), data.get('order.subtotal'))}&nbsp;{ data.get('order.currency').toUpperCase() }
+              </div>
+            </div>
+            <div class="invoice-line">
+              <div>
+                Shipping (billed later):
+              </div>
+              <div class="not-bold">
+                - -
+              </div>
+            </div>
+            <div class="invoice-line">
+              <div>
+                Tax ({ data.get('order.taxRate') * 100 }%):
+              </div>
+              <div>
+                { renderCurrency(data.get('order.currency'), data.get('order.tax'))}&nbsp;{ data.get('order.currency').toUpperCase() }
+              </div>
+            </div>
+            <div class="invoice-line">
+              <div>
+                Total:
+              </div>
+              <div>
+                { renderCurrency(data.get('order.currency'), data.get('order.total'))}&nbsp;{ data.get('order.currency').toUpperCase() }
+              </div>
+            </div>
+          </cart>
+          <checkout>
+            <div class="contact-information">
+              <h1>
+                Contact Information
+              </h1>
+              <div class="fields">
+                <user-name class="input" placeholder="Name"></user-name>
+                <user-email class="input" placeholder="Email"></user-email>
+              </div>
+            </div>
+            <div class="shipping-information">
+              <h1>
+                Shipping Address
+              </h1>
+              <div class="fields">
+                <shippingaddress-line1 class="input" placeholder="Address"></shippingaddress-line1>
+                <shippingaddress-line2 class="input" placeholder="Suite"></shippingaddress-line2>
+              </div>
+              <div class="fields">
+                <shippingaddress-city class="input" placeholder="City"></shippingaddress-city>
+                <shippingaddress-postalcode class="input" placeholder="Postal Code"></shippingaddress-postalcode>
+              </div>
+              <div class="fields">
+                <shippingaddress-state class="input" placeholder="State"></shippingaddress-state>
+                <shippingaddress-country class="input" placeholder="Country"></shippingaddress-country>
+              </div>
+            </div>
+
+            <div class="payment-information">
+              <h1>
+                Payment Information
+                <div class="icon-lock">
+                  <div class="lock-top-1"></div>
+                  <div class="lock-top-2"></div>
+                  <div class="lock-body"></div>
+                  <div class="lock-hole"></div>
+                </div>
+              </h1>
+
+              <div class="card-information">
+                <div class="fields">
+                  <card-number class="input" name="number" placeholder="Card Number"></card-number>
+                  <card-expiry class="input" name="expiry" placeholder="MM / YY"></card-expiry>
+                  <card-cvc class="input" name="cvc" placeholder="CVC"></card-cvc>
+                </div>
+
+                <!-- <div class="card-types"> -->
+                <!--   <div> -->
+                <!--     <img src="/img/card-icons/visa.png"> -->
+                <!--   </div> -->
+                <!--   <div> -->
+                <!--     <img src="/img/card-icons/mastercard.png"> -->
+                <!--   </div> -->
+                <!--   <div> -->
+                <!--     <img src="/img/card-icons/discover.png"> -->
+                <!--   </div> -->
+                <!--   <div> -->
+                <!--     <img src="/img/card-icons/amex.png"> -->
+                <!--   </div> -->
+                <!-- </div> -->
+
+                <img class="stripe-logo" src="/images/stripelogo.png">
+              </div>
+            </div>
+
+            <div class="confirmation">
+              <h1>
+                Almost Done
+              </h1>
+
+              <terms>
+                <label for="terms">I agree to LuDela's <a href="/legal" target="_blank">terms and conditions</a>.</label>
+              </terms>
+              <button class="{ loading: loading || checkedOut }" type="submit">Confirm Pre-order</button>
+              <div class="error" if="{ errorMessage }">
+                { errorMessage }
+              </div>
+            </div>
+          </checkout>
+        </div>
+      </div>
+      <div class="thankyou">
+        <p>Thank you for making the world a little brighter! You will receive a confirmation email soon.</p>
+
+        <p>Your order number is <strong></strong>.</p>
+
+        <p style="text-align:center">Tell your friends about LuDela!</p>
+        <div class="social">
+          <a class="menu__social"  href="http://facebook.com/JoinLudela" target="_blank">
+            <span class="icon icon-facebook"> </span>
+          </a>
+          <a class="menu__social"  href="http://twitter.com/JoinLudela" target="_blank">
+            <span class="icon icon-twitter"> </span>
+          </a>
+          <a class="menu__social"  href="https://www.pinterest.com/joinludela" target="_blank">
+            <span class="icon icon-pinterest"> </span>
+          </a>
+        </div>
+
+      </div>
+      <div class="modal-close">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- Loader -->
+    <div class="loader hidden">
+      <div class="spinner">
+      </div>
+    </div>
+
     <script src="/site.js"></script>
+    <script src="/shop.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.min.js"></script>
+    <script type="text/javascript" src="/cookies.min.js"></script>
+    <script src="/checkout.js"></script>
   </body>
 </html>

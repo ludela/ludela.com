@@ -29,6 +29,11 @@ export default function ($) {
   if ($panels.length) {
 
     $window.on('scroll', function (ev) {
+      if ($('.is-open')[0]) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        return false
+      }
       const currentPos = $window.scrollTop();
       const scrollDiff = currentPos - lastScrollPos;
       lastScrollPos = currentPos;
@@ -42,7 +47,6 @@ export default function ($) {
     $window.on('load resize', debounce(function () {
       lastScrollPos = $window.scrollTop();
     }, 150));
-
 
     $dot.on('click', function (ev, goTo) {
       goTo = $(this).data('goto');
