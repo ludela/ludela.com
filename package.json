@@ -2,9 +2,7 @@
   "name": "ludela",
   "version": "1.0.0",
   "description": "Custom landing page for ludela.",
-  "main": "index.js",
   "scripts": {
-    "postinstall": "npm run build:scripts && npm run build:styles",
     "build:styles": "stylus src/styles/index.styl --use ./node_modules/helpful-ui --use ./node_modules/autoprefixer-stylus --out public/site.css",
     "watch:styles": "npm run build:styles -- --watch --sourcemap",
     "build:scripts": "rollup -c",
@@ -13,21 +11,25 @@
     "start": "npm run build:styles & npm run build:scripts & node server.js",
     "test": "mocha"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "autoprefixer-stylus": "^0.10.0",
+    "bebop": "1.9.2",
     "browser-sync": "^2.14.3",
+    "cake-publish": "0.1.4",
+    "cake-test": "0.1.0",
+    "cake-version": "0.1.9",
+    "coffee-script": "1.10.0",
     "debounce": "^1.0.0",
     "dotenv": "^2.0.0",
     "express": "^4.14.0",
     "helpful-ui": "^1.1.0",
     "jquery": "^3.1.0",
-    "rollup": "^0.34.13",
-    "rollup-plugin-buble": "^0.13.0",
-    "rollup-plugin-commonjs": "^4.1.0",
+    "rollup": "0.36.0",
+    "rollup-plugin-buble": "0.14.0",
+    "rollup-plugin-commonjs": "5.0.4",
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-watch": "^2.5.0",
+    "shortcake": "1.1.18",
     "stylus": "^0.54.5"
   }
 }
