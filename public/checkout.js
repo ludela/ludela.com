@@ -25,8 +25,8 @@ $(function() {
   })
 
   var settings = {
-    // key: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJiaXQiOjQ1MDM2MTcwNzU2NzUxNzIsImp0aSI6InoyWkNVQ3hrZmhFIiwic3ViIjoiVjlPVDIybUkwYSJ9.QajT3dH6kT4DiqCuUD8MhDEgUdYvQ5ZYSH5kwf0a36-ruKlD1f_SkVVE7uymuSCIcscwNXYMMP5H29EL0RQ7Zw',
-    key: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJiaXQiOjQ1MDM2MTcwNzU2NzUxNzYsImp0aSI6IkdqcEJEblR1RFVrIiwic3ViIjoiVjlPVDIybUkwYSJ9.RwJ5EfCPSKXqj80erk9vX4OHjmDcZQOQZKxdwg5ujSYhPp60L3-RCFNMJ38pKv8wQKR8cy8HquQ9rO6jRez6qA',
+    key: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJiaXQiOjQ1MDM2MTcwNzU2NzUxNzIsImp0aSI6InoyWkNVQ3hrZmhFIiwic3ViIjoiVjlPVDIybUkwYSJ9.QajT3dH6kT4DiqCuUD8MhDEgUdYvQ5ZYSH5kwf0a36-ruKlD1f_SkVVE7uymuSCIcscwNXYMMP5H29EL0RQ7Zw',
+    // key: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJiaXQiOjQ1MDM2MTcwNzU2NzUxNzYsImp0aSI6IkdqcEJEblR1RFVrIiwic3ViIjoiVjlPVDIybUkwYSJ9.RwJ5EfCPSKXqj80erk9vX4OHjmDcZQOQZKxdwg5ujSYhPp60L3-RCFNMJ38pKv8wQKR8cy8HquQ9rO6jRez6qA',
     endpoint: 'https://api.crowdstart.com',
     // endpoint: 'https://api.staging.crowdstart.com',
     // endpoint: 'http://localhost:8080/api',
