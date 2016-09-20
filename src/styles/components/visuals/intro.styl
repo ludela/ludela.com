@@ -77,14 +77,14 @@ $phone_height = 390
   background-image url('/images/CandleFlame.png')
   background-repeat no-repeat
   background-position 50%
-  transform translate3d(0, 25%, 0)
+  transform translate3d(0, -27%, 0)
   opacity 0
   transition opacity 500ms ease, transform 1000ms ease
   z-index 90
 
   / .splash.is-step-1 &
     opacity 1
-    transform translate3d(0, -15%, 0)
+    transform translate3d(0, -27%, 0)
 
   / .splash.is-step-2 &
     opacity 0
@@ -97,7 +97,7 @@ $phone_height = 390
     // transition opacity 500ms ease
     transition-property opacity, transform
     transition-delay 500ms, 500ms
-    transform translate3d(0, -15%, 0)
+    transform translate3d(0, -27%, 0)
 
   / .splash.is-step-4 &,
   / .splash.is-step-5 &,
@@ -394,7 +394,7 @@ $phone_height = 390
 
 &__shell
   position absolute
-  bottom 10%
+  bottom 7%
   left (((1200 - $candle_width) / 2.6) / 1200) * 100%
   background-image url('/images/candle_colors/ivory-shell-full.png')
   background-size contain
@@ -402,7 +402,7 @@ $phone_height = 390
   background-position 50%
   width ((($candle_width) / 1200) * 2) * 100%
   // height ($candle_height / 720) * 100%
-  height 53%
+  height 60%
   transition transform 1500ms ease, left 550ms ease, background 1s ease
   opacity 0
   transform translate3d(0, -100vh, 0)
@@ -518,6 +518,37 @@ $phone_height = 390
     font-size 6px
     font-weight 600
 
+@media all and (min-width 400px)
+  .visuals
+    &__flame
+
+      / .splash.is-step-1 &
+      / .splash.is-step-3 &
+        transform translate3d(0, -45%, 0)
+
+@media all and (min-width 600px) and (min-height 600px)
+  .visuals
+    &__flame
+
+      / .splash.is-step-1 &
+      / .splash.is-step-3 &
+        transform translate3d(0, -80%, 0)
+
+@media all and (min-width 800px) and (min-height 700px)
+  .visuals
+    &__flame
+
+      / .splash.is-step-1 &
+      / .splash.is-step-3 &
+        transform translate3d(0, 0%, 0)
+
+@media all and (min-width 800px) and (min-height 850px)
+  .visuals
+    &__flame
+
+      / .splash.is-step-1 &
+      / .splash.is-step-3 &
+        transform translate3d(0, 10%, 0)
 
 
 @media all and (min-width 800px)
@@ -648,14 +679,47 @@ $phone_height = 390
     &__name
       font-size 12px
 
+@media all and (min-width 1000px)
+  .visuals
+    &__flame
+
+      / .splash.is-step-1 &
+      / .splash.is-step-3 &
+        transform translate3d(0, -30%, 0)
+
 @media all and (min-width 1300px)
   .visuals
     &__wick
       bottom 50%
 
+    &__flame
+
+      / .splash.is-step-1 &
+      / .splash.is-step-3 &
+        transform translate3d(0, -40%, 0)
+
+@media all and (min-width 1300px) and (max-height 800px)
+  .visuals
+    &__wick
+      bottom 50%
+
+    &__flame
+
+      / .splash.is-step-1 &
+      / .splash.is-step-3 &
+        transform translate3d(0, -30%, 0)
 
 @media all and (min-height 850px)
   .visuals
     .swatch
       img
         height 100%
+
+
+@media all and (max-height 700px)
+  .visuals
+    &__flame
+
+      / .splash.is-step-1 &
+      / .splash.is-step-3 &
+        transform translate3d(0, -18%, 0)
