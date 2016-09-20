@@ -1,5 +1,4 @@
 {component(menu)}
-  display none
   width 410px
   height 100vh
   position fixed
@@ -8,16 +7,21 @@
   background #f2be3d
   z-index 999
   text-align center
-  transition all 350ms ease-out
+  transition left 350ms ease-out
 
   &.is-open
-    display block
-    left 0vw
-    transition all 350ms ease-out
+    left 0px
+    transition left 350ms ease-out
 
   {part(logo)}
     display inline-block
     margin 20px 0 75px
+
+    a
+      text-decoration none
+
+    .icon
+      font-size 60px
 
   {part(link)}
     display block
@@ -42,6 +46,9 @@
     margin 80px 10px
     cursor pointer
 
+    .icon
+      font-size 22px
+
   {part(close)}
     display none
 
@@ -56,12 +63,12 @@
     background #f2be3d
     z-index 999
     text-align center
-    transition all 1s ease-out
+    transition top 1s ease-out
 
     &.is-open
       top 0
       left 0
-      transition all 1s ease-out
+      transition top 1s ease-out
 
     {part(logo)}
 
@@ -119,11 +126,10 @@
       display inline-block
       background #ee9347
       padding 12px
-      padding-top 6px
       width 40px
       height 40px
       margin 80px 10px
       cursor pointer
 
-      img
-        height 15px
+      .icon
+        font-size 15px
