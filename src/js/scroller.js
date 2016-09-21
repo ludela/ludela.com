@@ -46,12 +46,7 @@ export default function ($) {
       lastScrollPos = $window.scrollTop();
     }, 150));
 
-    $dot.on('click', function (ev, goTo) {
-      goTo = $(this).data('goto');
-      console.log('going to panel: ', goTo);
-      disableScrollFor(ev, scrollerDelay);
-      $document.trigger('setpanel', goTo);
-    });
+
   }
 
   function disableScrollFor(ev, time) {

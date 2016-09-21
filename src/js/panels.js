@@ -7,6 +7,7 @@ export default function ($) {
   const $body = $('html, body');
   const $splash = $('.splash');
   const $about = $('#about');
+  const $dot = $('.dot');
   const steps = [
     'A-Seed-Was-Planted',
     'Better-Light',
@@ -45,6 +46,12 @@ export default function ($) {
       $('.active-dot').removeClass('active-dot');
       $('.dot-' + currentStep).addClass('active-dot');
     }
+  });
+
+  $dot.on('click', function (ev, goTo) {
+    goTo = $(this).data('goto');
+    console.log('going to panel: ', goTo);
+    $document.trigger('setpanel', goTo);
   });
 
   $document.on('setfooter', function () {

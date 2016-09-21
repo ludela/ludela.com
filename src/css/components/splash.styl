@@ -66,6 +66,9 @@
     width 100%
     height 100vh
 
+  // register
+  //   display block
+
 .mobile-padding
   height 100vh
 
@@ -74,8 +77,6 @@
   background rgba(0,0,0, 0.6)
   height auto
   padding 48px 15%
-  // margin-top 110vh
-  // margin-bottom 90vh
   z-index 5000
 
 .small-text
@@ -132,8 +133,8 @@ ul
         content '|'
         margin 0 15px 0 12px
 
-form
-  font-size 0
+
+
 
 .copyright
   padding-top 10px
@@ -141,6 +142,7 @@ form
   color #D37C3B
   p
     text-transform uppercase
+
 
 @media all and (min-height 700px)
 
@@ -270,24 +272,19 @@ form
       &.\\+left
         margin-left ((300 + 155) / 1200) * -100%
 
-.splash
-  register
-    display: table
-    margin: auto
-    max-width: 100vw
+    // register
+    //   display: table
+    //   margin: auto
 
-    form
-      & > user-email
-        float: left
+    //   form
+    //     & > user-email
+    //       float: left
 
-      & > input
-        float: left
-        display: inline-block;
+    //     & > input
+    //       float: left
+    //       display: inline-block;
 
-    .error
-      position: absolute
-      margin: 10px 5px
-      max-width: 100vw
+    //   .error
+    //     position: absolute
+    //     margin: 10px 5px
 
-  .login-button
-    max-width: 100vw
