@@ -95,7 +95,7 @@ $phone_height = 390
   / .splash.is-step-3 &
     opacity 1
     // transition opacity 500ms ease
-    transition opacity, transform
+    transition-property opacity, transform
     transition-delay 500ms, 500ms
     transform translate3d(0, -27%, 0)
 
@@ -167,13 +167,13 @@ $phone_height = 390
   / .splash.is-step-5 &
     transform translate3d(0, -100vh, 0)
     transition transform 1500ms ease, left 550ms ease
-    transition transform, left
+    transition-property transform, left
     transition-delay 400ms, 0ms
 
   / .splash.is-step-6 &
     left -2.5%
     opacity 1
-    transition transform, opacity, left
+    transition-property transform, opacity, left
     transition-delay 300ms, 500ms, 3500ms
 
 &__board
@@ -208,14 +208,14 @@ $phone_height = 390
     opacity 1
     transform translate3d(0, -100vh, 0)
     transition transform 1500ms ease, left 550ms ease, opacity 1500ms ease
-    transition transform, left, opacity
+    transition-property transform, left, opacity
     transition-delay 400ms, 0ms, 0ms
 
   / .splash.is-step-6 &
     left 12.5%
     opacity 0
     z-index 0
-    transition transform, opacity, left
+    transition-property transform, opacity, left
     transition-delay 300ms, 3s, 3500ms
 
 &__battery
@@ -250,13 +250,13 @@ $phone_height = 390
     left 10%
     transform translate3d(0, -100vh, 0)
     transition transform 1500ms ease, left 550ms ease, opacity 1500ms ease
-    transition transform, left, opacity
+    transition-property transform, left, opacity
     transition-delay 400ms, 0ms, 0ms
 
   / .splash.is-step-6 &
     left -15%
     opacity 0
-    transition transform, opacity, left
+    transition-property transform, opacity, left
     transition-delay 300ms, 2000ms, 3000ms
 
 
@@ -275,7 +275,7 @@ $phone_height = 390
   opacity 0
   transform translate3d(0, -15%, 0)
   transition transform 500ms ease, left 550ms ease, opacity 1900ms ease
-  transition transform, left, opacity
+  transition-property transform, left, opacity
   z-index 70
 
   / .splash.is-step-4 &,
@@ -284,14 +284,14 @@ $phone_height = 390
 
   / .splash.is-step-5 &
     transition transform 1500ms ease, left 550ms ease
-    transition transform, left
+    transition-property transform, left
     transition-delay 700ms, 0ms
 
   / .splash.is-step-6 &
     z-index -50
     left -50%
     opacity 1
-    transition transform, left, opacity
+    transition-property transform, left, opacity
     transition-delay 500ms, 3500ms, 0ms
 
 &__wax-with-flame
@@ -354,7 +354,7 @@ $phone_height = 390
 
   / .splash.is-step-5 &
     transition transform 1500ms ease, left 550ms ease
-    transition transform, left
+    transition-property transform, left
     transition-delay 700ms, 0ms
 
 
@@ -384,7 +384,7 @@ $phone_height = 390
 
   / .splash.is-step-5 &
     transition transform 1500ms ease, left 550ms ease, opacity 1000ms ease
-    transition transform, left, opacity
+    transition-property transform, left, opacity
     transition-delay 700ms, 0ms, 1500ms
 
 
@@ -412,7 +412,7 @@ $phone_height = 390
     opacity 1
     transform translate3d(0, -100vh, 0)
     transition transform 1200ms ease, left 550ms ease
-    transition transform, left
+    transition-property transform, left
     transition-delay 100ms, 0ms
 
   / .splash.is-step-6 &
@@ -420,7 +420,7 @@ $phone_height = 390
     opacity 1
     transform translate3d(0, -15%, 0)
     transition transform 1200ms ease, left 550ms ease
-    transition transform, left
+    transition-property transform, left
     transition-delay 1300ms, 3500ms
 
   &.is-green
@@ -453,12 +453,10 @@ $phone_height = 390
   left (((1200 - ($candle_width)) / 2) / 1200) * 100%
   width 45%
   max-width 310px
-  // height ($candle_height / 720) * 100%
   height 48%
   transition opacity 1500ms ease, left 550ms ease
   opacity 0
   transform translate3d(0, -13%, 0)
-  // z-index 20
   color #211d1c
 
   / .splash.is-step-5 &
@@ -502,7 +500,6 @@ $phone_height = 390
   display inline-block
   background #000
   width 30%
-  // max-width 35px
   margin-bottom 10px
   box-shadow 2px 2px 10px rgba(0,0,0,0.4)
   cursor pointer
