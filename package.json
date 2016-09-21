@@ -1,6 +1,6 @@
 {
   "name": "ludela",
-  "version": "1.0.0",
+  "version": "1.2.2",
   "description": "Custom landing page for ludela.",
   "scripts": {
     "build:styles": "stylus src/styles/index.styl --use ./node_modules/helpful-ui --use ./node_modules/autoprefixer-stylus --out public/site.css",
@@ -15,7 +15,7 @@
     "autoprefixer-stylus": "^0.10.0",
     "bebop": "1.9.2",
     "browser-sync": "^2.14.3",
-    "cake-publish": "0.1.4",
+    "cake-publish": "0.1.5",
     "cake-test": "0.1.0",
     "cake-version": "0.1.9",
     "coffee-script": "1.10.0",
