@@ -12,11 +12,11 @@ option '-v', '--verbose',           'enable verbose test logging'
 task 'build', 'build project', ->
   exec '''
     bebop compile
-    cp node_modules/shop.js/shop.min.js js/shop.js
+    cp node_modules/shop.js/shop.min.js build/js/shop.js
     '''
 
 task 'watch', 'watch for changes and recompile project', ->
   exec '''
-    cp node_modules/shop.js/shop.js js/shop.js
+    cp node_modules/shop.js/shop.js build/js/shop.js
     '''
   exec 'bebop'
