@@ -30,9 +30,7 @@ export default function ($) {
 
     $window.on('scroll mousewheel', function (ev) {
       if ($('.is-open')[0]) {
-        ev.preventDefault();
-        ev.stopPropagation();
-        return false
+        return
       }
       const currentPos = $window.scrollTop();
       const scrollDiff = currentPos - lastScrollPos;
