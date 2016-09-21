@@ -163,6 +163,17 @@
       transform translate3d(0, -200vh, 0)
 
 
+@media screen and (max-width 980px)
+  &.nav-open
+    left 0
+
+    {component(header-bar)}
+      left 0
+      z-index 999
+
+    {component(footer-bar)}
+      left: 0
+
 @media screen and (max-width 680px)
   &.nav-open
     left 0
