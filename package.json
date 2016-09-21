@@ -1,6 +1,6 @@
 {
   "name": "ludela",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Custom landing page for ludela.",
   "scripts": {
     "build:styles": "stylus src/styles/index.styl --use ./node_modules/helpful-ui --use ./node_modules/autoprefixer-stylus --out public/site.css",
