@@ -2,7 +2,11 @@ require 'shortcake'
 
 use 'cake-test'
 use 'cake-version'
-use 'cake-publish', npm: false
+use 'cake-publish',
+  deploy:
+    remote:  'origin'
+    refspec: 'master:production'
+  npm:    false
 
 task 'build', 'build project', ->
   exec.parallel '''
