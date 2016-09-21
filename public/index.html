@@ -473,7 +473,7 @@
 
             <lineitems if="{ !isEmpty() }">
               <div class="product-image-container">
-                <img src="images/Candle-Product.png"></img>
+                <img src="images/Candle-Product.png" alt="{ data.get('productName') }"></img>
               </div>
               <div class="product-text-container">
                 <span if="{ !data.get('locked') }" class="product-quantity-container">
@@ -509,7 +509,7 @@
                 </div>
               </div>
             </div>
-            <div class="invoice-line animated fadeInUp" if="{ data.get('order.discount') > 0 }">
+            <div class="invoice-discount invoice-line animated fadeInUp" if="{ data.get('order.discount') > 0 }">
               <div class="invoice-label">
                 Discount:
               </div>
@@ -609,7 +609,7 @@
                 <!--   </div> -->
                 <!-- </div> -->
 
-                <img class="stripe-logo" src="/images/stripelogo.png">
+                <a href="//www.stripe.com" target="_blank"><img class="stripe-logo" src="/images/stripelogo.png"></a>
               </div>
             </div>
 

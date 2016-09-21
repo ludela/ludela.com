@@ -87,6 +87,7 @@
       color: white !important
 
     .error
+    .promo-message
       color: #ed8d48
       font-size: 14px
       padding: 8px 0
@@ -218,6 +219,10 @@ lineitem
   .invoice-label
     color: #525252
 
+.invoice-discount
+  .invoice-amount
+    color: #ed8d48
+
 .invoice-amount
   text-align: right
   font-weight: bold
@@ -330,6 +335,7 @@ checkout
 .arrow-left
   margin-right: 8px
   background: url(/images/icons/arrow-left.svg)
+  color: black
 
 .shopping-bag
   margin-left: 8px
@@ -363,7 +369,7 @@ terms
     content: ''
     position: absolute
     left:0
-    top: 0px
+    top: 2px
     width: 17px; height: 17px;
     border: 2px solid #aaa;
     background: #f8f8f8;
@@ -409,7 +415,7 @@ terms
 
   /* hover style just for information */
   label:hover:before {
-    border: 2px solid #4778d9!important;
+    border: 2px solid #ed8d48!important;
   }
 
 button[type=submit]
