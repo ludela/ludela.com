@@ -3,7 +3,7 @@
   "version": "1.2.7",
   "description": "Custom landing page for ludela.",
   "scripts": {
-    "build:styles": "stylus src/styles/index.styl --use ./node_modules/helpful-ui --use ./node_modules/autoprefixer-stylus --out public/site.css",
+    "build:styles": "stylus src/css/index.styl --use ./node_modules/helpful-ui --use ./node_modules/autoprefixer-stylus --out public/css/site.css",
     "watch:styles": "npm run build:styles -- --watch --sourcemap",
     "build:scripts": "rollup -c",
     "watch:scripts": "npm run build:scripts -- --watch",
