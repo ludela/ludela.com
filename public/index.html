@@ -472,6 +472,9 @@
             </h1>
 
             <lineitems if="{ !isEmpty() }">
+              <div class="product-image-container">
+                <img src="images/Candle-Product.png"></img>
+              </div>
               <div class="product-text-container">
                 <span if="{ !data.get('locked') }" class="product-quantity-container">
                   <quantity-select-control></quantity-select-control>
@@ -479,7 +482,7 @@
                 <span if="{ data.get('locked') }" class="product-quantity-container locked">
                   { data.get('quantity') }
                 </span>
-                <span class="product-description" if="{ data.get('description') }">{ data.get('description') }</span>
+                <span class="product-description"><span class="product-name">{ data.get('productName') }</span><span>{ data.get('description') }</span></span>
               </div>
               <!-- <div onclick="{ delete }" class="product-delete"></div> -->
               <div class="product-price-container invoice-amount">
@@ -545,6 +548,10 @@
               <div class="invoice-amount">
                 { renderCurrency(data.get('order.currency'), data.get('order.total'))}&nbsp;{ data.get('order.currency').toUpperCase() }
               </div>
+            </div>
+            <div class="invoice-line">
+              <div class="invoice-label">Estimated Ship Date</div>
+              <div class="invoice-amount">Early 2017</div>
             </div>
           </cart>
           <checkout>

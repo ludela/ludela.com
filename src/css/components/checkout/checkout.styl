@@ -27,7 +27,11 @@
     -moz-appearance: none !important
     line-height: 1em !important
     vertical-align: middle
-    color: black !important
+    color: #525252 !important
+
+  .selectize-input.focus
+  input:focus
+    border-color: #ed8d48
 
   input,
   select,
@@ -55,14 +59,23 @@
     left: 50%
     transform: translateX(-50%)
     background-color: white
-    color: #414141
+    color: #525252
+
+    > *:not(.continue-shopping)
+
+      h1:first-child
+        border-bottom: 2px solid #c9c9c9
+        width: 100%
+        margin-top: -.5em
+        line-height: 2em
+        color: #9BA0A4
 
     input[type=text]
       width: 100%
 
     input[type=text]
     button
-      color: #414141
+      color: #525252
       height: 32px
       line-height: 1em
       font-size: 16px
@@ -77,6 +90,7 @@
       color: #ed8d48
       font-size: 14px
       padding: 8px 0
+      line-height: 1em
 
 .is-open
   .checkout-container
@@ -123,9 +137,20 @@ quantity-select-control
   padding-left: 6px
   display: inline-block
   vertical-align: top
+  width: 75%
+
+  .product-name
+    color: #525252
+    font-weight: bold
+    display: block
+
+.product-image-container
+  width: 20%
+  position: relative
+  top: -20px
 
 .product-text-container
-  width: 75%
+  width: 55%
 
 .product-price-container
   width: 25%
@@ -186,8 +211,12 @@ lineitem
 .invoice-total
   font-weight: bold
   font-size: 1.1em
+  border-top: 2px solid #c9c9c9
+  margin-top: 4px
+  padding-top: 4px
+
   .invoice-label
-    color: #414141
+    color: #525252
 
 .invoice-amount
   text-align: right
@@ -433,6 +462,12 @@ button[type=submit]
 
   .input
     width: 100% !important
+
+  .product-image-container
+    width: 30%
+
+  .product-text-container
+    width: 70%
 
   .product-price-container
     width: 100%
