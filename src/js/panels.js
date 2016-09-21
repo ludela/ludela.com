@@ -59,6 +59,12 @@ export default function ($) {
     window.location.hash = 'Join-Us'
   });
 
+  $dot.on('click', function (ev, goTo) {
+    goTo = $(this).data('goto');
+    console.log('going to panel: ', goTo);
+    $document.trigger('setpanel', goTo);
+  });
+
   $document.on('setabout', function (ev, index) {
     $('.scroll-container').addClass('scroll-stop');
     $('#step-'+currentStep+', #step-'+index).animate({scrollTop: 0}, 750);

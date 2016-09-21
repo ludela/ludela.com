@@ -6,13 +6,14 @@ import about from './about';
 import shell from './shell';
 import video from './video';
 import framework from './framework';
-import scrollify from 'jQuery-scrollify';
+import scrollify from 'jquery-scrollify';
 
 window.$ = window.jQuery = jQuery;
 
 jQuery(function ($) {
   _debugger($);
   panels($);
+  scrollify($);
   // scroller($);
   about($);
   shell($);
