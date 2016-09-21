@@ -6,13 +6,15 @@ import about from './about';
 import shell from './shell';
 import video from './video';
 import framework from './framework';
+import scrollify from 'jquery-scrollify';
 
 window.$ = window.jQuery = jQuery;
 
 jQuery(function ($) {
   _debugger($);
   panels($);
-  scroller($);
+  scrollify($);
+  // scroller($);
   about($);
   shell($);
   video($);
@@ -44,4 +46,29 @@ jQuery(function ($) {
     $('.is-open').removeClass('is-open');
     $('.nav-open').removeClass('nav-open');
   });
+
+
+  $.scrollify({
+    section : ".splash__content",
+    sectionName : "step",
+    // interstitialSection : "",
+    easing: "easeOutExpo",
+    scrollSpeed: 1100,
+    offset : 0,
+    scrollbars: true,
+    // standardScrollElements: "",
+    setHeights: true,
+    overflowScroll: true,
+    before: function (index) {
+      $('.splash')
+        .removeClass((i, css) => (css.match (/is\-step\-[0-9]+/g) || []).join(' '))
+        .addClass('is-step-' + (index + 1));
+      $('.active-dot').removeClass('active-dot');
+      $('.dot-' + (index + 1)).addClass('active-dot');
+    },
+    after: function () {},
+    afterResize: function () {},
+    afterRender: function () {}
+  });
+
 });
