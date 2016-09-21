@@ -48,6 +48,12 @@ export default function ($) {
     }
   });
 
+  $dot.on('click', function (ev, goTo) {
+    goTo = $(this).data('goto');
+    console.log('going to panel: ', goTo);
+    $document.trigger('setpanel', goTo);
+  });
+
   $document.on('setfooter', function () {
     $about.addClass('is-footer');
     window.location.hash = 'Join-Us'

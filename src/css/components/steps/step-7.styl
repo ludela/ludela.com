@@ -9,28 +9,83 @@
   .img, .splash__component-left
     display inline-block
 
+  .splash__component-container
+    height 100%
+
   .splash__component-left
     width 100%
+    height 100%
     vertical-align middle
+    text-align center
+    position relative
+
+    .signin-or-up
+      position absolute
+      width 80%
+      top 50%
+      left 0
+      right 0
+      margin -20% auto 0
+      z-index 500
+
+    .splash__headline
+      max-width: 500px
+
+    form
+      font-size 12px
+
+    register .error
+      font-size: 12px
+      margin-bottom: 10px
+
+    .error
+      top: 32px
+      margin-left: 0
+
+    register
+      display block
+      margin 0 auto
+      max-width: 500px
+      width: 100%
+      margin-bottom: 25px
+      position: relative
+
+      user-email
+        width: 70%
+        display inline-block
+        & > input
+          width: 100%
+
+      & > form > input
+        width: 25%
+        margin-left: 0
+
+    .login-button
+      display: table
+      margin: auto
+      width: 100%
+      max-width: 500px
+      text-align: center
 
     input[type="text"]
       background-color rgb(241, 234, 208)
       color #000
-      font-size: 12px
+      // font-size: 12px
       font-weight bold
       border none
-      width 352px
+      // width 352px
       height 38px
 
     input[type="submit"]
       background-color rgb(237, 141, 72)
       color rgb(241, 234, 208)
       text-transform uppercase
-      font-size: 12px
+      // font-size: 12px
       font-weight bold
       border none
       margin-left -4px
-      width 159px
+      width 30%
+      max-width 159px
       height 38px
 
     .link-list, .copyright
@@ -45,6 +100,7 @@
       bottom 9%
 
   .img
+    display none
     position absolute
     width 100%
     height 100%
@@ -90,6 +146,12 @@
 
     .splash__component-left
       width 55%
+      height auto
+
+      .signin-or-up
+        position relative
+        margin 0 auto
+
 
       .link-list, .copyright
         font-size 12px
@@ -99,6 +161,7 @@
       display block
 
     .img
+      display inline-block
       position relative
       width 33%
       text-align left

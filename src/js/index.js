@@ -19,6 +19,7 @@ jQuery(function ($) {
   shell($);
   video($);
   framework($);
+  scrollify($);
 
   var resizeTimer;
 
@@ -65,6 +66,11 @@ jQuery(function ($) {
         .addClass('is-step-' + (index + 1));
       $('.active-dot').removeClass('active-dot');
       $('.dot-' + (index + 1)).addClass('active-dot');
+      if (index === 6) {
+        $('.footer-bar').hide();
+      } else {
+        $('.footer-bar').show();
+      }
     },
     after: function () {},
     afterResize: function () {},

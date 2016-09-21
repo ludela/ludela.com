@@ -303,14 +303,16 @@
                   <div class="splash__headline">
                     <h2 class="h1">Join us <span class="subhead">Earn a LuDela candle, refills, coupons<br>and other rewards by referring your friends.</span></h2>
                   </div>
-                  <register immediate-login="true">
-                    <user-email type='text' placeholder=' ENTER YOUR EMAIL'></user-email>
-                    <input type='submit' value="Sign Up"/>
-                    <div class="error" if="{ errorMessage }">
-                      { errorMessage }
-                    </div>
-                  </register>
-                  <a class="login-button" href="/login">Login</a>
+                  <div class="signin-or-up">
+                    <register immediate-login="true">
+                      <user-email type='text' placeholder=' ENTER YOUR EMAIL'></user-email>
+                      <input type='submit' value="Sign Up"/>
+                      <div class="error" if="{ errorMessage }">
+                        { errorMessage }
+                      </div>
+                    </register>
+                    <a class="login-button" href="/login">Login</a>
+                  </div>
                   <ul class="link-list">
                     <li><a href='/about'>About us</a></li>
                     <li><a href='/faq'>FAQ</a></li>
