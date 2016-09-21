@@ -1,0 +1,172 @@
+.intro-landing {
+  padding: 60px 26px 40px;
+  background: url("/images/prelaunch/landing-bg.jpg") center / cover no-repeat;
+
+  .title {
+    margin-bottom: 20px;
+    color: #f1ead0;
+  }
+
+  .page-title {
+    font-size: 86px;
+  }
+
+  .subscribe-form {
+
+    .subscribe-row {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0px;
+      position: relative;
+    }
+
+    .error {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        float: right;
+    }
+
+    user-email {
+        .error {
+            float: left;
+        }
+    }
+
+    input, user-email {
+      height: 48px;
+      border-radius: 0;
+      border: none;
+      color: #555;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      background-color: #f1ead0;
+
+      input {
+        width: 100%;
+        padding: 0 20px;
+      }
+
+      &:focus {
+        background-color: #fff;
+      }
+    }
+
+    .form-submit {
+      color: #f1ead0;
+      background-color: #ed8d48;
+      cursor: pointer;
+      // transition: background-color .5s ease-in-out;
+
+      // &.disabled {
+      //   background-color:#222;
+      // }
+    }
+
+    input {
+      &::-webkit-input-placeholder {
+        color: #000;
+      }
+
+      &::-moz-placeholder {
+        color: #000;
+      }
+
+      &:-moz-placeholder {
+        color: #000;
+      }
+
+      &:-ms-input-placeholder {
+        color: #000;
+      }
+
+      &.form-submit {
+        font-size: 14px;
+      }
+    }
+
+    .error {
+      color: white;
+      top: 96px;
+    }
+  }
+
+  .secure-icon {
+    margin-bottom: 20px;
+    text-align: center;
+    img {
+      max-width: 50px;
+    }
+  }
+
+  .landing-image {
+    text-align: center;
+    position: relative;
+  }
+
+  video {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+register {
+  display: block;
+}
+
+@media (min-width: 768px) {
+
+  .intro-landing {
+    display: flex;
+    align-items: center;
+
+    video {
+      margin-bottom: 70px;
+      width: 65%;
+    }
+  }
+
+  .intro-landing {
+
+    .subscribe-form-wrap {
+      max-width: 510px;
+      margin: 0 auto;
+    }
+
+    .subscribe-form {
+
+      .subscribe-row {
+        flex-flow: row nowrap;
+
+        user-email {
+          width: 100%;
+          max-width: 350px;
+        }
+        .form-submit {
+          flex-grow: 1;
+        }
+      }
+
+      .error {
+        top: 48px;
+      }
+    }
+  }
+}
+
+.hero.video .play {
+  background-color: transparent;
+}
+
+.hero.video .play:hover {
+  background-color: rgba( 0, 0, 0, .5);
+}
+
+.hero.video .play:before, .hero.video .play:after {
+  border-width: 1px ;
+}
+
+.modal-close {
+  color: #f1ead0;
+}

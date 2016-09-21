@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/css/selectize.bootstrap3.min.css">
-    <link rel="stylesheet" href="/site.css">
+    <link rel="stylesheet" href="/css/site.css">
     <script>
       !function(t,e,a){var r,n,c,i,o,s,l,u;if(null==t.analytics){for(r=[],r.methods=["ab","alias","group","identify","off","on","once","page","pageview","ready","track","trackClick","trackForm","trackLink","trackSubmit"],l=r.methods,c=function(t){r[t]=function(){var e;return e=Array.prototype.slice.call(arguments),e.unshift(t),r.push(e),r}},i=0,o=l.length;o>i;i++)s=l[i],c(s);return u=e.createElement("script"),u.async=!0,u.type="text/javascript",u.src=a,n=e.getElementsByTagName("script")[0],n.parentNode.insertBefore(u,n),t.analytics=r}}(window,document,"//cdn.crowdstart.com/a/ludela.js");
     </script>
-    <script src="https://use.typekit.net/scc3jrx.js"></script>
+    <script src="//use.typekit.net/scc3jrx.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
   <body>
@@ -60,7 +60,7 @@
           <span></span>
         </div>
         <div class="video">
-          <span>see the ludela</span>
+          <span class="see-ludela">See LuDela</span>
           <span class="icomoon icomoon-play"> </span>
           <div class='video'> </div>
         </div>
@@ -74,12 +74,16 @@
     </header>
     <div class='footer-bar fixed'>
       <span class='footer-text'>
-        Early birds recieve 20% off + Free Candle refills
+        Earn a LuDela candle with refills by referring friends
       </span>
-      <form>
-        <input type='text' placeholder=' ENTER YOUR EMAIL'/>
-        <input type='submit'/>
-      </form>
+      <register immediate-login="true">
+        <user-email type='text' placeholder=' ENTER YOUR EMAIL'></user-email>
+        <input type='submit' value="Sign Up"/>
+        <div class="error" if="{ errorMessage }">
+          { errorMessage }
+        </div>
+      </register>
+      <a class="login-link" href="/login">Login</a>
     </div>
     <div id='video-modal'>
       <div class='modal-close'>
@@ -128,56 +132,56 @@
                   <div class="small-text__title">Everbrite Flame</div>
                   <p class="small-text__desc">A bright flame -- always. No tunneling or buried wicks.</p>
                   <div class="small-text__icon">
-                    <span class="icon icon-brite"></span>
+                    <span class="icomoon icomoon-brite"></span>
                   </div>
                 </div>
                 <div class="small-text +right +two">
                   <div class="small-text__title">Scene mode</div>
                   <p class="small-text__desc">One touch settings for relaxation, dinner &amp; more.</p>
                   <div class="small-text__icon">
-                    <span class="icon icon-scene"></span>
+                    <span class="icomoon icomoon-scene"></span>
                   </div>
                 </div>
                 <div class="small-text +left +three">
                   <div class="small-text__title">the perfect pillar</div>
                   <p class="small-text__desc">A beautiful design that always stays looking new.</p>
                   <div class="small-text__icon">
-                    <span class="icon icon-pillar"></span>
+                    <span class="icomoon icomoon-pillar"></span>
                   </div>
                 </div>
                 <div class="small-text +right +four">
                   <div class="small-text__title">Timer</div>
                   <p class="small-text__desc">Set 30 minute and 1-hour increments to any zone.</p>
                   <div class="small-text__icon">
-                    <span class="icon icon-timer"></span>
+                    <span class="icomoon icomoon-timer"></span>
                   </div>
                 </div>
                 <div class="small-text +left +five">
                   <div class="small-text__title">Multi-Zone Lighting</div>
                   <p class="small-text__desc">Control multiple LuDela candles zones with the app</p>
                   <div class="small-text__icon">
-                    <span class="icon icon-zone"></span>
+                    <span class="icomoon icomoon-zone"></span>
                   </div>
                 </div>
                 <div class="small-text +right +six">
                   <div class="small-text__title">candle remaining meter</div>
                   <p class="small-text__desc">Reports at 100%, 75%, 50% and 25% levels.</p>
                   <div class="small-text__icon">
-                    <span class="icon icon-meter"></span>
+                    <span class="icomoon icomoon-meter"></span>
                   </div>
                 </div>
                 <div class="small-text +left +seven">
                   <div class="small-text__title">Dimmer Switch</div>
                   <p class="small-text__desc">Create the perfect candlelight brightness for any occasion</p>
                   <div class="small-text__icon">
-                    <span class="icon icon-dimmer"></span>
+                    <span class="icomoon icomoon-dimmer"></span>
                   </div>
                 </div>
                 <div class="small-text +right +eight">
                   <div class="small-text__title">Long-Life rechargeable Li-Ion batteries</div>
                   <p class="small-text__desc">Estimated 5-6 months between charges.</p>
                   <div class="small-text__icon">
-                    <span class="icon icon-battery"></span>
+                    <span class="icomoon icomoon-battery"></span>
                   </div>
                 </div>
               </div>
@@ -195,49 +199,49 @@
                   <div class="small-text__title">auto-extinguish</div>
                   <p class="small-text__desc">Reduces fire risk by blowing the flame out in unsafe conditions.</p>
                   <div class="small-text__icon">
-                    <span class="icon icon-extinguish"></span>
+                    <span class="icomoon icomoon-extinguish"></span>
                   </div>
                 </div>
                 <div class="small-text +right +two">
                   <div class="small-text__title">safe burn design</div>
                   <p class="small-text__desc">Reduces fire risk if LuDelas are accidentally left to burn too long.</p>
                   <div class="small-text__icon">
-                    <span class="icon icon-smile"></span>
+                    <span class="icomoon icomoon-smile"></span>
                   </div>
                 </div>
                 <div class="small-text +left +three">
                   <div class="small-text__title">Smart scan</div>
                   <p class="small-text__desc">Reduces fire risk by scanning the environment before ignition.</p>
                   <div class="small-text__icon">
-                    <span class="icon icon-smart"></span>
+                    <span class="icomoon icomoon-smart"></span>
                   </div>
                 </div>
                 <div class="small-text +right +four">
                   <div class="small-text__title">safe wax design</div>
                   <p class="small-text__desc">Our small wax pool minimizes chance of burns during accidental spills.</p>
                   <div class="small-text__icon">
-                    <span class="icon icon-smile"></span>
+                    <span class="icomoon icomoon-smile"></span>
                   </div>
                 </div>
                 <div class="small-text +left +five">
                   <div class="small-text__title">child-lock app</div>
                   <p class="small-text__desc">Password protects your candlelight.</p>
                   <div class="small-text__icon">
-                    <span class="icon icon-lock"></span>
+                    <span class="icomoon icomoon-lock"></span>
                   </div>
                 </div>
                 <div class="small-text +right +six">
                   <div class="small-text__title">SmartPhone alerts</div>
                   <p class="small-text__desc">Relax. LuDela will notify you if your attention is needed.</p>
                   <div class="small-text__icon">
-                    <span class="icon icon-alerts"></span>
+                    <span class="icomoon icomoon-alerts"></span>
                   </div>
                 </div>
                 <div class="small-text +right +eight">
                   <div class="small-text__title">low battery detection</div>
                   <p class="small-text__desc">Will not allow operation in unsafe battery states.</p>
                   <div class="small-text__icon">
-                    <span class="icon icon-battery"></span>
+                    <span class="icomoon icomoon-battery"></span>
                   </div>
                 </div>
               </div>
@@ -247,7 +251,7 @@
           <div class="splash__content" id="step-5">
             <div class="splash__container fixed">
               <div class="splash__headline">
-                <h2 class="h1">Scent the mood <span class="subhead">100% natural, pariffin-free wax cartridge</span></h2>
+                <h2 class="h1">Scent the mood <span class="subhead">100% natural, pariffin-free wax refill</span></h2>
               </div>
               <div class="mobile-padding"></div>
               <div class="mobile-overlay">
@@ -297,12 +301,16 @@
               <div class="splash__component-container">
                 <div class="splash__component-left">
                   <div class="splash__headline">
-                    <h2 class="h1">Join us <span class="subhead">Early birds recieve 20% off<br> + Free Candle refills</span></h2>
+                    <h2 class="h1">Join us <span class="subhead">Earn a LuDela candle, refills, coupons<br>and other rewards by referring your friends.</span></h2>
                   </div>
-                  <form class="signup-form">
-                    <input type='text' placeholder='EMAIL'/>
-                    <input type='submit'/>
-                  </form>
+                  <register immediate-login="true">
+                    <user-email type='text' placeholder=' ENTER YOUR EMAIL'></user-email>
+                    <input type='submit' value="Sign Up"/>
+                    <div class="error" if="{ errorMessage }">
+                      { errorMessage }
+                    </div>
+                  </register>
+                  <a class="login-button" href="/login">Login</a>
                   <ul class="link-list">
                     <li><a href='/about'>About us</a></li>
                     <li><a href='/faq'>FAQ</a></li>
@@ -455,12 +463,36 @@
     <div class="modal">
       <div class="checkout-container">
         <div class="checkout">
+          <div class="continue-shopping">
+            <h1><i class="arrow-left"></i>Continue Shopping<i class="shopping-bag"></i></h1>
+          </div>
           <cart>
             <h1>
               Order Summary
             </h1>
 
-            <lineitems if="{ !isEmpty() }"></lineitems>
+            <lineitems if="{ !isEmpty() }">
+              <div class="product-text-container">
+                <span if="{ !data.get('locked') }" class="product-quantity-container">
+                  <quantity-select-control></quantity-select-control>
+                </span>
+                <span if="{ data.get('locked') }" class="product-quantity-container locked">
+                  { data.get('quantity') }
+                </span>
+                <span class="product-description" if="{ data.get('description') }">{ data.get('description') }</span>
+              </div>
+              <!-- <div onclick="{ delete }" class="product-delete"></div> -->
+              <div class="product-price-container invoice-amount">
+                <div class="product-price">
+                  { renderCurrency(parentData.get('currency'), data.get().price * data.get().quantity) }
+                  { parentData.get('currency').toUpperCase() }
+                </div>
+                <div if="{ data.get().listPrice > data.get().price }" class="product-list-price invoice-amount">
+                  { renderCurrency(parentData.get('currency'), data.get().listPrice * data.get().quantity) }
+                  { parentData.get('currency').toUpperCase() }
+                </div>
+              </div>
+            </lineitems>
 
             <div class="promo">
               <div class="promo-row">
@@ -475,42 +507,42 @@
               </div>
             </div>
             <div class="invoice-line animated fadeInUp" if="{ data.get('order.discount') > 0 }">
-              <div>
+              <div class="invoice-label">
                 Discount:
               </div>
-              <div>
+              <div class="invoice-amount">
                 { renderCurrency(data.get('order.currency'), data.get('order.discount'))}&nbsp;{ data.get('order.currency').toUpperCase() }
               </div>
             </div>
             <div class="invoice-line">
-              <div>
-                Subtotal:
+              <div class="invoice-label">
+                Subtotal
               </div>
-              <div>
+              <div class="invoice-amount">
                 { renderCurrency(data.get('order.currency'), data.get('order.subtotal'))}&nbsp;{ data.get('order.currency').toUpperCase() }
               </div>
             </div>
             <div class="invoice-line">
-              <div>
-                Shipping (billed later):
+              <div class="invoice-label">
+                Shipping (billed later)
               </div>
-              <div class="not-bold">
+              <div class="invoice-amount not-bold">
                 - -
               </div>
             </div>
             <div class="invoice-line">
-              <div>
-                Tax ({ data.get('order.taxRate') * 100 }%):
+              <div class="invoice-label">
+                Tax ({ data.get('order.taxRate') * 100 }%)
               </div>
-              <div>
+              <div class="invoice-amount">
                 { renderCurrency(data.get('order.currency'), data.get('order.tax'))}&nbsp;{ data.get('order.currency').toUpperCase() }
               </div>
             </div>
-            <div class="invoice-line">
-              <div>
-                Total:
+            <div class="invoice-line invoice-total">
+              <div class="invoice-label">
+                Total
               </div>
-              <div>
+              <div class="invoice-amount">
                 { renderCurrency(data.get('order.currency'), data.get('order.total'))}&nbsp;{ data.get('order.currency').toUpperCase() }
               </div>
             </div>
@@ -545,13 +577,7 @@
 
             <div class="payment-information">
               <h1>
-                Payment Information
-                <div class="icon-lock">
-                  <div class="lock-top-1"></div>
-                  <div class="lock-top-2"></div>
-                  <div class="lock-body"></div>
-                  <div class="lock-hole"></div>
-                </div>
+                Payment Information <i class="lock"></i>
               </h1>
 
               <div class="card-information">
@@ -629,10 +655,10 @@
       </div>
     </div>
 
-    <script src="/site.js"></script>
-    <script src="/shop.js"></script>
+    <script src="/js/site.js"></script>
+    <script src="/js/shop.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.min.js"></script>
-    <script type="text/javascript" src="/cookies.min.js"></script>
-    <script src="/checkout.js"></script>
+    <script type="text/javascript" src="/js/cookies.min.js"></script>
+    <script src="/js/checkout.js"></script>
   </body>
 </html>
