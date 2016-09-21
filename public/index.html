@@ -472,9 +472,6 @@
             </h1>
 
             <lineitems if="{ !isEmpty() }">
-              <div class="product-image-container">
-                <img src="images/Candle-Product.png" alt="{ data.get('productName') }"></img>
-              </div>
               <div class="product-text-container">
                 <span if="{ !data.get('locked') }" class="product-quantity-container">
                   <quantity-select-control></quantity-select-control>
@@ -483,6 +480,9 @@
                   { data.get('quantity') }
                 </span>
                 <span class="product-description"><span class="product-name">{ data.get('productName') }</span><span>{ data.get('description') }</span></span>
+              </div>
+              <div class="product-image-container">
+                <img src="images/Candle-Product.png" alt="{ data.get('productName') }"></img>
               </div>
               <!-- <div onclick="{ delete }" class="product-delete"></div> -->
               <div class="product-price-container invoice-amount">
