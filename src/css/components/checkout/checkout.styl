@@ -25,7 +25,7 @@
   select > input[type="button"],
   textarea
     -moz-appearance: none !important
-    line-height: 2px !important
+    line-height: 1em !important
     vertical-align: middle
     color: black !important
 
@@ -115,7 +115,7 @@ quantity-select-control
   border-radius: 0 !important
 
 .product-quantity-container
-  width: 50px !important
+  width: 45px !important
   display: inline-block
 
 .product-description
@@ -194,7 +194,8 @@ lineitem
 
 checkout
   .input
-    margin-bottom: 10px
+    padding-bottom: 16px
+    line-height: 2em
 
   .selectize-input
     max-width: 100%
@@ -206,6 +207,7 @@ checkout
       width: 100% !important
       margin-top: -6px !important
       margin-left: 16px !important
+      left: 0
 
   .fields
     width: 100%
@@ -280,8 +282,6 @@ checkout
 
   i
     margin-bottom: -8px
-    margin-left: 16px
-    margin-right: 16px
 
 .lock,
 .arrow-left,
@@ -298,13 +298,15 @@ checkout
   right: 12px
 
 .arrow-left
+  margin-right: 8px
   background: url(/images/icons/arrow-left.svg)
 
 .shopping-bag
+  margin-left: 8px
   background: url(/images/icons/shopping-bag.svg)
 
 terms
-  font-size: 16px
+  font-size: 14px
   font-family: helvetica
   margin-bottom: 20px
   display: block
@@ -328,9 +330,10 @@ terms
   /* checkbox aspect */
   [type="checkbox"]:not(:checked) + label:before,
   [type="checkbox"]:checked + label:before {
-    content: '';
-    position: absolute;
-    left:0; top: 2px;
+    content: ''
+    position: absolute
+    left:0
+    top: 0px
     width: 17px; height: 17px;
     border: 2px solid #aaa;
     background: #f8f8f8;
@@ -405,6 +408,28 @@ button[type=submit]
       margin-top: 0
 
 @media screen and (max-width: 500px)
+  .checkout
+    font-size: 80%
+    padding: 20px
+
+    .product-description
+      margin-top: -50px
+      margin-left: 55px
+
+    input,
+    select,
+    button,
+    select > input[type="button"],
+    textarea
+      font-size: 70%
+
+      // Makes iOS checkbox appear correctly but skews desktop
+    [type="checkbox"]:not(:checked) + label:after,
+    [type="checkbox"]:checked + label:after
+      top: 6px; left: 1px
+      font-size: 10px
+      line-height: 0.8
+
   .input
     width: 100% !important
 
