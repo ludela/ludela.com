@@ -28,7 +28,7 @@ export default function ($) {
 
   if ($panels.length) {
 
-    $window.on('scroll', function (ev) {
+    $window.on('scroll mousewheel', function (ev) {
       if ($('.is-open')[0]) {
         ev.preventDefault();
         ev.stopPropagation();
