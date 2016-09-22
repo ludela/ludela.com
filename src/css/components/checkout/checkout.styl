@@ -360,6 +360,8 @@ terms
   label
     padding-top: 2px;
     font-size: 10px
+    line-height: 1rem;
+    display: inline-block;
 
   /* Base for label styling */
   [type="checkbox"]:not(:checked),
@@ -370,7 +372,7 @@ terms
   [type="checkbox"]:not(:checked) + label,
   [type="checkbox"]:checked + label {
     position: relative;
-    padding-left: 25px;
+    text-indent: 25px;
     cursor: pointer;
   }
 
@@ -396,6 +398,7 @@ terms
     line-height: 0.8;
     color: #09ad7e;
     transition: all .2s;
+    text-indent: 0;
   }
   /* checked mark aspect changes */
   [type="checkbox"]:not(:checked) + label:after {
