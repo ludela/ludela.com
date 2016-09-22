@@ -11,6 +11,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
   <link rel="stylesheet" href="/css/prelaunch.css">
+  <link rel="stylesheet" href="/css/site.css">
+  <script src="https://use.typekit.net/scc3jrx.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <script>
     !function(t,e,a){var r,n,c,i,o,s,l,u;if(null==t.analytics){for(r=[],r.methods=["ab","alias","group","identify","off","on","once","page","pageview","ready","track","trackClick","trackForm","trackLink","trackSubmit"],l=r.methods,c=function(t){r[t]=function(){var e;return e=Array.prototype.slice.call(arguments),e.unshift(t),r.push(e),r}},i=0,o=l.length;o>i;i++)s=l[i],c(s);return u=e.createElement("script"),u.async=!0,u.type="text/javascript",u.src=a,n=e.getElementsByTagName("script")[0],n.parentNode.insertBefore(u,n),t.analytics=r}}(window,document,"//cdn.crowdstart.com/a/ludela.js");
   </script>
@@ -19,15 +22,64 @@
 <!--[if lte IE 9]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
-
+<nav id='menu' class='menu'>
+  <div class="menu__close">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="menu__logo">
+    <a href='/'>
+      <span class="icomoon icomoon-LuDela-logo"> </span>
+    </a>
+  </div>
+  <a class='menu__link' href='/account'>
+    LuDela Account
+  </a>
+  <a class='menu__link' href='/about'>
+    about us
+  </a>
+  <a class='menu__link' href='/faq'>
+    faq
+  </a>
+  <a class='menu__link' href='/legal'>
+    legal
+  </a>
+  <a class='menu__link' href='/careers'>
+    careers
+  </a>
+  <a class='menu__link' href='/contact'>
+    contact
+  </a>
+  <a class="menu__social"  href='http://facebook.com/JoinLudela' target="_blank">
+    <span class="icomoon icomoon-facebook"> </span>
+  </a>
+  <a class="menu__social"  href='http://twitter.com/JoinLudela' target="_blank">
+    <span class="icomoon icomoon-twitter"> </span>
+  </a>
+  <a class="menu__social"  href='https://www.pinterest.com/joinludela' target="_blank">
+    <span class="icomoon icomoon-pinterest"> </span>
+  </a>
+</nav>
+<header class="header-bar fixed" id="header">
+  <div class="header-container">
+    <div id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="logo">
+      <a href="/">
+        <span class="icomoon icomoon-LuDela-logo"> </span>
+      </a>
+    </div>
+  </div>
+</header>
 <div class="login full-height">
   <div class="page-header">
     <header class="header container">
-      <h1 class="logo">
-        <a href="/">
-          <img src="images/logo.png">
-        </a>
-      </h1>
     </header>
     <div class="container">
       <div class="hero">
@@ -69,7 +121,7 @@
   </div>
 </div>
 
-<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="/js/site.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <script src="/js/shop.js"></script>
 <script src="/js/prelaunch/framework.js"></script>
