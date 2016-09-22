@@ -3,7 +3,7 @@
   transition opacity 100ms ease
 
   .splash__headline
-    transform translate3d(0, -100vh, 0)
+    transform translate3d(0, 0, 0)
 
 
 &.is-step-6 #step-6
@@ -11,7 +11,8 @@
 
   .splash__headline
     opacity 1
-    transform translate3d(0, -1150vh, 0)
+    top 20%
+    transform translate3d(0, 0, 0)
 
 &.is-step-6
   background rgba(240,189,60,1)
@@ -19,13 +20,21 @@
   &:before
     background linear-gradient(0deg, rgba(240,189,60,0) 40%, rgba(237,147,71,1))
 
+&.is-step-1 #step-6,
+&.is-step-2 #step-6,
+&.is-step-3 #step-6,
+&.is-step-4 #step-6,
+&.is-step-5 #step-6
+  .splash__headline
+    transform translate3d(0, 100vh, 0)
+
 &.is-step-7 #step-6
   opacity 0
   .splash__headline
-    transform translate3d(0, -1250vh, 0)
+    transform translate3d(0, 100vh, 0)
 
 @media all and (min-width 800px)
 
   &.is-step-6 #step-6
     .splash__headline
-      transform translate3d(0, 15vh, 0)
+      transform translate3d(0, -5vh, 0)
