@@ -488,7 +488,10 @@
                 <span if="{ data.get('locked') }" class="product-quantity-container locked">
                   { data.get('quantity') }
                 </span>
-                <span class="product-description"><span class="product-name">{ data.get('productName') }</span><span>{ data.get('description') }</span></span>
+                <span class="product-description">
+                  <span class="product-name">{ data.get('productName') }</span>
+                  <p>{ data.get('description') }</p>
+                </span>
               </div>
               <div class="product-image-container">
                 <img src="images/Candle-Product.png" alt="{ data.get('productName') }"></img>
@@ -626,7 +629,7 @@
               </h1>
 
               <terms>
-                <label for="terms">I agree to LuDela's <a href="/legal" target="_blank">terms and conditions</a>.</label>
+                <label for="terms">I agree to LuDela's <a href="/legal" target="_blank">terms of service</a>.  After your free trial, you authorize LuDela to begin charging the payment method provided at $9.99 per LuDela + shipping when your monthly subscription renews until you pause, modify or cancel your subscription.  You may cancel anytime by emailing <a href="mailto:hello@ludela.com">hello@ludela.com</a>.  You can modify your subscription shortly in our customer portal area (coming soon!)</label>
               </terms>
               <button class="{ loading: loading || checkedOut }" type="submit">Confirm Pre-order</button>
               <div class="error" if="{ errorMessage }">

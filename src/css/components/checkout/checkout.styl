@@ -152,7 +152,8 @@ quantity-select-control
 
   > *:last-child
     font-size: 10px
-    line-height: 0
+    line-height: 1rem
+    margin-top: 0
 
 .product-image-container
   width: 20%
@@ -352,13 +353,13 @@ checkout
   background: url(/images/icons/shopping-bag.svg)
 
 terms
-  font-size: 14px
   font-family: helvetica
   margin-bottom: 20px
   display: block
 
   label
     padding-top: 2px;
+    font-size: 10px
 
   /* Base for label styling */
   [type="checkbox"]:not(:checked),
@@ -379,7 +380,7 @@ terms
     content: ''
     position: absolute
     left:0
-    top: 2px
+    top: 1px
     width: 17px; height: 17px;
     border: 2px solid #aaa;
     background: #f8f8f8;
@@ -389,7 +390,8 @@ terms
   [type="checkbox"]:checked + label:after {
     content: '✔';
     position: absolute;
-    top: 3px; left: 4px;
+    top: 3px;
+    left: 2px;
     font-size: 18px;
     line-height: 0.8;
     color: #09ad7e;
@@ -472,8 +474,9 @@ button[type=submit]
       // Makes iOS checkbox appear correctly but skews desktop
     [type="checkbox"]:not(:checked) + label:after,
     [type="checkbox"]:checked + label:after
-      top: 6px; left: 1px
-      font-size: 10px
+      top: 6px
+      left: 2px
+      font-size: 14px
       line-height: 0.8
 
   .input
