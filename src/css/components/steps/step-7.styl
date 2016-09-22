@@ -1,9 +1,9 @@
 #step-7
-  opacity 0
-  transition opacity 100ms ease, transform 1500ms ease
-  transform translate3d(0, 100vh, 0)
 
   .splash__container
+    opacity 0
+    transition opacity 100ms ease, transform 1000ms ease
+    transform translate3d(0, 100vh, 0)
     height 100%
 
   .img, .splash__component-left
@@ -119,8 +119,10 @@
     text-align center
 
 &.is-step-7 #step-7
-  opacity 1
-  transform translate3d(0, 0, 0)
+
+  .splash__container
+    opacity 1
+    transform translate3d(0, 0, 0)
 
 
   .splash__headline
