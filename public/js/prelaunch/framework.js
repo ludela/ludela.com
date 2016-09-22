@@ -65,9 +65,7 @@ $(function(){
     e.stopPropagation();
     return false;
   })
-});
 
-$(window).load(function(){
   $('.loader').fadeTo(1000, 0, function() {
     $(this).hide();
     $('body').css('overflow', '');
@@ -75,4 +73,5 @@ $(window).load(function(){
 
   /* remove JQuery Mobile Loader thing */
   $('.ui-loader').remove();
-})
+});
+
