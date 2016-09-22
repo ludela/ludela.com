@@ -3,6 +3,8 @@ $(function() {
     var $modal = $('.modal');
     $modal.addClass('is-open');
 
+    $.scrollify.disable();
+
     $('#hamburger').addClass('is-open');
 
     Shop.analytics.track('Viewed Checkout Step', {step: 1})
@@ -20,6 +22,8 @@ $(function() {
     var $modal = $(this).closest('.modal');
     $modal.addClass('hidden');
     $modal.removeClass('is-open');
+
+    $.scrollify.enable();
 
     $('#hamburger').removeClass('is-open');
   })
