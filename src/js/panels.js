@@ -102,7 +102,7 @@ export default function ($) {
       $('.scroll-container').removeClass('scroll-stop');}, 1000)
 
     var Hash = '#'+steps[story + 2];
-    if (window.location.hash !== Hash) {
+    if (window.location.hash !== Hash && $(window).width() > 680) {
       window.location.hash = Hash;
     }
   });
