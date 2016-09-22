@@ -1,4 +1,6 @@
 $(function() {
+  var Shop = window.Crowdstart.Shop
+
   $('.checkout-button').on('click', function(e){
     var $modal = $('.modal');
     $modal.addClass('is-open');
@@ -39,6 +41,17 @@ $(function() {
         batch: 'prelaunch'
       }
     },
+    taxRates: [{
+      taxRate:  0.071,
+      city:     'minden',
+      state:    'nv',
+      country:  'us'
+    },
+    {
+      taxRate: 0.046,
+      state:   'nv',
+      country: 'us'
+    }],
     config: {
       hashReferrer: true
     },
@@ -53,8 +66,6 @@ $(function() {
       }]
     }
   };
-
-  var Shop = window.Crowdstart.Shop
 
   Shop.use({
     Controls: {
@@ -76,6 +87,11 @@ $(function() {
 
   m.on('change', function(){
     this.data.set('user.passwordConfirm', this.data.get('user.password'));
+
+    requestAnimationFrame(function() {
+      Shop.cart.invoice()
+      Shop.riot.update()
+    })
   });
 
   var enable = false;
