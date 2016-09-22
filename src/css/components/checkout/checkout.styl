@@ -73,14 +73,19 @@
         color: #9BA0A4
 
     input[type=text]
+    textarea
       width: 100%
 
     input[type=text]
     button
+    textarea
       color: #525252
       height: 32px
       line-height: 1em
       font-size: 16px
+
+    textarea
+      height: 96px
 
     button
       background-color: #ed8d48
@@ -266,6 +271,7 @@ checkout
 .shipping-information
 .payment-information
 .confirmation
+.gift-options
 cart
   margin-bottom: 30px
   position: relative
@@ -306,6 +312,12 @@ card-expiry
 
 card-cvc
   width: 23% !important
+
+gift-toggle
+  color: #9ba0a4
+
+gift-message
+  width: 100%
 
 cart
 checkout
@@ -352,7 +364,12 @@ checkout
   margin-left: 8px
   background: url(/images/icons/shopping-bag.svg)
 
+gift-toggle
+  label
+    font-size: 16px !important
+
 terms
+gift-toggle
   font-family: helvetica
   margin-bottom: 20px
   display: block

@@ -578,7 +578,7 @@
             </div>
             <div class="shipping-information">
               <h1>
-                Shipping Address
+                Shipping Information
               </h1>
               <div class="fields">
                 <shippingaddress-line1 class="input" placeholder="Address"></shippingaddress-line1>
@@ -591,6 +591,20 @@
               <div class="fields">
                 <shippingaddress-state class="input" placeholder="State"></shippingaddress-state>
                 <shippingaddress-country class="input" placeholder="Country"></shippingaddress-country>
+              </div>
+            </div>
+            <div class="gift-options">
+              <h1>
+                Gift Options
+              </h1>
+              <div class="fields">
+                <gift-toggle>
+                  <label for="order.gift">This is a gift.</label>
+                </gift-toggle>
+              </div>
+              <div class="fields" if="{ data.get('order.gift') }">
+                <gift-message placeholder="Please enter any special instructions for your gift such as custom greetings.">
+                </gift-message>
               </div>
             </div>
 
