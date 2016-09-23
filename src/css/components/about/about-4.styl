@@ -150,7 +150,7 @@ $height = 100vh
           top 56%
 
       .story-text
-        
+
         .line-top
           background none
           height 45vh
@@ -495,10 +495,13 @@ $height = 100vh
 @media screen and (max-width 680px)
   &#about
     #step-4
+      overflow-y scroll
       h1
         margin-top 0
       .story-1, .story-2, .story-3, .story-4, .story-5, .story-6, .story-7, .story-8, .story-9
-        height $height
+        height auto
+        position static
+        margin-bottom 40px
 
         br
           display none
@@ -555,8 +558,19 @@ $height = 100vh
           h2, p
             font-size 15px
 
+
+
+    &.is-story-1 #step-4
       .story-1
         top 2vh
+
+        h3
+          transform translate3d(0, 0, 0)
+          transition all 750ms ease
+
+        img
+          transform translate3d(0, 0, 0)
+          transition all 1s ease
 
         .story-text
           h2, p
@@ -572,6 +586,16 @@ $height = 100vh
       .story-2
         top $height * 1
 
+        h3
+          transform translate3d(0, 0, 0)
+          transition all 1s ease
+          transition-delay 500ms
+
+        img
+          transform translate3d(0, (-0.1 * $height), 0)
+          transition all 1s ease
+          transition-delay 500ms
+
         .story-img
           img
             top 5vh
@@ -579,12 +603,32 @@ $height = 100vh
       .story-3
         top $height * 2
 
+        h3
+          transform translate3d(0, 0, 0)
+          transition all 1s ease
+          transition-delay 500ms
+
+        img
+          transform translate3d(0, (-0.1 * $height), 0)
+          transition all 1s ease
+          transition-delay 500ms
+
         .story-img
           img
             top -10vh
 
+
       .story-4
         top $height * 3
+        h3
+          transform translate3d(0, 0, 0)
+          transition all 1s ease
+          transition-delay 500ms
+
+        img
+          transform translate3d(0, (-0.05 * $height), 0)
+          transition all 1s ease
+          transition-delay 500ms
 
         .story-img
           img
@@ -593,6 +637,16 @@ $height = 100vh
       .story-5
         top $height * 4
 
+        h3
+          transform translate3d(0, 0, 0)
+          transition all 1s ease
+          transition-delay 500ms
+
+        img
+          transform translate3d(0, (-0.1 * $height), 0)
+          transition all 1s ease
+          transition-delay 500ms
+
         .story-img
           img
             top 10vh
@@ -600,12 +654,32 @@ $height = 100vh
       .story-6
         top $height * 5
 
+        h3
+          transform translate3d(0, (0.02 * $height), 0)
+          transition all 1s ease
+          transition-delay 500ms
+
+        img
+          transform translate3d(0, (-0.1 * $height), 0)
+          transition all 1s ease
+          transition-delay 500ms
+
         .story-img
           img
             top 10vh
 
       .story-7
         top $height * 6
+
+        h3
+          transform translate3d(0, (0.02 * $height), 0)
+          transition all 1s ease
+          transition-delay 500ms
+
+        img
+          transform translate3d(0, (-0.1 * $height), 0)
+          transition all 1s ease
+          transition-delay 500ms
 
         .story-img
           img
@@ -616,12 +690,33 @@ $height = 100vh
       .story-8
         top $height * 7
 
+        h3
+          transform translate3d(0, (0.05 * $height), 0)
+          transition all 1s ease
+          transition-delay 500ms
+
+        img
+          transform translate3d(0, 0, 0)
+          transition all 1s ease
+          transition-delay 500ms
+
         .story-img
           img
             top 2vh
 
       .story-9
         top $height * 8
+
+        h3
+          transform translate3d(0, (0.05 * $height), 0)
+          transition all 1s ease
+          transition-delay 500ms
+
+        img
+          transform translate3d(0, 0, 0)
+          transition all 1s ease
+          transition-delay 500ms
+
         .story-img
           img
             left 50vw
