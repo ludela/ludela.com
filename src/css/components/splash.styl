@@ -153,8 +153,7 @@ ul
     &__headline
       font-size 85px
 
-  .small-text
-    bottom 40%
+
 
 
 @media all and (min-width 667px) and (max-width 800px)
@@ -169,7 +168,7 @@ ul
   .splash
 
     &__headline
-      position absolute
+      // position absolute
       h1, .h1
         font-size 85px
 
@@ -183,7 +182,11 @@ ul
 
 
     .mobile-overlay
-      position initial
+      position absolute
+      top 0
+      bottom 0
+      right 0
+      left 0
       background none
       height auto
       padding 0
@@ -192,11 +195,13 @@ ul
     .small-text
       display inline-block
       position absolute
+      // top 0
+      bottom 40%
+      // right 0
       left 50%
-      bottom 45%
       width 25%
       max-width 15em
-      transform translate3d(0, 450%, 0)
+      transform translate3d(0, 25vh, 0)
 
       &__title
         padding-left 0
@@ -287,4 +292,9 @@ ul
     //   .error
     //     position: absolute
     //     margin: 10px 5px
+
+@media all and (min-height 900px)
+  .splash
+    .small-text
+      transform translate3d(0, 15vh, 0)
 
