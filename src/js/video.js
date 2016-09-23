@@ -5,7 +5,7 @@ export default function ($) {
   var firstScriptTag = document.getElementsByTagName('script')[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-  $('.video').on('click', function () {
+  $('.video, .big.play').on('click', function () {
     $('#video-modal, #hamburger, #hamburger-foot').addClass('is-open');
 
     var player;
@@ -32,7 +32,7 @@ export default function ($) {
     var done = false;
     function onPlayerStateChange(event) {
       if (event.data == YT.PlayerState.PLAYING && !done) {
-        setTimeout(stopVideo, 6000);
+        // setTimeout(stopVideo, 6000);
         done = true;
       }
     }
