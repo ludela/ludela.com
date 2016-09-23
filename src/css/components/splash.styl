@@ -179,6 +179,11 @@ ul
     &__container
       position fixed
       overflow-y hidden
+      width 100%
+      top 0
+      bottom 0
+      left 50%
+      transform translateX(-50%)
 
 
     .mobile-overlay
@@ -187,6 +192,7 @@ ul
       bottom 0
       right 0
       left 0
+      width 100%
       background none
       height auto
       padding 0
@@ -198,7 +204,7 @@ ul
       // top 0
       bottom 40%
       // right 0
-      left 50%
+      left 25%
       width 25%
       max-width 15em
       transform translate3d(0, 25vh, 0)
@@ -214,10 +220,11 @@ ul
 
       &.\\+left
         text-align right
-        margin-left (540 / 1200) * -100%
+        margin-left -15%
+
 
       &.\\+right
-        margin-left (220 / 1200) * 100%
+        margin-left (600 / 1200) * 100%
 
         .small-text__icon
           left -40px
@@ -271,11 +278,11 @@ ul
 
 
 
-@media all and (min-width 1000px)
+@media all and (min-width 1100px)
   .splash
     .small-text
       &.\\+left
-        margin-left ((300 + 155) / 1200) * -100%
+        margin-left ((240 / 2) / 1200) * -100%
 
     // register
     //   display: table
