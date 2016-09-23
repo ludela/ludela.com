@@ -47,6 +47,12 @@ jQuery(function ($) {
     $('.nav-open').removeClass('nav-open');
   });
 
+  // $('.dot').on('mousedown touchstart', function () {
+  //   $('.splash')
+  //       .removeClass((i, css) =>
+  //         (css.match (/is\-step\-[0-9]+/g) || []).join(' '))
+  // });
+
   $.scrollify({
     section : ".splash__content",
     sectionName : "step",
@@ -65,8 +71,9 @@ jQuery(function ($) {
         $('.big.play').hide()
       }
       $('.splash')
-        .removeClass((i, css) => (css.match (/is\-step\-[0-9]+/g) || []).join(' '))
-        .addClass('is-step-' + (index + 1));
+        .removeClass((i, css) =>
+          (css.match (/is\-step\-[0-9]+/g) || []).join(' ')
+        ).addClass('is-step-' + (index + 1));
       $('.active-dot').removeClass('active-dot');
       $('.dot-' + (index + 1)).addClass('active-dot');
       if (index === 6) {
@@ -79,5 +86,4 @@ jQuery(function ($) {
     afterResize: function () {},
     afterRender: function () {}
   });
-
 });
