@@ -59,6 +59,11 @@ jQuery(function ($) {
     setHeights: true,
     overflowScroll: true,
     before: function (index) {
+      if (index == 0) {
+        $('.big.play').show()
+      } else {
+        $('.big.play').hide()
+      }
       $('.splash')
         .removeClass((i, css) => (css.match (/is\-step\-[0-9]+/g) || []).join(' '))
         .addClass('is-step-' + (index + 1));
