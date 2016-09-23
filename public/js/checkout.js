@@ -86,7 +86,7 @@ $(function() {
   }
 
   m.on('change', function(){
-    this.data.set('user.passwordConfirm', this.data.get('user.password'));
+    this.data.set('user.passwordConfirm', this.data.get('user.password') || '');
 
     requestAnimationFrame(function() {
       Shop.cart.invoice()
@@ -185,6 +185,10 @@ $(function() {
       window.location.reload();
     })
   });
+
+  $('.special-offer input').on('change', function(){
+    window.Crowdstart.Shop.data.set('order.metadata.subscribedToTrialRefills', $(this).prop('checked'))
+  })
 
   /**
    * Toggle hamburger

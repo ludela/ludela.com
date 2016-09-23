@@ -41,7 +41,7 @@ $(function () {
   }
 
   m.on('change', function(){
-    this.data.set('user.passwordConfirm', this.data.get('user.password'));
+    this.data.set('user.passwordConfirm', this.data.get('user.password') || '');
   });
 
   var enable = false;
