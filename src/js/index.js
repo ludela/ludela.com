@@ -53,6 +53,14 @@ jQuery(function ($) {
   //         (css.match (/is\-step\-[0-9]+/g) || []).join(' '))
   // });
 
+  var slide = 0;
+
+  $('.visuals__phone').on('click', function(){
+    if (slide == 1) {
+      $.scrollify.next();
+    }
+  })
+
   $.scrollify({
     section : ".splash__content",
     sectionName : "step",
@@ -65,6 +73,7 @@ jQuery(function ($) {
     setHeights: true,
     overflowScroll: true,
     before: function (index) {
+      slide = index;
       if (index == 0) {
         $('.big.play').show()
       } else {
