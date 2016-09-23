@@ -15,7 +15,7 @@
   left 0
   transition top 1s ease
   text-align left
-  z-index 702
+  z-index 1002
 
   .header-bar
     padding-top 40px
@@ -45,13 +45,14 @@
     max-width 1200px
 
   .footer__content
+    position relative
     display inline-block
-    padding 160px 0 0 100px
+    margin 100px
 
     .header
-      font-size 90px
+      font-size 85px
       font-family "Freeland"
-      font-weight normal
+      font-weight bold
       color #f1ead0
       line-height 1
       text-align center
@@ -66,7 +67,7 @@
       color #f1ead0
       font-weight bold
       text-transform uppercase
-      line-height 2.199
+      line-height 1.45
       margin-top 0
       margin-bottom 1.5rem
       text-align center
@@ -93,13 +94,23 @@
       width 159px
       height 38px
 
+    .login-button
+      display: table;
+      width: 510px;
+      margin-top 20px
+      text-align: center;
+
   .footer__candle
     display inline-block
-    top -5vh
+    top 6vh
+    right 5vw
     position absolute
     transform translate3d(0, -10vh, 0)
     transition all 350ms ease
     transition-delay 1s
+
+    img
+      max-width 80%
 
   .footer__link-wrap
     display inline-block
@@ -111,19 +122,19 @@
 
   .footer__links
     position absolute
-    bottom 0
+    bottom -200px
     left 0
-    width 100vw
+    width 100%
     transform translate3d(0, 30vh, 0)
     transition all 350ms ease
     transition-delay 500ms
-    padding 50px
+    padding 50px 0
     text-align center
 
     .footer__link, span
       padding 5px
-      font-size 18px
-      font-weight bold
+      font-size 12px
+      font-weight normal
       line-height 1.5
       opacity 0
       transform translate3d(0, 0, 0)
@@ -134,8 +145,10 @@
       text-decoration none
 
     .copyright
-      text-transform none
-      font-size 16px
+      text-transform uppercase
+      font-size 12px
+      display inline-block
+      margin-top 50px
 
   .header, .sub-header
     transform translate3d(0, 20vh, 0)
@@ -157,7 +170,7 @@
     transition-delay 250ms
 
   .footer__links
-    padding 20px
+    padding 20px 0
     transform translate3d(0, 0, 0)
     transition all 750ms ease
     transition-delay 500ms
@@ -179,10 +192,6 @@
 
 #general #footer .header-bar
   background none
-
-// &.is-footer #footer
-//   left 0
-//   transition: left 350ms ease-out;
 
 @media screen and (max-width 980px)
   &.nav-open.is-footer #footer .footer__hold
@@ -207,44 +216,30 @@
     .footer__content
       display inline-block
       padding 0
+      margin 0
       padding-top 120px
       height 100vh
       width 100vw
 
       .header
-        font-size 60px
+        font-size 30px
         font-family "Freeland"
         font-weight normal
         color #f1ead0
         line-height 1
         text-align center
-        margin-top 0
-        margin-bottom 50vh
+        margin 5vh 0 10vh
         text-shadow 0px 2px 13px rgba(0,0,0,0.3)
         z-index 302
 
       .sub-header
-        font-size 70%
-        font-family "proxima-nova"
-        color #f2be3d
-        position absolute
-        width 100vw
-        bottom 0
-        left 0
-        font-weight bold
-        text-transform uppercase
-        line-height 1
-        margin 8px 0
-        text-align center
-        text-shadow 0px 2px 13px rgba(0,0,0,0.3)
-        z-index 301
+        display none
 
       form
-        width 100vw
+        width 90vw
         position absolute
-        left 0
+        left 5vw
         padding 0 5vw
-        bottom 30px
 
         input[type="text"]
           background-color rgb(241, 234, 208)
@@ -268,8 +263,16 @@
           height 30px
 
 
+
+      .login-button
+        display: table;
+        width: 78vw;
+        margin 120px 11vw
+        text-align: center;
+
+
     .footer__candle
-      display inline-block
+      display none
       top 60px
       left 0
       width 100vw

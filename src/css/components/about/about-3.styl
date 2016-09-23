@@ -45,6 +45,9 @@
       .name
         font-size 18px
         display block
+        overflow hidden
+        text-overflow ellipsis
+        white-space nowrap
         font-family "proxima-nova"
         color rgb(91, 55, 50)
         font-weight 800
@@ -68,7 +71,6 @@
 
         a
           text-decoration underline
-          color: rgb(91, 55, 50)
 
 
 
@@ -113,7 +115,13 @@
 @media screen and (max-width 680px)
   &#about
     #step-3
-      padding-bottom 160px
+
+      .team-copy
+        font-size 15px
+
+      .about__content
+        position absolute
+        padding-bottom 160px
 
       .team-member
         width 45%
@@ -130,3 +138,9 @@
       .description
         font-size 9px
         max-width none
+
+        a
+          font-size 10px
+
+.about#about.is-step-3 #step-3 .team-member.team-5
+  margin-bottom 160px

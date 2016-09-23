@@ -51,7 +51,9 @@ export default function ($)  {
         setTimeout(setScroll, 1000);
       }
 
-      if (step == 13) {
+      if (step == 13 || step > 4 && $(window).width()<=680) {
+        step = 5;
+        window.location.hash = steps[12];
         $(document).trigger('setfooter');
       } else if (step >= 4) {
         story = step - 3;
@@ -68,6 +70,19 @@ export default function ($)  {
       }
     }
 
+
+    $('#step-4').onscroll = mobileScroll();
+
+
+
+
+    function mobileScroll(){
+      if ($(window).width()<=680) {
+        console.log('yeah');
+
+      }
+    }
+
     function reload() {
 
       if (window.location.hash == '') {
@@ -78,7 +93,9 @@ export default function ($)  {
       step = steps.indexOf(hash.substring(1, hash.length))+1;
       var prevStep = step;
 
-      if (step == 13) {
+      if (step == 13 || step > 4 && $(window).width()<=680) {
+        window.location.hash = steps[12];
+        step = 5;
         $(document).trigger('setfooter');
       } else if (step >= 4) {
         story = step - 3;
