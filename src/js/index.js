@@ -26,7 +26,8 @@ jQuery(function ($) {
         $page = $('.wrapper'),
         $about = $('#about'),
         $general = $('#general'),
-        $hamburger = $('#hamburger'),
+        $hamburger = $('hamburger'),
+        $dot = $('.dot'),
         $fixed = $('.fixed');
 
   $(window).on('resize', function(e) {
@@ -45,6 +46,10 @@ jQuery(function ($) {
   $('body').on('click tap touchend', '.nav-open, #menu, .menu__close', function () {
     $('.is-open').removeClass('is-open');
     $('.nav-open').removeClass('nav-open');
+  });
+
+  $dot.on('click', function (ev, goTo) {
+    $.scrollify.move($(this).data("goto"));
   });
 
   $.scrollify({
