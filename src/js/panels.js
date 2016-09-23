@@ -49,20 +49,18 @@ export default function ($) {
   });
 
   $dot.on('click', function (ev, goTo) {
-    goTo = $(this).data('goto');
-    console.log('going to panel: ', goTo);
-    $document.trigger('setpanel', goTo);
+    $.scrollify.move($(this).data("step"));
+    // goTo = $(this).data('goto');
+    // $('.splash')
+    //     .removeClass((i, css) =>
+    //       (css.match (/is\-step\-[0-9]+/g) || []).join(' '))
+    //     .addClass("is-step-" + goTo);
+    // window.location.hash = ('s' + goTo);
   });
 
   $document.on('setfooter', function () {
     $about.addClass('is-footer');
     window.location.hash = 'Join-Us'
-  });
-
-  $dot.on('click', function (ev, goTo) {
-    goTo = $(this).data('goto');
-    console.log('going to panel: ', goTo);
-    $document.trigger('setpanel', goTo);
   });
 
   $document.on('setabout', function (ev, index) {

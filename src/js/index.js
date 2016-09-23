@@ -26,7 +26,8 @@ jQuery(function ($) {
         $page = $('.wrapper'),
         $about = $('#about'),
         $general = $('#general'),
-        $hamburger = $('#hamburger'),
+        $hamburger = $('hamburger'),
+        $dot = $('.dot'),
         $fixed = $('.fixed');
 
   $(window).on('resize', function(e) {
@@ -47,11 +48,9 @@ jQuery(function ($) {
     $('.nav-open').removeClass('nav-open');
   });
 
-  // $('.dot').on('mousedown touchstart', function () {
-  //   $('.splash')
-  //       .removeClass((i, css) =>
-  //         (css.match (/is\-step\-[0-9]+/g) || []).join(' '))
-  // });
+  $dot.on('mousedown touchstart', function (ev, goTo) {
+    $.scrollify.move($(this).data("goto"));
+  });
 
   $.scrollify({
     section : ".splash__content",
