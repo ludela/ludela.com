@@ -49,7 +49,7 @@ jQuery(function ($) {
   });
 
   $dot.on('mousedown touchstart', function (ev, goTo) {
-    $.scrollify.move($(this).data("goto"));
+    $.scrollify.move(parseInt($(this).data("goto"), 10));
   });
 
   var slide = 0;
@@ -82,7 +82,7 @@ jQuery(function ($) {
 
   $.scrollify({
     section : ".splash__content",
-    sectionName : "step",
+    sectionName : false,
     // interstitialSection : "",
     easing: "easeOutExpo",
     scrollSpeed: 1100,
