@@ -306,25 +306,23 @@ ul
       transform translate3d(0, 15vh, 0)
 
 .visuals__phone
-  &:after
-    content: ''
-    position: absolute
-    width: 2vh
-    height: 2vh
-    background-color: #EABE52
-    border-radius: 1vh
-    left: 17vh
-    top: 64%
-    transition: left 1s ease
+  .app-slider
+    position: relative
+    &:after
+      position: absolute
+      content: ''
+      width: 1vh
+      height: 1vh
+      background-color: #EABE52
+      border-radius: 1vh
+      left: 73%
+      top: 64.5%
+      transition: left 1s ease
+      transform: translate(-50%)
 
 .is-step-2
   .visuals__phone
     cursor: pointer
-    &:after
-      left: 5vh !important
-
-@media screen and (max-width: 500px)
-  .visuals__phone
-    &:after
-      left: 13vh;
-      top: 55%;
+    .app-slider
+      &:after
+        left: 25% !important
