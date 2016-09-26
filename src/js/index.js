@@ -21,6 +21,8 @@ jQuery(function ($) {
   var resizeTimer;
 
   const $nav = $('#menu'),
+        $window = $(window),
+        $body = $('html, body'),
         $page = $('.wrapper'),
         $about = $('#about'),
         $general = $('#general'),
@@ -34,6 +36,7 @@ jQuery(function ($) {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function() {
       $($nav).show();
+      clearTimeout(resizeTimer);
     }, 250);
   });
 
@@ -109,7 +112,12 @@ jQuery(function ($) {
       }
     },
     after: function () {},
-    afterResize: function () {},
+    afterResize: function () {
+      var overlayOffset = $.scrollify.current().find('.mobile-overlay').offset().top;
+      console.log(overlayOffset);
+      $body.animate({ scrollTop: overlayOffset }, 0);
+
+    },
     afterRender: function () {}
   });
 });
