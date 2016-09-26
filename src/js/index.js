@@ -53,6 +53,11 @@ jQuery(function ($) {
     $.scrollify.move(parseInt($(this).data("goto"), 10));
   });
 
+  // if ($window.width() < 800) {
+  //   console.log('small screen');
+  //   $.scrollify.disable();
+  // }
+
   var slide = 0;
 
   $('.visuals__phone').on('click', function(){
@@ -112,12 +117,7 @@ jQuery(function ($) {
       }
     },
     after: function () {},
-    afterResize: function () {
-      var overlayOffset = $.scrollify.current().find('.mobile-overlay').offset().top;
-      console.log(overlayOffset);
-      $body.animate({ scrollTop: overlayOffset }, 0);
-
-    },
+    afterResize: function () {},
     afterRender: function () {}
   });
 });
