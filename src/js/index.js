@@ -1,6 +1,5 @@
 import jQuery from 'jquery';
 import panels from './panels';
-import _debugger from './debugger';
 import scroller from './scroller';
 import about from './about';
 import shell from './shell';
@@ -11,7 +10,6 @@ import scrollify from 'jquery-scrollify';
 window.$ = window.jQuery = jQuery;
 
 jQuery(function ($) {
-  _debugger($);
   panels($);
   scrollify($);
   // scroller($);
@@ -23,6 +21,8 @@ jQuery(function ($) {
   var resizeTimer;
 
   const $nav = $('#menu'),
+        $window = $(window),
+        $body = $('html, body'),
         $page = $('.wrapper'),
         $about = $('#about'),
         $general = $('#general'),
@@ -36,6 +36,7 @@ jQuery(function ($) {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function() {
       $($nav).show();
+      clearTimeout(resizeTimer);
     }, 250);
   });
 
@@ -51,6 +52,11 @@ jQuery(function ($) {
   $dot.on('mousedown touchstart', function (ev, goTo) {
     $.scrollify.move(parseInt($(this).data("goto"), 10));
   });
+
+  // if ($window.width() < 800) {
+  //   console.log('small screen');
+  //   $.scrollify.disable();
+  // }
 
   var slide = 0;
 
@@ -88,7 +94,7 @@ jQuery(function ($) {
     scrollSpeed: 1100,
     offset : 0,
     scrollbars: true,
-    // standardScrollElements: "",
+    standardScrollElements: ".mobile-overlay, .mobile-padding",
     setHeights: true,
     overflowScroll: true,
     before: function (index) {
