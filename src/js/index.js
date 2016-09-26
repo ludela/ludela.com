@@ -88,7 +88,7 @@ jQuery(function ($) {
     scrollSpeed: 1100,
     offset : 0,
     scrollbars: true,
-    // standardScrollElements: "",
+    standardScrollElements: ".mobile-overlay, .mobile-padding",
     setHeights: true,
     overflowScroll: true,
     before: function (index) {
