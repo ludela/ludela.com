@@ -1,6 +1,5 @@
 import jQuery from 'jquery';
 import panels from './panels';
-import _debugger from './debugger';
 import scroller from './scroller';
 import about from './about';
 import shell from './shell';
@@ -11,7 +10,6 @@ import scrollify from 'jquery-scrollify';
 window.$ = window.jQuery = jQuery;
 
 jQuery(function ($) {
-  _debugger($);
   panels($);
   scrollify($);
   // scroller($);
