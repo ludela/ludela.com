@@ -154,13 +154,13 @@
 }
 
 .is-slide-3 .candle {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, -10vh, 0);
+  transform: translate3d(0, -10vh, 0);
 }
 
 .is-slide-3 .flame {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, -10vh, 0);
+  transform: translate3d(0, -10vh, 0);
   opacity: 0;
   transition: none;
 }
@@ -173,31 +173,31 @@
 .is-slide-5 .board,
 .is-slide-5 .battery,
 .is-slide-5 .wax {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, -10vh, 0);
+  transform: translate3d(0, -10vh, 0);
 }
 
 .is-slide-3 .board,
 .is-slide-5 .board {
-  -webkit-transform: translate3d(5vw, 5vh, 0);
-  transform: translate3d(5vw, 5vh, 0);
+  -webkit-transform: translate3d(5vw, -5vh, 0);
+  transform: translate3d(5vw, -5vh, 0);
 }
 
 .is-slide-3 .battery,
 .is-slide-5 .battery {
-  -webkit-transform: translate3d(-5vw, -5vh, 0);
-  transform: translate3d(-5vw, -5vh, 0);
+  -webkit-transform: translate3d(-5vw, -15vh, 0);
+  transform: translate3d(-5vw, -15vh, 0);
 }
 
 .is-slide-4 .candle {
-  -webkit-transform: translate3d(0, -200vh, 0);
-  transform: translate3d(0, -200vh, 0);
+  -webkit-transform: translate3d(0, -100vh, 0);
+  transform: translate3d(0, -100vh, 0);
   opacity: 0;
 }
 
 .is-slide-4 .flame {
-  -webkit-transform: translate3d(0, -200vh, 0);
-  transform: translate3d(0, -200vh, 0);
+  -webkit-transform: translate3d(0, -100vh, 0);
+  transform: translate3d(0, -100vh, 0);
   opacity: 0;
 }
 
@@ -205,19 +205,30 @@
 .is-slide-4 .board,
 .is-slide-4 .battery,
 .is-slide-4 .wax {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, -10vh, 0);
+  transform: translate3d(0, -10vh, 0);
   opacity: 1;
 }
 
-.is-slide-6 .candle,
+.is-slide-5 .candle {
+  -webkit-transform: translate3d(0, -100vh, 0);
+  transform: translate3d(0, -100vh, 0);
+  opacity: 1;
+}
+
 .is-slide-6 .flame,
 .is-slide-6 .core,
 .is-slide-6 .board,
-.is-slide-6 .battery,
+.is-slide-6 .battery,{
+  -webkit-transform: translate3d(0, -10vh, 0);
+  transform: translate3d(0, -10vh, 0);
+  opacity: 0;
+}
+
+.is-slide-6 .candle,
 .is-slide-6 .wax {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, -10vh, 0);
+  transform: translate3d(0, -10vh, 0);
   opacity: 1;
 }
 
@@ -289,11 +300,16 @@
 
   .is-slide-6 .core,
   .is-slide-6 .board,
-  .is-slide-6 .battery,
-  .is-slide-6 .wax {
+  .is-slide-6 .battery {
     -webkit-transform: translate3d(-20vw, -20vh, 0);
     transform: translate3d(-20vw, -20vh, 0);
     opacity: 0;
+  }
+
+  .is-slide-6 .wax {
+    -webkit-transform: translate3d(-20vw, -20vh, 0);
+    transform: translate3d(-20vw, -20vh, 0);
+    opacity: 1;
   }
 }
 
