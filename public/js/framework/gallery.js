@@ -1,4 +1,4 @@
-$(function() {
+$(window).load(function(){
   var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
   var controlsHTML = '<div class="gallery-controls"><div class="gallery-counter"></div><div class="gallery-before button">&lt</div><div class="gallery-after button">&gt</div></div>';
   var itemHTML = '<div class="gallery-item"></div>';

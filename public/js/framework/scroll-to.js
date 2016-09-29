@@ -1,5 +1,5 @@
 // Set up automatic scrolling to bookmarks
-$(function() {
+$(window).load(function(){
   var $as = $('a');
   $as.each(function(){
     var $a = $(this);

@@ -1,4 +1,4 @@
-$(function(){
+$(window).load(function(){
   var opts = 'autoplay=1&showinfo=0&modestbranding=1&rel=0&loop=1';
 
   $('.hero.video .play').on('click', function(e){

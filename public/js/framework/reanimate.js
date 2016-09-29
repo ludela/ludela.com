@@ -1,5 +1,5 @@
 // Trigger Animate.css animation when it gets scrolled to.
-$(function() {
+$(window).load(function(){
   $('.animated').each(function() {
     var $animated = $(this);
     var scheduled = false;

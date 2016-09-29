@@ -151,6 +151,11 @@ h3 {
   padding: 10px;
 }
 
+.list .image {
+  position: relative;
+  z-index: -1;
+}
+
 .safe,
 .smart,
 .sustainable {
@@ -173,6 +178,7 @@ h3 {
   position: absolute;
   background-color: #D37C3B;
   z-index: -1;
+  transition: none;
 }
 
 .safe:after,
@@ -199,8 +205,55 @@ h3 {
   background-position: 0% 50%;
 }
 
+.smart {
+  pointer-events: none;
+}
+
 .smart:before {
   background-color: #221010;
+}
+
+.lit .smart:before {
+  background-color: #f0bd3c;
+  transition: background 2400ms ease;
+}
+
+.lit .smart:after {
+  background: -webkit-linear-gradient(bottom, #221010 40%, rgba(240,189,60,0));
+  background: linear-gradient(0deg, #221010 40%, rgba(240,189,60,0));
+}
+
+.app-slider {
+  position: relative;
+}
+
+.lit .app-slider:after {
+  left: 73% !important;
+}
+
+.app-slider:after {
+  position: absolute;
+  content: '';
+  width: 1vh;
+  height: 1vh;
+  background-color: #EABE52;
+  border-radius: 1vh;
+  left: 73%;
+  top: 64.5%;
+  transition: left 1s ease;
+  transform: translate(-50%);
+  left: 25%;
+}
+
+.life3 {
+  z-index: 51;
+  background-image: url(/images/life3.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.sustainable {
+  z-index: 51;
 }
 
 @media all and (max-width: 800px) {
@@ -217,8 +270,8 @@ h3 {
   }
 
   .list .image {
-    height: 50vh !important;
-    min-height: 50vh !important;
+    height: 80vh !important;
+    min-height: 80vh !important;
   }
 
   .list .info {
@@ -228,7 +281,72 @@ h3 {
   .content,
   .info {
     background-color: rgba(0,0,0,0.3);
+    max-width: 100% !important;
   }
 }
 
+.loader .spinner {
+  font-size: 10px;
+  top: 50%;
+  margin: -50px auto;
+  text-indent: -9999em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  background: #f1ead0;
+  background: -moz-linear-gradient(left, #ffffff 10%, rgba(95, 92, 82, 0) 42%);
+  background: -webkit-linear-gradient(left, #ffffff 10%, rgba(95, 92, 82, 0) 42%);
+  background: -o-linear-gradient(left, #ffffff 10%, rgba(95, 92, 82, 0) 42%);
+  background: -ms-linear-gradient(left, #ffffff 10%, rgba(95, 92, 82, 0) 42%);
+  background: linear-gradient(to right, #ffffff 10%, rgba(95, 92, 82, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader .spinner:before {
+  width: 50%;
+  height: 50%;
+  background: #f1ead0;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+.loader .spinner:after {
+  background: #000;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 

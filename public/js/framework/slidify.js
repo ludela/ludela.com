@@ -1,4 +1,4 @@
-$(function(){
+$(window).load(function(){
   var $blocks = $('body > section, body > .block');
   var totalBlocks = $blocks.length;
 

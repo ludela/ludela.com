@@ -24,7 +24,7 @@
         };
 }());
 
-$(function(){
+$(window).load(function(){
   // Modals
   $('.modal').on('scroll touchmove mousewheel', function(e){
     e.preventDefault();
@@ -65,9 +65,7 @@ $(function(){
     e.stopPropagation();
     return false;
   })
-});
 
-$(window).load(function(){
   $('.loader').fadeTo(1000, 0, function() {
     $(this).hide();
     $('body').css('overflow', '');

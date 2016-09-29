@@ -46,7 +46,7 @@
   -webkit-transform: translate3d(0, 100vh, 0);
   transform: translate3d(0, 100vh, 0);
   opacity: 0;
-  transition: opacity 1900ms ease, transform 1300ms ease;
+  transition: opacity 1900ms ease, transform 1200ms ease;
   z-index: 19;
 }
 
@@ -131,6 +131,27 @@
   -webkit-transform: translate3d(0, 100vh, 0);
   transform: translate3d(0, 100vh, 0);
   z-index: 16;
+}
+
+.fixed-visuals .phone {
+  background-image: url('/images/Iphone_Screen_3.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  transition: opacity 1900ms ease, transform 1000ms ease;
+  max-width: 150px;
+  width: 50vw;
+  height: 45vh;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: -10vh;
+  position: absolute;
+  -webkit-transform: translate3d(8vw, 100vh, 0);
+  transform: translate3d(8vw, 100vh, 0);
+  z-index: 21;
+  cursor: pointer;
 }
 
 .is-slide-2 .candle {
@@ -219,7 +240,7 @@
 .is-slide-6 .flame,
 .is-slide-6 .core,
 .is-slide-6 .board,
-.is-slide-6 .battery,{
+.is-slide-6 .battery {
   -webkit-transform: translate3d(0, -10vh, 0);
   transform: translate3d(0, -10vh, 0);
   opacity: 0;
@@ -232,7 +253,42 @@
   opacity: 1;
 }
 
+.is-slide-6 .flame {
+  -webkit-transform: translate3d(0, -6vh, 0);
+  transform: translate3d(0, -6vh, 0);
+  opacity: 0;
+}
+
+.is-slide-6 .phone {
+  -webkit-transform: translate3d(8vw, -10vh, 0);
+  transform: translate3d(8vw, -10vh, 0);
+  opacity: 1;
+}
+
+.is-slide-6.lit .flame {
+  -webkit-transform: translate3d(0, -10vh, 0);
+  transform: translate3d(0, -10vh, 0);
+  opacity: 1;
+}
+
+.is-slide-7 .flame,
+.is-slide-7 .candle,
+.is-slide-7 .wax,
+.is-slide-7 .phone,
+.is-slide-7 .core,
+.is-slide-7 .board,
+.is-slide-7 .battery {
+  -webkit-transform: translate3d(-500vw, -10vh, 0);
+  transform: translate3d(-500vw, -10vh, 0);
+  opacity: 0;
+}
+
 @media all and (min-width: 801px) {
+  .phone {
+    -webkit-transform: translate3d(-12vw, 100vh, 0);
+    transform: translate3d(-12vw, 100vh, 0);
+  }
+
   .is-slide-3 .candle,
   .is-slide-5 .candle {
     -webkit-transform: translate3d(-20vw, -20vh, 0);
@@ -293,9 +349,13 @@
   }
 
   .is-slide-6 .flame {
+    -webkit-transform: translate3d(-20vw, -14vh, 0);
+    transform: translate3d(-20vw, -14vh, 0);
+  }
+
+  .is-slide-6.lit .flame {
     -webkit-transform: translate3d(-20vw, -20vh, 0);
     transform: translate3d(-20vw, -20vh, 0);
-    opacity: 0;
   }
 
   .is-slide-6 .core,
@@ -303,13 +363,16 @@
   .is-slide-6 .battery {
     -webkit-transform: translate3d(-20vw, -20vh, 0);
     transform: translate3d(-20vw, -20vh, 0);
-    opacity: 0;
   }
 
   .is-slide-6 .wax {
     -webkit-transform: translate3d(-20vw, -20vh, 0);
     transform: translate3d(-20vw, -20vh, 0);
-    opacity: 1;
+  }
+
+  .is-slide-6 .phone {
+    -webkit-transform: translate3d(-12vw, -20vh, 0);
+    transform: translate3d(-12vw, -20vh, 0);
   }
 }
 
