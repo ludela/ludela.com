@@ -17,7 +17,7 @@ $(function(){
         return (css.match (/is\-slide\-[0-9]+/g) || []).join(' ');
       });
 
-      var top = $(window).scrollTop() + 100;
+      var top = $(window).scrollTop() + $(window).height()/2;
 
       for (var i = 0; i < totalBlocks; i++) {
         var $block = $($blocks[i]);

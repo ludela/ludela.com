@@ -18,7 +18,7 @@ header, header * {
   font-size: 1.5rem;
 }
 
-p {
+.content p {
   line-height: 2rem;
 }
 
@@ -119,7 +119,11 @@ h3 {
   background: rgba(241, 234, 208, 0.3);
 }
 
-.value:before {
+.value:before,
+.safe:before,
+.smart:before,
+.sustainable:before
+{
   content: '';
   width: 100%;
   height: 100%;
@@ -127,9 +131,14 @@ h3 {
   left: 0;
   position: absolute;
   background-color: #D37C3B;
+  z-index: -1;
 }
 
-.value:after {
+.value:after,
+.safe:after,
+.smart:after,
+.sustainable:after
+{
   content: '';
   width: 100%;
   height: 100%;
@@ -140,11 +149,48 @@ h3 {
   -o-background: linear-gradient(0deg, rgba(255,255,255,0) 40%, rgba(255,255,255,0.3));
   -moz-background: linear-gradient(0deg, rgba(255,255,255,0) 40%, rgba(255,255,255,0.3));
   background: linear-gradient(0deg, rgba(255,255,255,0) 40%, rgba(255,255,255,0.3));
+  z-index: -1;
 }
 
 .value .content {
   margin-top: 5vh;
   z-index: 1;
+}
+
+.life1 {
+  z-index: 51;
+  background-image: url(/images/life1.jpg);
+  background-size: cover;
+  background-position: 25% 75%;
+}
+
+.list .info li h4,
+.list .info li p {
+  margin: 4px;
+}
+
+.list .info li {
+  margin-bottom: 10px;
+}
+
+.list li .icon {
+  font-size: 3em;
+  padding: 10px;
+}
+
+.safe {
+  height: auto;
+}
+
+.safe * {
+  text-align: left;
+}
+
+.life2 {
+  z-index: 51;
+  background-image: url(/images/life2.jpg);
+  background-size: cover;
+  background-position: 25% 75%;
 }
 
 @media all and (max-width: 800px) {
@@ -158,6 +204,16 @@ h3 {
 
   .hero .content {
     margin-top: 10vh !important;
+  }
+
+  .list .image {
+    height: 50vh !important;
+    min-height: 50vh !important;
+  }
+
+  .content,
+  .info {
+    background-color: rgba(0,0,0,0.3);
   }
 }
 

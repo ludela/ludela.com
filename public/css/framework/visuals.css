@@ -12,7 +12,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  transition: transform 1000ms ease, background-image 100ms ease;
+  transition: opacity 1900ms ease, transform 1000ms ease, background-image 100ms ease;
   max-width: 200px;
   width: 50vw;
   height: 45vh;
@@ -50,6 +50,89 @@
   z-index: 19;
 }
 
+.fixed-visuals .core {
+  background-image: url('/images/Core.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: opacity 1900ms ease, transform 1000ms ease;
+  max-width: 250px;
+  width: 50vw;
+  height: 45vh;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 3vh;
+  position: absolute;
+  -webkit-transform: translate3d(0, 100vh, 0);
+  transform: translate3d(0, 100vh, 0);
+  z-index: 18;
+  opacity: 0;
+}
+
+.fixed-visuals .board {
+  background-image: url('/images/Board.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: opacity 1900ms ease, transform 1000ms ease;
+  max-width: 250px;
+  width: 50vw;
+  height: 45vh;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 3vh;
+  position: absolute;
+  -webkit-transform: translate3d(0, 100vh, 0);
+  transform: translate3d(0, 100vh, 0);
+  z-index: 17;
+  opacity: 0;
+}
+
+.fixed-visuals .battery {
+  background-image: url('/images/Battery.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: opacity 1900ms ease, transform 1000ms ease;
+  max-width: 250px;
+  width: 50vw;
+  height: 45vh;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 3vh;
+  position: absolute;
+  -webkit-transform: translate3d(0, 100vh, 0);
+  transform: translate3d(0, 100vh, 0);
+  z-index: 19;
+  opacity: 0;
+}
+
+.fixed-visuals .wax {
+  background-image: url("/images/Wax_Insert.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: opacity 1900ms ease, transform 1000ms ease;
+  max-width: 250px;
+  width: 50vw;
+  height: 45vh;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 3vh;
+  position: absolute;
+  -webkit-transform: translate3d(0, 100vh, 0);
+  transform: translate3d(0, 100vh, 0);
+  z-index: 16;
+}
+
 .is-slide-2 .candle {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -59,6 +142,159 @@
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   opacity: 1;
+}
+
+.is-slide-2 .core,
+.is-slide-2 .board,
+.is-slide-2 .battery,
+.is-slide-2 .wax {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 0;
+}
+
+.is-slide-3 .candle {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.is-slide-3 .flame {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 0;
+  transition: none;
+}
+
+.is-slide-3 .core,
+.is-slide-3 .board,
+.is-slide-3 .battery,
+.is-slide-3 .wax,
+.is-slide-5 .core,
+.is-slide-5 .board,
+.is-slide-5 .battery,
+.is-slide-5 .wax {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.is-slide-3 .board,
+.is-slide-5 .board {
+  -webkit-transform: translate3d(5vw, 5vh, 0);
+  transform: translate3d(5vw, 5vh, 0);
+}
+
+.is-slide-3 .battery,
+.is-slide-5 .battery {
+  -webkit-transform: translate3d(-5vw, -5vh, 0);
+  transform: translate3d(-5vw, -5vh, 0);
+}
+
+.is-slide-4 .candle {
+  -webkit-transform: translate3d(0, -200vh, 0);
+  transform: translate3d(0, -200vh, 0);
+  opacity: 0;
+}
+
+.is-slide-4 .flame {
+  -webkit-transform: translate3d(0, -200vh, 0);
+  transform: translate3d(0, -200vh, 0);
+  opacity: 0;
+}
+
+.is-slide-4 .core,
+.is-slide-4 .board,
+.is-slide-4 .battery,
+.is-slide-4 .wax {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+.is-slide-6 .candle,
+.is-slide-6 .flame,
+.is-slide-6 .core,
+.is-slide-6 .board,
+.is-slide-6 .battery,
+.is-slide-6 .wax {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+@media all and (min-width: 801px) {
+  .is-slide-3 .candle,
+  .is-slide-5 .candle {
+    -webkit-transform: translate3d(-20vw, -20vh, 0);
+    transform: translate3d(-20vw, -20vh, 0);
+  }
+
+  .is-slide-3 .flame,
+  .is-slide-5 .flame {
+    -webkit-transform: translate3d(-20vw, -20vh, 0);
+    transform: translate3d(-20vw, -20vh, 0);
+  }
+
+  .is-slide-3 .core,
+  .is-slide-3 .board,
+  .is-slide-3 .battery,
+  .is-slide-3 .wax,
+  .is-slide-5 .core,
+  .is-slide-5 .board,
+  .is-slide-5 .battery,
+  .is-slide-5 .wax {
+    -webkit-transform: translate3d(-20vw, -20vh, 0);
+    transform: translate3d(-20vw, -20vh, 0);
+  }
+
+  .is-slide-3 .board,
+  .is-slide-5 .board {
+    -webkit-transform: translate3d(-15vw, -15vh, 0);
+    transform: translate3d(-15vw, -15vh, 0);
+  }
+
+  .is-slide-3 .battery,
+  .is-slide-5 .battery {
+    -webkit-transform: translate3d(-25vw, -25vh, 0);
+    transform: translate3d(-25vw, -25vh, 0);
+  }
+
+  .is-slide-4 .candle {
+    -webkit-transform: translate3d(-20vw, -100vh, 0);
+    transform: translate3d(-20vw, -100vh, 0);
+  }
+
+  .is-slide-4 .flame {
+    -webkit-transform: translate3d(-20vw, -100vh, 0);
+    transform: translate3d(-20vw, -100vh, 0);
+  }
+
+  .is-slide-4 .core,
+  .is-slide-4 .board,
+  .is-slide-4 .battery,
+  .is-slide-4 .wax {
+    -webkit-transform: translate3d(-20vw, -20vh, 0);
+    transform: translate3d(-20vw, -20vh, 0);
+  }
+
+  .is-slide-6 .candle {
+    -webkit-transform: translate3d(-20vw, -20vh, 0);
+    transform: translate3d(-20vw, -20vh, 0);
+  }
+
+  .is-slide-6 .flame {
+    -webkit-transform: translate3d(-20vw, -20vh, 0);
+    transform: translate3d(-20vw, -20vh, 0);
+    opacity: 0;
+  }
+
+  .is-slide-6 .core,
+  .is-slide-6 .board,
+  .is-slide-6 .battery,
+  .is-slide-6 .wax {
+    -webkit-transform: translate3d(-20vw, -20vh, 0);
+    transform: translate3d(-20vw, -20vh, 0);
+    opacity: 0;
+  }
 }
 
 @media all and (max-width: 800px) {
