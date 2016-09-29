@@ -12,7 +12,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  transition: transform 1900ms ease, background-image 100ms ease;
+  transition: transform 1000ms ease, background-image 100ms ease;
   max-width: 200px;
   width: 50vw;
   height: 45vh;
@@ -22,7 +22,8 @@
   right: 0;
   bottom: 3vh;
   position: absolute;
-  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 100vh, 0);
+  transform: translate3d(0, 100vh, 0);
   z-index: 20;
 }
 
@@ -35,30 +36,44 @@
   min-width: 30px;
   bottom: 10vh;
   height:45vh;
-  max-height: 350px;
+  max-height: 340px;
   left: 0;
   right: 0;
   background-image: url('/images/CandleFlame.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 0%;
-  transform: translate3d(0, 27%, 0);
+  -webkit-transform: translate3d(0, 100vh, 0);
+  transform: translate3d(0, 100vh, 0);
   opacity: 0;
-  transition: opacity 500ms ease, transform 1000ms ease;
+  transition: opacity 1900ms ease, transform 1300ms ease;
   z-index: 19;
 }
 
-.fixed-visuals.ready .flame {
-  opacity: 1;
+.is-slide-2 .candle {
+  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+}
+
+.is-slide-2 .flame {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
 }
 
 @media all and (max-width: 800px) {
   .fixed-visuals .candle {
-    bottom: 10vh;
+    bottom: 4vh;
   }
 
   .fixed-visuals .flame {
-    bottom: 18vh;
+    bottom: 12vh;
   }
 }
+
+@media all and (max-width: 400px) {
+  .value {
+    height: 160vh;
+  }
+}
+

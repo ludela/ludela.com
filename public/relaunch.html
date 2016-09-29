@@ -25,9 +25,10 @@
     <link rel="stylesheet" href="css/framework/hero.css" />
     <link rel="stylesheet" href="css/framework/hero-video.css" />
     <link rel="stylesheet" href="css/framework/parallax.css" />
+    <link rel="stylesheet" href="css/framework/gallery.css" />
     <script src="js/framework/hero-video.js"></script>
-    <script src="js/framework/reanimate.js"></script>
-    <script src="js/framework/scroll-to.js"></script>
+    <script src="js/framework/gallery.js"></script>
+    <script src="js/framework/slidify.js"></script>
 
     <!-- Custom Styling and JS-->
     <link rel="stylesheet" href="css/framework/visuals.css" />
@@ -41,7 +42,7 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
   </head>
-  <body style="overflow:hidden">
+  <body style="overflow:hidden;">
     <!-- HEADER -->
     <header>
       <nav>
@@ -85,11 +86,21 @@
         </a>
       </nav>
     </header>
-    <section class="hero video parallax" data-src="https://www.youtube.com/embed/1ayoxYoCUSo">
+
+    <section class="hero gallery" data-autoplay="4000">
+      <section class="full hero1">
+      </section>
+      <section class="full hero2">
+      </section>
+      <section class="full hero3">
+      </section>
+    </section>
+
+    <div class="hero video overlay block" data-src="https://www.youtube.com/embed/1ayoxYoCUSo">
       <a class="play button" href="#"></a>
       <div class="content">
-        <h2>The World's First</h2>
-        <h4>real flame smart candle</h4>
+        <h1>The World's First</h1>
+        <h3>real flame smart candle</h3>
       </div>
       <a class="button summary-down next-section" href="#"></a>
       <div class="modal hidden">
@@ -100,6 +111,18 @@
         <div class="modal-close modal-close-position">
           &#10005;
         </div>
+      </div>
+    </div>
+
+    <section class="value full">
+      <div class="content">
+        <h2>Classical Elegance, Modern Technology</h2>
+        <p>Introducing LuDela, a completely new way to enjoy candlelight. LuDela
+          redefines what a candle can be by giving you all the features of a smart,
+          connected modern light.  Stay safe and relax with the peace of
+          mind that LuDela's self extinguishing safety features bring you.
+          Set the tone as LuDela gives you the ability to choose the exact brightness
+          and intensity of the flame to match your mood.
       </div>
     </section>
 
@@ -112,6 +135,9 @@
       <div class="phone">
       </div>
     </div>
+
+    <section class="full life1">
+    </section>
 
     <!-- Loader -->
     <div class="loader hidden">
