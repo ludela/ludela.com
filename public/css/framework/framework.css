@@ -1,0 +1,153 @@
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/* A block is the basic unit of a webpage. Sections, headers, and footers are also blocks */
+.block, section, header, footer{
+  position: relative;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.block, section {
+  display: table;
+}
+
+.full {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  min-height: 600px;
+  box-sizing: border-box;
+}
+
+.button, button, input[type=button], input[type=submit] {
+  padding: 12px 30px;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+}
+
+input {
+  border: none;
+  padding: .5em 1em;
+  box-sizing: border-box;
+  height: 42px;
+}
+
+.content {
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: block;
+  text-align: left;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.content.narrow {
+  max-width: 600px;
+}
+
+.centered {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8);
+  overflow:hidden;
+  z-index: 1000;
+  padding: 80px 40px;
+  box-sizing: border-box;
+}
+
+.modal-close-position {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  margin-left: -20px;
+  position: absolute;
+}
+
+/* Quotes */
+
+blockquote:before {
+  content: open-quote;
+  font-size: 4rem;
+  line-height: .1em;
+  margin-right: .25em;
+  vertical-align: -.4em;
+}
+
+blockquote {
+  padding: 50px;
+  font-size: 1.25em;
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+
+blockquote:after {
+  content: close-quote;
+  font-size: 0;
+}
+
+blockquote .attribution {
+  display: block;
+  position: absolute;
+  font-size: .5em;
+  right: 50px;
+}
+
+/* Text is hidden until hover */
+.hover-more > * {
+  transform: scale(0, 0);
+  transition: all .5s ease-out;
+}
+
+.hover-more:hover > * {
+  transform: scale(1, 1);
+}
+
+/* Because JQuery Mobile is stupid */
+.ui-loader {
+  display: none !important;
+}
+

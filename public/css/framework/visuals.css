@@ -1,0 +1,64 @@
+.fixed-visuals {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: visible;
+}
+
+.fixed-visuals .candle {
+  background-image: url('/images/Candle.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: transform 1900ms ease, background-image 100ms ease;
+  max-width: 200px;
+  width: 50vw;
+  height: 45vh;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 3vh;
+  position: absolute;
+  transform: translate3d(0, 0, 0);
+  z-index: 20;
+}
+
+.fixed-visuals .flame {
+  position: absolute;
+  height: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 2vw;
+  min-width: 30px;
+  bottom: 10vh;
+  height:45vh;
+  max-height: 350px;
+  left: 0;
+  right: 0;
+  background-image: url('/images/CandleFlame.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  transform: translate3d(0, 27%, 0);
+  opacity: 0;
+  transition: opacity 500ms ease, transform 1000ms ease;
+  z-index: 19;
+}
+
+.fixed-visuals.ready .flame {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media all and (max-width: 800px) {
+  .fixed-visuals .candle {
+    bottom: 10vh;
+  }
+
+  .fixed-visuals .flame {
+    bottom: 18vh;
+  }
+}
