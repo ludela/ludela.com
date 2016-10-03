@@ -1,0 +1,33 @@
+footer {
+  display: table;
+}
+
+footer .logo {
+  bottom: 50px;
+}
+
+footer .copyright {
+  margin-top: 80px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+footer nav {
+  display: table;
+  margin: auto;
+  padding: 10px;
+}
+
+footer nav ul {
+  list-style-type: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+footer nav ul li {
+  float: left;
+  padding: 20px 15px;
+}
+

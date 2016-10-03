@@ -2522,7 +2522,7 @@ gift-toggle [type="checkbox"]:checked + label:before {
   content: '';
   position: absolute;
   left: 0;
-  top: 1px;
+  top: 0;
   width: 17px;
   height: 17px;
   border: 2px solid #aaa;
@@ -3426,6 +3426,9 @@ button[type=submit] {
 #general .contact-content a {
   color: #e4b358;
   margin: 20px;
+}
+#general .contact-content .social-link {
+  color: #fff;
 }
 #general .contact-content .phone {
   color: #361f00;

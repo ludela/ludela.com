@@ -22,5 +22,19 @@ $(window).load(function(){
 
   updateAppSlider()
   $(window).on('resize', updateAppSlider)
+
+  $('.checkout-container').on('scroll touchmove mousewheel', function(e){
+    e.stopPropagation();
+    return true
+  })
+
+  $('body').on('click tap', '#hamburger, #hamburger-foot', function () {
+    $('#menu, #hamburger-foot, #hamburger, .wrapper').toggleClass('is-open');
+    $('#about, #general, .fixed').toggleClass('nav-open');
+  });
+  $('body').on('click tap touchend', '.nav-open, #menu, .menu__close', function () {
+    $('.is-open').removeClass('is-open');
+    $('.nav-open').removeClass('nav-open');
+  });
 })
 

@@ -7,6 +7,7 @@
 
 header {
   background-color: rgba(0,0,0, 0.6);
+  z-index: 1000
 }
 
 header li {
@@ -16,15 +17,42 @@ header li {
 header, header * {
   color: rgb(241, 234, 208);
   font-size: 1.5rem;
+  transition: left 350ms ease-out;
+}
+
+@media all and (min-width: 601px) {
+  .nav-open header {
+    left: 410px;
+  }
+
+  .nav-open .fixed-visuals {
+    left: 410px;
+  }
 }
 
 .content p {
   line-height: 2rem;
 }
 
+body,
+body * {
+  box-sizing: border-box
+}
+
 body {
   color: rgb(241, 234, 208);
   font-family: 'proxima-nova', 'Helvetica', sans-serif;
+}
+
+#general {
+  transition: left 350ms ease-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#general.nav-open {
+  left: 410px;
 }
 
 h1 {
@@ -79,7 +107,7 @@ h3 {
   top: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 1000;
+  z-index: 102;
 }
 
 .hero .gallery-controls .button {
@@ -254,7 +282,173 @@ h3 {
 
 .sustainable {
   z-index: 51;
+  min-height: 500px;
+  height: 500px;
 }
+
+.sustainable .info.info {
+  margin-bottom: 0vh !important;
+}
+
+.sustainable .content.content,
+.sustainable .info.info {
+  background: transparent;
+}
+
+.sustainable li {
+  width: 49%;
+}
+
+.cta-all {
+  overflow: hidden;
+  background-image: url(/images/BG_1.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 51;
+}
+
+.cta-all .content {
+  margin-top:15vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.cta-all .info {
+  margin-top: 350px;
+  min-height: 400px !important;
+}
+
+.cta-all .info p {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  line-height: 1.5em;
+}
+
+.cta-all .image {
+  margin-top: 150px;
+}
+
+.cta-all .content,
+.cta-all .content h1 {
+  text-align: center;
+}
+
+.call-to-action.button {
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+  color: #f1ead0;
+  font-family: 'proxima-nova', 'Helvetica', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 12px;
+  background-color: #ed8d48;
+  border: 2px solid #f1ead0;
+  text-transform: uppercase;
+}
+
+.cta-all .info form {
+  font-size: 12px;
+}
+.cta-all .info register .error {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.cta-all .info .error {
+  top: 32px;
+  margin-left: 0;
+}
+.cta-all .info register {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 25px;
+  position: relative;
+}
+.cta-all .info register user-email {
+  width: 70%;
+  display: inline-block;
+}
+.cta-all .info register user-email > input {
+  width: 100%;
+}
+.cta-all .info register > form > input {
+  width: 25%;
+  margin-left: 0;
+}
+.cta-all .info .login-button {
+  display: table;
+  margin: auto;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.cta-all .info input[type="text"] {
+  background-color: #f1ead0;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  height: 38px;
+}
+
+.cta-all .info input[type="submit"] {
+  background-color: #ed8d48;
+  color: #f1ead0;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  margin-left: -4px;
+  width: 30%;
+  max-width: 159px;
+  height: 38px;
+  vertical-align: top;
+  text-align: center;
+}
+
+register {
+  max-width: 400px;
+  display: block;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-button {
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+  top: 15px;
+  color: #f1ead0;
+  font-family: 'proxima-nova', 'Helvetica', sans-serif;
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid #f1ead0;
+  text-transform: uppercase;
+  max-width: 400px;
+}
+
+user-email input {
+  width: 100%;
+}
+
+footer {
+  background-color: #000;
+}
+
+footer .menu__link {
+  font-size: 24px !important;
+}
+
+footer .menu__social {
+  margin: 0 10px 80px 10px !important;
+}
+
 
 @media all and (max-width: 800px) {
   h1 {
@@ -282,6 +476,44 @@ h3 {
   .info {
     background-color: rgba(0,0,0,0.3);
     max-width: 100% !important;
+  }
+
+  .hero .content{
+    background-color: transparent !important;
+  }
+
+  .sustainable {
+    min-height: 700px;
+  }
+
+  .sustainable li {
+    width: 100%;
+  }
+
+  .cta-all .image {
+    margin-top: 200px;
+    text-align: center;
+  }
+
+  .cta-all .info {
+    margin-top: 0;
+    margin-bottom: 0 !important;
+    background-color: transparent !important;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .sustainable {
+    min-height: 900px;
+  }
+
+  header .logo {
+    left: 50% !important;
+  }
+
+  header .call-to-action {
+    font-size: 12px;
+    margin: 20px;
   }
 }
 

@@ -5,10 +5,14 @@ $(window).load(function(){
     var $hero = $(this).closest('.hero');
     var $modal = $hero.find('.modal');
     var $iframe = $modal.find('iframe');
+    var $header = $('header')
 
     var src = $hero.attr('data-src');
     $iframe.attr('src', src + '?' + opts);
     $modal.removeClass('hidden');
+
+    $header.css('z-index', '101')
+    $('#hamburger').addClass('is-open');
 
     e.stopPropagation();
     e.preventDefault();
@@ -20,6 +24,9 @@ $(window).load(function(){
     $modal.addClass('hidden');
     var $iframe = $modal.find('iframe');
     $iframe.attr('src', '');
+    var $header = $('header')
+    $header.css('z-index', '')
+    $('#hamburger').removeClass('is-open');
   })
 });
 

@@ -15,7 +15,8 @@ body {
   display: table;
 }
 
-.full {
+.block.full,
+section.full {
   background-size: cover;
   background-position: center;
   height: 100vh;

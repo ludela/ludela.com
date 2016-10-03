@@ -1,10 +1,10 @@
 $(window).load(function(){
-  var $blocks = $('body > section, body > .block');
+  var $blocks = $('body > * > section, body > * > .block');
   var totalBlocks = $blocks.length;
 
   var caught = false;
 
-  $(window).on('scroll', function(){
+  var onScroll = function(){
     if (caught) {
       return true;
     }
@@ -30,5 +30,8 @@ $(window).load(function(){
         }
       }
     })
-  })
+  };
+
+  onScroll();
+  $(window).on('scroll', onScroll);
 })
