@@ -28,6 +28,10 @@ $(window).load(function(){
     return true
   })
 
+  $('.hero.video .play-message').on('click', function(e){
+    $('.hero.video .play').trigger('click', e);
+  })
+
   $('body').on('click tap', '#hamburger, #hamburger-foot', function () {
     $('#menu, #hamburger-foot, #hamburger, .wrapper').toggleClass('is-open');
     $('#about, #general, .fixed').toggleClass('nav-open');

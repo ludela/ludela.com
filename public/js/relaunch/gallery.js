@@ -10,6 +10,8 @@ $(window).load(function(){
     var blockIndex = 0;
     var blockTotal = $blocks.length;
 
+    var doFade = $gallery.attr('data-fade');
+
     $gallery.append($(controlsHTML));
 
     var $controls = $gallery.find('.gallery-controls');
@@ -17,7 +19,7 @@ $(window).load(function(){
     var $after = $gallery.find('.gallery-after');
     var $counter = $gallery.find('.gallery-counter');
 
-    if (iOS) {
+    if (iOS || doFade) {
       for (var i = 0; i < blockTotal; i++) {
         if(i > 0) {
           $($blocks[i]).css('opacity', '0');
@@ -36,7 +38,7 @@ $(window).load(function(){
     var updateFn = function() {
       // $gallery.css('left', '-' + (100 * blockIndex) + '%');
       // $controls.css('transform', 'translateX(' + (100 * blockIndex) + '%)');
-      if (iOS) {
+      if (iOS || doFade) {
         for (var i = 0; i < blockTotal; i++) {
           $($blocks[i]).css('opacity', 0);
         }
