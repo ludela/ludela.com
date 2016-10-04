@@ -7,6 +7,7 @@
   -webkit-transition: top 500ms ease;
   transition: top 500ms ease;
   overflow-y: scroll;
+  font-size: 1rem;
 }
 .checkout-container input,
 .checkout-container select,
@@ -36,6 +37,9 @@
 }
 .checkout-container h1 {
   font-size: 20px;
+  text-align: left;
+  font-family: proxima-nova;
+  text-shadow: none;
 }
 .checkout-container .checkout {
   border-radius: 3px;
@@ -412,7 +416,7 @@ gift-toggle [type="checkbox"]:checked + label:before {
   content: '';
   position: absolute;
   left: 0;
-  top: 1px;
+  top: -1px;
   width: 17px;
   height: 17px;
   border: 2px solid #aaa;
