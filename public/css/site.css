@@ -2700,6 +2700,10 @@ button[type=submit] {
     margin-right: 0;
   }
 }
+.header-container .video {
+  left: 100px;
+  right: auto !important;
+}
 @media screen and (max-width: 980px) {
   .checkout-button {
     right: 20px;
