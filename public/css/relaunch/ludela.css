@@ -468,6 +468,10 @@ h3 {
   text-align: center;
 }
 
+.thankyou {
+  color: #FFF;
+}
+
 register {
   max-width: 400px;
   display: block;
