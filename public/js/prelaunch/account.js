@@ -39,7 +39,7 @@ $(function() {
 
   m.on('profile-load-failed', function() {
     window.client.account.logout();
-    window.location.href = 'login'
+    window.location.href = 'signup'
   });
 
   // m.on('profile-load', function(){

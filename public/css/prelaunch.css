@@ -628,7 +628,7 @@ Hero
     margin: 30px auto; } }
 
 .intro-landing {
-  padding: 60px 26px 40px;
+  padding: 100px 26px 40px;
   background: url("/images/prelaunch/landing-bg.jpg") center/cover no-repeat; }
   .intro-landing .title {
     margin-bottom: 20px;
