@@ -29,7 +29,7 @@ $(window).load(function(){
   })
 
   $('.hero.video .play-message').on('click', function(e){
-    $('.hero.video .play').trigger('click', e);
+    $(this).closest('.play-wrapper').find('.play').trigger('click', e);
   })
 
   $('body').on('click tap', '#hamburger, #hamburger-foot', function () {

@@ -2700,7 +2700,7 @@ button[type=submit] {
     margin-right: 0;
   }
 }
-.header-container .video {
+.header-bar .video {
   left: 100px;
   right: auto !important;
 }
