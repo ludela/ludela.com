@@ -2,12 +2,11 @@ $(function() {
   var Shop = window.Crowdstart.Shop
 
   $('.checkout-button').on('click', function(e){
-    var $modal = $('.modal');
+    var $modal = $('.checkout-modal.modal');
     $modal.addClass('is-open');
 
-    $.scrollify.disable();
-
     $('#hamburger').addClass('is-open');
+    $modal.removeClass('hidden');
 
     Shop.analytics.track('Viewed Checkout Step', {step: 1})
     Shop.initCart()
@@ -20,14 +19,13 @@ $(function() {
     return false;
   });
 
-  $('.modal-close, .continue-shopping').on('click', function(e){
+  $('.checkout-modal.modal').find('.modal-close, .continue-shopping').on('click', function(e){
     var $modal = $(this).closest('.modal');
-    $modal.addClass('hidden');
+    $modal.removeClass('hidden');
     $modal.removeClass('is-open');
 
-    $.scrollify.enable();
-
     $('#hamburger').removeClass('is-open');
+    return false;
   })
 
   var settings = {

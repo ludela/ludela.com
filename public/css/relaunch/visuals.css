@@ -1,0 +1,395 @@
+.fixed-visuals {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: visible;
+  transition: left 350ms ease-out;
+}
+
+.fixed-visuals .candle {
+  background-image: url('/images/Candle.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: opacity 1900ms ease, transform 1000ms ease, background-image 100ms ease;
+  max-width: 200px;
+  width: 50vw;
+  height: 45vh;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 3vh;
+  position: absolute;
+  -webkit-transform: translate3d(0, 100vh, 0);
+  transform: translate3d(0, 100vh, 0);
+  z-index: 20;
+}
+
+.fixed-visuals .flame {
+  position: absolute;
+  height: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 2vw;
+  min-width: 30px;
+  bottom: 10vh;
+  height:45vh;
+  max-height: 340px;
+  left: 0;
+  right: 0;
+  background-image: url('/images/CandleFlame.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  -webkit-transform: translate3d(0, 100vh, 0);
+  transform: translate3d(0, 100vh, 0);
+  opacity: 0;
+  transition: opacity 1900ms ease, transform 1200ms ease;
+  z-index: 19;
+}
+
+.fixed-visuals .core {
+  background-image: url('/images/Core.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: opacity 1900ms ease, transform 1000ms ease;
+  max-width: 250px;
+  width: 50vw;
+  height: 45vh;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 3vh;
+  position: absolute;
+  -webkit-transform: translate3d(0, 100vh, 0);
+  transform: translate3d(0, 100vh, 0);
+  z-index: 18;
+  opacity: 0;
+}
+
+.fixed-visuals .board {
+  background-image: url('/images/Board.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: opacity 1900ms ease, transform 1000ms ease;
+  max-width: 250px;
+  width: 50vw;
+  height: 45vh;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 3vh;
+  position: absolute;
+  -webkit-transform: translate3d(0, 100vh, 0);
+  transform: translate3d(0, 100vh, 0);
+  z-index: 17;
+  opacity: 0;
+}
+
+.fixed-visuals .battery {
+  background-image: url('/images/Battery.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: opacity 1900ms ease, transform 1000ms ease;
+  max-width: 250px;
+  width: 50vw;
+  height: 45vh;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 3vh;
+  position: absolute;
+  -webkit-transform: translate3d(0, 100vh, 0);
+  transform: translate3d(0, 100vh, 0);
+  z-index: 19;
+  opacity: 0;
+}
+
+.fixed-visuals .wax {
+  background-image: url("/images/Wax_Insert.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: opacity 1900ms ease, transform 1000ms ease;
+  max-width: 250px;
+  width: 50vw;
+  height: 45vh;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 3vh;
+  position: absolute;
+  -webkit-transform: translate3d(0, 100vh, 0);
+  transform: translate3d(0, 100vh, 0);
+  z-index: 16;
+}
+
+.fixed-visuals .phone {
+  background-image: url('/images/Iphone_Screen_3.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  transition: opacity 1900ms ease, transform 1000ms ease;
+  max-width: 150px;
+  width: 50vw;
+  height: 45vh;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: -10vh;
+  position: absolute;
+  -webkit-transform: translate3d(8vw, 100vh, 0);
+  transform: translate3d(8vw, 100vh, 0);
+  z-index: 21;
+  cursor: pointer;
+}
+
+.is-slide-2 .candle {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.is-slide-2 .flame {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+.is-slide-2 .core,
+.is-slide-2 .board,
+.is-slide-2 .battery,
+.is-slide-2 .wax {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 0;
+}
+
+.is-slide-3 .candle {
+  -webkit-transform: translate3d(0, -10vh, 0);
+  transform: translate3d(0, -10vh, 0);
+}
+
+.is-slide-3 .flame {
+  -webkit-transform: translate3d(0, -10vh, 0);
+  transform: translate3d(0, -10vh, 0);
+  opacity: 0;
+  transition: none;
+}
+
+.is-slide-3 .core,
+.is-slide-3 .board,
+.is-slide-3 .battery,
+.is-slide-3 .wax,
+.is-slide-5 .core,
+.is-slide-5 .board,
+.is-slide-5 .battery,
+.is-slide-5 .wax {
+  -webkit-transform: translate3d(0, -10vh, 0);
+  transform: translate3d(0, -10vh, 0);
+}
+
+.is-slide-3 .board,
+.is-slide-5 .board {
+  -webkit-transform: translate3d(5vw, -5vh, 0);
+  transform: translate3d(5vw, -5vh, 0);
+}
+
+.is-slide-3 .battery,
+.is-slide-5 .battery {
+  -webkit-transform: translate3d(-5vw, -15vh, 0);
+  transform: translate3d(-5vw, -15vh, 0);
+}
+
+.is-slide-4 .candle {
+  -webkit-transform: translate3d(0, -100vh, 0);
+  transform: translate3d(0, -100vh, 0);
+  opacity: 0;
+}
+
+.is-slide-4 .flame {
+  -webkit-transform: translate3d(0, -100vh, 0);
+  transform: translate3d(0, -100vh, 0);
+  opacity: 0;
+}
+
+.is-slide-4 .core,
+.is-slide-4 .board,
+.is-slide-4 .battery,
+.is-slide-4 .wax {
+  -webkit-transform: translate3d(0, -10vh, 0);
+  transform: translate3d(0, -10vh, 0);
+  opacity: 1;
+}
+
+.is-slide-5 .candle {
+  -webkit-transform: translate3d(0, -100vh, 0);
+  transform: translate3d(0, -100vh, 0);
+  opacity: 1;
+}
+
+.is-slide-6 .flame,
+.is-slide-6 .core,
+.is-slide-6 .board,
+.is-slide-6 .battery {
+  -webkit-transform: translate3d(0, -10vh, 0);
+  transform: translate3d(0, -10vh, 0);
+  opacity: 0;
+}
+
+.is-slide-6 .candle,
+.is-slide-6 .wax {
+  -webkit-transform: translate3d(0, -10vh, 0);
+  transform: translate3d(0, -10vh, 0);
+  opacity: 1;
+}
+
+.is-slide-6 .flame {
+  -webkit-transform: translate3d(0, -6vh, 0);
+  transform: translate3d(0, -6vh, 0);
+  opacity: 0;
+}
+
+.is-slide-6 .phone {
+  -webkit-transform: translate3d(8vw, -10vh, 0);
+  transform: translate3d(8vw, -10vh, 0);
+  opacity: 1;
+}
+
+.is-slide-6.lit .flame {
+  -webkit-transform: translate3d(0, -10vh, 0);
+  transform: translate3d(0, -10vh, 0);
+  opacity: 1;
+}
+
+.is-slide-7 .flame,
+.is-slide-7 .candle,
+.is-slide-7 .wax,
+.is-slide-7 .phone,
+.is-slide-7 .core,
+.is-slide-7 .board,
+.is-slide-7 .battery {
+  -webkit-transform: translate3d(-500vw, -10vh, 0);
+  transform: translate3d(-500vw, -10vh, 0);
+  opacity: 0;
+}
+
+@media all and (min-width: 801px) {
+  .phone {
+    -webkit-transform: translate3d(-12vw, 100vh, 0);
+    transform: translate3d(-12vw, 100vh, 0);
+  }
+
+  .is-slide-3 .candle,
+  .is-slide-5 .candle {
+    -webkit-transform: translate3d(-20vw, -20vh, 0);
+    transform: translate3d(-20vw, -20vh, 0);
+  }
+
+  .is-slide-3 .flame,
+  .is-slide-5 .flame {
+    -webkit-transform: translate3d(-20vw, -20vh, 0);
+    transform: translate3d(-20vw, -20vh, 0);
+  }
+
+  .is-slide-3 .core,
+  .is-slide-3 .board,
+  .is-slide-3 .battery,
+  .is-slide-3 .wax,
+  .is-slide-5 .core,
+  .is-slide-5 .board,
+  .is-slide-5 .battery,
+  .is-slide-5 .wax {
+    -webkit-transform: translate3d(-20vw, -20vh, 0);
+    transform: translate3d(-20vw, -20vh, 0);
+  }
+
+  .is-slide-3 .board,
+  .is-slide-5 .board {
+    -webkit-transform: translate3d(-15vw, -15vh, 0);
+    transform: translate3d(-15vw, -15vh, 0);
+  }
+
+  .is-slide-3 .battery,
+  .is-slide-5 .battery {
+    -webkit-transform: translate3d(-25vw, -25vh, 0);
+    transform: translate3d(-25vw, -25vh, 0);
+  }
+
+  .is-slide-4 .candle {
+    -webkit-transform: translate3d(-20vw, -100vh, 0);
+    transform: translate3d(-20vw, -100vh, 0);
+  }
+
+  .is-slide-4 .flame {
+    -webkit-transform: translate3d(-20vw, -100vh, 0);
+    transform: translate3d(-20vw, -100vh, 0);
+  }
+
+  .is-slide-4 .core,
+  .is-slide-4 .board,
+  .is-slide-4 .battery,
+  .is-slide-4 .wax {
+    -webkit-transform: translate3d(-20vw, -20vh, 0);
+    transform: translate3d(-20vw, -20vh, 0);
+  }
+
+  .is-slide-6 .candle {
+    -webkit-transform: translate3d(-20vw, -20vh, 0);
+    transform: translate3d(-20vw, -20vh, 0);
+  }
+
+  .is-slide-6 .flame {
+    -webkit-transform: translate3d(-20vw, -14vh, 0);
+    transform: translate3d(-20vw, -14vh, 0);
+  }
+
+  .is-slide-6.lit .flame {
+    -webkit-transform: translate3d(-20vw, -20vh, 0);
+    transform: translate3d(-20vw, -20vh, 0);
+  }
+
+  .is-slide-6 .core,
+  .is-slide-6 .board,
+  .is-slide-6 .battery {
+    -webkit-transform: translate3d(-20vw, -20vh, 0);
+    transform: translate3d(-20vw, -20vh, 0);
+  }
+
+  .is-slide-6 .wax {
+    -webkit-transform: translate3d(-20vw, -20vh, 0);
+    transform: translate3d(-20vw, -20vh, 0);
+  }
+
+  .is-slide-6 .phone {
+    -webkit-transform: translate3d(-12vw, -20vh, 0);
+    transform: translate3d(-12vw, -20vh, 0);
+  }
+}
+
+@media all and (max-width: 800px) {
+  .fixed-visuals .candle {
+    bottom: 4vh;
+  }
+
+  .fixed-visuals .flame {
+    bottom: 12vh;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .value {
+    height: 160vh;
+  }
+}
+

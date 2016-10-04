@@ -1,0 +1,72 @@
+.gallery-controls {
+  position: absolute;
+  width: 100vw;
+  z-index: 2000;
+}
+
+.gallery-before, .gallery-after {
+  position: absolute;
+  top: 50vh;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border-radius: 40px;
+  margin-top: -20px;
+  font-size: 2em;
+}
+
+.gallery-before {
+  left: 20px;
+}
+
+.gallery-after {
+  right: 20px;
+}
+
+.gallery {
+  display: table;
+}
+
+.gallery .block,
+.gallery section
+{
+  top:0;
+  left: 0;
+  position: absolute;
+  transition: transform 1000ms ease-out, opacity 1000ms ease-out;
+}
+
+.gallery .block:first-child,
+.gallery section:first-child
+{
+  position: relative;
+}
+
+.gallery-controls {
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.gallery-counter {
+  margin-top: 90vh;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: table;
+}
+
+.gallery-item {
+  float: left;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.gallery-controls .gallery-item.active {
+  background: rgba( 0, 0, 0, 0.3 );
+}

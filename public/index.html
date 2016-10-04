@@ -1,17 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <head>
     <title>LuDela</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Normalizer/Reset -->
+    <link rel="stylesheet" href="css/relaunch/normalize.css" />
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,100italic,300italic,400italic,700,700italic' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="css/relaunch/fonts.css" />
+
+    <!-- Our Styles and JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.1/es6-shim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/layzr.js/2.0.2/layzr.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/css/selectize.bootstrap3.min.css">
-    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="css/relaunch/framework.css" />
+    <script src="js/relaunch/framework.js"></script>
+
+    <!-- Block Level Styles and JS -->
+    <link rel="stylesheet" href="css/relaunch/loader.css" />
+    <link rel="stylesheet" href="css/relaunch/header.css" />
+    <link rel="stylesheet" href="css/relaunch/hero.css" />
+    <link rel="stylesheet" href="css/relaunch/hero-video.css" />
+    <link rel="stylesheet" href="css/relaunch/parallax.css" />
+    <link rel="stylesheet" href="css/relaunch/gallery.css" />
+    <link rel="stylesheet" href="css/relaunch/list.css" />
+    <link rel="stylesheet" href="css/relaunch/loader.css" />
+    <link rel="stylesheet" href="css/relaunch/footer.css" />
+    <link rel="stylesheet" href="css/relaunch/menu.css" />
+    <script src="js/relaunch/hero-video.js"></script>
+    <script src="js/relaunch/gallery.js"></script>
+    <!-- <script src="js/relaunch/slidify.js"></script> -->
+
+    <script src="/js/shop.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.min.js"></script>
+    <script type="text/javascript" src="/js/cookies.min.js"></script>
+    <script src="/js/checkout.js"></script>
+
+    <!-- Custom Styling and JS-->
+    <!-- <link rel="stylesheet" href="css/relaunch/visuals.css" /> -->
+    <link rel="stylesheet" href="css/relaunch/ludela.css" />
+    <link rel="stylesheet" href="css/relaunch/site.css" />
+    <script src="js/relaunch/ludela.js"></script>
+
     <script>
       !function(t,e,a){var r,n,c,i,o,s,l,u;if(null==t.analytics){for(r=[],r.methods=["ab","alias","group","identify","off","on","once","page","pageview","ready","track","trackClick","trackForm","trackLink","trackSubmit"],l=r.methods,c=function(t){r[t]=function(){var e;return e=Array.prototype.slice.call(arguments),e.unshift(t),r.push(e),r}},i=0,o=l.length;o>i;i++)s=l[i],c(s);return u=e.createElement("script"),u.async=!0,u.type="text/javascript",u.src=a,n=e.getElementsByTagName("script")[0],n.parentNode.insertBefore(u,n),t.analytics=r}}(window,document,"//cdn.crowdstart.com/a/ludela.js");
     </script>
     <script src="//use.typekit.net/scc3jrx.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
   </head>
   <body>
     <nav id='menu' class='menu'>
@@ -27,7 +67,7 @@
         </a>
       </div>
       <a class='menu__link' href='/account'>
-        LuDela Account
+        Refer a Friend
       </a>
       <a class='menu__link' href='/about'>
         about us
@@ -54,664 +94,591 @@
         <span class="icon icon-pinterest2"> </span>
       </a>
     </nav>
-    <header class="header-bar fixed" id="header">
-      <div class="header-container">
-        <div id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="video">
-          <span class="see-ludela">See LuDela</span>
-          <span class="icon icon-play"> </span>
-          <div class='video'> </div>
-        </div>
-        <div class="logo">
+
+    <div id="general">
+      <!-- HEADER -->
+      <header>
+        <nav>
+          <div id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
           <a href="/">
-            <span class="icon icon-ludela-logo"> </span>
+            <span class="logo icon icon-ludela-logo"> </span>
           </a>
-        </div>
-        <a href="#" class="checkout-button">Pre-order</a>
-      </div>
-    </header>
-    <div class='footer-bar fixed'>
-      <span class='footer-text'>
-        Earn a LuDela candle and refills by referring friends
-      </span>
-      <register immediate-login="true">
-        <user-email type='text' placeholder=' ENTER YOUR EMAIL'></user-email>
-        <input type='submit' value="Sign Up"/>
-        <div class="error" if="{ errorMessage }">
-          { errorMessage }
-        </div>
-      </register>
-      <a class="login-link" href="/login">Login</a>
-      <a class="progress-link" href="/account">Check Progress</a>
-    </div>
-    <div id='video-modal'>
-      <div class='modal-close'>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div id="player"></div>
-    </div>
-    <div id='dots' class="fixed">
-      <div class='dot dot-1 active-dot' data-goto="0"></div>
-      <div class='dot dot-2' data-goto="1"></div>
-      <div class='dot dot-3' data-goto="2"></div>
-      <div class='dot dot-4' data-goto="3"></div>
-      <div class='dot dot-5' data-goto="4"></div>
-      <div class='dot dot-6' data-goto="5"></div>
-      <div class='dot dot-7' data-goto="6"></div>
-    </div>
-    <a class="big play button fixed" href="#"></a>
-    <div class="wrapper">
-      <div class='splash'>
-        <div class="container">
+          <a href="#cta" class="button call-to-action checkout-button">
+            Pre-order Now
+          </a>
+        </nav>
+      </header>
 
-          <div class='splash__content' id="step-1" data-step="s1">
-            <div class="splash__container fixed">
-              <div class="splash__headline">
-                <h1>The World's First <span class="subhead">real flame smart candle</span></h1>
-              </div>
-            </div>
+      <!-- HERO -->
+      <section class="hero gallery" data-autoplay="6000" data-fade="true">
+        <section class="full hero1">
+        </section>
+        <section class="full hero2">
+        </section>
+        <section class="full hero3">
+        </section>
+      </section>
+
+      <div class="hero video overlay block" data-src="https://www.youtube.com/embed/1ayoxYoCUSo">
+        <div class="content">
+          <h1>LuDela</h1>
+          <h3>The world’s safest real flame smart candle</h3>
+          <div class="play-wrapper">
+            <span class="play-message">
+              Watch the video.
+            </span>
+            <a class="play button" href="#"></a>
           </div>
-          <div class='splash__content' id="step-2" data-step="s2">
-            <div class="splash__container fixed">
-              <div class="splash__headline">
-                <h2 class="h1">Ambiance <span class="subhead">in just a tap</span></h2>
-              </div>
-            </div>
-          </div>
-          <div class='splash__content' id="step-3" data-step="s3">
-            <div class="splash__container fixed">
-              <div class="splash__headline">
-                <h2 class="h1">Ambiance <span class="subhead">in just a tap</span></h2>
-              </div>
-              <div class="mobile-padding"></div>
-              <div class="mobile-overlay">
-                <div class="small-text +left +one">
-                  <div class="small-text__title">Everbrite Flame</div>
-                  <p class="small-text__desc">A bright flame -- always. No tunneling or buried wicks.</p>
-                  <div class="small-text__icon">
-                    <span class="icon icon-everbrite-flame"></span>
-                  </div>
-                </div>
-                <div class="small-text +right +two">
-                  <div class="small-text__title">Scene mode</div>
-                  <p class="small-text__desc">One touch settings for relaxation, dinner &amp; more.</p>
-                  <div class="small-text__icon">
-                    <span class="icon icon-scene-mode"></span>
-                  </div>
-                </div>
-                <div class="small-text +left +three">
-                  <div class="small-text__title">the perfect pillar</div>
-                  <p class="small-text__desc">A beautiful design that always stays looking new.</p>
-                  <div class="small-text__icon">
-                    <span class="icon icon-perfect-pillar"></span>
-                  </div>
-                </div>
-                <div class="small-text +right +four">
-                  <div class="small-text__title">Timer</div>
-                  <p class="small-text__desc">Set 30 minute and 1-hour increments to any zone.</p>
-                  <div class="small-text__icon">
-                    <span class="icon icon-timer"></span>
-                  </div>
-                </div>
-                <div class="small-text +left +five">
-                  <div class="small-text__title">Multizone Lighting</div>
-                  <p class="small-text__desc">Control multiple LuDela candle zones with the app</p>
-                  <div class="small-text__icon">
-                    <span class="icon icon-multizone-lighting"></span>
-                  </div>
-                </div>
-                <div class="small-text +right +six">
-                  <div class="small-text__title">candle remaining meter</div>
-                  <p class="small-text__desc">Reports at 100%, 75%, 50% and 25% levels.</p>
-                  <div class="small-text__icon">
-                    <span class="icon icon-candle-remaining-meter"></span>
-                  </div>
-                </div>
-                <div class="small-text +left +seven">
-                  <div class="small-text__title">Dimmer Switch</div>
-                  <p class="small-text__desc">Create the perfect candlelight brightness for any occasion</p>
-                  <div class="small-text__icon">
-                    <span class="icon icon-dimmer-switch"></span>
-                  </div>
-                </div>
-                <div class="small-text +right +eight">
-                  <div class="small-text__title">Long-Life rechargeable Li-Ion batteries</div>
-                  <p class="small-text__desc">Estimated 5-6 months between charges.</p>
-                  <div class="small-text__icon">
-                    <span class="icon icon-long-life-batteries"></span>
-                  </div>
-                </div>
-              </div>
-              <!-- <div class="mobile-padding"></div> -->
-            </div>
-          </div>
-          <div class='splash__content' id="step-4" data-step="s4">
-            <div class="splash__container fixed">
-              <div class="splash__headline">
-                <h2 class="h1">Peace of mind <span class="subhead">wi-fire smart module with 7-point safety feature</span></h2>
-              </div>
-              <div class="mobile-padding"></div>
-              <div class="mobile-overlay">
-                <div class="small-text +left +one">
-                  <div class="small-text__title">auto-extinguish</div>
-                  <p class="small-text__desc">Reduces fire risk by blowing the flame out in unsafe conditions.</p>
-                  <div class="small-text__icon">
-                    <span class="icon icon-auto-extinguish"></span>
-                  </div>
-                </div>
-                <div class="small-text +right +two">
-                  <div class="small-text__title">safe burn design</div>
-                  <p class="small-text__desc">Reduces fire risk if LuDelas are accidentally left to burn too long.</p>
-                  <div class="small-text__icon">
-                    <span class="icon icon-secure-flame"></span>
-                  </div>
-                </div>
-                <div class="small-text +left +three">
-                  <div class="small-text__title">Smart scan</div>
-                  <p class="small-text__desc">Reduces fire risk by scanning the environment before ignition.</p>
-                  <div class="small-text__icon">
-                    <span class="icon icon-smart-scan"></span>
-                  </div>
-                </div>
-                <div class="small-text +right +four">
-                  <div class="small-text__title">safe wax design</div>
-                  <p class="small-text__desc">Our small wax pool minimizes chance of burns during accidental spills.</p>
-                  <div class="small-text__icon">
-                    <span class="icon icon-safe-wax-design"></span>
-                  </div>
-                </div>
-                <div class="small-text +left +five">
-                  <div class="small-text__title">child-lock app</div>
-                  <p class="small-text__desc">Password protects your candlelight.</p>
-                  <div class="small-text__icon">
-                    <span class="icon icon-child-lock"></span>
-                  </div>
-                </div>
-                <div class="small-text +right +six">
-                  <div class="small-text__title">SmartPhone alerts</div>
-                  <p class="small-text__desc">Relax. LuDela will notify you if your attention is needed.</p>
-                  <div class="small-text__icon">
-                    <span class="icon icon-smartphone-alerts"></span>
-                  </div>
-                </div>
-                <div class="small-text +right +eight">
-                  <div class="small-text__title">low battery detection</div>
-                  <p class="small-text__desc">Will not allow operation in unsafe battery states.</p>
-                  <div class="small-text__icon">
-                    <span class="icon icon-low-battery"></span>
-                  </div>
-                </div>
-              </div>
-              <!-- <div class="mobile-padding"></div> -->
-            </div>
-          </div>
-          <div class="splash__content" id="step-5" data-step="s5">
-            <div class="splash__container fixed">
-              <div class="splash__headline">
-                <h2 class="h1">Scent the mood <span class="subhead">100% natural, paraffin-free wax refill</span></h2>
-              </div>
-              <div class="mobile-padding"></div>
-              <div class="mobile-overlay">
-                <div class="small-text +left +one">
-                  <div class="small-text__title">100% natural wax</div>
-                  <p class="small-text__desc +dark">Proprietary, paraffin-free blends of soy, beeswax, coconut &amp; palm.</p>
-                  <div class="small-text__icon">
-                    <span class="icon icon-natural-wax-design"></span>
-                  </div>
-                </div>
-                <div class="small-text +right +two">
-                  <div class="small-text__title">scent options</div>
-                  <p class="small-text__desc +dark">Unscented, seasonal, essential oil and luxury scenting refill offerings.</p>
-                  <div class="small-text__icon">
-                    <span class="icon icon-scent-option"></span>
-                  </div>
-                </div>
-                <div class="small-text +left +three">
-                  <div class="small-text__title">natural wicks</div>
-                  <p class="small-text__desc +dark">Non-toxic, lead-free wicks you never need to dig out of wax.</p>
-                  <div class="small-text__icon">
-                    <span class="icon icon-natural-wax-design"></span>
-                  </div>
-                </div>
-                <div class="small-text +right +four">
-                  <div class="small-text__title">subscription benefits</div>
-                  <p class="small-text__desc +dark">Save 33% per month with our monthly refill subscription.</p>
-                  <div class="small-text__icon">
-                    <span class="icon icon-subscription"></span>
-                  </div>
-                </div>
-                <div class="small-text +left +five">
-                  <div class="small-text__title">mess-free wax</div>
-                  <p class="small-text__desc +dark">Virtually eliminates costly wax damage to furniture and carpets.</p>
-                  <div class="small-text__icon">
-                    <span class="icon icon-no-mess-wax"></span>
-                  </div>
-                </div>
-                <div class="small-text +right +six">
-                  <div class="small-text__title">efficient burn</div>
-                  <p class="small-text__desc +dark">Burn 100% of your wax fuel unlike most wasteful pillar candles.</p>
-                  <div class="small-text__icon">
-                    <span class="icon icon-efficient-burn"></span>
-                  </div>
-                </div>
-              </div>
-              <!-- <div class="mobile-padding"></div> -->
-            </div>
-          </div>
-          <div class='splash__content' id="step-6" data-step="s6">
-            <div class="splash__container fixed">
-              <div class="splash__headline">
-                <h2 class="h1">Personalize <span class="subhead">your candlelight</span></h2>
-              </div>
-            </div>
-          </div>
-          <div class='splash__content' id="step-7" data-step="s7">
-            <div class="splash__container fixed">
-              <div class="splash__component-container">
-                <div class="splash__headline">
-                  <h1 class="h1">Get Yours Now</h1>
-                </div>
-                <div class="checkout-final-container">
-                  <a href="#" class="checkout-button checkout-final">Pre-order LuDela</a>
-                </div>
-                <div class="splash__component-left">
-                  <div class="signin-or-up">
-                    <h3>Earn a LuDela candle, refills, coupons<br>and other rewards by referring your friends.</h3>
-                    <register immediate-login="true">
-                      <user-email type='text' placeholder=' ENTER YOUR EMAIL'></user-email>
-                      <input type='submit' value="Sign Up"/>
-                      <div class="error" if="{ errorMessage }">
-                        { errorMessage }
-                      </div>
-                    </register>
-                    <a class="login-button" href="/login">Login</a>
-                  </div>
-                  <ul class="link-list">
-                    <li><a href='/account'>LuDela Account</a></li>
-                    <li><a href='/about'>About us</a></li>
-                    <li><a href='/faq'>FAQ</a></li>
-                    <li><a href='/legal'>legal</a></li>
-                    <li><a href='/careers'>Careers</a></li>
-                    <li><a href='/contact'>contact</a></li>
-                  </ul>
-                  <div class="copyright">
-                    <p>2016 LuDela, Inc</p>
-                  </div>
-                </div>
-                <div class='img'>
-                  <img src='/images/join-candle.png'/>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="visuals fixed">
-            <div class="visuals__candle"></div>
-            <!-- <div class="visuals__candle-reflection"></div> -->
-            <div class="visuals__flame"></div>
-            <!-- <div class="visuals__wax-flame"></div> -->
-            <div class="visuals__phone">
-              <div class="app-slider"></div>
-            </div>
-            <div class="visuals__core"></div>
-            <div class="visuals__board"></div>
-            <div class="visuals__battery"></div>
-            <div class="visuals__wax"></div>
-            <div class="visuals__wax-with-flame"></div>
-            <!-- <div class="visuals__wick"></div> -->
-            <div class="visuals__shell"></div>
-            <div class="visuals__variants">
-              <div class="css-arrow-left"></div>
-              <div class="visuals__info">
-                <p>Flexible Decòr</p>
-                <p>Quickly and affordably change the outer shell of your LuDela to suit the season or decore.</p>
-              </div>
-              <div class="visuals__colors">
-                <!-- loading alternate shell colors so they are cached and switch without flicker -->
-                <img src="/images/candle_colors/green-shell-full.png" alt="" style="display:none;">
-                <img src="/images/candle_colors/blue-shell-full.png" alt="" style="display:none;">
-                <img src="/images/candle_colors/red-shell-full.png" alt="" style="display:none;">
-                <img src="/images/candle_colors/purple-shell-full.png" alt="" style="display:none;">
-                <img src="/images/candle_colors/orange-shell-full.png" alt="" style="display:none;">
-                <div class="swatches">
-                  <div class="swatch" data-id="ivory">
-                    <img src="/images/candle_colors/LuDela_Ivory.png" alt="" class="swatch__img">
-                    <div class="swatch__name">LuDela<br> Ivory*</div>
-                  </div>
-                  <div class="swatch" data-id="blue">
-                    <img src="/images/candle_colors/LuDela_Blue.png" alt="" class="swatch__img">
-                    <div class="swatch__name">LuDela<br> Blue</div>
-                  </div>
-                  <div class="swatch" data-id="red">
-                    <img src="/images/candle_colors/LuDela_Red.png" alt="" class="swatch__img">
-                    <div class="swatch__name">LuDela<br> Red</div>
-                  </div>
-                  <div class="swatch" data-id="green">
-                    <img src="/images/candle_colors/LuDela_Green.png" alt="" class="swatch__img">
-                    <div class="swatch__name">LuDela<br> Green</div>
-                  </div>
-                  <div class="swatch" data-id="orange">
-                    <img src="/images/candle_colors/LuDela_Orange.png" alt="" class="swatch__img">
-                    <div class="swatch__name">LuDela<br> Orange</div>
-                  </div>
-                  <div class="swatch" data-id="purple">
-                    <img src="/images/candle_colors/LuDela_Purple.png" alt="" class="swatch__img">
-                    <div class="swatch__name">LuDela<br> Purple</div>
-                  </div>
-                </div>
-              </div>
-              <div class="footnote">
-                <p>
-                  *All LuDela candles ship with LuDela Ivory wax shell. Final colors and patterns of shells will be announced prior to shipping in early 2017.
-                </p>
-              </div>
-            </div>
+        </div>
+        <a class="button summary-down next-section" href="#"></a>
+        <div class="modal hidden">
+          <iframe width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+          <a href="#cta" class="button call-to-action modal-close checkout-button">
+            PRE-ORDER NOW
+          </a>
+          <div class="modal-close">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
         </div>
       </div>
-      <!-- <div id="footer" class='footer'> -->
-      <!--   <div class='footer__hold'> -->
-      <!--     <div class="header-bar"> -->
-      <!--       <div id="hamburger-foot"> -->
-      <!--         <span></span> -->
-      <!--         <span></span> -->
-      <!--         <span></span> -->
-      <!--         <span></span> -->
-      <!--       </div> -->
-      <!--       <div class="video"> -->
-      <!--         <span class="see-ludela">see ludela</span> -->
-      <!--         <span class="icon icon-play"> </span> -->
-      <!--         <div class='video'> </div> -->
-      <!--       </div> -->
-      <!--       <div class="logo"> -->
-      <!--         <a href='/'> -->
-      <!--           <span class="icon icon-ludela-logo"> </span> -->
-      <!--         </a> -->
-      <!--       </div> -->
-      <!--     </div> -->
-      <!--     <div class='footer__wrap'> -->
-      <!--       <div class='footer__content'> -->
-      <!--         <h1 class='header'> -->
-      <!--           Join us -->
-      <!--         </h1> -->
-      <!--         <h2 class='sub-header'> -->
-      <!--           Early birds recieve 20% off -->
-      <!--         </br> -->
-      <!--           + Free Candle refills -->
-      <!--         </h2> -->
-      <!--         <form> -->
-      <!--           <input type='text' placeholder='EMAIL'/> -->
-      <!--           <input type='submit'/> -->
-      <!--         </form> -->
-      <!--       </div> -->
-      <!--       <div class='footer__candle'> -->
-      <!--         <img src='/images/Candle-Reflection-Flame.png'/> -->
-      <!--       </div> -->
-      <!--     </div> -->
-      <!--     <div class='footer__links'> -->
-      <!--       <div class='footer__link-wrap'> -->
 
-      <!--         <a class='footer__link' href='/account'> -->
-      <!--           LuDela Account -->
-      <!--         </a> -->
-      <!--         <a class='footer__link' href='/about'> -->
-      <!--           about us -->
-      <!--         </a> -->
-      <!--         <span>|</span> -->
-      <!--         <a class='footer__link' href='/faq'> -->
-      <!--           faq -->
-      <!--         </a> -->
-      <!--         <span>|</span> -->
-      <!--         <a class='footer__link' href='/legal'> -->
-      <!--           legal -->
-      <!--         </a> -->
-      <!--         <span>|</span> -->
-      <!--         <a class='footer__link' href='/careers'> -->
-      <!--           careers -->
-      <!--         </a> -->
-      <!--         <span>|</span> -->
-      <!--         <a class='footer__link' href='/contact'> -->
-      <!--           contact -->
-      <!--         </a> -->
-      <!--         </br> -->
-      <!--         <span class='copyright'> -->
-      <!--           © 2016 LuDela, Inc -->
-      <!--         </span> -->
-      <!--       </div> -->
-      <!--     </div> -->
+      <!-- CONTENT -->
+
+      <!-- Fixed Visuals -->
+      <!-- <div class="fixed-visuals"> -->
+      <!--   <div class="candle"> -->
+      <!--   </div> -->
+      <!--   <div class="flame"> -->
+      <!--   </div> -->
+      <!--   <div class="phone"> -->
+      <!--   </div> -->
+      <!--   <div class="core"> -->
+      <!--   </div> -->
+      <!--   <div class="board"> -->
+      <!--   </div> -->
+      <!--   <div class="battery"> -->
+      <!--   </div> -->
+      <!--   <div class="wax"> -->
+      <!--   </div> -->
+      <!--   <div class="phone"> -->
+      <!--     <div class="app-slider"></div> -->
       <!--   </div> -->
       <!-- </div> -->
-    <!-- </div> -->
-    <div class="modal">
-      <div class="checkout-container">
-        <div class="checkout">
-          <div class="continue-shopping">
-            <h1><i class="arrow-left"></i>Continue Shopping<i class="shopping-bag"></i></h1>
+
+      <section class="safe list right full">
+        <div class="image">
+        </div>
+        <div class="info">
+          <h2>The <span class="emphasis">safest</span> candle you'll ever own.</h2>
+          <ul>
+            <li>
+              <span class="icon icon-auto-extinguish"></span>
+              <span>
+                <h4>Tip/Fall Sensor</h4>
+              </span>
+            </li>
+            <li>
+              <span class="icon icon-smart-scan"></span>
+              <span>
+                <h4>Smart Scan</h4>
+              </span>
+            </li>
+            <li>
+              <span class="icon icon-safe-wax-design"></span>
+              <span>
+                <h4>Child Lock</h4>
+              </span>
+            </li>
+          </ul>
+          <p>
+            LuDela candles are engineered with sensors to auto-extinguish
+            in unsafe conditions, when you leave home, and even if they
+            begin to tip over.
+            <br><br>
+            LuDela's SmartScan warns you of environmental hazards and stops ignition.
+            <br><br>
+            Never worry about the dangers of fire in your home again.
+          </p>
+        </div>
+      </section>
+
+      <section class="full life2 parallax">
+      </section>
+
+      <section class="smart list right full">
+        <div class="info">
+          <h2><span class="emphasis">Wi-Fire.</span> Ambiance with just a tap.</h2>
+          <ul>
+            <li>
+              <span class="icon icon-multizone-lighting"></span>
+              <span>
+                <h4>Multi-zone Lighting</h4>
+              </span>
+            </li>
+            <li>
+              <span class="icon icon-timer"></span>
+              <span>
+                <h4>Timer</h4>
+              </span>
+            </li>
+            <li>
+              <span class="icon icon-scene-mode"></span>
+              <span>
+                <h4>Scene Mode</h4>
+              </span>
+            </li>
+          </ul>
+          <p>
+            Create the perfect mood for any occasion. Adjust the brightness of all your LuDela candles from your smart
+            phone.  Individually change the brightness or use
+            Scene Mode to load your favorite presets for the occasion.
+            <br><br>
+            Never worry about putting your candles before you go to bed, set your LuDela
+            candle to turn off whenever you want so you can immerse yourself in
+            stress-free relaxation.
+          </p>
+        </div>
+        <div class="image">
+        </div>
+      </section>
+
+      <section class="full life3 parallax">
+      </section>
+
+      <section class="sustainable list right full">
+        <div class="image">
+          <div class="padded-image"></div>
+        </div>
+        <div class="info">
+          <h2>
+            LuDela’s Refillable design <span class="emphasis">saves
+              money</span> after 2 years.
+          </h2>
+          <ul>
+            <li>
+              <span class="icon icon-subscription"></span>
+              <span>
+                <h4>Smart subscriptions</h4>
+              </span>
+            </li>
+            <li>
+              <span class="icon icon-natural-wax-design"></span>
+              <span>
+                <h4>Efficient refills</h4>
+              </span>
+            </li>
+            <li>
+              <span class="icon icon-everbrite-flame"></span>
+              <span>
+                <h4>Big savings</h4>
+              </span>
+            </li>
+          </ul>
+          <p>
+            LuDela’s revolutionary design delivers the most economical
+            natural candle experience on earth. Our timer features and efficient
+            burn refill design ensure you don’t waste your candle fuel.
+            <br><br>
+            Never be caught candle-less, the LuDela candle will notify you when
+            its running low and needs a new refill.
+          </p>
+        </div>
+      </section>
+
+      <section class="full life4 parallax">
+      </section>
+
+      <section class="customize full list">
+        <div class="info content">
+          <h2>
+            <span class="emphasis">Customizeable</span> to the core.
+          </h2>
+          <ul>
+            <li>
+              <span class="icon icon-candle-remaining-meter"></span>
+              <span>
+                <h4>Refillable wax core</h4>
+              </span>
+            </li>
+            <li>
+              <span class="icon icon-efficient-burn"></span>
+              <span>
+                <h4>Swappable shell</h4>
+              </span>
+            </li>
+            <li>
+              <span class="icon icon icon-perfect-pillar"></span>
+              <span>
+                <h4>100% reuseable</h4>
+              </span>
+            </li>
+          </ul>
+          <p>
+            Having a Christmas party? Put on the Rose Red shell and the fresh
+            pine tree scent. Having a football party? Put on the manly black
+            shell and take out the scent. Check out the exclusive Mercury and
+            Glass for a classy look (coming&nbsp;soon!).
+          </p>
+        </div>
+      </section>
+
+      <section class="full life5 parallax">
+      </section>
+
+      <section class="scent">
+        <div class="content">
+          <h2>
+            <span class="emphasis">Scent the mood</span> for any occasion.
+          </h2>
+          <p>
+            We are constantly crafting new scent collections so that your LuDela candle can smell however you wish. Whether you want your home to smell like freshly baked cookies, freshly picked flowers, or like Christmas in July - we’ve got you covered.
+          </p>
+        </div>
+      </section>
+
+      <section class="full life6 parallax">
+      </section>
+
+      <section class="mission full">
+        <div class="content">
+          <h2>
+            Better Light. <span class="emphasis">Better Lives.</span>
+          </h2>
+          <p>
+            For every LuDela ordered you’ll be changing lives.  LuDela
+            delivers a solar-charged light to a family living without
+            access to <span class="emphasis">safe, affordable lighting for every
+              LuDela sold</span>.
+            These solar lights truly change lives by increasing work
+            and study hours while reducing common health and environmental
+            issues caused by toxic kerosene lighting.
+          </p>
+        </div>
+      </section>
+
+      <section class="full list left cta-all parallax">
+        <div class="content">
+          <h1>Get Yours Now</h1>
+          <p>Save $100 when you pre-order for a limited time</p>
+          <a href="#" class="button call-to-action checkout-button">Pre-order Now</a>
+        </div>
+        <div class="image">
+          <img src="/images/join-candle.png">
+        </div>
+        <div class="info">
+          <p>Earn a LuDela candle, refills, coupons
+  and other rewards by referring your friends.</p>
+          <register immediate-login="true">
+            <user-email type='text' placeholder=' ENTER YOUR EMAIL'></user-email>
+            <input type='submit' value="Sign Up"/>
+            <div class="error" if="{ errorMessage }">
+              { errorMessage }
+            </div>
+          </register>
+          <a class="login-button button" href="/login">Login</a>
+        </div>
+      </section>
+
+      <!-- CHECKOUT -->
+      <div class="checkout-modal modal">
+        <div class="checkout-container">
+          <div class="checkout">
+            <div class="continue-shopping">
+              <h1><i class="arrow-left"></i>Continue Shopping<i class="shopping-bag"></i></h1>
+            </div>
+            <cart>
+              <h1>
+                Order Summary
+              </h1>
+
+              <lineitems if="{ !isEmpty() }">
+                <div class="product-text-container">
+                  <span if="{ !data.get('locked') }" class="product-quantity-container">
+                    <quantity-select-control></quantity-select-control>
+                  </span>
+                  <span if="{ data.get('locked') }" class="product-quantity-container locked">
+                    { data.get('quantity') }
+                  </span>
+                  <span class="product-description">
+                    <span class="product-name">{ data.get('productName') }</span>
+                    <p>{ data.get('description') }</p>
+                  </span>
+                </div>
+                <div class="product-image-container">
+                  <img src="images/Candle-Product.png" alt="{ data.get('productName') }"></img>
+                </div>
+                <!-- <div onclick="{ delete }" class="product-delete"></div> -->
+                <div class="product-price-container invoice-amount">
+                  <div class="product-price">
+                    { renderCurrency(parentData.get('currency'), data.get().price * data.get().quantity) }
+                    { parentData.get('currency').toUpperCase() }
+                  </div>
+                  <div if="{ data.get().listPrice > data.get().price }" class="product-list-price invoice-amount">
+                    { renderCurrency(parentData.get('currency'), data.get().listPrice * data.get().quantity) }
+                    { parentData.get('currency').toUpperCase() }
+                  </div>
+                </div>
+              </lineitems>
+
+              <div class="promo">
+                <div class="promo-row">
+                  <promocode class="input" placeholder="Coupon Code"></promocode>
+                  <button class="{ loading: applying }" onclick="{ applyPromoCode }">Apply</button>
+                  <div class="promo-message" if="{ data.get('order.promoCode') && !promoMessage && !applying }">
+                    Don't forget to apply your code!
+                  </div>
+                  <div class="promo-message" if="{ promoMessage }">
+                    { promoMessage }
+                  </div>
+                </div>
+              </div>
+              <div class="invoice-discount invoice-line animated fadeInUp" if="{ data.get('order.discount') > 0 }">
+                <div class="invoice-label">
+                  Discount:
+                </div>
+                <div class="invoice-amount">
+                  { renderCurrency(data.get('order.currency'), data.get('order.discount'))}&nbsp;{ data.get('order.currency').toUpperCase() }
+                </div>
+              </div>
+              <div class="invoice-line">
+                <div class="invoice-label">
+                  Subtotal
+                </div>
+                <div class="invoice-amount">
+                  { renderCurrency(data.get('order.currency'), data.get('order.subtotal'))}&nbsp;{ data.get('order.currency').toUpperCase() }
+                </div>
+              </div>
+              <div class="invoice-line">
+                <div class="invoice-label">
+                  Shipping (billed later)
+                </div>
+                <div class="invoice-amount not-bold">
+                  - -
+                </div>
+              </div>
+              <div class="invoice-line">
+                <div class="invoice-label">
+                  Tax ({ data.get('order.taxRate') * 100 }%)
+                </div>
+                <div class="invoice-amount">
+                  { renderCurrency(data.get('order.currency'), data.get('order.tax'))}&nbsp;{ data.get('order.currency').toUpperCase() }
+                </div>
+              </div>
+              <div class="invoice-line invoice-total">
+                <div class="invoice-label">
+                  Total
+                </div>
+                <div class="invoice-amount">
+                  { renderCurrency(data.get('order.currency'), data.get('order.total'))}&nbsp;{ data.get('order.currency').toUpperCase() }
+                </div>
+              </div>
+              <div class="invoice-line">
+                <div class="invoice-label">Estimated Ship Date</div>
+                <div class="invoice-amount">Early 2017</div>
+              </div>
+              <div class="special-offer">
+                <h1>SPECIAL OFFER</h1>
+                <div class="fields">
+                  <div class="checkbox">
+                    <input type="checkbox" id="refills" name="refills">
+                    <label for="refills">
+                       Yes! I would like a free month of LuDela refills and more
+                       information about saving time and money with LuDela's
+                       subscription plans. No strings attached!
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </cart>
+            <checkout>
+              <div class="contact-information">
+                <h1>
+                  Contact Information
+                </h1>
+                <div class="fields">
+                  <user-name class="input" placeholder="Name"></user-name>
+                  <user-email class="input" placeholder="Email"></user-email>
+                </div>
+              </div>
+              <div class="shipping-information">
+                <h1>
+                  Shipping Information
+                </h1>
+                <div class="fields">
+                  <shippingaddress-line1 class="input" placeholder="Address"></shippingaddress-line1>
+                  <shippingaddress-line2 class="input" placeholder="Suite"></shippingaddress-line2>
+                </div>
+                <div class="fields">
+                  <shippingaddress-city class="input" placeholder="City"></shippingaddress-city>
+                  <shippingaddress-postalcode class="input" placeholder="Postal Code"></shippingaddress-postalcode>
+                </div>
+                <div class="fields">
+                  <shippingaddress-state class="input" placeholder="State"></shippingaddress-state>
+                  <shippingaddress-country class="input" placeholder="Country"></shippingaddress-country>
+                </div>
+              </div>
+              <div class="gift-options">
+                <h1>
+                  Gift Options
+                </h1>
+                <div class="fields">
+                  <gift-toggle>
+                    <label for="order.gift">This is a gift.</label>
+                  </gift-toggle>
+                </div>
+                <div class="fields" if="{ data.get('order.gift') }">
+                  <gift-message placeholder="Please enter any special instructions for your gift such as custom greetings.">
+                  </gift-message>
+                </div>
+              </div>
+
+              <div class="payment-information">
+                <h1>
+                  Payment Information <i class="lock"></i>
+                </h1>
+
+                <div class="fields">
+                  <card-number class="input" name="number" placeholder="Card Number"></card-number>
+                  <card-expiry class="input" name="expiry" placeholder="MM / YY"></card-expiry>
+                  <card-cvc class="input" name="cvc" placeholder="CVC"></card-cvc>
+                </div>
+
+                  <!-- <div class="card-types"> -->
+                  <!--   <div> -->
+                  <!--     <img src="/img/card-icons/visa.png"> -->
+                  <!--   </div> -->
+                  <!--   <div> -->
+                  <!--     <img src="/img/card-icons/mastercard.png"> -->
+                  <!--   </div> -->
+                  <!--   <div> -->
+                  <!--     <img src="/img/card-icons/discover.png"> -->
+                  <!--   </div> -->
+                  <!--   <div> -->
+                  <!--     <img src="/img/card-icons/amex.png"> -->
+                  <!--   </div> -->
+                  <!-- </div> -->
+
+                <a href="//www.stripe.com" target="_blank"><img class="stripe-logo" src="/images/stripelogo.png"></a>
+              </div>
+
+              <div class="confirmation">
+                <h1>
+                  Almost Done
+                </h1>
+
+                <terms>
+                  <label for="terms">I agree to LuDela's <a href="/legal" target="_blank">terms of service</a>.</label>
+                </terms>
+                <button class="{ loading: loading || checkedOut }" type="submit">Confirm Pre-order</button>
+                <div class="error" if="{ errorMessage }">
+                  { errorMessage }
+                </div>
+              </div>
+            </checkout>
           </div>
-          <cart>
-            <h1>
-              Order Summary
-            </h1>
-
-            <lineitems if="{ !isEmpty() }">
-              <div class="product-text-container">
-                <span if="{ !data.get('locked') }" class="product-quantity-container">
-                  <quantity-select-control></quantity-select-control>
-                </span>
-                <span if="{ data.get('locked') }" class="product-quantity-container locked">
-                  { data.get('quantity') }
-                </span>
-                <span class="product-description">
-                  <span class="product-name">{ data.get('productName') }</span>
-                  <p>{ data.get('description') }</p>
-                </span>
-              </div>
-              <div class="product-image-container">
-                <img src="images/Candle-Product.png" alt="{ data.get('productName') }"></img>
-              </div>
-              <!-- <div onclick="{ delete }" class="product-delete"></div> -->
-              <div class="product-price-container invoice-amount">
-                <div class="product-price">
-                  { renderCurrency(parentData.get('currency'), data.get().price * data.get().quantity) }
-                  { parentData.get('currency').toUpperCase() }
-                </div>
-                <div if="{ data.get().listPrice > data.get().price }" class="product-list-price invoice-amount">
-                  { renderCurrency(parentData.get('currency'), data.get().listPrice * data.get().quantity) }
-                  { parentData.get('currency').toUpperCase() }
-                </div>
-              </div>
-            </lineitems>
-
-            <div class="promo">
-              <div class="promo-row">
-                <promocode class="input" placeholder="Coupon Code"></promocode>
-                <button class="{ loading: applying }" onclick="{ applyPromoCode }">Apply</button>
-                <div class="promo-message" if="{ data.get('order.promoCode') && !promoMessage && !applying }">
-                  Don't forget to apply your code!
-                </div>
-                <div class="promo-message" if="{ promoMessage }">
-                  { promoMessage }
-                </div>
-              </div>
-            </div>
-            <div class="invoice-discount invoice-line animated fadeInUp" if="{ data.get('order.discount') > 0 }">
-              <div class="invoice-label">
-                Discount:
-              </div>
-              <div class="invoice-amount">
-                { renderCurrency(data.get('order.currency'), data.get('order.discount'))}&nbsp;{ data.get('order.currency').toUpperCase() }
-              </div>
-            </div>
-            <div class="invoice-line">
-              <div class="invoice-label">
-                Subtotal
-              </div>
-              <div class="invoice-amount">
-                { renderCurrency(data.get('order.currency'), data.get('order.subtotal'))}&nbsp;{ data.get('order.currency').toUpperCase() }
-              </div>
-            </div>
-            <div class="invoice-line">
-              <div class="invoice-label">
-                Shipping (billed later)
-              </div>
-              <div class="invoice-amount not-bold">
-                - -
-              </div>
-            </div>
-            <div class="invoice-line">
-              <div class="invoice-label">
-                Tax ({ data.get('order.taxRate') * 100 }%)
-              </div>
-              <div class="invoice-amount">
-                { renderCurrency(data.get('order.currency'), data.get('order.tax'))}&nbsp;{ data.get('order.currency').toUpperCase() }
-              </div>
-            </div>
-            <div class="invoice-line invoice-total">
-              <div class="invoice-label">
-                Total
-              </div>
-              <div class="invoice-amount">
-                { renderCurrency(data.get('order.currency'), data.get('order.total'))}&nbsp;{ data.get('order.currency').toUpperCase() }
-              </div>
-            </div>
-            <div class="invoice-line">
-              <div class="invoice-label">Estimated Ship Date</div>
-              <div class="invoice-amount">Early 2017</div>
-            </div>
-            <div class="special-offer">
-              <h1>SPECIAL OFFER</h1>
-              <div class="fields">
-                <div class="checkbox">
-                  <input type="checkbox" id="refills" name="refills">
-                  <label for="refills">
-                     Yes! I would like a free month of LuDela refills and more
-                     information about saving time and money with LuDela's
-                     subscription plans. No strings attached!
-                  </label>
-                </div>
-              </div>
-            </div>
-          </cart>
-          <checkout>
-            <div class="contact-information">
-              <h1>
-                Contact Information
-              </h1>
-              <div class="fields">
-                <user-name class="input" placeholder="Name"></user-name>
-                <user-email class="input" placeholder="Email"></user-email>
-              </div>
-            </div>
-            <div class="shipping-information">
-              <h1>
-                Shipping Information
-              </h1>
-              <div class="fields">
-                <shippingaddress-line1 class="input" placeholder="Address"></shippingaddress-line1>
-                <shippingaddress-line2 class="input" placeholder="Suite"></shippingaddress-line2>
-              </div>
-              <div class="fields">
-                <shippingaddress-city class="input" placeholder="City"></shippingaddress-city>
-                <shippingaddress-postalcode class="input" placeholder="Postal Code"></shippingaddress-postalcode>
-              </div>
-              <div class="fields">
-                <shippingaddress-state class="input" placeholder="State"></shippingaddress-state>
-                <shippingaddress-country class="input" placeholder="Country"></shippingaddress-country>
-              </div>
-            </div>
-            <div class="gift-options">
-              <h1>
-                Gift Options
-              </h1>
-              <div class="fields">
-                <gift-toggle>
-                  <label for="order.gift">This is a gift.</label>
-                </gift-toggle>
-              </div>
-              <div class="fields" if="{ data.get('order.gift') }">
-                <gift-message placeholder="Please enter any special instructions for your gift such as custom greetings.">
-                </gift-message>
-              </div>
-            </div>
-
-            <div class="payment-information">
-              <h1>
-                Payment Information <i class="lock"></i>
-              </h1>
-
-              <div class="fields">
-                <card-number class="input" name="number" placeholder="Card Number"></card-number>
-                <card-expiry class="input" name="expiry" placeholder="MM / YY"></card-expiry>
-                <card-cvc class="input" name="cvc" placeholder="CVC"></card-cvc>
-              </div>
-
-                <!-- <div class="card-types"> -->
-                <!--   <div> -->
-                <!--     <img src="/img/card-icons/visa.png"> -->
-                <!--   </div> -->
-                <!--   <div> -->
-                <!--     <img src="/img/card-icons/mastercard.png"> -->
-                <!--   </div> -->
-                <!--   <div> -->
-                <!--     <img src="/img/card-icons/discover.png"> -->
-                <!--   </div> -->
-                <!--   <div> -->
-                <!--     <img src="/img/card-icons/amex.png"> -->
-                <!--   </div> -->
-                <!-- </div> -->
-
-              <a href="//www.stripe.com" target="_blank"><img class="stripe-logo" src="/images/stripelogo.png"></a>
-            </div>
-
-            <div class="confirmation">
-              <h1>
-                Almost Done
-              </h1>
-
-              <terms>
-                <label for="terms">I agree to LuDela's <a href="/legal" target="_blank">terms of service</a>.</label>
-              </terms>
-              <button class="{ loading: loading || checkedOut }" type="submit">Confirm Pre-order</button>
-              <div class="error" if="{ errorMessage }">
-                { errorMessage }
-              </div>
-            </div>
-          </checkout>
+          <div class="checkout-bottom-buffer"></div>
         </div>
-        <div class="checkout-bottom-buffer"></div>
-      </div>
-      <div class="thankyou">
-        <p>Thank you for making the world a little brighter! You will receive a confirmation email soon.</p>
+        <div class="thankyou">
+          <p>Thank you for making the world a little brighter! You will receive a confirmation email soon.</p>
 
-        <p>Your order number is <strong></strong>.</p>
+          <p>Your order number is <strong></strong>.</p>
 
-        <p style="text-align:center">Tell your friends about LuDela!</p>
-        <div class="social">
-          <a class="menu__social"  href="http://facebook.com/JoinLudela" target="_blank">
-            <span class="icon icon-facebook"> </span>
-          </a>
-          <a class="menu__social"  href="http://twitter.com/JoinLudela" target="_blank">
-            <span class="icon icon-twitter"> </span>
-          </a>
-          <a class="menu__social"  href="https://www.pinterest.com/joinludela" target="_blank">
-            <span class="icon icon-pinterest2"> </span>
-          </a>
+          <p style="text-align:center">Tell your friends about LuDela!</p>
+          <div class="social">
+            <a class="menu__social"  href="http://facebook.com/JoinLudela" target="_blank">
+              <span class="icon icon-facebook"> </span>
+            </a>
+            <a class="menu__social"  href="http://twitter.com/JoinLudela" target="_blank">
+              <span class="icon icon-twitter"> </span>
+            </a>
+            <a class="menu__social"  href="https://www.pinterest.com/joinludela" target="_blank">
+              <span class="icon icon-pinterest2"> </span>
+            </a>
+          </div>
+
         </div>
+        <div class="modal-close">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
 
-      </div>
-      <div class="modal-close">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <!-- FOOTER -->
+      <footer>
+        <nav>
+          <ul>
+            <li>
+              <a class='menu__link' href='/account'>
+                Refer a Friend
+              </a>
+            </li>
+            <li>
+              <a class='menu__link' href='/about'>
+                about us
+              </a>
+            </li>
+            <li>
+              <a class='menu__link' href='/faq'>
+                faq
+              </a>
+            </li>
+            <li>
+              <a class='menu__link' href='/legal'>
+                legal
+              </a>
+            </li>
+            <li>
+              <a class='menu__link' href='/careers'>
+                careers
+              </a>
+            </li>
+            <li>
+              <a class='menu__link' href='/contact'>
+                contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li>
+              <a class="menu__social"  href='http://facebook.com/JoinLudela' target="_blank">
+                <span class="icon icon-facebook"> </span>
+              </a>
+            </li>
+            <li>
+              <a class="menu__social"  href='http://twitter.com/JoinLudela' target="_blank">
+                <span class="icon icon-twitter"> </span>
+              </a>
+            </li>
+            <li>
+              <a class="menu__social"  href='https://www.pinterest.com/joinludela' target="_blank">
+                <span class="icon icon-pinterest2"> </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#">
+          <div class="menu__logo logo">
+            <a href='/'>
+              <span class="icon icon-ludela-logo"></span>
+            </a>
+        </div>
+        </a>
+        <small class="copyright">© LuDela Inc. 2016</small>
+      </footer>
+
     </div>
 
     <!-- Loader -->
@@ -719,11 +686,5 @@
       <div class="spinner">
       </div>
     </div>
-
-    <script src="/js/site.js"></script>
-    <script src="/js/shop.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.min.js"></script>
-    <script type="text/javascript" src="/js/cookies.min.js"></script>
-    <script src="/js/checkout.js"></script>
   </body>
 </html>
