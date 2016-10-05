@@ -172,7 +172,7 @@ h3 {
   background-image: url('/images/gallery1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 25%, 50%;
+  background-position: 10%, 50%;
 }
 
 .hero .hero2 {
@@ -260,10 +260,33 @@ h3 {
   width: 200vh;
 }
 
+.signup {
+  background-color: black;
+  color: #FFF
+}
+
+.signup .content {
+  max-width: 400px;
+}
+
+.signup p {
+  text-align: center;
+}
+
+.signup register > * {
+  float: left;
+  font-size: 12px;
+  margin-bottom:20px;
+}
+
+.signup form {
+  width: 100%;
+}
+
 .life2 {
   background-image: url(/images/life2.jpg);
   background-size: contain;
-  background-position: 0% 50%;
+  background-position: 0% 50% !important;
 }
 
 .smart .image {
@@ -276,7 +299,7 @@ h3 {
 .life3 {
   background-image: url(/images/life3.jpg);
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: 50% 50% !important;
 }
 
 .sustainable .image {
@@ -295,7 +318,7 @@ h3 {
 .life4 {
   background-image: url(/images/life4.jpg);
   background-size: cover;
-  background-position: 50% 00%;
+  background-position: 10% 0% !important;
 }
 
 .customize {
@@ -330,7 +353,7 @@ h3 {
 .life6 {
   background-image: url(/images/life6.jpg);
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: 50% 50% !important;
 }
 
 .mission {
@@ -410,7 +433,8 @@ h3 {
 .cta-all .info form {
   font-size: 12px;
 }
-.cta-all .info register .error {
+
+register .error {
   font-size: 12px;
   margin-bottom: 10px;
 }
@@ -418,33 +442,35 @@ h3 {
   top: 32px;
   margin-left: 0;
 }
-.cta-all .info register {
+
+register {
   display: block;
   margin: 0 auto;
   width: 100%;
   margin-bottom: 25px;
   position: relative;
 }
-.cta-all .info register user-email {
+register user-email {
   width: 70%;
   display: inline-block;
 }
-.cta-all .info register user-email > input {
+register user-email > input {
   width: 100%;
 }
-.cta-all .info register > form > input {
+register > form > input {
   width: 25%;
   margin-left: 0;
 }
-.cta-all .info .login-button {
+.login-button {
   display: table;
   margin: auto;
   width: 100%;
   max-width: 400px;
   text-align: center;
   box-sizing: border-box;
+  font-size: 14px;
 }
-.cta-all .info input[type="text"] {
+register input[type="text"] {
   background-color: #f1ead0;
   color: #000;
   font-weight: bold;
@@ -454,11 +480,11 @@ h3 {
   text-align: left;
 }
 
-.cta-all .error {
+register .error {
   text-align: left;
 }
 
-.cta-all .info input[type="submit"] {
+register input[type="submit"] {
   background-color: #ed8d48;
   color: #f1ead0;
   text-transform: uppercase;
@@ -472,6 +498,7 @@ h3 {
   text-align: center;
   padding: 12px 0;
   border-radius: 0 !important;
+  line-height: 0;
 }
 
 .thankyou {
@@ -603,7 +630,7 @@ footer .menu__social {
     background-size: contain !important;
     background-position: 50% 100% !important;
     background-repeat: no-repeat;
-    height:180vh !important;
+    height:190vh !important;
   }
 }
 

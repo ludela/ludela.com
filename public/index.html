@@ -12,15 +12,12 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,100italic,300italic,400italic,700,700italic' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="css/relaunch/fonts.css" />
 
-    <!-- Our Styles and JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.1/es6-shim.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <!-- Our Styles -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/layzr.js/2.0.2/layzr.min.js"></script> -->
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/css/selectize.bootstrap3.min.css">
     <link rel="stylesheet" href="css/relaunch/framework.css" />
-    <script src="js/relaunch/framework.js"></script>
 
-    <!-- Block Level Styles and JS -->
+    <!-- Block Level Styles -->
     <link rel="stylesheet" href="css/relaunch/loader.css" />
     <link rel="stylesheet" href="css/relaunch/header.css" />
     <link rel="stylesheet" href="css/relaunch/hero.css" />
@@ -31,20 +28,11 @@
     <link rel="stylesheet" href="css/relaunch/loader.css" />
     <link rel="stylesheet" href="css/relaunch/footer.css" />
     <link rel="stylesheet" href="css/relaunch/menu.css" />
-    <script src="js/relaunch/hero-video.js"></script>
-    <script src="js/relaunch/gallery.js"></script>
-    <!-- <script src="js/relaunch/slidify.js"></script> -->
-
-    <script src="/js/shop.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.min.js"></script>
-    <script type="text/javascript" src="/js/cookies.min.js"></script>
-    <script src="/js/checkout.js"></script>
 
     <!-- Custom Styling and JS-->
     <!-- <link rel="stylesheet" href="css/relaunch/visuals.css" /> -->
     <link rel="stylesheet" href="css/relaunch/ludela.css" />
     <link rel="stylesheet" href="css/relaunch/site.css" />
-    <script src="js/relaunch/ludela.js"></script>
 
     <script>
       !function(t,e,a){var r,n,c,i,o,s,l,u;if(null==t.analytics){for(r=[],r.methods=["ab","alias","group","identify","off","on","once","page","pageview","ready","track","trackClick","trackForm","trackLink","trackSubmit"],l=r.methods,c=function(t){r[t]=function(){var e;return e=Array.prototype.slice.call(arguments),e.unshift(t),r.push(e),r}},i=0,o=l.length;o>i;i++)s=l[i],c(s);return u=e.createElement("script"),u.async=!0,u.type="text/javascript",u.src=a,n=e.getElementsByTagName("script")[0],n.parentNode.insertBefore(u,n),t.analytics=r}}(window,document,"//cdn.crowdstart.com/a/ludela.js");
@@ -210,6 +198,20 @@
             <br><br><br>
             <a href="/tech">See all safety features ></a>
           </p>
+        </div>
+      </section>
+
+      <section class="signup">
+        <div class="content">
+          <p>Signup for updates, offers and earn a LuDela by sharing with friends.</p>
+          <register immediate-login="true">
+            <user-email type='text' placeholder=' ENTER YOUR EMAIL'></user-email>
+            <input type='submit' value="Sign Up"/>
+            <div class="error" if="{ errorMessage }">
+              { errorMessage }
+            </div>
+          </register>
+          <a class="login-button button" href="/login">Login</a>
         </div>
       </section>
 
@@ -709,5 +711,18 @@
       <div class="spinner">
       </div>
     </div>
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.1/es6-shim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="js/relaunch/framework.js"></script>
+    <script src="js/relaunch/hero-video.js"></script>
+    <script src="js/relaunch/gallery.js"></script>
+    <!-- <script src="js/relaunch/slidify.js"></script> -->
+    <script src="/js/shop.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.min.js"></script>
+    <script type="text/javascript" src="/js/cookies.min.js"></script>
+    <script src="/js/checkout.js"></script>
+    <script src="js/relaunch/ludela.js"></script>
   </body>
 </html>
