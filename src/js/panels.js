@@ -34,6 +34,10 @@ export default function ($) {
     $splash.addClass('is-step-' + currentStep);
   }
 
+  if ($about.length) {
+    $('html, body').css('overflow', 'initial');
+  }
+
   $document.on('setpanel', function (ev, index) {
     if($splash.length) {
       index = Math.max(1, Math.min(totalSteps, index));
@@ -95,7 +99,7 @@ export default function ($) {
     $('.scroll-container').addClass('scroll-stop');
 
     var story = 9;
-    if (index <=9) {
+    if (index <=9 && $(window).width() > 680) {
       story = index;
       $('.story-'+index+1+', .story-'+index+', .story-'+index-1).animate({scrollTop: 0}, 750);
       $about.removeClass('is-footer');

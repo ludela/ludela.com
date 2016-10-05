@@ -71,18 +71,6 @@ export default function ($)  {
     }
 
 
-    $('#step-4').onscroll = mobileScroll();
-
-
-
-
-    function mobileScroll(){
-      if ($(window).width()<=680) {
-        console.log('yeah');
-
-      }
-    }
-
     function reload() {
 
       if (window.location.hash == '') {
