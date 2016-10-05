@@ -672,7 +672,7 @@ button[type=submit] {
   font-size: 16px;
 }
 .store .hero {
-  background-image: url("/images/store1.png");
+  background-image: url("/images/store1.jpg");
   background-position: 33% 25%;
   height: 80vh;
 }
