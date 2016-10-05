@@ -164,6 +164,19 @@ h3 {
   z-index: 102;
 }
 
+.hero .cta-overlay {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 20px;
+  background-color: rgba(0,0,0, 0.6);
+}
+
+.hero .cta-overlay .call-to-action {
+  margin-top: 0;
+  margin-right: 20px;
+}
+
 .hero .gallery-controls .button {
   display: none;
 }
@@ -635,6 +648,15 @@ footer .menu__social {
     background-position: 50% 100% !important;
     background-repeat: no-repeat;
     height:190vh !important;
+  }
+
+  .hero .cta-overlay .call-to-action {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .hero .cta-overlay span {
+    font-size: 16px;
   }
 }
 

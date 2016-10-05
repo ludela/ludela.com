@@ -807,7 +807,7 @@ button[type=submit] {
   height: 30px;
   position: absolute;
   left: 40px;
-  top: 40px;
+  top: 35px;
   margin: 0 auto;
   margin-top: -15px;
   -webkit-transform: rotate(0deg);
@@ -856,11 +856,6 @@ button[type=submit] {
   top: 18px;
   width: 0%;
   left: 50%;
-}
-@media all and (max-width: 800px) {
-  #hamburger {
-    top: 35px;
-  }
 }
 .progress {
   float: right;
