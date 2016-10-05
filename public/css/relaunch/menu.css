@@ -5,7 +5,7 @@
   top: 0;
   left: -410px;
   background: #f2be3d;
-  z-index: 999;
+  z-index: 5000;
   text-align: center;
   -webkit-transition: left 350ms ease-out;
   transition: left 350ms ease-out;
@@ -64,7 +64,7 @@
     top: -400vh;
     left: 0;
     background: #f2be3d;
-    z-index: 999;
+    z-index: 5000;
     text-align: center;
     -webkit-transition: top 1s ease-out;
     transition: top 1s ease-out;
