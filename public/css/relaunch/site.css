@@ -901,4 +901,20 @@ button[type=submit] {
     margin-top: 0;
   }
 }
+@media all and (max-width: 600px) {
+  .progress {
+    width: 100%;
+    margin-bottom: 6px;
+  }
+  .progress .bar {
+    width: 95%;
+    height: 4px;
+  }
+  .progress .message {
+    font-size: 10px;
+  }
+  .progress .percent {
+    font-size: 11px;
+  }
+}
 /*# sourceMappingURL=site.css.map */

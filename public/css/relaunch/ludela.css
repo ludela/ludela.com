@@ -635,11 +635,22 @@ footer .menu__social {
 
   header .call-to-action.button {
     font-size: 12px;
-    margin: 20px;
+  }
+
+  .hero .content {
+    margin-top: 70vh !important;
+  }
+
+  h1 {
+    font-size: 80px;
+  }
+
+  h2 {
+    font-size: 40px;
   }
 
   h3 {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .list .info ul li h4 {
@@ -654,13 +665,30 @@ footer .menu__social {
     height:190vh !important;
   }
 
-  .hero .cta-overlay .call-to-action {
+  .hero:not(.mission) .cta-overlay .call-to-action {
     width: 100%;
     font-size: 12px;
   }
 
-  .hero .cta-overlay span {
+  .hero:not(.mission) .cta-overlay span {
     font-size: 16px;
+  }
+
+  .hero:not(.mission) .play-wrapper {
+    position: absolute;
+    margin-top: -40vh !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+
+  .hero .play-message {
+    display: none !important;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .hero .cta-overlay {
+    display: none;
   }
 }
 
