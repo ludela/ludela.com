@@ -214,6 +214,10 @@ h3 {
   background: rgba(241, 234, 208, 0.3);
 }
 
+.gallery-counter {
+  margin-top: 85vh !important;
+}
+
 .list.full {
   display: block !important;
   overflow: hidden;
