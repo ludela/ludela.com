@@ -1,0 +1,130 @@
+.store
+
+  font-size: 16px
+
+  .hero
+    background-image: url(/images/store1.png)
+    background-position: 50% 25%
+    height: 80vh
+
+    .content
+      margin-top: 40vh !important
+
+  h2
+    margin-bottom: 80px
+
+  h4
+    font-size: 35px
+    font-weight: normal
+
+  .items
+    .item
+      display: table
+      width: 100%
+
+      > *
+        float: left
+
+    .image
+      width: 35%
+      margin-right: 5%
+
+    .title
+      width: 60%
+      text-align: left
+      font-size: 18px
+      padding: 15px 0
+
+      h4
+        margin: 0 20px 0 0
+        display: inline-block
+
+    .picker
+      width: 60%
+      display: table
+      padding-top: 15px
+
+      > *
+        text-align: left
+        display: table-cell
+        vertical-align: middle
+
+        &:first-child
+          width: 35%
+          margin-right: 5%
+
+        &:last-child
+          width: 60%
+
+          .selectize-input
+            max-width: 100%
+
+    .scent-picker
+      border-top: 1px solid rgb(222,222,222)
+
+    .refill-plan-picker
+      padding-bottom: 15px
+
+      > *:last-child
+        span
+          width: 25%
+          display: inline-block
+          text-align: center
+          float: left
+
+          input[type=radio]
+            display:none
+
+            &:checked + label
+              background-color: #F5A623
+              color: #fff
+
+          label
+            height: 32px
+            padding: 8px
+            width:  100%
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+            border-radius: 16px
+            display: block
+            width: 90%
+            margin-left: auto
+            margin-right: auto
+            cursor: pointer
+            transition: 0.4s ease-in-out
+
+    .price
+      width: 60%
+      padding: 15px 0
+      border-top: 1px solid rgb(222,222,222)
+      border-bottom: 1px solid rgb(222,222,222)
+
+      & > *:first-child
+        width: 25%
+        margin-right: 5%
+        display: inline-block
+        float: left
+
+      & > *:last-child
+        width: 70%
+        display: inline-block
+        float: left
+
+    .call-to-action.button
+      border: 0
+      border-radius: 16px
+      color: #fff
+      margin-top: 15px
+
+  @media screen and (max-width: 600px)
+    .title
+      margin-top: 50px
+      > *
+        display: block
+
+    .picker
+    .price
+      width: 100% !important
+
+    .call-to-action.button
+      width: 100%
+      text-align: center

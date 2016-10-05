@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <head>
-    <title>LuDela</title>
+    <title>LuDela Store</title>
 
     <!-- Normalizer/Reset -->
     <link rel="stylesheet" href="css/relaunch/normalize.css" />
@@ -24,16 +24,9 @@
     <link rel="stylesheet" href="css/relaunch/loader.css" />
     <link rel="stylesheet" href="css/relaunch/header.css" />
     <link rel="stylesheet" href="css/relaunch/hero.css" />
-    <link rel="stylesheet" href="css/relaunch/hero-video.css" />
-    <link rel="stylesheet" href="css/relaunch/parallax.css" />
-    <link rel="stylesheet" href="css/relaunch/gallery.css" />
-    <link rel="stylesheet" href="css/relaunch/list.css" />
     <link rel="stylesheet" href="css/relaunch/loader.css" />
     <link rel="stylesheet" href="css/relaunch/footer.css" />
     <link rel="stylesheet" href="css/relaunch/menu.css" />
-    <script src="js/relaunch/hero-video.js"></script>
-    <script src="js/relaunch/gallery.js"></script>
-    <!-- <script src="js/relaunch/slidify.js"></script> -->
 
     <script src="/js/shop.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.min.js"></script>
@@ -45,6 +38,7 @@
     <link rel="stylesheet" href="css/relaunch/ludela.css" />
     <link rel="stylesheet" href="css/relaunch/site.css" />
     <script src="js/relaunch/ludela.js"></script>
+    <script src="js/relaunch/store.js"></script>
 
     <script>
       !function(t,e,a){var r,n,c,i,o,s,l,u;if(null==t.analytics){for(r=[],r.methods=["ab","alias","group","identify","off","on","once","page","pageview","ready","track","trackClick","trackForm","trackLink","trackSubmit"],l=r.methods,c=function(t){r[t]=function(){var e;return e=Array.prototype.slice.call(arguments),e.unshift(t),r.push(e),r}},i=0,o=l.length;o>i;i++)s=l[i],c(s);return u=e.createElement("script"),u.async=!0,u.type="text/javascript",u.src=a,n=e.getElementsByTagName("script")[0],n.parentNode.insertBefore(u,n),t.analytics=r}}(window,document,"//cdn.crowdstart.com/a/ludela.js");
@@ -53,7 +47,7 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
   </head>
-  <body>
+  <body class="store">
     <nav id='menu' class='menu'>
       <div class="menu__close">
         <span></span>
@@ -116,298 +110,70 @@
       </header>
 
       <!-- HERO -->
-      <section class="hero gallery" data-autoplay="6000" data-fade="true">
-        <section class="full hero1">
-        </section>
-        <section class="full hero2">
-        </section>
-        <section class="full hero3">
-        </section>
-      </section>
-
-      <div class="hero video overlay block" data-src="https://www.youtube.com/embed/1ayoxYoCUSo">
+      <section class="hero">
         <div class="content">
-          <h1>LuDela</h1>
-          <h3>The world’s safest real flame smart candle</h3>
-          <div class="play-wrapper">
-            <span class="play-message">
-              Watch the video.
-            </span>
-            <a class="play button" href="#"></a>
-          </div>
+          <h1>Shop LuDela</h1>
         </div>
-        <a class="button summary-down next-section" href="#"></a>
-        <div class="modal hidden">
-          <iframe width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
-          <a href="#cta" class="button call-to-action modal-close checkout-button">
-            PRE-ORDER NOW
-          </a>
-          <div class="modal-close">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-      </div>
+      </section>
 
       <!-- CONTENT -->
-
-      <!-- Fixed Visuals -->
-      <!-- <div class="fixed-visuals"> -->
-      <!--   <div class="candle"> -->
-      <!--   </div> -->
-      <!--   <div class="flame"> -->
-      <!--   </div> -->
-      <!--   <div class="phone"> -->
-      <!--   </div> -->
-      <!--   <div class="core"> -->
-      <!--   </div> -->
-      <!--   <div class="board"> -->
-      <!--   </div> -->
-      <!--   <div class="battery"> -->
-      <!--   </div> -->
-      <!--   <div class="wax"> -->
-      <!--   </div> -->
-      <!--   <div class="phone"> -->
-      <!--     <div class="app-slider"></div> -->
-      <!--   </div> -->
-      <!-- </div> -->
-
-      <section class="safe list right full">
-        <div class="image">
-        </div>
-        <div class="info">
-          <h2>The <span class="emphasis">safest</span> candle you'll ever own.</h2>
-          <ul>
-            <li>
-              <span class="icon icon-auto-extinguish"></span>
-              <span>
-                <h4>Tip/Fall Sensor</h4>
-              </span>
-            </li>
-            <li>
-              <span class="icon icon-smart-scan"></span>
-              <span>
-                <h4>Smart Scan</h4>
-              </span>
-            </li>
-            <li>
-              <span class="icon icon-safe-wax-design"></span>
-              <span>
-                <h4>Child Lock</h4>
-              </span>
-            </li>
-          </ul>
-          <p>
-            LuDela keeps you and your loved ones safe by auto-extinguishing
-            the flame on dangerous tips and falls. LuDela's SmartScan both
-            extinguishes and prohibits ignition of the flame if objects are
-            detected above. Additionally, our child-lock app and safety alerts
-            deliver priceless peace of mind.
-            <br><br>
-            Never worry about the dangers of fire in your home again.
-            <br><br><br>
-            <a href="/tech">See all safety features ></a>
-          </p>
-        </div>
-      </section>
-
-      <section class="full life2 parallax">
-      </section>
-
-      <section class="smart list left full">
-        <div class="image">
-        </div>
-        <div class="info">
-          <h2><span class="emphasis">Wi-Fire.</span> Ambiance with just a tap.</h2>
-          <ul>
-            <li>
-              <span class="icon icon-multizone-lighting"></span>
-              <span>
-                <h4>Multi-zone Lighting</h4>
-              </span>
-            </li>
-            <li>
-              <span class="icon icon-timer"></span>
-              <span>
-                <h4>Timer</h4>
-              </span>
-            </li>
-            <li>
-              <span class="icon icon-scene-mode"></span>
-              <span>
-                <h4>Scene Mode</h4>
-              </span>
-            </li>
-          </ul>
-          <p>
-            Create the perfect mood for any occasion. Adjust the brightness of
-            your LuDela candelight from your smart phone. Individually change
-            the brightness or use Scene Mode to load your favorite presets for
-            the occasion.
-            <br><br>
-            Fall asleep to candlelight. Set your LuDela to turn off
-            automatically and immerse yourself in stress-free relaxation.
-            <br><br><br>
-            <a href="/tech">See how it works ></a>
-          </p>
-        </div>
-      </section>
-
-      <section class="full life3 parallax">
-      </section>
-
-      <section class="sustainable list right full">
-        <div class="image">
-          <div class="padded-image"></div>
-        </div>
-        <div class="info">
-          <h2>
-            LuDela’s Refillable design <span class="emphasis">saves
-              money</span> after 2 years.
-          </h2>
-          <ul>
-            <li>
-              <span class="icon icon-subscription"></span>
-              <span>
-                <h4>Smart subscriptions</h4>
-              </span>
-            </li>
-            <li>
-              <span class="icon icon-natural-wax-design"></span>
-              <span>
-                <h4>Efficient refills</h4>
-              </span>
-            </li>
-            <li>
-              <span class="icon icon-everbrite-flame"></span>
-              <span>
-                <h4>Big savings</h4>
-              </span>
-            </li>
-          </ul>
-          <p>
-            LuDela’s revolutionary design delivers the most economical
-            natural candle experience on earth. Our timer features and efficient
-            burn refill design ensure you don’t waste your candle fuel.
-            <br><br>
-            Never be caught candle-less. LuDela will send you refills right to
-            your door at a fraction of the cost of normal candles.
-          </p>
-        </div>
-      </section>
-
-      <section class="full life4 parallax">
-      </section>
-
-      <section class="customize full list">
-        <div class="info content">
-          <h2>
-            <span class="emphasis">Customizeable</span> to the core.
-          </h2>
-          <ul>
-            <li>
-              <span class="icon icon-candle-remaining-meter"></span>
-              <span>
-                <h4>Refillable wax core</h4>
-              </span>
-            </li>
-            <li>
-              <span class="icon icon-efficient-burn"></span>
-              <span>
-                <h4>Swappable shell</h4>
-              </span>
-            </li>
-            <li>
-              <span class="icon icon icon-perfect-pillar"></span>
-              <span>
-                <h4>100% reuseable</h4>
-              </span>
-            </li>
-          </ul>
-          <p>
-            Transform the way your home looks and smells with a variety of
-            shells and scents for your Ludela. Sleek and stylish and ranging
-            from Mercury Glass to streamlined Charcoal, you can find a
-            delightful look and aroma for every room in your home.
-            <br><br><br>
-            <a href="/tech">See all shell options ></a>
-          </p>
-        </div>
-      </section>
-
-      <section class="full life5 parallax">
-      </section>
-
-      <section class="scent">
+      <section class="items">
         <div class="content">
-          <h2>
-            <span class="emphasis">Scent the mood</span> for any occasion.
-          </h2>
-          <p>
-            We are constantly crafting new scent collections so that your LuDela candle can smell however you wish. Whether you want your home to smell like freshly baked cookies, freshly picked flowers, or like Christmas in July - we’ve got you covered.
-          </p>
-        </div>
-      </section>
-
-      <section class="full life6 parallax">
-      </section>
-
-      <section class="hero video mission full" data-src="https://www.youtube.com/embed/l5gTSEb1sC8">
-        <div class="content">
-          <h2>
-            Better Light. <span class="emphasis">Better Lives.</span>
-          </h2>
-          <p>
-            For every LuDela ordered you’ll be changing lives.  LuDela
-            delivers a solar-charged light to a family living without
-            access to <span class="emphasis">safe, affordable lighting for every
-              LuDela sold</span>.
-            These solar lights truly change lives by increasing work
-            and study hours while reducing common health and environmental
-            issues caused by toxic kerosene lighting.
-          </p>
-          <div class="play-wrapper">
-            <span class="play-message">
-              Watch the video.
-            </span>
-            <a class="play button" href="#"></a>
-          </div>
-        </div>
-        <div class="modal hidden">
-          <iframe width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
-          <a href="/about">
-            Learn More About Our Mission >
-          </a>
-          <div class="modal-close">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-      </section>
-
-      <section class="full list left cta-all parallax">
-        <div class="content">
-          <h1>Get Yours Now</h1>
-          <p>Save $100 when you pre-order for a limited time</p>
-          <a href="#" class="button call-to-action checkout-button">Pre-order Now</a>
-        </div>
-        <div class="image">
-          <img src="/images/join-candle.png">
-        </div>
-        <div class="info">
-          <p>Signup for updates, offers and earn a LuDela by sharing with friends.</p>
-          <register immediate-login="true">
-            <user-email type='text' placeholder=' ENTER YOUR EMAIL'></user-email>
-            <input type='submit' value="Sign Up"/>
-            <div class="error" if="{ errorMessage }">
-              { errorMessage }
+          <h2>Essentials</h2>
+          <div class="item">
+            <div class="image">
+              <img src="/images/store-starter.png">
             </div>
-          </register>
-          <a class="login-button button" href="/login">Login</a>
+            <div class="title">
+              <h4>Starter Set</h4><span>1 LuDela Candle, 2 Refills</span>
+            </div>
+            <div class="scent-picker picker">
+              <label>Choose your scent:</label>
+              <select>
+                <option value="No Scent">No Scent</option>
+                <option value="Pomegranate Delight">Pomegranate Delight</option>
+                <option value="Comforts of Home">Comforts of Home</option>
+                <option value="Midnight Moon">Midnight Moon</option>
+                <option value="Sweet Woods">Sweet Woods</option>
+                <option value="Happy">Happy</option>
+                <option value="Coastal Breeze">Coastal Breeze</option>
+                <option value="Lemon Sage">Lemon Sage</option>
+                <option value="Christmas Forever">Christmas Forever</option>
+                <option value="Madagascar Vanilla">Madagascar Vanilla</option>
+                <option value="Deep Sleep">Deep Sleep</option>
+                <option value="Mindfulness">Mindfulness</option>
+                <option value="Stress Relief">Stress Relief</option>
+              </select>
+            </div>
+            <div class="refill-plan-picker picker">
+              <label>Select refill plan:</label>
+              <div>
+                <span>
+                  <input type="radio" id="refillx0" name="refill-1" checked>
+                  <label for="refillx0">None</label>
+                </span>
+                <span>
+                  <input type="radio" id="refillx1" name="refill-1">
+                  <label for="refillx1">x1</label>
+                </span>
+                <span>
+                  <input type="radio" id="refillx2" name="refill-1">
+                  <label for="refillx2">x2</label>
+                </span>
+                <span>
+                  <input type="radio" id="refillx3" name="refill-1">
+                  <label for="refillx3">x3</label>
+                </span>
+              </div>
+            </div>
+            <div class="price">
+              <span>Price:</span>
+              <span>$99.00 USD</span>
+            </div>
+            <div class="call-to-action button">
+              Add To Cart
+            </div>
+          </div>
         </div>
       </section>
 
