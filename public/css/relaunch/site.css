@@ -807,7 +807,7 @@ button[type=submit] {
   height: 30px;
   position: absolute;
   left: 40px;
-  top: 50%;
+  top: 40px;
   margin: 0 auto;
   margin-top: -15px;
   -webkit-transform: rotate(0deg);
@@ -856,5 +856,54 @@ button[type=submit] {
   top: 18px;
   width: 0%;
   left: 50%;
+}
+@media all and (max-width: 800px) {
+  #hamburger {
+    top: 35px;
+  }
+}
+.progress {
+  float: right;
+}
+.progress .bar {
+  width: 20vw;
+  height: 16px;
+  display: block;
+  position: relative;
+  background-color: rgba(172,161,128,0.4);
+  margin-top: 12px;
+  margin-right: 20px;
+}
+.progress .bar:before {
+  content: '';
+  display: block;
+  background-color: #eac241;
+  height: 100%;
+  width: 0%;
+  -webkit-transition: width 1.6s ease-out;
+  transition: width 1.6s ease-out;
+}
+.progress .message {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.progress .percent {
+  font-size: 17px;
+  font-weight: bold;
+}
+.progress.active .bar:before {
+  width: 53%;
+}
+@media all and (max-width: 800px) {
+  .progress {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  .progress .bar {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+  }
 }
 /*# sourceMappingURL=site.css.map */

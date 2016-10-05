@@ -40,5 +40,7 @@ $(window).load(function(){
     $('.is-open').removeClass('is-open');
     $('.nav-open').removeClass('nav-open');
   });
+
+  $('.progress').addClass('active')
 })
 
