@@ -107,7 +107,7 @@ $(function() {
             Shop.analytics.track('Completed Checkout Step', {step: 1});
             Shop.analytics.track('Viewed Checkout Step',    {step: 2});
 
-            $('checkout .parts').addClass('step-2');
+            $('checkout').addClass('step-2');
           } else {
             validateFn();
           }
@@ -125,7 +125,7 @@ $(function() {
   $('.checkout-modal.modal').find('.continue-shopping').on('click', function(e){
     if (step == 2) {
       step = 1;
-      $('checkout .parts').removeClass('step-2');
+      $('checkout').removeClass('step-2');
       return false
     }
 

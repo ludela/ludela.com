@@ -112,11 +112,27 @@
   .checkout-container
     top: 0
 
+#cart-collapsed
+  display: none
+
 checkout
   overflow: hidden
 
-  .step-2
-    transform: translateX(-50%)
+  button[type=submit]
+    span:first-child
+      display: block
+    span:last-child
+      display: none
+
+  &.step-2
+    .parts
+      transform: translateX(-50%)
+
+    button[type=submit]
+      span:first-child
+        display: none
+      span:last-child
+        display: block
 
 cart
   padding-bottom: 40px
@@ -572,9 +588,53 @@ button[type=submit]
 
 @media screen and (max-width: 980px)
   cart
-  checkout
-    width: 100%
-    margin-right: 0
+    h1
+      display: inline-block
+
+      label
+        float: left
+        cursor: pointer
+
+      .invoice-amount
+        float: right
+        font-size: 16px
+        color: #525252
+
+    .expand-summary
+      margin-right: 20px
+      transform: rotate(225deg)
+      display: block
+      position: relative
+      top: 15px
+      left: 8px
+      z-index: 2
+      width: 12px
+      height: 12px
+      border-bottom: 2px solid #9ba0a4
+      border-right: 2px solid #9ba0a4
+
+  #cart-collapsed[type="checkbox"]:checked + cart
+    .expand-summary
+      transform: rotate(45deg)
+      top: 10px
+
+    lineitems
+    .invoice-discount
+    .invoice-line
+      display: block
+      height: 0
+      padding-top: 0
+      padding-bottom: 0
+      margin-top: 0
+      margin-bottom: 0
+      overflow: hidden
+      border: 0
+
+    .special-offer
+      border: 0
+
+    .promo-row
+      padding-bottom: 0
 
 // Generic Modal Effects
 .checkout-modal

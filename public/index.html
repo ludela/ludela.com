@@ -426,9 +426,14 @@
             <div class="continue-shopping">
               <h1><i class="arrow-left"></i>Back<i class="shopping-bag"></i></h1>
             </div>
+            <input id="cart-collapsed" type="checkbox" checked>
             <cart>
               <h1>
-                Order Summary
+                <label for="cart-collapsed">Order Summary</label>
+                <label for="cart-collapsed" class="expand-summary"></label>
+                <div class="invoice-amount">
+                  { renderCurrency(data.get('order.currency'), data.get('order.total'))}&nbsp;{ data.get('order.currency').toUpperCase() }
+                </div>
               </h1>
 
               <lineitems if="{ !isEmpty() }">
@@ -618,7 +623,8 @@
                 </div>
               </div>
 
-              <button class="{ loading: loading || checkedOut }" type="submit">Confirm Pre-order</button>
+              <button class="{ loading: loading || checkedOut }"
+                type="submit"><span>Pre-order</span><span>Save Shipping</span></button>
               <div class="error" if="{ errorMessage }">
                 { errorMessage }
               </div>
