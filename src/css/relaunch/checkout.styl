@@ -8,6 +8,20 @@
   overflow-y: scroll
   font-size: 1rem
 
+  .parts
+    display: table
+    width: 220%
+    height: 100%
+    position: relative
+    top: 0
+    left: 0
+    transition: transform 1s ease-in
+
+    .part
+      width: 45.45%
+      margin-right: 4.55%
+      float: left
+
   input,
   select,
   button,
@@ -29,6 +43,9 @@
   textarea,
   .selectize-input
     border: 2px solid #c9c9c9
+
+    &:focus
+      outline-width: 0
 
   a
     color: #ed8d48
@@ -94,6 +111,12 @@
 .is-open
   .checkout-container
     top: 0
+
+checkout
+  overflow: hidden
+
+  .step-2
+    transform: translateX(-50%)
 
 cart
   padding-bottom: 40px
@@ -378,7 +401,7 @@ gift-toggle
   label
     padding-top: 2px;
     font-size: 16px !important
-    line-height: 1rem;
+    line-height: 1.2rem;
     display: inline-block;
     color: #9ba0a4
 
@@ -625,4 +648,3 @@ button[type=submit]
     left: 20px
     top: 50px
     margin-top -15px
-

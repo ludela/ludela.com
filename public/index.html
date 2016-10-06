@@ -424,7 +424,7 @@
         <div class="checkout-container">
           <div class="checkout">
             <div class="continue-shopping">
-              <h1><i class="arrow-left"></i>Continue Shopping<i class="shopping-bag"></i></h1>
+              <h1><i class="arrow-left"></i>Back<i class="shopping-bag"></i></h1>
             </div>
             <cart>
               <h1>
@@ -531,92 +531,103 @@
               </div>
             </cart>
             <checkout>
-              <div class="contact-information">
-                <h1>
-                  Contact Information
-                </h1>
-                <div class="fields">
-                  <user-name class="input" placeholder="Name"></user-name>
-                  <user-email class="input" placeholder="Email"></user-email>
-                </div>
-              </div>
-              <div class="shipping-information">
-                <h1>
-                  Shipping Information
-                </h1>
-                <div class="fields">
-                  <shippingaddress-line1 class="input" placeholder="Address"></shippingaddress-line1>
-                  <shippingaddress-line2 class="input" placeholder="Suite"></shippingaddress-line2>
-                </div>
-                <div class="fields">
-                  <shippingaddress-city class="input" placeholder="City"></shippingaddress-city>
-                  <shippingaddress-postalcode class="input" placeholder="Postal Code"></shippingaddress-postalcode>
-                </div>
-                <div class="fields">
-                  <shippingaddress-state class="input" placeholder="State"></shippingaddress-state>
-                  <shippingaddress-country class="input" placeholder="Country"></shippingaddress-country>
-                </div>
-              </div>
-              <div class="gift-options">
-                <h1>
-                  Gift Options
-                </h1>
-                <div class="fields">
-                  <gift-toggle>
-                    <label for="order.gift">This is a gift.</label>
-                  </gift-toggle>
-                </div>
-                <div class="fields" if="{ data.get('order.gift') }">
-                  <gift-message placeholder="Please enter any special instructions for your gift such as custom greetings.">
-                  </gift-message>
-                </div>
-              </div>
+              <div class="parts">
+                <div class="part">
+                  <div class="contact-information">
+                    <h1>
+                      Contact Information
+                    </h1>
+                    <div class="fields">
+                      <user-name class="input" placeholder="Name"></user-name>
+                      <user-email class="input" placeholder="Email"></user-email>
+                    </div>
+                  </div>
 
-              <div class="payment-information">
-                <h1>
-                  Payment Information <i class="lock"></i>
-                </h1>
+                  <div class="payment-information">
+                    <h1>
+                      Payment Information <i class="lock"></i>
+                    </h1>
 
-                <div class="fields">
-                  <card-number class="input" name="number" placeholder="Card Number"></card-number>
-                  <card-expiry class="input" name="expiry" placeholder="MM / YY"></card-expiry>
-                  <card-cvc class="input" name="cvc" placeholder="CVC"></card-cvc>
-                </div>
+                    <div class="fields">
+                      <card-number class="input" name="number" placeholder="Card Number"></card-number>
+                      <card-expiry class="input" name="expiry" placeholder="MM / YY"></card-expiry>
+                      <card-cvc class="input" name="cvc" placeholder="CVC"></card-cvc>
+                    </div>
 
-                  <!-- <div class="card-types"> -->
-                  <!--   <div> -->
-                  <!--     <img src="/img/card-icons/visa.png"> -->
-                  <!--   </div> -->
-                  <!--   <div> -->
-                  <!--     <img src="/img/card-icons/mastercard.png"> -->
-                  <!--   </div> -->
-                  <!--   <div> -->
-                  <!--     <img src="/img/card-icons/discover.png"> -->
-                  <!--   </div> -->
-                  <!--   <div> -->
-                  <!--     <img src="/img/card-icons/amex.png"> -->
-                  <!--   </div> -->
+                      <!-- <div class="card-types"> -->
+                      <!--   <div> -->
+                      <!--     <img src="/img/card-icons/visa.png"> -->
+                      <!--   </div> -->
+                      <!--   <div> -->
+                      <!--     <img src="/img/card-icons/mastercard.png"> -->
+                      <!--   </div> -->
+                      <!--   <div> -->
+                      <!--     <img src="/img/card-icons/discover.png"> -->
+                      <!--   </div> -->
+                      <!--   <div> -->
+                      <!--     <img src="/img/card-icons/amex.png"> -->
+                      <!--   </div> -->
+                      <!-- </div> -->
+
+                    <a href="//www.stripe.com" target="_blank"><img class="stripe-logo" src="/images/stripelogo.png"></a>
+                  </div>
+
+
+                  <!-- <div class="confirmation"> -->
+                  <!--   <h1> -->
+                  <!--     Almost Done -->
+                  <!--   </h1> -->
+
+                  <!--   <terms> -->
+                  <!--     <label for="terms">I agree to LuDela's <a href="/legal" target="_blank">terms of service</a>.</label> -->
+                  <!--   </terms> -->
                   <!-- </div> -->
-
-                <a href="//www.stripe.com" target="_blank"><img class="stripe-logo" src="/images/stripelogo.png"></a>
-              </div>
-
-              <div class="confirmation">
-                <h1>
-                  Almost Done
-                </h1>
-
-                <terms>
-                  <label for="terms">I agree to LuDela's <a href="/legal" target="_blank">terms of service</a>.</label>
-                </terms>
-                <button class="{ loading: loading || checkedOut }" type="submit">Confirm Pre-order</button>
-                <div class="error" if="{ errorMessage }">
-                  { errorMessage }
+                </div>
+                <div class="part">
+                  <div class="shipping-information">
+                    <h1>
+                      Shipping Information
+                    </h1>
+                    <div class="fields">
+                      <shippingaddress-line1 class="input" placeholder="Address"></shippingaddress-line1>
+                      <shippingaddress-line2 class="input" placeholder="Suite"></shippingaddress-line2>
+                    </div>
+                    <div class="fields">
+                      <shippingaddress-city class="input" placeholder="City"></shippingaddress-city>
+                      <shippingaddress-postalcode class="input" placeholder="Postal Code"></shippingaddress-postalcode>
+                    </div>
+                    <div class="fields">
+                      <shippingaddress-state class="input" placeholder="State"></shippingaddress-state>
+                      <shippingaddress-country class="input" placeholder="Country"></shippingaddress-country>
+                    </div>
+                  </div>
+                  <div class="gift-options">
+                    <h1>
+                      Gift Options
+                    </h1>
+                    <div class="fields">
+                      <gift-toggle>
+                        <label for="order.gift">This is a gift.</label>
+                      </gift-toggle>
+                    </div>
+                    <div class="fields" if="{ data.get('order.gift') }">
+                      <gift-message placeholder="Please enter any special instructions for your gift such as custom greetings.">
+                      </gift-message>
+                    </div>
+                  </div>
                 </div>
               </div>
+
+              <button class="{ loading: loading || checkedOut }" type="submit">Confirm Pre-order</button>
+              <div class="error" if="{ errorMessage }">
+                { errorMessage }
+              </div>
+              <br>
+              <p>By placing this pre-order, you agree to LuDela's <a href="/legal"
+                  target="_blank">terms of service</a>.  Payments will be processed
+                immediately.
             </checkout>
           </div>
-          <div class="checkout-bottom-buffer"></div>
         </div>
         <div class="thankyou">
           <p>Thank you for making the world a little brighter! You will receive a confirmation email soon.</p>

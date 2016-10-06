@@ -9,6 +9,23 @@
   overflow-y: scroll;
   font-size: 1rem;
 }
+.checkout-container .parts {
+  display: table;
+  width: 220%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-transition: -webkit-transform 1s ease-in;
+  transition: -webkit-transform 1s ease-in;
+  transition: transform 1s ease-in;
+  transition: transform 1s ease-in, -webkit-transform 1s ease-in;
+}
+.checkout-container .parts .part {
+  width: 45.45%;
+  margin-right: 4.55%;
+  float: left;
+}
 .checkout-container input,
 .checkout-container select,
 .checkout-container button,
@@ -30,6 +47,14 @@
 .checkout-container textarea,
 .checkout-container .selectize-input {
   border: 2px solid #c9c9c9;
+}
+.checkout-container input:focus,
+.checkout-container select:focus,
+.checkout-container button:focus,
+.checkout-container select > input[type="button"]:focus,
+.checkout-container textarea:focus,
+.checkout-container .selectize-input:focus {
+  outline-width: 0;
 }
 .checkout-container a {
   color: #ed8d48;
@@ -93,6 +118,13 @@
 }
 .is-open .checkout-container {
   top: 0;
+}
+checkout {
+  overflow: hidden;
+}
+checkout .step-2 {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 cart {
   padding-bottom: 40px;
@@ -384,7 +416,7 @@ terms label,
 gift-toggle label {
   padding-top: 2px;
   font-size: 16px !important;
-  line-height: 1rem;
+  line-height: 1.2rem;
   display: inline-block;
   color: #9ba0a4;
 }
