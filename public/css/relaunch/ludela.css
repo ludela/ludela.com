@@ -559,6 +559,11 @@ footer .menu__social {
   margin: 0 10px 80px 10px !important;
 }
 
+.selectize-dropdown, .selectize-dropdown.form-control {
+  z-index: 10000;
+  font-size: 16px;
+}
+
 
 @media all and (max-width: 800px) {
   .list.full {
