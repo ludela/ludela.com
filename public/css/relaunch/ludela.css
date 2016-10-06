@@ -303,7 +303,6 @@ h3 {
 .life2 {
   background-image: url(/images/life2.jpg);
   background-size: contain;
-  background-position: 0% 50% !important;
 }
 
 .smart .image {
