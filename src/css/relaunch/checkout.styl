@@ -57,6 +57,9 @@
     font-family: proxima-nova
     text-shadow: none
 
+    .invoice-amount
+      display: none
+
   .checkout
     border-radius: 3px
     position: absolute
@@ -614,6 +617,10 @@ button[type=submit]
       border-right: 2px solid #9ba0a4
 
   #cart-collapsed[type="checkbox"]:checked + cart
+    h1
+      .invoice-amount
+        display: inline-block !important
+
     .expand-summary
       transform: rotate(45deg)
       top: 10px

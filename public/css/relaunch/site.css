@@ -66,6 +66,9 @@
   font-family: proxima-nova;
   text-shadow: none;
 }
+.checkout-container h1 .invoice-amount {
+  display: none;
+}
 .checkout-container .checkout {
   border-radius: 3px;
   position: absolute;
@@ -660,6 +663,9 @@ button[type=submit] {
     height: 12px;
     border-bottom: 2px solid #9ba0a4;
     border-right: 2px solid #9ba0a4;
+  }
+  #cart-collapsed[type="checkbox"]:checked + cart h1 .invoice-amount {
+    display: inline-block !important;
   }
   #cart-collapsed[type="checkbox"]:checked + cart .expand-summary {
     -webkit-transform: rotate(45deg);
