@@ -7,23 +7,6 @@ export default function ($)  {
     var prevStep = 1;
     var story = 1;
     var scroll = true;
-<<<<<<< HEAD
-    var steps = [
-      'A-Seed-Was-Planted',
-      'Better-Light',
-      'The-Team',
-      'Our-Story-1',
-      'Our-Story-2',
-      'Our-Story-3',
-      'Our-Story-4',
-      'Our-Story-5',
-      'Our-Story-6',
-      'Our-Story-7',
-      'Our-Story-8',
-      'Our-Story-9'
-      // , 'Join-Us'
-    ]
-=======
     var steps;
 
     var listSteps = function () {
@@ -57,7 +40,6 @@ export default function ($)  {
 
     listSteps();
     $(window).on('load resize', listSteps)
->>>>>>> Mark
 
 
 
