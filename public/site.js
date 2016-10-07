@@ -10127,8 +10127,7 @@ function panels ($) {
     'Our-Story-6',
     'Our-Story-7',
     'Our-Story-8',
-    'Our-Story-9',
-    'Join-Us'
+    'Our-Story-9'
   ];
 
   var currentStep = 1;
@@ -10159,10 +10158,10 @@ function panels ($) {
     }
   });
 
-  $document.on('setfooter', function () {
-    $about.addClass('is-footer');
-    window.location.hash = 'Join-Us'
-  });
+  // $document.on('setfooter', function () {
+  //   $about.addClass('is-footer');
+  //   window.location.hash = 'Join-Us'
+  // });
 
   $document.on('setabout', function (ev, index) {
     $('.scroll-container').addClass('scroll-stop');
@@ -10193,30 +10192,38 @@ function panels ($) {
   });
 
   $document.on('setstory', function (ev, index, prev) {
-    $('.scroll-container').addClass('scroll-stop');
 
-    var story = 9;
-    if (index <=9 && $(window).width() > 680) {
-      story = index;
-      $('.story-'+index+1+', .story-'+index+', .story-'+index-1).animate({scrollTop: 0}, 750);
-      $about.removeClass('is-footer');
-    } else {
-      $about.addClass('is-footer');
-    }
+		if( $(window).width() > 680 ) {
 
-    $about
-      .removeClass('is-story-' + currentStory)
-      .addClass('is-story-' + (currentStory = story));
+	    $('.scroll-container').addClass('scroll-stop');
 
-    setTimeout( function(){
-      $('.scroll').removeClass('scroll');
-      $('.story-'+story).addClass('scroll');
-      $('.scroll-container').removeClass('scroll-stop');}, 1000)
+	    var story = 9;
+	    if (index <=9 && $(window).width() > 680) {
+	      story = index;
+	      $('.story-'+index+1+', .story-'+index+', .story-'+index-1).animate({scrollTop: 0}, 750);
+	      $about.removeClass('is-footer');
+	    } else {
+				story = 1;
+	    }
 
-    var Hash = '#'+steps[story + 2];
-    if (window.location.hash !== Hash) {
-      window.location.hash = Hash;
-    }
+	    $about
+	      .removeClass('is-story-' + currentStory)
+	      .addClass('is-story-' + (currentStory = story));
+
+	    setTimeout( function(){
+	      $('.scroll').removeClass('scroll');
+	      $('.story-'+story).addClass('scroll');
+	      $('.scroll-container').removeClass('scroll-stop');}, 1000)
+
+	    var Hash = '#'+steps[story + 2];
+	    if (window.location.hash !== Hash) {
+	      window.location.hash = Hash;
+	    }
+		} else {
+			$about
+	      .removeClass('is-story-' + currentStory)
+	      .addClass('is-story-1');
+		}
   });
 }
 
@@ -10380,21 +10387,39 @@ function about ($)  {
     var prevStep = 1;
     var story = 1;
     var scroll = true;
-    var steps = [
-      'A-Seed-Was-Planted',
-      'Better-Light',
-      'The-Team',
-      'Our-Story-1',
-      'Our-Story-2',
-      'Our-Story-3',
-      'Our-Story-4',
-      'Our-Story-5',
-      'Our-Story-6',
-      'Our-Story-7',
-      'Our-Story-8',
-      'Our-Story-9',
-      'Join-Us'
-    ]
+		var steps;
+
+		var listSteps = function () {
+			if ($(window).width()>680) {
+				steps = [
+					'A-Seed-Was-Planted',
+					'Better-Light',
+					'The-Team',
+					'Our-Story-1',
+					'Our-Story-2',
+					'Our-Story-3',
+					'Our-Story-4',
+					'Our-Story-5',
+					'Our-Story-6',
+					'Our-Story-7',
+					'Our-Story-8',
+					'Our-Story-9'
+				]
+			} else {
+				steps = [
+					'A-Seed-Was-Planted',
+					'Better-Light',
+					'The-Team',
+					'Our-Story-1'
+				]
+				if (window.location.hash.indexOf("Our") >= 0) {
+					window.location.hash = 'Our-Story-1'
+				}
+			}
+		}
+
+    listSteps();
+    $(window).on('load resize', listSteps)
 
 
 
@@ -10424,8 +10449,8 @@ function about ($)  {
         setTimeout(setScroll, 1000);
       }
 
-      if (step == 13) {
-        $(document).trigger('setfooter');
+			if (step > 4 && $(window).width()<=680) {
+        step = 4;
       } else if (step >= 4) {
         story = step - 3;
         step = 4;
@@ -10451,8 +10476,8 @@ function about ($)  {
       step = steps.indexOf(hash.substring(1, hash.length))+1;
       var prevStep = step;
 
-      if (step == 13) {
-        $(document).trigger('setfooter');
+			if (step > 4 && $(window).width()<=680) {
+        step = 4;
       } else if (step >= 4) {
         story = step - 3;
         step = 4;
