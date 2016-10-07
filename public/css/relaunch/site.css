@@ -1020,6 +1020,7 @@ button[type=submit] {
   display: inline-block;
   float: left;
   padding: 10px;
+  background-color: #000;
 }
 .logos > div > div {
   width: 100%;
@@ -1028,35 +1029,30 @@ button[type=submit] {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #000;
 }
 @media screen and (max-width: 600px) {
   .logos > div {
     width: calc(100% / 3);
   }
 }
-.logos.black {
-  background-color: #000;
-}
 .logos .apartmenttherapy {
   background-image: url("/images/logos/apartmenttherapy.png");
 }
 .logos .chickchip {
   background-image: url("/images/logos/chipchick.png");
-  background-color: #000;
 }
 .logos .cnet {
   background-image: url("/images/logos/cnet.png");
 }
 .logos .digitaltrends {
   background-image: url("/images/logos/digitaltrends.png");
-  background-color: #000;
 }
 .logos .deccanchronicle {
   background-image: url("/images/logos/deccanchronicle.png");
 }
 .logos .engadget {
   background-image: url("/images/logos/engadget.png");
-  background-color: #000;
 }
 .logos .gizmodo {
   background-image: url("/images/logos/gizmodo.png");
@@ -1064,26 +1060,25 @@ button[type=submit] {
 .logos .homecrux {
   background-image: url("/images/logos/homecrux.png");
 }
+.logos .producthunt {
+  background-image: url("/images/logos/producthunt.png");
+}
 .logos .popularmechanics {
   background-image: url("/images/logos/popularmechanics.png");
-  background-color: #000;
 }
 .logos .techcrunch {
   background-image: url("/images/logos/techcrunch.png");
-  background-color: #000;
 }
 .logos .technews {
   background-image: url("/images/logos/technews.png");
 }
 .logos .theverge {
   background-image: url("/images/logos/theverge.png");
-  background-color: #000;
 }
 .logos .theeconomictimes {
   background-image: url("/images/logos/theeconomictimes.png");
 }
 .logos .thrillist {
   background-image: url("/images/logos/thrillist.png");
-  background-color: #000;
 }
 /*# sourceMappingURL=site.css.map */

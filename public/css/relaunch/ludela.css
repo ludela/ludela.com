@@ -95,6 +95,8 @@ h3 {
   min-height: 400px;
   z-index: 51;
   padding-bottom: 0;
+  display: block;
+  overflow: hidden;
 }
 
 .hero .content {
