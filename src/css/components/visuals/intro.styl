@@ -89,12 +89,9 @@ $phone_height = 390
   / .splash.is-step-2 &
     opacity 0
     transition-delay 500ms
-    // transform translate3d(0, 25%, 0)
-    // background-image url('/images/Candle_Outro.gif')
 
   / .splash.is-step-3 &
     opacity 1
-    // transition opacity 500ms ease
     transition-property opacity, transform
     transition-delay 500ms, 500ms
     transform translate3d(0, -27%, 0)
@@ -104,9 +101,6 @@ $phone_height = 390
   / .splash.is-step-6 &
     opacity 0
     z-index 0
-    // transition-delay 500ms
-
-  //   transform translate3d(0, -100vh, 0)
 
 &__phone
   position absolute
@@ -237,7 +231,7 @@ $phone_height = 390
   / .splash.is-step-2 &
   / .splash.is-step-3 &
     opacity 1
-    left 10%
+    left 12%
     // left ((1000 - ($candle_width * 2.2)) / 1000) * 100%
     transform translate3d(0, -15%, 0)
 
@@ -522,21 +516,29 @@ $phone_height = 390
       / .splash.is-step-3 &
         transform translate3d(0, -45%, 0)
 
+@media all and (min-width 400px) and (max-height 420px)
+  .visuals
+    &__flame
+
+      / .splash.is-step-1 &
+      / .splash.is-step-3 &
+        transform translate3d(0, -10%, 0)
+
 @media all and (min-width 600px) and (min-height 600px)
   .visuals
     &__flame
 
       / .splash.is-step-1 &
       / .splash.is-step-3 &
-        transform translate3d(0, -25%, 0)
+        transform translate3d(0, -66%, 0)
 
-@media all and (min-width 800px) and (min-height 700px)
+@media all and (min-width 800px) and (min-height 690px)
   .visuals
     &__flame
 
       / .splash.is-step-1 &
       / .splash.is-step-3 &
-        transform translate3d(0, 0%, 0)
+        transform translate3d(0, -30%, 0)
 
 @media all and (min-width 800px) and (min-height 850px)
   .visuals

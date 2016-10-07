@@ -1,12 +1,15 @@
+header
+  .logo
+    position absolute
+    max-height 40px
+
 {component(header-bar)}
-  position fixed
   text-align center
-  z-index 700
   width 100%
-  top 0
-  left 0
-  padding 24px 40px
   transition left 350ms ease-out
+
+  .call-to-action.button
+    line-height 21px
 
   .logo
     display inline-block
@@ -46,13 +49,6 @@
       color rgb(241, 234, 208)
 
   #hamburger, #hamburger-foot
-    width 35px
-    height 30px
-    position absolute
-    left 40px
-    top 50%
-    margin 0 auto
-    margin-top -15px
     -webkit-transform rotate(0deg)
     -moz-transform rotate(0deg)
     -o-transform rotate(0deg)
@@ -106,7 +102,6 @@
 
 @media screen and (max-width: 980px)
   {component(header-bar)}
-    padding 10px
 
     #hamburger, #hamburger-foot
       width 35px

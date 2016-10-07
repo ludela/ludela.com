@@ -40,14 +40,14 @@ jQuery(function ($) {
     }, 250);
   });
 
-  $('body').on('click tap', '#hamburger, #hamburger-foot', function () {
-    $('#menu, #hamburger-foot, #hamburger, .wrapper').toggleClass('is-open');
-    $('#about, #general, .fixed').toggleClass('nav-open');
-  });
-  $('body').on('click tap touchend', '.nav-open, #menu, .menu__close', function () {
-    $('.is-open').removeClass('is-open');
-    $('.nav-open').removeClass('nav-open');
-  });
+  // $('body').on('click tap', '#hamburger, #hamburger-foot', function () {
+  //   $('#menu, #hamburger-foot, #hamburger, .wrapper').toggleClass('is-open');
+  //   $('#about, #general, .fixed').toggleClass('nav-open');
+  // });
+  // $('body').on('click tap touchend', '.nav-open, #menu, .menu__close', function () {
+  //   $('.is-open').removeClass('is-open');
+  //   $('.nav-open').removeClass('nav-open');
+  // });
 
   $dot.on('mousedown touchstart', function (ev, goTo) {
     $.scrollify.move(parseInt($(this).data("goto"), 10));
@@ -68,11 +68,11 @@ jQuery(function ($) {
 
   var imageRatio = 229/368
   var updateAppSlider = function(){
-    var $phone = $('.visuals__phone')
+    var $phone = $('.visuals__phone');
 
-    var width = $phone.width()
-    var height = $phone.height()
-    var screenRatio = width / height
+    var width = $phone.width();
+    var height = $phone.height();
+    var screenRatio = (width / height);
 
     if (screenRatio > imageRatio) {
       $('.app-slider').width(height * imageRatio)
