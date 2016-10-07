@@ -10127,8 +10127,8 @@ function panels ($) {
     'Our-Story-6',
     'Our-Story-7',
     'Our-Story-8',
-    'Our-Story-9',
-    'Join-Us'
+    'Our-Story-9'
+		// , 'Join-Us'
   ];
 
   var currentStep = 1;
@@ -10160,8 +10160,9 @@ function panels ($) {
   });
 
   $document.on('setfooter', function () {
-    $about.addClass('is-footer');
-    window.location.hash = 'Join-Us'
+		// set footer here
+    // $about.addClass('is-footer');
+    // window.location.hash = 'Join-Us'
   });
 
   $document.on('setabout', function (ev, index) {
@@ -10392,8 +10393,8 @@ function about ($)  {
       'Our-Story-6',
       'Our-Story-7',
       'Our-Story-8',
-      'Our-Story-9',
-      'Join-Us'
+      'Our-Story-9'
+			// , 'Join-Us'
     ]
 
 

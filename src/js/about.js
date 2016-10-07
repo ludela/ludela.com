@@ -19,8 +19,8 @@ export default function ($)  {
       'Our-Story-6',
       'Our-Story-7',
       'Our-Story-8',
-      'Our-Story-9',
-      'Join-Us'
+      'Our-Story-9'
+      // , 'Join-Us'
     ]
 
 
