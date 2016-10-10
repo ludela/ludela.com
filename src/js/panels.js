@@ -36,6 +36,9 @@ export default function ($) {
 
   if ($about.length) {
     $('html, body').css('overflow', 'initial');
+		if( $(window).width() <= 680 ) {
+      $('#dots').hide();
+    }
   }
 
   $document.on('setpanel', function (ev, index) {
@@ -63,27 +66,29 @@ export default function ($) {
   });
 
   $document.on('setabout', function (ev, index) {
-    $('.scroll-container').addClass('scroll-stop');
-    $('#step-'+currentStep+', #step-'+index).animate({scrollTop: 0}, 750);
+		if( $(window).width() > 680 ) {
+      $('.scroll-container').addClass('scroll-stop');
+      $('#step-'+currentStep+', #step-'+index).animate({scrollTop: 0}, 750);
 
-    console.log($('#step-'+index).scrollTop());
+      console.log($('#step-'+index).scrollTop());
 
-    $about
-      .removeClass('is-step-' + currentStep)
-      .addClass('is-step-' + (currentStep = index));
+      $about
+        .removeClass('is-step-' + currentStep)
+        .addClass('is-step-' + (currentStep = index));
 
-    $('.active-dot').removeClass('active-dot')
-    $('.dot-'+currentStep).addClass('active-dot');
+      $('.active-dot').removeClass('active-dot')
+      $('.dot-'+currentStep).addClass('active-dot');
 
-    var Hash = '#'+steps[index -1];
-    if (window.location.hash !== Hash) {
-      window.location.hash = Hash;
+      var Hash = '#'+steps[index -1];
+      if (window.location.hash !== Hash) {
+        window.location.hash = Hash;
+      }
+
+      setTimeout( function(){
+        $('.scroll').removeClass('scroll');
+        $('#step-'+currentStep).addClass('scroll');
+        $('.scroll-container').removeClass('scroll-stop');}, 1000)
     }
-
-    setTimeout( function(){
-      $('.scroll').removeClass('scroll');
-      $('#step-'+currentStep).addClass('scroll');
-      $('.scroll-container').removeClass('scroll-stop');}, 1000)
   });
 
   $document.on('nextpanel', function (ev, dir) {

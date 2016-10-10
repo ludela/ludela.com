@@ -495,8 +495,27 @@ $height = 100vh
 
 @media screen and (max-width 680px)
   &#about
+
+
+    .story-background
+      width 100vw
+      height 120vh
+      position: fixed
+      top: 0
+      left 0
+      background -webkit-linear-gradient(#ee9347, #f2bc3d)
+      background -o-linear-gradient(#ee9347, #f2bc3d)
+      background -moz-linear-gradient(#ee9347, #f2bc3d)
+      background linear-gradient(#ee9347, #f2bc3d)
+
     #step-4
-      overflow-y scroll
+      position static
+      height auto
+
+      .our-story
+        h1
+          top: 90px
+
       h1
         margin-top 0
       .story-1, .story-2, .story-3, .story-4, .story-5, .story-6, .story-7, .story-8, .story-9
@@ -559,12 +578,12 @@ $height = 100vh
           h2, p
             font-size 15px
 
-
-
-    &.is-story-1, &.is-story-2, &.is-story-3, &.is-story-4, &.is-story-5, &.is-story-6, &.is-story-7, &.is-story-8, &.is-story-9
+    &.is-step-1, &.is-step-2,&.is-step-3, &.is-step-4, &.is-step-5, &.is-story-1, &.is-story-2, &.is-story-3, &.is-story-4, &.is-story-5, &.is-story-6, &.is-story-7, &.is-story-8, &.is-story-9
       #step-4
+        transform translate3d(0, 0, 0)
+        transition all 750ms ease
         .story-1
-          top 2vh
+          margin-top 20px
 
           h3
             transform translate3d(0, 0, 0)
@@ -708,6 +727,7 @@ $height = 100vh
 
         .story-9
           top $height * 8
+          margin-bottom: 160px
 
           h3
             transform translate3d(0, (0.05 * $height), 0)
