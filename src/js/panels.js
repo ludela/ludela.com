@@ -21,13 +21,11 @@ export default function ($) {
     'Our-Story-7',
     'Our-Story-8',
     'Our-Story-9'
-    // , 'Join-Us'
   ];
 
   var currentStep = 1;
   var totalSteps;
   var currentStory = 1;
-
 
   if ($splash.length) {
     totalSteps = $('.splash__content').length;
@@ -36,9 +34,6 @@ export default function ($) {
 
   if ($about.length) {
     $('html, body').css('overflow', 'initial');
-		if( $(window).width() <= 680 ) {
-      $('#dots').hide();
-    }
   }
 
   $document.on('setpanel', function (ev, index) {
@@ -70,8 +65,6 @@ export default function ($) {
       $('.scroll-container').addClass('scroll-stop');
       $('#step-'+currentStep+', #step-'+index).animate({scrollTop: 0}, 750);
 
-      console.log($('#step-'+index).scrollTop());
-
       $about
         .removeClass('is-step-' + currentStep)
         .addClass('is-step-' + (currentStep = index));
@@ -102,12 +95,10 @@ export default function ($) {
 	    $('.scroll-container').addClass('scroll-stop');
 
 	    var story = 9;
-	    if (index <=9 && $(window).width() > 680) {
+	    if (index <=9 ) {
 	      story = index;
 	      $('.story-'+index+1+', .story-'+index+', .story-'+index-1).animate({scrollTop: 0}, 750);
 	      $about.removeClass('is-footer');
-	    } else {
-				story = 1;
 	    }
 
 	    $about
@@ -123,10 +114,6 @@ export default function ($) {
 	    if (window.location.hash !== Hash) {
 	      window.location.hash = Hash;
 	    }
-		} else {
-			$about
-	      .removeClass('is-story-' + currentStory)
-	      .addClass('is-story-1');
 		}
   });
 }

@@ -10142,9 +10142,6 @@ function panels ($) {
 
   if ($about.length) {
     $('html, body').css('overflow', 'initial');
-		if( $(window).width() <= 680 ) {
-      $('#dots').hide();
-    }
   }
 
   $document.on('setpanel', function (ev, index) {
@@ -10343,7 +10340,7 @@ function scroller ($) {
       if ($('.is-open')[0]) {
         ev.preventDefault();
         ev.stopPropagation();
-        return false
+        return false;
       }
       var currentPos = $window.scrollTop();
       var scrollDiff = currentPos - lastScrollPos;
@@ -10382,100 +10379,82 @@ function scroller ($) {
 
 function about ($)  {
   var $container = $('.scroll-container');
+  var step = 1;
+  var prevStep = 1;
+  var story = 1;
+  var scroll = true;
+  var steps;
 
-    var step = 1;
-    var prevStep = 1;
-    var story = 1;
-    var scroll = true;
-		var steps;
+	function debounce(func, wait, immediate){
+	  var timeout, args, context, timestamp, result;
+	  if (null == wait) wait = 100;
 
-		var listSteps = function () {
-			if ($(window).width()>680) {
-				steps = [
-					'A-Seed-Was-Planted',
-					'Better-Light',
-					'The-Team',
-					'Our-Story-1',
-					'Our-Story-2',
-					'Our-Story-3',
-					'Our-Story-4',
-					'Our-Story-5',
-					'Our-Story-6',
-					'Our-Story-7',
-					'Our-Story-8',
-					'Our-Story-9'
-				]
-			} else {
-				steps = [
-					'A-Seed-Was-Planted',
-					'Better-Light',
-					'The-Team',
-					'Our-Story-1'
-				]
-				if (window.location.hash.indexOf("Our") >= 0) {
-					window.location.hash = 'Our-Story-1'
-				}
-			}
-		}
+	  function later() {
+	    var last = Date.now() - timestamp;
 
-    listSteps();
-    $(window).on('load resize', listSteps)
+	    if (last < wait && last > 0) {
+	      timeout = setTimeout(later, wait - last);
+	    } else {
+	      timeout = null;
+	      if (!immediate) {
+	        result = func.apply(context, args);
+	        if (!timeout) context = args = null;
+	      }
+	    }
+	  };
 
+	  return function debounced() {
+	    context = this;
+	    args = arguments;
+	    timestamp = Date.now();
+	    var callNow = immediate && !timeout;
+	    if (!timeout) timeout = setTimeout(later, wait);
+	    if (callNow) {
+	      result = func.apply(context, args);
+	      context = args = null;
+	    }
 
+	    return result;
+	  };
+	};
 
-  if ($container.length && scroll == true) {
-    window.onscroll = index(setStep, 25);
+  var listSteps = function () {
+    if ($(window).width() > 680 && $container.length) {
+      steps = [
+        'A-Seed-Was-Planted',
+        'Better-Light',
+        'The-Team',
+        'Our-Story-1',
+        'Our-Story-2',
+        'Our-Story-3',
+        'Our-Story-4',
+        'Our-Story-5',
+        'Our-Story-6',
+        'Our-Story-7',
+        'Our-Story-8',
+        'Our-Story-9'
+      ];
+
+      $('#dots').show();
+    } else if ($container.length) {
+      $('#dots').hide();
+			window.location.hash = 'A-Seed-Was-Planted'
+    }
+  }
+
+  listSteps();
+  $(window).on('load resize', listSteps);
+	$(window).on('resize', function(){
+		location.reload();			
+	})
+
+  if ($container.length && scroll == true ) {
+    window.onscroll = debounce(setStep, 25);
     window.onload = reload();
   }
 
-    function setStep(){
-			if ($(window).width()>680) {
-
-	      if (window.location.hash == '') {
-	        window.location.hash = steps[0]
-	      }
-
-	      // if (prevStep !== step) {
-	      //   scroll = false;
-	      //   setTimeout(setScroll, 1000);
-	      // }
-
-	      var hash = window.location.hash;
-	      step = steps.indexOf(hash.substring(1, hash.length))+1;
-	      var prevStep = step;
-
-	      if ( $(window).scrollTop() + $(window).height() + 2 > $(document).height() && step <= 14) {
-	        step++;
-	      } else if ( $(window).scrollTop() == 0 && step > 1) {
-	        step--;
-	      }
-
-	      if (prevStep !== step) {
-	        scroll = false;
-					console.log('stop! ', prevStep, step);
-					$(".scroll-container").addClass("stop-scroll");
-	        setTimeout(setScroll, 1000);
-	      }
-
-				if (step > 4 && $(window).width()<=680) {
-	        step = 4;
-	      } else if (step >= 4) {
-	        story = step - 3;
-	        step = 4;
-	      }
-
-	      if (prevStep !== step && story < 2) {
-	        $(document).trigger('setabout', step);
-	        prevStep = step;
-	      }
-
-	      if (step == 4) {
-	        $(document).trigger('setstory', story);
-	      }
-	    }
-		}
-
-    function reload() {
+  function setStep(){
+    if ($(window).width() > 680) {
 
       if (window.location.hash == '') {
         window.location.hash = steps[0]
@@ -10485,9 +10464,46 @@ function about ($)  {
       step = steps.indexOf(hash.substring(1, hash.length))+1;
       var prevStep = step;
 
-			if (step > 4 && $(window).width()<=680) {
+      if ( $(window).scrollTop() + $(window).height() + 2 > $(document).height() && step <= 14) {
+        step++;
+      } else if ( $(window).scrollTop() == 0 && step > 1) {
+        step--;
+      }
+
+      if (prevStep !== step) {
+        scroll = false;
+        setTimeout(setScroll, 1000);
+      }
+
+      if (step >= 4) {
+        story = step - 3;
         step = 4;
-      } else if (step >= 4) {
+      }
+
+      if (prevStep !== step && story < 2) {
+        $(document).trigger('setabout', step);
+        prevStep = step;
+      }
+
+      if (step == 4) {
+        $(document).trigger('setstory', story);
+      }
+    }
+  }
+
+
+  function reload() {
+    if ($(window).width() > 680) {
+
+      if (window.location.hash == '') {
+        window.location.hash = steps[0]
+      }
+
+      var hash = window.location.hash;
+      step = steps.indexOf(hash.substring(1, hash.length))+1;
+      var prevStep = step;
+
+      if (step >= 4) {
         story = step - 3;
         step = 4;
       }
@@ -10501,17 +10517,15 @@ function about ($)  {
         $(document).trigger('setabout', 4);
         $(document).trigger('setstory', story);
       }
-
-    }
-
-    function setScroll() {
-      $(window).scrollTop(100);
-
-			console.log('start! ');
-      scroll = true;
-			$(".scroll-container").removeClass("stop-scroll");
     }
   }
+
+  function setScroll() {
+    $(window).scrollTop(100);
+    scroll = true;
+  }
+}
+
 
 function shell ($) {
 

@@ -10,7 +10,7 @@ export default function ($)  {
     var steps;
 
     var listSteps = function () {
-      if ($(window).width()>680) {
+      if ($(window).width()>680 && $container.length) {
         steps = [
           'A-Seed-Was-Planted',
           'Better-Light',
@@ -25,21 +25,15 @@ export default function ($)  {
           'Our-Story-8',
           'Our-Story-9'
         ]
-      } else {
-        steps = [
-          'A-Seed-Was-Planted',
-          'Better-Light',
-          'The-Team',
-          'Our-Story-1'
-        ]
-        if (window.location.hash.indexOf("Our") >= 0) {
-          window.location.hash = 'Our-Story-1'
-        }
+
+        $('#dots').show();
+      } else if ($container.length) {
+        $('#dots').hide();
       }
     }
 
     listSteps();
-    $(window).on('load resize', listSteps)
+    $(window).on('load resize', listSteps);
 
 
 
@@ -49,69 +43,71 @@ export default function ($)  {
   }
 
     function setStep(){
+      if ($(window).width()>680) {
 
-      if (window.location.hash == '') {
-        window.location.hash = steps[0]
-      }
+        if (window.location.hash == '') {
+          window.location.hash = steps[0]
+        }
 
-      var hash = window.location.hash;
-      step = steps.indexOf(hash.substring(1, hash.length))+1;
-      var prevStep = step;
+        var hash = window.location.hash;
+        step = steps.indexOf(hash.substring(1, hash.length))+1;
+        var prevStep = step;
 
-      if ( $(window).scrollTop() + $(window).height() + 2 > $(document).height() && step <= 14) {
-        step++;
-      } else if ( $(window).scrollTop() == 0 && step > 1) {
-        step--;
-      }
+        if ( $(window).scrollTop() + $(window).height() + 2 > $(document).height() && step <= 14) {
+          step++;
+        } else if ( $(window).scrollTop() == 0 && step > 1) {
+          step--;
+        }
 
-      if (prevStep !== step) {
-        scroll = false;
-        setTimeout(setScroll, 1000);
-      }
+        if (prevStep !== step) {
+          scroll = false;
+          setTimeout(setScroll, 1000);
+        }
 
-      if (step > 4 && $(window).width()<=680) {
-        step = 4;
-      } else if (step >= 4) {
-        story = step - 3;
-        step = 4;
-      }
+        if (step >= 4) {
+          story = step - 3;
+          step = 4;
+        }
 
-      if (prevStep !== step && story < 2) {
-        $(document).trigger('setabout', step);
-        prevStep = step;
-      }
+        if (prevStep !== step && story < 2) {
+          $(document).trigger('setabout', step);
+          prevStep = step;
+        }
 
-      if (step == 4) {
-        $(document).trigger('setstory', story);
+        if (step == 4) {
+          $(document).trigger('setstory', story);
+        }
       }
     }
 
 
     function reload() {
+      if ($(window).width()>680) {
 
-      if (window.location.hash == '') {
-        window.location.hash = steps[0]
-      }
+        if (window.location.hash == '') {
+          window.location.hash = steps[0]
+        }
 
-      var hash = window.location.hash;
-      step = steps.indexOf(hash.substring(1, hash.length))+1;
-      var prevStep = step;
+        var hash = window.location.hash;
+        step = steps.indexOf(hash.substring(1, hash.length))+1;
+        var prevStep = step;
 
-      if (step > 4 && $(window).width()<=680) {
-        step = 4;
-      } else if (step >= 4) {
-        story = step - 3;
-        step = 4;
-      }
+        if (step > 4 && $(window).width()<=680) {
+          step = 4;
+        } else if (step >= 4) {
+          story = step - 3;
+          step = 4;
+        }
 
-      if ( story < 2) {
-        $(document).trigger('setabout', step);
-        prevStep = step;
-      }
+        if ( story < 2) {
+          $(document).trigger('setabout', step);
+          prevStep = step;
+        }
 
-      if (step == 4) {
-        $(document).trigger('setabout', 4);
-        $(document).trigger('setstory', story);
+        if (step == 4) {
+          $(document).trigger('setabout', 4);
+          $(document).trigger('setstory', story);
+        }
       }
 
     }
