@@ -34,6 +34,10 @@ export default function ($) {
     $splash.addClass('is-step-' + currentStep);
   }
 
+  if ($about.length) {
+    $('html, body').css('overflow', 'initial');
+  }
+
   $document.on('setpanel', function (ev, index) {
     if($splash.length) {
       index = Math.max(1, Math.min(totalSteps, index));
@@ -58,10 +62,10 @@ export default function ($) {
     // window.location.hash = ('s' + goTo);
   });
 
-  $document.on('setfooter', function () {
-    $about.addClass('is-footer');
-    window.location.hash = 'Join-Us'
-  });
+  // $document.on('setfooter', function () {
+  //   $about.addClass('is-footer');
+  //   window.location.hash = 'Join-Us'
+  // });
 
   $document.on('setabout', function (ev, index) {
     $('.scroll-container').addClass('scroll-stop');
@@ -92,29 +96,37 @@ export default function ($) {
   });
 
   $document.on('setstory', function (ev, index, prev) {
-    $('.scroll-container').addClass('scroll-stop');
 
-    var story = 9;
-    if (index <=9) {
-      story = index;
-      $('.story-'+index+1+', .story-'+index+', .story-'+index-1).animate({scrollTop: 0}, 750);
-      $about.removeClass('is-footer');
-    } else {
-      $about.addClass('is-footer');
-    }
+		if( $(window).width() > 680 ) {
 
-    $about
-      .removeClass('is-story-' + currentStory)
-      .addClass('is-story-' + (currentStory = story));
+	    $('.scroll-container').addClass('scroll-stop');
 
-    setTimeout( function(){
-      $('.scroll').removeClass('scroll');
-      $('.story-'+story).addClass('scroll');
-      $('.scroll-container').removeClass('scroll-stop');}, 1000)
+	    var story = 9;
+	    if (index <=9 && $(window).width() > 680) {
+	      story = index;
+	      $('.story-'+index+1+', .story-'+index+', .story-'+index-1).animate({scrollTop: 0}, 750);
+	      $about.removeClass('is-footer');
+	    } else {
+				story = 1;
+	    }
 
-    var Hash = '#'+steps[story + 2];
-    if (window.location.hash !== Hash && $(window).width() > 680) {
-      window.location.hash = Hash;
-    }
+	    $about
+	      .removeClass('is-story-' + currentStory)
+	      .addClass('is-story-' + (currentStory = story));
+
+	    setTimeout( function(){
+	      $('.scroll').removeClass('scroll');
+	      $('.story-'+story).addClass('scroll');
+	      $('.scroll-container').removeClass('scroll-stop');}, 1000)
+
+	    var Hash = '#'+steps[story + 2];
+	    if (window.location.hash !== Hash) {
+	      window.location.hash = Hash;
+	    }
+		} else {
+			$about
+	      .removeClass('is-story-' + currentStory)
+	      .addClass('is-story-1');
+		}
   });
 }
