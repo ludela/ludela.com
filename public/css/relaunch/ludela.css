@@ -20,16 +20,6 @@ header, header * {
   transition: left 350ms ease-out;
 }
 
-@media all and (min-width: 601px) {
-  .nav-open header {
-    left: 410px;
-  }
-
-  .nav-open .fixed-visuals {
-    left: 410px;
-  }
-}
-
 .content p {
   line-height: 2rem;
 }
@@ -56,8 +46,18 @@ body {
   top: 0;
 }
 
-#general.nav-open {
-  left: 410px;
+@media all and (min-width: 601px) {
+  .nav-open header {
+    left: 410px;
+  }
+
+  .nav-open .fixed-visuals {
+    left: 410px;
+  }
+
+  #general.nav-open {
+    left: 410px;
+  }
 }
 
 h1 {
