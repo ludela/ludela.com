@@ -24,6 +24,7 @@
     .item
       display: table
       width: 100%
+      position: relative
 
       > *
         float: left
@@ -31,6 +32,12 @@
     .image
       width: 35%
       margin-right: 5%
+      position: relative
+
+      img:nth-child(n+2)
+        position: absolute
+        left: 0
+        top: 0
 
     .title
       width: 60%
@@ -41,6 +48,7 @@
       h4
         margin: 0 20px 0 0
         display: inline-block
+        width: 100%
 
     .picker
       width: 60%
@@ -114,9 +122,49 @@
 
     .call-to-action.button
       border: 0
-      border-radius: 16px
+      border-radius: 22px
       color: #fff
       margin-top: 15px
+
+  .items.scents.scents.scents
+    .item
+      float: left
+      width: 32%
+      margin-right: 2%
+
+      .title
+        h4
+          font-size: 25px
+
+      .picker
+        width: 100%
+
+        > *
+          width: 100%
+          float: left
+
+          &:first-child
+            text-align: center
+            margin-bottom: 10px
+
+      &:nth-child(3n+3)
+        margin-right: 0
+
+      .call-to-action
+        margin-top: 0
+        margin-bottom: 15px
+        width: 100%
+        text-align: center
+
+  @media screen and (max-width: 800px)
+    .items.scents.scents.scents
+      .item
+        float: left
+        width: 48%
+        margin-right: 2%
+
+      &:nth-child(2n+2)
+        margin-right: 0
 
   @media screen and (max-width: 600px)
     .title
@@ -131,3 +179,10 @@
     .call-to-action.button
       width: 100%
       text-align: center
+
+    .items.scents.scents.scents
+      .item
+        float: left
+        width: 100%
+        margin-right: 0
+

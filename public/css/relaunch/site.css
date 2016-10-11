@@ -732,7 +732,7 @@ button[type=submit] {
   -webkit-transition: opacity 500ms ease;
   transition: opacity 500ms ease;
 }
-.modal-close:not(.checkout-button) {
+.modal-close:not(.call-to-action) {
   width: 35px;
   height: 30px;
   position: absolute;
@@ -746,7 +746,7 @@ button[type=submit] {
   transition: 350ms ease-in-out;
   cursor: pointer;
 }
-.modal-close:not(.checkout-button) span {
+.modal-close:not(.call-to-action) span {
   display: block;
   position: absolute;
   height: 4px;
@@ -759,20 +759,20 @@ button[type=submit] {
   -webkit-transition: 150ms ease-in-out;
   transition: 150ms ease-in-out;
 }
-.modal-close:not(.checkout-button) span:nth-child(1) {
+.modal-close:not(.call-to-action) span:nth-child(1) {
   top: 18px;
   width: 0%;
   left: 50%;
 }
-.modal-close:not(.checkout-button) span:nth-child(2) {
+.modal-close:not(.call-to-action) span:nth-child(2) {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-.modal-close:not(.checkout-button) span:nth-child(3) {
+.modal-close:not(.call-to-action) span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-.modal-close:not(.checkout-button) span:nth-child(4) {
+.modal-close:not(.call-to-action) span:nth-child(4) {
   top: 18px;
   width: 0%;
   left: 50%;
@@ -808,6 +808,7 @@ button[type=submit] {
 .store .items .item {
   display: table;
   width: 100%;
+  position: relative;
 }
 .store .items .item > * {
   float: left;
@@ -815,6 +816,12 @@ button[type=submit] {
 .store .items .image {
   width: 35%;
   margin-right: 5%;
+  position: relative;
+}
+.store .items .image img:nth-child(n+2) {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .store .items .title {
   width: 60%;
@@ -825,6 +832,7 @@ button[type=submit] {
 .store .items .title h4 {
   margin: 0 20px 0 0;
   display: inline-block;
+  width: 100%;
 }
 .store .items .picker {
   width: 60%;
@@ -898,9 +906,47 @@ button[type=submit] {
 }
 .store .items .call-to-action.button {
   border: 0;
-  border-radius: 16px;
+  border-radius: 22px;
   color: #fff;
   margin-top: 15px;
+}
+.store .items.scents.scents.scents .item {
+  float: left;
+  width: 32%;
+  margin-right: 2%;
+}
+.store .items.scents.scents.scents .item .title h4 {
+  font-size: 25px;
+}
+.store .items.scents.scents.scents .item .picker {
+  width: 100%;
+}
+.store .items.scents.scents.scents .item .picker > * {
+  width: 100%;
+  float: left;
+}
+.store .items.scents.scents.scents .item .picker > *:first-child {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.store .items.scents.scents.scents .item:nth-child(3n+3) {
+  margin-right: 0;
+}
+.store .items.scents.scents.scents .item .call-to-action {
+  margin-top: 0;
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  .store .items.scents.scents.scents .item {
+    float: left;
+    width: 48%;
+    margin-right: 2%;
+  }
+  .store .items.scents.scents.scents:nth-child(2n+2) {
+    margin-right: 0;
+  }
 }
 @media screen and (max-width: 600px) {
   .store .title {
@@ -916,6 +962,11 @@ button[type=submit] {
   .store .call-to-action.button {
     width: 100%;
     text-align: center;
+  }
+  .store .items.scents.scents.scents .item {
+    float: left;
+    width: 100%;
+    margin-right: 0;
   }
 }
 #hamburger {

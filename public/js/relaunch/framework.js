@@ -52,19 +52,19 @@ $(window).load(function(){
     return false;
   })
 
-  $('.button.call-to-action').on('click', function(e){
-    var $nextSection = $('#call-to-action');
+  // $('.button.call-to-action').on('click', function(e){
+  //   var $nextSection = $('#call-to-action');
 
-    if ($nextSection.length !== 0) {
-      var offset = ($(window).height() - $nextSection.height()) /2;
+  //   if ($nextSection.length !== 0) {
+  //     var offset = ($(window).height() - $nextSection.height()) /2;
 
-      $("html, body").animate({ scrollTop: $nextSection.offset().top - offset }, 1000);
-    }
+  //     $("html, body").animate({ scrollTop: $nextSection.offset().top - offset }, 1000);
+  //   }
 
-    e.preventDefault();
-    e.stopPropagation();
-    return false;
-  })
+  //   e.preventDefault();
+  //   e.stopPropagation();
+  //   return false;
+  // })
 
   $('.loader').fadeTo(1000, 0, function() {
     $(this).hide();
