@@ -13,7 +13,6 @@ jQuery(function ($) {
   panels($);
   scrollify($);
   // scroller($);
-  about($);
   shell($);
   video($);
   framework($);
