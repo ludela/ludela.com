@@ -16,15 +16,22 @@
   position: relative;
   top: 0;
   left: 0;
-  -webkit-transition: -webkit-transform 1s ease-in;
-  transition: -webkit-transform 1s ease-in;
-  transition: transform 1s ease-in;
-  transition: transform 1s ease-in, -webkit-transform 1s ease-in;
+  -webkit-transition: height 200ms ease-in, -webkit-transform 200ms ease-in;
+  transition: height 200ms ease-in, -webkit-transform 200ms ease-in;
+  transition: transform 200ms ease-in, height 200ms ease-in;
+  transition: transform 200ms ease-in, height 200ms ease-in, -webkit-transform 200ms ease-in;
 }
 .checkout-container .parts .part {
   width: 45.45%;
   margin-right: 4.55%;
   float: left;
+  overflow: hidden;
+}
+.checkout-container .parts .part:last-child {
+  height: 1px;
+}
+.checkout-container .parts .part:last-child > * {
+  display: none;
 }
 .checkout-container input,
 .checkout-container select,
@@ -137,6 +144,18 @@ checkout button[type=submit] span:last-child {
 checkout.step-2 .parts {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+checkout.step-2 .parts .part:first-child {
+  height: 1px;
+}
+checkout.step-2 .parts .part:first-child > * {
+  display: none;
+}
+checkout.step-2 .parts .part:last-child {
+  height: initial;
+}
+checkout.step-2 .parts .part:last-child > * {
+  display: block;
 }
 checkout.step-2 button[type=submit] span:first-child {
   display: none;

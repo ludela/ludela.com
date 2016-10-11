@@ -339,6 +339,28 @@ h3 {
   background-position: 10% 0% !important;
 }
 
+.romance {
+  background-image: url(/images/romance1.jpg);
+  background-size: cover;
+  background-position: 90% 0% !important;
+  color: #fff;
+}
+
+.romance .content {
+  margin-top: 50vh;
+  transform: translateY(-50%);
+  max-width: 600px;
+  background-color: rgba(0,0,0,0.5);
+  padding: 20px 40px;
+  text-align: center;
+}
+
+.life5 {
+  background-image: url(/images/life5.jpg);
+  background-size: cover;
+  background-position: 20% 0% !important;
+}
+
 .customize {
   background-image: url(/images/customize1.png);
   background-size: contain !important;
@@ -358,18 +380,173 @@ h3 {
   text-align: center;
 }
 
-.life5 {
-  background-image: url(/images/life5.jpg);
+.life6 {
+  background-image: url(/images/life6.jpg);
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: 50% 50% !important;
 }
 
 .scent * {
   text-align: center;
 }
 
-.life6 {
-  background-image: url(/images/life6.jpg);
+.scent-explorer {
+  height: 125vw !important;
+}
+
+.scent-explorer .item {
+  width: 50vw;
+  height: 25vw;
+  clip: rect(0px, 50vw, 25vw, 0px);
+  color: #FFF;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  display: block;
+  overflow: hidden;
+}
+
+.scent-explorer small {
+  color: #33cc33;
+  font-size: .8em;
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  padding: 10px;
+  background-color: rgba(0,0,0,0.6);
+  font-size: 1vw;
+}
+
+.scent-explorer .content {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+.scent-explorer .emphasis {
+  color: #33cc33;
+}
+
+.scent-explorer .content {
+  margin: 0;
+}
+
+.scent-explorer h3 {
+  text-transform: uppercase;
+  font-size: 3vw;
+}
+
+.scent-explorer p {
+  font-size: 2vw;
+  line-height: 2.5vw;
+}
+
+.hover-more:hover:before {
+  background-color: rgba(0,0,0,0.6);
+}
+
+.hover-more:focus:before {
+  background-color: rgba(0,0,0,0.6);
+}
+
+.scent-explorer .item:after {
+  background-position: center;
+  background-size: cover;
+}
+
+@media all and (max-width: 600px) {
+  .scent-explorer {
+    height: 500vw !important;
+  }
+
+  .scent-explorer .item {
+    width: 100vw;
+    height: 50vw;
+    clip: rect(0px, 100vw, 50vw, 0px);
+  }
+
+  .scent-explorer h3 {
+    font-size: 6vw;
+  }
+
+  .scent-explorer p {
+    font-size: 4vw;
+    line-height: 5vw;
+  }
+
+  .scent-explorer small {
+    font-size: 3vw;
+  }
+}
+
+.scent-explorer .scent1:after {
+  background-image: url(/images/products/scent-backgrounds/SC-1-bg.png)
+}
+
+.scent-explorer .scent2:after {
+  background-image: url(/images/products/scent-backgrounds/SC-2-bg.png)
+}
+
+.scent-explorer .scent3:after {
+  background-image: url(/images/products/scent-backgrounds/SC-3-bg.png)
+}
+
+.scent-explorer .scent4:after {
+  background-image: url(/images/products/scent-backgrounds/SC-4-bg.png)
+}
+
+.scent-explorer .scent5:after {
+  background-image: url(/images/products/scent-backgrounds/SC-5-bg.png)
+}
+
+.scent-explorer .scent6:after {
+  background-image: url(/images/products/scent-backgrounds/SC-6-bg.png)
+}
+
+.scent-explorer .scent7:after {
+  background-image: url(/images/products/scent-backgrounds/SC-7-bg.png)
+}
+
+.scent-explorer .scent8:after {
+  background-image: url(/images/products/scent-backgrounds/SC-8-bg.png)
+}
+
+.scent-explorer .scent9:after {
+  background-image: url(/images/products/scent-backgrounds/SC-9-bg.png)
+}
+
+.scent-explorer .scent10:after {
+  background-image: url(/images/products/scent-backgrounds/SC-10-bg.png)
+}
+
+.breath.breath.breath .info,
+.sleep.sleep.sleep .info,
+.breath.breath.breath .image,
+.sleep.sleep.sleep .image {
+  width: 50%;
+}
+
+.breath.breath.breath .info,
+.sleep.sleep.sleep .info {
+  max-width: 600px !important
+}
+
+.breath .image {
+  background-image: url(/images/breath1.jpg);
+  background-size: cover;
+  background-position: 50% 50% !important;
+}
+
+.sleep .image {
+  background-image: url(/images/sleep1.jpg);
+  background-size: cover;
+  background-position: 50% 50% !important;
+}
+
+.life7 {
+  background-image: url(/images/life7.jpg);
   background-size: cover;
   background-position: 50% 50% !important;
 }

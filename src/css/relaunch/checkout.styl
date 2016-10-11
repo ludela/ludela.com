@@ -15,12 +15,19 @@
     position: relative
     top: 0
     left: 0
-    transition: transform 1s ease-in
+    transition: transform 200ms ease-in, height 200ms ease-in
 
     .part
       width: 45.45%
       margin-right: 4.55%
       float: left
+      overflow: hidden
+
+      &:last-child
+        height:1px
+
+        & > *
+          display: none
 
   input,
   select,
@@ -130,6 +137,19 @@ checkout
   &.step-2
     .parts
       transform: translateX(-50%)
+
+      .part
+        &:first-child
+          height: 1px
+
+          & > *
+            display: none
+
+        &:last-child
+          height: initial
+
+          & > *
+            display: block
 
     button[type=submit]
       span:first-child
