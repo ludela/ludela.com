@@ -149,15 +149,6 @@
   #general
     padding: 125px 20px
 
-    &.nav-open
-      left: 0
-
-      {component(header-bar)}
-        left: 0
-
-      {component(footer-bar)}
-        left: 0
-
     h1
       font-size 48px
     h2, p
@@ -270,3 +261,10 @@
   height: 40px
   border-top: 1px solid #FFF
   border-right: 1px solid #FFF
+
+
+
+@media screen and (max-width 480px)
+
+  &.nav-open
+    left 0
