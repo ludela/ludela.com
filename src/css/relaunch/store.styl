@@ -20,8 +20,8 @@
     font-size: 35px
     font-weight: normal
 
-  .items
-    .item
+  section.items
+    & > .content > .item
       display: table
       width: 100%
       position: relative
@@ -198,7 +198,7 @@
       margin-top: 15px
       font-size: 14px
 
-  .items.essentials.essentials.essentials
+  section.items.essentials.essentials.essentials
     .title + .picker
       border-top: 1px solid rgb(222,222,222)
 
@@ -209,8 +209,8 @@
         &.active
           opacity: 1
 
-  .items.scents.scents.scents
-    .item
+  section.items.scents.scents.scents
+    & > .content > .item
       float: left
       width: 30%
       margin-right: 5%
@@ -240,8 +240,8 @@
         text-align: center
 
   @media screen and (max-width: 800px)
-    .items.scents.scents.scents.scents
-      .item
+    section.items.scents.scents.scents.scents
+      & > .content > .item
         float: left
         width: 47%
         margin-right: 6%
@@ -263,8 +263,8 @@
       width: 100%
       text-align: center
 
-    .items.scents.scents.scents
-      .item
+    section.items.scents.scents.scents
+      & > .content > .item
         float: left
         width: 100%
         margin-right: 0
