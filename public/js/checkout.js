@@ -19,7 +19,7 @@ $(function() {
     return false;
   });
 
-  $('.checkout-modal.modal').find('.modal-close, .continue-shopping').on('click', function(e){
+  $('.checkout-modal.modal').find('.modal-close').on('click', function(e){
     var $modal = $(this).closest('.modal');
     $modal.removeClass('hidden');
     $modal.removeClass('is-open');
@@ -83,6 +83,60 @@ $(function() {
     $('.progress-link').hide()
   }
 
+  var step = 1;
+
+  $('button[type=submit]').on('click', function(){
+    if (step == 2) {
+      return true;
+    }
+
+    var $inputs = $('user-name, user-email, card-number, card-expiry, card-cvc');
+
+    var inputCount = $inputs.length;
+    var i = 0;
+
+    var validateFn = function () {
+      input = $inputs[i]
+      if (input) {
+        var pRef = {};
+        input._tag.input.trigger('validate', pRef);
+        pRef.p.then(function() {
+          i++;
+          if(i == inputCount) {
+            step = 2;
+            Shop.analytics.track('Completed Checkout Step', {step: 1});
+            Shop.analytics.track('Viewed Checkout Step',    {step: 2});
+
+            $('checkout').addClass('step-2');
+          } else {
+            validateFn();
+          }
+        }).catch(function(e){
+          console.log(e);
+        })
+      }
+    }
+
+    validateFn();
+
+    return false;
+  });
+
+  $('.checkout-modal.modal').find('.continue-shopping').on('click', function(e){
+    if (step == 2) {
+      step = 1;
+      $('checkout').removeClass('step-2');
+      return false
+    }
+
+    var $modal = $(this).closest('.modal');
+    $modal.removeClass('hidden');
+    $modal.removeClass('is-open');
+
+    $('#hamburger').removeClass('is-open');
+    return false;
+  })
+
   m.on('change', function(){
     this.data.set('user.passwordConfirm', this.data.get('user.password') || '');
 
@@ -144,9 +198,6 @@ $(function() {
   }
 
   m.on('submit', function(){
-    Shop.analytics.track('Completed Checkout Step', {step: 1})
-    Shop.analytics.track('Viewed Checkout Step',    {step: 2})
-
     $('.loader').show();
     setTimeout(function(){
       $('.loader').fadeTo(500, 0.8);

@@ -8,6 +8,27 @@
   overflow-y: scroll
   font-size: 1rem
 
+  .parts
+    display: table
+    width: 220%
+    height: 100%
+    position: relative
+    top: 0
+    left: 0
+    transition: transform 200ms ease-in, height 200ms ease-in
+
+    .part
+      width: 45.45%
+      margin-right: 4.55%
+      float: left
+      overflow: hidden
+
+      &:last-child
+        height:1px
+
+        & > *
+          display: none
+
   input,
   select,
   button,
@@ -30,6 +51,9 @@
   .selectize-input
     border: 2px solid #c9c9c9
 
+    &:focus
+      outline-width: 0
+
   a
     color: #ed8d48
     text-decoration: underline
@@ -40,11 +64,14 @@
     font-family: proxima-nova
     text-shadow: none
 
+    .invoice-amount
+      display: none
+
   .checkout
     border-radius: 3px
     position: absolute
     padding: 30px
-    margin: 10vh 0
+    margin: 10vh 0 30vh 0
     width: 90%
     display: table
     max-width: 1000px
@@ -94,6 +121,41 @@
 .is-open
   .checkout-container
     top: 0
+
+#cart-collapsed
+  display: none
+
+checkout
+  overflow: hidden
+
+  button[type=submit]
+    span:first-child
+      display: block
+    span:last-child
+      display: none
+
+  &.step-2
+    .parts
+      transform: translateX(-50%)
+
+      .part
+        &:first-child
+          height: 1px
+
+          & > *
+            display: none
+
+        &:last-child
+          height: initial
+
+          & > *
+            display: block
+
+    button[type=submit]
+      span:first-child
+        display: none
+      span:last-child
+        display: block
 
 cart
   padding-bottom: 40px
@@ -378,7 +440,7 @@ gift-toggle
   label
     padding-top: 2px;
     font-size: 16px !important
-    line-height: 1rem;
+    line-height: 1.2rem;
     display: inline-block;
     color: #9ba0a4
 
@@ -549,9 +611,57 @@ button[type=submit]
 
 @media screen and (max-width: 980px)
   cart
-  checkout
-    width: 100%
-    margin-right: 0
+    h1
+      display: inline-block
+
+      label
+        float: left
+        cursor: pointer
+
+      .invoice-amount
+        float: right
+        font-size: 16px
+        color: #525252
+
+    .expand-summary
+      margin-right: 20px
+      transform: rotate(225deg)
+      display: block
+      position: relative
+      top: 15px
+      left: 8px
+      z-index: 2
+      width: 12px
+      height: 12px
+      border-bottom: 2px solid #9ba0a4
+      border-right: 2px solid #9ba0a4
+
+  #cart-collapsed[type="checkbox"]:checked + cart
+    h1
+      .invoice-amount
+        display: inline-block !important
+
+    .expand-summary
+      transform: rotate(45deg)
+      top: 10px
+
+    lineitems
+    .invoice-discount
+    .invoice-line
+      display: block
+      height: 0
+      padding-top: 0
+      padding-bottom: 0
+      margin-top: 0
+      margin-bottom: 0
+      overflow: hidden
+      border: 0
+
+    .special-offer
+      border: 0
+
+    .promo-row
+      padding-bottom: 0
 
 // Generic Modal Effects
 .checkout-modal
@@ -574,7 +684,7 @@ button[type=submit]
     opacity: 1
     transition: opacity 500ms ease
 
-.modal-close:not(.checkout-button)
+.modal-close:not(.call-to-action)
   width 35px
   height 30px
   position absolute
@@ -625,4 +735,3 @@ button[type=submit]
     left: 20px
     top: 50px
     margin-top -15px
-

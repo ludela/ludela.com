@@ -1,0 +1,43 @@
+.hover-more.item:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: transform 1s ease-in-out;
+}
+
+.hover-more.item:before {
+  z-index: 1;
+}
+
+.hover-more.item {
+  z-index: 2;
+}
+
+.hover-more.item:after {
+  z-index: 0;
+}
+
+.hover-more.item:hover:after {
+  transform: scale(1.25, 1.25);
+}
+
+.hover-more.item:focus:after {
+  transform: scale(1.25, 1.25);
+}
+
+.hover-more {
+  overflow: hidden;
+}
+
+.hover-more:before {
+  content: '';
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}

@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="css/relaunch/fonts.css" />
 
     <!-- Our Styles -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/layzr.js/2.0.2/layzr.min.js"></script> -->
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/css/selectize.bootstrap3.min.css">
     <link rel="stylesheet" href="css/relaunch/framework.css" />
 
@@ -28,6 +27,8 @@
     <link rel="stylesheet" href="css/relaunch/loader.css" />
     <link rel="stylesheet" href="css/relaunch/footer.css" />
     <link rel="stylesheet" href="css/relaunch/menu.css" />
+    <link rel="stylesheet" href="css/relaunch/grid.css" />
+    <link rel="stylesheet" href="css/relaunch/hover-more.css" />
 
     <!-- Custom Styling and JS-->
     <!-- <link rel="stylesheet" href="css/relaunch/visuals.css" /> -->
@@ -95,11 +96,15 @@
           </div>
 
           <a href="/">
-            <span class="logo icon icon-ludela-logo"> </span>
+            <img src="/images/textless-logo.png" class="logo">
           </a>
-          <a href="#cta" class="button call-to-action checkout-button">
-            Pre-order Now
+          <a href="/store" class="button call-to-action">
+            Shop Now
           </a>
+          <div class="progress">
+            <span class="bar"></span>
+            <span class="message">Batch1 <span class="percent">53%</span> Reserved</span>
+          </div>
         </nav>
       </header>
 
@@ -124,10 +129,14 @@
             <a class="play button" href="#"></a>
           </div>
         </div>
-        <a class="button summary-down next-section" href="#"></a>
+        <div class="cta-overlay">
+          <a href="/store" class="button call-to-action modal-close">
+            PRE-ORDER NOW
+          </a><span>Get $100 off for a limited time only.</span>
+        </div>
         <div class="modal hidden">
           <iframe width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
-          <a href="#cta" class="button call-to-action modal-close checkout-button">
+          <a href="/store" class="button call-to-action modal-close">
             PRE-ORDER NOW
           </a>
           <div class="modal-close">
@@ -162,6 +171,57 @@
       <!--   </div> -->
       <!-- </div> -->
 
+
+    <section class="logos">
+      <!-- <div> -->
+      <!--   <div class="apartmenttherapy"></div> -->
+      <!-- </div> -->
+      <div>
+        <div class="chickchip"></div>
+      </div>
+      <div>
+        <div class="cnet"></div>
+      </div>
+      <div>
+         <div class="deccanchronicle"></div>
+      </div>
+      <div>
+        <div class="digitaltrends"></div>
+      </div>
+      <div>
+        <div class="engadget"></div>
+      </div>
+      <div>
+        <div class="gizmodo"></div>
+      </div>
+    </section>
+
+    <section class="logos">
+      <div>
+        <div class="producthunt"></div>
+      </div>
+      <div>
+        <div class="popularmechanics"></div>
+      </div>
+      <div>
+        <div class="techcrunch"></div>
+      </div>
+      <div>
+        <div class="theeconomictimes"></div>
+      </div>
+        <!-- <div class="homecrux"></div> -->
+      <!-- <div> -->
+      <!--   <div class="technews"></div> -->
+      <!-- </div> -->
+      <div>
+        <!-- <img src="/images/logos/technews.png"> -->
+        <div class="theverge"></div>
+      </div>
+      <div>
+        <div class="thrillist"></div>
+      </div>
+    </section>
+
       <section class="safe list right full">
         <div class="image">
         </div>
@@ -188,11 +248,12 @@
             </li>
           </ul>
           <p>
+            About 29 candle-related fires occur every day in America.
             LuDela keeps you and your loved ones safe by auto-extinguishing
-            the flame on dangerous tips and falls. LuDela's SmartScan both
-            extinguishes and prohibits ignition of the flame if objects are
-            detected above. Additionally, our child-lock app and safety alerts
-            deliver priceless peace of mind.
+            the flame on dangerous tips and falls.
+            LuDela's SmartScan both extinguishes and prohibits ignition
+            of the flame if objects are detected in the burn zone. Our
+            safety alerts and child-safe app deliver priceless peace of mind.
             <br><br>
             Never worry about the dangers of fire in your home again.
             <br><br><br>
@@ -222,7 +283,9 @@
         <div class="image">
         </div>
         <div class="info">
-          <h2><span class="emphasis">Wi-Fire.</span> Ambiance with just a tap.</h2>
+          <h2>
+            <span class="emphasis">Instant candlelight</span>  with just a tap.
+          </h2>
           <ul>
             <li>
               <span class="icon icon-multizone-lighting"></span>
@@ -245,7 +308,7 @@
           </ul>
           <p>
             Create the perfect mood for any occasion. Adjust the brightness of
-            your LuDela candelight from your smart phone. Individually change
+            all your LuDela candles from your smart phone. Individually change
             the brightness or use Scene Mode to load your favorite presets for
             the occasion.
             <br><br>
@@ -266,8 +329,7 @@
         </div>
         <div class="info">
           <h2>
-            LuDela’s Refillable design <span class="emphasis">saves
-              money</span> after 2 years.
+            <span class="emphasis">Save money</span> with LuDela refills.
           </h2>
           <ul>
             <li>
@@ -290,17 +352,41 @@
             </li>
           </ul>
           <p>
-            LuDela’s revolutionary design delivers the most economical
-            natural candle experience on earth. Our timer features and efficient
-            burn refill design ensure you don’t waste your candle fuel.
+            Enjoying luxurious, beautiful, 100% natural candlelight on a daily
+            basis doesn’t have to cost a small fortune.
+            LuDela’s revolutionary design delivers <span class="emphasis">the most economical
+            natural candle experience on earth.</span> Our timer features and
+            efficient burn refill design ensure you don’t waste your
+            candle fuel.
             <br><br>
-            Never be caught candle-less. LuDela will send you refills right to
-            your door at a fraction of the cost of normal candles.
+            Best of all, the huge savings on a LuDela Refill plans quickly offsets your initial one-time LUDELA investment.
+            <br><br><br>
+            <a href="/store">Check out our latest discounts ></a>
           </p>
         </div>
       </section>
 
       <section class="full life4 parallax">
+      </section>
+
+      <section class="romance full">
+        <div class="content">
+          <h2>
+            Experience that <span class="emphasis">perfect moment.</span>
+          </h2>
+          <p>
+            Today, many people take light for granted - just another modern
+            convience to help us see when its dark.
+            <br><br>
+            We at LuDela, however, believe that light is an intrinsic part
+            of the human experience.  Light not only lets you see, it helps
+            you feel: Whether it is the warmth of a flame or the warmth of the
+            ones you love.
+          </p>
+        </div>
+      </section>
+
+      <section class="full life5 parallax">
       </section>
 
       <section class="customize full list">
@@ -310,9 +396,9 @@
           </h2>
           <ul>
             <li>
-              <span class="icon icon-candle-remaining-meter"></span>
+              <span class="icon icon-scent-option"></span>
               <span>
-                <h4>Refillable wax core</h4>
+                <h4>Scented refills</h4>
               </span>
             </li>
             <li>
@@ -334,26 +420,166 @@
             from Mercury Glass to streamlined Charcoal, you can find a
             delightful look and aroma for every room in your home.
             <br><br><br>
-            <a href="/tech">See all shell options ></a>
-          </p>
-        </div>
-      </section>
-
-      <section class="full life5 parallax">
-      </section>
-
-      <section class="scent">
-        <div class="content">
-          <h2>
-            <span class="emphasis">Scent the mood</span> for any occasion.
-          </h2>
-          <p>
-            We are constantly crafting new scent collections so that your LuDela candle can smell however you wish. Whether you want your home to smell like freshly baked cookies, freshly picked flowers, or like Christmas in July - we’ve got you covered.
+            <a href="/store">See all shell options ></a>
           </p>
         </div>
       </section>
 
       <section class="full life6 parallax">
+      </section>
+
+      <section class="scent">
+        <div class="content">
+          <h2>
+            Scents that <span class="emphasis">soothe</span>.
+          </h2>
+          <p>
+           Science and research have shown that negative emotions can be lifted and moods improved when pleasant fragrances are introduced into the environment. The right scents trigger reactions within the brain, which can relieve stress, enhance clarity, increase energy, create sensual moods and help you fall asleep at night.
+           <!-- Scents as sophisticated as the technology that powers them. -->
+           <!--  Ludela cores come in a variety of aroma profiles. -->
+           <!--  From Vanilla Bliss to Mango Driftwood to White Tea and Ginger, -->
+            <!-- you’re sure to find a scent that delights. -->
+            Our scent
+            collections are constantly changing and expanding, so you
+            can continue to cultivate your home’s fragrance.
+            <br></br>
+            <a href="/store">See the full list here. ></a>
+            <br></br>
+            Explore some of our favorites below!
+          </p>
+        </div>
+      </section>
+
+      <section class="grid scent-explorer">
+        <div class="item hover-more scent1" tabindex="0">
+          <div class="content centered">
+            <h3>Vanilla Bliss<span class="emphasis">*</span></h3>
+            <p>
+              A relaxing blend of sweet, buttery vanilla with hints of coconut and tonka bean.
+            </p>
+            <small>Recommended for Relaxation</small>
+          </div>
+        </div>
+        <div class="item hover-more scent7" tabindex="0">
+          <div class="content centered">
+            <h3>White Tea and Ginger<span class="emphasis">*</span></h3>
+            <p>
+              An intoxicating mixture of white tea notes and pungent, spicy ginger. This exotic mixture is great for every room in the house.
+            </p>
+            <small>Recommended for Relaxation</small>
+          </div>
+        </div>
+        <div class="item hover-more scent3" tabindex="0">
+          <div class="content centered">
+            <h3>Lavender Escape<span class="emphasis">*</span></h3>
+            <p>
+              A calming blend of lavender with vanilla makes this an excellent choice to reduce stress and help you sleep better
+            </p>
+            <small>Recommended for Sleep</small>
+          </div>
+        </div>
+        <div class="item hover-more scent2" tabindex="0">
+          <div class="content centered">
+            <h3>Dew Kissed Petals</h3>
+            <p>
+              A delightful blend of fruity pears and peaches with floral tons of jasmine and waterlily
+            </p>
+          </div>
+        </div>
+        <div class="item hover-more scent4" tabindex="0">
+          <div class="content centered">
+            <h3>Pomegranate Delight</h3>
+            <p>
+              Fresh red currants and pomegranate touched with a splash of orange and finished with a twist of lemon.
+            </p>
+          </div>
+        </div>
+        <div class="item hover-more scent5" tabindex="0">
+          <div class="content centered">
+            <h3>Mango Driftwood</h3>
+            <p>
+              A perfect blend of freshly-sliced mango and oranges combined with woody basenotes of cedarwood and amber
+            </p>
+          </div>
+        </div>
+        <div class="item hover-more scent6" tabindex="0">
+          <div class="content centered">
+            <h3>Turquoise Bay</h3>
+            <p>
+              Enjoy a tropical cocktail of island pineapple and coconut combined with blissful basenotes of cedarwood and vanilla
+            </p>
+          </div>
+        </div>
+        <div class="item hover-more scent8" tabindex="0">
+          <div class="content centered">
+            <h3>Sheer Linen & Orchid</h3>
+            <p>
+              A light, refreshing combination lily and orange flowers with lavender and sheer musks.
+            </p>
+          </div>
+        </div>
+        <div class="item hover-more scent9" tabindex="0">
+          <div class="content centered">
+            <h3>Coastal Waters</h3>
+            <p>
+              Fresh ocean breezes gently blowing over a calm beach. Soft white floral background on a mossy musk base. A fresh coastal fragrance.
+            </p>
+          </div>
+        </div>
+        <div class="item hover-more scent10" tabindex="0">
+          <div class="content centered">
+            <h3>Midnight Showers</h3>
+            <p>
+              A soothing, masculine of bergamot and citrus with delightful hints of sandlewood and oak moss
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="breath full list left">
+        <div class="image">
+        </div>
+        <div class="info">
+          <h2>
+            <span class="emphasis">Breath</span> with confidence.
+          </h2>
+          <p>
+            Paraffin candles have been shown to emit
+            toxic, carcinogenic compounds that can have a negative
+            impact on your health and quality of life. <span class="emphasis">LuDela’s refills are
+            paraffin free, made from high quality 100% natural
+            soy and beeswax.</span>
+            <br><br>
+            Alleviate asthma and allergy related discomfort.
+            <br><br>
+            <a href="https://www.acs.org/content/acs/en/pressroom/newsreleases/2009/august/romantic-candle-lit-dinners-an-unrecognized-source-of-indoor-air-pollution.html">See the science. ></a>
+          </p>
+        </div>
+      </section>
+      <section class="sleep full list right">
+        <div class="image">
+        </div>
+        <div class="info">
+          <h2>
+            <span class="emphasis">Fall asleep</span> to natural light.
+          </h2>
+          <p>
+            Wake up relaxed and energized like you were meant to. 
+            Hundreds of medical studies have linked sleep
+            disorders to increased use of artificial light
+            at night, which disrupts the body’s 24-hour sleep/wake cycle.
+            <br><br>
+            See what the latest research says:
+            <br><br>
+            <a href="https://chriskresser.com/how-artificial-light-is-wrecking-your-sleep-and-what-to-do-about-it"/>Report 1</a>&nbsp;&nbsp;&nbsp;
+            <a href="https://www.ncbi.nlm.nih.gov/pubmed/21552190">Report 2</a>&nbsp;&nbsp;&nbsp;
+            <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3047226/">Report 3</a>&nbsp;&nbsp;&nbsp;
+            <a href="http://www.health.harvard.edu/staying-healthy/blue-light-has-a-dark-side">Report 4</a>&nbsp;&nbsp;&nbsp;
+          </p>
+        </div>
+      </section>
+
+      <section class="full life7 parallax">
       </section>
 
       <section class="hero video mission full" data-src="https://www.youtube.com/embed/l5gTSEb1sC8">
@@ -395,7 +621,7 @@
         <div class="content">
           <h1>Get Yours Now</h1>
           <p>Save $100 when you pre-order for a limited time</p>
-          <a href="#" class="button call-to-action checkout-button">Pre-order Now</a>
+          <a href="/store" class="button call-to-action">Pre-order Now</a>
         </div>
         <div class="image">
           <img src="/images/join-candle.png">
@@ -418,11 +644,16 @@
         <div class="checkout-container">
           <div class="checkout">
             <div class="continue-shopping">
-              <h1><i class="arrow-left"></i>Continue Shopping<i class="shopping-bag"></i></h1>
+              <h1><i class="arrow-left"></i>Back<i class="shopping-bag"></i></h1>
             </div>
+            <input id="cart-collapsed" type="checkbox">
             <cart>
               <h1>
-                Order Summary
+                <label for="cart-collapsed">Order Summary</label>
+                <label for="cart-collapsed" class="expand-summary"></label>
+                <div class="invoice-amount">
+                  { renderCurrency(data.get('order.currency'), data.get('order.total'))}&nbsp;{ data.get('order.currency').toUpperCase() }
+                </div>
               </h1>
 
               <lineitems if="{ !isEmpty() }">
@@ -525,92 +756,104 @@
               </div>
             </cart>
             <checkout>
-              <div class="contact-information">
-                <h1>
-                  Contact Information
-                </h1>
-                <div class="fields">
-                  <user-name class="input" placeholder="Name"></user-name>
-                  <user-email class="input" placeholder="Email"></user-email>
-                </div>
-              </div>
-              <div class="shipping-information">
-                <h1>
-                  Shipping Information
-                </h1>
-                <div class="fields">
-                  <shippingaddress-line1 class="input" placeholder="Address"></shippingaddress-line1>
-                  <shippingaddress-line2 class="input" placeholder="Suite"></shippingaddress-line2>
-                </div>
-                <div class="fields">
-                  <shippingaddress-city class="input" placeholder="City"></shippingaddress-city>
-                  <shippingaddress-postalcode class="input" placeholder="Postal Code"></shippingaddress-postalcode>
-                </div>
-                <div class="fields">
-                  <shippingaddress-state class="input" placeholder="State"></shippingaddress-state>
-                  <shippingaddress-country class="input" placeholder="Country"></shippingaddress-country>
-                </div>
-              </div>
-              <div class="gift-options">
-                <h1>
-                  Gift Options
-                </h1>
-                <div class="fields">
-                  <gift-toggle>
-                    <label for="order.gift">This is a gift.</label>
-                  </gift-toggle>
-                </div>
-                <div class="fields" if="{ data.get('order.gift') }">
-                  <gift-message placeholder="Please enter any special instructions for your gift such as custom greetings.">
-                  </gift-message>
-                </div>
-              </div>
+              <div class="parts">
+                <div class="part">
+                  <div class="contact-information">
+                    <h1>
+                      Contact Information
+                    </h1>
+                    <div class="fields">
+                      <user-name class="input" placeholder="Name"></user-name>
+                      <user-email class="input" placeholder="Email"></user-email>
+                    </div>
+                  </div>
 
-              <div class="payment-information">
-                <h1>
-                  Payment Information <i class="lock"></i>
-                </h1>
+                  <div class="payment-information">
+                    <h1>
+                      Payment Information <i class="lock"></i>
+                    </h1>
 
-                <div class="fields">
-                  <card-number class="input" name="number" placeholder="Card Number"></card-number>
-                  <card-expiry class="input" name="expiry" placeholder="MM / YY"></card-expiry>
-                  <card-cvc class="input" name="cvc" placeholder="CVC"></card-cvc>
-                </div>
+                    <div class="fields">
+                      <card-number class="input" name="number" placeholder="Card Number"></card-number>
+                      <card-expiry class="input" name="expiry" placeholder="MM / YY"></card-expiry>
+                      <card-cvc class="input" name="cvc" placeholder="CVC"></card-cvc>
+                    </div>
 
-                  <!-- <div class="card-types"> -->
-                  <!--   <div> -->
-                  <!--     <img src="/img/card-icons/visa.png"> -->
-                  <!--   </div> -->
-                  <!--   <div> -->
-                  <!--     <img src="/img/card-icons/mastercard.png"> -->
-                  <!--   </div> -->
-                  <!--   <div> -->
-                  <!--     <img src="/img/card-icons/discover.png"> -->
-                  <!--   </div> -->
-                  <!--   <div> -->
-                  <!--     <img src="/img/card-icons/amex.png"> -->
-                  <!--   </div> -->
+                      <!-- <div class="card-types"> -->
+                      <!--   <div> -->
+                      <!--     <img src="/img/card-icons/visa.png"> -->
+                      <!--   </div> -->
+                      <!--   <div> -->
+                      <!--     <img src="/img/card-icons/mastercard.png"> -->
+                      <!--   </div> -->
+                      <!--   <div> -->
+                      <!--     <img src="/img/card-icons/discover.png"> -->
+                      <!--   </div> -->
+                      <!--   <div> -->
+                      <!--     <img src="/img/card-icons/amex.png"> -->
+                      <!--   </div> -->
+                      <!-- </div> -->
+
+                    <a href="//www.stripe.com" target="_blank"><img class="stripe-logo" src="/images/stripelogo.png"></a>
+                  </div>
+
+
+                  <!-- <div class="confirmation"> -->
+                  <!--   <h1> -->
+                  <!--     Almost Done -->
+                  <!--   </h1> -->
+
+                  <!--   <terms> -->
+                  <!--     <label for="terms">I agree to LuDela's <a href="/legal" target="_blank">terms of service</a>.</label> -->
+                  <!--   </terms> -->
                   <!-- </div> -->
-
-                <a href="//www.stripe.com" target="_blank"><img class="stripe-logo" src="/images/stripelogo.png"></a>
-              </div>
-
-              <div class="confirmation">
-                <h1>
-                  Almost Done
-                </h1>
-
-                <terms>
-                  <label for="terms">I agree to LuDela's <a href="/legal" target="_blank">terms of service</a>.</label>
-                </terms>
-                <button class="{ loading: loading || checkedOut }" type="submit">Confirm Pre-order</button>
-                <div class="error" if="{ errorMessage }">
-                  { errorMessage }
+                </div>
+                <div class="part">
+                  <div class="shipping-information">
+                    <h1>
+                      Shipping Information
+                    </h1>
+                    <div class="fields">
+                      <shippingaddress-line1 class="input" placeholder="Address"></shippingaddress-line1>
+                      <shippingaddress-line2 class="input" placeholder="Suite"></shippingaddress-line2>
+                    </div>
+                    <div class="fields">
+                      <shippingaddress-city class="input" placeholder="City"></shippingaddress-city>
+                      <shippingaddress-postalcode class="input" placeholder="Postal Code"></shippingaddress-postalcode>
+                    </div>
+                    <div class="fields">
+                      <shippingaddress-state class="input" placeholder="State"></shippingaddress-state>
+                      <shippingaddress-country class="input" placeholder="Country"></shippingaddress-country>
+                    </div>
+                  </div>
+                  <div class="gift-options">
+                    <h1>
+                      Gift Options
+                    </h1>
+                    <div class="fields">
+                      <gift-toggle>
+                        <label for="order.gift">This is a gift.</label>
+                      </gift-toggle>
+                    </div>
+                    <div class="fields" if="{ data.get('order.gift') }">
+                      <gift-message placeholder="Please enter any special instructions for your gift such as custom greetings.">
+                      </gift-message>
+                    </div>
+                  </div>
                 </div>
               </div>
+
+              <button class="{ loading: loading || checkedOut }"
+                type="submit"><span>Pre-order</span><span>Complete Checkout</span></button>
+              <div class="error" if="{ errorMessage }">
+                { errorMessage }
+              </div>
+              <br>
+              <p>By placing this pre-order, you agree to LuDela's <a href="/legal"
+                  target="_blank">terms of service</a>.  Payments will be processed
+                immediately.
             </checkout>
           </div>
-          <div class="checkout-bottom-buffer"></div>
         </div>
         <div class="thankyou">
           <p>Thank you for making the world a little brighter! You will receive a confirmation email soon.</p>
@@ -713,11 +956,15 @@
     </div>
 
     <!-- JS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/layzr.js/2.0.2/layzr.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.1/es6-shim.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="js/relaunch/framework.js"></script>
     <script src="js/relaunch/hero-video.js"></script>
     <script src="js/relaunch/gallery.js"></script>
+    <script src="js/relaunch/grid.js"></script>
+    <script src="https://npmcdn.com/packery@2.1/dist/packery.pkgd.min.js"></script>
+
     <!-- <script src="js/relaunch/slidify.js"></script> -->
     <script src="/js/shop.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.min.js"></script>

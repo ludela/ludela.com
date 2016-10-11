@@ -1,0 +1,57 @@
+.progress
+  float: right
+
+  .bar
+    width: 20vw
+    height: 16px
+    display: block
+    position: relative
+    background-color: rgba(172, 161, 128, .4)
+
+    margin-top: 12px
+    margin-right: 20px
+
+    &:before
+      content: ''
+      display: block
+      background-color: #EAC241
+      height: 100%
+      width: 0%
+      transition: width 1.6s ease-out
+
+  .message
+    text-transform: uppercase
+    font-size: 16px
+
+  .percent
+    font-size: 17px
+    font-weight: bold
+
+.progress.active .bar:before
+  width: 53%
+
+@media all and (max-width: 800px)
+  .progress
+    width: 100%
+    margin-bottom: 12px
+    .bar
+      width: 90%
+      margin-left: auto
+      margin-right: auto
+      margin-top: 0
+
+@media all and (max-width: 600px)
+  .progress
+    width: 100%
+    margin-bottom: 6px
+    .bar
+      width: 95%
+      height: 4px
+
+    .message
+      font-size: 10px
+
+    .percent
+      font-size: 11px
+
+
