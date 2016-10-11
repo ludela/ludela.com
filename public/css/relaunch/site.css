@@ -789,8 +789,8 @@ button[type=submit] {
 }
 .store .hero {
   background-image: url("/images/store1.jpg");
-  background-position: 33% 25%;
-  height: 80vh;
+  background-position: 33% 30%;
+  height: 100vh;
 }
 .store .hero h1 {
   line-height: 1em;
@@ -817,6 +817,9 @@ button[type=submit] {
   width: 35%;
   margin-right: 5%;
   position: relative;
+}
+.store .items .image img {
+  border-radius: 5px;
 }
 .store .items .image img:nth-child(n+2) {
   position: absolute;
@@ -906,14 +909,16 @@ button[type=submit] {
 }
 .store .items .call-to-action.button {
   border: 0;
-  border-radius: 22px;
+  border-radius: 20px;
   color: #fff;
   margin-top: 15px;
+  font-size: 14px;
 }
 .store .items.scents.scents.scents .item {
   float: left;
-  width: 32%;
-  margin-right: 2%;
+  width: 30%;
+  margin-right: 5%;
+  margin-bottom: 40px;
 }
 .store .items.scents.scents.scents .item .title h4 {
   font-size: 25px;
@@ -939,12 +944,12 @@ button[type=submit] {
   text-align: center;
 }
 @media screen and (max-width: 800px) {
-  .store .items.scents.scents.scents .item {
+  .store .items.scents.scents.scents.scents .item {
     float: left;
-    width: 48%;
-    margin-right: 2%;
+    width: 47%;
+    margin-right: 6%;
   }
-  .store .items.scents.scents.scents:nth-child(2n+2) {
+  .store .items.scents.scents.scents.scents .item:nth-child(2n+2) {
     margin-right: 0;
   }
 }

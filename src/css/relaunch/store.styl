@@ -4,8 +4,8 @@
 
   .hero
     background-image: url(/images/store1.jpg)
-    background-position: 33% 25%
-    height: 80vh
+    background-position: 33% 30%
+    height: 100vh
 
     h1
       line-height: 1em
@@ -34,10 +34,13 @@
       margin-right: 5%
       position: relative
 
-      img:nth-child(n+2)
-        position: absolute
-        left: 0
-        top: 0
+      img
+        border-radius: 5px
+
+        &:nth-child(n+2)
+          position: absolute
+          left: 0
+          top: 0
 
     .title
       width: 60%
@@ -122,15 +125,17 @@
 
     .call-to-action.button
       border: 0
-      border-radius: 22px
+      border-radius: 20px
       color: #fff
       margin-top: 15px
+      font-size: 14px
 
   .items.scents.scents.scents
     .item
       float: left
-      width: 32%
-      margin-right: 2%
+      width: 30%
+      margin-right: 5%
+      margin-bottom: 40px
 
       .title
         h4
@@ -157,14 +162,14 @@
         text-align: center
 
   @media screen and (max-width: 800px)
-    .items.scents.scents.scents
+    .items.scents.scents.scents.scents
       .item
         float: left
-        width: 48%
-        margin-right: 2%
+        width: 47%
+        margin-right: 6%
 
-      &:nth-child(2n+2)
-        margin-right: 0
+        &:nth-child(2n+2)
+          margin-right: 0
 
   @media screen and (max-width: 600px)
     .title
