@@ -6,6 +6,7 @@ export default function ($) {
   const $window = $(window);
   const $body = $('html, body');
   const $splash = $('.splash');
+  const $dot = $('.dot');
 
   var currentStep = 1;
   var totalSteps;
