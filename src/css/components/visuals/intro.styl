@@ -37,37 +37,6 @@ $phone_height = 390
   / .splash.is-step-7 &
     transform translate3d(0, -100vh, 0)
 
-// &__candle-reflection
-//   position absolute
-//   // left (((1200 - 300) / 2) / 1200) * 100%
-//   left 0
-//   right 0
-//   margin-left auto
-//   margin-right auto
-//   bottom 0
-//   background-image url('/images/Shadow_Reflection.png')
-//   background-size contain
-//   background-repeat no-repeat
-//   background-position 50% 50%
-//   width (300 / 1200) * 100%
-//   max-width 320px
-//   height (($candle_height / 700) / 3) * 100%
-//   max-height 118px
-//   transition opacity 350ms ease
-//   opacity 1
-//   transform translate3d(0, -15%, 0)
-//   z-index 400
-
-//   / .splash.is-step-1 &,
-//   / .splash.is-step-2 &,
-//   / .splash.is-step-3 &
-//     opacity 1
-
-//   / .splash.is-step-4 &
-//   / .splash.is-step-5 &
-//   / .splash.is-step-6 &
-//     opacity 0
-
 &__flame
   position absolute
   bottom 35.7%
@@ -519,10 +488,11 @@ $phone_height = 390
 @media all and (min-width 400px) and (max-height 420px)
   .visuals
     &__flame
+      background-size 20%
 
       / .splash.is-step-1 &
       / .splash.is-step-3 &
-        transform translate3d(0, -10%, 0)
+        transform translate3d(0, -6%, 0)
 
 @media all and (min-width 600px) and (min-height 600px)
   .visuals
