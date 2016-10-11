@@ -2,39 +2,68 @@
   opacity 0
   transition opacity 100ms ease
 
-  .splash__headline
-    transform translate3d(0, 0, 0)
+  // .splash__headline
+  //   transform translate3d(0, 0, 0)
 
 
 &.is-step-6 #step-6
   opacity 1
 
-  .splash__headline
-    opacity 1
-    top 20%
-    transform translate3d(0, 0, 0)
+  .cta-all
+    background none
+
+  // .splash__headline
+  //   opacity 1
+  //   top 20%
+  //   transform translate3d(0, 0, 0)
 
 &.is-step-6
-  background rgba(240,189,60,1)
+  // background url('/images/BG_1.jpg') no-repeat
+  // background-size cover
+  // background-position center
+  // background rgba(240,189,60,1)
+  background rgba(237,140,71,1)
 
-  &:before
-    background linear-gradient(0deg, rgba(240,189,60,0) 40%, rgba(237,147,71,1))
+  .visuals
+    display none
 
-&.is-step-1 #step-6,
-&.is-step-2 #step-6,
-&.is-step-3 #step-6,
-&.is-step-4 #step-6,
-&.is-step-5 #step-6
-  .splash__headline
-    transform translate3d(0, 100vh, 0)
+  &:after
+    opacity 1
+    transition opacity 1500ms
 
-&.is-step-7 #step-6
-  opacity 0
-  .splash__headline
-    transform translate3d(0, -100vh, 0)
+  .list
+    width initial
 
-@media all and (min-width 800px)
+    &.left .info
+      padding 0
 
-  &.is-step-6 #step-6
-    .splash__headline
-      transform translate3d(0, -5vh, 0)
+  .content, .info
+    color rgb(241, 234, 208)
+    p
+      font-size 22px
+      line-height 32px
+      font-weight 600
+
+
+
+  // &:before
+  //   background linear-gradient(0deg, rgba(240,189,60,0) 40%, rgba(237,147,71,1))
+
+// &.is-step-1 #step-6,
+// &.is-step-2 #step-6,
+// &.is-step-3 #step-6,
+// &.is-step-4 #step-6,
+// &.is-step-5 #step-6
+//   .splash__headline
+//     transform translate3d(0, 100vh, 0)
+
+// &.is-step-7 #step-6
+//   opacity 0
+//   .splash__headline
+//     transform translate3d(0, -100vh, 0)
+
+// @media all and (min-width 800px)
+
+//   &.is-step-6 #step-6
+//     .splash__headline
+//       transform translate3d(0, -5vh, 0)
