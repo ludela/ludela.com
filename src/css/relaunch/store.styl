@@ -25,6 +25,7 @@
       display: table
       width: 100%
       position: relative
+      margin-bottom: 40px
 
       > *
         float: left
@@ -36,6 +37,7 @@
 
       img
         border-radius: 5px
+        transition: opacity 500ms ease-in-out
 
         &:nth-child(n+2)
           position: absolute
@@ -73,8 +75,74 @@
           .selectize-input
             max-width: 100%
 
-    .scent-picker
-      border-top: 1px solid rgb(222,222,222)
+      &.color-picker
+        input
+          display: none
+
+        > *:last-child
+          label
+            width: 27px
+            height: 27px
+            display: inline-block
+            font-size: 0
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)
+            cursor: pointer
+            position: relative
+            top: -8px
+
+          > span
+            &:hover
+              label
+                top: -6px
+                border: 2px solid #ed8d48
+
+            input:checked + label
+              top: -6px
+              border: 2px solid #ed8d48
+
+            &.color-r
+              label
+                background-color: #902028
+
+            &.color-o
+              label
+                background-color: #DD7829
+
+            &.color-i
+              label
+                background-color: #B9956B
+
+            &.color-g
+              label
+                background-color: #8EAB66
+
+            &.color-b
+              label
+                background-color: #51589E
+
+            &.color-p
+              label
+                background-color: #786595
+
+            &.color-g-w
+              label
+                background-color: #EAEAED
+
+            &.color-g-sm
+              label
+                background-color: #808792
+
+            &.color-g-r
+              label
+                background-color: #691816
+
+            &.color-g-b
+              label
+                background-color: #181818
+
+            &.color-g-bm
+              label
+                background-color: #E8DCCD
 
     .refill-plan-picker
       padding-bottom: 15px
@@ -130,12 +198,22 @@
       margin-top: 15px
       font-size: 14px
 
+  .items.essentials.essentials.essentials
+    .title + .picker
+      border-top: 1px solid rgb(222,222,222)
+
+    .image
+      img
+        opacity: 0
+
+        &.active
+          opacity: 1
+
   .items.scents.scents.scents
     .item
       float: left
       width: 30%
       margin-right: 5%
-      margin-bottom: 40px
 
       .title
         h4

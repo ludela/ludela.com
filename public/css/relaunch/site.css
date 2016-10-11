@@ -809,6 +809,7 @@ button[type=submit] {
   display: table;
   width: 100%;
   position: relative;
+  margin-bottom: 40px;
 }
 .store .items .item > * {
   float: left;
@@ -820,6 +821,8 @@ button[type=submit] {
 }
 .store .items .image img {
   border-radius: 5px;
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 .store .items .image img:nth-child(n+2) {
   position: absolute;
@@ -857,8 +860,59 @@ button[type=submit] {
 .store .items .picker > *:last-child .selectize-input {
   max-width: 100%;
 }
-.store .items .scent-picker {
-  border-top: 1px solid #dedede;
+.store .items .picker.color-picker input {
+  display: none;
+}
+.store .items .picker.color-picker > *:last-child label {
+  width: 27px;
+  height: 27px;
+  display: inline-block;
+  font-size: 0;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+  cursor: pointer;
+  position: relative;
+  top: -8px;
+}
+.store .items .picker.color-picker > *:last-child > span:hover label {
+  top: -6px;
+  border: 2px solid #ed8d48;
+}
+.store .items .picker.color-picker > *:last-child > span input:checked + label {
+  top: -6px;
+  border: 2px solid #ed8d48;
+}
+.store .items .picker.color-picker > *:last-child > span.color-r label {
+  background-color: #902028;
+}
+.store .items .picker.color-picker > *:last-child > span.color-o label {
+  background-color: #dd7829;
+}
+.store .items .picker.color-picker > *:last-child > span.color-i label {
+  background-color: #b9956b;
+}
+.store .items .picker.color-picker > *:last-child > span.color-g label {
+  background-color: #8eab66;
+}
+.store .items .picker.color-picker > *:last-child > span.color-b label {
+  background-color: #51589e;
+}
+.store .items .picker.color-picker > *:last-child > span.color-p label {
+  background-color: #786595;
+}
+.store .items .picker.color-picker > *:last-child > span.color-g-w label {
+  background-color: #eaeaed;
+}
+.store .items .picker.color-picker > *:last-child > span.color-g-sm label {
+  background-color: #808792;
+}
+.store .items .picker.color-picker > *:last-child > span.color-g-r label {
+  background-color: #691816;
+}
+.store .items .picker.color-picker > *:last-child > span.color-g-b label {
+  background-color: #181818;
+}
+.store .items .picker.color-picker > *:last-child > span.color-g-bm label {
+  background-color: #e8dccd;
 }
 .store .items .refill-plan-picker {
   padding-bottom: 15px;
@@ -914,11 +968,19 @@ button[type=submit] {
   margin-top: 15px;
   font-size: 14px;
 }
+.store .items.essentials.essentials.essentials .title + .picker {
+  border-top: 1px solid #dedede;
+}
+.store .items.essentials.essentials.essentials .image img {
+  opacity: 0;
+}
+.store .items.essentials.essentials.essentials .image img.active {
+  opacity: 1;
+}
 .store .items.scents.scents.scents .item {
   float: left;
   width: 30%;
   margin-right: 5%;
-  margin-bottom: 40px;
 }
 .store .items.scents.scents.scents .item .title h4 {
   font-size: 25px;
