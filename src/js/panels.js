@@ -32,7 +32,7 @@ export default function ($) {
   });
 
   $dot.on('click', function (ev, goTo) {
-    $.scrollify.move($(this).data("step"));
+    // $.scrollify.move($(this).data("step"));
     // goTo = $(this).data('goto');
     // $('.splash')
     //     .removeClass((i, css) =>
