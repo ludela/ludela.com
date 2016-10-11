@@ -24,8 +24,9 @@
 
     .copy
       background-color rgba(241, 234, 208, 0.85)
-      width 785px
-      height 360px
+      max-width 785px
+      min-height 360px
+      width 70vw
       padding 30px 40px
       margin 0 auto
       transform translate3d(0, 30vh, 0)
@@ -76,14 +77,25 @@
 
 @media screen and (max-width 680px)
   &#about
+    &.is-step-1, &.is-step-2, &.is-step-3, &.is-step-4, &.is-step-5
 
-    #step-2
-      background-size cover
+      #step-2
+        position: static
+        height auto
+        background-size cover
 
-      .copy
-        width 336px
-        height 516px
-        margin-bottom 160px
+        .header, .sub-header
+          transform translate3d(0, 0, 0)
+          transition all 750ms ease
+          transition-delay 350ms
 
-        p
-          font-size 15px
+        .copy
+          transform translate3d(0, 0, 0)
+          transition all 1s ease
+          transition-delay 350ms
+          width 336px
+          height 516px
+          margin-bottom 160px
+
+          p
+            font-size 15px

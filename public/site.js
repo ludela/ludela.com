@@ -10127,8 +10127,7 @@ function panels ($) {
     'Our-Story-6',
     'Our-Story-7',
     'Our-Story-8',
-    'Our-Story-9',
-    'Join-Us'
+    'Our-Story-9'
   ];
 
   var currentStep = 1;
@@ -10139,6 +10138,10 @@ function panels ($) {
   if ($splash.length) {
     totalSteps = $('.splash__content').length;
     $splash.addClass('is-step-' + currentStep);
+  }
+
+  if ($about.length) {
+    $('html, body').css('overflow', 'initial');
   }
 
   $document.on('setpanel', function (ev, index) {
@@ -10155,64 +10158,69 @@ function panels ($) {
     }
   });
 
-  $document.on('setfooter', function () {
-    $about.addClass('is-footer');
-    window.location.hash = 'Join-Us'
-  });
-
   $document.on('setabout', function (ev, index) {
-    $('.scroll-container').addClass('scroll-stop');
-    $('#step-'+currentStep+', #step-'+index).animate({scrollTop: 0}, 750);
+		if( $(window).width() > 680 ) {
+	    $('.scroll-container').addClass('scroll-stop');
+	    $('#step-'+currentStep+', #step-'+index).animate({scrollTop: 0}, 750);
 
-    console.log($('#step-'+index).scrollTop());
+	    console.log($('#step-'+index).scrollTop());
 
-    $about
-      .removeClass('is-step-' + currentStep)
-      .addClass('is-step-' + (currentStep = index));
+	    $about
+	      .removeClass('is-step-' + currentStep)
+	      .addClass('is-step-' + (currentStep = index));
 
-    $('.active-dot').removeClass('active-dot')
-    $('.dot-'+currentStep).addClass('active-dot');
+	    $('.active-dot').removeClass('active-dot')
+	    $('.dot-'+currentStep).addClass('active-dot');
 
-    var Hash = '#'+steps[index -1];
-    if (window.location.hash !== Hash) {
-      window.location.hash = Hash;
-    }
+	    var Hash = '#'+steps[index -1];
+	    if (window.location.hash !== Hash) {
+	      window.location.hash = Hash;
+	    }
 
-    setTimeout( function(){
-      $('.scroll').removeClass('scroll');
-      $('#step-'+currentStep).addClass('scroll');
-      $('.scroll-container').removeClass('scroll-stop');}, 1000)
-  });
+	    setTimeout( function(){
+	      $('.scroll').removeClass('scroll');
+	      $('#step-'+currentStep).addClass('scroll');
+	      $('.scroll-container').removeClass('scroll-stop');}, 1000)
+	  }
+	});
 
   $document.on('nextpanel', function (ev, dir) {
     $document.trigger('setpanel', currentStep + dir);
   });
 
   $document.on('setstory', function (ev, index, prev) {
-    $('.scroll-container').addClass('scroll-stop');
 
-    var story = 9;
-    if (index <=9) {
-      story = index;
-      $('.story-'+index+1+', .story-'+index+', .story-'+index-1).animate({scrollTop: 0}, 750);
-      $about.removeClass('is-footer');
-    } else {
-      $about.addClass('is-footer');
-    }
+		if( $(window).width() > 680 ) {
 
-    $about
-      .removeClass('is-story-' + currentStory)
-      .addClass('is-story-' + (currentStory = story));
+	    $('.scroll-container').addClass('scroll-stop');
 
-    setTimeout( function(){
-      $('.scroll').removeClass('scroll');
-      $('.story-'+story).addClass('scroll');
-      $('.scroll-container').removeClass('scroll-stop');}, 1000)
+	    var story = 9;
+	    if (index <=9 && $(window).width() > 680) {
+	      story = index;
+	      $('.story-'+index+1+', .story-'+index+', .story-'+index-1).animate({scrollTop: 0}, 750);
+	      $about.removeClass('is-footer');
+	    } else {
+				story = 1;
+	    }
 
-    var Hash = '#'+steps[story + 2];
-    if (window.location.hash !== Hash) {
-      window.location.hash = Hash;
-    }
+	    $about
+	      .removeClass('is-story-' + currentStory)
+	      .addClass('is-story-' + (currentStory = story));
+
+	    setTimeout( function(){
+	      $('.scroll').removeClass('scroll');
+	      $('.story-'+story).addClass('scroll');
+	      $('.scroll-container').removeClass('scroll-stop');}, 1000)
+
+	    var Hash = '#'+steps[story + 2];
+	    if (window.location.hash !== Hash) {
+	      window.location.hash = Hash;
+	    }
+		} else {
+			$about
+	      .removeClass('is-story-' + currentStory)
+	      .addClass('is-story-1');
+		}
   });
 }
 
@@ -10332,7 +10340,7 @@ function scroller ($) {
       if ($('.is-open')[0]) {
         ev.preventDefault();
         ev.stopPropagation();
-        return false
+        return false;
       }
       var currentPos = $window.scrollTop();
       var scrollDiff = currentPos - lastScrollPos;
@@ -10371,35 +10379,82 @@ function scroller ($) {
 
 function about ($)  {
   var $container = $('.scroll-container');
+  var step = 1;
+  var prevStep = 1;
+  var story = 1;
+  var scroll = true;
+  var steps;
 
-    var step = 1;
-    var prevStep = 1;
-    var story = 1;
-    var scroll = true;
-    var steps = [
-      'A-Seed-Was-Planted',
-      'Better-Light',
-      'The-Team',
-      'Our-Story-1',
-      'Our-Story-2',
-      'Our-Story-3',
-      'Our-Story-4',
-      'Our-Story-5',
-      'Our-Story-6',
-      'Our-Story-7',
-      'Our-Story-8',
-      'Our-Story-9',
-      'Join-Us'
-    ]
+	function debounce(func, wait, immediate){
+	  var timeout, args, context, timestamp, result;
+	  if (null == wait) wait = 100;
 
+	  function later() {
+	    var last = Date.now() - timestamp;
 
+	    if (last < wait && last > 0) {
+	      timeout = setTimeout(later, wait - last);
+	    } else {
+	      timeout = null;
+	      if (!immediate) {
+	        result = func.apply(context, args);
+	        if (!timeout) context = args = null;
+	      }
+	    }
+	  };
 
-  if ($container.length && scroll == true) {
-    window.onscroll = index(setStep, 25);
+	  return function debounced() {
+	    context = this;
+	    args = arguments;
+	    timestamp = Date.now();
+	    var callNow = immediate && !timeout;
+	    if (!timeout) timeout = setTimeout(later, wait);
+	    if (callNow) {
+	      result = func.apply(context, args);
+	      context = args = null;
+	    }
+
+	    return result;
+	  };
+	};
+
+  var listSteps = function () {
+    if ($(window).width() > 680 && $container.length) {
+      steps = [
+        'A-Seed-Was-Planted',
+        'Better-Light',
+        'The-Team',
+        'Our-Story-1',
+        'Our-Story-2',
+        'Our-Story-3',
+        'Our-Story-4',
+        'Our-Story-5',
+        'Our-Story-6',
+        'Our-Story-7',
+        'Our-Story-8',
+        'Our-Story-9'
+      ];
+
+      $('#dots').show();
+    } else if ($container.length) {
+      $('#dots').hide();
+			window.location.hash = 'A-Seed-Was-Planted'
+    }
+  }
+
+  listSteps();
+  $(window).on('load resize', listSteps);
+	$(window).on('resize', function(){
+		location.reload();			
+	})
+
+  if ($container.length && scroll == true ) {
+    window.onscroll = debounce(setStep, 25);
     window.onload = reload();
   }
 
-    function setStep(){
+  function setStep(){
+    if ($(window).width() > 680) {
 
       if (window.location.hash == '') {
         window.location.hash = steps[0]
@@ -10420,9 +10475,7 @@ function about ($)  {
         setTimeout(setScroll, 1000);
       }
 
-      if (step == 13) {
-        $(document).trigger('setfooter');
-      } else if (step >= 4) {
+      if (step >= 4) {
         story = step - 3;
         step = 4;
       }
@@ -10436,8 +10489,11 @@ function about ($)  {
         $(document).trigger('setstory', story);
       }
     }
+  }
 
-    function reload() {
+
+  function reload() {
+    if ($(window).width() > 680) {
 
       if (window.location.hash == '') {
         window.location.hash = steps[0]
@@ -10447,9 +10503,7 @@ function about ($)  {
       step = steps.indexOf(hash.substring(1, hash.length))+1;
       var prevStep = step;
 
-      if (step == 13) {
-        $(document).trigger('setfooter');
-      } else if (step >= 4) {
+      if (step >= 4) {
         story = step - 3;
         step = 4;
       }
@@ -10463,14 +10517,15 @@ function about ($)  {
         $(document).trigger('setabout', 4);
         $(document).trigger('setstory', story);
       }
-
-    }
-
-    function setScroll() {
-      $(window).scrollTop(100);
-      scroll = true;
     }
   }
+
+  function setScroll() {
+    $(window).scrollTop(100);
+    scroll = true;
+  }
+}
+
 
 function shell ($) {
 

@@ -1,3 +1,5 @@
+
+
 &.nav-open
   left 410px
   transition left 350ms ease-out
@@ -113,7 +115,8 @@
         line-height 1.454
         font-weight bold
         text-align justify
-        width 497px
+        max-width 497px
+        width 45vw
         z-index 295
         margin 0
 
@@ -142,7 +145,7 @@
 
   &.is-step-1
     #step-1
-      transform translate3d(0, 0, 0)
+      transform translate3d(0, 5vh, 0)
       transition all 750ms ease
 
       .header, .sub-header
@@ -186,6 +189,29 @@
       left: 0
 
   &#about
+    position: absolute;
+    height 120vh
+
+    &.is-step-1, &.is-step-2,&.is-step-3, &.is-step-4, &.is-step-5
+      #step-1
+        height 120vh
+        overflow-y: hidden;
+        position: static
+        transform translate3d(0, 5vh, 0)
+        transition all 750ms ease
+
+        .header, .sub-header
+          transform translate3d(0, 0, 0)
+          transition all 700ms ease
+          transition-delay 350ms
+
+        .africa
+          transform translate3d(0, 0, 0)
+          transition all 1s ease
+
+        .date
+          transform translate3d(0, 0, 0)
+          transition all 1s ease
 
     .about__content
       padding 0
@@ -241,4 +267,5 @@
 
         p
           width 100%
+          max-width 100%
           font-size 15px

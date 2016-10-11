@@ -14,18 +14,6 @@ export default function ($) {
   const $dot = $('.dot');
   const scrollThreshold = 30;
 
-  if ($general.length) {
-    $window.on('scroll', setFooter);
-  }
-
-  function setFooter() {
-    if ($window.scrollTop() + $window.height() > $document.height() - 2) {
-      $general.addClass('is-footer');
-    } else {
-      $('.is-footer').removeClass('is-footer');
-    }
-  }
-
   if ($panels.length) {
 
     $window.on('scroll mousewheel', function (ev) {
