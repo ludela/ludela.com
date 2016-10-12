@@ -1,6 +1,6 @@
 .logo {
-  transform: translateX(-50%);
-  margin-left: 0 !important;
+  /* transform: translateX(-50%); */
+  /* margin-left: 0 !important; */
   width: auto !important;
   font-size: 2.3em;
 }

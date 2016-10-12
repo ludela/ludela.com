@@ -1,33 +1,6 @@
 $(function() {
   var Shop = window.Crowdstart.Shop
 
-  $('.checkout-button').on('click', function(e){
-    var $modal = $('.checkout-modal.modal');
-    $modal.addClass('is-open');
-
-    $('#hamburger').addClass('is-open');
-    $modal.removeClass('hidden');
-
-    Shop.analytics.track('Viewed Checkout Step', {step: 1})
-    Shop.initCart()
-
-    $('.thankyou').hide()
-    $('.checkout-container').css('opacity', 1)
-
-    e.stopPropagation();
-    e.preventDefault();
-    return false;
-  });
-
-  $('.checkout-modal.modal').find('.modal-close').on('click', function(e){
-    var $modal = $(this).closest('.modal');
-    $modal.removeClass('hidden');
-    $modal.removeClass('is-open');
-
-    $('#hamburger').removeClass('is-open');
-    return false;
-  })
-
   var settings = {
     key: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJiaXQiOjQ1MDM2MTcwNzU2NzUxNzIsImp0aSI6InoyWkNVQ3hrZmhFIiwic3ViIjoiVjlPVDIybUkwYSJ9.QajT3dH6kT4DiqCuUD8MhDEgUdYvQ5ZYSH5kwf0a36-ruKlD1f_SkVVE7uymuSCIcscwNXYMMP5H29EL0RQ7Zw',
     // key: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJiaXQiOjQ1MDM2MTcwNzU2NzUxNzYsImp0aSI6IkdqcEJEblR1RFVrIiwic3ViIjoiVjlPVDIybUkwYSJ9.RwJ5EfCPSKXqj80erk9vX4OHjmDcZQOQZKxdwg5ujSYhPp60L3-RCFNMJ38pKv8wQKR8cy8HquQ9rO6jRez6qA',
@@ -84,6 +57,34 @@ $(function() {
   }
 
   var step = 1;
+
+
+  $('.checkout-button').on('click', function(e){
+    var $modal = $('.checkout-modal.modal');
+    $modal.addClass('is-open');
+
+    $('#hamburger').addClass('is-open');
+    $modal.removeClass('hidden');
+
+    Shop.analytics.track('Viewed Checkout Step', {step: 1})
+    Shop.initCart()
+
+    $('.thankyou').hide()
+    $('.checkout-container').css('opacity', 1)
+
+    e.stopPropagation();
+    e.preventDefault();
+    return false;
+  });
+
+  $('.checkout-modal.modal').find('.modal-close').on('click', function(e){
+    var $modal = $(this).closest('.modal');
+    $modal.removeClass('hidden');
+    $modal.removeClass('is-open');
+
+    $('#hamburger').removeClass('is-open');
+    return false;
+  })
 
   $('button[type=submit]').on('click', function(){
     if (step == 2) {
@@ -192,10 +193,6 @@ $(function() {
       window.location.href = 'account';
     });
   })
-
-  if (Shop.isEmpty()) {
-    Shop.setItem('ludela', 1);
-  }
 
   m.on('submit', function(){
     $('.loader').show();

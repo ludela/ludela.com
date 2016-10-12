@@ -1,0 +1,95 @@
+#general
+
+  cart
+    position: fixed
+    top: 0
+    z-index: 1000
+    background-color: #FFF
+    height: 100%
+    overflow: auto
+    width: 380px
+    max-width: 100%
+    font-size: 14px
+    border-top: 0
+    border-right: 0
+    border-bottom: 0
+    transition: right .3s ease-in
+    right: -380px
+
+    &.show
+    &:hover
+      right: 0
+
+    &.hide
+      right: -380px
+
+    lineitem
+      & > * > *
+        float: left;
+
+    h3
+      text-shadow: none
+      font-size: 20px
+      margin-bottom: 40px
+
+    .cart-contents
+      display: table
+      width: 100%
+
+      & > button
+        width: 100%
+
+    .call-to-action
+      width: 100%
+      text-align: center
+
+    h2
+      font-size: 32px
+      margin: 20px
+
+    .product-description
+      width: 70% !important
+
+    .product-list-price
+      color: #aaa
+      font-size: .9em
+
+    input[type=text]
+      height: 25px
+      border: 1px solid #c9c9c9
+
+    .selectize-input.focus
+    input:focus
+      border-color: #ed8d48
+
+    input
+    button
+      outline: 0
+
+    button
+    .button
+      color: #fff
+      background-color: #ed8d48
+      padding: 5px 24px
+
+      &:disabled
+        background-color: #c9c9c9
+
+    .nav
+      &.back-button
+        width: 48%
+        margin-right: 4%
+        float: left
+        background-color: #E4AA47
+
+      &.checkout-button
+        width: 48%
+        float: left
+
+      margin-bottom: 40px
+
+    .bottom
+      margin-top: 40px
+
+    .promo-message
+      width: 100%

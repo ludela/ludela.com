@@ -244,7 +244,10 @@ quantity-select-control,
   display: none;
 }
 .product-delete {
-  display: none;
+  position: absolute;
+  right: 0;
+  top: -10px;
+  font-size: 20px;
 }
 .product-currency {
   display: inline;
@@ -784,6 +787,101 @@ button[type=submit] {
     margin-top: -15px;
   }
 }
+#general cart {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+  height: 100%;
+  overflow: auto;
+  width: 380px;
+  max-width: 100%;
+  font-size: 14px;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  -webkit-transition: right 0.3s ease-in;
+  transition: right 0.3s ease-in;
+  right: -380px;
+}
+#general cart.show,
+#general cart:hover {
+  right: 0;
+}
+#general cart.hide {
+  right: -380px;
+}
+#general cart lineitem > * > * {
+  float: left;
+}
+#general cart h3 {
+  text-shadow: none;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+#general cart .cart-contents {
+  display: table;
+  width: 100%;
+}
+#general cart .cart-contents > button {
+  width: 100%;
+}
+#general cart .call-to-action {
+  width: 100%;
+  text-align: center;
+}
+#general cart h2 {
+  font-size: 32px;
+  margin: 20px;
+}
+#general cart .product-description {
+  width: 70% !important;
+}
+#general cart .product-list-price {
+  color: #aaa;
+  font-size: 0.9em;
+}
+#general cart input[type=text] {
+  height: 25px;
+  border: 1px solid #c9c9c9;
+}
+#general cart .selectize-input.focus,
+#general cart input:focus {
+  border-color: #ed8d48;
+}
+#general cart input,
+#general cart button {
+  outline: 0;
+}
+#general cart button,
+#general cart .button {
+  color: #fff;
+  background-color: #ed8d48;
+  padding: 5px 24px;
+}
+#general cart button:disabled,
+#general cart .button:disabled {
+  background-color: #c9c9c9;
+}
+#general cart .nav {
+  margin-bottom: 40px;
+}
+#general cart .nav.back-button {
+  width: 48%;
+  margin-right: 4%;
+  float: left;
+  background-color: #e4aa47;
+}
+#general cart .nav.checkout-button {
+  width: 48%;
+  float: left;
+}
+#general cart .bottom {
+  margin-top: 40px;
+}
+#general cart .promo-message {
+  width: 100%;
+}
 .store {
   font-size: 16px;
 }
@@ -804,6 +902,12 @@ button[type=submit] {
 .store h4 {
   font-size: 35px;
   font-weight: normal;
+}
+.store .plan-price {
+  color: #aaa;
+}
+.store .plan-price.subscription {
+  display: none;
 }
 .store section.items > .content > .item {
   display: table;
@@ -976,6 +1080,9 @@ button[type=submit] {
 }
 .store section.items.essentials.essentials.essentials .image img.active {
   opacity: 1;
+}
+.store section.items.essentials.essentials.essentials .refill-plan-picker > *:last-child span {
+  width: 50%;
 }
 .store section.items.scents.scents.scents > .content > .item {
   float: left;

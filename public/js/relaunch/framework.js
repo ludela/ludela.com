@@ -23,7 +23,6 @@
             clearTimeout(id);
         };
 }());
-
 $(window).load(function(){
   // Modals
   $('.modal').on('scroll touchmove mousewheel', function(e){

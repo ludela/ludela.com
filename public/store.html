@@ -26,6 +26,7 @@
 
     <!-- Custom Styling and JS-->
     <!-- <link rel="stylesheet" href="css/relaunch/visuals.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
     <link rel="stylesheet" href="css/relaunch/ludela.css" />
     <link rel="stylesheet" href="css/relaunch/site.css" />
 
@@ -92,6 +93,9 @@
           <a href="/">
             <img data-lazy="/images/textless-logo.png" class="logo">
           </a>
+          <a href="#" class="call-to-action cart-button">
+            <i class="shopping-bag"></i>
+          </a>
         </nav>
       </header>
 
@@ -121,7 +125,7 @@
               <img data-lazy="/images/products/x1/Solo-G-BM.png">
             </div>
             <div class="title">
-              <h4>Solo Set</h4><span>1 LuDela Candle, 1 Refills</span>
+              <h4>Solo Set</h4><span>1 LuDela Candle, 2 Refills</span>
             </div>
             <div class="color-picker picker">
               <label>Choose your color:</label>
@@ -176,7 +180,7 @@
             <div class="scent-picker picker">
               <label>Choose your scent:</label>
               <select>
-                <option value="No Scent">No Scent</option>
+                <option value="Unscented">Unscented</option>
                 <option value="Vanilla Bliss">Vanilla Bliss</option>
                 <option value="Dew Kissed Petals">Dew Kissed Petals</option>
                 <option value="Lavender Escape">Lavender Escape</option>
@@ -193,29 +197,24 @@
               <label>Select refill plan:</label>
               <div>
                 <span>
-                  <input type="radio" id="solo-refillx0" name="refill-1" checked>
-                  <label for="solo-refillx0">None</label>
+                  <input type="radio" id="solo-single" name="refill-1" checked>
+                  <label for="solo-single">Single</label>
                 </span>
                 <span>
-                  <input type="radio" id="solo-refillx1" name="refill-1">
-                  <label for="solo-refillx1">x1</label>
-                </span>
-                <span>
-                  <input type="radio" id="solo-refillx2" name="refill-1">
-                  <label for="solo-refillx2">x2</label>
-                </span>
-                <span>
-                  <input type="radio" id="solo-refillx3" name="refill-1">
-                  <label for="solo-refillx3">x3</label>
+                  <input type="radio" id="solo-subscription" name="refill-1">
+                  <label for="solo-subscription">Subscription</label>
                 </span>
               </div>
             </div>
             <div class="price">
               <span>Price:</span>
-              <span>$99.00 USD</span>
+              <span>$99 USD
+                <span class="plan-price single">+ $8 USD Today</span>
+                <span class="plan-price subscription">+ $7 USD Today and $7 USD/month</span>
+              </span>
             </div>
-            <div class="call-to-action button">
-              Add To Cart
+            <div class="call-to-action add-to-cart button">
+              + Add To Cart
             </div>
           </div>
 
@@ -234,7 +233,7 @@
               <img data-lazy="/images/products/x2/Duo-G-BM.png">
             </div>
             <div class="title">
-              <h4>Duo Set</h4><span>2 LuDela Candle, 2 Refills</span>
+              <h4>Duo Set</h4><span>2 LuDela Candle, 4 Refills</span>
             </div>
             <div class="color-picker picker">
               <label>Choose your color:</label>
@@ -289,7 +288,7 @@
             <div class="scent-picker picker">
               <label>Choose your scent:</label>
               <select>
-                <option value="No Scent">No Scent</option>
+                <option value="Unscented">Unscented</option>
                 <option value="Vanilla Bliss">Vanilla Bliss</option>
                 <option value="Dew Kissed Petals">Dew Kissed Petals</option>
                 <option value="Lavender Escape">Lavender Escape</option>
@@ -306,29 +305,21 @@
               <label>Select refill plan:</label>
               <div>
                 <span>
-                  <input type="radio" id="duo-refillx0" name="refill-2" checked>
-                  <label for="duo-refillx0">None</label>
+                  <input type="radio" id="duo-single" name="refill-2" checked>
+                  <label for="duo-single">Single</label>
                 </span>
                 <span>
-                  <input type="radio" id="duo-refillx1" name="refill-2">
-                  <label for="duo-refillx1">x1</label>
-                </span>
-                <span>
-                  <input type="radio" id="duo-refillx2" name="refill-2">
-                  <label for="duo-refillx2">x2</label>
-                </span>
-                <span>
-                  <input type="radio" id="duo-refillx3" name="refill-2">
-                  <label for="duo-refillx3">x3</label>
+                  <input type="radio" id="duo-subscription" name="refill-2">
+                  <label for="duo-subscription">Subscription</label>
                 </span>
               </div>
             </div>
             <div class="price">
               <span>Price:</span>
-              <span>$189.00 USD</span>
+              <span>$189 USD</span>
             </div>
-            <div class="call-to-action button">
-              Add To Cart
+            <div class="call-to-action add-to-cart button">
+              + Add To Cart
             </div>
           </div>
 
@@ -347,7 +338,7 @@
               <img data-lazy="/images/products/x3/Trio-G-BM.png">
             </div>
             <div class="title">
-              <h4>Trio Set</h4><span>3 LuDela Candle, 3 Refills</span>
+              <h4>Trio Set</h4><span>3 LuDela Candle, 6 Refills</span>
             </div>
             <div class="color-picker picker">
               <label>Choose your color:</label>
@@ -402,7 +393,7 @@
             <div class="scent-picker picker">
               <label>Choose your scent:</label>
               <select>
-                <option value="No Scent">No Scent</option>
+                <option value="Unscented">Unscented</option>
                 <option value="Vanilla Bliss">Vanilla Bliss</option>
                 <option value="Dew Kissed Petals">Dew Kissed Petals</option>
                 <option value="Lavender Escape">Lavender Escape</option>
@@ -419,29 +410,21 @@
               <label>Select refill plan:</label>
               <div>
                 <span>
-                  <input type="radio" id="trio-refillx0" name="refill-3" checked>
-                  <label for="trio-refillx0">None</label>
+                  <input type="radio" id="trio-single" name="refill-3" checked>
+                  <label for="trio-single">Single</label>
                 </span>
                 <span>
-                  <input type="radio" id="trio-refillx1" name="refill-3">
-                  <label for="trio-refillx1">x1</label>
-                </span>
-                <span>
-                  <input type="radio" id="trio-refillx2" name="refill-3">
-                  <label for="trio-refillx2">x2</label>
-                </span>
-                <span>
-                  <input type="radio" id="trio-refillx3" name="refill-3">
-                  <label for="trio-refillx3">x3</label>
+                  <input type="radio" id="trio-subscription" name="refill-3">
+                  <label for="trio-subscription">Subscription</label>
                 </span>
               </div>
             </div>
             <div class="price">
               <span>Price:</span>
-              <span>$279.00 USD</span>
+              <span>$279 USD</span>
             </div>
-            <div class="call-to-action button">
-              Add To Cart
+            <div class="call-to-action add-to-cart button">
+              + Add To Cart
             </div>
           </div>
         </div>
@@ -456,7 +439,7 @@
               <img data-lazy="/images/products/scent-candles/SC-1.png">
             </div>
             <div class="title">
-              <h4>Vanilla Bliss</h4><span>$7.00 USD</span>
+              <h4>Vanilla Bliss</h4><span>$7 USD</span>
             </div>
             <div class="refill-plan-picker picker">
               <label>Select refill plan:</label>
@@ -479,8 +462,8 @@
                 </span>
               </div>
             </div>
-            <div class="call-to-action button">
-              Add To Cart
+            <div class="call-to-action add-to-cart button">
+              + Add To Cart
             </div>
           </div>
 
@@ -490,7 +473,7 @@
               <img data-lazy="/images/products/scent-candles/SC-2.png">
             </div>
             <div class="title">
-              <h4>Dew Kissed Petals</h4><span>$7.00 USD</span>
+              <h4>Dew Kissed Petals</h4><span>$7 USD</span>
             </div>
             <div class="refill-plan-picker picker">
               <label>Select refill plan:</label>
@@ -513,8 +496,8 @@
                 </span>
               </div>
             </div>
-            <div class="call-to-action button">
-              Add To Cart
+            <div class="call-to-action add-to-cart button">
+              + Add To Cart
             </div>
           </div>
 
@@ -524,7 +507,7 @@
               <img data-lazy="/images/products/scent-candles/SC-3.png">
             </div>
             <div class="title">
-              <h4>Lavender Escape</h4><span>$7.00 USD</span>
+              <h4>Lavender Escape</h4><span>$7 USD</span>
             </div>
             <div class="refill-plan-picker picker">
               <label>Select refill plan:</label>
@@ -547,8 +530,8 @@
                 </span>
               </div>
             </div>
-            <div class="call-to-action button">
-              Add To Cart
+            <div class="call-to-action add-to-cart button">
+              + Add To Cart
             </div>
           </div>
 
@@ -558,7 +541,7 @@
               <img data-lazy="/images/products/scent-candles/SC-4.png">
             </div>
             <div class="title">
-              <h4>Pomegranate Delight</h4><span>$7.00 USD</span>
+              <h4>Pomegranate Delight</h4><span>$7 USD</span>
             </div>
             <div class="refill-plan-picker picker">
               <label>Select refill plan:</label>
@@ -581,8 +564,8 @@
                 </span>
               </div>
             </div>
-            <div class="call-to-action button">
-              Add To Cart
+            <div class="call-to-action add-to-cart button">
+              + Add To Cart
             </div>
           </div>
 
@@ -592,7 +575,7 @@
               <img data-lazy="/images/products/scent-candles/SC-5.png">
             </div>
             <div class="title">
-              <h4>Mango Driftwood</h4><span>$7.00 USD</span>
+              <h4>Mango Driftwood</h4><span>$7 USD</span>
             </div>
             <div class="refill-plan-picker picker">
               <label>Select refill plan:</label>
@@ -615,8 +598,8 @@
                 </span>
               </div>
             </div>
-            <div class="call-to-action button">
-              Add To Cart
+            <div class="call-to-action add-to-cart button">
+              + Add To Cart
             </div>
           </div>
 
@@ -626,7 +609,7 @@
               <img data-lazy="/images/products/scent-candles/SC-6.png">
             </div>
             <div class="title">
-              <h4>Turquoise Bay</h4><span>$7.00 USD</span>
+              <h4>Turquoise Bay</h4><span>$7 USD</span>
             </div>
             <div class="refill-plan-picker picker">
               <label>Select refill plan:</label>
@@ -649,8 +632,8 @@
                 </span>
               </div>
             </div>
-            <div class="call-to-action button">
-              Add To Cart
+            <div class="call-to-action add-to-cart button">
+              + Add To Cart
             </div>
           </div>
 
@@ -660,7 +643,7 @@
               <img data-lazy="/images/products/scent-candles/SC-7.png">
             </div>
             <div class="title">
-              <h4>White Tea and Ginger</h4><span>$7.00 USD</span>
+              <h4>White Tea and Ginger</h4><span>$7 USD</span>
             </div>
             <div class="refill-plan-picker picker">
               <label>Select refill plan:</label>
@@ -683,8 +666,8 @@
                 </span>
               </div>
             </div>
-            <div class="call-to-action button">
-              Add To Cart
+            <div class="call-to-action add-to-cart button">
+              + Add To Cart
             </div>
           </div>
 
@@ -694,7 +677,7 @@
               <img data-lazy="/images/products/scent-candles/SC-8.png">
             </div>
             <div class="title">
-              <h4>Sheer Linen & Orchid</h4><span>$7.00 USD</span>
+              <h4>Sheer Linen & Orchid</h4><span>$7 USD</span>
             </div>
             <div class="refill-plan-picker picker">
               <label>Select refill plan:</label>
@@ -717,8 +700,8 @@
                 </span>
               </div>
             </div>
-            <div class="call-to-action button">
-              Add To Cart
+            <div class="call-to-action add-to-cart button">
+              + Add To Cart
             </div>
           </div>
 
@@ -728,7 +711,7 @@
               <img data-lazy="/images/products/scent-candles/SC-9.png">
             </div>
             <div class="title">
-              <h4>Coastal Waters</h4><span>$7.00 USD</span>
+              <h4>Coastal Waters</h4><span>$7 USD</span>
             </div>
             <div class="refill-plan-picker picker">
               <label>Select refill plan:</label>
@@ -751,8 +734,8 @@
                 </span>
               </div>
             </div>
-            <div class="call-to-action button">
-              Add To Cart
+            <div class="call-to-action add-to-cart button">
+              + Add To Cart
             </div>
           </div>
 
@@ -762,7 +745,7 @@
               <img data-lazy="/images/products/scent-candles/SC-10.png">
             </div>
             <div class="title">
-              <h4>Midnight Showers</h4><span>$7.00 USD</span>
+              <h4>Midnight Showers</h4><span>$7 USD</span>
             </div>
             <div class="refill-plan-picker picker">
               <label>Select refill plan:</label>
@@ -785,239 +768,12 @@
                 </span>
               </div>
             </div>
-            <div class="call-to-action button">
-              Add To Cart
+            <div class="call-to-action add-to-cart button">
+              + Add To Cart
             </div>
           </div>
         </div>
       </section>
-
-
-      <!-- CHECKOUT -->
-      <div class="checkout-modal modal">
-        <div class="checkout-container">
-          <div class="checkout">
-            <div class="continue-shopping">
-              <h1><i class="arrow-left"></i>Continue Shopping<i class="shopping-bag"></i></h1>
-            </div>
-            <cart>
-              <h1>
-                Order Summary
-              </h1>
-
-              <lineitems if="{ !isEmpty() }">
-                <div class="product-text-container">
-                  <span if="{ !data.get('locked') }" class="product-quantity-container">
-                    <quantity-select-control></quantity-select-control>
-                  </span>
-                  <span if="{ data.get('locked') }" class="product-quantity-container locked">
-                    { data.get('quantity') }
-                  </span>
-                  <span class="product-description">
-                    <span class="product-name">{ data.get('productName') }</span>
-                    <p>{ data.get('description') }</p>
-                  </span>
-                </div>
-                <div class="product-image-container">
-                  <img data-lazy="images/Candle-Product.png" alt="{ data.get('productName') }"></img>
-                </div>
-                <!-- <div onclick="{ delete }" class="product-delete"></div> -->
-                <div class="product-price-container invoice-amount">
-                  <div class="product-price">
-                    { renderCurrency(parentData.get('currency'), data.get().price * data.get().quantity) }
-                    { parentData.get('currency').toUpperCase() }
-                  </div>
-                  <div if="{ data.get().listPrice > data.get().price }" class="product-list-price invoice-amount">
-                    { renderCurrency(parentData.get('currency'), data.get().listPrice * data.get().quantity) }
-                    { parentData.get('currency').toUpperCase() }
-                  </div>
-                </div>
-              </lineitems>
-
-              <div class="promo">
-                <div class="promo-row">
-                  <promocode class="input" placeholder="Coupon Code"></promocode>
-                  <button class="{ loading: applying }" onclick="{ applyPromoCode }">Apply</button>
-                  <div class="promo-message" if="{ data.get('order.promoCode') && !promoMessage && !applying }">
-                    Don't forget to apply your code!
-                  </div>
-                  <div class="promo-message" if="{ promoMessage }">
-                    { promoMessage }
-                  </div>
-                </div>
-              </div>
-              <div class="invoice-discount invoice-line animated fadeInUp" if="{ data.get('order.discount') > 0 }">
-                <div class="invoice-label">
-                  Discount:
-                </div>
-                <div class="invoice-amount">
-                  { renderCurrency(data.get('order.currency'), data.get('order.discount'))}&nbsp;{ data.get('order.currency').toUpperCase() }
-                </div>
-              </div>
-              <div class="invoice-line">
-                <div class="invoice-label">
-                  Subtotal
-                </div>
-                <div class="invoice-amount">
-                  { renderCurrency(data.get('order.currency'), data.get('order.subtotal'))}&nbsp;{ data.get('order.currency').toUpperCase() }
-                </div>
-              </div>
-              <div class="invoice-line">
-                <div class="invoice-label">
-                  Shipping (billed later)
-                </div>
-                <div class="invoice-amount not-bold">
-                  - -
-                </div>
-              </div>
-              <div class="invoice-line">
-                <div class="invoice-label">
-                  Tax ({ data.get('order.taxRate') * 100 }%)
-                </div>
-                <div class="invoice-amount">
-                  { renderCurrency(data.get('order.currency'), data.get('order.tax'))}&nbsp;{ data.get('order.currency').toUpperCase() }
-                </div>
-              </div>
-              <div class="invoice-line invoice-total">
-                <div class="invoice-label">
-                  Total
-                </div>
-                <div class="invoice-amount">
-                  { renderCurrency(data.get('order.currency'), data.get('order.total'))}&nbsp;{ data.get('order.currency').toUpperCase() }
-                </div>
-              </div>
-              <div class="invoice-line">
-                <div class="invoice-label">Estimated Ship Date</div>
-                <div class="invoice-amount">Early 2017</div>
-              </div>
-              <div class="special-offer">
-                <h1>SPECIAL OFFER</h1>
-                <div class="fields">
-                  <div class="checkbox">
-                    <input type="checkbox" id="refills" name="refills">
-                    <label for="refills">
-                       Yes! I would like a free month of LuDela refills and more
-                       information about saving time and money with LuDela's
-                       subscription plans. No strings attached!
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </cart>
-            <checkout>
-              <div class="contact-information">
-                <h1>
-                  Contact Information
-                </h1>
-                <div class="fields">
-                  <user-name class="input" placeholder="Name"></user-name>
-                  <user-email class="input" placeholder="Email"></user-email>
-                </div>
-              </div>
-              <div class="shipping-information">
-                <h1>
-                  Shipping Information
-                </h1>
-                <div class="fields">
-                  <shippingaddress-line1 class="input" placeholder="Address"></shippingaddress-line1>
-                  <shippingaddress-line2 class="input" placeholder="Suite"></shippingaddress-line2>
-                </div>
-                <div class="fields">
-                  <shippingaddress-city class="input" placeholder="City"></shippingaddress-city>
-                  <shippingaddress-postalcode class="input" placeholder="Postal Code"></shippingaddress-postalcode>
-                </div>
-                <div class="fields">
-                  <shippingaddress-state class="input" placeholder="State"></shippingaddress-state>
-                  <shippingaddress-country class="input" placeholder="Country"></shippingaddress-country>
-                </div>
-              </div>
-              <div class="gift-options">
-                <h1>
-                  Gift Options
-                </h1>
-                <div class="fields">
-                  <gift-toggle>
-                    <label for="order.gift">This is a gift.</label>
-                  </gift-toggle>
-                </div>
-                <div class="fields" if="{ data.get('order.gift') }">
-                  <gift-message placeholder="Please enter any special instructions for your gift such as custom greetings.">
-                  </gift-message>
-                </div>
-              </div>
-
-              <div class="payment-information">
-                <h1>
-                  Payment Information <i class="lock"></i>
-                </h1>
-
-                <div class="fields">
-                  <card-number class="input" name="number" placeholder="Card Number"></card-number>
-                  <card-expiry class="input" name="expiry" placeholder="MM / YY"></card-expiry>
-                  <card-cvc class="input" name="cvc" placeholder="CVC"></card-cvc>
-                </div>
-
-                  <!-- <div class="card-types"> -->
-                  <!--   <div> -->
-                  <!--     <img data-lazy="/img/card-icons/visa.png"> -->
-                  <!--   </div> -->
-                  <!--   <div> -->
-                  <!--     <img data-lazy="/img/card-icons/mastercard.png"> -->
-                  <!--   </div> -->
-                  <!--   <div> -->
-                  <!--     <img data-lazy="/img/card-icons/discover.png"> -->
-                  <!--   </div> -->
-                  <!--   <div> -->
-                  <!--     <img data-lazy="/img/card-icons/amex.png"> -->
-                  <!--   </div> -->
-                  <!-- </div> -->
-
-                <a href="//www.stripe.com" target="_blank"><img class="stripe-logo" src="/images/stripelogo.png"></a>
-              </div>
-
-              <div class="confirmation">
-                <h1>
-                  Almost Done
-                </h1>
-
-                <terms>
-                  <label for="terms">I agree to LuDela's <a href="/legal" target="_blank">terms of service</a>.</label>
-                </terms>
-                <button class="{ loading: loading || checkedOut }" type="submit">Confirm Pre-order</button>
-                <div class="error" if="{ errorMessage }">
-                  { errorMessage }
-                </div>
-              </div>
-            </checkout>
-          </div>
-          <div class="checkout-bottom-buffer"></div>
-        </div>
-        <div class="thankyou">
-          <p>Thank you for making the world a little brighter! You will receive a confirmation email soon.</p>
-
-          <p>Your order number is <strong></strong>.</p>
-
-          <p style="text-align:center">Tell your friends about LuDela!</p>
-          <div class="social">
-            <a class="menu__social"  href="http://facebook.com/JoinLudela" target="_blank">
-              <span class="icon icon-facebook"> </span>
-            </a>
-            <a class="menu__social"  href="http://twitter.com/JoinLudela" target="_blank">
-              <span class="icon icon-twitter"> </span>
-            </a>
-            <a class="menu__social"  href="https://www.pinterest.com/joinludela" target="_blank">
-              <span class="icon icon-pinterest2"> </span>
-            </a>
-          </div>
-
-        </div>
-        <div class="modal-close">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
 
       <!-- FOOTER -->
       <footer>
@@ -1084,7 +840,323 @@
         <small class="copyright">© LuDela Inc. 2016</small>
       </footer>
 
+      <cart>
+        <button class="nav back-button">< Back</button>
+        <button class="nav checkout-button" __disabled="{ isEmpty() }">Checkout ></button>
+        <h2>
+          Order Summary
+        </h2>
+        <div class="cart-contents" if="{ isEmpty() }">
+          <h3>Your cart is empty.</h3>
+          <a href="/store" class="call-to-action button">Visit the store</a>
+        </div>
+
+        <div class="cart-contents" if="{ !isEmpty() }">
+          <lineitems>
+            <div class="animated slideInRight">
+              <div class="product-text-container">
+                <span if="{ !data.get('locked') }" class="product-quantity-container">
+                  <quantity-select-control></quantity-select-control>
+                </span>
+                <span if="{ data.get('locked') }" class="product-quantity-container locked">
+                  { data.get('quantity') }
+                </span>
+                <span class="product-description">
+                  <span class="product-name">{ data.get('productName') }</span>
+                  <p>{ data.get('description') }</p>
+                </span>
+              </div>
+              <div class="product-image-container">
+                <img src="images/Candle-Product.png" alt="{ data.get('productName') }"></img>
+              </div>
+              <div onclick="{ delete }" class="product-delete">
+                x
+              </div>
+              <div class="product-price-container invoice-amount">
+                <div class="product-price">
+                  { renderCurrency(parentData.get('currency'), data.get().price * data.get().quantity) }&nbsp;{ parentData.get('currency').toUpperCase() }
+                </div>
+                <div if="{ data.get().listPrice > data.get().price }" class="product-list-price invoice-amount">
+                  { renderCurrency(parentData.get('currency'), data.get().listPrice * data.get().quantity) }&nbsp;{ parentData.get('currency').toUpperCase() }
+                </div>
+              </div>
+            </div>
+          </lineitems>
+
+          <div class="promo">
+            <div class="promo-row">
+              <promocode class="input" placeholder="Coupon Code"></promocode>
+              <button class="{ loading: applying }" onclick="{ applyPromoCode }">Apply</button>
+              <div class="promo-message" if="{ data.get('order.promoCode') && !promoMessage && !applying }">
+                Don't forget to apply your code!
+              </div>
+              <div class="promo-message" if="{ promoMessage }">
+                { promoMessage }
+              </div>
+            </div>
+          </div>
+          <div class="invoice-discount invoice-line animated fadeInUp" if="{ data.get('order.discount') > 0 }">
+            <div class="invoice-label">
+              Discount:
+            </div>
+            <div class="invoice-amount">
+              { renderCurrency(data.get('order.currency'), data.get('order.discount'))}&nbsp;{ data.get('order.currency').toUpperCase() }
+            </div>
+          </div>
+          <div class="invoice-line">
+            <div class="invoice-label">
+              Subtotal
+            </div>
+            <div class="invoice-amount">
+              { renderCurrency(data.get('order.currency'), data.get('order.subtotal'))}&nbsp;{ data.get('order.currency').toUpperCase() }
+            </div>
+          </div>
+          <div class="invoice-line">
+            <div class="invoice-label">
+              Shipping (billed later)
+            </div>
+            <div class="invoice-amount not-bold">
+              - -
+            </div>
+          </div>
+          <div class="invoice-line">
+            <div class="invoice-label">
+              Tax ({ data.get('order.taxRate') * 100 }%)
+            </div>
+            <div class="invoice-amount">
+              { renderCurrency(data.get('order.currency'), data.get('order.tax'))}&nbsp;{ data.get('order.currency').toUpperCase() }
+            </div>
+          </div>
+          <div class="invoice-line invoice-total">
+            <div class="invoice-label">
+              Total
+            </div>
+            <div class="invoice-amount">
+              { renderCurrency(data.get('order.currency'), data.get('order.total'))}&nbsp;{ data.get('order.currency').toUpperCase() }
+            </div>
+          </div>
+          <div class="invoice-line">
+            <div class="invoice-label">Est. Ship Date</div>
+            <div class="invoice-amount">Early 2017</div>
+          </div>
+          <button class="bottom checkout-button">Checkout</button>
+        </div>
+      </cart>
     </div>
+
+    <!-- CHECKOUT -->
+    <div class="checkout-modal modal">
+      <div class="checkout-container">
+        <div class="checkout">
+          <div class="continue-shopping">
+            <h1><i class="arrow-left"></i>Continue Shopping<i class="shopping-bag"></i></h1>
+          </div>
+          <cart>
+            <h1>
+              Order Summary
+            </h1>
+
+            <lineitems if="{ !isEmpty() }">
+              <div class="product-text-container">
+                <span if="{ !data.get('locked') }" class="product-quantity-container">
+                  <quantity-select-control></quantity-select-control>
+                </span>
+                <span if="{ data.get('locked') }" class="product-quantity-container locked">
+                  { data.get('quantity') }
+                </span>
+                <span class="product-description">
+                  <span class="product-name">{ data.get('productName') }</span>
+                  <p>{ data.get('description') }</p>
+                </span>
+              </div>
+              <div class="product-image-container">
+                <img src="images/Candle-Product.png" alt="{ data.get('productName') }"></img>
+              </div>
+              <!-- <div onclick="{ delete }" class="product-delete"></div> -->
+              <div class="product-price-container invoice-amount">
+                <div class="product-price">
+                  { renderCurrency(parentData.get('currency'), data.get().price * data.get().quantity) }
+                  { parentData.get('currency').toUpperCase() }
+                </div>
+                <div if="{ data.get().listPrice > data.get().price }" class="product-list-price invoice-amount">
+                  { renderCurrency(parentData.get('currency'), data.get().listPrice * data.get().quantity) }
+                  { parentData.get('currency').toUpperCase() }
+                </div>
+              </div>
+            </lineitems>
+
+            <div class="promo">
+              <div class="promo-row">
+                <promocode class="input" placeholder="Coupon Code"></promocode>
+                <button class="{ loading: applying }" onclick="{ applyPromoCode }">Apply</button>
+                <div class="promo-message" if="{ data.get('order.promoCode') && !promoMessage && !applying }">
+                  Don't forget to apply your code!
+                </div>
+                <div class="promo-message" if="{ promoMessage }">
+                  { promoMessage }
+                </div>
+              </div>
+            </div>
+            <div class="invoice-discount invoice-line animated fadeInUp" if="{ data.get('order.discount') > 0 }">
+              <div class="invoice-label">
+                Discount:
+              </div>
+              <div class="invoice-amount">
+                { renderCurrency(data.get('order.currency'), data.get('order.discount'))}&nbsp;{ data.get('order.currency').toUpperCase() }
+              </div>
+            </div>
+            <div class="invoice-line">
+              <div class="invoice-label">
+                Subtotal
+              </div>
+              <div class="invoice-amount">
+                { renderCurrency(data.get('order.currency'), data.get('order.subtotal'))}&nbsp;{ data.get('order.currency').toUpperCase() }
+              </div>
+            </div>
+            <div class="invoice-line">
+              <div class="invoice-label">
+                Shipping (billed later)
+              </div>
+              <div class="invoice-amount not-bold">
+                - -
+              </div>
+            </div>
+            <div class="invoice-line">
+              <div class="invoice-label">
+                Tax ({ data.get('order.taxRate') * 100 }%)
+              </div>
+              <div class="invoice-amount">
+                { renderCurrency(data.get('order.currency'), data.get('order.tax'))}&nbsp;{ data.get('order.currency').toUpperCase() }
+              </div>
+            </div>
+            <div class="invoice-line invoice-total">
+              <div class="invoice-label">
+                Total
+              </div>
+              <div class="invoice-amount">
+                { renderCurrency(data.get('order.currency'), data.get('order.total'))}&nbsp;{ data.get('order.currency').toUpperCase() }
+              </div>
+            </div>
+            <div class="invoice-line">
+              <div class="invoice-label">Estimated Ship Date</div>
+              <div class="invoice-amount">Early 2017</div>
+            </div>
+          </cart>
+          <checkout>
+            <div class="contact-information">
+              <h1>
+                Contact Information
+              </h1>
+              <div class="fields">
+                <user-name class="input" placeholder="Name"></user-name>
+                <user-email class="input" placeholder="Email"></user-email>
+              </div>
+            </div>
+            <div class="shipping-information">
+              <h1>
+                Shipping Information
+              </h1>
+              <div class="fields">
+                <shippingaddress-line1 class="input" placeholder="Address"></shippingaddress-line1>
+                <shippingaddress-line2 class="input" placeholder="Suite"></shippingaddress-line2>
+              </div>
+              <div class="fields">
+                <shippingaddress-city class="input" placeholder="City"></shippingaddress-city>
+                <shippingaddress-postalcode class="input" placeholder="Postal Code"></shippingaddress-postalcode>
+              </div>
+              <div class="fields">
+                <shippingaddress-state class="input" placeholder="State"></shippingaddress-state>
+                <shippingaddress-country class="input" placeholder="Country"></shippingaddress-country>
+              </div>
+            </div>
+            <div class="gift-options">
+              <h1>
+                Gift Options
+              </h1>
+              <div class="fields">
+                <gift-toggle>
+                  <label for="order.gift">This is a gift.</label>
+                </gift-toggle>
+              </div>
+              <div class="fields" if="{ data.get('order.gift') }">
+                <gift-message placeholder="Please enter any special instructions for your gift such as custom greetings.">
+                </gift-message>
+              </div>
+            </div>
+
+            <div class="payment-information">
+              <h1>
+                Payment Information <i class="lock"></i>
+              </h1>
+
+              <div class="fields">
+                <card-number class="input" name="number" placeholder="Card Number"></card-number>
+                <card-expiry class="input" name="expiry" placeholder="MM / YY"></card-expiry>
+                <card-cvc class="input" name="cvc" placeholder="CVC"></card-cvc>
+              </div>
+
+                <!-- <div class="card-types"> -->
+                <!--   <div> -->
+                <!--     <img data-lazy="/img/card-icons/visa.png"> -->
+                <!--   </div> -->
+                <!--   <div> -->
+                <!--     <img data-lazy="/img/card-icons/mastercard.png"> -->
+                <!--   </div> -->
+                <!--   <div> -->
+                <!--     <img data-lazy="/img/card-icons/discover.png"> -->
+                <!--   </div> -->
+                <!--   <div> -->
+                <!--     <img data-lazy="/img/card-icons/amex.png"> -->
+                <!--   </div> -->
+                <!-- </div> -->
+
+              <a href="//www.stripe.com" target="_blank"><img class="stripe-logo" src="/images/stripelogo.png"></a>
+            </div>
+
+            <div class="confirmation">
+              <h1>
+                Almost Done
+              </h1>
+
+              <terms>
+                <label for="terms">I agree to LuDela's <a href="/legal" target="_blank">terms of service</a>.</label>
+              </terms>
+              <button class="{ loading: loading || checkedOut }" type="submit">Confirm Pre-order</button>
+              <div class="error" if="{ errorMessage }">
+                { errorMessage }
+              </div>
+            </div>
+          </checkout>
+        </div>
+        <div class="checkout-bottom-buffer"></div>
+      </div>
+      <div class="thankyou">
+        <p>Thank you for making the world a little brighter! You will receive a confirmation email soon.</p>
+
+        <p>Your order number is <strong></strong>.</p>
+
+        <p style="text-align:center">Tell your friends about LuDela!</p>
+        <div class="social">
+          <a class="menu__social"  href="http://facebook.com/JoinLudela" target="_blank">
+            <span class="icon icon-facebook"> </span>
+          </a>
+          <a class="menu__social"  href="http://twitter.com/JoinLudela" target="_blank">
+            <span class="icon icon-twitter"> </span>
+          </a>
+          <a class="menu__social"  href="https://www.pinterest.com/joinludela" target="_blank">
+            <span class="icon icon-pinterest2"> </span>
+          </a>
+        </div>
+
+      </div>
+      <div class="modal-close">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
 
     <!-- Loader -->
     <div class="loader">
@@ -1102,6 +1174,7 @@
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.min.js"></script>
     <script type="text/javascript" src="/js/cookies.min.js"></script>
     <script src="/js/checkout.js"></script>
+    <script src="/js/relaunch/cart.js"></script>
     <script src="js/relaunch/ludela.js"></script>
     <script src="js/relaunch/store.js"></script>
 
