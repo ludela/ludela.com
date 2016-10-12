@@ -1,28 +1,30 @@
-
-
 &.nav-open
   left 410px
   transition left 350ms ease-out
 
-  {component(header-bar)}
-    left 410px
-    transition left 350ms ease-out
-
-  {component(footer-bar)}
-    left: 410px
-    transition left 350ms ease-out
-
 &#about
-  color rgb(241, 234, 208)
-  width 100vw
-  position fixed
-  transition left 350ms ease-out
-  text-align center
+  position absolute
   top 0
-  background -webkit-linear-gradient(#ee9347, #f2bc3d)
-  background -o-linear-gradient(#ee9347, #f2bc3d)
-  background -moz-linear-gradient(#ee9347, #f2bc3d)
-  background linear-gradient(#ee9347, #f2bc3d)
+  width 100vw
+  height 100vh
+  text-align center
+  overflow-y scroll
+  overflow-x hidden
+  color rgb(241, 234, 208)
+  transition left 350ms ease-out
+  background none
+
+  .story-background
+    position: fixed
+    top: 0
+    left 0
+    width 100vw
+    height 100vh
+    z-index -2
+    background -webkit-linear-gradient(#ee9347, #f2bc3d)
+    background -o-linear-gradient(#ee9347, #f2bc3d)
+    background -moz-linear-gradient(#ee9347, #f2bc3d)
+    background linear-gradient(#ee9347, #f2bc3d)
 
   .about__content
     max-width 1200px
@@ -55,24 +57,14 @@
   #step-1
     opacity 1
     background none
-    height 100vh
-    overflow-y hidden
-    transform translate3d(0, -100vh, 0)
-    transition all 750ms ease
-    &.scroll
-      overflow-y scroll
-
-    .header, .sub-header
-      transform translate3d(0, -40px, 0)
-      transition all 700ms ease-in
+    height auto
+    min-height 150vh
+    position: static
 
     .date
       display inline-block
       width 33%
       position relative
-      transform translate3d(0, 50vh, 0)
-      transition all 1s ease-in
-      transition-delay 350ms
 
       h2
         font-size 130px
@@ -87,8 +79,6 @@
         top -182px
         position absolute
         z-index 298
-
-
 
     .copy
       display inline-block
@@ -105,8 +95,6 @@
         width 350px
         text-shadow 0px 2px 13px rgba(0, 0, 0, 0.3)
         z-index 296
-
-
 
       p
         font-size 20px
@@ -130,6 +118,7 @@
         position absolute
         margin-top 10px
         height 300px
+        z-index -1
 
 
     .africa
@@ -139,85 +128,13 @@
       width 65%
       opacity 0.75
       z-index -1
-      transform translate3d(0, 20vh, 0)
-      transition all 1s ease-in
-      transition-delay 350ms
-
-  &.is-step-1
-    #step-1
-      transform translate3d(0, 5vh, 0)
-      transition all 750ms ease
-
-      .header, .sub-header
-        transform translate3d(0, 0, 0)
-        transition all 700ms ease
-        transition-delay 350ms
-
-      .africa
-        transform translate3d(0, 0, 0)
-        transition all 1s ease
-
-      .date
-        transform translate3d(0, 0, 0)
-        transition all 1s ease
-
-  &.is-step-3, &.is-step-4, &.is-step-5
-    #step-1
-      transform translate3d(0, -200vh, 0)
-
-
-@media screen and (max-width 980px)
-  &.nav-open
-    left 0
-
-    {component(header-bar)}
-      left 0
-      z-index 999
-
-    {component(footer-bar)}
-      left: 0
 
 @media screen and (max-width 680px)
-  &.nav-open
-    left 0
-
-    {component(header-bar)}
-      left 0
-      z-index 999
-
-    {component(footer-bar)}
-      left: 0
 
   &#about
-    position: absolute;
-    height 120vh
-
-    &.is-step-1, &.is-step-2,&.is-step-3, &.is-step-4, &.is-step-5
-      #step-1
-        height 120vh
-        overflow-y: hidden;
-        position: static
-        transform translate3d(0, 5vh, 0)
-        transition all 750ms ease
-
-        .header, .sub-header
-          transform translate3d(0, 0, 0)
-          transition all 700ms ease
-          transition-delay 350ms
-
-        .africa
-          transform translate3d(0, 0, 0)
-          transition all 1s ease
-
-        .date
-          transform translate3d(0, 0, 0)
-          transition all 1s ease
 
     .about__content
       padding 0
-
-    #footer
-      background-size cover
 
     h1
       font-size 48px
@@ -228,6 +145,9 @@
       line-height 1
 
     #step-1
+      height 100vh
+      position: static
+
       .date
         position relative
         left 0
@@ -269,3 +189,8 @@
           width 100%
           max-width 100%
           font-size 15px
+
+@media screen and (max-width 480px)
+
+  &.nav-open
+    left 0

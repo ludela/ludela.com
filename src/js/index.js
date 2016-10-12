@@ -1,19 +1,21 @@
 import jQuery from 'jquery';
 import panels from './panels';
 import scroller from './scroller';
-import about from './about';
 import shell from './shell';
+import menu from './menu';
 import video from './video';
 import framework from './framework';
 import scrollify from 'jquery-scrollify';
+import header from './header';
 
 window.$ = window.jQuery = jQuery;
 
 jQuery(function ($) {
   panels($);
-  scrollify($);
+  header($);
+  menu($);
+  // scrollify($);
   // scroller($);
-  about($);
   shell($);
   video($);
   framework($);

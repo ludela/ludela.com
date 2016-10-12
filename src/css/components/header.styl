@@ -1,24 +1,8 @@
-#about, #general
-  header
-    width 100vw
-    text-align center
-    position: fixed !important;
-    top: 0
-    left: 0
-
-    nav
-      width: 100%;
-      padding: 40px;
-
-      .call-to-action.button
-        margin 0
-
-      .checkout-button
-        top 12px
-
-
-@media screen and (max-width: 980px)
-  #about header nav, #general header nav
-    .checkout-button
-        right: 20px;
-        top: 18px
+#site-header
+  width 100vw
+  text-align center
+  position: fixed !important;
+  transition left 350ms ease-out
+  top: 0
+  left: 0
+  z-index 9999

@@ -9,16 +9,14 @@ $height = 100vh
     top 0
     left 0
     width 100vw
-    position absolute
-    transform translate3d(0, $height, 0)
-    transition all 750ms ease
-    height $height
+    position static
+    height auto
 
     .our-story
       width $width
-      height: $height
+      height: auto
       margin 0 auto
-      position absolute
+      position relative
       left 50%
       top 0
       margin-left ($width * -0.5)
@@ -28,17 +26,13 @@ $height = 100vh
         max-width 1200px
         text-align center
         position absolute
-        top 75px
+        top 40px
 
     .story-1, .story-2, .story-3, .story-4, .story-5, .story-6, .story-7, .story-8, .story-9
-      position absolute
+      height 110vh
+      position relative
+      margin-bottom 40px
       width 100vw
-      height $height
-      overflow-y hidden
-      left 0
-
-      &.scroll
-        overflow-y scroll
 
       .story__content
         width 1200px
@@ -48,9 +42,9 @@ $height = 100vh
 
       .story-img
         position absolute
-        top 0
+        top 40%
         left 0
-        height $height * 0.8
+        height auto
         width $width * 0.4
 
         h3
@@ -58,30 +52,21 @@ $height = 100vh
           font-family "proxima-nova"
           color rgb(241, 234, 208)
           text-transform uppercase
+          margin-bottom 0
           font-weight 100
           line-height 1
           width 100%
           text-align center
-          position absolute
-          left 0
-          top 30%
-          transform translate3d(0, (0.2 * $height), 0)
-          transition all 1s ease-in
 
         img
-          position absolute
-          top 50%
-          left 0
           width 100%
           height auto
-          transform translate3d(0, (-0.3 * $height), 0)
-          transition all 750ms ease-in
 
 
       .story-text
         position absolute
         left $width * 0.5
-        top 0
+        top 40%
         width 530px
         z-index 99
         display flex
@@ -97,9 +82,7 @@ $height = 100vh
           text-align left
           text-shadow 0px 2px 13px rgba(0,0,0,0.3)
           z-index 296
-          position relative
-          top 0
-          left 0
+          margin-bottom 40px
 
         p
           font-size 20px
@@ -111,333 +94,65 @@ $height = 100vh
           z-index 295
           margin 0
           margin-top 0
+          margin-bottom 50px
           position relative
           width 100%
+          height: 100vh
           top 0
           left 0
           display flex
           flex-direction column
 
-      .line-top
-        position relative
-        top -5vh
-        background -webkit-linear-gradient(rgba(241, 234, 208, 0.5), rgba(241, 234, 208, 0.1))
-        background -o-linear-gradient(rgba(241, 234, 208, 0.5), rgba(241, 234, 208, 0.1))
-        background -moz-linear-gradient(rgba(241, 234, 208, 0.5), rgba(241, 234, 208, 0.1))
-        background linear-gradient(rgba(241, 234, 208, 0.5), rgba(241, 234, 208, 0.1))
-        display block
-        width 8px
-        height (($height * 0.2) + 400 )
-        margin-top 24px
-        z-index 999
 
       .line
-        background -webkit-linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0.5))
-        background -o-linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0.5))
-        background -moz-linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0.5))
-        background linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0.5))
+        background -webkit-linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0.1))
+        background -o-linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0.1))
+        background -moz-linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0.1))
+        background linear-gradient(rgba(241, 234, 208, 1), rgba(241, 234, 208, 0.1))
         display block
         width 8px
         margin-top 24px
+        height auto
+        max-height 100vh
         flex-grow 1
 
-
-
     .story-1
-      top 0
 
       .story-img
-        img
-          top 56%
+        top 30%
 
       .story-text
+        top 40%
 
-        .line-top
-          background none
-          height 45vh
-
-      .line
-        height $height * 0.6
-
-    .story-2
-      top $height
+    .story-2, .story-6
 
       .story-img
+        top 42%
         h3
-          top 23%
+          margin-bottom 52px
 
-      .story-text
-        top 0
-
-        .line-top
-          height 14vh
-
-      .line
-        height $height * 0.68
-
-    .story-3
-      top $height * 2
+    .story-3, .story-5
 
       .story-img
+        top 39%
         h3
-          top 24%
-
-      .story-text
-        .line-top
-          height 16.3vh
-
-      .line
-        height $height * 0.6
-
-    .story-4
-      top $height * 3
-
-      .story-img
-        h3
-          top 22%
-
-      .story-text
-        top 0
-
-        .line-top
-          height 18vh
-
-      .line
-        height  $height * 0.4
-
-    .story-5
-      top $height * 4
-
-      .story-img
-        h3
-          top 24%
-
-      .story-text
-        .line-top
-          height 16.3vh
-
-      .line
-        height $height * 0.65
+          margin-bottom 52px
 
     .story-6
-      top $height * 5
-
-      .story-img
-        h3
-          top 22%
 
       .story-text
-        top 0
+        height 115vh
 
-        .line-top
-          height 14vh
-
-      .line
-        height $height * 0.68
-
-    .story-7
-      top $height * 6
-
-      .story-img
-        h3
-          top 15%
+    .story-7, .story-8, .story-9
 
       .story-text
-        top 0
-
-        .line-top
-          height 27vh
-
-      .line
-        height  $height * 0.66
-
-    .story-8
-      top $height * 7
-
-      .story-img
-        h3
-          top 18%
-        img
-          top 45%
-
-      .story-text
-        top 0
-
-        .line-top
-          height 220px
-
-      .line
-        height  $height * 0.66
+        top 55%
 
     .story-9
-      top $height * 8
-      margin-bottom 200px
-
       .story-img
-        h3
-          top 15%
         img
-          top 12%
-
-      .story-text
-        top 0
-
-        .line-top
-          height 250px
-
-  &.is-step-4
-
-    &.is-story-1 #step-4
-      transform translate3d(0, 0, 0)
-      transition all 750ms ease
-
-      .story-1
-        h3
-          transform translate3d(0, 0, 0)
-          transition all 750ms ease
-
-        img
-          transform translate3d(0, 0, 0)
-          transition all 1s ease
-
-    &.is-story-2 #step-4
-      transform translate3d(0, (-1 * $height), 0)
-      transition all 750ms ease
-
-      .story-2
-        h3
-          transform translate3d(0, 0, 0)
-          transition all 1s ease
-          transition-delay 500ms
-
-        img
-          transform translate3d(0, (-0.1 * $height), 0)
-          transition all 1s ease
-          transition-delay 500ms
-
-    &.is-story-3 #step-4
-      transform translate3d(0, (-2 * $height), 0)
-      transition all 750ms ease
-
-      .story-3
-        h3
-          transform translate3d(0, 0, 0)
-          transition all 1s ease
-          transition-delay 500ms
-
-        img
-          transform translate3d(0, (-0.1 * $height), 0)
-          transition all 1s ease
-          transition-delay 500ms
-
-    &.is-story-4 #step-4
-      transform translate3d(0, (-3 * $height), 0)
-      transition all 750ms ease
-
-      .story-4
-        h3
-          transform translate3d(0, 0, 0)
-          transition all 1s ease
-          transition-delay 500ms
-
-        img
-          transform translate3d(0, (-0.05 * $height), 0)
-          transition all 1s ease
-          transition-delay 500ms
-
-    &.is-story-5 #step-4
-      transform translate3d(0, (-4 * $height), 0)
-      transition all 750ms ease
-
-      .story-5
-        h3
-          transform translate3d(0, 0, 0)
-          transition all 1s ease
-          transition-delay 500ms
-
-        img
-          transform translate3d(0, (-0.1 * $height), 0)
-          transition all 1s ease
-          transition-delay 500ms
-
-    &.is-story-6 #step-4
-      transform translate3d(0, (-5 * $height), 0)
-      transition all 750ms ease
-
-      .story-6
-        h3
-          transform translate3d(0, (0.02 * $height), 0)
-          transition all 1s ease
-          transition-delay 500ms
-
-        img
-          transform translate3d(0, (-0.1 * $height), 0)
-          transition all 1s ease
-          transition-delay 500ms
-
-    &.is-story-7 #step-4
-      transform translate3d(0, (-6 * $height), 0)
-      transition all 750ms ease
-
-      .story-7
-        h3
-          transform translate3d(0, (0.02 * $height), 0)
-          transition all 1s ease
-          transition-delay 500ms
-
-        img
-          transform translate3d(0, (-0.1 * $height), 0)
-          transition all 1s ease
-          transition-delay 500ms
-
-    &.is-story-8 #step-4
-      transform translate3d(0, (-7 * $height), 0)
-      transition all 750ms ease
-
-      .story-8
-        h3
-          transform translate3d(0, (0.05 * $height), 0)
-          transition all 1s ease
-          transition-delay 500ms
-
-        img
-          transform translate3d(0, 0, 0)
-          transition all 1s ease
-          transition-delay 500ms
-
-    &.is-story-9 #step-4
-      transform translate3d(0, (-8 * $height), 0)
-      transition all 750ms ease
-
-      .story-9
-        h3
-          transform translate3d(0, (0.05 * $height), 0)
-          transition all 1s ease
-          transition-delay 500ms
-
-        img
-          transform translate3d(0, 0, 0)
-          transition all 1s ease
-          transition-delay 500ms
-
-  &.is-step-5
-
-    #step-4
-      transform translate3d(0, (-9 * $height), 0)
-      transition all 750ms ease
-
-      .story-9
-        h3
-          transform translate3d(0, (0.05 * $height), 0)
-          transition all 1s ease
-          transition-delay 500ms
-
-        img
-          transform translate3d(0, 0, 0)
-          transition all 1s ease
-          transition-delay 500ms
-
-
+          position relative
+          top -200px
 
 @media screen and (max-width 1200px)
   &#about
@@ -458,8 +173,10 @@ $height = 100vh
         .story-text
           left 47vw
           width 45vw
+          display -webkit-flex
           display flex
           flex-direction column
+          -webkit-flex-direction column
           height 100vh
 
 
@@ -474,39 +191,8 @@ $height = 100vh
             width 4px
             flex-grow 1
 
-          .line-top
-            width 4px
-            height 20vh
-
-      .story-1 .story-text .line-top
-        height 44vh
-
-      .story-7 .story-text .line-top
-        height 33vh
-
-      .story-8 .story-text .line-top
-        height 33vh
-
-      .story-9 .story-text .line-top
-        height 33vh
-
-      .story-9 .story-img img
-        top 20vh
-
 @media screen and (max-width 680px)
   &#about
-
-
-    .story-background
-      width 100vw
-      height 120vh
-      position: fixed
-      top: 0
-      left 0
-      background -webkit-linear-gradient(#ee9347, #f2bc3d)
-      background -o-linear-gradient(#ee9347, #f2bc3d)
-      background -moz-linear-gradient(#ee9347, #f2bc3d)
-      background linear-gradient(#ee9347, #f2bc3d)
 
     #step-4
       position static
@@ -514,14 +200,15 @@ $height = 100vh
 
       .our-story
         h1
-          top: 90px
+          top: 0
 
       h1
         margin-top 0
+
       .story-1, .story-2, .story-3, .story-4, .story-5, .story-6, .story-7, .story-8, .story-9
         height auto
         position static
-        margin-bottom 40px
+        margin 40px 0
 
         br
           display none
@@ -549,7 +236,7 @@ $height = 100vh
 
         .story-img
           position relative
-          height 20vh
+          height 150px
           display inline-block
           width 100vw
           margin 10vw 0
@@ -558,12 +245,14 @@ $height = 100vh
           top 5vh
 
           img
-            top 0
+            position absolute
+            left 0
             width 100%
 
 
           h3
-            top 7vh
+            position absolute
+            bottom 0
             font-size 35px
             z-index 999
             opacity 0.75
@@ -578,175 +267,14 @@ $height = 100vh
           h2, p
             font-size 15px
 
-    &.is-step-1, &.is-step-2,&.is-step-3, &.is-step-4, &.is-step-5, &.is-story-1, &.is-story-2, &.is-story-3, &.is-story-4, &.is-story-5, &.is-story-6, &.is-story-7, &.is-story-8, &.is-story-9
-      #step-4
-        transform translate3d(0, 0, 0)
-        transition all 750ms ease
-        .story-1
-          margin-top 20px
+      .story-1
+        margin-top 100px
 
-          h3
-            transform translate3d(0, 0, 0)
-            transition all 750ms ease
+      .story-9
+        margin-bottom 160px
+
+        .story-img
+          height 200px
 
           img
-            transform translate3d(0, 0, 0)
-            transition all 1s ease
-
-          .story-text
-            h2, p
-              top 10vh
-
-          .story-img
-            top 15vh
-            img
-              top -5vh
-            h3
-              top 4vh
-
-        .story-2
-          top $height * 1
-
-          h3
-            transform translate3d(0, 0, 0)
-            transition all 1s ease
-            transition-delay 500ms
-
-          img
-            transform translate3d(0, (-0.1 * $height), 0)
-            transition all 1s ease
-            transition-delay 500ms
-
-          .story-img
-            img
-              top 5vh
-
-        .story-3
-          top $height * 2
-
-          h3
-            transform translate3d(0, 0, 0)
-            transition all 1s ease
-            transition-delay 500ms
-
-          img
-            transform translate3d(0, (-0.1 * $height), 0)
-            transition all 1s ease
-            transition-delay 500ms
-
-          .story-img
-            img
-              top -10vh
-
-
-        .story-4
-          top $height * 3
-          h3
-            transform translate3d(0, 0, 0)
-            transition all 1s ease
-            transition-delay 500ms
-
-          img
-            transform translate3d(0, (-0.05 * $height), 0)
-            transition all 1s ease
-            transition-delay 500ms
-
-          .story-img
-            img
-              top 3vh
-
-        .story-5
-          top $height * 4
-
-          h3
-            transform translate3d(0, 0, 0)
-            transition all 1s ease
-            transition-delay 500ms
-
-          img
-            transform translate3d(0, (-0.1 * $height), 0)
-            transition all 1s ease
-            transition-delay 500ms
-
-          .story-img
-            img
-              top 10vh
-
-        .story-6
-          top $height * 5
-
-          h3
-            transform translate3d(0, (0.02 * $height), 0)
-            transition all 1s ease
-            transition-delay 500ms
-
-          img
-            transform translate3d(0, (-0.1 * $height), 0)
-            transition all 1s ease
-            transition-delay 500ms
-
-          .story-img
-            img
-              top 10vh
-
-        .story-7
-          top $height * 6
-
-          h3
-            transform translate3d(0, (0.02 * $height), 0)
-            transition all 1s ease
-            transition-delay 500ms
-
-          img
-            transform translate3d(0, (-0.1 * $height), 0)
-            transition all 1s ease
-            transition-delay 500ms
-
-          .story-img
-            img
-              top 10vh
-            h3
-              top 12vh
-
-        .story-8
-          top $height * 7
-
-          h3
-            transform translate3d(0, (0.05 * $height), 0)
-            transition all 1s ease
-            transition-delay 500ms
-
-          img
-            transform translate3d(0, 0, 0)
-            transition all 1s ease
-            transition-delay 500ms
-
-          .story-img
-            img
-              top 2vh
-
-        .story-9
-          top $height * 8
-          margin-bottom: 160px
-
-          h3
-            transform translate3d(0, (0.05 * $height), 0)
-            transition all 1s ease
-            transition-delay 500ms
-
-          img
-            transform translate3d(0, 0, 0)
-            transition all 1s ease
-            transition-delay 500ms
-
-          .story-img
-            img
-              left 50vw
-              top -7vh
-              width 44vw
-              margin-left -22vw
-
-        .story-7, .story-8, .story-9
-          .story-img
-            h3
-              padding 0
+            top -150px

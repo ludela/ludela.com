@@ -10114,21 +10114,6 @@ function panels ($) {
   var $window = $(window);
   var $body = $('html, body');
   var $splash = $('.splash');
-  var $about = $('#about');
-  var steps = [
-    'A-Seed-Was-Planted',
-    'Better-Light',
-    'The-Team',
-    'Our-Story-1',
-    'Our-Story-2',
-    'Our-Story-3',
-    'Our-Story-4',
-    'Our-Story-5',
-    'Our-Story-6',
-    'Our-Story-7',
-    'Our-Story-8',
-    'Our-Story-9'
-  ];
 
   var currentStep = 1;
   var totalSteps;
@@ -10138,10 +10123,6 @@ function panels ($) {
   if ($splash.length) {
     totalSteps = $('.splash__content').length;
     $splash.addClass('is-step-' + currentStep);
-  }
-
-  if ($about.length) {
-    $('html, body').css('overflow', 'initial');
   }
 
   $document.on('setpanel', function (ev, index) {
@@ -10158,70 +10139,85 @@ function panels ($) {
     }
   });
 
-  $document.on('setabout', function (ev, index) {
-		if( $(window).width() > 680 ) {
-	    $('.scroll-container').addClass('scroll-stop');
-	    $('#step-'+currentStep+', #step-'+index).animate({scrollTop: 0}, 750);
-
-	    console.log($('#step-'+index).scrollTop());
-
-	    $about
-	      .removeClass('is-step-' + currentStep)
-	      .addClass('is-step-' + (currentStep = index));
-
-	    $('.active-dot').removeClass('active-dot')
-	    $('.dot-'+currentStep).addClass('active-dot');
-
-	    var Hash = '#'+steps[index -1];
-	    if (window.location.hash !== Hash) {
-	      window.location.hash = Hash;
-	    }
-
-	    setTimeout( function(){
-	      $('.scroll').removeClass('scroll');
-	      $('#step-'+currentStep).addClass('scroll');
-	      $('.scroll-container').removeClass('scroll-stop');}, 1000)
-	  }
-	});
-
   $document.on('nextpanel', function (ev, dir) {
     $document.trigger('setpanel', currentStep + dir);
   });
+}
 
-  $document.on('setstory', function (ev, index, prev) {
+function header ($) {
 
-		if( $(window).width() > 680 ) {
+	  var header = "<header>"
+	    +"<nav>"
+	      +"<div id='hamburger'>"
+	        +"<span></span>"
+	        +"<span></span>"
+	        +"<span></span>"
+	        +"<span></span>"
+	      +"</div>"
+	      +"<a href='/'>"
+	        +"<img src='/images/textless-logo.png' class='logo'>"
+	      +"</a>"
+	      +"<a href='/store' class='button call-to-action'>"
+	        +"Shop Now"
+	      +"</a>"
+	      +"<div class='progress'>"
+	        +"<span class='bar'></span>"
+	        +"<span class='message'>Batch1 <span class='percent'>53%</span> Reserved</span>"
+	      +"</div>"
+	    +"</nav>"
+	  +"</header>"
 
-	    $('.scroll-container').addClass('scroll-stop');
+	if ($('#site-header').length) {
+	  $('#site-header').html(header);
+	}
+}
 
-	    var story = 9;
-	    if (index <=9 && $(window).width() > 680) {
-	      story = index;
-	      $('.story-'+index+1+', .story-'+index+', .story-'+index-1).animate({scrollTop: 0}, 750);
-	      $about.removeClass('is-footer');
-	    } else {
-				story = 1;
-	    }
+function menu ($) {
 
-	    $about
-	      .removeClass('is-story-' + currentStory)
-	      .addClass('is-story-' + (currentStory = story));
+	  var menu = "<nav id='menu' class='menu'>"
+      +"<div class='menu__close'>"
+        +"<span></span>"
+				+"<span></span>"
+				+"<span></span>"
+				+"<span></span>"
+			+"</div>"
+      +"<div class='menu__logo'>"
+        +"<a href='/'>"
+          +"<span class='icon icon-ludela-logo'></span>"
+				+"</a>"
+			+"</div>"
+			+"<a class='menu__link' href='/account'>"
+	        +"Refer a Friend"
+	      +"</a>"
+			+"<a class='menu__link' href='/about'>"
+	        +"about us"
+	      +"</a>"
+			+"<a class='menu__link' href='/faq'>"
+	        +"faq"
+	      +"</a>"
+			+"<a class='menu__link' href='/legal'>"
+	        +"legal"
+	      +"</a>"
+			+"<a class='menu__link' href='/careers'>"
+	        +"careers"
+	      +"</a>"
+			+"<a class='menu__link' href='/contact'>"
+	        +"contact"
+	      +"</a>"
+			+"<a class='menu__social'  href='http://facebook.com/JoinLudela' target='_blank'>"
+	        +"<span class='icon icon-facebook'> </span>"
+				+"</a>"
+			+"<a class='menu__social'  href='http://twitter.com/JoinLudela' target='_blank'>"
+	        +"<span class='icon icon-twitter'> </span>"
+				+"</a>"
+			+"<a class='menu__social'  href='https://www.pinterest.com/joinludela' target='_blank'>"
+        +"<span class='icon icon-pinterest2'> </span>"
+			+"</a>"
+		+"</nav>'"
 
-	    setTimeout( function(){
-	      $('.scroll').removeClass('scroll');
-	      $('.story-'+story).addClass('scroll');
-	      $('.scroll-container').removeClass('scroll-stop');}, 1000)
-
-	    var Hash = '#'+steps[story + 2];
-	    if (window.location.hash !== Hash) {
-	      window.location.hash = Hash;
-	    }
-		} else {
-			$about
-	      .removeClass('is-story-' + currentStory)
-	      .addClass('is-story-1');
-		}
-  });
+	if ($('#site-menu').length) {
+	  $('#site-menu').html(menu);
+	}
 }
 
 function _debugger ($) {
@@ -10238,9 +10234,6 @@ function _debugger ($) {
 
   $dots.on('click', function () {
     var panelIndex = $(this).data('goto');
-    if($('#about').length){
-      $(document).trigger('setabout', panelIndex);
-    }
   });
 
 }
@@ -10317,22 +10310,8 @@ function scroller ($) {
   var $document = $(document);
   var $window = $(window);
   var $panels = $('.splash__content');
-  var $general = $('#general');
-  var $about = $('#about');
   var $dot = $('.dot');
   var scrollThreshold = 30;
-
-  if ($general.length) {
-    $window.on('scroll', setFooter);
-  }
-
-  function setFooter() {
-    if ($window.scrollTop() + $window.height() > $document.height() - 2) {
-      $general.addClass('is-footer');
-    } else {
-      $('.is-footer').removeClass('is-footer');
-    }
-  }
 
   if ($panels.length) {
 
@@ -10376,156 +10355,6 @@ function scroller ($) {
     }, time);
   }
 }
-
-function about ($)  {
-  var $container = $('.scroll-container');
-  var step = 1;
-  var prevStep = 1;
-  var story = 1;
-  var scroll = true;
-  var steps;
-
-	function debounce(func, wait, immediate){
-	  var timeout, args, context, timestamp, result;
-	  if (null == wait) wait = 100;
-
-	  function later() {
-	    var last = Date.now() - timestamp;
-
-	    if (last < wait && last > 0) {
-	      timeout = setTimeout(later, wait - last);
-	    } else {
-	      timeout = null;
-	      if (!immediate) {
-	        result = func.apply(context, args);
-	        if (!timeout) context = args = null;
-	      }
-	    }
-	  };
-
-	  return function debounced() {
-	    context = this;
-	    args = arguments;
-	    timestamp = Date.now();
-	    var callNow = immediate && !timeout;
-	    if (!timeout) timeout = setTimeout(later, wait);
-	    if (callNow) {
-	      result = func.apply(context, args);
-	      context = args = null;
-	    }
-
-	    return result;
-	  };
-	};
-
-  var listSteps = function () {
-    if ($(window).width() > 680 && $container.length) {
-      steps = [
-        'A-Seed-Was-Planted',
-        'Better-Light',
-        'The-Team',
-        'Our-Story-1',
-        'Our-Story-2',
-        'Our-Story-3',
-        'Our-Story-4',
-        'Our-Story-5',
-        'Our-Story-6',
-        'Our-Story-7',
-        'Our-Story-8',
-        'Our-Story-9'
-      ];
-
-      $('#dots').show();
-    } else if ($container.length) {
-      $('#dots').hide();
-			window.location.hash = 'A-Seed-Was-Planted'
-    }
-  }
-
-  listSteps();
-  $(window).on('load resize', listSteps);
-	$(window).on('resize', function(){
-		location.reload();			
-	})
-
-  if ($container.length && scroll == true ) {
-    window.onscroll = debounce(setStep, 25);
-    window.onload = reload();
-  }
-
-  function setStep(){
-    if ($(window).width() > 680) {
-
-      if (window.location.hash == '') {
-        window.location.hash = steps[0]
-      }
-
-      var hash = window.location.hash;
-      step = steps.indexOf(hash.substring(1, hash.length))+1;
-      var prevStep = step;
-
-      if ( $(window).scrollTop() + $(window).height() + 2 > $(document).height() && step <= 14) {
-        step++;
-      } else if ( $(window).scrollTop() == 0 && step > 1) {
-        step--;
-      }
-
-      if (prevStep !== step) {
-        scroll = false;
-        setTimeout(setScroll, 1000);
-      }
-
-      if (step >= 4) {
-        story = step - 3;
-        step = 4;
-      }
-
-      if (prevStep !== step && story < 2) {
-        $(document).trigger('setabout', step);
-        prevStep = step;
-      }
-
-      if (step == 4) {
-        $(document).trigger('setstory', story);
-      }
-    }
-  }
-
-
-  function reload() {
-    if ($(window).width() > 680) {
-
-      if (window.location.hash == '') {
-        window.location.hash = steps[0]
-      }
-
-      var hash = window.location.hash;
-      step = steps.indexOf(hash.substring(1, hash.length))+1;
-      var prevStep = step;
-
-      if (step >= 4) {
-        story = step - 3;
-        step = 4;
-      }
-
-      if ( story < 2) {
-        $(document).trigger('setabout', step);
-        prevStep = step;
-      }
-
-      if (step == 4) {
-        $(document).trigger('setabout', 4);
-        $(document).trigger('setstory', story);
-      }
-    }
-  }
-
-  function setScroll() {
-    $(window).scrollTop(100);
-    scroll = true;
-  }
-}
-
 
 function shell ($) {
 
@@ -10627,8 +10456,9 @@ window.$ = window.jQuery = jquery;
 jquery(function ($) {
   _debugger($);
   panels($);
+	header($);
+	menu($);
   scroller($);
-  about($);
   shell($);
   video($);
   framework($);
