@@ -246,7 +246,7 @@ quantity-select-control,
 .product-delete {
   position: absolute;
   right: 0;
-  top: -10px;
+  top: -15px;
   font-size: 20px;
 }
 .product-currency {
@@ -840,6 +840,9 @@ button[type=submit] {
 #general cart .product-list-price {
   color: #aaa;
   font-size: 0.9em;
+}
+#general cart .promo button {
+  padding: 0;
 }
 #general cart input[type=text] {
   height: 25px;
