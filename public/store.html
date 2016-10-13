@@ -13,12 +13,8 @@
     <link rel="stylesheet" href="css/relaunch/fonts.css" />
 
     <!-- Our Styles and JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.1/es6-shim.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/layzr.js/2.0.2/layzr.min.js"></script> -->
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/css/selectize.bootstrap3.min.css">
     <link rel="stylesheet" href="css/relaunch/framework.css" />
-    <script src="js/relaunch/framework.js"></script>
 
     <!-- Block Level Styles and JS -->
     <link rel="stylesheet" href="css/relaunch/loader.css" />
@@ -28,17 +24,10 @@
     <link rel="stylesheet" href="css/relaunch/footer.css" />
     <link rel="stylesheet" href="css/relaunch/menu.css" />
 
-    <script src="/js/shop.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.min.js"></script>
-    <script type="text/javascript" src="/js/cookies.min.js"></script>
-    <script src="/js/checkout.js"></script>
-
     <!-- Custom Styling and JS-->
     <!-- <link rel="stylesheet" href="css/relaunch/visuals.css" /> -->
     <link rel="stylesheet" href="css/relaunch/ludela.css" />
     <link rel="stylesheet" href="css/relaunch/site.css" />
-    <script src="js/relaunch/ludela.js"></script>
-    <script src="js/relaunch/store.js"></script>
 
     <script>
       !function(t,e,a){var r,n,c,i,o,s,l,u;if(null==t.analytics){for(r=[],r.methods=["ab","alias","group","identify","off","on","once","page","pageview","ready","track","trackClick","trackForm","trackLink","trackSubmit"],l=r.methods,c=function(t){r[t]=function(){var e;return e=Array.prototype.slice.call(arguments),e.unshift(t),r.push(e),r}},i=0,o=l.length;o>i;i++)s=l[i],c(s);return u=e.createElement("script"),u.async=!0,u.type="text/javascript",u.src=a,n=e.getElementsByTagName("script")[0],n.parentNode.insertBefore(u,n),t.analytics=r}}(window,document,"//cdn.crowdstart.com/a/ludela.js");
@@ -101,10 +90,7 @@
           </div>
 
           <a href="/">
-            <span class="logo icon icon-ludela-logo"> </span>
-          </a>
-          <a href="#cta" class="button call-to-action checkout-button">
-            Pre-order Now
+            <img data-lazy="/images/textless-logo.png" class="logo">
           </a>
         </nav>
       </header>
@@ -117,52 +103,110 @@
       </section>
 
       <!-- CONTENT -->
-      <section class="items">
+      <section class="items essentials">
+        <h2>Essentials</h2>
         <div class="content">
-          <h2>Essentials</h2>
           <div class="item">
             <div class="image">
-              <img src="/images/store-starter.png">
+              <img data-lazy="/images/products/x1/Solo-W-R.png">
+              <img data-lazy="/images/products/x1/Solo-W-O.png">
+              <img data-lazy="/images/products/x1/Solo-W-I.png" class="active">
+              <img data-lazy="/images/products/x1/Solo-W-G.png">
+              <img data-lazy="/images/products/x1/Solo-W-B.png">
+              <img data-lazy="/images/products/x1/Solo-W-P.png">
+              <img data-lazy="/images/products/x1/Solo-G-W.png">
+              <img data-lazy="/images/products/x1/Solo-G-SM.png">
+              <img data-lazy="/images/products/x1/Solo-G-R.png">
+              <img data-lazy="/images/products/x1/Solo-G-B.png">
+              <img data-lazy="/images/products/x1/Solo-G-BM.png">
             </div>
             <div class="title">
-              <h4>Starter Set</h4><span>1 LuDela Candle, 2 Refills</span>
+              <h4>Solo Set</h4><span>1 LuDela Candle, 1 Refills</span>
+            </div>
+            <div class="color-picker picker">
+              <label>Choose your color:</label>
+              <div>
+                <span class="color-r">
+                  <input type="radio" id="solo-color-r" name="color-1">
+                  <label for="solo-color-r">Red</label>
+                </span>
+                <span class="color-o">
+                  <input type="radio" id="solo-color-o" name="color-1">
+                  <label for="solo-color-o">Orange</label>
+                </span>
+                <span class="color-i">
+                  <input type="radio" id="solo-color-i" name="color-1" checked>
+                  <label for="solo-color-i">Ivory</label>
+                </span>
+                <span class="color-g">
+                  <input type="radio" id="solo-color-g" name="color-1">
+                  <label for="solo-color-g">Green</label>
+                </span>
+                <span class="color-b">
+                  <input type="radio" id="solo-color-b" name="color-1">
+                  <label for="solo-color-b">Blue</label>
+                </span>
+                <span class="color-p">
+                  <input type="radio" id="solo-color-p" name="color-1">
+                  <label for="solo-color-p">Purple</label>
+                </span>
+
+                <span class="color-g-w">
+                  <input type="radio" id="solo-color-w" name="color-1">
+                  <label for="solo-color-w">White</label>
+                </span>
+                <span class="color-g-sm">
+                  <input type="radio" id="solo-color-g-sm" name="color-1">
+                  <label for="solo-color-g-sm">Silver</label>
+                </span>
+                <span class="color-g-r">
+                  <input type="radio" id="solo-color-g-r" name="color-1">
+                  <label for="solo-color-g-r">Red</label>
+                </span>
+                <span class="color-g-b">
+                  <input type="radio" id="solo-color-g-b" name="color-1">
+                  <label for="solo-color-g-b">Black</label>
+                </span>
+                <span class="color-g-bm">
+                  <input type="radio" id="solo-color-g-bm" name="color-1">
+                  <label for="solo-color-g-bm">Mercury</label>
+                </span>
+              </div>
             </div>
             <div class="scent-picker picker">
               <label>Choose your scent:</label>
               <select>
                 <option value="No Scent">No Scent</option>
+                <option value="Vanilla Bliss">Vanilla Bliss</option>
+                <option value="Dew Kissed Petals">Dew Kissed Petals</option>
+                <option value="Lavender Escape">Lavender Escape</option>
                 <option value="Pomegranate Delight">Pomegranate Delight</option>
-                <option value="Comforts of Home">Comforts of Home</option>
-                <option value="Midnight Moon">Midnight Moon</option>
-                <option value="Sweet Woods">Sweet Woods</option>
-                <option value="Happy">Happy</option>
-                <option value="Coastal Breeze">Coastal Breeze</option>
-                <option value="Lemon Sage">Lemon Sage</option>
-                <option value="Christmas Forever">Christmas Forever</option>
-                <option value="Madagascar Vanilla">Madagascar Vanilla</option>
-                <option value="Deep Sleep">Deep Sleep</option>
-                <option value="Mindfulness">Mindfulness</option>
-                <option value="Stress Relief">Stress Relief</option>
+                <option value="Mango Driftwood">Mango Driftwood</option>
+                <option value="Turquoise Bay">Turquoise Bay</option>
+                <option value="White Tea and Ginger">White Tea and Ginger</option>
+                <option value="Sheer Linen & Orchid">Sheer Linen & Orchid</option>
+                <option value="Coastal Waters">Coastal Waters</option>
+                <option value="Midnight Showers">Midnight Showers</option>
               </select>
             </div>
             <div class="refill-plan-picker picker">
               <label>Select refill plan:</label>
               <div>
                 <span>
-                  <input type="radio" id="refillx0" name="refill-1" checked>
-                  <label for="refillx0">None</label>
+                  <input type="radio" id="solo-refillx0" name="refill-1" checked>
+                  <label for="solo-refillx0">None</label>
                 </span>
                 <span>
-                  <input type="radio" id="refillx1" name="refill-1">
-                  <label for="refillx1">x1</label>
+                  <input type="radio" id="solo-refillx1" name="refill-1">
+                  <label for="solo-refillx1">x1</label>
                 </span>
                 <span>
-                  <input type="radio" id="refillx2" name="refill-1">
-                  <label for="refillx2">x2</label>
+                  <input type="radio" id="solo-refillx2" name="refill-1">
+                  <label for="solo-refillx2">x2</label>
                 </span>
                 <span>
-                  <input type="radio" id="refillx3" name="refill-1">
-                  <label for="refillx3">x3</label>
+                  <input type="radio" id="solo-refillx3" name="refill-1">
+                  <label for="solo-refillx3">x3</label>
                 </span>
               </div>
             </div>
@@ -174,8 +218,580 @@
               Add To Cart
             </div>
           </div>
+
+          <div class="item">
+            <div class="image">
+              <img data-lazy="/images/products/x2/Duo-W-R.png">
+              <img data-lazy="/images/products/x2/Duo-W-O.png">
+              <img data-lazy="/images/products/x2/Duo-W-I.png" class="active">
+              <img data-lazy="/images/products/x2/Duo-W-G.png">
+              <img data-lazy="/images/products/x2/Duo-W-B.png">
+              <img data-lazy="/images/products/x2/Duo-W-P.png">
+              <img data-lazy="/images/products/x2/Duo-G-W.png">
+              <img data-lazy="/images/products/x2/Duo-G-SM.png">
+              <img data-lazy="/images/products/x2/Duo-G-R.png">
+              <img data-lazy="/images/products/x2/Duo-G-B.png">
+              <img data-lazy="/images/products/x2/Duo-G-BM.png">
+            </div>
+            <div class="title">
+              <h4>Duo Set</h4><span>2 LuDela Candle, 2 Refills</span>
+            </div>
+            <div class="color-picker picker">
+              <label>Choose your color:</label>
+              <div>
+                <span class="color-r">
+                  <input type="radio" id="solo-color-r" name="color-2">
+                  <label for="solo-color-r">Red</label>
+                </span>
+                <span class="color-o">
+                  <input type="radio" id="solo-color-o" name="color-2">
+                  <label for="solo-color-o">Orange</label>
+                </span>
+                <span class="color-i">
+                  <input type="radio" id="solo-color-i" name="color-2" checked>
+                  <label for="solo-color-i">Ivory</label>
+                </span>
+                <span class="color-g">
+                  <input type="radio" id="solo-color-g" name="color-2">
+                  <label for="solo-color-g">Green</label>
+                </span>
+                <span class="color-b">
+                  <input type="radio" id="solo-color-b" name="color-2">
+                  <label for="solo-color-b">Blue</label>
+                </span>
+                <span class="color-p">
+                  <input type="radio" id="solo-color-p" name="color-2">
+                  <label for="solo-color-p">Purple</label>
+                </span>
+
+                <span class="color-g-w">
+                  <input type="radio" id="solo-color-w" name="color-2">
+                  <label for="solo-color-w">White</label>
+                </span>
+                <span class="color-g-sm">
+                  <input type="radio" id="solo-color-g-sm" name="color-2">
+                  <label for="solo-color-g-sm">Silver</label>
+                </span>
+                <span class="color-g-r">
+                  <input type="radio" id="solo-color-g-r" name="color-2">
+                  <label for="solo-color-g-r">Red</label>
+                </span>
+                <span class="color-g-b">
+                  <input type="radio" id="solo-color-g-b" name="color-2">
+                  <label for="solo-color-g-b">Black</label>
+                </span>
+                <span class="color-g-bm">
+                  <input type="radio" id="solo-color-g-bm" name="color-2">
+                  <label for="solo-color-g-bm">Mercury</label>
+                </span>
+              </div>
+            </div>
+            <div class="scent-picker picker">
+              <label>Choose your scent:</label>
+              <select>
+                <option value="No Scent">No Scent</option>
+                <option value="Vanilla Bliss">Vanilla Bliss</option>
+                <option value="Dew Kissed Petals">Dew Kissed Petals</option>
+                <option value="Lavender Escape">Lavender Escape</option>
+                <option value="Pomegranate Delight">Pomegranate Delight</option>
+                <option value="Mango Driftwood">Mango Driftwood</option>
+                <option value="Turquoise Bay">Turquoise Bay</option>
+                <option value="White Tea and Ginger">White Tea and Ginger</option>
+                <option value="Sheer Linen & Orchid">Sheer Linen & Orchid</option>
+                <option value="Coastal Waters">Coastal Waters</option>
+                <option value="Midnight Showers">Midnight Showers</option>
+              </select>
+            </div>
+            <div class="refill-plan-picker picker">
+              <label>Select refill plan:</label>
+              <div>
+                <span>
+                  <input type="radio" id="duo-refillx0" name="refill-2" checked>
+                  <label for="duo-refillx0">None</label>
+                </span>
+                <span>
+                  <input type="radio" id="duo-refillx1" name="refill-2">
+                  <label for="duo-refillx1">x1</label>
+                </span>
+                <span>
+                  <input type="radio" id="duo-refillx2" name="refill-2">
+                  <label for="duo-refillx2">x2</label>
+                </span>
+                <span>
+                  <input type="radio" id="duo-refillx3" name="refill-2">
+                  <label for="duo-refillx3">x3</label>
+                </span>
+              </div>
+            </div>
+            <div class="price">
+              <span>Price:</span>
+              <span>$189.00 USD</span>
+            </div>
+            <div class="call-to-action button">
+              Add To Cart
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="image">
+              <img data-lazy="/images/products/x3/Trio-W-R.png">
+              <img data-lazy="/images/products/x3/Trio-W-O.png">
+              <img data-lazy="/images/products/x3/Trio-W-I.png" class="active">
+              <img data-lazy="/images/products/x3/Trio-W-G.png">
+              <img data-lazy="/images/products/x3/Trio-W-B.png">
+              <img data-lazy="/images/products/x3/Trio-W-P.png">
+              <img data-lazy="/images/products/x3/Trio-G-W.png">
+              <img data-lazy="/images/products/x3/Trio-G-SM.png">
+              <img data-lazy="/images/products/x3/Trio-G-R.png">
+              <img data-lazy="/images/products/x3/Trio-G-B.png">
+              <img data-lazy="/images/products/x3/Trio-G-BM.png">
+            </div>
+            <div class="title">
+              <h4>Trio Set</h4><span>3 LuDela Candle, 3 Refills</span>
+            </div>
+            <div class="color-picker picker">
+              <label>Choose your color:</label>
+              <div>
+                <span class="color-r">
+                  <input type="radio" id="solo-color-r" name="color-3">
+                  <label for="solo-color-r">Red</label>
+                </span>
+                <span class="color-o">
+                  <input type="radio" id="solo-color-o" name="color-3">
+                  <label for="solo-color-o">Orange</label>
+                </span>
+                <span class="color-i">
+                  <input type="radio" id="solo-color-i" name="color-3" checked>
+                  <label for="solo-color-i">Ivory</label>
+                </span>
+                <span class="color-g">
+                  <input type="radio" id="solo-color-g" name="color-3">
+                  <label for="solo-color-g">Green</label>
+                </span>
+                <span class="color-b">
+                  <input type="radio" id="solo-color-b" name="color-3">
+                  <label for="solo-color-b">Blue</label>
+                </span>
+                <span class="color-p">
+                  <input type="radio" id="solo-color-p" name="color-3">
+                  <label for="solo-color-p">Purple</label>
+                </span>
+
+                <span class="color-g-w">
+                  <input type="radio" id="solo-color-w" name="color-3">
+                  <label for="solo-color-w">White</label>
+                </span>
+                <span class="color-g-sm">
+                  <input type="radio" id="solo-color-g-sm" name="color-3">
+                  <label for="solo-color-g-sm">Silver</label>
+                </span>
+                <span class="color-g-r">
+                  <input type="radio" id="solo-color-g-r" name="color-3">
+                  <label for="solo-color-g-r">Red</label>
+                </span>
+                <span class="color-g-b">
+                  <input type="radio" id="solo-color-g-b" name="color-3">
+                  <label for="solo-color-g-b">Black</label>
+                </span>
+                <span class="color-g-bm">
+                  <input type="radio" id="solo-color-g-bm" name="color-3">
+                  <label for="solo-color-g-bm">Mercury</label>
+                </span>
+              </div>
+            </div>
+            <div class="scent-picker picker">
+              <label>Choose your scent:</label>
+              <select>
+                <option value="No Scent">No Scent</option>
+                <option value="Vanilla Bliss">Vanilla Bliss</option>
+                <option value="Dew Kissed Petals">Dew Kissed Petals</option>
+                <option value="Lavender Escape">Lavender Escape</option>
+                <option value="Pomegranate Delight">Pomegranate Delight</option>
+                <option value="Mango Driftwood">Mango Driftwood</option>
+                <option value="Turquoise Bay">Turquoise Bay</option>
+                <option value="White Tea and Ginger">White Tea and Ginger</option>
+                <option value="Sheer Linen & Orchid">Sheer Linen & Orchid</option>
+                <option value="Coastal Waters">Coastal Waters</option>
+                <option value="Midnight Showers">Midnight Showers</option>
+              </select>
+            </div>
+            <div class="refill-plan-picker picker">
+              <label>Select refill plan:</label>
+              <div>
+                <span>
+                  <input type="radio" id="trio-refillx0" name="refill-3" checked>
+                  <label for="trio-refillx0">None</label>
+                </span>
+                <span>
+                  <input type="radio" id="trio-refillx1" name="refill-3">
+                  <label for="trio-refillx1">x1</label>
+                </span>
+                <span>
+                  <input type="radio" id="trio-refillx2" name="refill-3">
+                  <label for="trio-refillx2">x2</label>
+                </span>
+                <span>
+                  <input type="radio" id="trio-refillx3" name="refill-3">
+                  <label for="trio-refillx3">x3</label>
+                </span>
+              </div>
+            </div>
+            <div class="price">
+              <span>Price:</span>
+              <span>$279.00 USD</span>
+            </div>
+            <div class="call-to-action button">
+              Add To Cart
+            </div>
+          </div>
         </div>
       </section>
+
+      <section class="items scents">
+        <h2>Scents</h2>
+        <div class="content">
+          <div class="item">
+            <div class="image">
+              <img data-lazy="/images/products/scent-backgrounds/SC-1-bg.png">
+              <img data-lazy="/images/products/scent-candles/SC-1.png">
+            </div>
+            <div class="title">
+              <h4>Vanilla Bliss</h4><span>$7.00 USD</span>
+            </div>
+            <div class="refill-plan-picker picker">
+              <label>Select refill plan:</label>
+              <div>
+                <span>
+                  <input type="radio" id="scent-1-refillx0" name="scent-refill-1" checked>
+                  <label for="scent-1-refillx0">None</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-1-refillx1" name="scent-refill-1">
+                  <label for="scent-1-refillx1">x1</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-1-refillx5" name="scent-refill-1">
+                  <label for="scent-1-refillx5">x5</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-1-refillx10" name="scent-refill-1">
+                  <label for="scent-1-refillx10">x10</label>
+                </span>
+              </div>
+            </div>
+            <div class="call-to-action button">
+              Add To Cart
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="image">
+              <img data-lazy="/images/products/scent-backgrounds/SC-2-bg.png">
+              <img data-lazy="/images/products/scent-candles/SC-2.png">
+            </div>
+            <div class="title">
+              <h4>Dew Kissed Petals</h4><span>$7.00 USD</span>
+            </div>
+            <div class="refill-plan-picker picker">
+              <label>Select refill plan:</label>
+              <div>
+                <span>
+                  <input type="radio" id="scent-2-refillx0" name="scent-refill-2" checked>
+                  <label for="scent-2-refillx0">None</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-2-refillx1" name="scent-refill-2">
+                  <label for="scent-2-refillx1">x1</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-2-refillx5" name="scent-refill-2">
+                  <label for="scent-2-refillx5">x5</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-2-refillx10" name="scent-refill-2">
+                  <label for="scent-2-refillx10">x10</label>
+                </span>
+              </div>
+            </div>
+            <div class="call-to-action button">
+              Add To Cart
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="image">
+              <img data-lazy="/images/products/scent-backgrounds/SC-3-bg.png">
+              <img data-lazy="/images/products/scent-candles/SC-3.png">
+            </div>
+            <div class="title">
+              <h4>Lavender Escape</h4><span>$7.00 USD</span>
+            </div>
+            <div class="refill-plan-picker picker">
+              <label>Select refill plan:</label>
+              <div>
+                <span>
+                  <input type="radio" id="scent-3-refillx0" name="scent-refill-3" checked>
+                  <label for="scent-3-refillx0">None</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-3-refillx1" name="scent-refill-3">
+                  <label for="scent-3-refillx1">x1</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-3-refillx5" name="scent-refill-3">
+                  <label for="scent-3-refillx5">x5</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-3-refillx10" name="scent-refill-3">
+                  <label for="scent-3-refillx10">x10</label>
+                </span>
+              </div>
+            </div>
+            <div class="call-to-action button">
+              Add To Cart
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="image">
+              <img data-lazy="/images/products/scent-backgrounds/SC-4-bg.png">
+              <img data-lazy="/images/products/scent-candles/SC-4.png">
+            </div>
+            <div class="title">
+              <h4>Pomegranate Delight</h4><span>$7.00 USD</span>
+            </div>
+            <div class="refill-plan-picker picker">
+              <label>Select refill plan:</label>
+              <div>
+                <span>
+                  <input type="radio" id="scent-4-refillx0" name="scent-refill-4" checked>
+                  <label for="scent-4-refillx0">None</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-4-refillx1" name="scent-refill-4">
+                  <label for="scent-4-refillx1">x1</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-4-refillx5" name="scent-refill-4">
+                  <label for="scent-4-refillx5">x5</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-4-refillx10" name="scent-refill-4">
+                  <label for="scent-4-refillx10">x10</label>
+                </span>
+              </div>
+            </div>
+            <div class="call-to-action button">
+              Add To Cart
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="image">
+              <img data-lazy="/images/products/scent-backgrounds/SC-5-bg.png">
+              <img data-lazy="/images/products/scent-candles/SC-5.png">
+            </div>
+            <div class="title">
+              <h4>Mango Driftwood</h4><span>$7.00 USD</span>
+            </div>
+            <div class="refill-plan-picker picker">
+              <label>Select refill plan:</label>
+              <div>
+                <span>
+                  <input type="radio" id="scent-5-refillx0" name="scent-refill-5" checked>
+                  <label for="scent-5-refillx0">None</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-5-refillx1" name="scent-refill-5">
+                  <label for="scent-5-refillx1">x1</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-5-refillx5" name="scent-refill-5">
+                  <label for="scent-5-refillx5">x5</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-5-refillx10" name="scent-refill-5">
+                  <label for="scent-5-refillx10">x10</label>
+                </span>
+              </div>
+            </div>
+            <div class="call-to-action button">
+              Add To Cart
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="image">
+              <img data-lazy="/images/products/scent-backgrounds/SC-6-bg.png">
+              <img data-lazy="/images/products/scent-candles/SC-6.png">
+            </div>
+            <div class="title">
+              <h4>Turquoise Bay</h4><span>$7.00 USD</span>
+            </div>
+            <div class="refill-plan-picker picker">
+              <label>Select refill plan:</label>
+              <div>
+                <span>
+                  <input type="radio" id="scent-6-refillx0" name="scent-refill-6" checked>
+                  <label for="scent-6-refillx0">None</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-6-refillx1" name="scent-refill-6">
+                  <label for="scent-6-refillx1">x1</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-6-refillx5" name="scent-refill-6">
+                  <label for="scent-6-refillx5">x5</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-6-refillx10" name="scent-refill-6">
+                  <label for="scent-6-refillx10">x10</label>
+                </span>
+              </div>
+            </div>
+            <div class="call-to-action button">
+              Add To Cart
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="image">
+              <img data-lazy="/images/products/scent-backgrounds/SC-7-bg.png">
+              <img data-lazy="/images/products/scent-candles/SC-7.png">
+            </div>
+            <div class="title">
+              <h4>White Tea and Ginger</h4><span>$7.00 USD</span>
+            </div>
+            <div class="refill-plan-picker picker">
+              <label>Select refill plan:</label>
+              <div>
+                <span>
+                  <input type="radio" id="scent-7-refillx0" name="scent-refill-7" checked>
+                  <label for="scent-7-refillx0">None</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-7-refillx1" name="scent-refill-7">
+                  <label for="scent-7-refillx1">x1</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-7-refillx5" name="scent-refill-7">
+                  <label for="scent-7-refillx5">x5</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-7-refillx10" name="scent-refill-7">
+                  <label for="scent-7-refillx10">x10</label>
+                </span>
+              </div>
+            </div>
+            <div class="call-to-action button">
+              Add To Cart
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="image">
+              <img data-lazy="/images/products/scent-backgrounds/SC-8-bg.png">
+              <img data-lazy="/images/products/scent-candles/SC-8.png">
+            </div>
+            <div class="title">
+              <h4>Sheer Linen & Orchid</h4><span>$7.00 USD</span>
+            </div>
+            <div class="refill-plan-picker picker">
+              <label>Select refill plan:</label>
+              <div>
+                <span>
+                  <input type="radio" id="scent-8-refillx0" name="scent-refill-8" checked>
+                  <label for="scent-8-refillx0">None</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-8-refillx1" name="scent-refill-8">
+                  <label for="scent-8-refillx1">x1</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-8-refillx5" name="scent-refill-8">
+                  <label for="scent-8-refillx5">x5</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-8-refillx10" name="scent-refill-8">
+                  <label for="scent-8-refillx10">x10</label>
+                </span>
+              </div>
+            </div>
+            <div class="call-to-action button">
+              Add To Cart
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="image">
+              <img data-lazy="/images/products/scent-backgrounds/SC-9-bg.png">
+              <img data-lazy="/images/products/scent-candles/SC-9.png">
+            </div>
+            <div class="title">
+              <h4>Coastal Waters</h4><span>$7.00 USD</span>
+            </div>
+            <div class="refill-plan-picker picker">
+              <label>Select refill plan:</label>
+              <div>
+                <span>
+                  <input type="radio" id="scent-9-refillx0" name="scent-refill-9" checked>
+                  <label for="scent-9-refillx0">None</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-9-refillx1" name="scent-refill-9">
+                  <label for="scent-9-refillx1">x1</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-9-refillx5" name="scent-refill-9">
+                  <label for="scent-9-refillx5">x5</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-9-refillx10" name="scent-refill-9">
+                  <label for="scent-9-refillx10">x10</label>
+                </span>
+              </div>
+            </div>
+            <div class="call-to-action button">
+              Add To Cart
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="image">
+              <img data-lazy="/images/products/scent-backgrounds/SC-10-bg.png">
+              <img data-lazy="/images/products/scent-candles/SC-10.png">
+            </div>
+            <div class="title">
+              <h4>Midnight Showers</h4><span>$7.00 USD</span>
+            </div>
+            <div class="refill-plan-picker picker">
+              <label>Select refill plan:</label>
+              <div>
+                <span>
+                  <input type="radio" id="scent-10-refillx0" name="scent-refill-10" checked>
+                  <label for="scent-10-refillx0">None</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-10-refillx1" name="scent-refill-10">
+                  <label for="scent-10-refillx1">x1</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-10-refillx5" name="scent-refill-10">
+                  <label for="scent-10-refillx5">x5</label>
+                </span>
+                <span>
+                  <input type="radio" id="scent-10-refillx10" name="scent-refill-10">
+                  <label for="scent-10-refillx10">x10</label>
+                </span>
+              </div>
+            </div>
+            <div class="call-to-action button">
+              Add To Cart
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       <!-- CHECKOUT -->
       <div class="checkout-modal modal">
@@ -203,7 +819,7 @@
                   </span>
                 </div>
                 <div class="product-image-container">
-                  <img src="images/Candle-Product.png" alt="{ data.get('productName') }"></img>
+                  <img data-lazy="images/Candle-Product.png" alt="{ data.get('productName') }"></img>
                 </div>
                 <!-- <div onclick="{ delete }" class="product-delete"></div> -->
                 <div class="product-price-container invoice-amount">
@@ -343,16 +959,16 @@
 
                   <!-- <div class="card-types"> -->
                   <!--   <div> -->
-                  <!--     <img src="/img/card-icons/visa.png"> -->
+                  <!--     <img data-lazy="/img/card-icons/visa.png"> -->
                   <!--   </div> -->
                   <!--   <div> -->
-                  <!--     <img src="/img/card-icons/mastercard.png"> -->
+                  <!--     <img data-lazy="/img/card-icons/mastercard.png"> -->
                   <!--   </div> -->
                   <!--   <div> -->
-                  <!--     <img src="/img/card-icons/discover.png"> -->
+                  <!--     <img data-lazy="/img/card-icons/discover.png"> -->
                   <!--   </div> -->
                   <!--   <div> -->
-                  <!--     <img src="/img/card-icons/amex.png"> -->
+                  <!--     <img data-lazy="/img/card-icons/amex.png"> -->
                   <!--   </div> -->
                   <!-- </div> -->
 
@@ -475,5 +1091,19 @@
       <div class="spinner">
       </div>
     </div>
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.1/es6-shim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/layzr.js/2.0.2/layzr.min.js"></script>
+    <script src="js/relaunch/framework.js"></script>
+
+    <script src="/js/shop.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.min.js"></script>
+    <script type="text/javascript" src="/js/cookies.min.js"></script>
+    <script src="/js/checkout.js"></script>
+    <script src="js/relaunch/ludela.js"></script>
+    <script src="js/relaunch/store.js"></script>
+
   </body>
 </html>

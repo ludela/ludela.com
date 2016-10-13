@@ -122,7 +122,7 @@
   .menu__social {
     display: inline-block;
     background: #ee9347;
-    padding: 12px;
+    padding: 4px;
     width: 40px;
     height: 40px;
     margin: 80px 10px;
@@ -132,4 +132,3 @@
     font-size: 15px;
   }
 }
-

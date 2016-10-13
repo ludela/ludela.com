@@ -6,111 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" href="/css/site.css">
+    <!-- Block Level Styles -->
+    <link rel="stylesheet" href="css/relaunch/header.css" />
+    <link rel="stylesheet" href="css/relaunch/framework.css" />
+
+    <!-- Custom Styling and JS-->
+    <!-- <link rel="stylesheet" href="css/relaunch/visuals.css" /> -->
+    <link rel="stylesheet" href="css/relaunch/ludela.css" />
+    <link rel="stylesheet" href="css/relaunch/site.css" />
     <script src="https://use.typekit.net/scc3jrx.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
   <body>
-    <div id='dots'>
-      <div class='dot dot-1 active-dot' data-goto="1">
-        <div class="tooltiptext">
-          <span>A Seed Was Planted</span>
-        </div>
-      </div>
-      <div class='dot dot-2' data-goto="2">
-        <div class="tooltiptext">
-          <span>Better Light</span>
-        </div>
-      </div>
-      <div class='dot dot-3' data-goto="3">
-        <div class="tooltiptext">
-          <span>The Team</span>
-        </div>
-      </div>
-      <div class='dot dot-4' data-goto="4">
-        <div class="tooltiptext">
-          <span>Our Story</span>
-        </div>
-      </div>
-    </div>
     <div class='scroll-container'>
-      <div id='menu' class='menu'>
-        <div class="menu__close">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu__logo">
-          <a href='/'>
-            <span class="icon icon-ludela-logo"> </span>
-          </a>
-        </div>
-        <a class='menu__link' href='/account'>
-          Refer A Friend
-        </a>
-        <a class='menu__link' href='/about'>
-          about us
-        </a>
-        <a class='menu__link' href='/faq'>
-          faq
-        </a>
-        <a class='menu__link' href='/legal'>
-          legal
-        </a>
-        <a class='menu__link' href='/careers'>
-          careers
-        </a>
-        <a class='menu__link' href='/contact'>
-          contact
-        </a>
-        <a class='menu__social' href='http://facebook.com/JoinLudela'>
-          <span class="icon icon-facebook"> </span>
-        </a>
-        <a class='menu__social' href='http://twitter.com/JoinLudela'>
-          <span class="icon icon-twitter"> </span>
-        </a>
-        <a class='menu__social' href='https://www.pinterest.com/joinludela'>
-          <span class="icon icon-pinterest2"> </span>
-        </a>
-      </div>
+      <div id='site-menu'></div>
       <div id='about' class='about is-step-1'>
-        <div class="header-bar">
-          <div id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="video">
-            <span>see ludela</span>
-            <span class="icon icon-play"> </span>
-            <div class='video'> </div>
-          </div>
-          <div class="logo">
-            <a href='/'>
-              <span class="icon icon-ludela-logo"> </span>
-            </a>
-          </div>
-        </div>
-        <div class='footer-bar'>
-          <span class='footer-text'>
-            Early birds recieve 20% off + Free Candle refills
-          </span>
-          <form>
-            <input type='text' placeholder=' ENTER YOUR EMAIL'/>
-            <input type='submit'/>
-          </form>
-          <a class="login-link" href="/login">Login</a>
-        </div>
-        <div id='video-modal'>
-          <div class='modal-close'>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div id="player"></div>
-        </div>
+      <div id='site-header'></div>
+        <div class='story-background'></div>
         <div id="step-1">
           <div  class='about__content'>
             <div class='africa'>
@@ -186,158 +98,211 @@
             <div class='team-member team-1'>
               <div class='name'>Chad Errett</div>
               <span class='title'>Engineering Manger, SI</span>
-              <p class='description'>
-                <img src='/images/Chad.jpg'/>
-              </p>
+              <div class='photo'>
+                <div class='photo-wrap'>
+                  <img src='/images/Chad.jpg'/>
+                </div>
+              </div>
             </div>
             <div class='team-member team-2'>
               <div class='name'>Chris Whittall</div>
               <span class='title'>Director of Industrial Design, SI</span>
-              <p class='description'>
-                <img src='/images/Chris.jpg'/>
-              </p>
+              <div class='photo'>
+                <div class='photo-wrap'>
+                  <img src='/images/Chris.jpg'/>
+                </div>
+              </div>
             </div>
             <div class='team-member team-3'>
               <div class='name'>Danny Wafler</div>
               <span class='title'>Mechanical Engineeer, SI</span>
-              <p class='description'>
-                <img src='/images/Danny.jpg'/>
-              </p>
+              <div class='photo'>
+                <div class='photo-wrap'>
+                  <img src='/images/Danny.jpg'/>
+                </div>
+              </div>
             </div>
             <div class='team-member team-4'>
               <div class='name'>Dennis Perry</div>
               <span class='title'>Electrcial Engineer, SI</span>
-              <p class='description'>
-                <img src='/images/Dennis.jpg'/>
-              </p>
+              <div class='photo'>
+                <div class='photo-wrap'>
+                  <img src='/images/Dennis.jpg'/>
+                </div>
+              </div>
             </div>
             <div class='team-member team-5'>
               <div class='name'>Eric Bauswell</div>
               <span class='title'>Co-Founder & VP of Engineering</span>
-              <p class='description'>
-                <img src='/images/Eric.jpg'/>
-              </p>
+              <div class='photo'>
+                <div class='photo-wrap'>
+                  <img src='/images/Eric.jpg'/>
+                </div>
+              </div>
             </div>
             <div class='team-member team-6'>
               <div class='name'>Henry Madden</div>
               <span class='title'>Project Manager, SI</span>
-              <p class='description'>
-                <img src='/images/Henry.jpg'/>
-              </p>
+              <div class='photo'>
+                <div class='photo-wrap'>
+                  <img src='/images/Henry.jpg'/>
+                </div>
+              </div>
             </div>
             <div class='team-member team-7'>
               <div class='name'>Jamie Bianchini</div>
               <span class='title'>Co-Founder & CEO</span>
-              <p class='description'>
-                <img src='/images/Jamie.jpg'/>
-              </p>
+              <div class='photo'>
+                <div class='photo-wrap'>
+                  <img src='/images/Jamie.jpg'/>
+                </div>
+              </div>
             </div>
             <div class='team-member team-8'>
               <div class='name'>Jason Burton</div>
               <span class='title'>Operations Manager, SI</span>
-              <p class='description'>
-                <img src='/images/Jason.jpg'/>
-              </p>
+              <div class='photo'>
+                <div class='photo-wrap'>
+                  <img src='/images/Jason.jpg'/>
+                </div>
+              </div>
             </div>
             <div class='team-member team-9'>
               <div class='name'>Jon Corpuz</div>
               <span class='title'>Industrial Designer, SI</span>
-              <p class='description'>
-                <img src='/images/Jon.jpg'/>
-              </p>
+              <div class='photo'>
+                <div class='photo-wrap'>
+                  <img src='/images/Jon.jpg'/>
+                </div>
+              </div>
             </div>
             <div class='team-member team-10'>
               <div class='name'>Laurie Cleland</div>
               <span class='title'>Business Operations, SI</span>
-              <p class='description'>
-                <img src='/images/Laurie.jpg'/>
-              </p>
+              <div class='photo'>
+                <div class='photo-wrap'>
+                  <img src='/images/Laurie.jpg'/>
+                </div>
+              </div>
             </div>
             <div class='team-member team-11'>
               <div class='name'>Matias Leiva</div>
               <span class='title'>Marketing Director</span>
-              <p class='description'>
-                <img src='/images/Matias.png'/>
-              </p>
+              <div class='photo'>
+                <div class='photo-wrap'>
+                  <img src='/images/Matias.png'/>
+                </div>
+              </div>
             </div>
             <div class='team-member team-12'>
               <div class='name'>Nicole Casem</div>
               <span class='title'>Industrial Designer, SI</span>
-              <p class='description'>
-                <img src='/images/Nicole.jpg'/>
-              </p>
+              <div class='photo'>
+                <div class='photo-wrap'>
+                  <img src='/images/Nicole.jpg'/>
+                </div>
+              </div>
             </div>
             <div class='team-member team-13'>
               <div class='name'>Robert Gomez Hernandez</div>
               <span class='title'>Video & Photography</span>
-              <p class='description'>
-                <img src='/images/Robert.jpg'/>
-              </p>
+              <div class='photo'>
+                <div class='photo-wrap'>
+                  <img src='/images/Robert.jpg'/>
+                </div>
+              </div>
             </div>
             <div class='team-member team-14'>
               <div class='name'>Robin Callender</div>
               <span class='title'>Firmware, SI</span>
-              <p class='description'>
-                <img src='/images/Robin.jpg'/>
-              </p>
+              <div class='photo'>
+                <div class='photo-wrap'>
+                  <img src='/images/Robin.jpg'/>
+                </div>
+              </div>
             </div>
             <div class='team-member team-15'>
               <div class='name'>Sonja Valez</div>
               <span class='title'>Interim CFO</span>
-              <p class='description'>
-                <img src='/images/Sonja.jpg'/>
-              </p>
+              <div class='photo'>
+                <div class='photo-wrap'>
+                  <img src='/images/Sonja.jpg'/>
+                </div>
+              </div>
             </div>
             <div class='team-member team-16'>
               <div class='name'>Tim Nichols</div>
               <span class='title'>App Development, SI</span>
-              <p class='description'>
-                <img src='/images/Tim.jpg'/>
-              </p>
+              <div class='photo'>
+                <div class='photo-wrap'>
+                  <img src='/images/Tim.jpg'/>
+                </div>
+              </div>
             </div>
             <div class='team-member team-17'>
               <div class='name'>Zach Taylor</div>
               <span class='title'>IT & Web Strategy</span>
-              <p class='description'>
-                <img src='/images/Zach.jpg'/>
-              </p>
+              <div class='photo'>
+                <div class='photo-wrap'>
+                  <img src='/images/Zach.jpg'/>
+                </div>
+              </div>
+            </div>
+            <div class='team-member team-17'>
+              <div class='name'>Jake Vande Weerd</div>
+              <span class='title'>Creative Director</span>
+              <div class='photo'>
+                <div class='photo-wrap'>
+                  <img src='/images/Jake.jpg'/>
+                </div>
+              </div>
             </div>
             <div class='team-member team-18'>
               <div class='name'>Peter Smith</div>
               <span class='title'>Advisor</span>
               <span class='title'>Founder of Candella & Luminara</span>
-              <p class='description'>
-                <a href="https://www.linkedin.com/in/peter-smith-575904b">Visit on LinkedIn</a>
-              </p>
+              <div class='photo'>
+                <div class='photo-wrap'>
+                  <img src='images/avatar.png'/>
+                </div>
+              </div>
             </div>
             <div class='team-member team-19'>
               <div class='name'>Jim Sacherman</div>
               <span class='title'>Advisor</span>
               <span class='title'>Founder of Palo Alto Products</span>
-              <p class='description'>
-                <a href="https://www.linkedin.com/in/jim-sacherman-69385b9">Visit on LinkedIn</a>
-              </p>
+              <div class='photo'>
+                <div class='photo-wrap'>
+                  <img src='images/avatar.png'/>
+                </div>
+              </div>
             </div>
             <div class='team-member team-20'>
               <div class='name'>Ryan Evans</div>
               <span class='title'>CEO of Inboard</span>
-              <p class='description'>
-                <a href="https://www.linkedin.com/in/ryanpev">Visit on LinkedIn</a>
-              </p>
+              <div class='photo'>
+                <div class='photo-wrap'>
+                  <img src='images/avatar.png'/>
+                </div>
+              </div>
             </div>
             <div class='team-member team-21'>
               <div class='name'>Norm Smith</div>
               <span class='title'>CEO at Vizkinect</span>
-              <p class='description'>
-                <a href="https://www.linkedin.com/in/normanallensmith">Visit on LinkedIn</a>
-              </p>
+              <div class='photo'>
+                <div class='photo-wrap'>
+                  <img src='images/avatar.png'/>
+                </div>
+              </div>
             </div>
             <div class='team-member team-22'>
               <div class='name'>Tom Kingsley</div>
               <span class='title'>Advisor and Consultant</span>
-              <p class='description'>
-                <a href="https://www.linkedin.com/in/takingsley">Visit on LinkedIn</a>
-              </p>
+              <div class='photo'>
+                <div class='photo-wrap'>
+                  <img src='images/avatar.png'/>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -348,15 +313,14 @@
                 Our Story
               </h1>
               <div class='story-img'>
-              <img src='/images/story-1.png'/>
                 <h3>
                   2007
                 </br>
                   sub sahara africa
                 </h3>
+                <img src='/images/story-1.png'/>
               </div>
               <div class='story-text'>
-                <span class='line-top'></span>
                 <h2 class='sub-header'>
                   Our story begins in 2007 with a 81-country
                 <br/>
@@ -378,7 +342,7 @@
                 <img src='/images/story-2.png'>
               </div>
               <div class='story-text'>
-                <span class='line-top'></span>
+
                 <h2 class='sub-header'>
                   He could not afford school fees. He had
                 <br/>
@@ -405,7 +369,7 @@
                 <img src='/images/story-3.png'>
               </div>
               <div class='story-text'>
-                <span class='line-top'></span>
+
                 <h2 class='sub-header'>
                   Jospeh was nearly in tears, shaking with
                 <br/>
@@ -434,7 +398,7 @@
                 <img src='/images/story-4.png'>
               </div>
               <div class='story-text'>
-                <span class='line-top'></span>
+
                 <h2 class='sub-header'>
                   In the middle of the night Jamie woke up to
                 <br/>
@@ -468,7 +432,7 @@
                 <img src='/images/story-5.png'>
               </div>
               <div class='story-text'>
-                <span class='line-top'></span>
+
                 <h2 class='sub-header'>
                   All evening long kids and parents coughed
                 <br/>
@@ -493,7 +457,7 @@
                 <img src='/images/story-6.png'>
               </div>
               <div class='story-text'>
-                <span class='line-top'></span>
+
                 <h2 class='sub-header'>
                   The first-hand experience of the negative
                 <br/>
@@ -523,7 +487,7 @@
                 <img src='/images/story-7.png'>
               </div>
               <div class='story-text'>
-                <span class='line-top'></span>
+
                 <p>
                   Three years later, after getting married to a former Peace
                   Pedalers guest rider Cristina and having two beautiful children,
@@ -546,7 +510,7 @@
                 <img src='/images/story-9.jpg'>
               </div>
               <div class='story-text'>
-                <span class='line-top'></span>
+
                 <p>
                   This led him to Eric Bauswell, CEO of Surface Ink in San Jose,
                   California. Jamie shared his vision to use the smart candle
@@ -565,7 +529,7 @@
                 <img src='/images/story-8.png'>
               </div>
               <div class='story-text'>
-                <span class='line-top'></span>
+
                 <p>
                   By early 2017, LuDela will begin shipping its first units. We
                   hope you’ll join us in bringing better light to your life and
@@ -811,7 +775,7 @@
         </div>
       </div>
 
-        <div id="footer" class='footer'>
+        <!-- <div id="footer" class='footer'>
           <div class='footer__hold'>
             <div class="header-bar">
               <div id="hamburger-foot">
@@ -881,7 +845,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
     <script src="/site.js"></script>

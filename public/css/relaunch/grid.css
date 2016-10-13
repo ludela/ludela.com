@@ -1,0 +1,12 @@
+.grid {
+  display: table;
+}
+
+.grid .item {
+  display: table;
+}
+
+.grid .item > * {
+  display: table-cell;
+  vertical-align: middle;
+}

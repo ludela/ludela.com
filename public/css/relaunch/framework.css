@@ -138,12 +138,16 @@ blockquote .attribution {
 }
 
 /* Text is hidden until hover */
-.hover-more > * {
+.hover-more p {
   transform: scale(0, 0);
   transition: all .5s ease-out;
 }
 
-.hover-more:hover > * {
+.hover-more:focus p {
+  transform: scale(1, 1);
+}
+
+.hover-more:hover p {
   transform: scale(1, 1);
 }
 

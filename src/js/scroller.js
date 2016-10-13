@@ -9,22 +9,8 @@ export default function ($) {
   const $document = $(document);
   const $window = $(window);
   const $panels = $('.splash__content');
-  const $general = $('#general');
-  const $about = $('#about');
   const $dot = $('.dot');
   const scrollThreshold = 30;
-
-  if ($general.length) {
-    $window.on('scroll', setFooter);
-  }
-
-  function setFooter() {
-    if ($window.scrollTop() + $window.height() > $document.height() - 2) {
-      $general.addClass('is-footer');
-    } else {
-      $('.is-footer').removeClass('is-footer');
-    }
-  }
 
   if ($panels.length) {
 
@@ -45,8 +31,6 @@ export default function ($) {
     $window.on('load resize', debounce(function () {
       lastScrollPos = $window.scrollTop();
     }, 150));
-
-
   }
 
   function disableScrollFor(ev, time) {

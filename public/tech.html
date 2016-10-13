@@ -69,59 +69,69 @@
         <span class="icon icon-pinterest2"> </span>
       </a>
     </nav>
-    <header class="header-bar fixed" id="header">
+
+    <!-- HEADER -->
+    <header class="fixed">
       <nav>
-        <div id="hamburger">
+        <div id='hamburger'>
           <span></span>
           <span></span>
           <span></span>
           <span></span>
         </div>
-
-        <a href="/">
-          <img src="/images/textless-logo.png" class="logo">
+        <a href='/'>
+          <img src='/images/textless-logo.png' class='logo'>
         </a>
-        <a href="#cta" class="button call-to-action checkout-button">
-          Pre-order Now
+        <a href='/store' class='button call-to-action'>
+          Shop Now
         </a>
-        <div class="progress">
-          <span class="bar"></span>
-          <span class="message">Batch1 <span class="percent">53%</span> Reserved</span>
+        <div class='progress'>
+          <span class='bar'></span>
+          <span class='message'>Batch1 <span class='percent'>53%</span> Reserved</span>
         </div>
       </nav>
-      <!-- <div class="header-container">
-        <div id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="video">
-          <span class="see-ludela">See LuDela</span>
-          <span class="icon icon-play"> </span>
-          <div class='video'> </div>
-        </div>
-        <div class="logo">
-          <a href="/">
-            <span class="icon icon-ludela-logo"> </span>
-          </a>
-        </div>
-      </div> -->
     </header>
-    <!-- <div class='footer-bar fixed'> -->
-    <!--   <span class='footer-text'> -->
-    <!--     Earn a LuDela candle and refills by referring friends -->
-    <!--   </span> -->
-    <!--   <register immediate-login="true"> -->
-    <!--     <user-email type='text' placeholder=' ENTER YOUR EMAIL'></user-email> -->
-    <!--     <input type='submit' value="Sign Up"/> -->
-    <!--     <div class="error" if="{ errorMessage }"> -->
-    <!--       { errorMessage } -->
-    <!--     </div> -->
-    <!--   </register> -->
-    <!--   <a class="login-link" href="/login">Login</a> -->
-    <!--   <a class="progress-link" href="/account">Check Progress</a> -->
-    <!-- </div> -->
+    <nav id='menu' class='menu'>
+      <div class='menu__close'>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class='menu__logo'>
+        <a href='/'>
+          <span class='icon icon-ludela-logo'></span>
+        </a>
+      </div>
+      <a class='menu__link' href='/account'>
+          Refer a Friend
+        </a>
+      <a class='menu__link' href='/about'>
+          about us
+        </a>
+      <a class='menu__link' href='/faq'>
+          faq
+        </a>
+      <a class='menu__link' href='/legal'>
+          legal
+        </a>
+      <a class='menu__link' href='/careers'>
+          careers
+        </a>
+      <a class='menu__link' href='/contact'>
+          contact
+        </a>
+      <a class='menu__social'  href='http://facebook.com/JoinLudela' target='_blank'>
+          <span class='icon icon-facebook'> </span>
+        </a>
+      <a class='menu__social'  href='http://twitter.com/JoinLudela' target='_blank'>
+          <span class='icon icon-twitter'> </span>
+        </a>
+      <a class='menu__social'  href='https://www.pinterest.com/joinludela' target='_blank'>
+        <span class='icon icon-pinterest2'> </span>
+      </a>
+    </nav>
+
     <div id='video-modal'>
       <div class='modal-close'>
         <span></span>
@@ -343,7 +353,7 @@
             <div class="content">
               <h1>Get Yours Now</h1>
               <p>Save $100 when you pre-order for a limited time</p>
-              <a href="#" class="button call-to-action checkout-button">Pre-order Now</a>
+              <a href="/store" class="button call-to-action">Pre-order Now</a>
             </div>
             <div class="image">
               <img src="/images/join-candle.png">
