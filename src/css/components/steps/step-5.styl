@@ -10,11 +10,18 @@
 &.is-step-5
   background rgba(237,140,71,1)
 
+  .list
+    width initial
+
+    &.left .info
+      padding 0
+
   &:before
     background linear-gradient(0deg, rgba(237,140,71,0) 40%, rgba(220,79,21,0.3))
 
   &:after
-    transition background 0s
+    opacity 0
+    transition opacity 1500ms
 
 &.is-step-5 #step-5
   opacity 1
@@ -44,7 +51,7 @@
 
 &.is-step-6 #step-5
   opacity 0
-  transition-delay 300ms
+  // transition-delay 300ms
 
   .splash__headline
     transform translate3d(0, -940vh, 0)

@@ -14,7 +14,7 @@ jQuery(function ($) {
   panels($);
   header($);
   menu($);
-  // scrollify($);
+  scrollify($);
   // scroller($);
   shell($);
   video($);
@@ -55,11 +55,6 @@ jQuery(function ($) {
     $.scrollify.move(parseInt($(this).data("goto"), 10));
   });
 
-  // if ($window.width() < 800) {
-  //   console.log('small screen');
-  //   $.scrollify.disable();
-  // }
-
   var slide = 0;
 
   $('.visuals__phone').on('click', function(){
@@ -70,11 +65,11 @@ jQuery(function ($) {
 
   var imageRatio = 229/368
   var updateAppSlider = function(){
-    var $phone = $('.visuals__phone')
+    var $phone = $('.visuals__phone');
 
-    var width = $phone.width()
-    var height = $phone.height()
-    var screenRatio = width / height
+    var width = $phone.width();
+    var height = $phone.height();
+    var screenRatio = (width / height);
 
     if (screenRatio > imageRatio) {
       $('.app-slider').width(height * imageRatio)
