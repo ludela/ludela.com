@@ -14,7 +14,7 @@ jQuery(function ($) {
   panels($);
   header($);
   menu($);
-  // scrollify($);
+  scrollify($);
   // scroller($);
   shell($);
   video($);
