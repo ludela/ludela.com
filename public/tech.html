@@ -5,8 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/css/selectize.bootstrap3.min.css">
+
+    <link rel="stylesheet" href="css/relaunch/loader.css" />
+    <link rel="stylesheet" href="css/relaunch/header.css" />
+    <link rel="stylesheet" href="css/relaunch/hero.css" />
+    <link rel="stylesheet" href="css/relaunch/hero-video.css" />
+    <link rel="stylesheet" href="css/relaunch/parallax.css" />
+    <link rel="stylesheet" href="css/relaunch/gallery.css" />
+    <link rel="stylesheet" href="css/relaunch/list.css" />
+    <link rel="stylesheet" href="css/relaunch/loader.css" />
+    <link rel="stylesheet" href="css/relaunch/footer.css" />
+    <link rel="stylesheet" href="css/relaunch/ludela.css" />
+    <link rel="stylesheet" href="css/relaunch/menu.css" />
+
     <link rel="stylesheet" href="/css/site.css">
+
     <script>
       !function(t,e,a){var r,n,c,i,o,s,l,u;if(null==t.analytics){for(r=[],r.methods=["ab","alias","group","identify","off","on","once","page","pageview","ready","track","trackClick","trackForm","trackLink","trackSubmit"],l=r.methods,c=function(t){r[t]=function(){var e;return e=Array.prototype.slice.call(arguments),e.unshift(t),r.push(e),r}},i=0,o=l.length;o>i;i++)s=l[i],c(s);return u=e.createElement("script"),u.async=!0,u.type="text/javascript",u.src=a,n=e.getElementsByTagName("script")[0],n.parentNode.insertBefore(u,n),t.analytics=r}}(window,document,"//cdn.crowdstart.com/a/ludela.js");
     </script>
@@ -15,13 +30,19 @@
   </head>
   <body>
     <nav id='menu' class='menu'>
+      <div class="menu__close">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <div class="menu__logo">
         <a href='/'>
           <span class="icon icon-ludela-logo"></span>
         </a>
       </div>
       <a class='menu__link' href='/account'>
-        LuDela Account
+        Refer a Friend
       </a>
       <a class='menu__link' href='/about'>
         about us
@@ -50,58 +71,67 @@
     </nav>
 
     <!-- HEADER -->
-    <header>
+    <header class="fixed">
       <nav>
-        <div id="hamburger">
+        <div id='hamburger'>
           <span></span>
           <span></span>
           <span></span>
           <span></span>
         </div>
-
-        <a href="/">
-          <span class="logo icon icon-ludela-logo"> </span>
+        <a href='/'>
+          <img src='/images/textless-logo.png' class='logo'>
         </a>
-        <a href="#cta" class="button call-to-action checkout-button">
-          Pre-order Now
+        <a href='/store' class='button call-to-action'>
+          Shop Now
         </a>
+        <div class='progress'>
+          <span class='bar'></span>
+          <span class='message'>Batch1 <span class='percent'>53%</span> Reserved</span>
+        </div>
       </nav>
     </header>
-    
-    <!-- <header class="header-bar fixed" id="header">
-      <div class="header-container">
-        <div id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="video">
-          <span class="see-ludela">See LuDela</span>
-          <span class="icon icon-play"> </span>
-          <div class='video'> </div>
-        </div>
-        <div class="logo">
-          <a href="/">
-            <span class="icon icon-ludela-logo"> </span>
-          </a>
-        </div>
+    <nav id='menu' class='menu'>
+      <div class='menu__close'>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-    </header> -->
-    <!-- <div class='footer-bar fixed'> -->
-    <!--   <span class='footer-text'> -->
-    <!--     Earn a LuDela candle and refills by referring friends -->
-    <!--   </span> -->
-    <!--   <register immediate-login="true"> -->
-    <!--     <user-email type='text' placeholder=' ENTER YOUR EMAIL'></user-email> -->
-    <!--     <input type='submit' value="Sign Up"/> -->
-    <!--     <div class="error" if="{ errorMessage }"> -->
-    <!--       { errorMessage } -->
-    <!--     </div> -->
-    <!--   </register> -->
-    <!--   <a class="login-link" href="/login">Login</a> -->
-    <!--   <a class="progress-link" href="/account">Check Progress</a> -->
-    <!-- </div> -->
+      <div class='menu__logo'>
+        <a href='/'>
+          <span class='icon icon-ludela-logo'></span>
+        </a>
+      </div>
+      <a class='menu__link' href='/account'>
+          Refer a Friend
+        </a>
+      <a class='menu__link' href='/about'>
+          about us
+        </a>
+      <a class='menu__link' href='/faq'>
+          faq
+        </a>
+      <a class='menu__link' href='/legal'>
+          legal
+        </a>
+      <a class='menu__link' href='/careers'>
+          careers
+        </a>
+      <a class='menu__link' href='/contact'>
+          contact
+        </a>
+      <a class='menu__social'  href='http://facebook.com/JoinLudela' target='_blank'>
+          <span class='icon icon-facebook'> </span>
+        </a>
+      <a class='menu__social'  href='http://twitter.com/JoinLudela' target='_blank'>
+          <span class='icon icon-twitter'> </span>
+        </a>
+      <a class='menu__social'  href='https://www.pinterest.com/joinludela' target='_blank'>
+        <span class='icon icon-pinterest2'> </span>
+      </a>
+    </nav>
+
     <div id='video-modal'>
       <div class='modal-close'>
         <span></span>
@@ -118,7 +148,6 @@
       <div class='dot dot-4' data-goto="3"></div>
       <div class='dot dot-5' data-goto="4"></div>
       <div class='dot dot-6' data-goto="5"></div>
-      <div class='dot dot-7' data-goto="6"></div>
     </div>
     <a class="big play button fixed" href="#"></a>
     <div class="wrapper">
@@ -319,47 +348,28 @@
               <!-- <div class="mobile-padding"></div> -->
             </div>
           </div>
-          <div class='splash__content' id="step-6" data-step="s6">
-            <div class="splash__container fixed">
-              <div class="splash__headline">
-                <h2 class="h1">Personalize <span class="subhead">your candlelight</span></h2>
-              </div>
+          <div class="splash__content" id="step-6" data-step="s6">
+            <section class="full list left cta-all parallax">
+            <div class="content">
+              <h1>Get Yours Now</h1>
+              <p>Save $100 when you pre-order for a limited time</p>
+              <a href="/store" class="button call-to-action">Pre-order Now</a>
             </div>
-          </div>
-          <div class='splash__content' id="step-7" data-step="s7">
-            <div class="splash__container fixed">
-              <div class="splash__component-container">
-                <div class="splash__component-left">
-                  <div class="splash__headline">
-                    <h2 class="h1">Join us <span class="subhead">Earn a LuDela candle, refills, coupons<br>and other rewards by referring your friends.</span></h2>
-                  </div>
-                  <div class="signin-or-up">
-                    <register immediate-login="true">
-                      <user-email type='text' placeholder=' ENTER YOUR EMAIL'></user-email>
-                      <input type='submit' value="Sign Up"/>
-                      <div class="error" if="{ errorMessage }">
-                        { errorMessage }
-                      </div>
-                    </register>
-                    <a class="login-button" href="/login">Login</a>
-                  </div>
-                  <ul class="link-list">
-                    <li><a href='/account'>LuDela Account</a></li>
-                    <li><a href='/about'>About us</a></li>
-                    <li><a href='/faq'>FAQ</a></li>
-                    <li><a href='/legal'>legal</a></li>
-                    <li><a href='/careers'>Careers</a></li>
-                    <li><a href='/contact'>contact</a></li>
-                  </ul>
-                  <div class="copyright">
-                    <p>2016 LuDela, Inc</p>
-                  </div>
-                </div>
-                <div class='img'>
-                  <img src='/images/join-candle.png'/>
-                </div>
-              </div>
+            <div class="image">
+              <img src="/images/join-candle.png">
             </div>
+            <div class="info">
+              <p>Signup for updates, offers and earn a LuDela by sharing with friends.</p>
+              <register immediate-login="true">
+                <user-email type='text' placeholder=' ENTER YOUR EMAIL'></user-email>
+                <input type='submit' value="Sign Up"/>
+                <div class="error" if="{ errorMessage }">
+                  { errorMessage }
+                </div>
+              </register>
+              <a class="login-button button" href="/login">Login</a>
+            </div>
+          </section>
           </div>
           <div class="visuals fixed">
             <div class="visuals__candle"></div>
@@ -375,16 +385,16 @@
             <div class="visuals__wax"></div>
             <div class="visuals__wax-with-flame"></div>
             <!-- <div class="visuals__wick"></div> -->
-            <div class="visuals__shell"></div>
+            <!-- <div class="visuals__shell"></div>
             <div class="visuals__variants">
               <div class="css-arrow-left"></div>
               <div class="visuals__info">
                 <p>Flexible Decòr</p>
                 <p>Quickly and affordably change the outer shell of your LuDela to suit the season or decore.</p>
               </div>
-              <div class="visuals__colors">
+              <div class="visuals__colors"> -->
                 <!-- loading alternate shell colors so they are cached and switch without flicker -->
-                <img src="/images/candle_colors/green-shell-full.png" alt="" style="display:none;">
+                <!-- <img src="/images/candle_colors/green-shell-full.png" alt="" style="display:none;">
                 <img src="/images/candle_colors/blue-shell-full.png" alt="" style="display:none;">
                 <img src="/images/candle_colors/red-shell-full.png" alt="" style="display:none;">
                 <img src="/images/candle_colors/purple-shell-full.png" alt="" style="display:none;">
@@ -421,8 +431,9 @@
                   *All LuDela candles ship with LuDela Ivory wax shell. Final colors and patterns of shells will be announced prior to shipping in early 2017.
                 </p>
               </div>
-            </div>
+            </div> -->
           </div>
+
         </div>
       </div>
       <!-- <div id="footer" class='footer'> -->
@@ -498,15 +509,20 @@
       <!--   </div> -->
       <!-- </div> -->
     <!-- </div> -->
-    <div class="modal">
+    <div class="checkout-modal modal">
       <div class="checkout-container">
         <div class="checkout">
           <div class="continue-shopping">
-            <h1><i class="arrow-left"></i>Continue Shopping<i class="shopping-bag"></i></h1>
+            <h1><i class="arrow-left"></i>Back<i class="shopping-bag"></i></h1>
           </div>
+          <input id="cart-collapsed" type="checkbox">
           <cart>
             <h1>
-              Order Summary
+              <label for="cart-collapsed">Order Summary</label>
+              <label for="cart-collapsed" class="expand-summary"></label>
+              <div class="invoice-amount">
+                { renderCurrency(data.get('order.currency'), data.get('order.total'))}&nbsp;{ data.get('order.currency').toUpperCase() }
+              </div>
             </h1>
 
             <lineitems if="{ !isEmpty() }">
@@ -609,92 +625,104 @@
             </div>
           </cart>
           <checkout>
-            <div class="contact-information">
-              <h1>
-                Contact Information
-              </h1>
-              <div class="fields">
-                <user-name class="input" placeholder="Name"></user-name>
-                <user-email class="input" placeholder="Email"></user-email>
-              </div>
-            </div>
-            <div class="shipping-information">
-              <h1>
-                Shipping Information
-              </h1>
-              <div class="fields">
-                <shippingaddress-line1 class="input" placeholder="Address"></shippingaddress-line1>
-                <shippingaddress-line2 class="input" placeholder="Suite"></shippingaddress-line2>
-              </div>
-              <div class="fields">
-                <shippingaddress-city class="input" placeholder="City"></shippingaddress-city>
-                <shippingaddress-postalcode class="input" placeholder="Postal Code"></shippingaddress-postalcode>
-              </div>
-              <div class="fields">
-                <shippingaddress-state class="input" placeholder="State"></shippingaddress-state>
-                <shippingaddress-country class="input" placeholder="Country"></shippingaddress-country>
-              </div>
-            </div>
-            <div class="gift-options">
-              <h1>
-                Gift Options
-              </h1>
-              <div class="fields">
-                <gift-toggle>
-                  <label for="order.gift">This is a gift.</label>
-                </gift-toggle>
-              </div>
-              <div class="fields" if="{ data.get('order.gift') }">
-                <gift-message placeholder="Please enter any special instructions for your gift such as custom greetings.">
-                </gift-message>
-              </div>
-            </div>
+            <div class="parts">
+              <div class="part">
+                <div class="contact-information">
+                  <h1>
+                    Contact Information
+                  </h1>
+                  <div class="fields">
+                    <user-name class="input" placeholder="Name"></user-name>
+                    <user-email class="input" placeholder="Email"></user-email>
+                  </div>
+                </div>
 
-            <div class="payment-information">
-              <h1>
-                Payment Information <i class="lock"></i>
-              </h1>
+                <div class="payment-information">
+                  <h1>
+                    Payment Information <i class="lock"></i>
+                  </h1>
 
-              <div class="fields">
-                <card-number class="input" name="number" placeholder="Card Number"></card-number>
-                <card-expiry class="input" name="expiry" placeholder="MM / YY"></card-expiry>
-                <card-cvc class="input" name="cvc" placeholder="CVC"></card-cvc>
-              </div>
+                  <div class="fields">
+                    <card-number class="input" name="number" placeholder="Card Number"></card-number>
+                    <card-expiry class="input" name="expiry" placeholder="MM / YY"></card-expiry>
+                    <card-cvc class="input" name="cvc" placeholder="CVC"></card-cvc>
+                  </div>
 
-                <!-- <div class="card-types"> -->
-                <!--   <div> -->
-                <!--     <img src="/img/card-icons/visa.png"> -->
-                <!--   </div> -->
-                <!--   <div> -->
-                <!--     <img src="/img/card-icons/mastercard.png"> -->
-                <!--   </div> -->
-                <!--   <div> -->
-                <!--     <img src="/img/card-icons/discover.png"> -->
-                <!--   </div> -->
-                <!--   <div> -->
-                <!--     <img src="/img/card-icons/amex.png"> -->
-                <!--   </div> -->
+                    <!-- <div class="card-types"> -->
+                    <!--   <div> -->
+                    <!--     <img src="/img/card-icons/visa.png"> -->
+                    <!--   </div> -->
+                    <!--   <div> -->
+                    <!--     <img src="/img/card-icons/mastercard.png"> -->
+                    <!--   </div> -->
+                    <!--   <div> -->
+                    <!--     <img src="/img/card-icons/discover.png"> -->
+                    <!--   </div> -->
+                    <!--   <div> -->
+                    <!--     <img src="/img/card-icons/amex.png"> -->
+                    <!--   </div> -->
+                    <!-- </div> -->
+
+                  <a href="//www.stripe.com" target="_blank"><img class="stripe-logo" src="/images/stripelogo.png"></a>
+                </div>
+
+
+                <!-- <div class="confirmation"> -->
+                <!--   <h1> -->
+                <!--     Almost Done -->
+                <!--   </h1> -->
+
+                <!--   <terms> -->
+                <!--     <label for="terms">I agree to LuDela's <a href="/legal" target="_blank">terms of service</a>.</label> -->
+                <!--   </terms> -->
                 <!-- </div> -->
-
-              <a href="//www.stripe.com" target="_blank"><img class="stripe-logo" src="/images/stripelogo.png"></a>
-            </div>
-
-            <div class="confirmation">
-              <h1>
-                Almost Done
-              </h1>
-
-              <terms>
-                <label for="terms">I agree to LuDela's <a href="/legal" target="_blank">terms of service</a>.</label>
-              </terms>
-              <button class="{ loading: loading || checkedOut }" type="submit">Confirm Pre-order</button>
-              <div class="error" if="{ errorMessage }">
-                { errorMessage }
+              </div>
+              <div class="part">
+                <div class="shipping-information">
+                  <h1>
+                    Shipping Information
+                  </h1>
+                  <div class="fields">
+                    <shippingaddress-line1 class="input" placeholder="Address"></shippingaddress-line1>
+                    <shippingaddress-line2 class="input" placeholder="Suite"></shippingaddress-line2>
+                  </div>
+                  <div class="fields">
+                    <shippingaddress-city class="input" placeholder="City"></shippingaddress-city>
+                    <shippingaddress-postalcode class="input" placeholder="Postal Code"></shippingaddress-postalcode>
+                  </div>
+                  <div class="fields">
+                    <shippingaddress-state class="input" placeholder="State"></shippingaddress-state>
+                    <shippingaddress-country class="input" placeholder="Country"></shippingaddress-country>
+                  </div>
+                </div>
+                <div class="gift-options">
+                  <h1>
+                    Gift Options
+                  </h1>
+                  <div class="fields">
+                    <gift-toggle>
+                      <label for="order.gift">This is a gift.</label>
+                    </gift-toggle>
+                  </div>
+                  <div class="fields" if="{ data.get('order.gift') }">
+                    <gift-message placeholder="Please enter any special instructions for your gift such as custom greetings.">
+                    </gift-message>
+                  </div>
+                </div>
               </div>
             </div>
+
+            <button class="{ loading: loading || checkedOut }"
+              type="submit"><span>Pre-order</span><span>Save Shipping</span></button>
+            <div class="error" if="{ errorMessage }">
+              { errorMessage }
+            </div>
+            <br>
+            <p>By placing this pre-order, you agree to LuDela's <a href="/legal"
+                target="_blank">terms of service</a>.  Payments will be processed
+              immediately.
           </checkout>
         </div>
-        <div class="checkout-bottom-buffer"></div>
       </div>
       <div class="thankyou">
         <p>Thank you for making the world a little brighter! You will receive a confirmation email soon.</p>
@@ -723,6 +751,70 @@
       </div>
     </div>
 
+    <footer>
+      <nav>
+        <ul>
+          <li>
+            <a class='menu__link' href='/account'>
+              Refer a Friend
+            </a>
+          </li>
+          <li>
+            <a class='menu__link' href='/about'>
+              about us
+            </a>
+          </li>
+          <li>
+            <a class='menu__link' href='/faq'>
+              faq
+            </a>
+          </li>
+          <li>
+            <a class='menu__link' href='/legal'>
+              legal
+            </a>
+          </li>
+          <li>
+            <a class='menu__link' href='/careers'>
+              careers
+            </a>
+          </li>
+          <li>
+            <a class='menu__link' href='/contact'>
+              contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav>
+        <ul>
+          <li>
+            <a class="menu__social"  href='http://facebook.com/JoinLudela' target="_blank">
+              <span class="icon icon-facebook"> </span>
+            </a>
+          </li>
+          <li>
+            <a class="menu__social"  href='http://twitter.com/JoinLudela' target="_blank">
+              <span class="icon icon-twitter"> </span>
+            </a>
+          </li>
+          <li>
+            <a class="menu__social"  href='https://www.pinterest.com/joinludela' target="_blank">
+              <span class="icon icon-pinterest2"> </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a href="#">
+        <div class="menu__logo logo">
+          <a href='/'>
+            <span class="icon icon-ludela-logo"></span>
+          </a>
+      </div>
+      </a>
+      <small class="copyright">© LuDela Inc. 2016</small>
+    </footer>
+
     <!-- Loader -->
     <div class="loader hidden">
       <div class="spinner">
@@ -730,9 +822,16 @@
     </div>
 
     <script src="/js/site.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.1/es6-shim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="js/relaunch/framework.js"></script>
+    <script src="js/relaunch/hero-video.js"></script>
+    <script src="js/relaunch/gallery.js"></script>
+    <!-- <script src="js/relaunch/slidify.js"></script> -->
     <script src="/js/shop.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.min.js"></script>
     <script type="text/javascript" src="/js/cookies.min.js"></script>
     <script src="/js/checkout.js"></script>
+    <script src="js/relaunch/ludela.js"></script>
   </body>
 </html>

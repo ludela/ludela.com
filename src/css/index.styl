@@ -2,6 +2,7 @@
 @require 'mixins'
 @require 'typography'
 @require 'components/**/*'
+@require 'relaunch/*'
 
 ////////////////////////////////
 // ANIMATION TIMING VARIABLES //
@@ -36,10 +37,22 @@ $ease-in-out-circ= cubic-bezier(.785, .135, .150, .860)
 $ease-in-out-back= cubic-bezier(.680, -.550, .265, 1.550)
 
 body
-  color #fff
+  color rgb(88,88,88)
   font-family 'proxima-nova', 'Helvetica', sans-serif
 
+.wrapper
+  footer
+    position relative
+    z-index 100
+    text-align center
+    font-size 22px
 
+    .logo
+      width 40px
+      height 40px
+      left 50%
+      margin-left -20px
+      position absolute
 
 .scroll-container
   overflow-x hidden
