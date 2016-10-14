@@ -228,7 +228,6 @@ quantity-select-control,
 .product-image-container {
   width: 20%;
   position: relative;
-  top: -20px;
 }
 .product-text-container {
   width: 55%;
@@ -248,6 +247,7 @@ quantity-select-control,
   right: 0;
   top: -15px;
   font-size: 20px;
+  cursor: pointer;
 }
 .product-currency {
   display: inline;
@@ -804,6 +804,10 @@ button[type=submit] {
   transition: right 0.3s ease-in;
   right: -380px;
 }
+#general cart .starter-scents {
+  font-size: 0.8em;
+  padding-bottom: 10px;
+}
 #general cart.show,
 #general cart:hover {
   right: 0;
@@ -880,7 +884,7 @@ button[type=submit] {
   float: left;
 }
 #general cart .bottom {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 #general cart .promo-message {
   width: 100%;
@@ -906,10 +910,10 @@ button[type=submit] {
   font-size: 35px;
   font-weight: normal;
 }
-.store .plan-price {
+.store .plan-price.subscription {
   color: #aaa;
 }
-.store .plan-price.subscription {
+.store .plan-price.subscription.subscription {
   display: none;
 }
 .store section.items > .content > .item {
@@ -988,22 +992,22 @@ button[type=submit] {
   top: -6px;
   border: 2px solid #ed8d48;
 }
-.store section.items .picker.color-picker > *:last-child > span.color-r label {
+.store section.items .picker.color-picker > *:last-child > span.color-w-r label {
   background-color: #902028;
 }
-.store section.items .picker.color-picker > *:last-child > span.color-o label {
+.store section.items .picker.color-picker > *:last-child > span.color-w-o label {
   background-color: #dd7829;
 }
-.store section.items .picker.color-picker > *:last-child > span.color-i label {
+.store section.items .picker.color-picker > *:last-child > span.color-w-i label {
   background-color: #b9956b;
 }
-.store section.items .picker.color-picker > *:last-child > span.color-g label {
+.store section.items .picker.color-picker > *:last-child > span.color-w-g label {
   background-color: #8eab66;
 }
-.store section.items .picker.color-picker > *:last-child > span.color-b label {
+.store section.items .picker.color-picker > *:last-child > span.color-w-b label {
   background-color: #51589e;
 }
-.store section.items .picker.color-picker > *:last-child > span.color-p label {
+.store section.items .picker.color-picker > *:last-child > span.color-w-p label {
   background-color: #786595;
 }
 .store section.items .picker.color-picker > *:last-child > span.color-g-w label {
@@ -1051,19 +1055,19 @@ button[type=submit] {
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
 }
-.store section.items .price {
+.store section.items .price-display {
   width: 60%;
   padding: 15px 0;
   border-top: 1px solid #dedede;
   border-bottom: 1px solid #dedede;
 }
-.store section.items .price > *:first-child {
+.store section.items .price-display > *:first-child {
   width: 25%;
   margin-right: 5%;
   display: inline-block;
   float: left;
 }
-.store section.items .price > *:last-child {
+.store section.items .price-display > *:last-child {
   width: 70%;
   display: inline-block;
   float: left;
