@@ -58,6 +58,10 @@ $(function() {
 
   var step = 1;
 
+  var $modal = $('.checkout-modal.modal')
+  var $hamburger = $('#hamburger')
+  var $thankyou = $('.thankyou')
+  var $checkoutContainer = $('checkout-container')
 
   window.openCheckout = function(e){
     var $modal = $('.checkout-modal.modal');
@@ -72,17 +76,15 @@ $(function() {
     $('.thankyou').hide()
     $('.checkout-container').css('opacity', 1)
 
-    e.stopPropagation();
-    e.preventDefault();
     return false;
   };
 
-  $('.checkout-modal.modal').find('.modal-close').on('click', function(e){
+  $modal.find('.modal-close').on('click', function(e){
     var $modal = $(this).closest('.modal');
     $modal.removeClass('hidden');
     $modal.removeClass('is-open');
 
-    $('#hamburger').removeClass('is-open');
+    $hamburger.removeClass('is-open');
     return false;
   })
 
@@ -123,18 +125,17 @@ $(function() {
     return false;
   });
 
-  $('.checkout-modal.modal').find('.continue-shopping').on('click', function(e){
+  $modal.find('.continue-shopping').on('click', function(e){
     if (step == 2) {
       step = 1;
       $('checkout').removeClass('step-2');
       return false
     }
 
-    var $modal = $(this).closest('.modal');
     $modal.removeClass('hidden');
     $modal.removeClass('is-open');
 
-    $('#hamburger').removeClass('is-open');
+    $hamburger.removeClass('is-open');
     return false;
   })
 
@@ -239,7 +240,7 @@ $(function() {
   /**
    * Toggle hamburger
    */
-  $('.hamburger').on('click touchstart', function () {
+  $hamburger.on('click touchstart', function () {
     $(this).toggleClass('open');
   });
 
