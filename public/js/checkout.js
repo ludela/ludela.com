@@ -58,31 +58,30 @@ $(function() {
 
   var step = 1;
 
+  var $modal = $('.checkout-modal.modal')
+  var $hamburger = $('#hamburger')
+  var $thankyou = $('.thankyou')
+  var $checkoutContainer = $('checkout-container')
 
   $('.checkout-button').on('click', function(e){
-    var $modal = $('.checkout-modal.modal');
-    $modal.addClass('is-open');
-
-    $('#hamburger').addClass('is-open');
-    $modal.removeClass('hidden');
+    $modal.addClass('is-open')
+    $hamburger.addClass('is-open')
+    $modal.removeClass('hidden')
 
     Shop.analytics.track('Viewed Checkout Step', {step: 1})
     Shop.initCart()
 
-    $('.thankyou').hide()
-    $('.checkout-container').css('opacity', 1)
-
-    e.stopPropagation();
-    e.preventDefault();
-    return false;
+    $thankyou.hide()
+    $checkoutContainer.css('opacity', 1)
+    return false
   });
 
-  $('.checkout-modal.modal').find('.modal-close').on('click', function(e){
+  $modal.find('.modal-close').on('click', function(e){
     var $modal = $(this).closest('.modal');
     $modal.removeClass('hidden');
     $modal.removeClass('is-open');
 
-    $('#hamburger').removeClass('is-open');
+    $hamburger.removeClass('is-open');
     return false;
   })
 
@@ -123,18 +122,17 @@ $(function() {
     return false;
   });
 
-  $('.checkout-modal.modal').find('.continue-shopping').on('click', function(e){
+  $modal.find('.continue-shopping').on('click', function(e){
     if (step == 2) {
       step = 1;
       $('checkout').removeClass('step-2');
       return false
     }
 
-    var $modal = $(this).closest('.modal');
     $modal.removeClass('hidden');
     $modal.removeClass('is-open');
 
-    $('#hamburger').removeClass('is-open');
+    $hamburger.removeClass('is-open');
     return false;
   })
 
@@ -239,7 +237,7 @@ $(function() {
   /**
    * Toggle hamburger
    */
-  $('.hamburger').on('click touchstart', function () {
+  $hamburger.on('click touchstart', function () {
     $(this).toggleClass('open');
   });
 
