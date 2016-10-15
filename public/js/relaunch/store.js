@@ -20,6 +20,8 @@ $(window).load(function(){
     return Shop.CrowdControl.Views.View.prototype.renderCurrency.apply(this, arguments).replace('\.00', '');
   }
 
+  Shop.setItem('ludela', 0);
+
   var timeoutId = -1;
 
   var products = {
