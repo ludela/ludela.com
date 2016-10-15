@@ -174,6 +174,9 @@ lineitem {
   position: relative;
   display: block;
 }
+lineitem {
+  display: table;
+}
 quantity-select-control,
 .promo,
 .promo-row,
@@ -228,6 +231,12 @@ quantity-select-control,
 .product-image-container {
   width: 20%;
   position: relative;
+}
+.product-image-container img:nth-child(n+2) {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 .product-text-container {
   width: 55%;
@@ -1029,7 +1038,7 @@ button[type=submit] {
   padding-bottom: 15px;
 }
 .store section.items .refill-plan-picker > *:last-child span {
-  width: 25%;
+  width: 50%;
   display: inline-block;
   text-align: center;
   float: left;
@@ -1074,7 +1083,6 @@ button[type=submit] {
 }
 .store section.items .call-to-action.button {
   border: 0;
-  border-radius: 20px;
   color: #fff;
   margin-top: 15px;
   font-size: 14px;
@@ -1137,14 +1145,18 @@ button[type=submit] {
     display: block;
   }
   .store .picker,
-  .store .price {
+  .store .price,
+  .store .price-display {
     width: 100% !important;
+  }
+  .store .image {
+    margin-top: 80px;
   }
   .store .call-to-action.button {
     width: 100%;
     text-align: center;
   }
-  .store section.items.scents.scents.scents > .content > .item {
+  .store section.items.scents.scents.scents.scents > .content > .item {
     float: left;
     width: 100%;
     margin-right: 0;

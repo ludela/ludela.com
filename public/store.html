@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/relaunch/fonts.css" />
 
     <!-- Our Styles and JS -->
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/css/selectize.bootstrap3.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/css/selectize.bootstrap3.min.css">
     <link rel="stylesheet" href="css/relaunch/framework.css" />
 
     <!-- Block Level Styles and JS -->
@@ -202,7 +202,7 @@
                 </span>
                 <span>
                   <input type="radio" id="solo-subscription" name="refill-1" value="subscription">
-                  <label for="solo-subscription">Subscription</label>
+                  <label for="solo-subscription">Subscribe</label>
                 </span>
               </div>
             </div>
@@ -211,8 +211,8 @@
               <span>
                 <span class="list-price"></span>
                 <span class="price"></span>
-                <span class="plan-price single"> Today</span>
-                <span class="plan-price subscription"> Today and $7 USD/month</span>
+                <span class="plan-price single"></span>
+                <span class="plan-price subscription"> + $7 USD/month</span>
               </span>
             </div>
             <div class="call-to-action add-to-cart button">
@@ -235,55 +235,55 @@
               <img data-lazy="/images/products/kits/Duo-G-BM.png">
             </div>
             <div class="title">
-              <h4>Duo Set</h4><span>2 LuDela Candle, 4 Refills</span>
+              <h4>Duo Starter Kit</h4><span>2 LuDela Candle and 4 Starter Scents</span>
             </div>
             <div class="color-picker picker">
               <label>Choose your color:</label>
               <div>
-                <span class="color-r">
-                  <input type="radio" id="color-solo-r" name="color-2">
-                  <label for="color-solo-r">Red</label>
+                <span class="color-w-r">
+                  <input type="radio" id="color-duo-w-r" name="color-2">
+                  <label for="color-duo-w-r">Red</label>
                 </span>
-                <span class="color-o">
-                  <input type="radio" id="color-solo-o" name="color-2">
-                  <label for="color-solo-o">Orange</label>
+                <span class="color-w-o">
+                  <input type="radio" id="color-duo-w-o" name="color-2">
+                  <label for="color-duo-w-o">Orange</label>
                 </span>
-                <span class="color-i">
-                  <input type="radio" id="color-solo-i" name="color-2" checked>
-                  <label for="color-solo-i">Ivory</label>
+                <span class="color-w-i">
+                  <input type="radio" id="color-duo-w-i" name="color-2" checked>
+                  <label for="color-duo-w-i">Ivory</label>
                 </span>
-                <span class="color-g">
-                  <input type="radio" id="color-solo-g" name="color-2">
-                  <label for="color-solo-g">Green</label>
+                <span class="color-w-g">
+                  <input type="radio" id="color-duo-w-g" name="color-2">
+                  <label for="color-duo-w-g">Green</label>
                 </span>
-                <span class="color-b">
-                  <input type="radio" id="color-solo-b" name="color-2">
-                  <label for="color-solo-b">Blue</label>
+                <span class="color-w-b">
+                  <input type="radio" id="color-duo-w-b" name="color-2">
+                  <label for="color-duo-w-b">Blue</label>
                 </span>
-                <span class="color-p">
-                  <input type="radio" id="color-solo-p" name="color-2">
-                  <label for="color-solo-p">Purple</label>
+                <span class="color-w-p">
+                  <input type="radio" id="color-duo-w-p" name="color-2">
+                  <label for="color-duo-w-p">Purple</label>
                 </span>
 
                 <span class="color-g-w">
-                  <input type="radio" id="color-solo-w" name="color-2">
-                  <label for="color-solo-w">White</label>
+                  <input type="radio" id="color-duo-g-w" name="color-2">
+                  <label for="color-duo-g-w">White</label>
                 </span>
                 <span class="color-g-sm">
-                  <input type="radio" id="color-solo-g-sm" name="color-2">
-                  <label for="color-solo-g-sm">Silver</label>
+                  <input type="radio" id="color-duo-g-sm" name="color-2">
+                  <label for="color-duo-g-sm">Silver</label>
                 </span>
                 <span class="color-g-r">
-                  <input type="radio" id="color-solo-g-r" name="color-2">
-                  <label for="color-solo-g-r">Red</label>
+                  <input type="radio" id="color-duo-g-r" name="color-2">
+                  <label for="color-duo-g-r">Red</label>
                 </span>
                 <span class="color-g-b">
-                  <input type="radio" id="color-solo-g-b" name="color-2">
-                  <label for="color-solo-g-b">Black</label>
+                  <input type="radio" id="color-duo-g-b" name="color-2">
+                  <label for="color-duo-g-b">Black</label>
                 </span>
                 <span class="color-g-bm">
-                  <input type="radio" id="color-solo-g-bm" name="color-2">
-                  <label for="color-solo-g-bm">Mercury</label>
+                  <input type="radio" id="color-duo-g-bm" name="color-2">
+                  <label for="color-duo-g-bm">Mercury</label>
                 </span>
               </div>
             </div>
@@ -307,18 +307,23 @@
               <label>Select refill plan:</label>
               <div>
                 <span>
-                  <input type="radio" id="duo-single" name="refill-2" checked>
+                  <input type="radio" id="duo-single" name="refill-2" checked value="single">
                   <label for="duo-single">Single</label>
                 </span>
                 <span>
-                  <input type="radio" id="duo-subscription" name="refill-2">
-                  <label for="duo-subscription">Subscription</label>
+                  <input type="radio" id="duo-subscription" name="refill-2" value="subscription">
+                  <label for="duo-subscription">Subscribe</label>
                 </span>
               </div>
             </div>
-            <div class="price">
-              <span>Price:</span>
-              <span>$189 USD</span>
+            <div class="price-display">
+              <label>Price:</label>
+              <span>
+                <span class="list-price"></span>
+                <span class="price"></span>
+                <span class="plan-price single"></span>
+                <span class="plan-price subscription"> + $7 USD/month</span>
+              </span>
             </div>
             <div class="call-to-action add-to-cart button">
               + Add To Cart
@@ -340,55 +345,55 @@
               <img data-lazy="/images/products/kits/Trio-G-BM.png">
             </div>
             <div class="title">
-              <h4>Trio Set</h4><span>3 LuDela Candle, 6 Refills</span>
+              <h4>Trio Starter Kit</h4><span>3 LuDela Candle and 6 Starter Scents</span>
             </div>
             <div class="color-picker picker">
               <label>Choose your color:</label>
               <div>
-                <span class="color-r">
-                  <input type="radio" id="color-solo-r" name="color-3">
-                  <label for="color-solo-r">Red</label>
+                <span class="color-w-r">
+                  <input type="radio" id="color-trio-w-r" name="color-3">
+                  <label for="color-trio-w-r">Red</label>
                 </span>
-                <span class="color-o">
-                  <input type="radio" id="color-solo-o" name="color-3">
-                  <label for="color-solo-o">Orange</label>
+                <span class="color-w-o">
+                  <input type="radio" id="color-trio-w-o" name="color-3">
+                  <label for="color-trio-w-o">Orange</label>
                 </span>
-                <span class="color-i">
-                  <input type="radio" id="color-solo-i" name="color-3" checked>
-                  <label for="color-solo-i">Ivory</label>
+                <span class="color-w-i">
+                  <input type="radio" id="color-trio-w-i" name="color-3" checked>
+                  <label for="color-trio-w-i">Ivory</label>
                 </span>
-                <span class="color-g">
-                  <input type="radio" id="color-solo-g" name="color-3">
-                  <label for="color-solo-g">Green</label>
+                <span class="color-w-g">
+                  <input type="radio" id="color-trio-w-g" name="color-3">
+                  <label for="color-trio-w-g">Green</label>
                 </span>
-                <span class="color-b">
-                  <input type="radio" id="color-solo-b" name="color-3">
-                  <label for="color-solo-b">Blue</label>
+                <span class="color-w-b">
+                  <input type="radio" id="color-trio-w-b" name="color-3">
+                  <label for="color-trio-w-b">Blue</label>
                 </span>
-                <span class="color-p">
-                  <input type="radio" id="color-solo-p" name="color-3">
-                  <label for="color-solo-p">Purple</label>
+                <span class="color-w-p">
+                  <input type="radio" id="color-trio-w-p" name="color-3">
+                  <label for="color-trio-w-p">Purple</label>
                 </span>
 
                 <span class="color-g-w">
-                  <input type="radio" id="color-solo-w" name="color-3">
-                  <label for="color-solo-w">White</label>
+                  <input type="radio" id="color-trio-g-w" name="color-3">
+                  <label for="color-trio-g-w">White</label>
                 </span>
                 <span class="color-g-sm">
-                  <input type="radio" id="color-solo-g-sm" name="color-3">
-                  <label for="color-solo-g-sm">Silver</label>
+                  <input type="radio" id="color-trio-g-sm" name="color-3">
+                  <label for="color-trio-g-sm">Silver</label>
                 </span>
                 <span class="color-g-r">
-                  <input type="radio" id="color-solo-g-r" name="color-3">
-                  <label for="color-solo-g-r">Red</label>
+                  <input type="radio" id="color-trio-g-r" name="color-3">
+                  <label for="color-trio-g-r">Red</label>
                 </span>
                 <span class="color-g-b">
-                  <input type="radio" id="color-solo-g-b" name="color-3">
-                  <label for="color-solo-g-b">Black</label>
+                  <input type="radio" id="color-trio-g-b" name="color-3">
+                  <label for="color-trio-g-b">Black</label>
                 </span>
                 <span class="color-g-bm">
-                  <input type="radio" id="color-solo-g-bm" name="color-3">
-                  <label for="color-solo-g-bm">Mercury</label>
+                  <input type="radio" id="color-trio-g-bm" name="color-3">
+                  <label for="color-trio-g-bm">Mercury</label>
                 </span>
               </div>
             </div>
@@ -412,18 +417,23 @@
               <label>Select refill plan:</label>
               <div>
                 <span>
-                  <input type="radio" id="trio-single" name="refill-3" checked>
+                  <input type="radio" id="trio-single" name="refill-3" checked value="single">
                   <label for="trio-single">Single</label>
                 </span>
                 <span>
-                  <input type="radio" id="trio-subscription" name="refill-3">
-                  <label for="trio-subscription">Subscription</label>
+                  <input type="radio" id="trio-subscription" name="refill-3" value="subscription">
+                  <label for="trio-subscription">Subscribe</label>
                 </span>
               </div>
             </div>
-            <div class="price">
-              <span>Price:</span>
-              <span>$279 USD</span>
+            <div class="price-display">
+              <label>Price:</label>
+              <span>
+                <span class="list-price"></span>
+                <span class="price"></span>
+                <span class="plan-price single"></span>
+                <span class="plan-price subscription"> + $7 USD/month</span>
+              </span>
             </div>
             <div class="call-to-action add-to-cart button">
               + Add To Cart
@@ -435,32 +445,24 @@
       <section class="items scents">
         <h2>Scents</h2>
         <div class="content">
-          <div class="item">
+          <div id="sc-1" class="item">
             <div class="image">
               <img data-lazy="/images/products/scent-backgrounds/SC-1-bg.png">
               <img data-lazy="/images/products/scent-candles/SC-1.png">
             </div>
             <div class="title">
-              <h4>Vanilla Bliss</h4><span>$7 USD</span>
+              <h4>Vanilla Bliss</h4><span class="price"></span><span class="plan-price subscription"></span>
             </div>
             <div class="refill-plan-picker picker">
               <label>Select refill plan:</label>
               <div>
                 <span>
-                  <input type="radio" id="scent-1-refillx0" name="scent-refill-1" checked>
-                  <label for="scent-1-refillx0">None</label>
+                  <input type="radio" id="scent-1-refillx0" name="scent-refill-1" checked value="single">
+                  <label for="scent-1-refillx0">Single</label>
                 </span>
                 <span>
-                  <input type="radio" id="scent-1-refillx1" name="scent-refill-1">
-                  <label for="scent-1-refillx1">x1</label>
-                </span>
-                <span>
-                  <input type="radio" id="scent-1-refillx5" name="scent-refill-1">
-                  <label for="scent-1-refillx5">x5</label>
-                </span>
-                <span>
-                  <input type="radio" id="scent-1-refillx10" name="scent-refill-1">
-                  <label for="scent-1-refillx10">x10</label>
+                  <input type="radio" id="scent-1-refillx1" name="scent-refill-1" value="subscription">
+                  <label for="scent-1-refillx1">Subscribe</label>
                 </span>
               </div>
             </div>
@@ -469,32 +471,24 @@
             </div>
           </div>
 
-          <div class="item">
+          <div id="sc-2" class="item">
             <div class="image">
               <img data-lazy="/images/products/scent-backgrounds/SC-2-bg.png">
               <img data-lazy="/images/products/scent-candles/SC-2.png">
             </div>
             <div class="title">
-              <h4>Dew Kissed Petals</h4><span>$7 USD</span>
+              <h4>Dew Kissed Petals</h4><span class="price"></span><span class="plan-price subscription"></span>
             </div>
             <div class="refill-plan-picker picker">
               <label>Select refill plan:</label>
               <div>
                 <span>
-                  <input type="radio" id="scent-2-refillx0" name="scent-refill-2" checked>
-                  <label for="scent-2-refillx0">None</label>
+                  <input type="radio" id="scent-2-refillx0" name="scent-refill-2" checked value="single">
+                  <label for="scent-2-refillx0">Single</label>
                 </span>
                 <span>
-                  <input type="radio" id="scent-2-refillx1" name="scent-refill-2">
-                  <label for="scent-2-refillx1">x1</label>
-                </span>
-                <span>
-                  <input type="radio" id="scent-2-refillx5" name="scent-refill-2">
-                  <label for="scent-2-refillx5">x5</label>
-                </span>
-                <span>
-                  <input type="radio" id="scent-2-refillx10" name="scent-refill-2">
-                  <label for="scent-2-refillx10">x10</label>
+                  <input type="radio" id="scent-2-refillx1" name="scent-refill-2" value="subscription">
+                  <label for="scent-2-refillx1">Subscribe</label>
                 </span>
               </div>
             </div>
@@ -503,32 +497,24 @@
             </div>
           </div>
 
-          <div class="item">
+          <div id="sc-3" class="item">
             <div class="image">
               <img data-lazy="/images/products/scent-backgrounds/SC-3-bg.png">
               <img data-lazy="/images/products/scent-candles/SC-3.png">
             </div>
             <div class="title">
-              <h4>Lavender Escape</h4><span>$7 USD</span>
+              <h4>Lavender Escape</h4><span class="price"></span><span class="plan-price subscription"></span>
             </div>
             <div class="refill-plan-picker picker">
               <label>Select refill plan:</label>
               <div>
                 <span>
-                  <input type="radio" id="scent-3-refillx0" name="scent-refill-3" checked>
-                  <label for="scent-3-refillx0">None</label>
+                  <input type="radio" id="scent-3-refillx0" name="scent-refill-3" checked value="single">
+                  <label for="scent-3-refillx0">Single</label>
                 </span>
                 <span>
-                  <input type="radio" id="scent-3-refillx1" name="scent-refill-3">
-                  <label for="scent-3-refillx1">x1</label>
-                </span>
-                <span>
-                  <input type="radio" id="scent-3-refillx5" name="scent-refill-3">
-                  <label for="scent-3-refillx5">x5</label>
-                </span>
-                <span>
-                  <input type="radio" id="scent-3-refillx10" name="scent-refill-3">
-                  <label for="scent-3-refillx10">x10</label>
+                  <input type="radio" id="scent-3-refillx1" name="scent-refill-3" value="subscription">
+                  <label for="scent-3-refillx1">Subscribe</label>
                 </span>
               </div>
             </div>
@@ -537,32 +523,24 @@
             </div>
           </div>
 
-          <div class="item">
+          <div id="sc-4" class="item">
             <div class="image">
               <img data-lazy="/images/products/scent-backgrounds/SC-4-bg.png">
               <img data-lazy="/images/products/scent-candles/SC-4.png">
             </div>
             <div class="title">
-              <h4>Pomegranate Delight</h4><span>$7 USD</span>
+              <h4>Pomegranate Delight</h4><span class="price"></span><span class="plan-price subscription"></span>
             </div>
             <div class="refill-plan-picker picker">
               <label>Select refill plan:</label>
               <div>
                 <span>
-                  <input type="radio" id="scent-4-refillx0" name="scent-refill-4" checked>
-                  <label for="scent-4-refillx0">None</label>
+                  <input type="radio" id="scent-4-refillx0" name="scent-refill-4" checked value="single">
+                  <label for="scent-4-refillx0">Single</label>
                 </span>
                 <span>
-                  <input type="radio" id="scent-4-refillx1" name="scent-refill-4">
-                  <label for="scent-4-refillx1">x1</label>
-                </span>
-                <span>
-                  <input type="radio" id="scent-4-refillx5" name="scent-refill-4">
-                  <label for="scent-4-refillx5">x5</label>
-                </span>
-                <span>
-                  <input type="radio" id="scent-4-refillx10" name="scent-refill-4">
-                  <label for="scent-4-refillx10">x10</label>
+                  <input type="radio" id="scent-4-refillx1" name="scent-refill-4" value="subscription">
+                  <label for="scent-4-refillx1">Subscribe</label>
                 </span>
               </div>
             </div>
@@ -571,32 +549,24 @@
             </div>
           </div>
 
-          <div class="item">
+          <div id="sc-5" class="item">
             <div class="image">
               <img data-lazy="/images/products/scent-backgrounds/SC-5-bg.png">
               <img data-lazy="/images/products/scent-candles/SC-5.png">
             </div>
             <div class="title">
-              <h4>Mango Driftwood</h4><span>$7 USD</span>
+              <h4>Mango Driftwood</h4><span class="price"></span><span class="plan-price subscription"></span>
             </div>
             <div class="refill-plan-picker picker">
               <label>Select refill plan:</label>
               <div>
                 <span>
-                  <input type="radio" id="scent-5-refillx0" name="scent-refill-5" checked>
-                  <label for="scent-5-refillx0">None</label>
+                  <input type="radio" id="scent-5-refillx0" name="scent-refill-5" checked value="single">
+                  <label for="scent-5-refillx0">Single</label>
                 </span>
                 <span>
-                  <input type="radio" id="scent-5-refillx1" name="scent-refill-5">
-                  <label for="scent-5-refillx1">x1</label>
-                </span>
-                <span>
-                  <input type="radio" id="scent-5-refillx5" name="scent-refill-5">
-                  <label for="scent-5-refillx5">x5</label>
-                </span>
-                <span>
-                  <input type="radio" id="scent-5-refillx10" name="scent-refill-5">
-                  <label for="scent-5-refillx10">x10</label>
+                  <input type="radio" id="scent-5-refillx1" name="scent-refill-5" value="subscription">
+                  <label for="scent-5-refillx1">Subscribe</label>
                 </span>
               </div>
             </div>
@@ -605,32 +575,24 @@
             </div>
           </div>
 
-          <div class="item">
+          <div id="sc-6" class="item">
             <div class="image">
               <img data-lazy="/images/products/scent-backgrounds/SC-6-bg.png">
               <img data-lazy="/images/products/scent-candles/SC-6.png">
             </div>
             <div class="title">
-              <h4>Turquoise Bay</h4><span>$7 USD</span>
+              <h4>Turquoise Bay</h4><span class="price"></span><span class="plan-price subscription"></span>
             </div>
             <div class="refill-plan-picker picker">
               <label>Select refill plan:</label>
               <div>
                 <span>
-                  <input type="radio" id="scent-6-refillx0" name="scent-refill-6" checked>
-                  <label for="scent-6-refillx0">None</label>
+                  <input type="radio" id="scent-6-refillx0" name="scent-refill-6" checked value="single">
+                  <label for="scent-6-refillx0">Single</label>
                 </span>
                 <span>
-                  <input type="radio" id="scent-6-refillx1" name="scent-refill-6">
-                  <label for="scent-6-refillx1">x1</label>
-                </span>
-                <span>
-                  <input type="radio" id="scent-6-refillx5" name="scent-refill-6">
-                  <label for="scent-6-refillx5">x5</label>
-                </span>
-                <span>
-                  <input type="radio" id="scent-6-refillx10" name="scent-refill-6">
-                  <label for="scent-6-refillx10">x10</label>
+                  <input type="radio" id="scent-6-refillx1" name="scent-refill-6" value="subscription">
+                  <label for="scent-6-refillx1">Subscribe</label>
                 </span>
               </div>
             </div>
@@ -639,32 +601,24 @@
             </div>
           </div>
 
-          <div class="item">
+          <div id="sc-7" class="item">
             <div class="image">
               <img data-lazy="/images/products/scent-backgrounds/SC-7-bg.png">
               <img data-lazy="/images/products/scent-candles/SC-7.png">
             </div>
             <div class="title">
-              <h4>White Tea and Ginger</h4><span>$7 USD</span>
+              <h4>White Tea and Ginger</h4><span class="price"></span><span class="plan-price subscription"></span>
             </div>
             <div class="refill-plan-picker picker">
               <label>Select refill plan:</label>
               <div>
                 <span>
-                  <input type="radio" id="scent-7-refillx0" name="scent-refill-7" checked>
-                  <label for="scent-7-refillx0">None</label>
+                  <input type="radio" id="scent-7-refillx0" name="scent-refill-7" checked value="single">
+                  <label for="scent-7-refillx0">Single</label>
                 </span>
                 <span>
-                  <input type="radio" id="scent-7-refillx1" name="scent-refill-7">
-                  <label for="scent-7-refillx1">x1</label>
-                </span>
-                <span>
-                  <input type="radio" id="scent-7-refillx5" name="scent-refill-7">
-                  <label for="scent-7-refillx5">x5</label>
-                </span>
-                <span>
-                  <input type="radio" id="scent-7-refillx10" name="scent-refill-7">
-                  <label for="scent-7-refillx10">x10</label>
+                  <input type="radio" id="scent-7-refillx1" name="scent-refill-7" value="subscription">
+                  <label for="scent-7-refillx1">Subscribe</label>
                 </span>
               </div>
             </div>
@@ -673,32 +627,24 @@
             </div>
           </div>
 
-          <div class="item">
+          <div id="sc-8" class="item">
             <div class="image">
               <img data-lazy="/images/products/scent-backgrounds/SC-8-bg.png">
               <img data-lazy="/images/products/scent-candles/SC-8.png">
             </div>
             <div class="title">
-              <h4>Sheer Linen & Orchid</h4><span>$7 USD</span>
+              <h4>Sheer Linen & Orchid</h4><span class="price"></span><span class="plan-price subscription"></span>
             </div>
             <div class="refill-plan-picker picker">
               <label>Select refill plan:</label>
               <div>
                 <span>
-                  <input type="radio" id="scent-8-refillx0" name="scent-refill-8" checked>
-                  <label for="scent-8-refillx0">None</label>
+                  <input type="radio" id="scent-8-refillx0" name="scent-refill-8" checked value="single">
+                  <label for="scent-8-refillx0">Single</label>
                 </span>
                 <span>
-                  <input type="radio" id="scent-8-refillx1" name="scent-refill-8">
-                  <label for="scent-8-refillx1">x1</label>
-                </span>
-                <span>
-                  <input type="radio" id="scent-8-refillx5" name="scent-refill-8">
-                  <label for="scent-8-refillx5">x5</label>
-                </span>
-                <span>
-                  <input type="radio" id="scent-8-refillx10" name="scent-refill-8">
-                  <label for="scent-8-refillx10">x10</label>
+                  <input type="radio" id="scent-8-refillx1" name="scent-refill-8" value="subscription">
+                  <label for="scent-8-refillx1">Subscribe</label>
                 </span>
               </div>
             </div>
@@ -707,32 +653,24 @@
             </div>
           </div>
 
-          <div class="item">
+          <div id="sc-9" class="item">
             <div class="image">
               <img data-lazy="/images/products/scent-backgrounds/SC-9-bg.png">
               <img data-lazy="/images/products/scent-candles/SC-9.png">
             </div>
             <div class="title">
-              <h4>Coastal Waters</h4><span>$7 USD</span>
+              <h4>Coastal Waters</h4><span class="price"></span><span class="plan-price subscription"></span>
             </div>
             <div class="refill-plan-picker picker">
               <label>Select refill plan:</label>
               <div>
                 <span>
-                  <input type="radio" id="scent-9-refillx0" name="scent-refill-9" checked>
-                  <label for="scent-9-refillx0">None</label>
+                  <input type="radio" id="scent-9-refillx0" name="scent-refill-9" checked value="single">
+                  <label for="scent-9-refillx0">Single</label>
                 </span>
                 <span>
-                  <input type="radio" id="scent-9-refillx1" name="scent-refill-9">
-                  <label for="scent-9-refillx1">x1</label>
-                </span>
-                <span>
-                  <input type="radio" id="scent-9-refillx5" name="scent-refill-9">
-                  <label for="scent-9-refillx5">x5</label>
-                </span>
-                <span>
-                  <input type="radio" id="scent-9-refillx10" name="scent-refill-9">
-                  <label for="scent-9-refillx10">x10</label>
+                  <input type="radio" id="scent-9-refillx1" name="scent-refill-9" value="subscription">
+                  <label for="scent-9-refillx1">Subscribe</label>
                 </span>
               </div>
             </div>
@@ -741,32 +679,24 @@
             </div>
           </div>
 
-          <div class="item">
+          <div id="sc-10" class="item">
             <div class="image">
               <img data-lazy="/images/products/scent-backgrounds/SC-10-bg.png">
               <img data-lazy="/images/products/scent-candles/SC-10.png">
             </div>
             <div class="title">
-              <h4>Midnight Showers</h4><span>$7 USD</span>
+              <h4>Midnight Showers</h4><span class="price"></span><span class="plan-price subscription"></span>
             </div>
             <div class="refill-plan-picker picker">
               <label>Select refill plan:</label>
               <div>
                 <span>
-                  <input type="radio" id="scent-10-refillx0" name="scent-refill-10" checked>
-                  <label for="scent-10-refillx0">None</label>
+                  <input type="radio" id="scent-10-refillx0" name="scent-refill-10" checked value="single">
+                  <label for="scent-10-refillx0">Single</label>
                 </span>
                 <span>
-                  <input type="radio" id="scent-10-refillx1" name="scent-refill-10">
-                  <label for="scent-10-refillx1">x1</label>
-                </span>
-                <span>
-                  <input type="radio" id="scent-10-refillx5" name="scent-refill-10">
-                  <label for="scent-10-refillx5">x5</label>
-                </span>
-                <span>
-                  <input type="radio" id="scent-10-refillx10" name="scent-refill-10">
-                  <label for="scent-10-refillx10">x10</label>
+                  <input type="radio" id="scent-10-refillx1" name="scent-refill-10" value="subscription">
+                  <label for="scent-10-refillx1">Subscribe</label>
                 </span>
               </div>
             </div>
@@ -871,9 +801,10 @@
               <div class="product-image-container" if="{ data.get('productSlug').indexOf('SC') != 0 }">
                 <img src="/images/products/kits/{data.get('productSlug')}.png" alt="{ data.get('productName') }"></img>
               </div>
-              <!-- <div class="product-image-container"> -->
-              <!--   <img src="images/Candle-Product.png" alt="{ data.get('productName') }"></img> -->
-              <!-- </div> -->
+              <div class="product-image-container" if="{ data.get('productSlug').indexOf('SC') == 0 }">
+                <img src="/images/products/scent-backgrounds/{data.get('productSlug').replace('-S','')}-bg.png" alt="{ data.get('productName') }"></img>
+                <img src="/images/products/scent-candles/{data.get('productSlug').replace('-S','')}.png" alt="{ data.get('productName') }"></img>
+              </div>
               <div onclick="{ delete }" class="product-delete">
                 x
               </div>
@@ -954,11 +885,16 @@
       <div class="checkout-container">
         <div class="checkout">
           <div class="continue-shopping">
-            <h1><i class="arrow-left"></i>Continue Shopping<i class="shopping-bag"></i></h1>
+            <h1><i class="arrow-left"></i>Back<i class="shopping-bag"></i></h1>
           </div>
+          <input id="cart-collapsed" type="checkbox">
           <cart>
             <h1>
-              Order Summary
+              <label for="cart-collapsed">Order Summary</label>
+              <label for="cart-collapsed" class="expand-summary"></label>
+              <div class="invoice-amount">
+                { renderCurrency(data.get('order.currency'), data.get('order.total'))}&nbsp;{ data.get('order.currency').toUpperCase() }
+              </div>
             </h1>
 
             <lineitems if="{ !isEmpty() }">
@@ -974,10 +910,16 @@
                   <p>{ data.get('description') }</p>
                 </span>
               </div>
-              <div class="product-image-container">
-                <img src="images/Candle-Product.png" alt="{ data.get('productName') }"></img>
+              <div class="product-image-container" if="{ data.get('productSlug').indexOf('SC') != 0 }">
+                <img src="/images/products/kits/{data.get('productSlug')}.png" alt="{ data.get('productName') }"></img>
               </div>
-              <!-- <div onclick="{ delete }" class="product-delete"></div> -->
+              <div class="product-image-container" if="{ data.get('productSlug').indexOf('SC') == 0 }">
+                <img src="/images/products/scent-backgrounds/{data.get('productSlug').replace('-S','')}-bg.png" alt="{ data.get('productName') }"></img>
+                <img src="/images/products/scent-candles/{data.get('productSlug').replace('-S','')}.png" alt="{ data.get('productName') }"></img>
+              </div>
+              <div onclick="{ delete }" class="product-delete">
+                x
+              </div>
               <div class="product-price-container invoice-amount">
                 <div class="product-price">
                   { renderCurrency(parentData.get('currency'), data.get().price * data.get().quantity) }
@@ -1046,94 +988,119 @@
               <div class="invoice-label">Estimated Ship Date</div>
               <div class="invoice-amount">Early 2017</div>
             </div>
+            <!-- <div class="special-offer"> -->
+            <!--   <h1>SPECIAL OFFER</h1> -->
+            <!--   <div class="fields"> -->
+            <!--     <div class="checkbox"> -->
+            <!--       <input type="checkbox" id="refills" name="refills"> -->
+            <!--       <label for="refills"> -->
+            <!--          Yes! I would like a free month of LuDela refills and more -->
+            <!--          information about saving time and money with LuDela's -->
+            <!--          subscription plans. No strings attached! -->
+            <!--       </label> -->
+            <!--     </div> -->
+            <!--   </div> -->
+            <!-- </div> -->
           </cart>
           <checkout>
-            <div class="contact-information">
-              <h1>
-                Contact Information
-              </h1>
-              <div class="fields">
-                <user-name class="input" placeholder="Name"></user-name>
-                <user-email class="input" placeholder="Email"></user-email>
-              </div>
-            </div>
-            <div class="shipping-information">
-              <h1>
-                Shipping Information
-              </h1>
-              <div class="fields">
-                <shippingaddress-line1 class="input" placeholder="Address"></shippingaddress-line1>
-                <shippingaddress-line2 class="input" placeholder="Suite"></shippingaddress-line2>
-              </div>
-              <div class="fields">
-                <shippingaddress-city class="input" placeholder="City"></shippingaddress-city>
-                <shippingaddress-postalcode class="input" placeholder="Postal Code"></shippingaddress-postalcode>
-              </div>
-              <div class="fields">
-                <shippingaddress-state class="input" placeholder="State"></shippingaddress-state>
-                <shippingaddress-country class="input" placeholder="Country"></shippingaddress-country>
-              </div>
-            </div>
-            <div class="gift-options">
-              <h1>
-                Gift Options
-              </h1>
-              <div class="fields">
-                <gift-toggle>
-                  <label for="order.gift">This is a gift.</label>
-                </gift-toggle>
-              </div>
-              <div class="fields" if="{ data.get('order.gift') }">
-                <gift-message placeholder="Please enter any special instructions for your gift such as custom greetings.">
-                </gift-message>
-              </div>
-            </div>
+            <div class="parts">
+              <div class="part">
+                <div class="contact-information">
+                  <h1>
+                    Contact Information
+                  </h1>
+                  <div class="fields">
+                    <user-name class="input" placeholder="Name"></user-name>
+                    <user-email class="input" placeholder="Email"></user-email>
+                  </div>
+                </div>
 
-            <div class="payment-information">
-              <h1>
-                Payment Information <i class="lock"></i>
-              </h1>
+                <div class="payment-information">
+                  <h1>
+                    Payment Information <i class="lock"></i>
+                  </h1>
 
-              <div class="fields">
-                <card-number class="input" name="number" placeholder="Card Number"></card-number>
-                <card-expiry class="input" name="expiry" placeholder="MM / YY"></card-expiry>
-                <card-cvc class="input" name="cvc" placeholder="CVC"></card-cvc>
-              </div>
+                  <div class="fields">
+                    <card-number class="input" name="number" placeholder="Card Number"></card-number>
+                    <card-expiry class="input" name="expiry" placeholder="MM / YY"></card-expiry>
+                    <card-cvc class="input" name="cvc" placeholder="CVC"></card-cvc>
+                  </div>
 
-                <!-- <div class="card-types"> -->
-                <!--   <div> -->
-                <!--     <img data-lazy="/img/card-icons/visa.png"> -->
-                <!--   </div> -->
-                <!--   <div> -->
-                <!--     <img data-lazy="/img/card-icons/mastercard.png"> -->
-                <!--   </div> -->
-                <!--   <div> -->
-                <!--     <img data-lazy="/img/card-icons/discover.png"> -->
-                <!--   </div> -->
-                <!--   <div> -->
-                <!--     <img data-lazy="/img/card-icons/amex.png"> -->
-                <!--   </div> -->
+                    <!-- <div class="card-types"> -->
+                    <!--   <div> -->
+                    <!--     <img src="/img/card-icons/visa.png"> -->
+                    <!--   </div> -->
+                    <!--   <div> -->
+                    <!--     <img src="/img/card-icons/mastercard.png"> -->
+                    <!--   </div> -->
+                    <!--   <div> -->
+                    <!--     <img src="/img/card-icons/discover.png"> -->
+                    <!--   </div> -->
+                    <!--   <div> -->
+                    <!--     <img src="/img/card-icons/amex.png"> -->
+                    <!--   </div> -->
+                    <!-- </div> -->
+
+                  <a href="//www.stripe.com" target="_blank"><img class="stripe-logo" src="/images/stripelogo.png"></a>
+                </div>
+
+
+                <!-- <div class="confirmation"> -->
+                <!--   <h1> -->
+                <!--     Almost Done -->
+                <!--   </h1> -->
+
+                <!--   <terms> -->
+                <!--     <label for="terms">I agree to LuDela's <a href="/legal" target="_blank">terms of service</a>.</label> -->
+                <!--   </terms> -->
                 <!-- </div> -->
-
-              <a href="//www.stripe.com" target="_blank"><img class="stripe-logo" src="/images/stripelogo.png"></a>
-            </div>
-
-            <div class="confirmation">
-              <h1>
-                Almost Done
-              </h1>
-
-              <terms>
-                <label for="terms">I agree to LuDela's <a href="/legal" target="_blank">terms of service</a>.</label>
-              </terms>
-              <button class="{ loading: loading || checkedOut }" type="submit">Confirm Pre-order</button>
-              <div class="error" if="{ errorMessage }">
-                { errorMessage }
+              </div>
+              <div class="part">
+                <div class="shipping-information">
+                  <h1>
+                    Shipping Information
+                  </h1>
+                  <div class="fields">
+                    <shippingaddress-line1 class="input" placeholder="Address"></shippingaddress-line1>
+                    <shippingaddress-line2 class="input" placeholder="Suite"></shippingaddress-line2>
+                  </div>
+                  <div class="fields">
+                    <shippingaddress-city class="input" placeholder="City"></shippingaddress-city>
+                    <shippingaddress-postalcode class="input" placeholder="Postal Code"></shippingaddress-postalcode>
+                  </div>
+                  <div class="fields">
+                    <shippingaddress-state class="input" placeholder="State"></shippingaddress-state>
+                    <shippingaddress-country class="input" placeholder="Country"></shippingaddress-country>
+                  </div>
+                </div>
+                <div class="gift-options">
+                  <h1>
+                    Gift Options
+                  </h1>
+                  <div class="fields">
+                    <gift-toggle>
+                      <label for="order.gift">This is a gift.</label>
+                    </gift-toggle>
+                  </div>
+                  <div class="fields" if="{ data.get('order.gift') }">
+                    <gift-message placeholder="Please enter any special instructions for your gift such as custom greetings.">
+                    </gift-message>
+                  </div>
+                </div>
               </div>
             </div>
+
+            <button class="{ loading: loading || checkedOut }"
+              type="submit"><span>Pre-order</span><span>Complete Checkout</span></button>
+            <div class="error" if="{ errorMessage }">
+              { errorMessage }
+            </div>
+            <br>
+            <p>By placing this pre-order, you agree to LuDela's <a href="/legal"
+                target="_blank">terms of service</a>.  Payments will be processed
+              immediately.
           </checkout>
         </div>
-        <div class="checkout-bottom-buffer"></div>
       </div>
       <div class="thankyou">
         <p>Thank you for making the world a little brighter! You will receive a confirmation email soon.</p>
@@ -1162,7 +1129,6 @@
       </div>
     </div>
 
-
     <!-- Loader -->
     <div class="loader">
       <div class="spinner">
@@ -1176,12 +1142,12 @@
     <script src="js/relaunch/framework.js"></script>
 
     <script src="/js/shop.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/js/standalone/selectize.min.js"></script>
     <script type="text/javascript" src="/js/cookies.min.js"></script>
     <script src="/js/checkout.js"></script>
+    <script src="/js/relaunch/ludela.js"></script>
     <script src="/js/relaunch/cart.js"></script>
-    <script src="js/relaunch/ludela.js"></script>
-    <script src="js/relaunch/store.js"></script>
+    <script src="/js/relaunch/store.js"></script>
 
   </body>
 </html>
