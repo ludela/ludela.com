@@ -59,7 +59,7 @@ $(function() {
   var step = 1;
 
 
-  $('.checkout-button').on('click', function(e){
+  window.openCheckout = function(e){
     var $modal = $('.checkout-modal.modal');
     $modal.addClass('is-open');
 
@@ -75,7 +75,7 @@ $(function() {
     e.stopPropagation();
     e.preventDefault();
     return false;
-  });
+  };
 
   $('.checkout-modal.modal').find('.modal-close').on('click', function(e){
     var $modal = $(this).closest('.modal');

@@ -778,7 +778,7 @@
 
       <cart>
         <button class="nav back-button">< Back</button>
-        <button class="nav checkout-button" __disabled="{ isEmpty() }">Checkout ></button>
+        <button class="nav checkout-button" __disabled="{ isEmpty() }" onclick="{ openCheckout }">Checkout ></button>
         <h2>
           Order Summary
         </h2>
@@ -879,7 +879,7 @@
               { renderCurrency(data.get('order.currency'), data.get('order.subtotal'))}&nbsp;{ data.get('order.currency').toUpperCase() }
             </div>
           </div>
-          <button class="bottom checkout-button">Checkout</button>
+          <button class="bottom checkout-button" onclick="{ openCheckout }">Checkout</button>
         </div>
       </cart>
     </div>
