@@ -70,11 +70,14 @@ $(function() {
     $('#hamburger').addClass('is-open');
     $modal.removeClass('hidden');
 
-    Shop.analytics.track('Viewed Checkout Step', {step: 1})
     Shop.initCart()
 
     $('.thankyou').hide()
     $('.checkout-container').css('opacity', 1)
+
+    Shop.analytics.track('Viewed Checkout Step',    {step: 1});
+    Shop.analytics.track('Completed Checkout Step', {step: 1});
+    Shop.analytics.track('Viewed Checkout Step',    {step: 2});
 
     return false;
   };
@@ -107,8 +110,9 @@ $(function() {
           i++;
           if(i == inputCount) {
             step = 2;
-            Shop.analytics.track('Completed Checkout Step', {step: 1});
-            Shop.analytics.track('Viewed Checkout Step',    {step: 2});
+
+            Shop.analytics.track('Completed Checkout Step', {step: 2});
+            Shop.analytics.track('Viewed Checkout Step',    {step: 3});
 
             $('checkout').addClass('step-2');
           } else {
@@ -209,12 +213,11 @@ $(function() {
   })
 
   m.on('submit-success', function(){
-    Shop.analytics.track('Completed Checkout Step', {step: 2})
-    Shop.analytics.track('Viewed Checkout Step',    {step: 3})
-
     $('.loader').fadeTo(500, 0, function() {
       $(this).hide();
     })
+
+    Shop.analytics.track('Completed Checkout Step', {step: 3});
 
     $('.thankyou strong').text(this.data.get('order.number'))
     $('.checkout-container').fadeTo(500, 0)
