@@ -10,5 +10,4 @@ $(window).load(function(){
     $('#general cart').addClass('hide');
     return false;
   });
-
 })
