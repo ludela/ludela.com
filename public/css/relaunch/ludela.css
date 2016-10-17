@@ -5,6 +5,12 @@
   font-size: 2.3em;
 }
 
+.logo.menu__logo {
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+
+
 header {
   background-color: rgba(0,0,0, 0.6);
   z-index: 1000
@@ -863,6 +869,7 @@ footer .menu__social {
     margin-top: -40vh !important;
     left: 50% !important;
     transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
   }
 
   .hero .play-message {
