@@ -1,3 +1,9 @@
+body.modal-lock {
+  overflow: hidden !important;
+  width: 100vw !important;
+  height: 100vh !important;
+}
+
 .hero.video .content {
   text-align: center;
   margin-top: 60vh;

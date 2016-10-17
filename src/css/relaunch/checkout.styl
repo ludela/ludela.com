@@ -1,12 +1,13 @@
 .checkout-container
   position: absolute
   width: 100vw
-  height: 100vh
+  display: table;
   top: -500vh
   left: 0
   transition: top 500ms ease
   overflow-y: scroll
   font-size: 1rem
+  z-index: 100000
 
   .parts
     display: table
@@ -117,10 +118,6 @@
       padding: 8px 0
       line-height: 1em
       text-align: left
-
-.is-open
-  .checkout-container
-    top: 0
 
 #cart-collapsed
   display: none

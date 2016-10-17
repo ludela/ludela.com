@@ -74,6 +74,7 @@ $(function() {
 
     $('.thankyou').hide()
     $('.checkout-container').css('opacity', 1)
+    $('.checkout-container').css('top', $(window).scrollTop() + 50)
 
     Shop.analytics.track('Viewed Checkout Step',    {step: 1});
     Shop.analytics.track('Completed Checkout Step', {step: 1});
@@ -129,7 +130,7 @@ $(function() {
     return false;
   });
 
-  $modal.find('.continue-shopping').on('click', function(e){
+  $('.continue-shopping').on('click', function(e){
     if (step == 2) {
       step = 1;
       $('checkout').removeClass('step-2');
@@ -138,8 +139,10 @@ $(function() {
 
     $modal.removeClass('hidden');
     $modal.removeClass('is-open');
-
     $hamburger.removeClass('is-open');
+
+    $('.checkout-container').css('top', '')
+
     return false;
   })
 

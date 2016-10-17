@@ -14,6 +14,8 @@ $(window).load(function(){
     $header.css('z-index', '101')
     $('#hamburger').addClass('is-open');
 
+    $('body').addClass('modal-lock');
+
     e.stopPropagation();
     e.preventDefault();
     return false;
@@ -27,6 +29,7 @@ $(window).load(function(){
     var $header = $('header')
     $header.css('z-index', '')
     $('#hamburger').removeClass('is-open');
+    $('body').removeClass('modal-lock');
   })
 });
 
