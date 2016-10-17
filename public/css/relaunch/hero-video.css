@@ -39,6 +39,7 @@ body.modal-lock {
   display: block;
   position: absolute;
   transform: rotate(45deg) skew(-20deg, -20deg);
+  -webkit-transform: rotate(45deg) skew(-20deg, -20deg);
   top: 20px;
   left: 5px;
   width: 40px;

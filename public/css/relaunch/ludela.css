@@ -873,6 +873,19 @@ footer .menu__social {
   .hero .cta-overlay {
     display: none;
   }
+
+  .list li .icon {
+    font-size: 2.5em;
+    padding: 10px;
+  }
+
+  .list .info ul li {
+    display: block !important;
+  }
+
+  footer .menu__link {
+    font-size: 14px !important;
+  }
 }
 
 .loader .spinner {
