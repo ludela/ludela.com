@@ -25,7 +25,7 @@
 }());
 $(window).load(function(){
   // Modals
-  $('.modal').on('scroll touchmove mousewheel', function(e){
+  $('.modal:not(.checkout-modal)').on('scroll touchmove mousewheel', function(e){
     e.preventDefault();
     e.stopPropagation();
     return false;
