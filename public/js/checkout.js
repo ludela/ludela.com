@@ -80,6 +80,9 @@ $(function() {
     Shop.analytics.track('Completed Checkout Step', {step: 1});
     Shop.analytics.track('Viewed Checkout Step',    {step: 2});
 
+    $('#general cart').removeClass('show');
+    $('#general cart').addClass('hide');
+
     return false;
   };
 
@@ -89,6 +92,7 @@ $(function() {
     $modal.removeClass('is-open');
 
     $hamburger.removeClass('is-open');
+    $('.checkout-container').css('top', '')
     return false;
   })
 
