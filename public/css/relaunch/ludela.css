@@ -738,7 +738,7 @@ footer .menu__social {
 }
 
 .selectize-dropdown, .selectize-dropdown.form-control {
-  z-index: 10001;
+  z-index: 100001;
   font-size: 16px;
 }
 
