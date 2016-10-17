@@ -698,6 +698,7 @@ register input[type="submit"] {
 
 .thankyou {
   color: #FFF;
+  z-index: 10000;
 }
 
 register {

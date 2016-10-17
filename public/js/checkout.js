@@ -75,6 +75,7 @@ $(function() {
     $('.thankyou').hide()
     $('.checkout-container').css('opacity', 1)
     $('.checkout-container').css('top', $(window).scrollTop() + 50)
+    $('.thankyou').css('top', $(window).scrollTop() + 100)
 
     Shop.analytics.track('Viewed Checkout Step',    {step: 1});
     Shop.analytics.track('Completed Checkout Step', {step: 1});
@@ -92,7 +93,8 @@ $(function() {
     $modal.removeClass('is-open');
 
     $hamburger.removeClass('is-open');
-    $('.checkout-container').css('top', '')
+    $('.checkout-container').css('top', '');
+    $('.thankyou').css('top', '').hide();
     return false;
   })
 
