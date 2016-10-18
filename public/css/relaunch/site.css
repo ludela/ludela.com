@@ -920,7 +920,7 @@ button[type=submit] {
 .store .plan-price.subscription {
   color: #aaa;
 }
-.store .plan-price.subscription.subscription {
+.store .plan-price.subscription.single {
   display: none;
 }
 .store section.items > .content > .item {
