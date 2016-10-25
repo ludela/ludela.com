@@ -714,6 +714,14 @@ user-email input {
   width: 100%;
 }
 
+.lazy-loaded {
+  transition: all .5s ease-in-out;
+}
+
+[data-lazy] {
+  opacity: 0;
+}
+
 footer {
   background-color: #000;
 }
@@ -730,7 +738,6 @@ footer .menu__social {
   z-index: 100001;
   font-size: 16px;
 }
-
 
 @media all and (max-width: 800px) {
   .list.full {

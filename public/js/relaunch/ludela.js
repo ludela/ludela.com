@@ -43,6 +43,8 @@ $(window).load(function(){
       }
 
       element.style.backgroundImage = 'url('+ element.getAttribute('src') +')';
+      element.className = (element.className + ' lazy-loaded').trim();
+      element.removeAttribute('data-lazy');
     });
 
     instance.update().check().handlers(true);
