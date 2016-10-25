@@ -269,8 +269,7 @@ h3 {
   text-align: left;
 }
 
-.safe .image:before {
-  background-image: url(/images/safety1.png);
+.safe .image-float {
   background-size: contain;
   background-position: 50% 100%;
   background-repeat: no-repeat;
