@@ -4,13 +4,6 @@ $(window).load(function(){
       sortField: 'text'
   });
 
-  var instance = Layzr({
-    normal: 'data-lazy',
-    threshold: 25
-  })
-
-  instance.update().check().handlers(true);
-
   // Shop
 
   var Shop = window.Crowdstart.Shop;
