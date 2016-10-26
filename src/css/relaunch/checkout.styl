@@ -84,7 +84,7 @@
     > *:not(.continue-shopping)
 
       h1:first-child
-        border-bottom: 2px solid #c9c9c9
+        // border-bottom: 2px solid #c9c9c9
         width: 100%
         margin-top: -.5em
         line-height: 2em
@@ -197,10 +197,15 @@ quantity-select-control
 .selectize-dropdown.single
   border-radius: 0 !important
 
+lineitem
+  & > * > *
+    float: left;
+
 .product-quantity-container
   width: 45px !important
   display: inline-block
   margin-top: 5px
+  float: right !important
 
 .product-description
   line-height: 1.25em
@@ -208,7 +213,7 @@ quantity-select-control
   padding-left: 6px
   display: inline-block
   vertical-align: top
-  width: 75%
+  width: 90%
 
   .product-name
     color: #525252
@@ -221,7 +226,7 @@ quantity-select-control
     margin-top: 0
 
 .product-image-container
-  width: 20%
+  width: 30%
   position: relative
   // top: -20px
 
@@ -232,24 +237,28 @@ quantity-select-control
     left: 0;
 
 .product-text-container
-  width: 55%
+  width: 45%
 
 .product-price-container
   line-height: 1.25em
   width: 25%
   text-align: right
-  float: right
+  float: right !important
   margin-top: 3px
+
+.product-list-price
+  color: #aaa
+  font-size: .9em
 
 .product-slug
   display: none
 
 .product-delete
-  position: absolute
-  right: 0
-  top: -15px
-  font-size: 20px
   cursor: pointer
+  width: 25%
+  float: right !important
+  text-align: right
+  color: #e4aa47
 
 .product-currency
   display: inline
@@ -549,77 +558,12 @@ button[type=submit]
     > *
       margin-top: 0
 
-@media screen and (max-width: 500px)
-  .checkout
-    font-size: 80%
-    padding: 20px
-
-    .product-description
-      margin-top: -54px
-      margin-left: 55px
-
-    input,
-    select,
-    button,
-    select > input[type="button"],
-    textarea
-      font-size: 70%
-
-      // Makes iOS checkbox appear correctly but skews desktop
-    [type="checkbox"]:not(:checked) + label:after,
-    [type="checkbox"]:checked + label:after
-      top: 6px
-      left: 2px
-      font-size: 14px
-      line-height: 0.8
-
-  .input
-    width: 100% !important
-
-  .product-image-container
-    width: 30%
-
-  .product-text-container
-    width: 70%
-
-  .product-price-container
-    width: 100%
-    float: right
-    text-align: right
-
-  .invoice-line
-    & > *
-      float: left
-
-    div:first-child
-      width:50%
-      text-align: left
-
-    div:last-child
-      width: 50%
-      text-align: right
-
-@media screen and (max-width: 600px)
-  .promo-row
-    padding-bottom: 20px
-
-    & > *
-      float: left;
-    promocode
-      width: 60% !important
-    button
-      width: 40%
-    .promo-message
-      width: 100%
-      padding: 5px
-
 @media screen and (max-width: 980px)
   cart
   checkout
     width: 100%
     margin-right: 0
 
-@media screen and (max-width: 980px)
   cart
     h1
       display: inline-block
@@ -632,6 +576,7 @@ button[type=submit]
         float: right
         font-size: 16px
         color: #525252
+        margin-top: -12px;
 
     .expand-summary
       margin-right: 20px
@@ -672,6 +617,91 @@ button[type=submit]
 
     .promo-row
       padding-bottom: 0
+
+@media screen and (max-width: 600px)
+  .promo-row
+    padding-bottom: 20px
+
+    & > *
+      float: left;
+    promocode
+      width: 60% !important
+    button
+      width: 40%
+    .promo-message
+      width: 100%
+      padding: 5px
+
+@media screen and (max-width: 500px)
+  .checkout
+    font-size: 80%
+    padding: 20px
+
+    // .product-description
+    //   margin-top: -54px
+    //   margin-left: 55px
+
+    input,
+    select,
+    button,
+    select > input[type="button"],
+    textarea
+      font-size: 70%
+
+      // Makes iOS checkbox appear correctly but skews desktop
+    [type="checkbox"]:not(:checked) + label:after,
+    [type="checkbox"]:checked + label:after
+      top: 6px
+      left: 2px
+      font-size: 14px
+      line-height: 0.8
+
+    .product-image-container
+      width: 30%
+
+    .product-text-container
+      width: 50%
+
+    .product-description-container
+      width: 100%
+
+    .product-price-container
+      width: 100%
+
+  .input
+    width: 100% !important
+
+  .invoice-line
+    & > *
+      float: left
+
+    div:first-child
+      width:50%
+      text-align: left
+
+    div:last-child
+      width: 50%
+      text-align: right
+
+@media screen and (max-width: 400px)
+  .product-image-container
+    width: 30%
+
+  .product-text-container
+    width: 40%
+
+  .product-price-container
+    width: 30%
+
+  .checkout
+    .product-image-container
+      width: 30%
+
+    .product-text-container
+      width: 70%
+
+    .product-price-container
+      width: 100%
 
 // Generic Modal Effects
 .checkout-modal

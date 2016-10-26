@@ -793,28 +793,25 @@
         <div class="cart-contents" if="{ !isEmpty() }">
           <lineitems>
             <div class="animated slideInRight">
+              <div class="product-image-container" if="{ data.get('productSlug').indexOf('SC') != 0 }">
+                <img src="/images/products/kits/{data.get('productSlug')}.png" alt="{ data.get('productName') }"></img>
+              </div>
               <div class="product-text-container">
-                <span if="{ !data.get('locked') }" class="product-quantity-container">
-                  <quantity-select-control></quantity-select-control>
-                </span>
-                <span if="{ data.get('locked') }" class="product-quantity-container locked">
-                  { data.get('quantity') }
-                </span>
                 <span class="product-description">
                   <span class="product-name">{ data.get('productName') }</span>
                   <p>{ data.get('description') }</p>
                 </span>
               </div>
-              <div class="product-image-container" if="{ data.get('productSlug').indexOf('SC') != 0 }">
-                <img src="/images/products/kits/{data.get('productSlug')}.png" alt="{ data.get('productName') }"></img>
-              </div>
               <div class="product-image-container" if="{ data.get('productSlug').indexOf('SC') == 0 }">
                 <img src="/images/products/scent-backgrounds/{data.get('productSlug').replace('-S','')}-bg.png" alt="{ data.get('productName') }"></img>
                 <img src="/images/products/scent-candles/{data.get('productSlug').replace('-S','')}.png" alt="{ data.get('productName') }"></img>
               </div>
-              <div onclick="{ delete }" class="product-delete">
-                x
-              </div>
+              <span if="{ data.get('locked') }" class="product-quantity-container locked">
+                { data.get('quantity') }
+              </span>
+              <span if="{ !data.get('locked') }" class="product-quantity-container">
+                <quantity-select-control></quantity-select-control>
+              </span>
               <div class="product-price-container invoice-amount">
                 <div class="product-price">
                   { renderCurrency(parentData.get('currency'), data.get().price * data.get().quantity) }&nbsp;{ parentData.get('currency').toUpperCase() }
@@ -822,6 +819,9 @@
                 <div if="{ data.get().listPrice > data.get().price }" class="product-list-price invoice-amount">
                   { renderCurrency(parentData.get('currency'), data.get().listPrice * data.get().quantity) }&nbsp;{ parentData.get('currency').toUpperCase() }
                 </div>
+              </div>
+              <div onclick="{ delete }" class="product-delete">
+                Remove
               </div>
             </div>
           </lineitems>
@@ -913,36 +913,33 @@
           </h1>
 
           <lineitems if="{ !isEmpty() }">
-            <div class="product-text-container">
-              <span if="{ !data.get('locked') }" class="product-quantity-container">
-                <quantity-select-control></quantity-select-control>
-              </span>
+            <div class="animated slideInRight">
+              <div class="product-image-container" if="{ data.get('productSlug').indexOf('SC') != 0 }">
+                <img src="/images/products/kits/{data.get('productSlug')}.png" alt="{ data.get('productName') }"></img>
+              </div>
+              <div class="product-text-container">
+                <span class="product-description">
+                  <span class="product-name">{ data.get('productName') }</span>
+                  <p>{ data.get('description') }</p>
+                </span>
+              </div>
+              <div class="product-image-container" if="{ data.get('productSlug').indexOf('SC') == 0 }">
+                <img src="/images/products/scent-backgrounds/{data.get('productSlug').replace('-S','')}-bg.png" alt="{ data.get('productName') }"></img>
+                <img src="/images/products/scent-candles/{data.get('productSlug').replace('-S','')}.png" alt="{ data.get('productName') }"></img>
+              </div>
               <span if="{ data.get('locked') }" class="product-quantity-container locked">
                 { data.get('quantity') }
               </span>
-              <span class="product-description">
-                <span class="product-name">{ data.get('productName') }</span>
-                <p>{ data.get('description') }</p>
+              <span if="{ !data.get('locked') }" class="product-quantity-container">
+                <quantity-select-control></quantity-select-control>
               </span>
-            </div>
-            <div class="product-image-container" if="{ data.get('productSlug').indexOf('SC') != 0 }">
-              <img src="/images/products/kits/{data.get('productSlug')}.png" alt="{ data.get('productName') }"></img>
-            </div>
-            <div class="product-image-container" if="{ data.get('productSlug').indexOf('SC') == 0 }">
-              <img src="/images/products/scent-backgrounds/{data.get('productSlug').replace('-S','')}-bg.png" alt="{ data.get('productName') }"></img>
-              <img src="/images/products/scent-candles/{data.get('productSlug').replace('-S','')}.png" alt="{ data.get('productName') }"></img>
-            </div>
-            <div onclick="{ delete }" class="product-delete">
-              x
-            </div>
-            <div class="product-price-container invoice-amount">
-              <div class="product-price">
-                { renderCurrency(parentData.get('currency'), data.get().price * data.get().quantity) }
-                { parentData.get('currency').toUpperCase() }
-              </div>
-              <div if="{ data.get().listPrice > data.get().price }" class="product-list-price invoice-amount">
-                { renderCurrency(parentData.get('currency'), data.get().listPrice * data.get().quantity) }
-                { parentData.get('currency').toUpperCase() }
+              <div class="product-price-container invoice-amount">
+                <div class="product-price">
+                  { renderCurrency(parentData.get('currency'), data.get().price * data.get().quantity) }&nbsp;{ parentData.get('currency').toUpperCase() }
+                </div>
+                <div if="{ data.get().listPrice > data.get().price }" class="product-list-price invoice-amount">
+                  { renderCurrency(parentData.get('currency'), data.get().listPrice * data.get().quantity) }&nbsp;{ parentData.get('currency').toUpperCase() }
+                </div>
               </div>
             </div>
           </lineitems>
