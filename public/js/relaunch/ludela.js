@@ -31,7 +31,7 @@ $(window).load(function(){
    * Lazy Image Loading
    */
 
-  if (Layzr) {
+  if (window.Layzr) {
     var instance = Layzr({
       normal: 'data-lazy',
       threshold: 25
