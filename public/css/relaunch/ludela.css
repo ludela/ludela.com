@@ -242,6 +242,7 @@ h3 {
 
 .list li .icon {
   font-size: 3em;
+  width: 1em;
   padding: 10px;
 }
 
@@ -324,7 +325,7 @@ h3 {
   padding:40px 0px 40px 40px;
 }
 
-.sustainable .padded-image {
+.list .padded-image {
   background-size: contain;
   background-position: 50% 100%;
   background-repeat: no-repeat;
@@ -527,9 +528,12 @@ h3 {
   max-width: 600px !important
 }
 
-.breath .image {
-  background-size: cover;
+.breath .padded-image {
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: 50% 50% !important;
+  transform: scale(.8);
+  -webkit-transform: scale(.8);
 }
 
 .sleep .image {
@@ -735,6 +739,10 @@ footer .menu__social {
   margin: 0 10px 80px 10px !important;
 }
 
+small {
+  font-size: .5em;
+}
+
 .selectize-dropdown, .selectize-dropdown.form-control {
   z-index: 100001;
   font-size: 16px;
@@ -886,6 +894,7 @@ footer .menu__social {
 
   .list li .icon {
     font-size: 2.5em;
+    width: auto;
     padding: 10px;
   }
 
