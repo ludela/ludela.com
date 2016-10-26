@@ -120,7 +120,8 @@ h3 {
 }
 
 .hero.video.video .play {
-  display: table-cell !important;
+  /* display: table-cell !important; */
+  display: none;
   position: relative;
   margin-top: 0px;
   margin-left: 0px;
@@ -817,7 +818,7 @@ footer .menu__social {
   }
 
   .hero .content {
-    margin-top: 70vh !important;
+    margin-top: 55vh !important;
   }
 
   h1 {
@@ -861,14 +862,26 @@ footer .menu__social {
     -webkit-transform: translateX(-50%);
   }
 
-  .hero .play-message {
-    display: none !important;
-  }
+  /* .hero .play-message { */
+  /*   display: none !important; */
+  /* } */
 }
 
 @media all and (max-width: 400px) {
   .hero .cta-overlay {
     display: none;
+  }
+
+  .hero .content {
+    margin-top: 25vh !important;
+  }
+
+  .hero:not(.mission) .play-wrapper {
+    position: absolute;
+    margin-top: 0vh !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
   }
 
   .list li .icon {
