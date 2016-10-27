@@ -1092,6 +1092,7 @@ button[type=submit] {
   background-image: url("/images/logos/thrillist.png");
 }
 #page-store {
+  background: #fff;
   font-size: 16px;
 }
 #page-store .hero {
