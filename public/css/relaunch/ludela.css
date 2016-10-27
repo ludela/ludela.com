@@ -528,12 +528,10 @@ h3 {
   max-width: 600px !important
 }
 
-.breath .padded-image {
-  background-size: contain;
+.breath .image {
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50% !important;
-  transform: scale(.8);
-  -webkit-transform: scale(.8);
 }
 
 .sleep .image {

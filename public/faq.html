@@ -12,6 +12,7 @@
 
     <!-- Custom Styling and JS-->
     <!-- <link rel="stylesheet" href="css/relaunch/visuals.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
     <link rel="stylesheet" href="css/relaunch/ludela.css" />
     <link rel="stylesheet" href="css/relaunch/site.css" />
     <script>
@@ -32,7 +33,7 @@
           <img src='./images/Candle-w-reflection.png'/>
         </div>
         <div class="contentful" data-contentful-space="ydq4h2d910ei" data-contentful-model="faq" data-contentful-token="c1aca1528246ada6b2fcc2ddad87a59a1caa2d21b1ea3ea9122f8ff55fca6046" data-contentful-order="rank">
-          <div>
+          <div class="animated fadeInUp">
             <h2 data-contentful-field="question"></h2>
             <p data-contentful-field="answer"></p>
           </div>
@@ -110,9 +111,18 @@
         </div>
       </div> -->
     </div>
+
+    <!-- Loader -->
+    <div class="loader">
+      <div class="spinner">
+      </div>
+    </div>
+
+    <!-- JS -->
     <script src="/js/site.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="https://npmcdn.com/contentful@3.3.5/browser-dist/contentful.min.js"></script>
+    <script src="js/relaunch/framework.js"></script>
     <script src="js/relaunch/ludela.js"></script>
     <script src="js/relaunch/contentfill.js"></script>
   </body>

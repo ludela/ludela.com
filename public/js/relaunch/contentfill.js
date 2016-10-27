@@ -1,3 +1,5 @@
+window.loads++;
+
 $(function(){
   $('.contentful').each(function(){
     var $el = $(this);
@@ -51,6 +53,8 @@ $(function(){
 
         $el.append($template);
       }
+
+      window.loads--;
     })
   });
 });

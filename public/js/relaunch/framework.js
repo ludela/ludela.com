@@ -1,4 +1,6 @@
 /* Paul Irish - raf polyfill */
+window.loads = 0;
+
 (function() {
     var lastTime = 0;
     var vendors = ['webkit', 'moz'];
@@ -23,6 +25,7 @@
             clearTimeout(id);
         };
 }());
+
 $(window).load(function(){
   // Modals
   $('.modal:not(.checkout-modal)').on('scroll touchmove mousewheel', function(e){
@@ -65,11 +68,16 @@ $(window).load(function(){
   //   return false;
   // })
 
-  $('.loader').fadeTo(1000, 0, function() {
-    $(this).hide();
-    $('body').css('overflow', '');
-  });
+  var intervalId = setInterval(function(){
+    if (window.loads == 0) {
+      clearInterval(intervalId)
+      $('.loader').fadeTo(1000, 0, function() {
+        $(this).hide();
+        $('body').css('overflow', '');
+      });
 
-  /* remove JQuery Mobile Loader thing */
-  $('.ui-loader').remove();
+      /* remove JQuery Mobile Loader thing */
+      $('.ui-loader').remove();
+    }
+  }, 16);
 })
