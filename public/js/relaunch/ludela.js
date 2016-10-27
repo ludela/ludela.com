@@ -34,7 +34,7 @@ $(window).load(function(){
   if (window.Layzr) {
     var instance = Layzr({
       normal: 'data-lazy',
-      threshold: 25
+      threshold: 250
     })
 
     instance.on('src:after', function(element) {
