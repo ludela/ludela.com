@@ -53,8 +53,12 @@ body {
   top: 0;
 }
 
-a:not(.button):not(.menu__social):not(.menu__link), a:not(.button):not(.menu__social):not(.menu__link):visited {
+a:not(.button):not(.menu__social):not(.menu__link), a:not(.button):not(.menu__social):not(.menu__link):visited, .link {
   color: rgb(240, 169, 0);
+}
+
+.link {
+  cursor: pointer;
 }
 
 @media all and (min-width: 601px) {
@@ -360,7 +364,7 @@ h3 {
 
 .life5 {
   background-size: cover;
-  background-position: 20% 0% !important;
+  background-position: 0% 40% !important;
 }
 
 .customize {

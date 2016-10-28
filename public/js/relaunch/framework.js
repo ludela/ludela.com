@@ -28,6 +28,14 @@ window.loads = 0;
 
 $(window).load(function(){
   // Modals
+  $('.modal-open').on('click', function(e){
+    var $modalOpen = $(this);
+    var modalSelector = $modalOpen.attr('data-modal-selector');
+    var $modal = $(modalSelector).first();
+
+    $modal.removeClass('hidden');
+  });
+
   $('.modal:not(.checkout-modal)').on('scroll touchmove mousewheel', function(e){
     e.preventDefault();
     e.stopPropagation();
