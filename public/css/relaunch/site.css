@@ -1088,6 +1088,12 @@ button[type=submit] {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  background-color: #fff;
+  max-height: 80vh;
+  overflow: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 40px;
 }
 .modal .content .modal-close-position {
   right: 10px;
@@ -1113,6 +1119,19 @@ button[type=submit] {
 #page-store {
   background: #fff;
   font-size: 16px;
+}
+#page-store .modal-open {
+  display: inline-block;
+  text-align: center;
+  font-size: 0.8em;
+  height: 1.2em;
+  width: 1.2em;
+  line-height: 1.2em;
+  border-radius: 1.2em;
+  border: 1px solid #e4aa47;
+  color: #e4aa47;
+  cursor: pointer;
+  vertical-align: top;
 }
 #page-store .hero {
   background-image: url("/images/store1.jpg");

@@ -33,6 +33,7 @@ $(window).load(function(){
     var modalSelector = $modalOpen.attr('data-modal-selector');
     var $modal = $(modalSelector).first();
 
+    $('body').addClass('modal-lock');
     $modal.removeClass('hidden');
   });
 
@@ -42,8 +43,14 @@ $(window).load(function(){
     return false;
   });
 
+  $('.modal .content').on('scroll touchmove mousewheel', function(e){
+    e.stopPropagation();
+    return true;
+  });
+
   $('.modal-close').on('click', function(e){
     var $modal = $(this).closest('.modal');
+    $('body').removeClass('modal-lock');
     $modal.addClass('hidden');
   })
 

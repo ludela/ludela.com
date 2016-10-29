@@ -3,6 +3,12 @@ body {
   overflow-x: hidden;
 }
 
+body.modal-lock {
+  overflow: hidden !important;
+  width: 100vw !important;
+  height: 100vh !important;
+}
+
 /* A block is the basic unit of a webpage. Sections, headers, and footers are also blocks */
 .block, section, header, footer{
   position: relative;
