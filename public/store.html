@@ -999,10 +999,10 @@
           </div>
           <div class="invoice-line">
             <div class="invoice-label">
-              Shipping (billed later)
+              Shipping
             </div>
             <div class="invoice-amount not-bold">
-              - -
+              { renderCurrency(data.get('order.currency'), data.get('order.shipping'))}&nbsp;{ data.get('order.currency').toUpperCase() }
             </div>
           </div>
           <div class="invoice-line">
@@ -1116,11 +1116,14 @@
                 </h1>
                 <div class="fields">
                   <gift-toggle>
-                    <label for="order.gift">This is a gift, please send me a holiday gift card.</label>
+                    <label for="order.gift">
+                      I would like a complementary gift greeting card.
+                    </label>
+                    <span class="modal-open" data-modal-selector="#gift-modal">?</span>
                   </gift-toggle>
                 </div>
                 <div class="fields" if="{ data.get('order.gift') }">
-                  <gift-message placeholder="Please enter any special instructions for your gift such as custom greetings.">
+                  <gift-message placeholder="Please enter any special instructions for your gift such as custom greeting for us to write, if you want greeting cards sent to you or to special addresses, etc.">
                   </gift-message>
                 </div>
               </div>
@@ -1157,6 +1160,16 @@
         </a>
       </div>
 
+    </div>
+
+    <div id="gift-modal" class="modal hidden">
+      <div class="content">
+        <img data-lazy="./images/giftcard1.jpg">
+        <img data-lazy="./images/giftcard2.jpg">
+        <div class="modal-close modal-close-position">
+          &#10005;
+        </div>
+      </div>
     </div>
 
     <!-- Loader -->

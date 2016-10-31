@@ -23,6 +23,13 @@ $(function() {
       state:   'nv',
       country: 'us'
     }],
+    shippingRates: [{
+      shippingRate:  1000,
+      country:  'us'
+    },
+    {
+      shippingRate: 2500
+    }],
     config: {
       hashReferrer: true
     },

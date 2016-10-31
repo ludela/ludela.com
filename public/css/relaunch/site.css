@@ -34,6 +34,9 @@
 .checkout-container .parts .part:last-child > * {
   display: none;
 }
+.checkout-container h1 .modal-open {
+  margin-top: 10px;
+}
 .checkout-container input,
 .checkout-container select,
 .checkout-container button,
@@ -384,7 +387,7 @@ shippingaddress-country {
   width: 55% !important;
 }
 card-number {
-  width: 46% !important;
+  width: 52% !important;
   margin-right: 4%;
 }
 card-expiry {
@@ -392,7 +395,7 @@ card-expiry {
   margin-right: 4%;
 }
 card-cvc {
-  width: 23% !important;
+  width: 17% !important;
 }
 gift-message {
   width: 100%;
@@ -1359,6 +1362,12 @@ button[type=submit] {
   margin-bottom: 15px;
   width: 100%;
   text-align: center;
+}
+#page-store #gift-modal {
+  z-index: 100001 !important;
+}
+#page-store #gift-modal .content {
+  padding: 0 !important;
 }
 @media screen and (max-width: 800px) {
   #page-store section.items.scents.scents.scents.scents > .content > .item {
