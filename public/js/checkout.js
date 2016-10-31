@@ -10,7 +10,8 @@ $(function() {
     order: {
       metadata: {
         batch: 'prelaunch'
-      }
+      },
+      shippingRate: 1000
     },
     taxRates: [{
       taxRate:  0.071,
