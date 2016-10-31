@@ -1139,7 +1139,7 @@ button[type=submit] {
 #page-store .hero {
   background-image: url("/images/store1.jpg");
   background-position: 33% 30%;
-  height: 100vh;
+  height: 90vh;
 }
 #page-store .hero h1 {
   line-height: 1em;
