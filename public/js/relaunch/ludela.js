@@ -13,7 +13,7 @@ $(window).load(function(){
     $(this).closest('.play-wrapper').find('.play').trigger('click', e);
   })
 
-  if (window.location.pathname == '/' || window.location.pathname == '/store') {
+  if (window.location.pathname == '/' || window.location.pathname == '/store' || window.location.pathname == '/press' || window.location.pathname == '/account') {
     $('body').on('click tap', '#hamburger, #hamburger-foot', function () {
       $('#menu, #hamburger-foot, #hamburger, .wrapper').toggleClass('is-open');
       $('#about, #general, .fixed').toggleClass('nav-open');

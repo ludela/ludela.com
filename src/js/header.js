@@ -9,7 +9,7 @@ export default function ($) {
 	        <span></span>
 	      </div>
 	      <a href='/'>
-	        <img src='/images/textless-logo.png' class='logo'>
+	        <img src='/images/logo.png' class='logo'>
 	      </a>
 	      <a href='/store' class='button call-to-action'>
 	        Shop Now

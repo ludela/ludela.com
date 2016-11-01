@@ -117,23 +117,29 @@ a {
 
 blockquote:before {
   content: open-quote;
-  font-size: 4rem;
+  font-size: 2rem;
   line-height: .1em;
   margin-right: .25em;
-  vertical-align: -.4em;
+  vertical-align: -.2em;
 }
 
 blockquote {
   padding: 50px;
-  font-size: 1.25em;
+  font-size: 1em;
   display: inline-block;
   position: relative;
   text-align: left;
+  margin: 0;
+  width: 100%;
+  text-align: center;
 }
 
 blockquote:after {
   content: close-quote;
-  font-size: 0;
+  font-size: 2rem;
+  line-height: .1em;
+  margin-left: .25em;
+  vertical-align: -.2em;
 }
 
 blockquote .attribution {

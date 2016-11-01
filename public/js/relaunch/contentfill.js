@@ -5,6 +5,7 @@ $(function(){
     var $el = $(this);
 
     var template = $el.html();
+    $el.html('');
 
     var space = $el.attr('data-contentful-space');
     var token = $el.attr('data-contentful-token');
@@ -30,6 +31,8 @@ $(function(){
       content_type: model
     }).then(function(entries) {
       var items = entries.items;
+      var assets = [];
+
       var len = items.length;
 
       if (order && order != "") {
@@ -45,11 +48,31 @@ $(function(){
       for(var i = 0; i < len; i++) {
         var item = items[i];
         var $template = $(template);
-        $template.find('[data-contentful-field]').each(function(i){
-          var $field = $(this);
-          var field = $field.attr('data-contentful-field');
-          $field.html(item.fields[field]);
-        });
+        (function(i) {
+          $template.find('[data-contentful-field]').each(function(j){
+            var $field = $(this);
+            var field = $field.attr('data-contentful-field');
+            $field.prepend(item.fields[field]);
+          });
+
+          $template.find('[data-contentful-src]').each(function(j){
+            var $field = $(this);
+            var field = $field.attr('data-contentful-src');
+
+            if (!item.fields[field] || !item.fields[field].fields || !item.fields[field].fields.file) {
+              return;
+            }
+
+            $field.attr('src', item.fields[field].fields.file.url);
+          });
+
+          $template.find('[data-contentful-href]').each(function(i){
+            var $field = $(this);
+            var field = $field.attr('data-contentful-href');
+            $field.attr('href', item.fields[field]);
+          });
+
+        })(i);
 
         $el.append($template);
       }
