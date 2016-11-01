@@ -1429,6 +1429,12 @@ button[type=submit] {
   margin-bottom: 40px;
   margin-right: 2%;
 }
+@media screen and (max-width: 600px) {
+  #page-press .press-logos .press-logo {
+    width: 100%;
+    margin-right: 0%;
+  }
+}
 #page-press .press-logos .press-logo.dark img {
   background-color: #000;
 }
