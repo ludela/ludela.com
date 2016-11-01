@@ -1407,6 +1407,12 @@ button[type=submit] {
 #page-press .news {
   margin-top: 100px;
 }
+#page-press .news a {
+  width: 100%;
+  display: table;
+  padding: 20px;
+  background-color: #000;
+}
 #page-press .news img {
   display: block;
   margin-left: auto;
