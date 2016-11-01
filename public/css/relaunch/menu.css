@@ -20,7 +20,7 @@
   margin: 20px 0 75px;
 }
 .menu__logo a {
-  color: #f1ead0;
+  color: #f1ead0 !important;
   text-decoration: none;
 }
 .menu__logo .icon {
