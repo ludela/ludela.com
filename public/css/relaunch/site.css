@@ -152,7 +152,7 @@ checkout.step-2 .parts .part:first-child > * {
   display: none;
 }
 checkout.step-2 .parts .part:last-child {
-  height: initial;
+  height: auto;
 }
 checkout.step-2 .parts .part:last-child > * {
   display: block;
@@ -175,7 +175,7 @@ lineitem {
   display: block;
 }
 lineitem {
-  display: table;
+  display: inline;
 }
 quantity-select-control,
 .promo,
