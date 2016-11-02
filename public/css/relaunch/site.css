@@ -177,6 +177,9 @@ lineitem {
 lineitem {
   display: inline;
 }
+lineitem > div {
+  width: 100%;
+}
 quantity-select-control,
 .promo,
 .promo-row,
@@ -1339,6 +1342,7 @@ button[type=submit] {
   float: left;
   width: 30%;
   margin-right: 5%;
+  display: block;
 }
 #page-store section.items.scents.scents.scents > .content > .item .title h4 {
   font-size: 25px;
