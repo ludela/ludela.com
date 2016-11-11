@@ -16,7 +16,7 @@ export default function ($) {
 	      </a>
 	      <div class='progress'>
 	        <span class='bar'></span>
-	        <span class='message'>Batch1 <span class='percent'>91%</span> Reserved</span>
+	        <span class='message'>Batch1 <span class='percent'>93%</span> Reserved</span>
 	      </div>
 	    </nav>
 	  </header>`
