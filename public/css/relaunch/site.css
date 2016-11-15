@@ -948,7 +948,7 @@ button[type=submit] {
   font-weight: bold;
 }
 .progress.active .bar:before {
-  width: 93%;
+  width: 96%;
 }
 @media all and (max-width: 800px) {
   .progress {
