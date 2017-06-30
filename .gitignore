@@ -8,3 +8,4 @@ public/css/site.css
 public/js/site.js
 
 .idea/
+.idea/**/workspace.xml
